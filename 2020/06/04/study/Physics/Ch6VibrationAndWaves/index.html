@@ -1,0 +1,696 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&quot;auto&quot;>
+
+
+
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp">
+  <link rel="icon" type="image/png" href="/img/favicon.webp">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="欢迎来到些些同学的藏宝阁">
+  <meta name="author" content="Jerry Yang">
+  <meta name="keywords" content="study">
+  <title>振动与波 - 些些同学的藏宝阁</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>些些同学的藏宝阁</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-04 00:00" pubdate>
+      2020年6月4日 凌晨
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      13
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">振动与波</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>【期末复习系列】基础物理学第六章-振动与波。后续会把其他这个学期学过的内容补上。</p>
+<a id="more"></a>
+<h2 id="简谐振动"><a href="#简谐振动" class="headerlink" title="简谐振动"></a>简谐振动</h2><h3 id="描述简谐振动的特征量"><a href="#描述简谐振动的特征量" class="headerlink" title="描述简谐振动的特征量"></a>描述简谐振动的特征量</h3><ul>
+<li><strong>Def</strong>：简谐运动或简谐振动</li>
+<li>描述简谐振动幅度和时间周期性的特征量<ul>
+<li>振幅</li>
+<li>周期</li>
+<li>频率</li>
+<li>角频率</li>
+</ul>
+</li>
+<li><strong>Def</strong>：（相位）描述简谐振动瞬时运动状态的特征量</li>
+</ul>
+<h3 id="简谐振动的合成"><a href="#简谐振动的合成" class="headerlink" title="简谐振动的合成"></a>简谐振动的合成</h3><ul>
+<li>同方向、同频率的两个简谐振动的合成<ul>
+<li>矢量图解法<ul>
+<li>$\tan \varphi<em>0 = \frac{A_1\sin\varphi</em>{10}+A<em>2\sin\varphi</em>{20}}{A<em>1\cos\varphi</em>{10}+A<em>2\cos\varphi</em>{20}}$</li>
+<li>$A=\sqrt{A<em>1^2+A_2^2+2A_1A_2\cos (\varphi</em>{20}-\varphi_{10})}$</li>
+<li>$x=A\cos (\omega t+\varphi_0)$</li>
+</ul>
+</li>
+<li>复数法<ul>
+<li>$\displaystyle\tilde x = Ae^{i(\omega t+\varphi_0)}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>同方向、不同频率的两个简谐振动的合成<ul>
+<li>形成<strong>拍</strong>现象</li>
+<li>$x=2A\cos\frac{(\omega_2-\omega_1)t}{2}\cos\frac{(\omega_2+\omega_1)t}{2}$</li>
+</ul>
+</li>
+<li>相互垂直、同频率的两个简谐振动的合成<ul>
+<li>圆、椭圆</li>
+<li>稳定的</li>
+</ul>
+</li>
+<li>相互垂直、不同频率的两个简谐振动的合成<ul>
+<li>利萨如图形</li>
+<li>不稳定</li>
+</ul>
+</li>
+</ul>
+<h3 id="振动的分解-Fourier-Transformation"><a href="#振动的分解-Fourier-Transformation" class="headerlink" title="振动的分解 Fourier Transformation"></a>振动的分解 Fourier Transformation</h3><ul>
+<li>周期函数的频谱分析和傅里叶级数<ul>
+<li>傅里叶级数【高等数学】</li>
+</ul>
+</li>
+<li>非周期函数的频谱分析和傅里叶变换</li>
+</ul>
+<h2 id="弹性系统的振动"><a href="#弹性系统的振动" class="headerlink" title="弹性系统的振动"></a>弹性系统的振动</h2><h3 id="谐振子的自由振动"><a href="#谐振子的自由振动" class="headerlink" title="谐振子的自由振动"></a>谐振子的自由振动</h3><ul>
+<li>固有频率、固有角频率</li>
+<li>谐振子</li>
+<li>$-kx=m\frac{\mathrm d^2x}{\mathrm dt^2}$</li>
+<li>$\omega_0=\sqrt{k/m}=\sqrt{g/l}$</li>
+<li>$E=E_k+E_p=\frac 1 2 kA^2$</li>
+</ul>
+<h3 id="谐振子的阻尼振动"><a href="#谐振子的阻尼振动" class="headerlink" title="谐振子的阻尼振动"></a>谐振子的阻尼振动</h3><ul>
+<li>$\boldsymbol F_V=-\gamma\boldsymbol v$</li>
+<li>$2\delta = \gamma/m$ 是表征系统阻尼大小的 changliang</li>
+<li>欠阻尼振动 $x=A_0e^{-\delta t}\cos(\omega t+\varphi_0)$</li>
+<li>过阻尼振动 $\displaystyle x(t) = c_1e^{-(-\delta - \sqrt{\delta^2-\omega_0})t}+c_2e^{-(-\delta+ \sqrt{\delta^2-\omega_0})t}$</li>
+<li>临界阻尼振动 $x(t) = (c_1+c_2)e^{-\delta t}$</li>
+</ul>
+<h3 id="谐振子的受迫振动和共振"><a href="#谐振子的受迫振动和共振" class="headerlink" title="谐振子的受迫振动和共振"></a>谐振子的受迫振动和共振</h3><ul>
+<li>受迫振动的运动方程及其解的可叠加性<ul>
+<li>受迫振动驱动力为 $F<em>d= F</em>{d0}\cos \omega_dt$</li>
+<li>受迫振动的解为$x(t) = A_0e^{-\delta t}\cos (\omega t+\varphi_0)+B\cos(\omega_dt+\varphi_d)$，其中第一项称为暂态解，第二项称为定态解</li>
+<li>（复数法）定态解的振幅$B=|x|=\frac{\alpha}{\sqrt{(\omega_0^2-\omega_d^2)^2+4\delta^2\omega_d^2}}$</li>
+<li>定态解的相位$\varphi_d=\arctan\frac{-2\delta \omega_d}{\omega_0^2-\omega_d^2}$</li>
+</ul>
+</li>
+<li>共振<ul>
+<li>当$\omega_d= \sqrt{\omega_0^2-2\delta^2}$ 受迫振动达到极大值</li>
+</ul>
+</li>
+</ul>
+<h2 id="机械波的产生和传播"><a href="#机械波的产生和传播" class="headerlink" title="机械波的产生和传播"></a>机械波的产生和传播</h2><h3 id="简谐波的描述"><a href="#简谐波的描述" class="headerlink" title="简谐波的描述"></a>简谐波的描述</h3><ul>
+<li>横波、纵波</li>
+<li>波速、波长、相速 $u=\frac \lambda T=v\lambda=\frac{\omega\lambda}{2\pi}$</li>
+<li>振动位移表达式$\xi(x,t) = A\cos[\omega(t-\frac x u)+\varphi_0]$</li>
+<li>角波数$k=\frac{2\pi}{\lambda},~~\xi(x,t) = A\cos[\omega t-kx+\varphi_0]$</li>
+</ul>
+<h3 id="波动方程"><a href="#波动方程" class="headerlink" title="波动方程"></a>波动方程</h3><ul>
+<li>波动方程</li>
+<li>对应函数$\xi(x,t) = A\cos(\omega t-\boldsymbol k\cdot \boldsymbol x+\varphi_0)$</li>
+</ul>
+<h3 id="波的能量"><a href="#波的能量" class="headerlink" title="波的能量"></a>波的能量</h3><ul>
+<li>$dV$上的动能 $dE_k=\frac 12 \rho\omega^2A^2\sin^2(\omega t-kx)dV$</li>
+<li>势能 $dE_k=\frac 12 Ek^2A^2\sin^2(\omega t-kx)dV$</li>
+<li>平均能量密度 $\overline w=\frac 1 T \int_0^T w\mathrm dt = \frac 1 2 \rho \omega^2A^2$</li>
+</ul>
+<h3 id="声波"><a href="#声波" class="headerlink" title="声波"></a>声波</h3><h2 id="驻波"><a href="#驻波" class="headerlink" title="驻波"></a>驻波</h2><h3 id="驻波的形成和特点"><a href="#驻波的形成和特点" class="headerlink" title="驻波的形成和特点"></a>驻波的形成和特点</h3><ul>
+<li><strong>Def</strong>：（相干波）频率相同、振动方向相同、有固定相位差的两个波源发出的简谐波</li>
+<li>干涉现象</li>
+<li>驻波是特殊的干涉，两列波的振幅相同，传播方向相反</li>
+<li>驻波方程 $y=A\cos(\omega t-kx)+A\cos (\omega t+kx)=2A\cos\frac{2\pi x}{\lambda}\cos \omega t$</li>
+</ul>
+<h3 id="两端固定的弦中的驻波、多自由度系统的简正模"><a href="#两端固定的弦中的驻波、多自由度系统的简正模" class="headerlink" title="两端固定的弦中的驻波、多自由度系统的简正模"></a>两端固定的弦中的驻波、多自由度系统的简正模</h3><h3 id="半波损失"><a href="#半波损失" class="headerlink" title="半波损失"></a>半波损失</h3><ul>
+<li>在均匀介质中沿直线传播的波在遇到另外一种介质时，会发生<strong>反射</strong>和<strong>折射</strong>现象，定义<strong>特性阻抗</strong> $Z=\rho u$</li>
+<li>从波密介质到波疏介质中，相位不变，方向相反</li>
+<li>从波疏介质到波密介质中，相位改变 $\pi$，方向相反，称为半波损失</li>
+</ul>
+<h2 id="多普勒效应"><a href="#多普勒效应" class="headerlink" title="多普勒效应"></a>多普勒效应</h2><ul>
+<li><p>波源或观测者的运动造成观测频率与波源频率不同的现象</p>
+</li>
+<li><p>波源和观察者同时相对于介质运动时 $\nu’=\frac{u+v_o}{u-v_s}\nu$，其中 $v_o$ 为观察者向波源运动速度，$v_s$ 为波源向观察者运动的速度</p>
+</li>
+</ul>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%9F%BA%E7%A1%80%E7%89%A9%E7%90%86%E5%AD%A6/">基础物理学</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%89%A9%E7%90%86/">物理</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%B3%A2/">波</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/04/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Derivative/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">多元数量值函数微分学及其应用</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/01/study/Advanced-Mathematics/PowerSeries/">
+                        <span class="hidden-mobile">幂级数</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz",
+          app_key: "vhuFwrNX5X0JUsN8f4YXXLQq",
+          placeholder: "ヾﾉ≧∀≦)o 来啊，快活啊!",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-home-fill"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 3,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "振动与波&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

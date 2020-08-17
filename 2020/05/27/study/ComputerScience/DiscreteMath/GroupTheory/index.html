@@ -1,0 +1,722 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&quot;auto&quot;>
+
+
+
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp">
+  <link rel="icon" type="image/png" href="/img/favicon.webp">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="欢迎来到些些同学的藏宝阁">
+  <meta name="author" content="Jerry Yang">
+  <meta name="keywords" content="study">
+  <title>群与环 - 些些同学的藏宝阁</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>些些同学的藏宝阁</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-05-27 00:00" pubdate>
+      2020年5月27日 凌晨
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      15
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">群与环</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>期末复习了 qwwww</p>
+<a id="more"></a>
+<h2 id="群的定义和性质"><a href="#群的定义和性质" class="headerlink" title="群的定义和性质"></a>群的定义和性质</h2><p><strong>Def</strong>：群</p>
+<ol>
+<li>设 $V = <S,\circ>$ 是代数系统，$\circ$ 是二元运算，且是可结合的，则称 $V$ 是半群</S,\circ></li>
+<li>设 $V$ 是一个半群，存在关于 $\circ$ 运算的单位元，则称 $V$ 是幺半群，也称为独异点</li>
+<li>若 $V$ 是一个独异点，$e\in S$ 是其单位元，若 $\forall a \in S,a^{-1}\in S$ 则称 $V$ 为群，通常用 $G$ 代表</li>
+</ol>
+<blockquote>
+<p>常见的群有：整数加群、有理数加群、实数加群、复数加群</p>
+<p>Klein 四元群：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>e</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e</td>
+<td>e</td>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+</tr>
+<tr>
+<td>a</td>
+<td>a</td>
+<td>e</td>
+<td>c</td>
+<td>b</td>
+</tr>
+<tr>
+<td>b</td>
+<td>b</td>
+<td>c</td>
+<td>e</td>
+<td>a</td>
+</tr>
+<tr>
+<td>c</td>
+<td>c</td>
+<td>b</td>
+<td>a</td>
+<td>e</td>
+</tr>
+</tbody>
+</table>
+</div>
+</blockquote>
+<p><strong>Def</strong>：平凡群、有限群、无限群、交换群</p>
+<ol>
+<li>若群 $G$ 是有穷集，则称 $G$ 为有限群，反之称为无限群。其中 $G$ 的基数称为群 $G$ 的阶</li>
+<li>若 $G$ 中只含有单位元，称之为平凡群</li>
+<li>若二元运算 $\circ$ 是可交换的，则称 $G$ 为交换群或是 Abel 群。</li>
+</ol>
+<p><strong>Def</strong>：幂运算</p>
+<script type="math/tex; mode=display">
+a^n=
+\begin{cases}
+e,\qquad &n = 0\\
+a^{n-1}a,& n >0\\
+(a^{-1})^m,& n>0,n = -m
+\end{cases}</script><p><strong>Def</strong>：（元素的阶）将使得 $a^k = e$ 成立的最小正整数 $k$ 称为 $a$ 的阶。有 $k$ 阶元，也有无限阶元。</p>
+<p><strong>Thm</strong>：幂运算满足</p>
+<ol>
+<li>$(a^{-1})^{-1} = a$</li>
+<li>$(ab)^{-1} = b^{-1}a^{-1}$</li>
+<li>$a^na^m = a^{m+n}$</li>
+<li>$(a^n)^m = a^{mn}$</li>
+<li>交换群中，$(ab)^n = a^nb^n$</li>
+</ol>
+<p><strong>Thm</strong>：群中满足消去律</p>
+<p><strong>Thm</strong>：设群 $G$ 中有元素 $a$ 满足 $|a|$ 为 $r$ 则：</p>
+<ol>
+<li>$a^k = e\iff r|k$</li>
+<li>$|a^{-1}|=|a|$</li>
+</ol>
+<h2 id="子群和群的陪集分解"><a href="#子群和群的陪集分解" class="headerlink" title="子群和群的陪集分解"></a>子群和群的陪集分解</h2><p><strong>Def</strong>：子群、真子群</p>
+<p><strong>Def</strong>：（判定定理 1）设 $G$ 为群，$H$ 是 $G$ 的非空子集，则 $H$ 是 $G$ 的子群，当且仅当下列条件同时成立</p>
+<ol>
+<li>$\forall a,b\in H,ab\in H$</li>
+<li>$\forall a\in H, a^{-1}\in H$</li>
+</ol>
+<p><strong>Thm</strong>：（判定定理 2）设 $G$ 为群，$H$ 是 $G$ 的非空子集，则 $H$ 是 $G$ 的子群，当且仅当 $\forall a,b\in H, ab^{-1}\in H$</p>
+<p><strong>Thm</strong>：（判定定理 3）设 $G$ 为群，$H$ 是 $G$ 的非空子集，则 $H$ 是 $G$ 的有穷子群，当且仅当 $\forall a,b\in H,ab\in H$</p>
+<p><strong>Def</strong>：（中心）设 $G$ 是群，令 $C$ 是与 $G$ 中所有元素都可交换的元素构成的集合，$C={a|a\in G\wedge \forall x\in G(ax=xa)}$ 则称 $C$ 为 $G$ 的中心，且是 $G$ 的一个子群。</p>
+<p><strong>Def</strong>：（由 $B$ 生成的子群）设 $B$ 是 $G$ 的子集，将所有包含 $B$ 的子群的交记作 $<B>$。</B></p>
+<div class="note note-caution">
+            <p><strong>Caution</strong></p><p>未知正确性：</p><ul><li>$<B>$ 中只含有 $B$ 中的元素或其逆元。</B></li></ul>
+          </div>
+<p><strong>Def</strong>：设 $H$ 是群 $G$ 的子群，$a\in G$，令$Ha ={ha|h\in H}$ 称之为子群 $H$ 在 $G$ 中的右陪集，并称 $a$ 为 $Ha$ 的代表元素。</p>
+<p><strong>Thm</strong>：设 $H$ 是 $G$ 的子群，则</p>
+<ol>
+<li>$He =H$</li>
+<li>$\forall a\in G, a\in Ha$</li>
+</ol>
+<p><strong>Thm</strong>：设 $H$ 是 $G$ 的子群，则 $\forall a,b\in G$ TFAE</p>
+<ol>
+<li>$a\in Hb$</li>
+<li>$ab^{-1}\in H$</li>
+<li>$Ha=Hb$</li>
+</ol>
+<p><strong>Thm</strong>：设 $H$ 是 $G$ 的子群，在 $G$ 上定义二元关系：$\forall a,b\in G <a,b>\in R\iff ab^{-1}\in H$ 则 $R$ 是 $G$ 上的等价关系，且 $[a]_R =Ha$</a,b></p>
+<p><strong>Inf</strong>：设 $H$ 是 $G$ 的子群，则</p>
+<ol>
+<li>$\forall a,b\in G, Ha = Hb 或 Ha\cap Hb =\emptyset$</li>
+<li>$\cup{Ha|a\in G} = G$</li>
+</ol>
+<div class="note note-primary">
+            <p><strong>Tips</strong></p><p>于此同时，$H$ 的所有右陪集的集合 ${Ha|a\in G}$ 恰好构成 G 的一个划分，并且，这个划分的所有划分快都和 $H$ 等势。</p><p>用同样的方法可以定义 $H$ 的左陪集。</p>
+          </div>
+<p><strong>Def</strong>：（指数）$H$ 在 $G$ 中的左右陪集数相等，记作 $H$ 在 $G$ 中的指数 $[G:H]$</p>
+<p><strong>Thm</strong>：（Lagrange 定理）设 $G$ 是一个有限群，$H$ 是 $G$ 的子群，则 $|G| = |H|\cdot [G:H]$</p>
+<p><strong>Inf</strong>：设 $G$ 是 $n$ 阶群，则 $\forall a\in G$，$|a|$ 是 $n$ 的因子，且 $a^n =e$</p>
+<p><strong>Inf</strong>：设 $G$ 是素数阶的群，则存在 $a\in G$，使得$G=<a>$</a></p>
+<h2 id="循环群和置换群"><a href="#循环群和置换群" class="headerlink" title="循环群和置换群"></a>循环群和置换群</h2><p><strong>Def</strong>：（循环群）若存在 $a\in G$ 使得 $G = <a>$ 则称 $G$ 为循环群，称 $a$ 为 $G$ 的生成元</a></p>
+<p>其中，若 $a$ 是 $n$ 阶元，则 $|G| = n$ 则称 $G$ 为 $n$ 阶循环群，若 $a$ 是无限阶元，则称 $G$ 是无限循环群</p>
+<p><strong>Thm</strong>：设 $G=<a>$ 是循环群，</a></p>
+<ol>
+<li>$G$ 是无限循环群，则 $G$ 只有两个生成元，即为 $a$ 和 $a^{-1}$</li>
+<li>$G$ 是 $n$ 阶循环群，则 $G$ 含有 $\phi(n)$ 个生成元，对于任何小于且与 $n$ 互素的自然数 $r$，$a^r$ 是 $G$ 的生成元</li>
+</ol>
+<p><strong>Thm</strong>：</p>
+<ol>
+<li>设 $G$ 是循环群，则 $G$ 的子群是循环群</li>
+<li>$G$ 是无限循环群，则 $G$ 的子群除了 ${e}$ 之外都是无限循环群</li>
+<li>若 $G$ 是 $n$ 阶循环群，则对于 $n$ 的每一个正因子 $d$，$G$ 恰好含有一个 $d$ 阶子群</li>
+</ol>
+<!-- TODO: to complete -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/DiscreteMathematics/">离散数学</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Algebra-Structure/">代数结构</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/28/study/ComputerScience/DiscreteMath/LatticeandBoolAlgebra/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">格和布尔代数</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/25/study/Advanced-Mathematics/ConstantSeries/">
+                        <span class="hidden-mobile">无穷级数</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz",
+          app_key: "vhuFwrNX5X0JUsN8f4YXXLQq",
+          placeholder: "ヾﾉ≧∀≦)o 来啊，快活啊!",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-home-fill"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 3,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "群与环&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

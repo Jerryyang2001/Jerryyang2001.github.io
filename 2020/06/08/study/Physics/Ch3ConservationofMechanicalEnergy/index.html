@@ -1,0 +1,678 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&quot;auto&quot;>
+
+
+
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp">
+  <link rel="icon" type="image/png" href="/img/favicon.webp">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="欢迎来到些些同学的藏宝阁">
+  <meta name="author" content="Jerry Yang">
+  <meta name="keywords" content="study">
+  <title>机械能守恒 - 些些同学的藏宝阁</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>些些同学的藏宝阁</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-08 00:00" pubdate>
+      2020年6月8日 凌晨
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">机械能守恒</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>基础物理学Ch3 机械能守恒 这部分就简单提一句</p>
+<a id="more"></a>
+<h2 id="功-动能定理"><a href="#功-动能定理" class="headerlink" title="功 动能定理"></a>功 动能定理</h2><h3 id="功（Work）"><a href="#功（Work）" class="headerlink" title="功（Work）"></a>功（Work）</h3><blockquote>
+<p>力对质点所作的功为力在质点位移方向的分量（大小）与位移大小的乘积。（功是标量，过程量）</p>
+</blockquote>
+<ul>
+<li><p>一段位移的功$\mathrm dW=\vec F\cdot \mathrm d {\vec r}$</p>
+<p>注：功的大小和参考系有关。</p>
+</li>
+<li><p>合力的功（第二型曲线积分）</p>
+</li>
+<li><p><strong>功率（Power）</strong>：反应做功快慢程度的物理量</p>
+<ul>
+<li>平均功率</li>
+<li>瞬时功率</li>
+<li>功率单位</li>
+</ul>
+</li>
+</ul>
+<div class="note note-primary">
+            <h3 id="质点的动能定理（Theorem-of-Kinetic-Energy）"><a href="#质点的动能定理（Theorem-of-Kinetic-Energy）" class="headerlink" title="质点的动能定理（Theorem of Kinetic Energy）"></a>质点的动能定理（Theorem of Kinetic Energy）</h3><ul><li><p><strong>动能</strong>：$E_\mathrm{k}= \frac{1}{2}mv^2=\frac{p^2}{2m}$</p></li><li><p><strong>动能定理</strong>：合外力对质点所做的功，等于质点动能的增量。</p></li></ul><blockquote><p>功和动能都与参考系有关，动能定理只能适用于惯性系！</p></blockquote>
+          </div>
+<h2 id="保守力-势能"><a href="#保守力-势能" class="headerlink" title="保守力 势能"></a>保守力 势能</h2><h3 id="万有引力、重力、弹性力做功的特点"><a href="#万有引力、重力、弹性力做功的特点" class="headerlink" title="万有引力、重力、弹性力做功的特点"></a>万有引力、重力、弹性力做功的特点</h3><div class="note note-primary">
+            <h4 id="万有引力做功"><a href="#万有引力做功" class="headerlink" title="万有引力做功"></a>万有引力做功</h4><p><strong>万有引力：</strong>$\vec F=-G\frac{m’m}{r^3}\vec r$</p><p><strong>做功：</strong>$W=(-G\frac{m’m}{r_A})-(-G\frac{m’m}{r_B})$</p><h4 id="重力做功"><a href="#重力做功" class="headerlink" title="重力做功"></a>重力做功</h4><p>$\vec P=-mg\vec k$</p><p>$W=\int_A^b \vec P \cdot \mathrm d \vec r=mgz_A-mgz_B$</p><h4 id="弹性力做功"><a href="#弹性力做功" class="headerlink" title="弹性力做功"></a>弹性力做功</h4><p>$W=\frac{1}{2}kx_A^2-\frac{1}{2}kx_B^2$</p>
+          </div>
+<h3 id="保守力和非保守力"><a href="#保守力和非保守力" class="headerlink" title="保守力和非保守力"></a>保守力和非保守力</h3><p><strong>保守力：</strong>力所做的功与路径无关，仅取决于质点的<strong>始末位置</strong>，具有这种特征的力统称为<strong>保守力</strong>。</p>
+<ul>
+<li>物体沿闭合路径运动一周，保守力对它所做功为零</li>
+</ul>
+<blockquote>
+<p>实则是旋度为零</p>
+</blockquote>
+<p><strong>非保守力</strong>：做功与路径有关</p>
+<blockquote>
+<p>旋度不恒为零</p>
+</blockquote>
+<p>有关旋度，参见 <a href="#">Post not found: Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration</a></p>
+<h3 id="势能（Potential-Energy）"><a href="#势能（Potential-Energy）" class="headerlink" title="势能（Potential Energy）"></a>势能（Potential Energy）</h3><ul>
+<li><p>保守力做功等于势能的减少或势能增量的负值。</p>
+<p>势能：与物体间相互作用及相对位置有关的能量</p>
+</li>
+<li><p>势能是空间位置的函数</p>
+</li>
+<li><p>势能具有相对性，势能大小与势能零点的选取有关 .</p>
+</li>
+<li><p>势能是属于系统的 ，所以又称为相互作用势能.</p>
+</li>
+<li><p>势能的计算：物体在某位置时的势能</p>
+</li>
+</ul>
+<ol>
+<li><strong>引力势能</strong>，以无穷远处为势能零点</li>
+<li><strong>重力势能</strong>，以地面为势能零点</li>
+<li><strong>弹性势能</strong>，以物体为势能零点</li>
+</ol>
+<h3 id="势能函数与保守力的关系"><a href="#势能函数与保守力的关系" class="headerlink" title="势能函数与保守力的关系"></a>势能函数与保守力的关系</h3><p><strong>积分形式：</strong>$W= - \Delta E_p$</p>
+<p><strong>微分形式：</strong>$\vec F \mathrm d\vec r= -\mathrm d E_p$（对$\vec r$的偏导）</p>
+<p>$\nabla$算符举例：</p>
+<script type="math/tex; mode=display">
+\nabla=(
+\begin{matrix}
+\frac{\mathrm d}{\mathrm d x},
+\frac{\mathrm d}{\mathrm d y},
+\frac{\mathrm d}{\mathrm d z}
+\end{matrix})</script><p><strong>保守体系的平衡及平衡条件</strong>：</p>
+<p><img src="/2020/06/08/study/Physics/Ch3ConservationofMechanicalEnergy/03_0.jpg" srcset="/img/loading.gif" alt="stable"></p>
+<ul>
+<li>稳定平衡</li>
+<li>不稳定平衡</li>
+<li>随遇平衡</li>
+</ul>
+<p>条件：$\nabla E_p=0$</p>
+<h3 id="功能原理-机械能守恒定律"><a href="#功能原理-机械能守恒定律" class="headerlink" title="功能原理 机械能守恒定律"></a>功能原理 机械能守恒定律</h3><h4 id="质点系的动能定理"><a href="#质点系的动能定理" class="headerlink" title="质点系的动能定理"></a>质点系的动能定理</h4><p>$\sum W<em>i =W</em>{ext}+W_{int}$</p>
+<p>$\Rightarrow W<em>{ext}+W{int}=\sum E</em>{ki}+ \sum E_{ki0}$</p>
+<h4 id="质点系的功能原理"><a href="#质点系的功能原理" class="headerlink" title="质点系的功能原理"></a>质点系的功能原理</h4><p>质点系在运动过程中，所有外力的功和系统内非保守内力的功的总和等于系统机械能够的增量。$W<em>{ext}+W</em>{int(非保守力)}=E-E_0$</p>
+<h4 id="机械能守恒定律"><a href="#机械能守恒定律" class="headerlink" title="机械能守恒定律"></a>机械能守恒定律</h4><p>当$W<em>{ext}+W</em>{int(非保守力)}=0$时：$E=E_0$</p>
+<p>当作用于质点系的外力和非保守内力都不做功或所做功的代数和等于零时，系统的总机械能保持不变。</p>
+<ul>
+<li>功总是和能量的变化与转换过程相联系，功是能量变化和转换的一种量度，而能量是代表物体系统在一定条件下所具有的作功本领。</li>
+<li>守恒定律的特点和优点：不研究过程细节而能对系统的状态下结论。</li>
+</ul>
+<h4 id="势能函数"><a href="#势能函数" class="headerlink" title="势能函数"></a>势能函数</h4><h2 id="质心参考系"><a href="#质心参考系" class="headerlink" title="质心参考系"></a>质心参考系</h2><h3 id="质心的定义"><a href="#质心的定义" class="headerlink" title="质心的定义"></a>质心的定义</h3><p>由 n 个质点组成的质点系，其质心的位矢：$\vec r_C=\frac{\sum m\vec r}{\sum m}$</p>
+<h3 id="质心运动定理"><a href="#质心运动定理" class="headerlink" title="质心运动定理"></a>质心运动定理</h3><p>$\vec F^{ex}=m\vec a_c$</p>
+<h3 id="质心参考系的特点"><a href="#质心参考系的特点" class="headerlink" title="质心参考系的特点"></a>质心参考系的特点</h3><p><strong>零动量参考系</strong>：</p>
+<ul>
+<li>$\sum p = \sum m\vec v = 0$</li>
+<li>$\sum m\vec r = 0,\quad \sum m\vec a =0$</li>
+</ul>
+<p><strong>克尼希定理</strong>：</p>
+<ul>
+<li>质点系相对基本参考系的动能（<em>绝对动能</em>） 等于质点系在质心参考系中的动能（<em>相对动能</em>）加上<em>质心动能</em></li>
+<li>$E_k = \frac{1}{2} mv_c^2 + E_k’= \frac{1}{2} mv_c^2 + \sum \frac{1}{2} m_i v_i ^2$</li>
+</ul>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%9F%BA%E7%A1%80%E7%89%A9%E7%90%86%E5%AD%A6/">基础物理学</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%89%A9%E7%90%86/">物理</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">质点运动学</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/08/study/Physics/Ch5/">
+                        <span class="hidden-mobile">刚体运动学</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz",
+          app_key: "vhuFwrNX5X0JUsN8f4YXXLQq",
+          placeholder: "ヾﾉ≧∀≦)o 来啊，快活啊!",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-home-fill"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 3,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "机械能守恒&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
