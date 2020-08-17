@@ -490,7 +490,10 @@
 </li>
 <li><p>[ ] 欧拉公式</p>
 <ul>
-<li>是啥？</li>
+<li>是啥？<span class="label label-info">(n-m+r=2)</span></li>
+<li>推广到有 k 个连通分支时如何？</li>
+<li>几个不等式</li>
+<li>每个面</li>
 </ul>
 </li>
 </ul>
