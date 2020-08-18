@@ -17,7 +17,7 @@
   <meta name="description" content="欢迎来到些些同学的藏宝阁">
   <meta name="author" content="Jerry Yang">
   <meta name="keywords" content="study">
-  <title>更新日程 - 些些同学的藏宝阁</title>
+  <title>日程 - 些些同学的藏宝阁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -129,6 +129,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/schedule/">
+                <i class="iconfont icon-plan"></i>
+                日程
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
@@ -177,19 +189,12 @@
                 
 
 <div class="page-content">
-  <p>下列文章按重要度排列</p>
-<ul>
-<li>[x] 离散数学</li>
-<li>[x] 高等数学微分部分修正</li>
-<li>[x] 高等数学向量空间待完成</li>
-<li>[ ] 并查集和图论</li>
-<li>[x] 关于页</li>
-</ul>
-<blockquote>
-<p>期末复习了，些些可能要消失一段时间了 qwwwww……</p>
-</blockquote>
+  <div>
+            <input type="checkbox" disabled>并查集和图论
+          </div>
 <p>过段时间上<code>MacBook Pro 16</code>了，记录一下 hexo 的安装</p>
-<pre><figcaption><span>Dependencies</span></figcaption><code class="hljs bash">npm install hexo-renderer-pandoc
+<pre><figcaption><span>Dependencies</span></figcaption><code class="hljs bash"><span class="hljs-comment"># npm install hexo-renderer-pandoc</span>
+npm install hexo-renderer-kramed
 npm install hexo-renderer-mathjax
 npm install searchdb
 npm install hexo-asset-image
@@ -313,7 +318,7 @@ npm i hexo-simple-mindmap</code></pre>
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "更新日程&nbsp;",
+        "日程&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

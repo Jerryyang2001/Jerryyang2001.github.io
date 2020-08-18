@@ -8,7 +8,7 @@
 <h3 id="考试时间"><a href="#考试时间" class="headerlink" title="考试时间"></a>考试时间</h3><div>
             <input type="checkbox" disabled checked="checked">数学分析
           </div>
-<span class="label label-danger">爆炸【危】</span> *08-17 09:00-11:30(星期一)*
+<span class="label label-danger">爆炸【危】</span> 08-17 09:00-11:30(星期一)
 
 <div>
             <input type="checkbox" disabled>近代史
@@ -26,63 +26,6 @@
             <input type="checkbox" disabled>数据结构
           </div>
 <p>08-24 09:00-11:00(星期一)</p>
-<h3 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h3><div class="note note-primary">
-            <p>极值的判断：</p><ol><li>正定极小</li><li>负定极大</li><li>半正定、半负定不确定</li><li>其他：不是极值点</li></ol>
-          </div>
-<div class="note note-success">
-            <p>一定要看清楚曲线是否只是一部分。如 <code>y &gt; 0</code></p>
-          </div>
-<div class="note note-primary">
-            <p>积分区域内有不可导点？</p>
-          </div>
-<div class="note note-success">
-            <p>方向导数 = ?</p><p>全微分 = ?</p>
-          </div>
-<div class="note note-primary">
-            <p>连续、可偏导、可微的关系</p>
-          </div>
-<div class="note note-success">
-            <p>幂级数和函数在 <code>x = 0</code> 处有时需要单独考虑</p>
-          </div>
-<div class="note note-primary">
-            <p>$\displaystyle\ln (1+x) = x - \frac 1 2 x^2 + \frac 1 3 x^3 + \dots$</p><p>$\displaystyle\frac{1}{1-x} = 1 + x + x^2 + \dots$</p>
-          </div>
-<div class="note note-success">
-            <p>正向、上（下）侧</p><p>Gauss / Green / Stokes 公式都怎么用？</p>
-          </div>
-<div class="note note-primary">
-            <p>梯度、散度、旋度</p><p>别忘了连续的场：无源 = 无旋 = 有势</p>
-          </div>
-<div class="note note-success">
-            <p>反常积分 + 级数</p>
-          </div>
-<div class="note note-primary">
-            <p>极限怎么求（泰勒公式等）。</p>
-          </div>
-<div class="note note-success">
-            <p>别忘了和函数要求出收敛域。</p>
-          </div>
-<div class="note note-primary">
-            <p>有的题目，大可不必用 <code>Stokes</code> 公式！</p><p>例如：</p><script type="math/tex; mode=display">?=I=\int_C(y^2-z)dx+(2z-x^2)dy +(3x^2-y^2)dz,\\C为x+y+z=2和\frac{x^2}{4}+y^2=1的交线</script><p>令</p><script type="math/tex; mode=display">\begin{aligned}  &x = 2\cos \theta\\  &y=2\sin\theta\\  &z=2-x-y\end{aligned}</script>
-          </div>
-<div class="note note-success">
-            <p>几个积分中值定理！</p>
-          </div>
-<div class="note note-primary">
-            <p>柯西不等式的积分形式</p><p>重积分证明一些积分相关的不等式</p>
-          </div>
-<div class="note note-success">
-            <p>曲率？？？挠率？？？</p>
-          </div>
-<div class="note note-primary">
-            <p><a class="btn" href="/2020/05/22/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry/" title="向量空间" target="_blank">向量空间</a></p>
-          </div>
-<div class="note note-primary">
-            <p>$arsh~x=ln(x+\sqrt{x^2+1})$</p>
-          </div>
-<div class="note note-warning">
-            <p><strong>难题</strong></p><script type="math/tex; mode=display">\begin{aligned}  侧面：&I_1 =\iint \frac{y\ dx\wedge dz}{x^2+y^2+z^2}\\  底面：&I_2 = 0\\  I &= I_1 + I_2 \\    &= \int_{-R}^R\int_{-R}^R 2 \frac{\sqrt{R^2-z^2}\ dz\ dx}{x^2 + R^2}\\    &= \frac{\pi^2R}{2}\\\\    &\frac{\partial f}{\partial x} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial x},\quad \frac{\partial f}{\partial y} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial y}\\    \Rightarrow& \sqrt{f_x^2 + f_y ^ 2} = f_r\\    &|\iint_D f\ dx\ dy\ | = |\iint_D f\cdot r\ dr \ d\theta \ |\\    =&\frac{1}{2} |0 - \iint_D r^2 f_r\ dr \ d\theta|\ dr \ d\theta\\    \le&\frac{1}{2}\iint_Dr^2\max|f_r|\\    =&2\pi\cdot\frac{1}{6}\max |f_r|\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}  (1)\quad&u_{xx}+u_{yy}+cu = 0, c<0\\  &若取得正最大，则为极大值，Hessian 负定\\  &而极大值点处u_{xx} + u_{yy}>0\\  &u_{xx} < 0,\ u_{xx}u_{yy}-u_{xy}^2 >0\\  &简单讨论一下不可能，取得负最小值的时类似证明即可\\\\  (2)\quad&在u上只有可能有非负最小值和非正最大值\\  &最小值记为 m\ge 0，最大值记为M\le 0 而 M \ge m,则 M = m =0\\  \Rightarrow& u(x,y) = 0\end{aligned}</script>
-          </div>
 <h3 id="基础物理学"><a href="#基础物理学" class="headerlink" title="基础物理学"></a>基础物理学</h3><div class="note note-primary">
             <p>共振最大值对应 $\omega_0 = \omega_d$</p>
           </div>
@@ -546,109 +489,67 @@
 <ul>
 <li>和原来的图的关系？</li>
 </ul>
+<h3 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h3><div class="note note-primary">
+            <p>极值的判断：</p><ol><li>正定极小</li><li>负定极大</li><li>半正定、半负定不确定</li><li>其他：不是极值点</li></ol>
+          </div>
+<div class="note note-success">
+            <p>一定要看清楚曲线是否只是一部分。如 <code>y &gt; 0</code></p>
+          </div>
+<div class="note note-primary">
+            <p>积分区域内有不可导点？</p>
+          </div>
+<div class="note note-success">
+            <p>方向导数 = ?</p><p>全微分 = ?</p>
+          </div>
+<div class="note note-primary">
+            <p>连续、可偏导、可微的关系</p>
+          </div>
+<div class="note note-success">
+            <p>幂级数和函数在 <code>x = 0</code> 处有时需要单独考虑</p>
+          </div>
+<div class="note note-primary">
+            <p>$\displaystyle\ln (1+x) = x - \frac 1 2 x^2 + \frac 1 3 x^3 + \dots$</p><p>$\displaystyle\frac{1}{1-x} = 1 + x + x^2 + \dots$</p>
+          </div>
+<div class="note note-success">
+            <p>正向、上（下）侧</p><p>Gauss / Green / Stokes 公式都怎么用？</p>
+          </div>
+<div class="note note-primary">
+            <p>梯度、散度、旋度</p><p>别忘了连续的场：无源 = 无旋 = 有势</p>
+          </div>
+<div class="note note-success">
+            <p>反常积分 + 级数</p>
+          </div>
+<div class="note note-primary">
+            <p>极限怎么求（泰勒公式等）。</p>
+          </div>
+<div class="note note-success">
+            <p>别忘了和函数要求出收敛域。</p>
+          </div>
+<div class="note note-primary">
+            <p>有的题目，大可不必用 <code>Stokes</code> 公式！</p><p>例如：</p><script type="math/tex; mode=display">?=I=\int_C(y^2-z)dx+(2z-x^2)dy +(3x^2-y^2)dz,\\C为x+y+z=2和\frac{x^2}{4}+y^2=1的交线</script><p>令</p><script type="math/tex; mode=display">\begin{aligned}  &x = 2\cos \theta\\  &y=2\sin\theta\\  &z=2-x-y\end{aligned}</script>
+          </div>
+<div class="note note-success">
+            <p>几个积分中值定理！</p>
+          </div>
+<div class="note note-primary">
+            <p>柯西不等式的积分形式</p><p>重积分证明一些积分相关的不等式</p>
+          </div>
+<div class="note note-success">
+            <p>曲率？？？挠率？？？</p>
+          </div>
+<div class="note note-primary">
+            <p><a class="btn" href="/2020/05/22/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry/" title="向量空间" target="_blank">向量空间</a></p>
+          </div>
+<div class="note note-primary">
+            <p>$arsh~x=ln(x+\sqrt{x^2+1})$</p>
+          </div>
+<div class="note note-warning">
+            <p><strong>难题</strong></p><script type="math/tex; mode=display">\begin{aligned}  侧面：&I_1 =\iint \frac{y\ dx\wedge dz}{x^2+y^2+z^2}\\  底面：&I_2 = 0\\  I &= I_1 + I_2 \\    &= \int_{-R}^R\int_{-R}^R 2 \frac{\sqrt{R^2-z^2}\ dz\ dx}{x^2 + R^2}\\    &= \frac{\pi^2R}{2}\\\\    &\frac{\partial f}{\partial x} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial x},\quad \frac{\partial f}{\partial y} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial y}\\    \Rightarrow& \sqrt{f_x^2 + f_y ^ 2} = f_r\\    &|\iint_D f\ dx\ dy\ | = |\iint_D f\cdot r\ dr \ d\theta \ |\\    =&\frac{1}{2} |0 - \iint_D r^2 f_r\ dr \ d\theta|\ dr \ d\theta\\    \le&\frac{1}{2}\iint_Dr^2\max|f_r|\\    =&2\pi\cdot\frac{1}{6}\max |f_r|\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}  (1)\quad&u_{xx}+u_{yy}+cu = 0, c<0\\  &若取得正最大，则为极大值，Hessian 负定\\  &而极大值点处u_{xx} + u_{yy}>0\\  &u_{xx} < 0,\ u_{xx}u_{yy}-u_{xy}^2 >0\\  &简单讨论一下不可能，取得负最小值的时类似证明即可\\\\  (2)\quad&在u上只有可能有非负最小值和非正最大值\\  &最小值记为 m\ge 0，最大值记为M\le 0 而 M \ge m,则 M = m =0\\  \Rightarrow& u(x,y) = 0\end{aligned}</script>
+          </div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>日程</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Hexo 建站实录</title>
-    <url>/2020/08/13/talk-chat/Hexo/</url>
-    <content><![CDATA[<p>建站实录</p>
-<a id="more"></a>
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>需要准备的材料：</p>
-<ol>
-<li>vscode<ul>
-<li>VSCode 的终端内，要换成<code>cmd.exe</code>，按下 <code>ctrl + ,</code> 进入设置，找到 <code>terminal.external.windowsExec</code>这个，修改为 <code>C:\Windows\System32\cmd.exe</code></li>
-</ul>
-</li>
-<li><p>Node.js</p>
-<blockquote>
-<p>安装完成后需要执行：<code>npm config set registry https://registry.npm.taobao.org</code>，来重新定向源。</p>
-</blockquote>
-</li>
-<li><p>Git客户端、以及一个配置好的 Github 账号</p>
-</li>
-</ol>
-<h3 id="站点建立"><a href="#站点建立" class="headerlink" title="站点建立"></a>站点建立</h3><blockquote>
-<p><a href="https://docs.github.com/en/github/working-with-github-pages">https://docs.github.com/en/github/working-with-github-pages</a></p>
-</blockquote>
-<ul>
-<li>安装Git<ul>
-<li>Git 的配置</li>
-</ul>
-</li>
-<li>安装Node.js</li>
-<li>安装Hexo</li>
-<li>GitHub创建个人仓库</li>
-</ul>
-<p>Git：在<a href="https://npm.taobao.org/mirrors/git-for-windows/v2.28.0.windows.1/">Mirror</a>中下载，并安装 <code>Git-2.28.0-64-bit.exe</code>（中间都是直接点击下一步即可）</p>
-<p>Node.js：在<a href="https://npm.taobao.org/mirrors/node/latest-v14.x/">Mirror</a>中下载，并安装 <code>node-v14.8.0-x64.msi</code>。</p>
-<p>第一步，为你的站点设置一个代码仓库：</p>
-<blockquote>
-<p><a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site">Ref</a></p>
-</blockquote>
-<p>第二步，站点初始化</p>
-<blockquote>
-<p><a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site">Ref</a></p>
-<p>Note: It can take up to 20 minutes for changes to your site to publish after you push the changes to GitHub. If your don’t see your changes reflected in your browser after an hour, see “About Jekyll build errors for GitHub Pages sites.”</p>
-<p>部署需要时间、每小时最多部署10次，站点大小最多1G（图片不能太多太大，搞大型个人相册就免了）</p>
-</blockquote>
-<p>第三步，找一个地方，专门存放你的这个站点，例如：<code>D:/repos/</code> 在这个文件夹中 clone 下你的这个仓库。并且在 VScode 中打开这个<strong>仓库</strong></p>
-<p>在这里，按照：</p>
-<blockquote>
-<p><a href="https://hexo.io/zh-cn/docs">Ref</a> 安装 Hexo。</p>
-<p><a href="https://hexo.io/zh-cn/docs/setup">Ref</a> 在本机上建立站点</p>
-</blockquote>
-<p>注意，因为直接在git下的目录中打开code，所以其中的folder就是 <code>.</code> （当前文件夹）不用执行cd切换工作文件夹，也就是（在VScode 终端中执行）：</p>
-<pre><code class="hljs bash">hexo init .
-npm install</code></pre>
-<ul>
-<li><p>初次尝试</p>
-</li>
-<li><p>站点配置</p>
-<ul>
-<li><code>_config.yml</code></li>
-</ul>
-</li>
-<li><p>更换主题（以我现在用的 <code>Fluid</code> 为例）</p>
-<ul>
-<li>注意看文档就行</li>
-</ul>
-</li>
-<li><p>发布文章</p>
-<ul>
-<li>Hexo 工作流</li>
-<li><code>yaml</code></li>
-<li><code>&lt;!-- more --&gt;</code>用法</li>
-</ul>
-</li>
-<li><p>个性化设置</p>
-<ul>
-<li>搜索器</li>
-<li>Mathjax</li>
-<li>Valine</li>
-<li>思维导图</li>
-</ul>
-</li>
-<li><p>其他</p>
-<ul>
-<li>code Snippet</li>
-</ul>
-</li>
-<li><p>附录</p>
-</li>
-</ul>
-<blockquote>
-<p>参考了部分：<a href="https://zhuanlan.zhihu.com/p/26625249">Ref</a></p>
-</blockquote>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>杂记</tag>
-      </tags>
   </entry>
   <entry>
     <title>谈谈编程</title>
@@ -766,6 +667,156 @@ NEXT I</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>Hexo 建站实录</title>
+    <url>/2020/08/13/talk-chat/Hexo/</url>
+    <content><![CDATA[<p>建站实录</p>
+<a id="more"></a>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>需要准备的材料：</p>
+<ol>
+<li>vscode<ul>
+<li>VSCode 的终端内，要换成<code>cmd.exe</code>，按下 <code>ctrl + ,</code> 进入设置，找到 <code>terminal.external.windowsExec</code>这个，修改为 <code>C:\Windows\System32\cmd.exe</code></li>
+</ul>
+</li>
+<li><p>Node.js</p>
+<blockquote>
+<p>安装完成后需要执行：<code>npm config set registry https://registry.npm.taobao.org</code>，来重新定向源。</p>
+</blockquote>
+</li>
+<li><p>Git客户端、以及一个配置好的 Github 账号</p>
+</li>
+</ol>
+<h3 id="站点建立"><a href="#站点建立" class="headerlink" title="站点建立"></a>站点建立</h3><blockquote>
+<p><a href="https://docs.github.com/en/github/working-with-github-pages">https://docs.github.com/en/github/working-with-github-pages</a></p>
+</blockquote>
+<ul>
+<li>安装Git<ul>
+<li>Git 的配置</li>
+</ul>
+</li>
+<li>安装Node.js</li>
+<li>安装Hexo</li>
+<li>GitHub创建个人仓库</li>
+</ul>
+<p>Git：在<a href="https://npm.taobao.org/mirrors/git-for-windows/v2.28.0.windows.1/">Mirror</a>中下载，并安装 <code>Git-2.28.0-64-bit.exe</code>（中间都是直接点击下一步即可）</p>
+<p>Node.js：在<a href="https://npm.taobao.org/mirrors/node/latest-v14.x/">Mirror</a>中下载，并安装 <code>node-v14.8.0-x64.msi</code>。</p>
+<p>第一步，为你的站点设置一个代码仓库：</p>
+<blockquote>
+<p><a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site">Ref</a></p>
+</blockquote>
+<p>第二步，站点初始化</p>
+<blockquote>
+<p><a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site">Ref</a></p>
+<p>Note: It can take up to 20 minutes for changes to your site to publish after you push the changes to GitHub. If your don’t see your changes reflected in your browser after an hour, see “About Jekyll build errors for GitHub Pages sites.”</p>
+<p>部署需要时间、每小时最多部署10次，站点大小最多1G（图片不能太多太大，搞大型个人相册就免了）</p>
+</blockquote>
+<p>第三步，找一个地方，专门存放你的这个站点，例如：<code>D:/repos/</code> 在这个文件夹中 clone 下你的这个仓库。并且在 VScode 中打开这个<strong>仓库</strong></p>
+<p>在这里，按照：</p>
+<blockquote>
+<p><a href="https://hexo.io/zh-cn/docs">Ref</a> 安装 Hexo。</p>
+<p><a href="https://hexo.io/zh-cn/docs/setup">Ref</a> 在本机上建立站点</p>
+</blockquote>
+<p>注意，因为直接在git下的目录中打开code，所以其中的folder就是 <code>.</code> （当前文件夹）不用执行cd切换工作文件夹，也就是（在VScode 终端中执行）：</p>
+<pre><code class="hljs bash">hexo init .
+npm install</code></pre>
+<ul>
+<li>初次尝试</li>
+</ul>
+<pre><code class="hljs BASH">hexo s --debug <span class="hljs-comment"># 显示debug反馈</span>
+hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
+<p>应当显示：<br><!-- TODO --></p>
+<p>deploy 配置</p>
+<pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>
+  <span class="hljs-attr">repository:</span> <span class="hljs-string">git@github.com:Jerryyang2001/Jerryyang2001.github.io.git</span>
+  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span> <span class="hljs-comment"># 注意是 master 分支</span>
+  <span class="hljs-attr">message:</span> <span class="hljs-string">Site</span> <span class="hljs-string">updated:&#123;&#123;</span> <span class="hljs-string">now(&#x27;YYYY-MM-DD</span> <span class="hljs-string">HH:mm:ss&#x27;)</span> <span class="hljs-string">&#125;&#125;)</span></code></pre>
+<ul>
+<li><p>站点配置</p>
+<ul>
+<li><code>_config.yml</code></li>
+</ul>
+</li>
+<li><p>更换主题（以我现在用的 <code>Fluid</code> 为例）</p>
+<ul>
+<li>注意看文档就行</li>
+<li>主题配置</li>
+</ul>
+</li>
+<li><p>发布文章</p>
+<ul>
+<li>Hexo 工作流</li>
+<li><code>yaml</code></li>
+<li><code>&lt;!-- more --&gt;</code>用法</li>
+</ul>
+</li>
+<li><p>个性化设置</p>
+<ul>
+<li>搜索器</li>
+<li>Mathjax</li>
+<li>Valine</li>
+<li>思维导图</li>
+</ul>
+</li>
+<li><p>其他</p>
+<ul>
+<li>code Snippet</li>
+</ul>
+</li>
+<li><p>附录</p>
+</li>
+</ul>
+<blockquote>
+<p>参考了部分：<a href="https://zhuanlan.zhihu.com/p/26625249">Ref</a></p>
+</blockquote>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>杂记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>外微分形式与微积分</title>
+    <url>/2020/05/24/study/Advanced-Mathematics/Exterior-Differential/</url>
+    <content><![CDATA[<p>些些写累了，准备 <del>白嫖</del> 维基百科。关于外微分形式与场论中几个公式，在教材中并没有给出完整的说明，在这里简单记录一下。</p>
+<a id="more"></a>
+<blockquote>
+<p>以下内容收集自 Wikipedia</p>
+</blockquote>
+<h2 id="外微分形式"><a href="#外微分形式" class="headerlink" title="外微分形式"></a>外微分形式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>一个 $k$ 阶的微分形式的外微分是 $k+1$ 阶的微分形式。对于一个 $k$ 阶形式的 $ω = f<em>I\mathrm dx_I$，其外微分形式为${\displaystyle \mathrm d{\omega }=\sum </em>{i=1}^{n}{\frac {\partial f<em>{I}}{\partial x</em>{i}}}\mathrm dx<em>{i}\wedge \mathrm dx</em>{I}}$。</p>
+<p>对于一般的<em>k</em>-形式 $\sum f<em>I dx_I$ （其中多重指标 $I$ 取遍所有${1, …, n}$的为 $k$ 基数的有序子集），我们只作了线性推广。注意如果上面有 $i=I$ 则 $\mathrm dx</em>{i}\wedge\mathrm dx_{I}=0$。</p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>外微分满足：</p>
+<ul>
+<li><p>线性</p>
+</li>
+<li><p>楔积法则：$\displaystyle{ d(\omega \wedge \eta )=d\omega \wedge \eta +(-1)^{ {\rm {deg\,} }\omega }(\omega \wedge d\eta )}$</p>
+</li>
+<li><p>$\mathrm d^2 =0$</p>
+</li>
+</ul>
+<h2 id="微积分中的外微分"><a href="#微积分中的外微分" class="headerlink" title="微积分中的外微分"></a>微积分中的外微分</h2><h3 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h3><p>对于一个 0-形式，也就是一个光滑函数 $f: R^n\rightarrow R$，我们有 ${\displaystyle df=\sum <em>{i=1}^{n}{\frac {\partial f}{\partial x</em>{ i } } }\,dx_{i}}$，所以对于向量场 $\boldsymbol V$ 而言：${\displaystyle df(V)=\langle {\mathrm{grad} }f,V\rangle }$</p>
+<h3 id="旋度"><a href="#旋度" class="headerlink" title="旋度"></a>旋度</h3><p>对于一个 1-形式，${\displaystyle \omega =\sum <em>{i}f</em>{i}\,dx_{i}}$ 在 $R^3$ 上，有：</p>
+<script type="math/tex; mode=display">
+{\displaystyle \omega =\sum _{i}f_{i}\,dx_{i}}</script><p>它限制到三维情况 ${\displaystyle \omega =u\,dx+v\,dy+w\,dz}$ 就是</p>
+<script type="math/tex; mode=display">
+{\displaystyle d\omega =\left({\frac {\partial v}{\partial x}}-{\frac {\partial u}{\partial y}}\right)dx\wedge dy+\left({\frac {\partial w}{\partial y}}-{\frac {\partial v}{\partial z}}\right)dy\wedge dz+\left({\frac {\partial u}{\partial z}}-{\frac {\partial w}{\partial x}}\right)dz\wedge dx.}</script><p>因此，对于向量场 ${\displaystyle U}, {\displaystyle V=[u,v,w]}$ 和 ${\displaystyle W}$ 我们有 ${\displaystyle d\omega (U,W)=\langle {\mathrm{curl}}\,V\times U,W\rangle }$</p>
+<p>其中 $\mathrm {curl} V$ 代表<em>V</em>的旋度，$\times$ 是向量积，而 $&lt;,&gt;$ 是标量积。</p>
+<h3 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h3><p>对于一个 2-形式 ${\displaystyle \omega =\sum <em>{i,j}h</em>{i,j}\,dx<em>{i}\wedge dx</em>{j},}$</p>
+<p>对于三维，若${\displaystyle \omega =p\,dy\wedge dz+q\,dz\wedge dx+r\,dx\wedge dy}$</p>
+<p>${\displaystyle d\omega} {\displaystyle =\left({\frac {\partial p}{\partial x}}+{\frac {\partial q}{\partial y}}+{\frac {\partial r}{\partial z}}\right)dx\wedge dy\wedge dz}{\displaystyle ={\mathrm{div}}V\,dx\wedge dy\wedge dz,}$</p>
+<p>其中 $V$ 是一个向量场定义为 <strong>${\displaystyle V=[p,q,r].}$</strong></p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>高等数学</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>外微分形式</tag>
+        <tag>向量空间</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>无穷级数</title>
     <url>/2020/05/25/study/Advanced-Mathematics/ConstantSeries/</url>
     <content><![CDATA[<p>级数部分相关定理。</p>
@@ -838,61 +889,6 @@ NEXT I</code></pre>
       <tags>
         <tag>高等数学</tag>
         <tag>级数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>外微分形式与微积分</title>
-    <url>/2020/05/24/study/Advanced-Mathematics/Exterior-Differential/</url>
-    <content><![CDATA[<p>些些写累了，准备 <del>白嫖</del> 维基百科。关于外微分形式与场论中几个公式，在教材中并没有给出完整的说明，在这里简单记录一下。</p>
-<a id="more"></a>
-<blockquote>
-<p>以下内容收集自 Wikipedia</p>
-</blockquote>
-<h2 id="外微分形式"><a href="#外微分形式" class="headerlink" title="外微分形式"></a>外微分形式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>一个 $k$ 阶的微分形式的外微分是 $k+1$ 阶的微分形式。对于一个 $k$ 阶形式的 $ω = f<em>I\mathrm dx_I$，其外微分形式为${\displaystyle \mathrm d{\omega }=\sum </em>{i=1}^{n}{\frac {\partial f<em>{I}}{\partial x</em>{i}}}\mathrm dx<em>{i}\wedge \mathrm dx</em>{I}}$。</p>
-<p>对于一般的<em>k</em>-形式 $\sum f<em>I dx_I$ （其中多重指标 $I$ 取遍所有${1, …, n}$的为 $k$ 基数的有序子集），我们只作了线性推广。注意如果上面有 $i=I$ 则 $\mathrm dx</em>{i}\wedge\mathrm dx_{I}=0$。</p>
-<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>外微分满足：</p>
-<ul>
-<li><p>线性</p>
-</li>
-<li><p>楔积法则：$\displaystyle{ d(\omega \wedge \eta )=d\omega \wedge \eta +(-1)^{ {\rm {deg\,} }\omega }(\omega \wedge d\eta )}$</p>
-</li>
-<li><p>$\mathrm d^2 =0$</p>
-</li>
-</ul>
-<h2 id="微积分中的外微分"><a href="#微积分中的外微分" class="headerlink" title="微积分中的外微分"></a>微积分中的外微分</h2><h3 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h3><p>对于一个 0-形式，也就是一个光滑函数 $f: R^n\rightarrow R$，我们有 ${\displaystyle df=\sum <em>{i=1}^{n}{\frac {\partial f}{\partial x</em>{ i } } }\,dx_{i}}$，所以对于向量场 $\boldsymbol V$ 而言：${\displaystyle df(V)=\langle {\mathrm{grad} }f,V\rangle }$</p>
-<h3 id="旋度"><a href="#旋度" class="headerlink" title="旋度"></a>旋度</h3><p>对于一个 1-形式，${\displaystyle \omega =\sum <em>{i}f</em>{i}\,dx_{i}}$ 在 $R^3$ 上，有：</p>
-<script type="math/tex; mode=display">
-{\displaystyle \omega =\sum _{i}f_{i}\,dx_{i}}</script><p>它限制到三维情况 ${\displaystyle \omega =u\,dx+v\,dy+w\,dz}$ 就是</p>
-<script type="math/tex; mode=display">
-{\displaystyle d\omega =\left({\frac {\partial v}{\partial x}}-{\frac {\partial u}{\partial y}}\right)dx\wedge dy+\left({\frac {\partial w}{\partial y}}-{\frac {\partial v}{\partial z}}\right)dy\wedge dz+\left({\frac {\partial u}{\partial z}}-{\frac {\partial w}{\partial x}}\right)dz\wedge dx.}</script><p>因此，对于向量场 ${\displaystyle U}, {\displaystyle V=[u,v,w]}$ 和 ${\displaystyle W}$ 我们有 ${\displaystyle d\omega (U,W)=\langle {\mathrm{curl}}\,V\times U,W\rangle }$</p>
-<p>其中 $\mathrm {curl} V$ 代表<em>V</em>的旋度，$\times$ 是向量积，而 $&lt;,&gt;$ 是标量积。</p>
-<h3 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h3><p>对于一个 2-形式 ${\displaystyle \omega =\sum <em>{i,j}h</em>{i,j}\,dx<em>{i}\wedge dx</em>{j},}$</p>
-<p>对于三维，若${\displaystyle \omega =p\,dy\wedge dz+q\,dz\wedge dx+r\,dx\wedge dy}$</p>
-<p>${\displaystyle d\omega} {\displaystyle =\left({\frac {\partial p}{\partial x}}+{\frac {\partial q}{\partial y}}+{\frac {\partial r}{\partial z}}\right)dx\wedge dy\wedge dz}{\displaystyle ={\mathrm{div}}V\,dx\wedge dy\wedge dz,}$</p>
-<p>其中 $V$ 是一个向量场定义为 <strong>${\displaystyle V=[p,q,r].}$</strong></p>
-<blockquote class="pullquote mindmap"><ul>
-<li>123<ul>
-<li>123</li>
-<li>333</li>
-<li>4</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>1233<ul>
-<li>123</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>高等数学</category>
-      </categories>
-      <tags>
-        <tag>高等数学</tag>
-        <tag>外微分形式</tag>
-        <tag>向量空间</tag>
       </tags>
   </entry>
   <entry>
@@ -1008,6 +1004,54 @@ f(-x),&-l\le x<0
 <blockquote>
 <p>在幂级数和傅里叶级数中，这三个定理有极大的作用</p>
 </blockquote>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>高等数学</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>级数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>幂级数</title>
+    <url>/2020/06/01/study/Advanced-Mathematics/PowerSeries/</url>
+    <content><![CDATA[<p>幂级数</p>
+<a id="more"></a>
+<h2 id="幂级数的收敛半径与收敛区间"><a href="#幂级数的收敛半径与收敛区间" class="headerlink" title="幂级数的收敛半径与收敛区间"></a>幂级数的收敛半径与收敛区间</h2><p><strong>Thm</strong>：（幂级数的收敛情况）幂级数的收敛情况有且仅有以下三种：</p>
+<ol>
+<li>收敛范围是整个实轴</li>
+<li>收敛范围是一个对称区间</li>
+<li>仅在 $x=0$ 收敛</li>
+</ol>
+<p><strong>Thm</strong>：（幂级数的收敛半径）对于幂级数的系数 $a<em>n$，若 $\rho =\overline{\lim\limits</em>{n\rightarrow \infty}}\sqrt[n]{|a_n|}$ 则</p>
+<ol>
+<li>当 $0\le \rho&lt;+\infty,|x|&lt;\frac 1 \rho$ 幂级数绝对收敛</li>
+<li>当 $0&lt;\rho&lt;\infty, |x|&gt;\frac 1 \rho$ 幂级数发散</li>
+</ol>
+<p>其中 $R=\frac 1 \rho$ 称作<strong>收敛半径</strong>，称 $(-R,R)$ 为<strong>收敛区间</strong></p>
+<div class="note note-primary">
+            <p><strong>Tips</strong></p><p>收敛区间和收敛域是不同的，区别在于端点处可能条件收敛</p>
+          </div>
+<p><strong>Thm</strong>：幂级数在 $x =x_1$ 处收敛，则在 $(-|x_1|,|x_1|)$ 上绝对收敛。若 $x=x_2$ 发散，则它在 $|x|&gt;|x_2|$ 处也发散</p>
+<blockquote>
+<p>这个定理很好证明，用 M 判别法即可</p>
+</blockquote>
+<p><strong>Thm</strong>：对于幂级数的系数 $a<em>n$ 满足 $\lim\limits</em>{n\rightarrow\infty}|\frac{a_{n+1}}{a_n}|=l$ 则 $R=\frac 1 l$（包含 0 和无穷的情况）</p>
+<h2 id="幂级数的性质"><a href="#幂级数的性质" class="headerlink" title="幂级数的性质"></a>幂级数的性质</h2><p><strong>Thm</strong>：（内闭一致收敛）设一个幂级数的收敛半径为 $R&gt;0$，在收敛区间内，幂级数内闭一致收敛</p>
+<blockquote>
+<p>如果在 R 处也收敛，则可以补全一致收敛到 R 处，也就是说 $在R处收敛\rightarrow 在[0,R]一致收敛$</p>
+</blockquote>
+<p><strong>Thm</strong>：幂级数的和函数是在收敛区间内是一个连续函数</p>
+<p><strong>Thm</strong>：幂级数的和函数是在收敛区间内的可微函数，且可以逐项求微，收敛区间不变</p>
+<p><strong>Thm</strong>：幂级数在积分后，收敛区间不变</p>
+<p><strong>Thm</strong>：在可导的情况下，幂级数可以逐项求导任意多次。</p>
+<p><strong>Thm</strong>：在 $x=R$ 处收敛，则和函数在 $[0,R]$ 连续</p>
+<blockquote>
+<p>通过函数项级数的判定即可得到这些定理</p>
+</blockquote>
+<h2 id="斯特林公式"><a href="#斯特林公式" class="headerlink" title="斯特林公式"></a>斯特林公式</h2><p>公式：$\displaystyle n!=\sqrt{2\pi n} (\frac n e)^ne^{\frac{\theta}{12n}}\approx\sqrt{2\pi n} (\frac n e)^n,\theta\in(0,1)$</p>
+<p>沃利斯公式：$\displaystyle \frac \pi 2=\lim\limits_{n \to \infty}\frac{[(2n)!!]^2}{[(2n-1)!!]^2(2n+1)}$</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>高等数学</category>
@@ -1359,6 +1403,141 @@ T'\\N'\\B'
       </tags>
   </entry>
   <entry>
+    <title>向量空间与解析几何</title>
+    <url>/2020/05/22/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry/</url>
+    <content><![CDATA[<p>临近期末，来一波概念回顾。</p>
+<a id="more"></a>
+<h2 id="向量及其运算"><a href="#向量及其运算" class="headerlink" title="向量及其运算"></a>向量及其运算</h2><h3 id="向量的概念"><a href="#向量的概念" class="headerlink" title="向量的概念"></a>向量的概念</h3><ul>
+<li><strong>Def</strong>：（向量）一个既有大小又有方向的量</li>
+<li><strong>Def</strong>：向量的模（或长度），范数 $|a|$，零向量 $\mathbf 0$，单位向量</li>
+</ul>
+<h3 id="向量的线性运算"><a href="#向量的线性运算" class="headerlink" title="向量的线性运算"></a>向量的线性运算</h3><ul>
+<li>向量的加法和减法<ul>
+<li>交换律</li>
+<li>结合律</li>
+<li>存在幺元 $\mathbf 0$</li>
+<li>存在逆元 $- a$</li>
+<li>（模的）三角不等式</li>
+</ul>
+</li>
+<li>向量的数乘</li>
+</ul>
+<h3 id="向量的数量积和数量积"><a href="#向量的数量积和数量积" class="headerlink" title="向量的数量积和数量积"></a>向量的数量积和数量积</h3><ul>
+<li>向量在轴上的投影<ul>
+<li><strong>Def</strong>：向量夹角</li>
+<li><strong>Def</strong>：（向量在轴上的投影） $(\vec{AB})_l = |\vec{AB}| \cos (\vec {AB}, l)$</li>
+</ul>
+</li>
+<li>向量的数量积<ul>
+<li><strong>Def</strong>：数量积</li>
+<li><strong>Thm</strong>：数量积的性质<ul>
+<li>$ a \cdot  a = | a|^2$</li>
+<li>$\cos ( a,  b) =\frac{ a \cdot  b}{| a|| b|}$</li>
+<li>$ a \perp  b \Leftrightarrow  a \cdot  b = 0$</li>
+<li>交换律、数乘的结合律、分配律</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向量的向量积<ul>
+<li><strong>Def</strong>：向量积</li>
+<li><strong>Thm</strong>：向量积的性质<ul>
+<li>$ a \times  b =  0\Leftrightarrow  a \parallel  b$</li>
+<li>反交换律</li>
+<li>分配律</li>
+<li>数乘的结合律</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向量的混合积<ul>
+<li><strong>Def</strong>：（混合积）$[{abc}] =  a \cdot ( b \times  c)$</li>
+<li>几何意义：是以 ${a,b,c}$ 为相邻棱构成的平行六面体的体积</li>
+<li><strong>Thm</strong>：混合积的性质<ul>
+<li>$ a, b, c 共面 \Leftrightarrow [{abc}]=0$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="空间直角坐标系及向量运算的坐标表示"><a href="#空间直角坐标系及向量运算的坐标表示" class="headerlink" title="空间直角坐标系及向量运算的坐标表示"></a>空间直角坐标系及向量运算的坐标表示</h2><h3 id="空间直角坐标系"><a href="#空间直角坐标系" class="headerlink" title="空间直角坐标系"></a>空间直角坐标系</h3><ul>
+<li>空间直角坐标系的建立：<ul>
+<li><strong>Def</strong>：<strong>坐标轴</strong>、<strong>坐标原点</strong>、<strong>坐标平面</strong>、<strong>卦限</strong></li>
+</ul>
+</li>
+<li>点的坐标：<ul>
+<li><strong>Def</strong>：<strong>横坐标</strong>、<strong>纵坐标</strong>、<strong>竖坐标</strong></li>
+</ul>
+</li>
+<li>坐标轴的平移</li>
+</ul>
+<h3 id="向量的坐标表示"><a href="#向量的坐标表示" class="headerlink" title="向量的坐标表示"></a>向量的坐标表示</h3><ul>
+<li>向量的坐标<ul>
+<li><strong>Def</strong>：基向量</li>
+<li><strong>Def</strong>：坐标表示式</li>
+</ul>
+</li>
+<li>向量的模和方向余弦<ul>
+<li><strong>Def</strong>：$a$ 的方向角</li>
+<li><strong>Def</strong>：（$a$ 的方向余弦）$\cos \alpha = \frac x {| a|},\cos \beta = \frac y {| a|},\cos \gamma = \frac z {| a|}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="向量运算的坐标表示"><a href="#向量运算的坐标表示" class="headerlink" title="向量运算的坐标表示"></a>向量运算的坐标表示</h3><ul>
+<li>向量加减法和数乘的坐标表示</li>
+<li>数量积的坐标表示</li>
+<li>向量积的坐标表示（行列式）</li>
+<li>混合积的坐标表示</li>
+</ul>
+<h2 id="平面与直线"><a href="#平面与直线" class="headerlink" title="平面与直线"></a>平面与直线</h2><h3 id="平面方程"><a href="#平面方程" class="headerlink" title="平面方程"></a>平面方程</h3><ol>
+<li>点法式方程</li>
+<li>一般方程</li>
+<li>截距式方程</li>
+<li>三点式方程</li>
+</ol>
+<h3 id="直线方程"><a href="#直线方程" class="headerlink" title="直线方程"></a>直线方程</h3><ol>
+<li>一般方程（两平面的交）</li>
+<li>标准方程</li>
+<li>两点式方程</li>
+<li>参数方程</li>
+<li>向量式方程</li>
+</ol>
+<h3 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h3><div class="note note-primary">
+            <p><strong>夹角</strong></p><ol><li>直线与直线</li><li>直线与平面</li><li>平面与平面</li></ol>
+          </div>
+<div class="note note-secondary">
+            <p><strong>距离</strong></p><ol><li>点到平面</li><li>点到直线 $\displaystyle d = \frac{|\vec{M_0M_1}\times a|}{|a|}$</li><li>异面直线的距离 $\displaystyle d = \frac{|[\vec{M_0M_1}a_1a_2]|}{|a_1\times a_2|}$</li></ol>
+          </div>
+<p><strong><span class="label label-info">直线与平面的交点</span></strong></p>
+<p><strong><span class="label label-success">过直线的平面束</span></strong></p>
+<h2 id="空间曲面和空间曲线"><a href="#空间曲面和空间曲线" class="headerlink" title="空间曲面和空间曲线"></a>空间曲面和空间曲线</h2><h3 id="球面和柱面"><a href="#球面和柱面" class="headerlink" title="球面和柱面"></a>球面和柱面</h3><ol>
+<li>球面方程</li>
+<li>柱面方程</li>
+</ol>
+<h3 id="空间曲线"><a href="#空间曲线" class="headerlink" title="空间曲线"></a>空间曲线</h3><ol>
+<li>一般方程（两个平面的交线）</li>
+<li>参数方程</li>
+<li><strong>空间曲线在坐标面上的投影</strong></li>
+</ol>
+<h3 id="锥面"><a href="#锥面" class="headerlink" title="锥面"></a>锥面</h3><ol>
+<li>母线、准线、顶点</li>
+<li>如何通过母线、准线、顶点构造</li>
+</ol>
+<h3 id="旋转曲面"><a href="#旋转曲面" class="headerlink" title="旋转曲面"></a>旋转曲面</h3><p>如何构造？</p>
+<h3 id="几种常见的二次曲面"><a href="#几种常见的二次曲面" class="headerlink" title="几种常见的二次曲面"></a>几种常见的二次曲面</h3><div class="note note-info">
+            <p><img src="https://pic3.zhimg.com/80/v2-2f9167b3a6014ae1db97a646450038e7_720w.jpg" alt="椭圆锥面"></p><p><img src="https://picb.zhimg.com/80/v2-7fdb424b614f185fd9f5d94d8108297d_720w.jpg" alt="椭球面"></p><p><img src="https://pic2.zhimg.com/80/v2-1b4cebaa0cf266408ed391542339f705_720w.jpg" alt="单叶双曲面"></p><p><img src="https://pic3.zhimg.com/80/v2-61bc076dab1f7eed8316381a5c65c721_720w.jpg" alt="双叶双曲面"></p><p><img src="https://pic2.zhimg.com/80/v2-70b021de8960867ee4b4e9c06dcac6cb_720w.jpg" alt="椭圆抛物面"></p><p><img src="https://pic4.zhimg.com/80/v2-b7c91cce5f10d1ac258a45ae8a204c8e_720w.jpg" alt="双曲抛物面"></p><p><img src="https://pic1.zhimg.com/80/v2-b84d818035a2a3654f9937a4d664080d_720w.jpg" alt="椭圆柱面"></p><p><img src="https://pic4.zhimg.com/80/v2-cd0e151a5ccf836a6e9f1edb683b40d5_720w.jpg" alt="双曲柱面"></p><p><img src="https://pic1.zhimg.com/80/v2-8f6a7089275ec0d89c28fa6a611a2175_720w.jpg" alt="抛物柱面"></p>
+          </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>高等数学</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>向量空间</tag>
+        <tag>解析几何</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多元函数积分学及其应用</title>
     <url>/2020/05/23/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/</url>
     <content><![CDATA[<p>多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习…</p>
@@ -1650,186 +1829,130 @@ T'\\N'\\B'
       </tags>
   </entry>
   <entry>
-    <title>幂级数</title>
-    <url>/2020/06/01/study/Advanced-Mathematics/PowerSeries/</url>
-    <content><![CDATA[<p>幂级数</p>
+    <title>正则表达式文法</title>
+    <url>/2020/07/01/study/ComputerScience/RegExp/</url>
+    <content><![CDATA[<p>正则表达式规则</p>
 <a id="more"></a>
-<h2 id="幂级数的收敛半径与收敛区间"><a href="#幂级数的收敛半径与收敛区间" class="headerlink" title="幂级数的收敛半径与收敛区间"></a>幂级数的收敛半径与收敛区间</h2><p><strong>Thm</strong>：（幂级数的收敛情况）幂级数的收敛情况有且仅有以下三种：</p>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="描述模式"><a href="#描述模式" class="headerlink" title="描述模式"></a>描述模式</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>连接操作</td>
+<td><code>AB &lt;=&gt; &#123;AB&#125;</code></td>
+</tr>
+<tr>
+<td>或操作</td>
+<td>`A</td>
+<td>B &lt;=&gt;{A,B}`</td>
+</tr>
+<tr>
+<td>闭包操作</td>
+<td><code>A* &lt;=&gt; U&#123;A^i&#125; i&gt;=0</code></td>
+</tr>
+<tr>
+<td>空字符串</td>
+<td><code>eps</code></td>
+</tr>
+<tr>
+<td>括号</td>
+<td>提升优先级</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="正则表达式的定义"><a href="#正则表达式的定义" class="headerlink" title="正则表达式的定义"></a>正则表达式的定义</h3><p>一个正则表达式可以是：</p>
 <ol>
-<li>收敛范围是整个实轴</li>
-<li>收敛范围是一个对称区间</li>
-<li>仅在 $x=0$ 收敛</li>
+<li>空字符串</li>
+<li>单个字符</li>
+<li>被括号包含的一个正则表达式</li>
+<li>两个正则表达式连接成的表达式</li>
+<li>由或运算分隔的两个表达式</li>
+<li>由闭包运算标记的表达式</li>
 </ol>
-<p><strong>Thm</strong>：（幂级数的收敛半径）对于幂级数的系数 $a<em>n$，若 $\rho =\overline{\lim\limits</em>{n\rightarrow \infty}}\sqrt[n]{|a_n|}$ 则</p>
-<ol>
-<li>当 $0\le \rho&lt;+\infty,|x|&lt;\frac 1 \rho$ 幂级数绝对收敛</li>
-<li>当 $0&lt;\rho&lt;\infty, |x|&gt;\frac 1 \rho$ 幂级数发散</li>
-</ol>
-<p>其中 $R=\frac 1 \rho$ 称作<strong>收敛半径</strong>，称 $(-R,R)$ 为<strong>收敛区间</strong></p>
-<div class="note note-primary">
-            <p><strong>Tips</strong></p><p>收敛区间和收敛域是不同的，区别在于端点处可能条件收敛</p>
-          </div>
-<p><strong>Thm</strong>：幂级数在 $x =x_1$ 处收敛，则在 $(-|x_1|,|x_1|)$ 上绝对收敛。若 $x=x_2$ 发散，则它在 $|x|&gt;|x_2|$ 处也发散</p>
-<blockquote>
-<p>这个定理很好证明，用 M 判别法即可</p>
-</blockquote>
-<p><strong>Thm</strong>：对于幂级数的系数 $a<em>n$ 满足 $\lim\limits</em>{n\rightarrow\infty}|\frac{a_{n+1}}{a_n}|=l$ 则 $R=\frac 1 l$（包含 0 和无穷的情况）</p>
-<h2 id="幂级数的性质"><a href="#幂级数的性质" class="headerlink" title="幂级数的性质"></a>幂级数的性质</h2><p><strong>Thm</strong>：（内闭一致收敛）设一个幂级数的收敛半径为 $R&gt;0$，在收敛区间内，幂级数内闭一致收敛</p>
-<blockquote>
-<p>如果在 R 处也收敛，则可以补全一致收敛到 R 处，也就是说 $在R处收敛\rightarrow 在[0,R]一致收敛$</p>
-</blockquote>
-<p><strong>Thm</strong>：幂级数的和函数是在收敛区间内是一个连续函数</p>
-<p><strong>Thm</strong>：幂级数的和函数是在收敛区间内的可微函数，且可以逐项求微，收敛区间不变</p>
-<p><strong>Thm</strong>：幂级数在积分后，收敛区间不变</p>
-<p><strong>Thm</strong>：在可导的情况下，幂级数可以逐项求导任意多次。</p>
-<p><strong>Thm</strong>：在 $x=R$ 处收敛，则和函数在 $[0,R]$ 连续</p>
-<blockquote>
-<p>通过函数项级数的判定即可得到这些定理</p>
-</blockquote>
-<h2 id="斯特林公式"><a href="#斯特林公式" class="headerlink" title="斯特林公式"></a>斯特林公式</h2><p>公式：$\displaystyle n!=\sqrt{2\pi n} (\frac n e)^ne^{\frac{\theta}{12n}}\approx\sqrt{2\pi n} (\frac n e)^n,\theta\in(0,1)$</p>
-<p>沃利斯公式：$\displaystyle \frac \pi 2=\lim\limits_{n \to \infty}\frac{[(2n)!!]^2}{[(2n-1)!!]^2(2n+1)}$</p>
+<h5 id><a href="#" class="headerlink" title=" "></a> </h5><h3 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>记法</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通配符</td>
+<td><code>.</code></td>
+<td><code>A.B</code></td>
+</tr>
+<tr>
+<td>指定的集合</td>
+<td>包含在<code>[]</code>中的字符</td>
+<td><code>[ABC]*</code></td>
+</tr>
+<tr>
+<td>范围</td>
+<td>包含在<code>[]</code>中，由<code>-</code>分隔</td>
+<td><code>[A-Z0-9]</code></td>
+</tr>
+<tr>
+<td>补集</td>
+<td>包含在<code>[]</code>中的，且以<code>^</code>开头</td>
+<td><code>[^A-Z]</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="闭包的简写"><a href="#闭包的简写" class="headerlink" title="闭包的简写"></a>闭包的简写</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>记法</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>至少一次</td>
+<td><code>+</code></td>
+<td><code>[0-9]+</code>（与下面这个等价）</td>
+</tr>
+<tr>
+<td>至少 0 次</td>
+<td><code>*</code></td>
+<td><code>[0-9][0-9]*</code></td>
+</tr>
+<tr>
+<td>指定次数 <code>n</code></td>
+<td><code>A&#123;n&#125;</code></td>
+<td><code>[0-9]&#123;11&#125;</code></td>
+</tr>
+<tr>
+<td>指定次数范围 <code>a &lt;= n &lt;= b</code></td>
+<td><code>A&#123;a-b&#125;</code></td>
+<td><code>[A-Z]&#123;0-2&#125;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="转义符："><a href="#转义符：" class="headerlink" title="转义符："></a>转义符：</h3><ul>
+<li>任意空白字符：<code>\s</code></li>
+<li>表示闭包的字符：<code>\*</code>，…</li>
+<li>其他常见的字符：<code>\n</code>，<code>\t</code>，…</li>
+</ul>
+<p><img src="/2020/07/01/study/ComputerScience/RegExp/image-20200622153014750.png" alt="image-20200622153014750"></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
-        <category>高等数学</category>
+        <category>程序设计</category>
       </categories>
       <tags>
-        <tag>高等数学</tag>
-        <tag>级数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>向量空间与解析几何</title>
-    <url>/2020/05/22/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry/</url>
-    <content><![CDATA[<p>临近期末，来一波概念回顾。</p>
-<a id="more"></a>
-<h2 id="向量及其运算"><a href="#向量及其运算" class="headerlink" title="向量及其运算"></a>向量及其运算</h2><h3 id="向量的概念"><a href="#向量的概念" class="headerlink" title="向量的概念"></a>向量的概念</h3><ul>
-<li><strong>Def</strong>：（向量）一个既有大小又有方向的量</li>
-<li><strong>Def</strong>：向量的模（或长度），范数 $|a|$，零向量 $\mathbf 0$，单位向量</li>
-</ul>
-<h3 id="向量的线性运算"><a href="#向量的线性运算" class="headerlink" title="向量的线性运算"></a>向量的线性运算</h3><ul>
-<li>向量的加法和减法<ul>
-<li>交换律</li>
-<li>结合律</li>
-<li>存在幺元 $\mathbf 0$</li>
-<li>存在逆元 $- a$</li>
-<li>（模的）三角不等式</li>
-</ul>
-</li>
-<li>向量的数乘</li>
-</ul>
-<h3 id="向量的数量积和数量积"><a href="#向量的数量积和数量积" class="headerlink" title="向量的数量积和数量积"></a>向量的数量积和数量积</h3><ul>
-<li>向量在轴上的投影<ul>
-<li><strong>Def</strong>：向量夹角</li>
-<li><strong>Def</strong>：（向量在轴上的投影） $(\vec{AB})_l = |\vec{AB}| \cos (\vec {AB}, l)$</li>
-</ul>
-</li>
-<li>向量的数量积<ul>
-<li><strong>Def</strong>：数量积</li>
-<li><strong>Thm</strong>：数量积的性质<ul>
-<li>$ a \cdot  a = | a|^2$</li>
-<li>$\cos ( a,  b) =\frac{ a \cdot  b}{| a|| b|}$</li>
-<li>$ a \perp  b \Leftrightarrow  a \cdot  b = 0$</li>
-<li>交换律、数乘的结合律、分配律</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>向量的向量积<ul>
-<li><strong>Def</strong>：向量积</li>
-<li><strong>Thm</strong>：向量积的性质<ul>
-<li>$ a \times  b =  0\Leftrightarrow  a \parallel  b$</li>
-<li>反交换律</li>
-<li>分配律</li>
-<li>数乘的结合律</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>向量的混合积<ul>
-<li><strong>Def</strong>：（混合积）$[{abc}] =  a \cdot ( b \times  c)$</li>
-<li>几何意义：是以 ${a,b,c}$ 为相邻棱构成的平行六面体的体积</li>
-<li><strong>Thm</strong>：混合积的性质<ul>
-<li>$ a, b, c 共面 \Leftrightarrow [{abc}]=0$</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="空间直角坐标系及向量运算的坐标表示"><a href="#空间直角坐标系及向量运算的坐标表示" class="headerlink" title="空间直角坐标系及向量运算的坐标表示"></a>空间直角坐标系及向量运算的坐标表示</h2><h3 id="空间直角坐标系"><a href="#空间直角坐标系" class="headerlink" title="空间直角坐标系"></a>空间直角坐标系</h3><ul>
-<li>空间直角坐标系的建立：<ul>
-<li><strong>Def</strong>：<strong>坐标轴</strong>、<strong>坐标原点</strong>、<strong>坐标平面</strong>、<strong>卦限</strong></li>
-</ul>
-</li>
-<li>点的坐标：<ul>
-<li><strong>Def</strong>：<strong>横坐标</strong>、<strong>纵坐标</strong>、<strong>竖坐标</strong></li>
-</ul>
-</li>
-<li>坐标轴的平移</li>
-</ul>
-<h3 id="向量的坐标表示"><a href="#向量的坐标表示" class="headerlink" title="向量的坐标表示"></a>向量的坐标表示</h3><ul>
-<li>向量的坐标<ul>
-<li><strong>Def</strong>：基向量</li>
-<li><strong>Def</strong>：坐标表示式</li>
-</ul>
-</li>
-<li>向量的模和方向余弦<ul>
-<li><strong>Def</strong>：$a$ 的方向角</li>
-<li><strong>Def</strong>：（$a$ 的方向余弦）$\cos \alpha = \frac x {| a|},\cos \beta = \frac y {| a|},\cos \gamma = \frac z {| a|}$</li>
-</ul>
-</li>
-</ul>
-<h3 id="向量运算的坐标表示"><a href="#向量运算的坐标表示" class="headerlink" title="向量运算的坐标表示"></a>向量运算的坐标表示</h3><ul>
-<li>向量加减法和数乘的坐标表示</li>
-<li>数量积的坐标表示</li>
-<li>向量积的坐标表示（行列式）</li>
-<li>混合积的坐标表示</li>
-</ul>
-<h2 id="平面与直线"><a href="#平面与直线" class="headerlink" title="平面与直线"></a>平面与直线</h2><h3 id="平面方程"><a href="#平面方程" class="headerlink" title="平面方程"></a>平面方程</h3><ol>
-<li>点法式方程</li>
-<li>一般方程</li>
-<li>截距式方程</li>
-<li>三点式方程</li>
-</ol>
-<h3 id="直线方程"><a href="#直线方程" class="headerlink" title="直线方程"></a>直线方程</h3><ol>
-<li>一般方程（两平面的交）</li>
-<li>标准方程</li>
-<li>两点式方程</li>
-<li>参数方程</li>
-<li>向量式方程</li>
-</ol>
-<h3 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h3><div class="note note-primary">
-            <p><strong>夹角</strong></p><ol><li>直线与直线</li><li>直线与平面</li><li>平面与平面</li></ol>
-          </div>
-<div class="note note-secondary">
-            <p><strong>距离</strong></p><ol><li>点到平面</li><li>点到直线 $\displaystyle d = \frac{|\vec{M_0M_1}\times a|}{|a|}$</li><li>异面直线的距离 $\displaystyle d = \frac{|[\vec{M_0M_1}a_1a_2]|}{|a_1\times a_2|}$</li></ol>
-          </div>
-<p><strong><span class="label label-info">直线与平面的交点</span></strong></p>
-<p><strong><span class="label label-success">过直线的平面束</span></strong></p>
-<h2 id="空间曲面和空间曲线"><a href="#空间曲面和空间曲线" class="headerlink" title="空间曲面和空间曲线"></a>空间曲面和空间曲线</h2><h3 id="球面和柱面"><a href="#球面和柱面" class="headerlink" title="球面和柱面"></a>球面和柱面</h3><ol>
-<li>球面方程</li>
-<li>柱面方程</li>
-</ol>
-<h3 id="空间曲线"><a href="#空间曲线" class="headerlink" title="空间曲线"></a>空间曲线</h3><ol>
-<li>一般方程（两个平面的交线）</li>
-<li>参数方程</li>
-<li><strong>空间曲线在坐标面上的投影</strong></li>
-</ol>
-<h3 id="锥面"><a href="#锥面" class="headerlink" title="锥面"></a>锥面</h3><ol>
-<li>母线、准线、顶点</li>
-<li>如何通过母线、准线、顶点构造</li>
-</ol>
-<h3 id="旋转曲面"><a href="#旋转曲面" class="headerlink" title="旋转曲面"></a>旋转曲面</h3><p>如何构造？</p>
-<h3 id="几种常见的二次曲面"><a href="#几种常见的二次曲面" class="headerlink" title="几种常见的二次曲面"></a>几种常见的二次曲面</h3><div class="note note-info">
-            <p><img src="https://pic3.zhimg.com/80/v2-2f9167b3a6014ae1db97a646450038e7_720w.jpg" alt="椭圆锥面"></p><p><img src="https://picb.zhimg.com/80/v2-7fdb424b614f185fd9f5d94d8108297d_720w.jpg" alt="椭球面"></p><p><img src="https://pic2.zhimg.com/80/v2-1b4cebaa0cf266408ed391542339f705_720w.jpg" alt="单叶双曲面"></p><p><img src="https://pic3.zhimg.com/80/v2-61bc076dab1f7eed8316381a5c65c721_720w.jpg" alt="双叶双曲面"></p><p><img src="https://pic2.zhimg.com/80/v2-70b021de8960867ee4b4e9c06dcac6cb_720w.jpg" alt="椭圆抛物面"></p><p><img src="https://pic4.zhimg.com/80/v2-b7c91cce5f10d1ac258a45ae8a204c8e_720w.jpg" alt="双曲抛物面"></p><p><img src="https://pic1.zhimg.com/80/v2-b84d818035a2a3654f9937a4d664080d_720w.jpg" alt="椭圆柱面"></p><p><img src="https://pic4.zhimg.com/80/v2-cd0e151a5ccf836a6e9f1edb683b40d5_720w.jpg" alt="双曲柱面"></p><p><img src="https://pic1.zhimg.com/80/v2-8f6a7089275ec0d89c28fa6a611a2175_720w.jpg" alt="抛物柱面"></p>
-          </div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>高等数学</category>
-      </categories>
-      <tags>
-        <tag>高等数学</tag>
-        <tag>向量空间</tag>
-        <tag>解析几何</tag>
+        <tag>编程</tag>
       </tags>
   </entry>
   <entry>
@@ -2214,133 +2337,6 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
       </categories>
       <tags>
         <tag>物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则表达式文法</title>
-    <url>/2020/07/01/study/ComputerScience/RegExp/</url>
-    <content><![CDATA[<p>正则表达式规则</p>
-<a id="more"></a>
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="描述模式"><a href="#描述模式" class="headerlink" title="描述模式"></a>描述模式</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>连接操作</td>
-<td><code>AB &lt;=&gt; &#123;AB&#125;</code></td>
-</tr>
-<tr>
-<td>或操作</td>
-<td>`A</td>
-<td>B &lt;=&gt;{A,B}`</td>
-</tr>
-<tr>
-<td>闭包操作</td>
-<td><code>A* &lt;=&gt; U&#123;A^i&#125; i&gt;=0</code></td>
-</tr>
-<tr>
-<td>空字符串</td>
-<td><code>eps</code></td>
-</tr>
-<tr>
-<td>括号</td>
-<td>提升优先级</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="正则表达式的定义"><a href="#正则表达式的定义" class="headerlink" title="正则表达式的定义"></a>正则表达式的定义</h3><p>一个正则表达式可以是：</p>
-<ol>
-<li>空字符串</li>
-<li>单个字符</li>
-<li>被括号包含的一个正则表达式</li>
-<li>两个正则表达式连接成的表达式</li>
-<li>由或运算分隔的两个表达式</li>
-<li>由闭包运算标记的表达式</li>
-</ol>
-<h5 id><a href="#" class="headerlink" title=" "></a> </h5><h3 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>记法</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>通配符</td>
-<td><code>.</code></td>
-<td><code>A.B</code></td>
-</tr>
-<tr>
-<td>指定的集合</td>
-<td>包含在<code>[]</code>中的字符</td>
-<td><code>[ABC]*</code></td>
-</tr>
-<tr>
-<td>范围</td>
-<td>包含在<code>[]</code>中，由<code>-</code>分隔</td>
-<td><code>[A-Z0-9]</code></td>
-</tr>
-<tr>
-<td>补集</td>
-<td>包含在<code>[]</code>中的，且以<code>^</code>开头</td>
-<td><code>[^A-Z]</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="闭包的简写"><a href="#闭包的简写" class="headerlink" title="闭包的简写"></a>闭包的简写</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>记法</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>至少一次</td>
-<td><code>+</code></td>
-<td><code>[0-9]+</code>（与下面这个等价）</td>
-</tr>
-<tr>
-<td>至少 0 次</td>
-<td><code>*</code></td>
-<td><code>[0-9][0-9]*</code></td>
-</tr>
-<tr>
-<td>指定次数 <code>n</code></td>
-<td><code>A&#123;n&#125;</code></td>
-<td><code>[0-9]&#123;11&#125;</code></td>
-</tr>
-<tr>
-<td>指定次数范围 <code>a &lt;= n &lt;= b</code></td>
-<td><code>A&#123;a-b&#125;</code></td>
-<td><code>[A-Z]&#123;0-2&#125;</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="转义符："><a href="#转义符：" class="headerlink" title="转义符："></a>转义符：</h3><ul>
-<li>任意空白字符：<code>\s</code></li>
-<li>表示闭包的字符：<code>\*</code>，…</li>
-<li>其他常见的字符：<code>\n</code>，<code>\t</code>，…</li>
-</ul>
-<p><img src="/2020/07/01/study/ComputerScience/RegExp/image-20200622153014750.png" alt="image-20200622153014750"></p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
       </tags>
   </entry>
   <entry>
@@ -2758,7 +2754,7 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
     <url>/2020/05/28/study/ComputerScience/DiscreteMath/GraphTheory/</url>
     <content><![CDATA[<p>图论的基本概念和定理，真的炒鸡多呀。</p>
 <p>（没错，组合数学部分咕了！~超小声~）</p>
-<p>&lt; !—more— &gt;</p>
+<a id="more"></a>
 <h2 id="图的基本概念"><a href="#图的基本概念" class="headerlink" title="图的基本概念"></a>图的基本概念</h2><p><strong>Def</strong>：（无向图）一个<strong>无向图</strong> $G$ 是一个有序的二元组 $&lt;  V,E  &gt;$ 其中：</p>
 <ol>
 <li>$V$ 是一个非空的有穷集，称作顶点集。其元素称作<strong>顶点</strong>或<strong>结点</strong></li>

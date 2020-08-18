@@ -129,6 +129,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/schedule/">
+                <i class="iconfont icon-plan"></i>
+                日程
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
@@ -171,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      469 字
+      530 字
     </span>
   
 
@@ -181,7 +193,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      7
        分钟
     </span>
   
@@ -264,8 +276,18 @@
 <pre><code class="hljs bash">hexo init .
 npm install</code></pre>
 <ul>
-<li><p>初次尝试</p>
-</li>
+<li>初次尝试</li>
+</ul>
+<pre><code class="hljs BASH">hexo s --debug <span class="hljs-comment"># 显示debug反馈</span>
+hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
+<p>应当显示：<br><!-- TODO --></p>
+<p>deploy 配置</p>
+<pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>
+  <span class="hljs-attr">repository:</span> <span class="hljs-string">git@github.com:Jerryyang2001/Jerryyang2001.github.io.git</span>
+  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span> <span class="hljs-comment"># 注意是 master 分支</span>
+  <span class="hljs-attr">message:</span> <span class="hljs-string">Site</span> <span class="hljs-string">updated:&#123;&#123;</span> <span class="hljs-string">now(&#x27;YYYY-MM-DD</span> <span class="hljs-string">HH:mm:ss&#x27;)</span> <span class="hljs-string">&#125;&#125;)</span></code></pre>
+<ul>
 <li><p>站点配置</p>
 <ul>
 <li><code>_config.yml</code></li>
@@ -274,6 +296,7 @@ npm install</code></pre>
 <li><p>更换主题（以我现在用的 <code>Fluid</code> 为例）</p>
 <ul>
 <li>注意看文档就行</li>
+<li>主题配置</li>
 </ul>
 </li>
 <li><p>发布文章</p>
