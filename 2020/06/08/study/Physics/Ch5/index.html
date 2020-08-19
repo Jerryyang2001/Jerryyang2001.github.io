@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      958 字
+      921 字
     </span>
   
 
@@ -228,14 +228,14 @@
             <div class="markdown-body" id="post-body">
               <p>基础物理学Ch5 刚体运动学</p>
 <a id="more"></a>
+<p>基本问题：</p>
 <ol>
 <li>运动</li>
 <li>动力学</li>
 <li>能量</li>
 </ol>
-<h2 id="刚体运动学"><a href="#刚体运动学" class="headerlink" title="刚体运动学"></a>刚体运动学</h2><p><strong>刚体</strong>：在外力作用下，形状大小不变的物体（任意两个质点之间的距离保持不变）</p>
-<p><em>理想模型！</em></p>
-<p><strong>运动形式</strong>：</p>
+<h2 id="刚体运动学"><a href="#刚体运动学" class="headerlink" title="刚体运动学"></a>刚体运动学</h2><p><strong><span class="label label-info">「刚体」</span></strong>：在外力作用下，形状大小不变的物体（任意两个质点之间的距离保持不变）<code>这是一个理想模型！</code></p>
+<p><strong><span class="label label-info">「运动形式」</span></strong>：</p>
 <ul>
 <li>平动</li>
 <li>转动<ul>
@@ -247,18 +247,22 @@
 </ul>
 <h3 id="刚体的平动"><a href="#刚体的平动" class="headerlink" title="刚体的平动"></a>刚体的平动</h3><p><strong>平动</strong>：所有点的运动轨迹都保持完全相同（任意两点连线总平行与初始位置间的连线）</p>
 <p><strong>特点</strong>：各点运动特征相同</p>
-<p>变化为质点运动</p>
-<h3 id="定轴转动（角速度，角加速度）"><a href="#定轴转动（角速度，角加速度）" class="headerlink" title="定轴转动（角速度，角加速度）"></a>定轴转动（<em>角速度，角加速度</em>）</h3><p><strong>角坐标</strong>：$\theta(t)$</p>
-<p><strong>角位移</strong>：$\Delta \theta$</p>
-<p><strong>角速度矢量</strong>：$\omega = \lim \frac{\Delta \theta}{\Delta t}$</p>
-<p>定轴转动的<strong>特点</strong>：</p>
+<blockquote>
+<p>化为质点运动求解</p>
+</blockquote>
+<h3 id="定轴转动"><a href="#定轴转动" class="headerlink" title="定轴转动"></a>定轴转动</h3><ul>
+<li><strong>角坐标</strong>：$\theta(t)$</li>
+<li><strong>角位移</strong>：$\Delta \theta$</li>
+<li><strong>角速度矢量</strong>：$\omega = \lim \frac{\Delta \theta}{\Delta t}$</li>
+</ul>
+<p>定轴转动的特点：</p>
 <ol>
 <li>每个质点均做圆周运动 ，圆面为转动平面。</li>
 <li>任一质点运动$\Delta \theta \omega \alpha$相同，但是$v,a$不同</li>
 <li>运动描述仅需一个角坐标</li>
 </ol>
 <p><strong>角量$\omega$与线量$v$的关系</strong>：$\vec v = \omega r \vec{e_t} = \vec \omega \times \vec r$</p>
-<p>匀变速定轴转动的运动学公式</p>
+<p><strong><span class="label label-info">「匀变速定轴转动的运动学公式」</span></strong></p>
 <div class="table-container">
 <table>
 <thead>
@@ -283,62 +287,44 @@
 </tbody>
 </table>
 </div>
-<h3 id="平面平行运动（滚动）"><a href="#平面平行运动（滚动）" class="headerlink" title="平面平行运动（滚动）"></a>平面平行运动（滚动）</h3><p>可以看成：</p>
+<h3 id="平面平行运动（滚动）"><a href="#平面平行运动（滚动）" class="headerlink" title="平面平行运动（滚动）"></a>平面平行运动（滚动）</h3><p>平面平行运动可以看成：</p>
 <ol>
-<li>刚体随着质心的<strong>平动</strong><ul>
-<li>$\vec v$</li>
-<li>$\vec a$</li>
-</ul>
-</li>
-<li>刚体绕质心的<strong>转动</strong><ul>
-<li>$\vec \omega$</li>
-<li>$\vec \alpha$</li>
-</ul>
-</li>
+<li>刚体随质心的<strong>平动</strong>：$\vec v,~\vec a$</li>
+<li>刚体绕质心的<strong>转动</strong>：$\vec \omega,~\vec \alpha$</li>
 </ol>
-<p>只考虑纯滚动的情况下（接触点速度为 0）：</p>
+<p>只考虑纯滚动的情况下（<strong>接触点速度为 0</strong>）：</p>
 <ul>
 <li>平动路程$s = R \theta$</li>
 <li>质心速度大小$v_c = R\omega$</li>
 <li>质心加速度大小$a = R \alpha$</li>
 </ul>
-<h2 id="刚体动力学"><a href="#刚体动力学" class="headerlink" title="刚体动力学"></a>刚体动力学</h2><h3 id="力对转轴的力矩"><a href="#力对转轴的力矩" class="headerlink" title="力对转轴的力矩"></a>力对转轴的力矩</h3><p>对转轴的力矩:$M_z = (\vec r \times \vec F)_z$</p>
-<h3 id="转动定律"><a href="#转动定律" class="headerlink" title="转动定律"></a>转动定律</h3><p><strong>单个质点</strong>：</p>
-<ol>
-<li>$M_z = r F_t = mr^2\alpha$</li>
-</ol>
-<p><strong>刚体</strong>：</p>
-<p>质量元受外力$\vec F<em>{je}$，质量元受内力$\vec F</em>{ji}$</p>
-<p>$\sum M = (\sum mr^2)\alpha$</p>
-<p><strong>转动惯量</strong>：$M_z = I \alpha$</p>
-<h3 id="转动惯量"><a href="#转动惯量" class="headerlink" title="转动惯量"></a>转动惯量</h3><p><strong>意义</strong>：转动惯性的量度</p>
+<h2 id="刚体动力学"><a href="#刚体动力学" class="headerlink" title="刚体动力学"></a>刚体动力学</h2><h3 id="转动惯量"><a href="#转动惯量" class="headerlink" title="转动惯量"></a>转动惯量</h3><p><strong>意义</strong>：转动惯性的量度</p>
+<blockquote>
 <p>计算方法：</p>
 <ol>
-<li>离散点$\sum m r ^2$</li>
-<li>连续分布$\int r^2 \mathrm d m$</li>
+<li>离散：$\sum m r ^2$</li>
+<li>连续：$\int r^2 \mathrm d m$</li>
 </ol>
-<blockquote>
 <p>取决于质量、形状、位置。</p>
 </blockquote>
-<p>质量是$m$长度$l$的棒，以中点为轴：$I = \frac{1}{12} ml^2$</p>
-<p>质量是$m$长度$l$的棒，以一个端点为轴：$I = \frac{1}{3} ml^2$</p>
-<p>质量是$m$半径$R$的圆盘，以中心为轴：$I = \frac{1}{2} mR^2$</p>
-<p><strong>平行轴定理</strong>：质量为 m 的刚体，如果对其质心州的转动惯量为$I_C$则，对于任意与该轴平行，相距为$d$的转轴的转动惯量：$I_O=I_C+md^2$</p>
-<p><strong>垂直轴定理</strong>（对于一个薄板）：$I_z = I_x +I_y$</p>
-<h3 id="刚体定轴转动的角动量定理和角动量守恒"><a href="#刚体定轴转动的角动量定理和角动量守恒" class="headerlink" title="刚体定轴转动的角动量定理和角动量守恒"></a>刚体定轴转动的角动量定理和角动量守恒</h3><p><strong>刚体定轴转动的角动量</strong>：$L_z = \sum\limits_i m_i r_i^2\omega = I\omega$</p>
-<p><strong>角动量定理</strong>：$\int M_z \mathrm{d}t = I\omega_2 -I \omega_1$</p>
-<p><strong>刚体转动的角动量守恒定律</strong>：$if M_z = 0 ,\ then \  L_z = I\omega = const$</p>
-<h3 id="刚体定轴转动的动能定理"><a href="#刚体定轴转动的动能定理" class="headerlink" title="刚体定轴转动的动能定理"></a>刚体定轴转动的动能定理</h3><p>$\mathrm{ d} W = \vec{F}\cdot \mathrm d \vec{r} = F_t r\mathrm{d} \theta = M_z \mathrm d \theta$</p>
+<div class="note note-primary">
+            <p>质量是$m$长度$l$的棒，以中点为轴：$I = \frac{1}{12} ml^2$</p><p>质量是$m$长度$l$的棒，以一个端点为轴：$I = \frac{1}{3} ml^2$</p><p>质量是$m$半径$R$的圆盘，以中心为轴：$I = \frac{1}{2} mR^2$</p><p><strong>平行轴定理</strong>：质量为 m 的刚体，如果对其质心轴的转动惯量为 $I_C$ 则，对于任意与该轴平行的轴而言，相距为 d 时的转动惯量：$I_O=I_C+md^2$</p><p><strong>垂直轴定理</strong>（对于一个薄板而言）：$I_z = I_x +I_y$</p>
+          </div>
+<h3 id="刚体定轴转动的角动量定理和角动量守恒"><a href="#刚体定轴转动的角动量定理和角动量守恒" class="headerlink" title="刚体定轴转动的角动量定理和角动量守恒"></a>刚体定轴转动的角动量定理和角动量守恒</h3><p><strong><span class="label label-info">「刚体定轴转动的角动量」</span></strong>：$L_z = \sum\limits_i m_i r_i^2\omega = I\omega$</p>
+<p><strong><span class="label label-info">「刚体定轴转动的角动量定理」</span></strong>：$\int M_z \mathrm{d}t = I\omega_2 -I \omega_1$</p>
+<p><strong><span class="label label-info">「刚体定轴转动的角动量守恒定律」</span></strong>：$if M_z = 0 ,\ then \  L_z = I\omega = const$</p>
+<p><strong><span class="label label-info">「刚体定轴转动的角冲量定理」</span></strong>：$\int M_z\mathrm dt=I_z\omega -I_z\omega_0$</p>
+<h3 id="刚体定轴转动的动能定理"><a href="#刚体定轴转动的动能定理" class="headerlink" title="刚体定轴转动的动能定理"></a>刚体定轴转动的动能定理</h3><p>微分形式$\mathrm{ d} W = \vec{F}\cdot \mathrm d \vec{r} = F_t r\mathrm{d} \theta = M_z \mathrm d \theta$</p>
 <p>力矩对定轴转动刚体做功：$W = \int _{\theta_1}^{\theta_2}M_z \mathrm{d} \theta$</p>
 <p>力矩的功率：$P= \frac{\mathrm{d} W}{\mathrm{ d} t}=M_z \omega$</p>
-<p>刚体定轴转动的动能：$E_k = \frac 1 2 I\omega^2$</p>
-<p>刚体绕定轴转动的动能定理：$W = \int<em>{\theta_1}^{\theta_2} I \omega \mathrm{d} \omega = E</em>{k2} - E_{k1 = }=\frac 1 2 I\omega_2^2-\frac 1 2 I\omega_1^2$</p>
-<h2 id="刚体动力学：平面平行运动动力学"><a href="#刚体动力学：平面平行运动动力学" class="headerlink" title="刚体动力学：平面平行运动动力学"></a>刚体动力学：平面平行运动动力学</h2><p>质心运动定理：$\vec{F}= m\vec{a_c}$</p>
+<p><strong><span class="label label-info">「刚体定轴转动的动能」</span></strong>：$E_k = \frac 1 2 I\omega^2$</p>
+<p><strong><span class="label label-info">「刚体绕定轴转动的动能定理」</span></strong>：$W = \int<em>{\theta_1}^{\theta_2} I \omega \mathrm{d} \omega = E</em>{k2} - E_{k1 = }=\frac 1 2 I\omega_2^2-\frac 1 2 I\omega_1^2$</p>
+<h3 id="刚体的定点转动（进动）（Precession）"><a href="#刚体的定点转动（进动）（Precession）" class="headerlink" title="刚体的定点转动（进动）（Precession）"></a>刚体的定点转动（进动）（Precession）</h3><p>陀螺的进动角速度：$\omega_\mathrm p = \frac {\mathrm d \phi}{\mathrm d t} = \frac{|\mathrm d L|}{\mathrm d t\cdot L\sin \theta} = \frac{mgr_c}{I\omega}$<br><div class="note note-warning">
+            <p>注意角加速度的方向。</p><p>注意理解场平架陀螺仪工作原理。</p>
+          </div></p>
+<h3 id="刚体动力学：总结"><a href="#刚体动力学：总结" class="headerlink" title="刚体动力学：总结"></a>刚体动力学：总结</h3><p>质心运动定理：$\vec{F}= m\vec{a_c}$</p>
 <p>转动定律：$M_c = I_c \alpha ,\quad v_c = R \omega$</p>
 <p>平面平行运动能量：（科尼希定理）$E<em>k = E</em>{kc} +E_k’ = \frac{1}{2} mv_c^2 + \frac{1}{2}I_c \omega^2$</p>
-<h2 id="刚体的定点转动（进动）（Precession）"><a href="#刚体的定点转动（进动）（Precession）" class="headerlink" title="刚体的定点转动（进动）（Precession）"></a>刚体的定点转动（进动）（Precession）</h2><p>进动角速度：$\omega_\mathrm p = \frac {\mathrm d \phi}{\mathrm d t} = \frac{|\mathrm d L|}{\mathrm d t\cdot L\sin \theta} = \frac{mgr_c}{I\omega}$</p>
-<p>注意角加速度的方向。</p>
-<h2 id="守恒定律"><a href="#守恒定律" class="headerlink" title="守恒定律"></a>守恒定律</h2><p>动量<br>能量<br>角动量<br>质量<br>电荷<br>宇称守恒定律</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
