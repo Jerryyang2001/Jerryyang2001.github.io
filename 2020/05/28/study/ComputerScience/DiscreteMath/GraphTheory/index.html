@@ -240,12 +240,12 @@
 <li>$E$ 是无序积 $V\times V$的有穷多重子集，称作<strong>边集</strong>，其中的元素称为<strong>有向边</strong>，简称为<strong>边</strong></li>
 </ol>
 <div class="note note-primary">
-            <p><strong>基本概念</strong></p><ul><li><strong>无向图</strong>和<strong>有向图</strong>统称为<strong>图</strong>，通常用 $G$ 表示无向图，用 $D$ 表示有向图</li><li>图的顶点数称为这个图的<strong>阶</strong>，因而也有 <strong>n 阶图</strong></li><li>一条边也没有的图称为<strong>零图</strong>，n 阶的零图记作 $N<em>n$，1 阶的零图称作平凡图</em>注：零图不是没有顶点的图_</li><li>图的定义中规定顶点集 $V$ 为非空集合，但是我们也定义<strong>空图</strong>为一个没有顶点的图，记作 $\emptyset$，方便我们的计算</li><li>在用图形表示图时，如果给每一个顶点和每一条边都指定一个特定的符号（字母或数字）则称这样的图为<strong>标定图</strong>，否则称作<strong>非标定图</strong></li><li>将有向图中的所有边，改为无向边之后得到的无向图称作这个有向图的<strong>基图</strong></li><li>在无向图中，若有 $e_k=(v_i,v_j)\in E$ 则称 $v_i,v_j$ 为 $e_k$的<strong>端点</strong>，$e_k$ 与 $v_i,v_j$ <strong>关联</strong>，并且称 $e_k$ 与 $v_i,v_j$ 的<strong>关联次数</strong>为 1，若 $i = j$ 则称$e_k$ 与这个顶点的关联次数为 2，并称 $e_k$ 为<strong>环</strong>，如果顶点 $v$ 不与 $e_k$ 关联，则称 $e_k$ 与 $v$ 的关联次数为 0。<br>与此同时，若两个顶点之间有一条边连接，则称这两个顶点<strong>相邻</strong>，若两条边至少有一个公共端点，则称这两条边<strong>相邻</strong></li><li>在有向图中，若有 $e_k=&lt; v_i,v_j &gt;\in E$ 称 $v_i$ 为<strong>始点</strong>，$v_j$ 为<strong>终点</strong>，都是<strong>端点</strong>，并称 $e_k$ 与 $v_i,v_j$ <strong>关联</strong>。其中若 $i=j$ 则称 $e_k$ 是<strong>环</strong>。<br>同时：两个顶点之间为一条有向边，则称这两个顶点<strong>相邻</strong>，若两条边中的一条边的终点是另一条边的始点，则称两条边<strong>相邻</strong></li><li>图中没有边相关联的顶点称为<strong>孤立点</strong></li><li>在无向图中我们称：<ul><li>$N_G(v)={u|u\in V\wedge (u,v)\in E\wedge u\neq v}$ 为 $v$ 的<strong>邻域</strong></li><li>$\overline N_G(v) = N_G(v)\cup{v}$ 称为 $v$ 的<strong>闭邻域</strong></li><li>$I_G(v) = {e|e\in E\wedge e与v关联}$ 称为 $v$ 的<strong>关联集</strong></li></ul></li><li>在有向图中我们称：<ul><li>$\Gamma^+_D(v) ={u|u\in V\wedge &lt; v,u &gt;\in E\wedge u \neq v}$ 为 $v$ 的<strong>后继元集</strong></li><li>$\Gamma^-_D(v) = {u| u\in V \wedge &lt; u,v &gt; \in E\wedge u\neq v}$ 为 $v$ 的<strong>先驱元集</strong></li><li>$N_D(v) = \Gamma^+\cup\Gamma^-$ 为 $v$ 的<strong>邻域</strong></li><li>$\overline N_D=N_D\cup{v}$ 为 $v$ 的<strong>闭邻域</strong></li></ul></li></ul>
+            <p><strong>基本概念</strong></p><ul><li><strong>无向图</strong>和<strong>有向图</strong>统称为<strong>图</strong>，通常用 $G$ 表示无向图，用 $D$ 表示有向图</li><li>图的顶点数称为这个图的<strong>阶</strong>，因而也有 <strong>n 阶图</strong></li><li>一条边也没有的图称为<strong>零图</strong>，n 阶的零图记作 $N_n$，1 阶的零图称作平凡图<br>_注：零图不是没有顶点的图_</li><li>图的定义中规定顶点集 $V$ 为非空集合，但是我们也定义<strong>空图</strong>为一个没有顶点的图，记作 $\emptyset$，方便我们的计算</li><li>在用图形表示图时，如果给每一个顶点和每一条边都指定一个特定的符号（字母或数字）则称这样的图为<strong>标定图</strong>，否则称作<strong>非标定图</strong></li><li>将有向图中的所有边，改为无向边之后得到的无向图称作这个有向图的<strong>基图</strong></li><li>在无向图中，若有 $e_k=(v_i,v_j)\in E$ 则称 $v_i,v_j$ 为 $e_k$的<strong>端点</strong>，$e_k$ 与 $v_i,v_j$ <strong>关联</strong>，并且称 $e_k$ 与 $v_i,v_j$ 的<strong>关联次数</strong>为 1，若 $i = j$ 则称$e_k$ 与这个顶点的关联次数为 2，并称 $e_k$ 为<strong>环</strong>，如果顶点 $v$ 不与 $e_k$ 关联，则称 $e_k$ 与 $v$ 的关联次数为 0。<br>与此同时，若两个顶点之间有一条边连接，则称这两个顶点<strong>相邻</strong>，若两条边至少有一个公共端点，则称这两条边<strong>相邻</strong></li><li>在有向图中，若有 $e_k=&lt; v_i,v_j &gt;\in E$ 称 $v_i$ 为<strong>始点</strong>，$v_j$ 为<strong>终点</strong>，都是<strong>端点</strong>，并称 $e_k$ 与 $v_i,v_j$ <strong>关联</strong>。其中若 $i=j$ 则称 $e_k$ 是<strong>环</strong>。<br>同时：两个顶点之间为一条有向边，则称这两个顶点<strong>相邻</strong>，若两条边中的一条边的终点是另一条边的始点，则称两条边<strong>相邻</strong></li><li>图中没有边相关联的顶点称为<strong>孤立点</strong></li><li>在无向图中我们称：<ul><li>$N_G(v)=\{u|u\in V\wedge (u,v)\in E\wedge u\neq v\}$ 为 $v$ 的<strong>邻域</strong></li><li>$\overline N_G(v) = N_G(v)\cup\{v\}$ 称为 $v$ 的<strong>闭邻域</strong></li><li>$I_G(v) = \{e|e\in E\wedge e与v关联\}$ 称为 $v$ 的<strong>关联集</strong></li></ul></li><li>在有向图中我们称：<ul><li>$\Gamma^+_D(v) =\{u|u\in V\wedge &lt; v,u &gt;\in E\wedge u \neq v\}$ 为 $v$ 的<strong>后继元集</strong></li><li>$\Gamma^-_D(v) = \{u| u\in V \wedge &lt; u,v &gt; \in E\wedge u\neq v\}$ 为 $v$ 的<strong>先驱元集</strong></li><li>$N_D(v) = \Gamma^+\cup\Gamma^-$ 为 $v$ 的<strong>邻域</strong></li><li>$\overline N_D=N_D\cup\{v\}$ 为 $v$ 的<strong>闭邻域</strong></li></ul></li></ul>
           </div>
 <p><strong>Def</strong>：（平行边）在无向图中，如果关联一对顶点的无向边多于一条，则称为<strong>平行边</strong>，平行边的条数称为<strong>重数</strong>，在邮箱图中，如果关联一对顶点的有向边多于 1 条，并且这些边的终点始点相同，则称为<strong>平行边</strong>，含有平行边的图称作<strong>多重图</strong>，不含平行边、也不含自环的图称为<strong>简单图</strong></p>
 <p><strong>Def</strong>：（出度、入度、度数）设 $G=&lt; V,E &gt;$ 为无向图，$\forall v\in V$ 称 $v$ 为边的端点的次数为 $v$ 的次数为 $v$ 的<strong>度数</strong>，相同的定义有向图上的<strong>入度</strong>，<strong>出度</strong>，<strong>度数</strong></p>
 <div class="note note-primary">
-            <p>一些定义</p><p>无向图中：</p><ul><li>最大度 $\Delta(G) = \max{d(v)|v\in V(G)}$</li><li>最小度 $\delta(G) = \min{d(v)|v\in V(G)}$</li></ul><p>类似的定义，在有向图中：</p><ul><li>最大度 $\Delta(G) = \max{d(v)|v\in V(G)}$</li><li>最小度 $\delta(G) = \min{d(v)|v\in V(G)}$</li><li>最大出度 $\Delta^+(G)$</li><li>最小出度 $\delta^+(G)$</li><li>最大入度 $\Delta^-(G)$</li><li>最小入度 $\delta^-(G)$</li></ul><p>此外，我们将<strong>度数</strong>为 1 的顶点称为<strong>悬挂顶点</strong>，相关联的边称为<strong>悬挂边</strong>。</p><p>当然，有<strong>奇度节点</strong>，<strong>偶度节点</strong></p>
+            <p>一些定义</p><p>无向图中：</p><ul><li>最大度 $\Delta(G) = \max\{d(v)|v\in V(G)\}$</li><li>最小度 $\delta(G) = \min\{d(v)|v\in V(G)\}$</li></ul><p>类似的定义，在有向图中：</p><ul><li>最大度 $\Delta(G) = \max\{d(v)|v\in V(G)\}$</li><li>最小度 $\delta(G) = \min\{d(v)|v\in V(G)\}$</li><li>最大出度 $\Delta^+(G)$</li><li>最小出度 $\delta^+(G)$</li><li>最大入度 $\Delta^-(G)$</li><li>最小入度 $\delta^-(G)$</li></ul><p>此外，我们将<strong>度数</strong>为 1 的顶点称为<strong>悬挂顶点</strong>，相关联的边称为<strong>悬挂边</strong>。</p><p>当然，有<strong>奇度节点</strong>，<strong>偶度节点</strong></p>
           </div>
 <h3 id="握手定理"><a href="#握手定理" class="headerlink" title="握手定理"></a>握手定理</h3><p><strong>Thm</strong>：（握手定理）</p>
 <ol>
@@ -268,14 +268,14 @@
 <p><strong>Def</strong>：（正则图）若无向图 $G$ 中的每一个顶点 $d(v) = k$ 则称该图为<strong>k-正则图</strong></p>
 <h3 id="子图、母图、补图"><a href="#子图、母图、补图" class="headerlink" title="子图、母图、补图"></a>子图、母图、补图</h3><p><strong>Def</strong>：（母图）若 $V’\subseteq V,E’\subseteq E$ 则称 $G$ 是 $G’$ 的母图</p>
 <p><strong>Def</strong>：（导出的子图 $G[V’],G[E’]$）设 $V’ \subseteq V,V’\neq \emptyset$，选择 $G$ 中两个顶点都在 $V’$ 中的顶点构成的边组成的边集 $E’$ 作为边集，构成的图；相似定义用边集构造的导出的子图</p>
-<p><strong>Def</strong>：（补图）若$\overline E={(u,v)|u,v\in V, u\neq v,(u,v)\notin E}$ 构成的图 $\overline G$</p>
+<p><strong>Def</strong>：（补图）若$\overline E=\{(u,v)|u,v\in V, u\neq v,(u,v)\notin E\}$ 构成的图 $\overline G$</p>
 <p><strong>自补图</strong>：与自身的补图同构</p>
 <h3 id="对于图的运算"><a href="#对于图的运算" class="headerlink" title="对于图的运算"></a>对于图的运算</h3><p><strong>Def</strong>：删除边、删除一个边集</p>
 <p><strong>Def</strong>：删除点、删除一个顶点集（去掉关联的一切边）</p>
 <p><strong>Def</strong>：添加新边</p>
 <p><strong>Def</strong>：（收缩）将 $e$ 的两个端点用新的点表示，并将原先与两个顶点相邻的边与之相连</p>
-<h2 id="通路与回路"><a href="#通路与回路" class="headerlink" title="通路与回路"></a>通路与回路</h2><p><strong>Def</strong>：（通路、始点、终点、长度）一个交替序列：$\varGamma = v<em>{i0}e</em>{j1}\dots e<em>{jl}v</em>{il}$</p>
-<p><strong>Def</strong>：（回路）一个 $v<em>{i0} =v</em>{il}$ 的通路</p>
+<h2 id="通路与回路"><a href="#通路与回路" class="headerlink" title="通路与回路"></a>通路与回路</h2><p><strong>Def</strong>：（通路、始点、终点、长度）一个交替序列：$\varGamma = v_{i0}e_{j1}\dots e_{jl}v_{il}$</p>
+<p><strong>Def</strong>：（回路）一个 $v_{i0} =v_{il}$ 的通路</p>
 <p><strong>Def</strong>：（简单通路、简单回路）边各异的通路、回路</p>
 <p><strong>Def</strong>：（初级通路、初级回路）（除了始点和终点外）点各异的简单通路、简单回路</p>
 <blockquote>
@@ -292,7 +292,7 @@
 <p><strong>Def</strong>：（短程线、距离）$u\sim v$ 时，称 $u,v$ 之间的长度最短的通路为 $u,v$ 之间的<strong>短程线</strong>，长度称为<strong>距离</strong></p>
 <p><strong>Def</strong>：（割点、点割集）若 $\forall V’’\subset V’$ 都有$p(G-V’’)=p(G)$ 但 $p(G-V’) &gt;p(G)$ 则称为点割集，若 $V’$ 中只含有一个点，则称 $v$ 为割点。</p>
 <p><strong>Def</strong>：（边割集、割边、桥）</p>
-<p><strong>Def</strong>：（点连通度、k-连通图）若 $G$ 为无向连通图且不是完全图，则称 $\kappa (G) = \min{|V’||V’为G的点割集}$ 为<strong>点连通度</strong>，简称<strong>连通度</strong>。规定完全图的连通度为 n-1。若 $\kappa \ge k$ 则称 $G$ 为 k-连通图。</p>
+<p><strong>Def</strong>：（点连通度、k-连通图）若 $G$ 为无向连通图且不是完全图，则称 $\kappa (G) = \min\{|V’||V’为G的点割集\}$ 为<strong>点连通度</strong>，简称<strong>连通度</strong>。规定完全图的连通度为 n-1。若 $\kappa \ge k$ 则称 $G$ 为 k-连通图。</p>
 <p><strong>Def</strong>：（边连通度 $\lambda(G)$、r 边-连通图）</p>
 <p><strong>Thm</strong>：$\kappa(G)\le\lambda (G)\le\delta(G)$</p>
 <blockquote>
@@ -330,7 +330,7 @@ m_{ij} = \begin{cases}
             <p><strong>性质</strong></p><p>不难看出，该矩阵：</p><ol><li>每列元素之和为 0 恰好有一个 -1 一个 1</li><li>每行 -1 个数为 $v_i$ 的入度，1 的个数为出度</li><li>两列相同，当且仅当这两列对应了平行边</li></ol>
           </div>
 <h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><p><strong>Def</strong>：（有向图的邻接矩阵）$a_{ij}$ 为 $v_i$ 邻接到顶点 $v_j$ 边的条数记为 $A(D)$。</p>
-<p><strong>Thm</strong>：$A$ 的 $l$ 次幂中 $a<em>{ij}$ 表示 D 中长度为 $l$ 的通路数目，$a</em>{ii}$ 位回路数。矩阵元素和为总数。</p>
+<p><strong>Thm</strong>：$A$ 的 $l$ 次幂中 $a_{ij}$ 表示 D 中长度为 $l$ 的通路数目，$a_{ii}$ 位回路数。矩阵元素和为总数。</p>
 <h3 id="可达矩阵"><a href="#可达矩阵" class="headerlink" title="可达矩阵"></a>可达矩阵</h3><p><strong>Def</strong>：在有向图中，令</p>
 <script type="math/tex; mode=display">
 p_{ij}=

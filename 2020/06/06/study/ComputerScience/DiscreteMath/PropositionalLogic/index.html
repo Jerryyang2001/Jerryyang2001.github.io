@@ -348,14 +348,14 @@
 </li>
 <li><p><strong>Thm</strong>：范式存在定理</p>
 <blockquote>
-<p><em>Method 求范式</em></p>
+<p>_Method 求范式_</p>
 <ol>
 <li><p>消去 $\rightarrow$ 和 $\leftrightarrow$</p>
 </li>
 <li><p>消去双重否定</p>
 </li>
 <li><p>使用分配律</p>
-<p><em>这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂</em></p>
+<p>_这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂_</p>
 </li>
 </ol>
 </blockquote>
@@ -366,7 +366,7 @@
 </li>
 <li><p><strong>Thm</strong>：任何命题公式存在与之等值的主析取范式和主合取范式，并且唯一。</p>
 <blockquote>
-<p><em>Method 求主范式</em></p>
+<p>_Method 求主范式_</p>
 <ol>
 <li>先化成范式</li>
 <li>在缺少某一项时，用排中律 $A\vee \neg A = 1$ 和结合律<strong>添加</strong>缺少的命题变元</li>
@@ -375,7 +375,7 @@
 </li>
 </ul>
 <blockquote>
-<p><em>Method 主范式互化</em></p>
+<p>_Method 主范式互化_</p>
 <ol>
 <li>取 $\neg A$，并化为范式</li>
 <li>则 $A=\neg\neg A$ 用德摩根律展开</li>
@@ -384,14 +384,14 @@
 <h3 id="联结词的完备集"><a href="#联结词的完备集" class="headerlink" title="联结词的完备集"></a>联结词的完备集</h3><ul>
 <li><strong>Def</strong>：n 元真值函数</li>
 <li><strong>Def</strong>：联结词完备集</li>
-<li><strong>Thm</strong>：${\neg,\wedge,\vee}$ 是联结词完备集<ul>
-<li><strong>Inf</strong>：${\neg,\wedge}$ 也是联结词完备集</li>
+<li><strong>Thm</strong>：$\{\neg,\wedge,\vee\}$ 是联结词完备集<ul>
+<li><strong>Inf</strong>：$\{\neg,\wedge\}$ 也是联结词完备集</li>
 </ul>
 </li>
 </ul>
 <blockquote>
 <p>这边可以联系一下 Lambda Calculus 中的各类运算，都可以用 Lambda 定义。也就是说，只需要一些操作，就可以满足全部的需要</p>
-<p>${\uparrow}$和${\downarrow}$ 是联结词完备集。其中</p>
+<p>$\{\uparrow\}$和$\{\downarrow\}$ 是联结词完备集。其中</p>
 <ul>
 <li>$p\uparrow q\Leftrightarrow \neg(p\wedge q)$</li>
 <li>$p\downarrow q\Leftrightarrow \neg(p\vee q)$</li>
@@ -404,7 +404,7 @@
 <li><p><strong>Def</strong>：消解式、消解规则</p>
 <blockquote>
 <p>文字 $I$ 的补 $I^c$：$I=p\rightarrow I^c=\neg p,I=\neg p\rightarrow I^c=p$</p>
-<p><em>Method 消解规则</em></p>
+<p>_Method 消解规则_</p>
 <p>$C_1=C_1’\vee I,C_2=C_2’\vee I^c$ 是简单析取式，则称$Res(C_1,C_2)=C1’\vee C2’$ 为消解式<br>注意这里的 $C_1,C_2$ 中是可以含有 $I$ 的，但是不方便计算，后面在消解序列定义时，也直接用了合取范式这一定义。</p>
 </blockquote>
 </li>
@@ -423,7 +423,7 @@
 </li>
 <li><p><strong>Thm</strong>：（消解的完全性）如果 S 不可满足，则 S 有否证</p>
 <blockquote>
-<p><em>Method 消解算法</em></p>
+<p>_Method 消解算法_</p>
 <ol>
 <li>求合取范式</li>
 <li>$S_0,S_2$ 为不含任何元素的集合，$S_1$ 为 $S$ 所有简单析取式构成的集合</li>
@@ -439,10 +439,10 @@
 <h2 id="命题逻辑的推理理论"><a href="#命题逻辑的推理理论" class="headerlink" title="命题逻辑的推理理论"></a>命题逻辑的推理理论</h2><h3 id="推理的形式结构"><a href="#推理的形式结构" class="headerlink" title="推理的形式结构"></a>推理的形式结构</h3><ul>
 <li><p><strong>Def</strong>：推理是有效的</p>
 </li>
-<li><p><strong>Thm</strong>：推理正确${A_i}\models B\iff \wedge A_i \rightarrow B$ 为永真式</p>
+<li><p><strong>Thm</strong>：推理正确$\{A_i\}\models B\iff \wedge A_i \rightarrow B$ 为永真式</p>
 <blockquote>
 <p>$p\Rightarrow q$ 表示 $p\rightarrow q$ 为重言式</p>
-<p><em>Method 判断 $\wedge A_i \rightarrow B$ 是重言式的方法</em></p>
+<p>_Method 判断 $\wedge A_i \rightarrow B$ 是重言式的方法_</p>
 <ol>
 <li>真值表法</li>
 <li>等值演算法</li>
@@ -478,7 +478,7 @@
 </li>
 <li><p>构造证明方法</p>
 <ul>
-<li>附加前提证明法：$\wedge A<em>i \rightarrow (A</em>{i+1} \rightarrow B) \Leftrightarrow \wedge A_i \rightarrow B$</li>
+<li>附加前提证明法：$\wedge A_i \rightarrow (A_{i+1} \rightarrow B) \Leftrightarrow \wedge A_i \rightarrow B$</li>
 <li>归谬法：$\wedge A_i \wedge B$ 为矛盾式</li>
 <li>消解证明法</li>
 </ul>
@@ -571,7 +571,7 @@
 </li>
 <li><p><strong>Thm</strong>：前束范式存在定理</p>
 <blockquote>
-<p><em>Method 求前束范式</em></p>
+<p>_Method 求前束范式_</p>
 <ol>
 <li>替换$\leftrightarrow,\rightarrow$ 为 $\wedge,\vee,\neg$</li>
 <li>用量词否定等值式，将 $\neg$ 调至原子公式之前</li>

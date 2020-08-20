@@ -1,6 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>谈谈编程</title>
+    <url>/2020/06/24/talk-chat/AboutProgramming1/</url>
+    <content><![CDATA[<p>编程十载。</p>
+<a id="more"></a>
+<p>笔者江苏南京人，小学听人说编程有点意思随便学了点 <code>Basic</code>，觉着程序设计挺有趣，便一直没有放下编程的学习。当时挺自信，用 <code>Basic</code> 也能写点东西，虽然看上去不怎样，却能解决点实际问题：</p>
+<blockquote>
+<p>Q：解不定方程：2 x + 3 y = 100, x y 是正整数。</p>
+</blockquote>
+<pre><code class="hljs vba">FOR I &#x3D; 1 TO 50
+    FOR J &#x3D; 1 TO 33
+        IF 2*I+3*J &#x3D; 100 THEN
+            PRINT I
+            PRINT J
+        END IF
+    NEXT J
+NEXT I</code></pre>
+<p>Well，写的不好，但是至少我知道怎样去解决一些问题。要解这个方程实际上不需要这么麻烦。但是当时学到的确实是解决问题的方法：编一个程序、枚举各种情况、得到答案。</p>
+<p>当然，如果我们仔细看一看这一个程序，实则三种最基础的程序结构都有：</p>
+<ol>
+<li>顺序：<code>PRINT I PRINT J</code></li>
+<li>分支：<code>IF ... THEN ... (ELSE ...) END IF</code></li>
+<li>循环：<code>FOR I = 1 TO 50 NEXT I</code></li>
+</ol>
+<p>确实，我们需要这三种结构就能创建整个程序了，至少当时的我，还能记得，这三个程序足以撑起你需要的一切。</p>
+<p>上了初中，接触的是 <code>Pascal</code>，勉强写了两年，就跳去学“高大上”的 <code>C++</code> 了，做点对比：</p>
+<pre><code class="hljs pascal"><span class="hljs-keyword">var</span> a,b,c: int;
+
+<span class="hljs-function"><span class="hljs-keyword">Procedure</span> <span class="hljs-title">foo</span><span class="hljs-params">(para: int)</span></span>
+<span class="hljs-function"><span class="hljs-title">begin</span></span>
+<span class="hljs-function">    <span class="hljs-title">writeln</span><span class="hljs-params">(para+1)</span></span>
+<span class="hljs-function"><span class="hljs-title">end</span>;</span>
+
+<span class="hljs-keyword">begin</span>
+    readln(a, b, c);
+    foo(a);
+    foo(b);
+    foo(c);
+<span class="hljs-keyword">end</span>.</code></pre>
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">int</span> para)</span> </span>&#123; <span class="hljs-built_in">cout</span> &lt;&lt; para; &#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-keyword">int</span> a, b, c;
+    <span class="hljs-built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+    foo(a);foo(b);foo(c);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<p>当时写的也是懵懵懂懂的，但也能说出些道道来：什么是函数，什么是形参实参之类的。当然，这些只是为了应付当年的 <code>NOIP</code> 比赛（现<code>csp</code>），写的程序里面大多是这样的：</p>
+<pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+  <span class="hljs-keyword">int</span> a[<span class="hljs-number">10000000</span>];
+  <span class="hljs-keyword">int</span> n;
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;i&lt;=n;++i) <span class="hljs-built_in">cin</span>&gt;&gt; a[i];
+  ......
+&#125;</code></pre>
+<p>当时还是挺自信，这玩意挺好啊，能解决问题，在赛场上也能拿点分。但是到了大学就不一样了。<code>c++</code> 程设这门课主要难点在于 <code>OOP</code> 与动态内存部分，各种 bug 都来了，我还记得，当时上的最多的网站：<a href="https://docs.microsoft.com/zh-cn/">Docs</a>，是微软的技术文档，每天沉浸在理解、记忆如何去写一个可以编译的程序之中，觉得生活确实充实。</p>
+<p>但是如果你问我，到底学到了什么，我只能说，我学会了如何写出一个能够编译的 cpp。</p>
+<p>疫情期间，有更多的时间看了看国外的开放课程（MIT Open Course），例如：</p>
+<p><code>Intro to EECS 6.01I MIT</code>：计科、电子方向的导论课</p>
+<p>讲的很浅显易懂，大概涉及以下几个方面</p>
+<blockquote>
+<p><strong>Topics</strong></p>
+<ul>
+<li>State Machine</li>
+<li>Differential Equations and Operations</li>
+<li>Circuit</li>
+<li>… …</li>
+</ul>
+</blockquote>
+<p>在第一节课，教授指出了这门课的目的：形成思维方法，从以下几个方面去思考问题和知识。</p>
+<ul>
+<li>Primitives（原语）</li>
+<li>Combination（组合）</li>
+<li>Abstractions（抽象）</li>
+<li>Patterns（模式）</li>
+</ul>
+<p>以电路为例</p>
+<blockquote>
+<p><strong>Example (Circuit)</strong></p>
+<ul>
+<li>Primitives<ul>
+<li>Ohm’s Law</li>
+<li>Node</li>
+</ul>
+</li>
+<li>Combination<ul>
+<li>KVL KCL Equations</li>
+<li>Node method, Loop method</li>
+</ul>
+</li>
+<li>Abstractions<ul>
+<li>Parallel Combinations</li>
+<li>Series Combinations</li>
+</ul>
+</li>
+<li>Patterns<ul>
+<li>in Series Combinations: $I = V / (R_1 + R_2)$</li>
+<li>in Parallel Combinations: $V_1 = R_1 I,\dots$</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight lua"><figcaption><span>FunctionalProgramming.lua</span><a href="/code/RandomTalks/AboutProgramming1/FunctionalProgramming.lua">view raw</a></figcaption><table><tr><td class="code"><pre><code class="hljs lua"><span class="hljs-keyword">local</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get_accumulator</span><span class="hljs-params">(start)</span></span><br>    start = start <span class="hljs-keyword">or</span> <span class="hljs-number">0</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span><br>        start = start + <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> start<br>    <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br><span class="hljs-keyword">local</span> acc = get_accumulator()<br><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span> <span class="hljs-keyword">do</span><br>    <span class="hljs-built_in">print</span>(acc())<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 建站实录</title>
+    <url>/2020/08/13/talk-chat/Hexo/</url>
+    <content><![CDATA[<p>建站实录</p>
+<a id="more"></a>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>需要准备的材料：</p>
+<ol>
+<li>vscode<ul>
+<li>VSCode 的终端内，要换成<code>cmd.exe</code>，按下 <code>ctrl + ,</code> 进入设置，找到 <code>terminal.external.windowsExec</code>这个，修改为 <code>C:\Windows\System32\cmd.exe</code></li>
+</ul>
+</li>
+<li><p>Node.js</p>
+<blockquote>
+<p>安装完成后需要执行：<code>npm config set registry https://registry.npm.taobao.org</code>，来重新定向源。</p>
+</blockquote>
+</li>
+<li><p>Git客户端、以及一个配置好的 Github 账号</p>
+</li>
+</ol>
+<h3 id="站点建立"><a href="#站点建立" class="headerlink" title="站点建立"></a>站点建立</h3><blockquote>
+<p><a href="https://docs.github.com/en/github/working-with-github-pages">https://docs.github.com/en/github/working-with-github-pages</a></p>
+</blockquote>
+<ul>
+<li>安装Git<ul>
+<li>Git 的配置</li>
+</ul>
+</li>
+<li>安装Node.js</li>
+<li>安装Hexo</li>
+<li>GitHub创建个人仓库</li>
+</ul>
+<p>Git：在<a href="https://npm.taobao.org/mirrors/git-for-windows/v2.28.0.windows.1/">Mirror</a>中下载，并安装 <code>Git-2.28.0-64-bit.exe</code>（中间都是直接点击下一步即可）</p>
+<p>Node.js：在<a href="https://npm.taobao.org/mirrors/node/latest-v14.x/">Mirror</a>中下载，并安装 <code>node-v14.8.0-x64.msi</code>。</p>
+<p>第一步，为你的站点设置一个代码仓库：</p>
+<blockquote>
+<p><a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site">Ref</a></p>
+</blockquote>
+<p>第二步，站点初始化</p>
+<blockquote>
+<p><a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site">Ref</a></p>
+<p>Note: It can take up to 20 minutes for changes to your site to publish after you push the changes to GitHub. If your don’t see your changes reflected in your browser after an hour, see “About Jekyll build errors for GitHub Pages sites.”</p>
+<p>部署需要时间、每小时最多部署10次，站点大小最多1G（图片不能太多太大，搞大型个人相册就免了）</p>
+</blockquote>
+<p>第三步，找一个地方，专门存放你的这个站点，例如：<code>D:/repos/</code> 在这个文件夹中 clone 下你的这个仓库。并且在 VScode 中打开这个<strong>仓库</strong></p>
+<p>在这里，按照：</p>
+<blockquote>
+<p><a href="https://hexo.io/zh-cn/docs">Ref</a> 安装 Hexo。</p>
+<p><a href="https://hexo.io/zh-cn/docs/setup">Ref</a> 在本机上建立站点</p>
+</blockquote>
+<p>注意，因为直接在git下的目录中打开code，所以其中的folder就是 <code>.</code> （当前文件夹）不用执行cd切换工作文件夹，也就是（在VScode 终端中执行）：</p>
+<pre><code class="hljs bash">hexo init .
+npm install</code></pre>
+<ul>
+<li>初次尝试</li>
+</ul>
+<pre><code class="hljs BASH">hexo s --debug <span class="hljs-comment"># 显示debug反馈</span>
+hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
+<p>应当显示：<br><!-- TODO --></p>
+<p>deploy 配置</p>
+<pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>
+  <span class="hljs-attr">repository:</span> <span class="hljs-string">git@github.com:Jerryyang2001/Jerryyang2001.github.io.git</span>
+  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span> <span class="hljs-comment"># 注意是 master 分支</span>
+  <span class="hljs-attr">message:</span> <span class="hljs-string">Site</span> <span class="hljs-string">updated:&#123;&#123;</span> <span class="hljs-string">now(&#x27;YYYY-MM-DD</span> <span class="hljs-string">HH:mm:ss&#x27;)</span> <span class="hljs-string">&#125;&#125;)</span></code></pre>
+<ul>
+<li><p>站点配置</p>
+<ul>
+<li><code>_config.yml</code></li>
+</ul>
+</li>
+<li><p>更换主题（以我现在用的 <code>Fluid</code> 为例）</p>
+<ul>
+<li>注意看文档就行</li>
+<li>主题配置</li>
+</ul>
+</li>
+<li><p>发布文章</p>
+<ul>
+<li>Hexo 工作流</li>
+<li><code>yaml</code></li>
+<li><code>&lt;!-- more --&gt;</code>用法</li>
+</ul>
+</li>
+<li><p>个性化设置</p>
+<ul>
+<li>搜索器</li>
+<li>Mathjax</li>
+<li>Valine</li>
+<li>思维导图</li>
+</ul>
+</li>
+<li><p>其他</p>
+<ul>
+<li>code Snippet</li>
+</ul>
+</li>
+<li><p>附录</p>
+</li>
+</ul>
+<blockquote>
+<p>参考了部分：<a href="https://zhuanlan.zhihu.com/p/26625249">Ref</a></p>
+</blockquote>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>杂记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>19-20-3复习记录</title>
     <url>/2020/08/13/talk-chat/19-20-3%E5%A4%8D%E4%B9%A0%E6%97%A5%E7%A8%8B/</url>
     <content><![CDATA[<p>19-20-3复习</p>
@@ -29,24 +254,15 @@
 <div>
             <input type="checkbox" disabled>数据结构
           </div>
-<p>08-24 09:00-11:00(星期一)</p>
+<p>08-24 09:t00-11:00(星期一)</p>
 <h3 id="基础物理学"><a href="#基础物理学" class="headerlink" title="基础物理学"></a>基础物理学</h3><div class="note note-primary">
-            <p>共振最大值对应 $\omega_0 = \omega_d$</p>
-          </div>
-<div class="note note-success">
-            <p>波节、波腹？傻傻分不清。</p>
-          </div>
-<div class="note note-primary">
-            <p>击穿场强</p>
-          </div>
-<div class="note note-success">
-            <p>孤立导体的电容</p>
-          </div>
-<div class="note note-primary">
             <p>刚体运动学的公式：</p><ol><li>能量</li><li>角动量</li><li>角动量定理、角动量守恒</li><li>动能定理</li><li>柯尼希定理</li></ol>
           </div>
 <div class="note note-success">
-            <p>求电势的时候，灵活！</p><p>参考 <span class="label label-warning">练习题 二 - 11</span></p>
+            <p>波节、波腹？傻傻分不清。</p><p>载频：$\frac{\omega_1+\omega_2}{2}$</p>
+          </div>
+<div class="note note-success">
+            <p><strong>静电场部分：</strong></p><p><strong><span class="label label-info">「求电势」</span></strong>：参考 <span class="label label-warning">练习题 二 - 11</span></p><p>注意球壳上每一个电荷对于球心的电势方便累加。</p><p><strong><span class="label label-info">「孤立导体的电容」</span></strong></p><p><strong><span class="label label-info">「击穿场强」</span></strong></p>
           </div>
 <h3 id="离散数学"><a href="#离散数学" class="headerlink" title="离散数学"></a>离散数学</h3><div>
             <input type="checkbox" disabled checked="checked">数理逻辑（1-5）
@@ -164,7 +380,7 @@
             <input type="checkbox" disabled checked="checked">求主范式
           </div>
 <div class="note note-info">
-            <p><span class="label label-success">Method</span> <strong>求范式</strong></p><ol><li>消去 $\rightarrow$ 和 $\leftrightarrow$</li><li>消去双重否定</li><li>使用分配律</li></ol><p><em>这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂</em></p><p><span class="label label-success">Method</span> <strong>求主范式</strong></p><ol><li>先化成范式</li><li>在缺少某一项时，用排中律 $A\vee \neg A = 1$ 和结合律<strong>添加</strong>缺少的命题变元</li></ol><p><span class="label label-success">Method</span> <strong>主范式互化</strong></p><ol><li>取 $\neg A$，并化为范式</li><li>则 $A=\neg\neg A$ 用德摩根律展开</li></ol>
+            <p><span class="label label-success">Method</span> <strong>求范式</strong></p><ol><li>消去 $\rightarrow$ 和 $\leftrightarrow$</li><li>消去双重否定</li><li>使用分配律</li></ol><p>_这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂_</p><p><span class="label label-success">Method</span> <strong>求主范式</strong></p><ol><li>先化成范式</li><li>在缺少某一项时，用排中律 $A\vee \neg A = 1$ 和结合律<strong>添加</strong>缺少的命题变元</li></ol><p><span class="label label-success">Method</span> <strong>主范式互化</strong></p><ol><li>取 $\neg A$，并化为范式</li><li>则 $A=\neg\neg A$ 用德摩根律展开</li></ol>
           </div>
 <div>
             <input type="checkbox" disabled checked="checked">判断推理的正确性
@@ -556,231 +772,6 @@
       </categories>
   </entry>
   <entry>
-    <title>谈谈编程</title>
-    <url>/2020/06/24/talk-chat/AboutProgramming1/</url>
-    <content><![CDATA[<p>编程十载。</p>
-<a id="more"></a>
-<p>笔者江苏南京人，小学听人说编程有点意思随便学了点 <code>Basic</code>，觉着程序设计挺有趣，便一直没有放下编程的学习。当时挺自信，用 <code>Basic</code> 也能写点东西，虽然看上去不怎样，却能解决点实际问题：</p>
-<blockquote>
-<p>Q：解不定方程：2 x + 3 y = 100, x y 是正整数。</p>
-</blockquote>
-<pre><code class="hljs vba">FOR I &#x3D; 1 TO 50
-    FOR J &#x3D; 1 TO 33
-        IF 2*I+3*J &#x3D; 100 THEN
-            PRINT I
-            PRINT J
-        END IF
-    NEXT J
-NEXT I</code></pre>
-<p>Well，写的不好，但是至少我知道怎样去解决一些问题。要解这个方程实际上不需要这么麻烦。但是当时学到的确实是解决问题的方法：编一个程序、枚举各种情况、得到答案。</p>
-<p>当然，如果我们仔细看一看这一个程序，实则三种最基础的程序结构都有：</p>
-<ol>
-<li>顺序：<code>PRINT I PRINT J</code></li>
-<li>分支：<code>IF ... THEN ... (ELSE ...) END IF</code></li>
-<li>循环：<code>FOR I = 1 TO 50 NEXT I</code></li>
-</ol>
-<p>确实，我们需要这三种结构就能创建整个程序了，至少当时的我，还能记得，这三个程序足以撑起你需要的一切。</p>
-<p>上了初中，接触的是 <code>Pascal</code>，勉强写了两年，就跳去学“高大上”的 <code>C++</code> 了，做点对比：</p>
-<pre><code class="hljs pascal"><span class="hljs-keyword">var</span> a,b,c: int;
-
-<span class="hljs-function"><span class="hljs-keyword">Procedure</span> <span class="hljs-title">foo</span><span class="hljs-params">(para: int)</span></span>
-<span class="hljs-function"><span class="hljs-title">begin</span></span>
-<span class="hljs-function">    <span class="hljs-title">writeln</span><span class="hljs-params">(para+1)</span></span>
-<span class="hljs-function"><span class="hljs-title">end</span>;</span>
-
-<span class="hljs-keyword">begin</span>
-    readln(a, b, c);
-    foo(a);
-    foo(b);
-    foo(c);
-<span class="hljs-keyword">end</span>.</code></pre>
-<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">int</span> para)</span> </span>&#123; <span class="hljs-built_in">cout</span> &lt;&lt; para; &#125;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
-<span class="hljs-function"></span>&#123;
-    <span class="hljs-keyword">int</span> a, b, c;
-    <span class="hljs-built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; c;
-    foo(a);foo(b);foo(c);
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
-<p>当时写的也是懵懵懂懂的，但也能说出些道道来：什么是函数，什么是形参实参之类的。当然，这些只是为了应付当年的 <code>NOIP</code> 比赛（现<code>csp</code>），写的程序里面大多是这样的：</p>
-<pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
-<span class="hljs-function"></span>&#123;
-  <span class="hljs-keyword">int</span> a[<span class="hljs-number">10000000</span>];
-  <span class="hljs-keyword">int</span> n;
-  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;i&lt;=n;++i) <span class="hljs-built_in">cin</span>&gt;&gt; a[i];
-  ......
-&#125;</code></pre>
-<p>当时还是挺自信，这玩意挺好啊，能解决问题，在赛场上也能拿点分。但是到了大学就不一样了。<code>c++</code> 程设这门课主要难点在于 <code>OOP</code> 与动态内存部分，各种 bug 都来了，我还记得，当时上的最多的网站：<a href="https://docs.microsoft.com/zh-cn/">Docs</a>，是微软的技术文档，每天沉浸在理解、记忆如何去写一个可以编译的程序之中，觉得生活确实充实。</p>
-<p>但是如果你问我，到底学到了什么，我只能说，我学会了如何写出一个能够编译的 cpp。</p>
-<p>疫情期间，有更多的时间看了看国外的开放课程（MIT Open Course），例如：</p>
-<p><code>Intro to EECS 6.01I MIT</code>：计科、电子方向的导论课</p>
-<p>讲的很浅显易懂，大概涉及以下几个方面</p>
-<blockquote>
-<p><strong>Topics</strong></p>
-<ul>
-<li>State Machine</li>
-<li>Differential Equations and Operations</li>
-<li>Circuit</li>
-<li>… …</li>
-</ul>
-</blockquote>
-<p>在第一节课，教授指出了这门课的目的：形成思维方法，从以下几个方面去思考问题和知识。</p>
-<ul>
-<li>Primitives（原语）</li>
-<li>Combination（组合）</li>
-<li>Abstractions（抽象）</li>
-<li>Patterns（模式）</li>
-</ul>
-<p>以电路为例</p>
-<blockquote>
-<p><strong>Example (Circuit)</strong></p>
-<ul>
-<li>Primitives<ul>
-<li>Ohm’s Law</li>
-<li>Node</li>
-</ul>
-</li>
-<li>Combination<ul>
-<li>KVL KCL Equations</li>
-<li>Node method, Loop method</li>
-</ul>
-</li>
-<li>Abstractions<ul>
-<li>Parallel Combinations</li>
-<li>Series Combinations</li>
-</ul>
-</li>
-<li>Patterns<ul>
-<li>in Series Combinations: $I = V / (R_1 + R_2)$</li>
-<li>in Parallel Combinations: $V_1 = R_1 I,\dots$</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<figure class="highlight lua"><figcaption><span>FunctionalProgramming.lua</span><a href="/code/RandomTalks/AboutProgramming1/FunctionalProgramming.lua">view raw</a></figcaption><table><tr><td class="code"><pre><code class="hljs lua"><span class="hljs-keyword">local</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get_accumulator</span><span class="hljs-params">(start)</span></span><br>    start = start <span class="hljs-keyword">or</span> <span class="hljs-number">0</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span><br>        start = start + <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> start<br>    <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br><span class="hljs-keyword">local</span> acc = get_accumulator()<br><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span> <span class="hljs-keyword">do</span><br>    <span class="hljs-built_in">print</span>(acc())<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>编程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 建站实录</title>
-    <url>/2020/08/13/talk-chat/Hexo/</url>
-    <content><![CDATA[<p>建站实录</p>
-<a id="more"></a>
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>需要准备的材料：</p>
-<ol>
-<li>vscode<ul>
-<li>VSCode 的终端内，要换成<code>cmd.exe</code>，按下 <code>ctrl + ,</code> 进入设置，找到 <code>terminal.external.windowsExec</code>这个，修改为 <code>C:\Windows\System32\cmd.exe</code></li>
-</ul>
-</li>
-<li><p>Node.js</p>
-<blockquote>
-<p>安装完成后需要执行：<code>npm config set registry https://registry.npm.taobao.org</code>，来重新定向源。</p>
-</blockquote>
-</li>
-<li><p>Git客户端、以及一个配置好的 Github 账号</p>
-</li>
-</ol>
-<h3 id="站点建立"><a href="#站点建立" class="headerlink" title="站点建立"></a>站点建立</h3><blockquote>
-<p><a href="https://docs.github.com/en/github/working-with-github-pages">https://docs.github.com/en/github/working-with-github-pages</a></p>
-</blockquote>
-<ul>
-<li>安装Git<ul>
-<li>Git 的配置</li>
-</ul>
-</li>
-<li>安装Node.js</li>
-<li>安装Hexo</li>
-<li>GitHub创建个人仓库</li>
-</ul>
-<p>Git：在<a href="https://npm.taobao.org/mirrors/git-for-windows/v2.28.0.windows.1/">Mirror</a>中下载，并安装 <code>Git-2.28.0-64-bit.exe</code>（中间都是直接点击下一步即可）</p>
-<p>Node.js：在<a href="https://npm.taobao.org/mirrors/node/latest-v14.x/">Mirror</a>中下载，并安装 <code>node-v14.8.0-x64.msi</code>。</p>
-<p>第一步，为你的站点设置一个代码仓库：</p>
-<blockquote>
-<p><a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site">Ref</a></p>
-</blockquote>
-<p>第二步，站点初始化</p>
-<blockquote>
-<p><a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site">Ref</a></p>
-<p>Note: It can take up to 20 minutes for changes to your site to publish after you push the changes to GitHub. If your don’t see your changes reflected in your browser after an hour, see “About Jekyll build errors for GitHub Pages sites.”</p>
-<p>部署需要时间、每小时最多部署10次，站点大小最多1G（图片不能太多太大，搞大型个人相册就免了）</p>
-</blockquote>
-<p>第三步，找一个地方，专门存放你的这个站点，例如：<code>D:/repos/</code> 在这个文件夹中 clone 下你的这个仓库。并且在 VScode 中打开这个<strong>仓库</strong></p>
-<p>在这里，按照：</p>
-<blockquote>
-<p><a href="https://hexo.io/zh-cn/docs">Ref</a> 安装 Hexo。</p>
-<p><a href="https://hexo.io/zh-cn/docs/setup">Ref</a> 在本机上建立站点</p>
-</blockquote>
-<p>注意，因为直接在git下的目录中打开code，所以其中的folder就是 <code>.</code> （当前文件夹）不用执行cd切换工作文件夹，也就是（在VScode 终端中执行）：</p>
-<pre><code class="hljs bash">hexo init .
-npm install</code></pre>
-<ul>
-<li>初次尝试</li>
-</ul>
-<pre><code class="hljs BASH">hexo s --debug <span class="hljs-comment"># 显示debug反馈</span>
-hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
-<p>应当显示：<br><!-- TODO --></p>
-<p>deploy 配置</p>
-<pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span>
-  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>
-  <span class="hljs-attr">repository:</span> <span class="hljs-string">git@github.com:Jerryyang2001/Jerryyang2001.github.io.git</span>
-  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span> <span class="hljs-comment"># 注意是 master 分支</span>
-  <span class="hljs-attr">message:</span> <span class="hljs-string">Site</span> <span class="hljs-string">updated:&#123;&#123;</span> <span class="hljs-string">now(&#x27;YYYY-MM-DD</span> <span class="hljs-string">HH:mm:ss&#x27;)</span> <span class="hljs-string">&#125;&#125;)</span></code></pre>
-<ul>
-<li><p>站点配置</p>
-<ul>
-<li><code>_config.yml</code></li>
-</ul>
-</li>
-<li><p>更换主题（以我现在用的 <code>Fluid</code> 为例）</p>
-<ul>
-<li>注意看文档就行</li>
-<li>主题配置</li>
-</ul>
-</li>
-<li><p>发布文章</p>
-<ul>
-<li>Hexo 工作流</li>
-<li><code>yaml</code></li>
-<li><code>&lt;!-- more --&gt;</code>用法</li>
-</ul>
-</li>
-<li><p>个性化设置</p>
-<ul>
-<li>搜索器</li>
-<li>Mathjax</li>
-<li>Valine</li>
-<li>思维导图</li>
-</ul>
-</li>
-<li><p>其他</p>
-<ul>
-<li>code Snippet</li>
-</ul>
-</li>
-<li><p>附录</p>
-</li>
-</ul>
-<blockquote>
-<p>参考了部分：<a href="https://zhuanlan.zhihu.com/p/26625249">Ref</a></p>
-</blockquote>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>杂记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>外微分形式与微积分</title>
     <url>/2020/05/24/study/Advanced-Mathematics/Exterior-Differential/</url>
     <content><![CDATA[<p>些些写累了，准备 <del>白嫖</del> 维基百科。关于外微分形式与场论中几个公式，在教材中并没有给出完整的说明，在这里简单记录一下。</p>
@@ -788,8 +779,8 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <blockquote>
 <p>以下内容收集自 Wikipedia</p>
 </blockquote>
-<h2 id="外微分形式"><a href="#外微分形式" class="headerlink" title="外微分形式"></a>外微分形式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>一个 $k$ 阶的微分形式的外微分是 $k+1$ 阶的微分形式。对于一个 $k$ 阶形式的 $ω = f<em>I\mathrm dx_I$，其外微分形式为${\displaystyle \mathrm d{\omega }=\sum </em>{i=1}^{n}{\frac {\partial f<em>{I}}{\partial x</em>{i}}}\mathrm dx<em>{i}\wedge \mathrm dx</em>{I}}$。</p>
-<p>对于一般的<em>k</em>-形式 $\sum f<em>I dx_I$ （其中多重指标 $I$ 取遍所有${1, …, n}$的为 $k$ 基数的有序子集），我们只作了线性推广。注意如果上面有 $i=I$ 则 $\mathrm dx</em>{i}\wedge\mathrm dx_{I}=0$。</p>
+<h2 id="外微分形式"><a href="#外微分形式" class="headerlink" title="外微分形式"></a>外微分形式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>一个 $k$ 阶的微分形式的外微分是 $k+1$ 阶的微分形式。对于一个 $k$ 阶形式的 $ω = f_I\mathrm dx_I$，其外微分形式为${\displaystyle \mathrm d{\omega }=\sum _{i=1}^{n}{\frac {\partial f_{I}}{\partial x_{i}}}\mathrm dx_{i}\wedge \mathrm dx_{I}}$。</p>
+<p>对于一般的<em>k</em>-形式 $\sum f_I dx_I$ （其中多重指标 $I$ 取遍所有$\{1, …, n\}$的为 $k$ 基数的有序子集），我们只作了线性推广。注意如果上面有 $i=I$ 则 $\mathrm dx_{i}\wedge\mathrm dx_{I}=0$。</p>
 <h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>外微分满足：</p>
 <ul>
 <li><p>线性</p>
@@ -799,14 +790,14 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <li><p>$\mathrm d^2 =0$</p>
 </li>
 </ul>
-<h2 id="微积分中的外微分"><a href="#微积分中的外微分" class="headerlink" title="微积分中的外微分"></a>微积分中的外微分</h2><h3 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h3><p>对于一个 0-形式，也就是一个光滑函数 $f: R^n\rightarrow R$，我们有 ${\displaystyle df=\sum <em>{i=1}^{n}{\frac {\partial f}{\partial x</em>{ i } } }\,dx_{i}}$，所以对于向量场 $\boldsymbol V$ 而言：${\displaystyle df(V)=\langle {\mathrm{grad} }f,V\rangle }$</p>
-<h3 id="旋度"><a href="#旋度" class="headerlink" title="旋度"></a>旋度</h3><p>对于一个 1-形式，${\displaystyle \omega =\sum <em>{i}f</em>{i}\,dx_{i}}$ 在 $R^3$ 上，有：</p>
+<h2 id="微积分中的外微分"><a href="#微积分中的外微分" class="headerlink" title="微积分中的外微分"></a>微积分中的外微分</h2><h3 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h3><p>对于一个 0-形式，也就是一个光滑函数 $f: R^n\rightarrow R$，我们有 ${\displaystyle df=\sum _{i=1}^{n}{\frac {\partial f}{\partial x_{ i } } }\,dx_{i}}$，所以对于向量场 $\boldsymbol V$ 而言：${\displaystyle df(V)=\langle {\mathrm{grad} }f,V\rangle }$</p>
+<h3 id="旋度"><a href="#旋度" class="headerlink" title="旋度"></a>旋度</h3><p>对于一个 1-形式，${\displaystyle \omega =\sum _{i}f_{i}\,dx_{i}}$ 在 $R^3$ 上，有：</p>
 <script type="math/tex; mode=display">
 {\displaystyle \omega =\sum _{i}f_{i}\,dx_{i}}</script><p>它限制到三维情况 ${\displaystyle \omega =u\,dx+v\,dy+w\,dz}$ 就是</p>
 <script type="math/tex; mode=display">
 {\displaystyle d\omega =\left({\frac {\partial v}{\partial x}}-{\frac {\partial u}{\partial y}}\right)dx\wedge dy+\left({\frac {\partial w}{\partial y}}-{\frac {\partial v}{\partial z}}\right)dy\wedge dz+\left({\frac {\partial u}{\partial z}}-{\frac {\partial w}{\partial x}}\right)dz\wedge dx.}</script><p>因此，对于向量场 ${\displaystyle U}, {\displaystyle V=[u,v,w]}$ 和 ${\displaystyle W}$ 我们有 ${\displaystyle d\omega (U,W)=\langle {\mathrm{curl}}\,V\times U,W\rangle }$</p>
 <p>其中 $\mathrm {curl} V$ 代表<em>V</em>的旋度，$\times$ 是向量积，而 $&lt;,&gt;$ 是标量积。</p>
-<h3 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h3><p>对于一个 2-形式 ${\displaystyle \omega =\sum <em>{i,j}h</em>{i,j}\,dx<em>{i}\wedge dx</em>{j},}$</p>
+<h3 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h3><p>对于一个 2-形式 ${\displaystyle \omega =\sum _{i,j}h_{i,j}\,dx_{i}\wedge dx_{j},}$</p>
 <p>对于三维，若${\displaystyle \omega =p\,dy\wedge dz+q\,dz\wedge dx+r\,dx\wedge dy}$</p>
 <p>${\displaystyle d\omega} {\displaystyle =\left({\frac {\partial p}{\partial x}}+{\frac {\partial q}{\partial y}}+{\frac {\partial r}{\partial z}}\right)dx\wedge dy\wedge dz}{\displaystyle ={\mathrm{div}}V\,dx\wedge dy\wedge dz,}$</p>
 <p>其中 $V$ 是一个向量场定义为 <strong>${\displaystyle V=[p,q,r].}$</strong></p>
@@ -818,6 +809,81 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
         <tag>高等数学</tag>
         <tag>外微分形式</tag>
         <tag>向量空间</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>无穷级数</title>
+    <url>/2020/05/25/study/Advanced-Mathematics/ConstantSeries/</url>
+    <content><![CDATA[<p>级数部分相关定理。</p>
+<a id="more"></a>
+<h2 id="常数项级数"><a href="#常数项级数" class="headerlink" title="常数项级数"></a>常数项级数</h2><h3 id="常数项级数的概念、性质、原理"><a href="#常数项级数的概念、性质、原理" class="headerlink" title="常数项级数的概念、性质、原理"></a>常数项级数的概念、性质、原理</h3><p><strong>Def</strong>：（级数）我们把一个形如 $\sum\limits_{k=0}^{\infty}a_n$ 的式子称为无穷级数</p>
+<p><strong>Def</strong>：级数的部分和、级数的敛散性、级数和的定义</p>
+<p><strong>Thm</strong>：性质，若 $a_n$ 和 $b_n$ 级数收敛，则</p>
+<ul>
+<li>线性性质</li>
+<li>$\sum\limits_{k=0}^{\infty}(a_k+b_k) =\sum\limits_{k=0}^{\infty} a_k+ \sum\limits_{k=0}^{\infty}b_k$</li>
+<li>若 $a_n\le b_n$ 则 $\sum\limits_{k=0}^{\infty}a_n\le\sum\limits_{k=0}^{\infty}b_n$</li>
+<li>任意更改有限项不改变敛散性</li>
+<li>在不改变次序的情况下，任意添加括号所得到的新的级数敛散性不变，和不变</li>
+</ul>
+<p><strong>Thm</strong>：（Cauchy 收敛原理）级数$\sum\limits_{k=0}^{\infty}a_n$ 收敛的充要条件是 $\forall\varepsilon&gt;0,\exists N\in \mathbf{N}_+\forall p\in \mathbf{N}_+(n&gt;N \rightarrow |\sum\limits_{k=n+1}^{n+p}a_k|&lt;\varepsilon)$</p>
+<h3 id="正项级数的审敛准则"><a href="#正项级数的审敛准则" class="headerlink" title="正项级数的审敛准则"></a>正项级数的审敛准则</h3><p><strong>Thm</strong>：正项级数$\sum\limits_{k=0}^{\infty}a_n$ 收敛的充要条件是其部分和数列 $\{S_n\}$ 有上界</p>
+<p><strong>Thm</strong>：（比较准则 1 ）设$\sum\limits_{k=0}^{\infty}a_n$ 和 $\sum\limits_{k=0}^{\infty}b_n$ 是正项级数，且 $\forall n\in \mathbf N_+,a_n\le b_n$，则</p>
+<ol>
+<li>$\sum\limits_{k=0}^{\infty}b_n$ 收敛，则 $\sum\limits_{k=0}^{\infty}a_n$ 收敛</li>
+<li>$\sum\limits_{k=0}^{\infty}a_n$ 发散，则 $\sum\limits_{k=0}^{\infty}b_n$ 发散</li>
+</ol>
+<p><strong>Thm</strong>：（比较准则 2 极限形式）设$\sum\limits_{k=0}^{\infty}a_n$ 和 $\sum\limits_{k=0}^{\infty}b_n$ 是正项级数，且有$\lim \frac{a_n}{b_n} =\lambda$ 则：</p>
+<ol>
+<li>$\lambda&gt;0$ 则两个级数有相同的敛散性</li>
+<li>$\lambda = 0$ 若 $\sum\limits_{k=0}^{\infty}b_n$ 收敛，则 $\sum\limits_{k=0}^{\infty}a_n$ 收敛</li>
+<li>$\lambda = \infty$ 若 $\sum\limits_{k=0}^{\infty}a_n$ 发散，则 $\sum\limits_{k=0}^{\infty}b_n$ 发散</li>
+</ol>
+<p><strong>Thm</strong>：（达朗贝尔判别法、D’Alembert 准则）若正项级数$\sum\limits_{k=0}^{\infty}a_n$ 满足 $\lim\limits_{n\rightarrow \infty} \frac{u_{n+1}}{u_n} = l$ 则</p>
+<ol>
+<li>$l&lt;1$，收敛</li>
+<li>$l&gt;1$，发散</li>
+<li>$l=1$，敛散性不定</li>
+</ol>
+<p><strong>Thm</strong>：（柯西判别法、Cauchy 准则）若正项级数$\sum\limits_{k=0}^{\infty}a_n$ 满足 $\lim\limits_{n\rightarrow \infty} \sqrt[n]{a_n} = \lambda$ 则</p>
+<ol>
+<li>$\lambda&lt;1$，收敛</li>
+<li>$\lambda&gt;1$，发散</li>
+<li>$\lambda=1$，敛散性不定</li>
+</ol>
+<p>*<strong>Thm</strong>：（拉阿伯判别法）若正项级数满足：$\lim\limits_{n\rightarrow \infty} n(\frac{u_n}{u_{n+1}} -1)=R$ 则</p>
+<ol>
+<li>$R&gt;1$，收敛</li>
+<li>$R&lt;1$，发散</li>
+<li>$R=1$，敛散性不定</li>
+</ol>
+<blockquote>
+<p>例：讨论 $\displaystyle\sum\limits_{k=0}^{\infty}\frac{(2n-1)!!}{2n!!}\cdot\frac{1}{2n+1}$ 的敛散性</p>
+<p>解：应用拉阿伯判别法 $R = \frac 3 2$ 故级数收敛</p>
+</blockquote>
+<p><strong>Thm</strong>：（积分判别准则）若存在一个单调下降的非负函数 $f(x)$ 使得 $f(n) = u_n$，则无穷积分与无穷级数有相同的敛散性</p>
+<h3 id="任意项级数"><a href="#任意项级数" class="headerlink" title="任意项级数"></a>任意项级数</h3><p><strong>Def</strong>：交错级数 $\sum\limits_{k=0}^{\infty}(-1)^n\cdot a_n$</p>
+<p><strong>Thm</strong>：（Leibniz 准则）若交错级数满足</p>
+<ol>
+<li>$u_n\ge u_{n+1}$</li>
+<li>$\lim\limits_{n\rightarrow \infty} u_n = 0$</li>
+</ol>
+<p>则该交错级数收敛</p>
+<p><strong>Def</strong>：绝对收敛，条件收敛</p>
+<p><strong>Thm</strong>：（绝对收敛准则）若级数 $\sum\limits_{n=1}^{\infty} |a_n|$ 收敛，则级数 $\sum\limits_{n=1}^{\infty} a_n$ 收敛</p>
+<p><strong>Thm</strong>：若级数绝对收敛，则其的任何一个重排绝对收敛，且和相等</p>
+<p><strong>Thm</strong>：若级数 $\sum\limits_{n=1}^{\infty} a_n = A$ 和 $\sum\limits_{n=1}^{\infty} b_n = B$ 绝对收敛，则各项相乘得到的乘积项按任何次序排列得到的级数 $\sum\limits_{n=1}^{\infty} c_n$ 绝对收敛于 $AB$</p>
+<p><strong>Lemma</strong>：（Abel 变换式）$\sum\limits_{k =1}^{m}\alpha_k\beta_k = \sum\limits_{k=1}^{m-1}(\alpha_k-\alpha_k+1)B_k +a_mB_m$</p>
+<p><strong>Lemma</strong>：（Abel 引理）若数组$\{\alpha_k\}$ 是单调的，又有数组 $\{\beta_k\}$ 的部分和为 $B_n$ 满足不等式 $|B_n| = |\sum\limits_{k=1}^{n}\beta_k|\le M$，则有 $\sum\limits_{k=1}^m \alpha_k\beta_k\le M(|\alpha_1|+2|\alpha_m|)$</p>
+<p><strong>Thm</strong>：（狄利克雷判别法）若 $\{a_n\}$ 单调且 $\lim\limits_{k\rightarrow\infty} a_k=0$ 级数 $\sum\limits_{k=1}^\infty b_k$ 部分和序列有界，则级数 $\sum\limits_{k=1}^\infty a_kb_k$ 收敛</p>
+<p><strong>Thm</strong>：（Abel 判别法）若 $\{a_k\}$ 单调有界，且 $\sum\limits_{k=1}^\infty$ 级数收敛，则级数 $\sum\limits_{k=1}^\infty a_kb_k$ 收敛</p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>高等数学</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>级数</tag>
       </tags>
   </entry>
   <entry>
@@ -841,7 +907,7 @@ b_n=\frac 1 \pi\int_{-\pi}^{\pi}f(x)\sin nx\mathrm dx(n=1,2,3,\dots)</script><p>
 <script type="math/tex; mode=display">
 \frac {a_0} 2+\sum\limits_{n=1}^\infty(a_n\cos nx+b_n\sin nx)</script><p>称为<strong>傅里叶级数</strong></p>
 <blockquote>
-<p>问题在于，这个级数的和函数不一定和原函数相等，因而，我们用$\displaystyle f\sim \frac {a<em>0} 2+\sum\limits</em>{n=1}^\infty(a_n\cos nx+b_n\sin nx)$ 来表示。</p>
+<p>问题在于，这个级数的和函数不一定和原函数相等，因而，我们用$\displaystyle f\sim \frac {a_0} 2+\sum\limits_{n=1}^\infty(a_n\cos nx+b_n\sin nx)$ 来表示。</p>
 </blockquote>
 <h3 id="傅氏级数的收敛性定理和傅氏展开式"><a href="#傅氏级数的收敛性定理和傅氏展开式" class="headerlink" title="傅氏级数的收敛性定理和傅氏展开式"></a>傅氏级数的收敛性定理和傅氏展开式</h3><blockquote>
 <p>吐槽一下工科数分，人家高等数学讲的炒鸡清楚！</p>
@@ -869,9 +935,9 @@ b_n=\frac 1 \pi\int_{-\pi}^{\pi}f(x)\sin nx\mathrm dx(n=1,2,3,\dots)</script><p>
             <p>有了这个定理之后，就可以求出一系列看似无法求出的和</p>
           </div>
 <h3 id="奇偶周期函数的傅氏级数"><a href="#奇偶周期函数的傅氏级数" class="headerlink" title="奇偶周期函数的傅氏级数"></a>奇偶周期函数的傅氏级数</h3><ul>
-<li><p>偶函数：$b<em>n=0,~f(x)=\frac {a_0}{2}+\sum\limits</em>{n=1}^{\infty} a_n\cos nx$ 称为<strong>傅氏余弦函数</strong></p>
+<li><p>偶函数：$b_n=0,~f(x)=\frac {a_0}{2}+\sum\limits_{n=1}^{\infty} a_n\cos nx$ 称为<strong>傅氏余弦函数</strong></p>
 </li>
-<li><p>奇函数：$a<em>n=0,~f(x) \sim \sum\limits</em>{n=1}^\infty b_n\sin nx$ 称为<strong>傅氏正弦函数</strong></p>
+<li><p>奇函数：$a_n=0,~f(x) \sim \sum\limits_{n=1}^\infty b_n\sin nx$ 称为<strong>傅氏正弦函数</strong></p>
 </li>
 </ul>
 <blockquote>
@@ -908,81 +974,6 @@ f(-x),&-l\le x<0
       </tags>
   </entry>
   <entry>
-    <title>无穷级数</title>
-    <url>/2020/05/25/study/Advanced-Mathematics/ConstantSeries/</url>
-    <content><![CDATA[<p>级数部分相关定理。</p>
-<a id="more"></a>
-<h2 id="常数项级数"><a href="#常数项级数" class="headerlink" title="常数项级数"></a>常数项级数</h2><h3 id="常数项级数的概念、性质、原理"><a href="#常数项级数的概念、性质、原理" class="headerlink" title="常数项级数的概念、性质、原理"></a>常数项级数的概念、性质、原理</h3><p><strong>Def</strong>：（级数）我们把一个形如 $\sum\limits_{k=0}^{\infty}a_n$ 的式子称为无穷级数</p>
-<p><strong>Def</strong>：级数的部分和、级数的敛散性、级数和的定义</p>
-<p><strong>Thm</strong>：性质，若 $a_n$ 和 $b_n$ 级数收敛，则</p>
-<ul>
-<li>线性性质</li>
-<li>$\sum\limits<em>{k=0}^{\infty}(a_k+b_k) =\sum\limits</em>{k=0}^{\infty} a<em>k+ \sum\limits</em>{k=0}^{\infty}b_k$</li>
-<li>若 $a<em>n\le b_n$ 则 $\sum\limits</em>{k=0}^{\infty}a<em>n\le\sum\limits</em>{k=0}^{\infty}b_n$</li>
-<li>任意更改有限项不改变敛散性</li>
-<li>在不改变次序的情况下，任意添加括号所得到的新的级数敛散性不变，和不变</li>
-</ul>
-<p><strong>Thm</strong>：（Cauchy 收敛原理）级数$\sum\limits<em>{k=0}^{\infty}a_n$ 收敛的充要条件是 $\forall\varepsilon&gt;0,\exists N\in \mathbf{N}</em>+\forall p\in \mathbf{N}<em>+(n&gt;N \rightarrow |\sum\limits</em>{k=n+1}^{n+p}a_k|&lt;\varepsilon)$</p>
-<h3 id="正项级数的审敛准则"><a href="#正项级数的审敛准则" class="headerlink" title="正项级数的审敛准则"></a>正项级数的审敛准则</h3><p><strong>Thm</strong>：正项级数$\sum\limits_{k=0}^{\infty}a_n$ 收敛的充要条件是其部分和数列 ${S_n}$ 有上界</p>
-<p><strong>Thm</strong>：（比较准则 1 ）设$\sum\limits<em>{k=0}^{\infty}a_n$ 和 $\sum\limits</em>{k=0}^{\infty}b<em>n$ 是正项级数，且 $\forall n\in \mathbf N</em>+,a_n\le b_n$，则</p>
-<ol>
-<li>$\sum\limits<em>{k=0}^{\infty}b_n$ 收敛，则 $\sum\limits</em>{k=0}^{\infty}a_n$ 收敛</li>
-<li>$\sum\limits<em>{k=0}^{\infty}a_n$ 发散，则 $\sum\limits</em>{k=0}^{\infty}b_n$ 发散</li>
-</ol>
-<p><strong>Thm</strong>：（比较准则 2 极限形式）设$\sum\limits<em>{k=0}^{\infty}a_n$ 和 $\sum\limits</em>{k=0}^{\infty}b_n$ 是正项级数，且有$\lim \frac{a_n}{b_n} =\lambda$ 则：</p>
-<ol>
-<li>$\lambda&gt;0$ 则两个级数有相同的敛散性</li>
-<li>$\lambda = 0$ 若 $\sum\limits<em>{k=0}^{\infty}b_n$ 收敛，则 $\sum\limits</em>{k=0}^{\infty}a_n$ 收敛</li>
-<li>$\lambda = \infty$ 若 $\sum\limits<em>{k=0}^{\infty}a_n$ 发散，则 $\sum\limits</em>{k=0}^{\infty}b_n$ 发散</li>
-</ol>
-<p><strong>Thm</strong>：（达朗贝尔判别法、D’Alembert 准则）若正项级数$\sum\limits<em>{k=0}^{\infty}a_n$ 满足 $\lim\limits</em>{n\rightarrow \infty} \frac{u_{n+1}}{u_n} = l$ 则</p>
-<ol>
-<li>$l&lt;1$，收敛</li>
-<li>$l&gt;1$，发散</li>
-<li>$l=1$，敛散性不定</li>
-</ol>
-<p><strong>Thm</strong>：（柯西判别法、Cauchy 准则）若正项级数$\sum\limits<em>{k=0}^{\infty}a_n$ 满足 $\lim\limits</em>{n\rightarrow \infty} \sqrt[n]{a_n} = \lambda$ 则</p>
-<ol>
-<li>$\lambda&lt;1$，收敛</li>
-<li>$\lambda&gt;1$，发散</li>
-<li>$\lambda=1$，敛散性不定</li>
-</ol>
-<p>*<strong>Thm</strong>：（拉阿伯判别法）若正项级数满足：$\lim\limits<em>{n\rightarrow \infty} n(\frac{u_n}{u</em>{n+1}} -1)=R$ 则</p>
-<ol>
-<li>$R&gt;1$，收敛</li>
-<li>$R&lt;1$，发散</li>
-<li>$R=1$，敛散性不定</li>
-</ol>
-<blockquote>
-<p>例：讨论 $\displaystyle\sum\limits_{k=0}^{\infty}\frac{(2n-1)!!}{2n!!}\cdot\frac{1}{2n+1}$ 的敛散性</p>
-<p>解：应用拉阿伯判别法 $R = \frac 3 2$ 故级数收敛</p>
-</blockquote>
-<p><strong>Thm</strong>：（积分判别准则）若存在一个单调下降的非负函数 $f(x)$ 使得 $f(n) = u_n$，则无穷积分与无穷级数有相同的敛散性</p>
-<h3 id="任意项级数"><a href="#任意项级数" class="headerlink" title="任意项级数"></a>任意项级数</h3><p><strong>Def</strong>：交错级数 $\sum\limits_{k=0}^{\infty}(-1)^n\cdot a_n$</p>
-<p><strong>Thm</strong>：（Leibniz 准则）若交错级数满足</p>
-<ol>
-<li>$u<em>n\ge u</em>{n+1}$</li>
-<li>$\lim\limits_{n\rightarrow \infty} u_n = 0$</li>
-</ol>
-<p>则该交错级数收敛</p>
-<p><strong>Def</strong>：绝对收敛，条件收敛</p>
-<p><strong>Thm</strong>：（绝对收敛准则）若级数 $\sum\limits<em>{n=1}^{\infty} |a_n|$ 收敛，则级数 $\sum\limits</em>{n=1}^{\infty} a_n$ 收敛</p>
-<p><strong>Thm</strong>：若级数绝对收敛，则其的任何一个重排绝对收敛，且和相等</p>
-<p><strong>Thm</strong>：若级数 $\sum\limits<em>{n=1}^{\infty} a_n = A$ 和 $\sum\limits</em>{n=1}^{\infty} b<em>n = B$ 绝对收敛，则各项相乘得到的乘积项按任何次序排列得到的级数 $\sum\limits</em>{n=1}^{\infty} c_n$ 绝对收敛于 $AB$</p>
-<p><strong>Lemma</strong>：（Abel 变换式）$\sum\limits<em>{k =1}^{m}\alpha_k\beta_k = \sum\limits</em>{k=1}^{m-1}(\alpha_k-\alpha_k+1)B_k +a_mB_m$</p>
-<p><strong>Lemma</strong>：（Abel 引理）若数组${\alpha<em>k}$ 是单调的，又有数组 ${\beta_k}$ 的部分和为 $B_n$ 满足不等式 $|B_n| = |\sum\limits</em>{k=1}^{n}\beta<em>k|\le M$，则有 $\sum\limits</em>{k=1}^m \alpha_k\beta_k\le M(|\alpha_1|+2|\alpha_m|)$</p>
-<p><strong>Thm</strong>：（狄利克雷判别法）若 ${a<em>n}$ 单调且 $\lim\limits</em>{k\rightarrow\infty} a<em>k=0$ 级数 $\sum\limits</em>{k=1}^\infty b<em>k$ 部分和序列有界，则级数 $\sum\limits</em>{k=1}^\infty a_kb_k$ 收敛</p>
-<p><strong>Thm</strong>：（Abel 判别法）若 ${a<em>k}$ 单调有界，且 $\sum\limits</em>{k=1}^\infty$ 级数收敛，则级数 $\sum\limits_{k=1}^\infty a_kb_k$ 收敛</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>高等数学</category>
-      </categories>
-      <tags>
-        <tag>高等数学</tag>
-        <tag>级数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>函数项级数</title>
     <url>/2020/06/01/study/Advanced-Mathematics/FuncTermSeries/</url>
     <content><![CDATA[<p>函数项级数</p>
@@ -994,7 +985,7 @@ f(-x),&-l\le x<0
             <p><strong>Tips</strong></p><p>需要注意的是，有限个可导函数的和为可导函数，可积函数的和为可积函数，但是在无穷多个时此结论不一定成立</p>
           </div>
 <h2 id="函数项级数的一致收敛性与判别法"><a href="#函数项级数的一致收敛性与判别法" class="headerlink" title="函数项级数的一致收敛性与判别法"></a>函数项级数的一致收敛性与判别法</h2><p><strong>Def</strong>：（一致收敛性）$\forall \varepsilon &gt;0,\exists N(\varepsilon)\in \mathrm N_+,\forall n&gt;N(\varepsilon)\forall x\in D,|S_n(x)-S(x)|&lt;\varepsilon$</p>
-<p><strong>Thm</strong>：（Cauchy 一致收敛原理）函数项级数一致收敛的充要条件是 $\forall \varepsilon&gt;0,\exists N(\varepsilon)i\in \mathrm N,\forall n,p\in\mathrm N<em>+,n&gt;N时\forall x\in D,|S</em>{n+p}-S_n|&lt;\varepsilon$</p>
+<p><strong>Thm</strong>：（Cauchy 一致收敛原理）函数项级数一致收敛的充要条件是 $\forall \varepsilon&gt;0,\exists N(\varepsilon)i\in \mathrm N,\forall n,p\in\mathrm N_+,n&gt;N时\forall x\in D,|S_{n+p}-S_n|&lt;\varepsilon$</p>
 <blockquote>
 <p>这个结论是显然的，我们需要更多的准敛法则</p>
 </blockquote>
@@ -1028,7 +1019,7 @@ f(-x),&-l\le x<0
 <li>收敛范围是一个对称区间</li>
 <li>仅在 $x=0$ 收敛</li>
 </ol>
-<p><strong>Thm</strong>：（幂级数的收敛半径）对于幂级数的系数 $a<em>n$，若 $\rho =\overline{\lim\limits</em>{n\rightarrow \infty}}\sqrt[n]{|a_n|}$ 则</p>
+<p><strong>Thm</strong>：（幂级数的收敛半径）对于幂级数的系数 $a_n$，若 $\rho =\overline{\lim\limits_{n\rightarrow \infty}}\sqrt[n]{|a_n|}$ 则</p>
 <ol>
 <li>当 $0\le \rho&lt;+\infty,|x|&lt;\frac 1 \rho$ 幂级数绝对收敛</li>
 <li>当 $0&lt;\rho&lt;\infty, |x|&gt;\frac 1 \rho$ 幂级数发散</li>
@@ -1041,7 +1032,7 @@ f(-x),&-l\le x<0
 <blockquote>
 <p>这个定理很好证明，用 M 判别法即可</p>
 </blockquote>
-<p><strong>Thm</strong>：对于幂级数的系数 $a<em>n$ 满足 $\lim\limits</em>{n\rightarrow\infty}|\frac{a_{n+1}}{a_n}|=l$ 则 $R=\frac 1 l$（包含 0 和无穷的情况）</p>
+<p><strong>Thm</strong>：对于幂级数的系数 $a_n$ 满足 $\lim\limits_{n\rightarrow\infty}|\frac{a_{n+1}}{a_n}|=l$ 则 $R=\frac 1 l$（包含 0 和无穷的情况）</p>
 <h2 id="幂级数的性质"><a href="#幂级数的性质" class="headerlink" title="幂级数的性质"></a>幂级数的性质</h2><p><strong>Thm</strong>：（内闭一致收敛）设一个幂级数的收敛半径为 $R&gt;0$，在收敛区间内，幂级数内闭一致收敛</p>
 <blockquote>
 <p>如果在 R 处也收敛，则可以补全一致收敛到 R 处，也就是说 $在R处收敛\rightarrow 在[0,R]一致收敛$</p>
@@ -1063,6 +1054,297 @@ f(-x),&-l\le x<0
       <tags>
         <tag>高等数学</tag>
         <tag>级数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多元函数积分学及其应用</title>
+    <url>/2020/05/23/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/</url>
+    <content><![CDATA[<p>多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习…</p>
+<a id="more"></a>
+<h2 id="多元数量值函数积分的概念和性质"><a href="#多元数量值函数积分的概念和性质" class="headerlink" title="多元数量值函数积分的概念和性质"></a>多元数量值函数积分的概念和性质</h2><h3 id="质量的计算"><a href="#质量的计算" class="headerlink" title="质量的计算"></a>质量的计算</h3><h3 id="多元数量值函数积分的概念"><a href="#多元数量值函数积分的概念" class="headerlink" title="多元数量值函数积分的概念"></a>多元数量值函数积分的概念</h3><ul>
+<li><strong>Def</strong>：多元数量值函数积分</li>
+</ul>
+<h3 id="积分存在的条件和性质"><a href="#积分存在的条件和性质" class="headerlink" title="积分存在的条件和性质"></a>积分存在的条件和性质</h3><ol>
+<li>线性性质</li>
+<li>对积分域的可加性</li>
+<li>积分不等式</li>
+<li>中值定理</li>
+</ol>
+<h2 id="二重积分的计算"><a href="#二重积分的计算" class="headerlink" title="二重积分的计算"></a>二重积分的计算</h2><ol>
+<li>二重积分的几何意义</li>
+<li>直角坐标系下二重积分的计算法</li>
+<li>极坐标系下二重积分的计算法</li>
+<li>曲线坐标下二重积分的计算法</li>
+</ol>
+<h2 id="三重积分的计算"><a href="#三重积分的计算" class="headerlink" title="三重积分的计算"></a>三重积分的计算</h2><ol>
+<li>化三重积分为单积分与二重积分的累次积分</li>
+<li>柱面、球面坐标下的三重积分计算法<ol>
+<li>曲线坐标下的三重积分</li>
+<li>柱面坐标及柱面坐标下的三重积分计算法</li>
+<li>球面坐标和球面坐标下的三重积分计算法</li>
+</ol>
+</li>
+</ol>
+<h2 id="含参变量的积分和反常重积分"><a href="#含参变量的积分和反常重积分" class="headerlink" title="含参变量的积分和反常重积分"></a>含参变量的积分和反常重积分</h2><h3 id="含参变量的积分"><a href="#含参变量的积分" class="headerlink" title="含参变量的积分"></a>含参变量的积分</h3><ul>
+<li><p><strong>Def</strong>：含参变量$y$的积分</p>
+</li>
+<li><p><strong>Thm</strong>：（连续性）$f\in C(D) \rightarrow F(y) = \int^b_af(x,y)\mathrm d x 在[c,d]上连续$</p>
+</li>
+<li><p><strong>Inf</strong>：（连续性的极限形式表达）$\displaystyle\lim \limits_{y\rightarrow y_0} \int_a^bf(x,y)\mathrm d x = \int_a^b f(x,y_0)\mathrm d x = \int_a^b[\lim\limits_{y\rightarrow y_0} f(x,y)]\mathrm dx$</p>
+</li>
+<li><p><strong>Thm</strong>：（可导性）$f,f_y\in C(C)$，则 $F(y) = \int f(x,y) \mathrm dx $有连续导数，且积分和求导运算可交换</p>
+</li>
+<li><p><strong>Thm</strong>：（积分顺序交换性）$f \in C, F(y) = \int f\mathrm dx ,G(x) = \int f\mathrm dy\rightarrow \int F(y) \mathrm d y = \int G(x) \mathrm dx$</p>
+</li>
+<li><p><strong>Thm</strong>：设 $f(x,y)\in C(D), x_i (y) \in C[c,d]$ 则，$F(y) = \int_{x_1(y)}^ {x_2(y)}f(x,y)\mathrm dx$ 在$[c,d]$上连续</p>
+</li>
+<li><p><strong>Thm</strong>：$F’(y) = \int _{x_1(y)}^ {x_2(y)}f_y(x,y)\mathrm dx+ f(x_2, y]x_2’ - f(x_1,y) x_1’$</p>
+</li>
+</ul>
+<h3 id="反常重积分"><a href="#反常重积分" class="headerlink" title="反常重积分"></a>反常重积分</h3><ul>
+<li>无界区域的二重积分<ul>
+<li><strong>Thm</strong>：（收敛判别法）$f(x,y)$ 在无界区域上连续，若存在$\rho_0&gt;0$，使当$\rho \ge \rho_0$ 有$|f|\le \frac {M}{\rho^\alpha}$，且 $M,\alpha$为常数，则当$\alpha &gt;2$时反常二重积分$\int\int f \mathrm d \sigma$收敛</li>
+</ul>
+</li>
+<li>无界函数的二重积分<ul>
+<li><strong>Def</strong>：无界函数的二重积分$\lim\limits_{d\rightarrow 0} \int\int f\mathrm d \sigma$</li>
+<li><strong>Thm</strong>：（收敛判别法）设 $f(x,y)$ 在有界区域上除了$P_0$外处处连续，若 $|f|\le \frac {M}{\rho ^\alpha}$在除 $P_0$ 外的区域上处处成立，则当 $\alpha &lt;2$时，反常二重积分收敛</li>
+</ul>
+</li>
+</ul>
+<h2 id="第一型线积分与面积分"><a href="#第一型线积分与面积分" class="headerlink" title="第一型线积分与面积分"></a>第一型线积分与面积分</h2><h3 id="第一型线积分"><a href="#第一型线积分" class="headerlink" title="第一型线积分"></a>第一型线积分</h3><ul>
+<li>第一型线积分的计算公式 $r = r(t)\rightarrow \int_{(C)}f ds = \int_{(C)}f \sqrt{\dot x^2+\dot y^2+\dot z^2}\mathrm d t$</li>
+</ul>
+<h3 id="第一型面积分"><a href="#第一型面积分" class="headerlink" title="第一型面积分"></a>第一型面积分</h3><ul>
+<li><p>曲面的面积</p>
+<ul>
+<li><strong>Thm</strong>：（用 $u,v$ 变量表示曲面）$S = \int\int\limits_{(\sigma)}||\boldsymbol r_u \times \boldsymbol r_v|| \mathrm d u \mathrm d v$</li>
+<li><strong>Thm</strong>：（用 $z = f(x,y)$ 表示曲面）$S = \iint \limits_{(\sigma)} ||\boldsymbol r_x \times \boldsymbol r_y || \mathrm dx\mathrm dy = \iint\limits_{(S)} \sqrt{1+f_x^2+f_y^2}\mathrm dx \mathrm dy$</li>
+</ul>
+</li>
+<li><p>第一型曲面积分的计算</p>
+<ul>
+<li><strong>Thm</strong>：（用 $u,v$ 变量表示曲面）$I = \iint\limits_{(S)} f(x,y,z)\mathrm dS = \iint\limits_{(\sigma)}f||\boldsymbol r_u \times \boldsymbol r_v|| \mathrm d u \mathrm d v$</li>
+<li><strong>Thm</strong>：（用 $z = f(x,y)$ 表示曲面）$I = \iint\limits_{(S)} f \sqrt{1+f_x^2+f_y^2}\mathrm dx \mathrm dy$</li>
+</ul>
+</li>
+</ul>
+<h2 id="第二型线积分和面积分"><a href="#第二型线积分和面积分" class="headerlink" title="第二型线积分和面积分"></a>第二型线积分和面积分</h2><h3 id="场的概念"><a href="#场的概念" class="headerlink" title="场的概念"></a>场的概念</h3><ul>
+<li><strong>Def</strong>：数量场、向量场、场函数</li>
+<li>场的几何描述</li>
+</ul>
+<h3 id="第二型线积分"><a href="#第二型线积分" class="headerlink" title="第二型线积分"></a>第二型线积分</h3><ul>
+<li><p><strong>Def</strong>：第二型线积分$\int_{(C)} \boldsymbol A(M)\cdot \boldsymbol{\mathrm d s} = \lim\limits_{d\rightarrow 0} \sum\limits_{k=1}^n \boldsymbol{A}(\overline {M_k})\cdot \overrightarrow{M_{k-1}M_k}$</p>
+</li>
+<li><p>第二型线积分的性质</p>
+<ul>
+<li>积分结果与方向有关</li>
+<li>可加性</li>
+</ul>
+</li>
+<li><p>第二型线积分的计算 $\int_{(C)}\boldsymbol A(M)\cdot \boldsymbol{\mathrm ds} = \int_{(C)}P\mathrm dx +Q\mathrm dy +R\mathrm dz =\int P\dot x+Q\dot y+R\dot z \mathrm dt$</p>
+</li>
+<li><p>两类线积分的联系 $\int_{(C)}\boldsymbol A(M) \cdot \boldsymbol{\mathrm ds} = \int \boldsymbol A(M)\cdot \boldsymbol e_r \mathrm ds$</p>
+</li>
+</ul>
+<h3 id="第二型面积分"><a href="#第二型面积分" class="headerlink" title="第二型面积分"></a>第二型面积分</h3><ul>
+<li><p><strong>Def</strong>：第二型面积分 $\iint\limits_{(S)} \boldsymbol A(M)\cdot \boldsymbol {\mathrm dS} = \lim\limits_{d\rightarrow 0}\sum\limits_{k=1}^n \boldsymbol A(M_k)\cdot \boldsymbol e_n(M_k) \Delta S_k$</p>
+</li>
+<li><p><strong>Thm</strong>：（用外微分形式表示）$\iint A(M)\cdot \boldsymbol{\mathrm dS} = \iint\limits_{(S)}P\mathrm dy \wedge \mathrm dz +Q\mathrm dz \wedge dx + R\mathrm dx\wedge \mathrm dy$</p>
+</li>
+<li><p>两种面积分的联系 $\iint_{(S)} \boldsymbol A(M)\cdot \mathrm d \boldsymbol S = \iint (P\cos\alpha + Q\cos\beta + R\cos\gamma)\mathrm dS$</p>
+</li>
+<li><p>第二型面积分的计算 $\iint_{(S)} R(x,y,z) \mathrm dx\wedge \mathrm dy = \pm \iint\limits_{(\sigma_{xy})} R(x,y,z(x,y))\mathrm dx\mathrm dy$ 其余式同理。其中当曲面法向量与 $z+$ 同向时取 $+$ 号，反之取 $-$ 号</p>
+</li>
+</ul>
+<h2 id="各种积分的联系及其在场论中的应用"><a href="#各种积分的联系及其在场论中的应用" class="headerlink" title="各种积分的联系及其在场论中的应用"></a>各种积分的联系及其在场论中的应用</h2><h3 id="Green-公式"><a href="#Green-公式" class="headerlink" title="Green 公式"></a>Green 公式</h3><ul>
+<li><p><strong>Def</strong>：单连通域，复连通域</p>
+</li>
+<li><p><strong>Thm</strong>：Green 公式 $\iint_{(\sigma)}(\frac{\delta Q}{\delta x} - \frac{\delta P}{\delta y} \mathrm d \sigma = \oint_{(\pm C)} P\mathrm dx + Q\mathrm dy$</p>
+</li>
+<li><p><strong>Inf</strong>：任何一条分段光滑的闭曲线所围成的平面区域的面积为 $A = \frac 1 2 \oint_{(+C)} x\mathrm dy - y\mathrm dx= \oint_{(+C)} x\mathrm dy = -\oint_{(+C)} y\mathrm dx$</p>
+</li>
+</ul>
+<h3 id="平面线积分与路径无关的条件"><a href="#平面线积分与路径无关的条件" class="headerlink" title="平面线积分与路径无关的条件"></a>平面线积分与路径无关的条件</h3><ul>
+<li><p><strong>Thm</strong>：TFAE</p>
+<ol>
+<li>沿区域内任何一条分段光滑的简单闭曲线的线积分 $\oint P\mathrm dx+Q\mathrm dy = 0$</li>
+<li>线积分 $\int P\mathrm dx +Q\mathrm dy$ 的值在区域内与积分路径无关</li>
+<li>被积表达式$P\mathrm dx +Q\mathrm dy$ 是某个二元函数的全微分</li>
+</ol>
+</li>
+<li><p><strong>Def</strong>：（环流量、环量）称眼闭曲线 $C$ 的第二型线积分为向量场 $A$ 沿闭曲线 $C$ 的环量。</p>
+</li>
+<li><p><strong>Def</strong>：（势函数、位函数、有势场）</p>
+</li>
+<li><p>该结论表明，对于一个连续向量场而言，无旋、保守、有势是等价的。</p>
+</li>
+<li><p>势函数的求法</p>
+<ul>
+<li>用线积分求解</li>
+<li>用偏积分求解</li>
+<li>用凑全微分法求解</li>
+</ul>
+</li>
+</ul>
+<h3 id="Gauss-公式和散度"><a href="#Gauss-公式和散度" class="headerlink" title="Gauss 公式和散度"></a>Gauss 公式和散度</h3><ul>
+<li><p>Gauss 公式</p>
+<ul>
+<li><strong>Thm</strong>：（Gauss 公式）$\iiint_{(V)} (\frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R}{\partial z})\mathrm dV = \iint P \mathrm dy\wedge \mathrm dz +Q\mathrm dz\wedge \mathrm dx+R\mathrm dx\wedge \mathrm dy$</li>
+<li><strong>Thm</strong>：（Gauss 公式）$\iiint_{(V)}\nabla \cdot \boldsymbol A \mathrm dV = \iint_{(S)} \boldsymbol A\cdot \mathrm d \boldsymbol S$</li>
+</ul>
+</li>
+<li><p>通量和通量密度</p>
+<ul>
+<li><strong>Def</strong>：（通量）$\boldsymbol A(M)$ 对曲面 $(S)$ 的第二型面积分 $\iint\limits_{(S)} \boldsymbol A \cdot \mathrm d \boldsymbol S$</li>
+</ul>
+</li>
+<li><p>散度的定义及其计算</p>
+<ul>
+<li><strong>Def</strong>：（散度）$\mathrm{div} \boldsymbol A(M) = \lim\limits_{(\Delta V)\rightarrow M}\frac{1}{\Delta V} \iint \boldsymbol A(M)\cdot \mathrm d\boldsymbol S$</li>
+<li><strong>Thm</strong>：（散度的计算公式）$\mathrm{div} A = \nabla \cdot \boldsymbol A = \frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R} {\partial z}$</li>
+<li><strong>Inf</strong>：（用散度表示 Gauss 公式）$\iiint\limits_{(V)} \mathrm{div} \mathrm A \mathrm d V = \iint\boldsymbol A\cdot \mathrm d \boldsymbol S$</li>
+</ul>
+</li>
+<li><p>散度的运算法则和公式</p>
+<ul>
+<li>$\mathrm{div}(C\boldsymbol A) = C\mathrm{div} \boldsymbol A$</li>
+<li>$\mathrm{div}(\boldsymbol A\pm\boldsymbol B) = \mathrm{div}(\boldsymbol A) \pm \mathrm{div}(\boldsymbol B)$</li>
+<li>$\mathrm{div}(u\boldsymbol A) = u\mathrm{div} \boldsymbol A + \nabla u \cdot \boldsymbol A$</li>
+</ul>
+</li>
+</ul>
+<h3 id="Stokes-公式和旋度"><a href="#Stokes-公式和旋度" class="headerlink" title="Stokes 公式和旋度"></a>Stokes 公式和旋度</h3><ul>
+<li><p>Stokes 公式</p>
+<ul>
+<li><strong>Thm</strong>：（Stokes 公式）$\oint_{(C)} P\mathrm dx + Q\mathrm dy +R\mathrm dz = \iint\limits_{(S)}(\frac{\partial R}{\partial y} -\frac{\partial Q}{\partial z})\mathrm dy\wedge \mathrm dz +(\frac{\partial p}{\partial z}-\frac{\partial R}{\partial x}) \mathrm dz\wedge \mathrm dx + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\mathrm dx\wedge \mathrm dy$</li>
+<li><strong>Inf</strong>：（利用 nabla 算子表示的 Stokes 公式）$\oint_{(C)} \boldsymbol A\cdot \mathrm d \boldsymbol s = \iint_{(S)} (\nabla \times  \boldsymbol A)\cdot \mathrm d \boldsymbol S = \iint_{(S)} (\nabla \times  \boldsymbol A)\cdot \boldsymbol e_n \mathrm dS$</li>
+</ul>
+</li>
+<li><p>环量和环量密度</p>
+<ul>
+<li>环量密度 $\lim\limits_{(\Delta )\rightarrow M } \frac {1} {\Delta S}\oint_{(\Delta C)}\boldsymbol A\cdot \mathrm d \boldsymbol s$</li>
+</ul>
+</li>
+<li><p>旋度的定义及其计算公式</p>
+<ul>
+<li><strong>Def</strong>：（旋度）$\mathrm{rot} \boldsymbol A$ 用行列式表示</li>
+<li><strong>Thm</strong>：（旋度的计算公式）$\oint_{(C)}\boldsymbol A\cdot \mathrm d \boldsymbol s=\iint\limits_{(S)} \mathrm{rot}\boldsymbol A \cdot \mathrm d \boldsymbol S$</li>
+</ul>
+</li>
+<li><p>旋度的运算法则</p>
+<ul>
+<li>$\mathrm{rot} (C\boldsymbol A) = C\mathrm{rot} \boldsymbol A$</li>
+<li>$\mathrm{rot} (\boldsymbol A\pm \boldsymbol B) =\mathrm{rot}\boldsymbol A\pm \mathrm{rot} \boldsymbol B $</li>
+<li>$\mathrm {rot}(u\boldsymbol A) = u\mathrm{rot} \boldsymbol A +(\nabla u)\times \boldsymbol A$</li>
+</ul>
+</li>
+</ul>
+<h3 id="场的其他计算公式"><a href="#场的其他计算公式" class="headerlink" title="场的其他计算公式"></a>场的其他计算公式</h3><ul>
+<li><p>$\mathrm{div}(\boldsymbol A\times \boldsymbol B) =\boldsymbol B\cdot \mathrm{rot}\boldsymbol A$</p>
+</li>
+<li><p>$\mathrm{div}(\mathrm{rot} \boldsymbol A) = 0$</p>
+</li>
+<li><p>$\mathrm{rot} (\nabla u) = 0$</p>
+</li>
+<li><p>$\mathrm{div}(\nabla u)=\Delta u$ 其中 $\Delta=\frac{\partial}{\partial x^2} +\frac{\partial}{\partial y^2} +\frac{\partial}{\partial z^2} $</p>
+</li>
+<li><p>$\mathrm{rot}(\mathrm{rot} \boldsymbol A) =\mathbf{grad}(\mathrm{div} A)-\Delta \boldsymbol A$</p>
+</li>
+</ul>
+<h3 id="几种重要的特殊向量场"><a href="#几种重要的特殊向量场" class="headerlink" title="几种重要的特殊向量场"></a>几种重要的特殊向量场</h3><ul>
+<li><p><strong>Def</strong>：一维单连域、二维单连域</p>
+</li>
+<li><p>无旋场</p>
+<ul>
+<li><strong>Def</strong>：（保守场）积分与路径无关</li>
+<li><strong>Def</strong>：（无旋场）$\nabla \times \boldsymbol A = \boldsymbol 0$</li>
+<li><strong>Def</strong>：（有势场，势函数）$\boldsymbol A = \nabla u$</li>
+<li><strong>Thm</strong>：在一维单连域上，$A = (P,Q,R) \in C^{(1)}$，TFAE<ul>
+<li>无旋场</li>
+<li>闭曲线上的环量恒为 0</li>
+<li>保守场</li>
+<li>有势场</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>无源场</p>
+<ul>
+<li><strong>Def</strong>：（无源场）$\nabla \cdot \boldsymbol A = 0$</li>
+<li><strong>Def</strong>：向量管</li>
+<li><strong>Thm</strong>：在二维单连域上，$A\in C^{(1)}$，TFAE<ul>
+<li>无源场</li>
+<li>$A$ 沿任何一个不子交的闭曲面的通量为零</li>
+<li>存在一个向量函数 $\boldsymbol B$ 使得 $\boldsymbol A = \nabla \times \boldsymbol B$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>调和场</p>
+<ul>
+<li><strong>Def</strong>：（调和场）既无源、也无旋的场</li>
+<li>满足 Laplace 方程</li>
+<li>满足 Posisson 方程</li>
+</ul>
+</li>
+</ul>
+<!--TODO: 添加外微分形式！！！ -->
+<h2 id="补录"><a href="#补录" class="headerlink" title="补录"></a>补录</h2><h3 id="重积分"><a href="#重积分" class="headerlink" title="重积分"></a>重积分</h3><ul>
+<li><p><strong>Def</strong>：（大和，小和）$M_i = \sup\limits_{x\in\Omega_i}\{f(\boldsymbol{x})\},\quad m_i =\inf\limits_{x\in\Omega_i }\{f(\boldsymbol{ x})\}$<br>$S^+= \sum M_iV_i,S^-=\sum m_iV_i$</p>
+</li>
+<li><p><strong>Thm</strong>：TFAE</p>
+<ul>
+<li>可积</li>
+<li>大和与小和差的极限为 0 （ $||\Delta||\rightarrow 0$ ）</li>
+<li>振幅充分小</li>
+<li>（积分）大和 = （积分）小和</li>
+</ul>
+</li>
+</ul>
+<h3 id="重积分变换"><a href="#重积分变换" class="headerlink" title="重积分变换"></a>重积分变换</h3><ul>
+<li><p><strong>Def</strong>：（正则变换）如果一个变换满足</p>
+<ol>
+<li>$T\in C^{(1)}(G)$</li>
+<li>单射</li>
+<li>$\det DT(\boldsymbol u)\neq 0$ 对任一 $\boldsymbol u$成立</li>
+</ol>
+</li>
+<li><p><strong>Def</strong>：（重积分的变换公式）若 $G,T$ 满足以下条件之一：</p>
+<ol>
+<li>$G$ 是 $R^m$ 中的开集，$T$ 是正则变换， $\Omega$ 是 $G$ 内的闭可测图形，$f\in C(T(\Omega))$</li>
+<li>$G$ 同上，$T\in C^1(G)$，$\Omega \in G$ 是闭可测区域，$T$ 是 $\Omega$ 上的正则变换，$f\in C(T(\Omega))$</li>
+</ol>
+<p>则：$\int_{T(\varOmega)}f\mathrm dV = \int_\varOmega f\circ T|\det DT|\mathrm dV$</p>
+</li>
+</ul>
+<h3 id="外微分形式"><a href="#外微分形式" class="headerlink" title="外微分形式"></a>外微分形式</h3><h3 id="场论总结"><a href="#场论总结" class="headerlink" title="场论总结"></a>场论总结</h3><ul>
+<li><p><strong>Def</strong>：（梯度） $\mathrm{grad} u = \nabla u$，其中 $\nabla$ 算子为 $(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z})$</p>
+</li>
+<li><p><strong>Def</strong>：向量线</p>
+</li>
+<li><p><strong>Def</strong>：（通量、散度）给定向量场 $F$ 和双侧曲面 $S$</p>
+<ul>
+<li>通量：$\iint_S \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}$</li>
+<li>散度：$\mathrm{div} \boldsymbol{F} = \lim\limits_{S\rightarrow M}\frac{\iint_S \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}}{V} = \nabla \cdot \boldsymbol{F}$</li>
+</ul>
+</li>
+<li><p><strong>Def</strong>：（环量、旋度）给定向量场和定向曲线</p>
+<ul>
+<li>环量：$\oint \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}$</li>
+<li>方向旋量：$h_n = \mathrm{rot} \boldsymbol{F}\cdot \boldsymbol{n}$</li>
+<li>旋度：$(\frac{\partial R}{\partial y} -\frac{\partial Q}{\partial z})\boldsymbol{i} +(\frac{\partial p}{\partial z}-\frac{\partial R}{\partial x}) \boldsymbol{j} + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\boldsymbol k$</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>高等数学</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>向量空间</tag>
+        <tag>多元函数</tag>
       </tags>
   </entry>
   <entry>
@@ -1111,7 +1393,7 @@ f(-x),&-l\le x<0
 <li><p><strong>Thm</strong>：闭集的充要条件</p>
 <ul>
 <li>$A=\bar A$</li>
-<li>$\forall {x_n} \in A, \lim x_n = x\rightarrow x \in E$</li>
+<li>$\forall \{x_n\} \in A, \lim x_n = x\rightarrow x \in E$</li>
 <li>$ x \not\in A,\exists U(x)\cap E=\emptyset$</li>
 </ul>
 </li>
@@ -1407,294 +1689,130 @@ T'\\N'\\B'
       </tags>
   </entry>
   <entry>
-    <title>多元函数积分学及其应用</title>
-    <url>/2020/05/23/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/</url>
-    <content><![CDATA[<p>多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习…</p>
+    <title>正则表达式文法</title>
+    <url>/2020/07/01/study/ComputerScience/RegExp/</url>
+    <content><![CDATA[<p>正则表达式规则</p>
 <a id="more"></a>
-<h2 id="多元数量值函数积分的概念和性质"><a href="#多元数量值函数积分的概念和性质" class="headerlink" title="多元数量值函数积分的概念和性质"></a>多元数量值函数积分的概念和性质</h2><h3 id="质量的计算"><a href="#质量的计算" class="headerlink" title="质量的计算"></a>质量的计算</h3><h3 id="多元数量值函数积分的概念"><a href="#多元数量值函数积分的概念" class="headerlink" title="多元数量值函数积分的概念"></a>多元数量值函数积分的概念</h3><ul>
-<li><strong>Def</strong>：多元数量值函数积分</li>
-</ul>
-<h3 id="积分存在的条件和性质"><a href="#积分存在的条件和性质" class="headerlink" title="积分存在的条件和性质"></a>积分存在的条件和性质</h3><ol>
-<li>线性性质</li>
-<li>对积分域的可加性</li>
-<li>积分不等式</li>
-<li>中值定理</li>
-</ol>
-<h2 id="二重积分的计算"><a href="#二重积分的计算" class="headerlink" title="二重积分的计算"></a>二重积分的计算</h2><ol>
-<li>二重积分的几何意义</li>
-<li>直角坐标系下二重积分的计算法</li>
-<li>极坐标系下二重积分的计算法</li>
-<li>曲线坐标下二重积分的计算法</li>
-</ol>
-<h2 id="三重积分的计算"><a href="#三重积分的计算" class="headerlink" title="三重积分的计算"></a>三重积分的计算</h2><ol>
-<li>化三重积分为单积分与二重积分的累次积分</li>
-<li>柱面、球面坐标下的三重积分计算法<ol>
-<li>曲线坐标下的三重积分</li>
-<li>柱面坐标及柱面坐标下的三重积分计算法</li>
-<li>球面坐标和球面坐标下的三重积分计算法</li>
-</ol>
-</li>
-</ol>
-<h2 id="含参变量的积分和反常重积分"><a href="#含参变量的积分和反常重积分" class="headerlink" title="含参变量的积分和反常重积分"></a>含参变量的积分和反常重积分</h2><h3 id="含参变量的积分"><a href="#含参变量的积分" class="headerlink" title="含参变量的积分"></a>含参变量的积分</h3><ul>
-<li><p><strong>Def</strong>：含参变量$y$的积分</p>
-</li>
-<li><p><strong>Thm</strong>：（连续性）$f\in C(D) \rightarrow F(y) = \int^b_af(x,y)\mathrm d x 在[c,d]上连续$</p>
-</li>
-<li><p><strong>Inf</strong>：（连续性的极限形式表达）$\displaystyle\lim \limits<em>{y\rightarrow y_0} \int_a^bf(x,y)\mathrm d x = \int_a^b f(x,y_0)\mathrm d x = \int_a^b[\lim\limits</em>{y\rightarrow y_0} f(x,y)]\mathrm dx$</p>
-</li>
-<li><p><strong>Thm</strong>：（可导性）$f,f_y\in C(C)$，则 $F(y) = \int f(x,y) \mathrm dx $有连续导数，且积分和求导运算可交换</p>
-</li>
-<li><p><strong>Thm</strong>：（积分顺序交换性）$f \in C, F(y) = \int f\mathrm dx ,G(x) = \int f\mathrm dy\rightarrow \int F(y) \mathrm d y = \int G(x) \mathrm dx$</p>
-</li>
-<li><p><strong>Thm</strong>：设 $f(x,y)\in C(D), x<em>i (y) \in C[c,d]$ 则，$F(y) = \int</em>{x_1(y)}^ {x_2(y)}f(x,y)\mathrm dx$ 在$[c,d]$上连续</p>
-</li>
-<li><p><strong>Thm</strong>：$F’(y) = \int _{x_1(y)}^ {x_2(y)}f_y(x,y)\mathrm dx+ f(x_2, y]x_2’ - f(x_1,y) x_1’$</p>
-</li>
-</ul>
-<h3 id="反常重积分"><a href="#反常重积分" class="headerlink" title="反常重积分"></a>反常重积分</h3><ul>
-<li>无界区域的二重积分<ul>
-<li><strong>Thm</strong>：（收敛判别法）$f(x,y)$ 在无界区域上连续，若存在$\rho_0&gt;0$，使当$\rho \ge \rho_0$ 有$|f|\le \frac {M}{\rho^\alpha}$，且 $M,\alpha$为常数，则当$\alpha &gt;2$时反常二重积分$\int\int f \mathrm d \sigma$收敛</li>
-</ul>
-</li>
-<li>无界函数的二重积分<ul>
-<li><strong>Def</strong>：无界函数的二重积分$\lim\limits_{d\rightarrow 0} \int\int f\mathrm d \sigma$</li>
-<li><strong>Thm</strong>：（收敛判别法）设 $f(x,y)$ 在有界区域上除了$P_0$外处处连续，若 $|f|\le \frac {M}{\rho ^\alpha}$在除 $P_0$ 外的区域上处处成立，则当 $\alpha &lt;2$时，反常二重积分收敛</li>
-</ul>
-</li>
-</ul>
-<h2 id="第一型线积分与面积分"><a href="#第一型线积分与面积分" class="headerlink" title="第一型线积分与面积分"></a>第一型线积分与面积分</h2><h3 id="第一型线积分"><a href="#第一型线积分" class="headerlink" title="第一型线积分"></a>第一型线积分</h3><ul>
-<li>第一型线积分的计算公式 $r = r(t)\rightarrow \int<em>{(C)}f ds = \int</em>{(C)}f \sqrt{\dot x^2+\dot y^2+\dot z^2}\mathrm d t$</li>
-</ul>
-<h3 id="第一型面积分"><a href="#第一型面积分" class="headerlink" title="第一型面积分"></a>第一型面积分</h3><ul>
-<li><p>曲面的面积</p>
-<ul>
-<li><strong>Thm</strong>：（用 $u,v$ 变量表示曲面）$S = \int\int\limits_{(\sigma)}||\boldsymbol r_u \times \boldsymbol r_v|| \mathrm d u \mathrm d v$</li>
-<li><strong>Thm</strong>：（用 $z = f(x,y)$ 表示曲面）$S = \iint \limits<em>{(\sigma)} ||\boldsymbol r_x \times \boldsymbol r_y || \mathrm dx\mathrm dy = \iint\limits</em>{(S)} \sqrt{1+f_x^2+f_y^2}\mathrm dx \mathrm dy$</li>
-</ul>
-</li>
-<li><p>第一型曲面积分的计算</p>
-<ul>
-<li><strong>Thm</strong>：（用 $u,v$ 变量表示曲面）$I = \iint\limits<em>{(S)} f(x,y,z)\mathrm dS = \iint\limits</em>{(\sigma)}f||\boldsymbol r_u \times \boldsymbol r_v|| \mathrm d u \mathrm d v$</li>
-<li><strong>Thm</strong>：（用 $z = f(x,y)$ 表示曲面）$I = \iint\limits_{(S)} f \sqrt{1+f_x^2+f_y^2}\mathrm dx \mathrm dy$</li>
-</ul>
-</li>
-</ul>
-<h2 id="第二型线积分和面积分"><a href="#第二型线积分和面积分" class="headerlink" title="第二型线积分和面积分"></a>第二型线积分和面积分</h2><h3 id="场的概念"><a href="#场的概念" class="headerlink" title="场的概念"></a>场的概念</h3><ul>
-<li><strong>Def</strong>：数量场、向量场、场函数</li>
-<li>场的几何描述</li>
-</ul>
-<h3 id="第二型线积分"><a href="#第二型线积分" class="headerlink" title="第二型线积分"></a>第二型线积分</h3><ul>
-<li><p><strong>Def</strong>：第二型线积分$\int<em>{(C)} \boldsymbol A(M)\cdot \boldsymbol{\mathrm d s} = \lim\limits</em>{d\rightarrow 0} \sum\limits<em>{k=1}^n \boldsymbol{A}(\overline {M_k})\cdot \overrightarrow{M</em>{k-1}M_k}$</p>
-</li>
-<li><p>第二型线积分的性质</p>
-<ul>
-<li>积分结果与方向有关</li>
-<li>可加性</li>
-</ul>
-</li>
-<li><p>第二型线积分的计算 $\int<em>{(C)}\boldsymbol A(M)\cdot \boldsymbol{\mathrm ds} = \int</em>{(C)}P\mathrm dx +Q\mathrm dy +R\mathrm dz =\int P\dot x+Q\dot y+R\dot z \mathrm dt$</p>
-</li>
-<li><p>两类线积分的联系 $\int_{(C)}\boldsymbol A(M) \cdot \boldsymbol{\mathrm ds} = \int \boldsymbol A(M)\cdot \boldsymbol e_r \mathrm ds$</p>
-</li>
-</ul>
-<h3 id="第二型面积分"><a href="#第二型面积分" class="headerlink" title="第二型面积分"></a>第二型面积分</h3><ul>
-<li><p><strong>Def</strong>：第二型面积分 $\iint\limits<em>{(S)} \boldsymbol A(M)\cdot \boldsymbol {\mathrm dS} = \lim\limits</em>{d\rightarrow 0}\sum\limits_{k=1}^n \boldsymbol A(M_k)\cdot \boldsymbol e_n(M_k) \Delta S_k$</p>
-</li>
-<li><p><strong>Thm</strong>：（用外微分形式表示）$\iint A(M)\cdot \boldsymbol{\mathrm dS} = \iint\limits_{(S)}P\mathrm dy \wedge \mathrm dz +Q\mathrm dz \wedge dx + R\mathrm dx\wedge \mathrm dy$</p>
-</li>
-<li><p>两种面积分的联系 $\iint_{(S)} \boldsymbol A(M)\cdot \mathrm d \boldsymbol S = \iint (P\cos\alpha + Q\cos\beta + R\cos\gamma)\mathrm dS$</p>
-</li>
-<li><p>第二型面积分的计算 $\iint<em>{(S)} R(x,y,z) \mathrm dx\wedge \mathrm dy = \pm \iint\limits</em>{(\sigma_{xy})} R(x,y,z(x,y))\mathrm dx\mathrm dy$ 其余式同理。其中当曲面法向量与 $z+$ 同向时取 $+$ 号，反之取 $-$ 号</p>
-</li>
-</ul>
-<h2 id="各种积分的联系及其在场论中的应用"><a href="#各种积分的联系及其在场论中的应用" class="headerlink" title="各种积分的联系及其在场论中的应用"></a>各种积分的联系及其在场论中的应用</h2><h3 id="Green-公式"><a href="#Green-公式" class="headerlink" title="Green 公式"></a>Green 公式</h3><ul>
-<li><p><strong>Def</strong>：单连通域，复连通域</p>
-</li>
-<li><p><strong>Thm</strong>：Green 公式 $\iint<em>{(\sigma)}(\frac{\delta Q}{\delta x} - \frac{\delta P}{\delta y} \mathrm d \sigma = \oint</em>{(\pm C)} P\mathrm dx + Q\mathrm dy$</p>
-</li>
-<li><p><strong>Inf</strong>：任何一条分段光滑的闭曲线所围成的平面区域的面积为 $A = \frac 1 2 \oint<em>{(+C)} x\mathrm dy - y\mathrm dx= \oint</em>{(+C)} x\mathrm dy = -\oint_{(+C)} y\mathrm dx$</p>
-</li>
-</ul>
-<h3 id="平面线积分与路径无关的条件"><a href="#平面线积分与路径无关的条件" class="headerlink" title="平面线积分与路径无关的条件"></a>平面线积分与路径无关的条件</h3><ul>
-<li><p><strong>Thm</strong>：TFAE</p>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="描述模式"><a href="#描述模式" class="headerlink" title="描述模式"></a>描述模式</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>连接操作</td>
+<td><code>AB &lt;=&gt; &#123;AB&#125;</code></td>
+</tr>
+<tr>
+<td>或操作</td>
+<td>`A</td>
+<td>B &lt;=&gt;{A,B}`</td>
+</tr>
+<tr>
+<td>闭包操作</td>
+<td><code>A* &lt;=&gt; U&#123;A^i&#125; i&gt;=0</code></td>
+</tr>
+<tr>
+<td>空字符串</td>
+<td><code>eps</code></td>
+</tr>
+<tr>
+<td>括号</td>
+<td>提升优先级</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="正则表达式的定义"><a href="#正则表达式的定义" class="headerlink" title="正则表达式的定义"></a>正则表达式的定义</h3><p>一个正则表达式可以是：</p>
 <ol>
-<li>沿区域内任何一条分段光滑的简单闭曲线的线积分 $\oint P\mathrm dx+Q\mathrm dy = 0$</li>
-<li>线积分 $\int P\mathrm dx +Q\mathrm dy$ 的值在区域内与积分路径无关</li>
-<li>被积表达式$P\mathrm dx +Q\mathrm dy$ 是某个二元函数的全微分</li>
+<li>空字符串</li>
+<li>单个字符</li>
+<li>被括号包含的一个正则表达式</li>
+<li>两个正则表达式连接成的表达式</li>
+<li>由或运算分隔的两个表达式</li>
+<li>由闭包运算标记的表达式</li>
 </ol>
-</li>
-<li><p><strong>Def</strong>：（环流量、环量）称眼闭曲线 $C$ 的第二型线积分为向量场 $A$ 沿闭曲线 $C$ 的环量。</p>
-</li>
-<li><p><strong>Def</strong>：（势函数、位函数、有势场）</p>
-</li>
-<li><p>该结论表明，对于一个连续向量场而言，无旋、保守、有势是等价的。</p>
-</li>
-<li><p>势函数的求法</p>
-<ul>
-<li>用线积分求解</li>
-<li>用偏积分求解</li>
-<li>用凑全微分法求解</li>
+<h5 id><a href="#" class="headerlink" title=" "></a> </h5><h3 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>记法</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通配符</td>
+<td><code>.</code></td>
+<td><code>A.B</code></td>
+</tr>
+<tr>
+<td>指定的集合</td>
+<td>包含在<code>[]</code>中的字符</td>
+<td><code>[ABC]*</code></td>
+</tr>
+<tr>
+<td>范围</td>
+<td>包含在<code>[]</code>中，由<code>-</code>分隔</td>
+<td><code>[A-Z0-9]</code></td>
+</tr>
+<tr>
+<td>补集</td>
+<td>包含在<code>[]</code>中的，且以<code>^</code>开头</td>
+<td><code>[^A-Z]</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="闭包的简写"><a href="#闭包的简写" class="headerlink" title="闭包的简写"></a>闭包的简写</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>记法</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>至少一次</td>
+<td><code>+</code></td>
+<td><code>[0-9]+</code>（与下面这个等价）</td>
+</tr>
+<tr>
+<td>至少 0 次</td>
+<td><code>*</code></td>
+<td><code>[0-9][0-9]*</code></td>
+</tr>
+<tr>
+<td>指定次数 <code>n</code></td>
+<td><code>A&#123;n&#125;</code></td>
+<td><code>[0-9]&#123;11&#125;</code></td>
+</tr>
+<tr>
+<td>指定次数范围 <code>a &lt;= n &lt;= b</code></td>
+<td><code>A&#123;a-b&#125;</code></td>
+<td><code>[A-Z]&#123;0-2&#125;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="转义符："><a href="#转义符：" class="headerlink" title="转义符："></a>转义符：</h3><ul>
+<li>任意空白字符：<code>\s</code></li>
+<li>表示闭包的字符：<code>\*</code>，…</li>
+<li>其他常见的字符：<code>\n</code>，<code>\t</code>，…</li>
 </ul>
-</li>
-</ul>
-<h3 id="Gauss-公式和散度"><a href="#Gauss-公式和散度" class="headerlink" title="Gauss 公式和散度"></a>Gauss 公式和散度</h3><ul>
-<li><p>Gauss 公式</p>
-<ul>
-<li><strong>Thm</strong>：（Gauss 公式）$\iiint_{(V)} (\frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R}{\partial z})\mathrm dV = \iint P \mathrm dy\wedge \mathrm dz +Q\mathrm dz\wedge \mathrm dx+R\mathrm dx\wedge \mathrm dy$</li>
-<li><strong>Thm</strong>：（Gauss 公式）$\iiint<em>{(V)}\nabla \cdot \boldsymbol A \mathrm dV = \iint</em>{(S)} \boldsymbol A\cdot \mathrm d \boldsymbol S$</li>
-</ul>
-</li>
-<li><p>通量和通量密度</p>
-<ul>
-<li><strong>Def</strong>：（通量）$\boldsymbol A(M)$ 对曲面 $(S)$ 的第二型面积分 $\iint\limits_{(S)} \boldsymbol A \cdot \mathrm d \boldsymbol S$</li>
-</ul>
-</li>
-<li><p>散度的定义及其计算</p>
-<ul>
-<li><strong>Def</strong>：（散度）$\mathrm{div} \boldsymbol A(M) = \lim\limits_{(\Delta V)\rightarrow M}\frac{1}{\Delta V} \iint \boldsymbol A(M)\cdot \mathrm d\boldsymbol S$</li>
-<li><strong>Thm</strong>：（散度的计算公式）$\mathrm{div} A = \nabla \cdot \boldsymbol A = \frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R} {\partial z}$</li>
-<li><strong>Inf</strong>：（用散度表示 Gauss 公式）$\iiint\limits_{(V)} \mathrm{div} \mathrm A \mathrm d V = \iint\boldsymbol A\cdot \mathrm d \boldsymbol S$</li>
-</ul>
-</li>
-<li><p>散度的运算法则和公式</p>
-<ul>
-<li>$\mathrm{div}(C\boldsymbol A) = C\mathrm{div} \boldsymbol A$</li>
-<li>$\mathrm{div}(\boldsymbol A\pm\boldsymbol B) = \mathrm{div}(\boldsymbol A) \pm \mathrm{div}(\boldsymbol B)$</li>
-<li>$\mathrm{div}(u\boldsymbol A) = u\mathrm{div} \boldsymbol A + \nabla u \cdot \boldsymbol A$</li>
-</ul>
-</li>
-</ul>
-<h3 id="Stokes-公式和旋度"><a href="#Stokes-公式和旋度" class="headerlink" title="Stokes 公式和旋度"></a>Stokes 公式和旋度</h3><ul>
-<li><p>Stokes 公式</p>
-<ul>
-<li><strong>Thm</strong>：（Stokes 公式）$\oint<em>{(C)} P\mathrm dx + Q\mathrm dy +R\mathrm dz = \iint\limits</em>{(S)}(\frac{\partial R}{\partial y} -\frac{\partial Q}{\partial z})\mathrm dy\wedge \mathrm dz +(\frac{\partial p}{\partial z}-\frac{\partial R}{\partial x}) \mathrm dz\wedge \mathrm dx + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\mathrm dx\wedge \mathrm dy$</li>
-<li><strong>Inf</strong>：（利用 nabla 算子表示的 Stokes 公式）$\oint<em>{(C)} \boldsymbol A\cdot \mathrm d \boldsymbol s = \iint</em>{(S)} (\nabla \times  \boldsymbol A)\cdot \mathrm d \boldsymbol S = \iint_{(S)} (\nabla \times  \boldsymbol A)\cdot \boldsymbol e_n \mathrm dS$</li>
-</ul>
-</li>
-<li><p>环量和环量密度</p>
-<ul>
-<li>环量密度 $\lim\limits<em>{(\Delta )\rightarrow M } \frac {1} {\Delta S}\oint</em>{(\Delta C)}\boldsymbol A\cdot \mathrm d \boldsymbol s$</li>
-</ul>
-</li>
-<li><p>旋度的定义及其计算公式</p>
-<ul>
-<li><strong>Def</strong>：（旋度）$\mathrm{rot} \boldsymbol A$ 用行列式表示</li>
-<li><strong>Thm</strong>：（旋度的计算公式）$\oint<em>{(C)}\boldsymbol A\cdot \mathrm d \boldsymbol s=\iint\limits</em>{(S)} \mathrm{rot}\boldsymbol A \cdot \mathrm d \boldsymbol S$</li>
-</ul>
-</li>
-<li><p>旋度的运算法则</p>
-<ul>
-<li>$\mathrm{rot} (C\boldsymbol A) = C\mathrm{rot} \boldsymbol A$</li>
-<li>$\mathrm{rot} (\boldsymbol A\pm \boldsymbol B) =\mathrm{rot}\boldsymbol A\pm \mathrm{rot} \boldsymbol B $</li>
-<li>$\mathrm {rot}(u\boldsymbol A) = u\mathrm{rot} \boldsymbol A +(\nabla u)\times \boldsymbol A$</li>
-</ul>
-</li>
-</ul>
-<h3 id="场的其他计算公式"><a href="#场的其他计算公式" class="headerlink" title="场的其他计算公式"></a>场的其他计算公式</h3><ul>
-<li><p>$\mathrm{div}(\boldsymbol A\times \boldsymbol B) =\boldsymbol B\cdot \mathrm{rot}\boldsymbol A$</p>
-</li>
-<li><p>$\mathrm{div}(\mathrm{rot} \boldsymbol A) = 0$</p>
-</li>
-<li><p>$\mathrm{rot} (\nabla u) = 0$</p>
-</li>
-<li><p>$\mathrm{div}(\nabla u)=\Delta u$ 其中 $\Delta=\frac{\partial}{\partial x^2} +\frac{\partial}{\partial y^2} +\frac{\partial}{\partial z^2} $</p>
-</li>
-<li><p>$\mathrm{rot}(\mathrm{rot} \boldsymbol A) =\mathbf{grad}(\mathrm{div} A)-\Delta \boldsymbol A$</p>
-</li>
-</ul>
-<h3 id="几种重要的特殊向量场"><a href="#几种重要的特殊向量场" class="headerlink" title="几种重要的特殊向量场"></a>几种重要的特殊向量场</h3><ul>
-<li><p><strong>Def</strong>：一维单连域、二维单连域</p>
-</li>
-<li><p>无旋场</p>
-<ul>
-<li><strong>Def</strong>：（保守场）积分与路径无关</li>
-<li><strong>Def</strong>：（无旋场）$\nabla \times \boldsymbol A = \boldsymbol 0$</li>
-<li><strong>Def</strong>：（有势场，势函数）$\boldsymbol A = \nabla u$</li>
-<li><strong>Thm</strong>：在一维单连域上，$A = (P,Q,R) \in C^{(1)}$，TFAE<ul>
-<li>无旋场</li>
-<li>闭曲线上的环量恒为 0</li>
-<li>保守场</li>
-<li>有势场</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>无源场</p>
-<ul>
-<li><strong>Def</strong>：（无源场）$\nabla \cdot \boldsymbol A = 0$</li>
-<li><strong>Def</strong>：向量管</li>
-<li><strong>Thm</strong>：在二维单连域上，$A\in C^{(1)}$，TFAE<ul>
-<li>无源场</li>
-<li>$A$ 沿任何一个不子交的闭曲面的通量为零</li>
-<li>存在一个向量函数 $\boldsymbol B$ 使得 $\boldsymbol A = \nabla \times \boldsymbol B$</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>调和场</p>
-<ul>
-<li><strong>Def</strong>：（调和场）既无源、也无旋的场</li>
-<li>满足 Laplace 方程</li>
-<li>满足 Posisson 方程</li>
-</ul>
-</li>
-</ul>
-<!--TODO: 添加外微分形式！！！ -->
-<h2 id="补录"><a href="#补录" class="headerlink" title="补录"></a>补录</h2><h3 id="重积分"><a href="#重积分" class="headerlink" title="重积分"></a>重积分</h3><ul>
-<li><p><strong>Def</strong>：（大和，小和）$M<em>i = \sup\limits</em>{x\in\Omega<em>i}{f(\boldsymbol{x})},\quad m_i =\inf\limits</em>{x\in\Omega_i }{f(\boldsymbol{ x})}$<br>$S^+= \sum M_iV_i,S^-=\sum m_iV_i$</p>
-</li>
-<li><p><strong>Thm</strong>：TFAE</p>
-<ul>
-<li>可积</li>
-<li>大和与小和差的极限为 0 （ $||\Delta||\rightarrow 0$ ）</li>
-<li>振幅充分小</li>
-<li>（积分）大和 = （积分）小和</li>
-</ul>
-</li>
-</ul>
-<h3 id="重积分变换"><a href="#重积分变换" class="headerlink" title="重积分变换"></a>重积分变换</h3><ul>
-<li><p><strong>Def</strong>：（正则变换）如果一个变换满足</p>
-<ol>
-<li>$T\in C^{(1)}(G)$</li>
-<li>单射</li>
-<li>$\det DT(\boldsymbol u)\neq 0$ 对任一 $\boldsymbol u$成立</li>
-</ol>
-</li>
-<li><p><strong>Def</strong>：（重积分的变换公式）若 $G,T$ 满足以下条件之一：</p>
-<ol>
-<li>$G$ 是 $R^m$ 中的开集，$T$ 是正则变换， $\Omega$ 是 $G$ 内的闭可测图形，$f\in C(T(\Omega))$</li>
-<li>$G$ 同上，$T\in C^1(G)$，$\Omega \in G$ 是闭可测区域，$T$ 是 $\Omega$ 上的正则变换，$f\in C(T(\Omega))$</li>
-</ol>
-<p>则：$\int<em>{T(\varOmega)}f\mathrm dV = \int</em>\varOmega f\circ T|\det DT|\mathrm dV$</p>
-</li>
-</ul>
-<h3 id="外微分形式"><a href="#外微分形式" class="headerlink" title="外微分形式"></a>外微分形式</h3><h3 id="场论总结"><a href="#场论总结" class="headerlink" title="场论总结"></a>场论总结</h3><ul>
-<li><p><strong>Def</strong>：（梯度） $\mathrm{grad} u = \nabla u$，其中 $\nabla$ 算子为 $(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z})$</p>
-</li>
-<li><p><strong>Def</strong>：向量线</p>
-</li>
-<li><p><strong>Def</strong>：（通量、散度）给定向量场 $F$ 和双侧曲面 $S$</p>
-<ul>
-<li>通量：$\iint_S \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}$</li>
-<li>散度：$\mathrm{div} \boldsymbol{F} = \lim\limits_{S\rightarrow M}\frac{\iint_S \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}}{V} = \nabla \cdot \boldsymbol{F}$</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>：（环量、旋度）给定向量场和定向曲线</p>
-<ul>
-<li>环量：$\oint \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}$</li>
-<li>方向旋量：$h_n = \mathrm{rot} \boldsymbol{F}\cdot \boldsymbol{n}$</li>
-<li>旋度：$(\frac{\partial R}{\partial y} -\frac{\partial Q}{\partial z})\boldsymbol{i} +(\frac{\partial p}{\partial z}-\frac{\partial R}{\partial x}) \boldsymbol{j} + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\boldsymbol k$</li>
-</ul>
-</li>
-</ul>
+<p><img src="/2020/07/01/study/ComputerScience/RegExp/image-20200622153014750.png" alt="image-20200622153014750"></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
-        <category>高等数学</category>
+        <category>程序设计</category>
       </categories>
       <tags>
-        <tag>高等数学</tag>
-        <tag>向量空间</tag>
-        <tag>多元函数</tag>
+        <tag>编程</tag>
       </tags>
   </entry>
   <entry>
@@ -1833,133 +1951,6 @@ T'\\N'\\B'
       </tags>
   </entry>
   <entry>
-    <title>正则表达式文法</title>
-    <url>/2020/07/01/study/ComputerScience/RegExp/</url>
-    <content><![CDATA[<p>正则表达式规则</p>
-<a id="more"></a>
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="描述模式"><a href="#描述模式" class="headerlink" title="描述模式"></a>描述模式</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>连接操作</td>
-<td><code>AB &lt;=&gt; &#123;AB&#125;</code></td>
-</tr>
-<tr>
-<td>或操作</td>
-<td>`A</td>
-<td>B &lt;=&gt;{A,B}`</td>
-</tr>
-<tr>
-<td>闭包操作</td>
-<td><code>A* &lt;=&gt; U&#123;A^i&#125; i&gt;=0</code></td>
-</tr>
-<tr>
-<td>空字符串</td>
-<td><code>eps</code></td>
-</tr>
-<tr>
-<td>括号</td>
-<td>提升优先级</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="正则表达式的定义"><a href="#正则表达式的定义" class="headerlink" title="正则表达式的定义"></a>正则表达式的定义</h3><p>一个正则表达式可以是：</p>
-<ol>
-<li>空字符串</li>
-<li>单个字符</li>
-<li>被括号包含的一个正则表达式</li>
-<li>两个正则表达式连接成的表达式</li>
-<li>由或运算分隔的两个表达式</li>
-<li>由闭包运算标记的表达式</li>
-</ol>
-<h5 id><a href="#" class="headerlink" title=" "></a> </h5><h3 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>记法</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>通配符</td>
-<td><code>.</code></td>
-<td><code>A.B</code></td>
-</tr>
-<tr>
-<td>指定的集合</td>
-<td>包含在<code>[]</code>中的字符</td>
-<td><code>[ABC]*</code></td>
-</tr>
-<tr>
-<td>范围</td>
-<td>包含在<code>[]</code>中，由<code>-</code>分隔</td>
-<td><code>[A-Z0-9]</code></td>
-</tr>
-<tr>
-<td>补集</td>
-<td>包含在<code>[]</code>中的，且以<code>^</code>开头</td>
-<td><code>[^A-Z]</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="闭包的简写"><a href="#闭包的简写" class="headerlink" title="闭包的简写"></a>闭包的简写</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>记法</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>至少一次</td>
-<td><code>+</code></td>
-<td><code>[0-9]+</code>（与下面这个等价）</td>
-</tr>
-<tr>
-<td>至少 0 次</td>
-<td><code>*</code></td>
-<td><code>[0-9][0-9]*</code></td>
-</tr>
-<tr>
-<td>指定次数 <code>n</code></td>
-<td><code>A&#123;n&#125;</code></td>
-<td><code>[0-9]&#123;11&#125;</code></td>
-</tr>
-<tr>
-<td>指定次数范围 <code>a &lt;= n &lt;= b</code></td>
-<td><code>A&#123;a-b&#125;</code></td>
-<td><code>[A-Z]&#123;0-2&#125;</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="转义符："><a href="#转义符：" class="headerlink" title="转义符："></a>转义符：</h3><ul>
-<li>任意空白字符：<code>\s</code></li>
-<li>表示闭包的字符：<code>\*</code>，…</li>
-<li>其他常见的字符：<code>\n</code>，<code>\t</code>，…</li>
-</ul>
-<p><img src="/2020/07/01/study/ComputerScience/RegExp/image-20200622153014750.png" alt="image-20200622153014750"></p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>物理学绪论</title>
     <url>/2020/06/08/study/Physics/Ch0Pre/</url>
     <content><![CDATA[<p>基础物理学 绪论</p>
@@ -2042,27 +2033,27 @@ T'\\N'\\B'
 <h4 id="速度（Velocity）——反映质点运动的快慢和方向"><a href="#速度（Velocity）——反映质点运动的快慢和方向" class="headerlink" title="速度（Velocity）——反映质点运动的快慢和方向"></a>速度（Velocity）——反映质点运动的快慢和方向</h4><p><strong>平均速度</strong>（单位时间内质点的位移）：$\bar{v}=\frac{\Delta \pmb{r}}{\Delta t}.$</p>
 <p><strong>瞬时速度</strong>（质点某时刻的速度）：$v=\lim \limits_{\Delta t \to 0}\frac{\Delta \pmb{r}}{\Delta t}$</p>
 <blockquote>
-<p>直角坐标系中 $\vec{v}=v<em>{x} \vec{i}+v</em>{y} \vec{j}+v_{z} \vec{k}$</p>
-<p>大小：$v=|\vec{v}|=\sqrt{v<em>{x}^{2}+v</em>{y}^{2}+v_{z}^{2}}$</p>
+<p>直角坐标系中 $\vec{v}=v_{x} \vec{i}+v_{y} \vec{j}+v_{z} \vec{k}$</p>
+<p>大小：$v=|\vec{v}|=\sqrt{v_{x}^{2}+v_{y}^{2}+v_{z}^{2}}$</p>
 <p>方向：为轨道上质点所在处切线方向并指向前进的一侧</p>
 </blockquote>
 <p><strong>速率</strong>：</p>
 <ul>
 <li><p>平均速率：$\bar{v}=\frac{\Delta s}{\Delta t}$</p>
 </li>
-<li><p>瞬时速率：$v=|v|=\lim\limits<em>{\Delta t \to 0} \frac{|\Delta \pmb{r}|}{\Delta t}=\lim\limits</em>{\Delta t \to 0} \frac {\Delta s}{\Delta t}=\frac{ds}{dt}$</p>
+<li><p>瞬时速率：$v=|v|=\lim\limits_{\Delta t \to 0} \frac{|\Delta \pmb{r}|}{\Delta t}=\lim\limits_{\Delta t \to 0} \frac {\Delta s}{\Delta t}=\frac{ds}{dt}$</p>
 <p>注意：一般情况下：$|\Delta \pmb{r}| \neq \Delta s \quad |\pmb{v}| \neq  \bar{v}$</p>
 <p>​ 当$\Delta t \to 0$ 时：$|\Delta \vec{r}| \rightarrow|\mathrm{d} \vec{r}|=\mathrm{d} s \quad|\vec{v}|=v$</p>
 </li>
 </ul>
 <h4 id="加速度（Acceleration）——反映瞬时速度的变化"><a href="#加速度（Acceleration）——反映瞬时速度的变化" class="headerlink" title="加速度（Acceleration）——反映瞬时速度的变化"></a>加速度（Acceleration）——反映瞬时速度的变化</h4><p>平均加速度：$\bar{a}=\frac{\pmb{v}_2-\pmb{v}_1}{\Delta t}=\frac{\Delta \pmb{v}}{\Delta t}$</p>
-<p>瞬时加速度：$a=\lim\limits<em>{\Delta t \to 0}\frac{v_b-v_a}{\Delta t}=\lim\limits</em> {\Delta t \to 0} \frac{\Delta \pmb{v}}{\Delta t}=\frac{d^2 r}{dt^2}$</p>
+<p>瞬时加速度：$a=\lim\limits_{\Delta t \to 0}\frac{v_b-v_a}{\Delta t}=\lim\limits_ {\Delta t \to 0} \frac{\Delta \pmb{v}}{\Delta t}=\frac{d^2 r}{dt^2}$</p>
 <ul>
 <li><p>加速度的方向：速度增量的方向</p>
 </li>
-<li><p>加速度的大小：$|\pmb{a}|=\sqrt{a<em>{x}^{2}+a</em>{y}^{2}+a_{z}^{2}}$</p>
+<li><p>加速度的大小：$|\pmb{a}|=\sqrt{a_{x}^{2}+a_{y}^{2}+a_{z}^{2}}$</p>
 </li>
-<li><p>直角坐标系中：$\pmb{a}=a<em>{x} \pmb{i}+a</em>{y} \pmb{j}+a_{z} \pmb{k}$</p>
+<li><p>直角坐标系中：$\pmb{a}=a_{x} \pmb{i}+a_{y} \pmb{j}+a_{z} \pmb{k}$</p>
 </li>
 </ul>
 <p><strong>注意</strong>：一般而言，加速度与同一时刻速度的方向之间并没有一定的关联。</p>
@@ -2114,7 +2105,7 @@ x_{max}=\frac{v_0^2\sin2\theta_0}{g}</script><h4 id="平面极坐标系、横向
 <script type="math/tex; mode=display">
 \bar{e}_{\theta}\quad \frac{\mathrm{d} \pmb{e}_{\theta}}{\mathrm{d} t}=-\frac{\mathrm{d} \theta}{\mathrm{d} t} \pmb{e}_{r} \\
 \pmb{v} =\dot{r} \pmb{e}_{r}+r \dot{\theta} \pmb{e}_{\theta}\\
-\pmb{a}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \pmb{e}_{r}+(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \pmb{e}_{\theta}</script><p>在平面极坐标系中，两个互相垂直的单位矢量$e<em>r$和$e</em>\theta$，分别沿着 $r$ 和 $\theta $ 增加的方向，它们都不是常矢量。</p>
+\pmb{a}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \pmb{e}_{r}+(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \pmb{e}_{\theta}</script><p>在平面极坐标系中，两个互相垂直的单位矢量$e_r$和$e_\theta$，分别沿着 $r$ 和 $\theta $ 增加的方向，它们都不是常矢量。</p>
 <script type="math/tex; mode=display">
 A(r, \theta) \quad \vec{r}= r \vec{e}_{r}
 \\
@@ -2124,7 +2115,7 @@ A(r, \theta) \quad \vec{r}= r \vec{e}_{r}
 <p>（a）图解法</p>
 <p><img src="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01a_6b.png" alt="01a_6b"></p>
 <p><strong>位矢</strong>：$\pmb{r}=r\pmb{e}_r$</p>
-<p><strong>位移</strong>：$\Delta \boldsymbol{r}=\Delta \boldsymbol{r}<em>{1}+\Delta \boldsymbol{r}</em>{2}$</p>
+<p><strong>位移</strong>：$\Delta \boldsymbol{r}=\Delta \boldsymbol{r}_{1}+\Delta \boldsymbol{r}_{2}$</p>
 <p><strong>横向位移</strong>：$\Delta \boldsymbol{r}_{1}=\overline{AC}$</p>
 <p><strong>径向位移</strong>:$\Delta r_{2}=\overline{C B}$</p>
 <p>当$\Delta t$很小时，由</p>
@@ -2139,11 +2130,11 @@ A(r, \theta) \quad \vec{r}= r \vec{e}_{r}
 \Delta \boldsymbol{r}_{2} & \approx \Delta r \boldsymbol{e}_{r} \\
 \boldsymbol{v}&=\lim _{\Delta t \rightarrow 0} \frac{\Delta \boldsymbol{r}}{\Delta t}=\lim_{\Delta t \rightarrow 0} \frac{r \Delta \theta \boldsymbol{e}_{\theta}}{\Delta t}+\lim_{\Delta t \rightarrow 0} \frac{\Delta r \boldsymbol{e}_{r}}{\Delta t} \\
 &=r \dot{\theta} \boldsymbol{e}_{\theta}+\dot{r} \boldsymbol{e}_{r}=v_{\theta} \boldsymbol{e}_{\theta}+v_{r} \boldsymbol{e}_{r}
-\end{aligned}</script><p><strong>横向速度</strong>：$v<em>{\theta} e</em>{\theta}=r \dot{\theta} e_{\theta}$</p>
-<p><strong>径向速度</strong>：$v<em>{r} \boldsymbol{e}</em>{r}=\dot{r} \boldsymbol{e}_{r}$</p>
+\end{aligned}</script><p><strong>横向速度</strong>：$v_{\theta} e_{\theta}=r \dot{\theta} e_{\theta}$</p>
+<p><strong>径向速度</strong>：$v_{r} \boldsymbol{e}_{r}=\dot{r} \boldsymbol{e}_{r}$</p>
 <p>​ 其中：$\dot{\theta}=\mathrm{d} \theta / \mathrm{d} t, \quad \dot{r}=\mathrm{d} r / \mathrm{d} t$</p>
 <p>（b）矢量微分法</p>
-<p>根据$\pmb{e}<em>r$和$\pmb{e}</em>{\theta}$与$\pmb{i}$和$\pmb{j}$之间的关系式：$\pmb{e}<em>{r}=\pmb{i} \cos \theta+\pmb{j} \sin \theta \quad \pmb{e}</em>{\theta}=-\pmb{i} \sin \theta+\pmb{j} \cos \theta$</p>
+<p>根据$\pmb{e}_r$和$\pmb{e}_{\theta}$与$\pmb{i}$和$\pmb{j}$之间的关系式：$\pmb{e}_{r}=\pmb{i} \cos \theta+\pmb{j} \sin \theta \quad \pmb{e}_{\theta}=-\pmb{i} \sin \theta+\pmb{j} \cos \theta$</p>
 <p>按照矢量求导规则，可得：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
@@ -2154,19 +2145,19 @@ A(r, \theta) \quad \vec{r}= r \vec{e}_{r}
 \boldsymbol{a} &=\frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t}=\frac{\mathrm{d}\left(\dot{\boldsymbol{r}} \boldsymbol{e}_{r}\right)}{\mathrm{d} t}+\frac{\mathrm{d}\left(r \dot{\theta} \boldsymbol{e}_{\theta}\right)}{\mathrm{d} t} \\
 &=\dot{r}^{*} \boldsymbol{e}_{r}+\dot{r} \dot{\theta} \boldsymbol{e}_{\theta}+\dot{r} \dot{\theta} \boldsymbol{e}_{\theta}+r \ddot{\theta} \boldsymbol{e}_{\theta}-r \dot{\theta}^{2} \boldsymbol{e}_{r} \\
 &=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}+(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}
-\end{aligned}</script><p><strong>径向加速度</strong>：$a<em>{r} \boldsymbol{e}</em>{r}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}$</p>
-<p><strong>横向加速度</strong>：$a<em>{\theta} \boldsymbol{e}</em>{\theta}=(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}$</p>
+\end{aligned}</script><p><strong>径向加速度</strong>：$a_{r} \boldsymbol{e}_{r}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}$</p>
+<p><strong>横向加速度</strong>：$a_{\theta} \boldsymbol{e}_{\theta}=(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}$</p>
 <h4 id="自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）-S-S-t"><a href="#自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）-S-S-t" class="headerlink" title="自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）$S=S(t)$"></a>自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）$S=S(t)$</h4><p><strong>自然坐标系</strong>：选定轨迹上任一点$O$为原点，用轨迹的长度$s$描写质点位置，并规定两个正交单位矢量——<strong>切向</strong>单位矢量$\pmb{e}_t$和<strong>法向</strong>单位矢量$\pmb{e}_n$.</p>
 <p><strong>曲率圆</strong>：通过曲线上的一点$A$及其两个邻近的点作一个圆，在这三个点无限趋近的极限情况下，这个圆称为$A$点的曲率圆，其半径称为曲率半径$\rho$。</p>
 <p><img src="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01b_7.png" alt="曲率"></p>
 <p><strong>速度</strong>：$\boldsymbol{v}=\boldsymbol{v} \boldsymbol{e}_{t}=\frac{\mathrm{d}s}{\mathrm{d}t}\pmb{e}_t$（只有切向）</p>
 <p><strong>速率</strong>：$v=\frac{\mathrm{d} s}{\mathrm{d} t}$</p>
-<p><strong>加速度</strong>：$\vec{a}=\dot{v} \vec{e}<em>{t}+\frac{v^{2}}{\rho} \vec{e}</em>{n}$</p>
+<p><strong>加速度</strong>：$\vec{a}=\dot{v} \vec{e}_{t}+\frac{v^{2}}{\rho} \vec{e}_{n}$</p>
 <ul>
 <li>切向加速度：$a_t=\frac{\mathrm{d}v}{\mathrm{d}t}$</li>
 <li>法向加速度：$a_n=\frac{v^2}{\rho}$</li>
 </ul>
-<p>当$\Delta t$很小时，$\Delta \pmb {e}<em>{t} \approx \pmb{e}</em>{n} \Delta \varphi$，利用</p>
+<p>当$\Delta t$很小时，$\Delta \pmb {e}_{t} \approx \pmb{e}_{n} \Delta \varphi$，利用</p>
 <script type="math/tex; mode=display">
 \begin{cases}
 &\frac{1}{\rho}=\lim _{\Delta s \rightarrow 0} \frac{\Delta \varphi}{\Delta s}=\frac{\mathrm{d} \varphi}{\mathrm{d} s}\\
@@ -2197,7 +2188,7 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <p><strong>经典力学时空观：</strong></p>
 <p>在两个作相对运动的参考系中，时间的测量是绝对的，空间的测量也是绝对的，与参考系无关。时间和长度的的绝对性是经典力学或牛顿力学的基础。</p>
 <h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><div class="note note-primary">
-            <p><strong>坐标系变换</strong></p><p>一般是飞机在空中飞行的风速和飞机速度，或者水中的行船问题等类似的问题</p><blockquote><p>画个图就 vans</p></blockquote><p>当然坐标系变换也可以是证明题，例如：</p><blockquote><p>证明：把两个物体以不同的速度抛出，则二者的相对速度是常矢量</p></blockquote><p><strong>坐标系的互化</strong></p><p>常用的坐标系有：</p><ul><li>直角坐标系</li></ul><blockquote><p>在一个倾角为$\alpha$的山坡上开炮，相同的速度大小情况下，当发射角为多少时最远。（真的就高中题目呗）</p></blockquote><ul><li>极坐标系</li></ul><blockquote><p>一根细棒在水平面内以恒定角速度 $\omega$ 旋转，有一只昆虫从圆心出发，以恒定速率 $u$ 向外爬，求爬行速度和加速度。</p><p><strong>径向加速度</strong>：$a<em>{r} \boldsymbol{e}</em>{r}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}$</p><p><strong>横向加速度</strong>：$a<em>{\theta} \boldsymbol{e}</em>{\theta}=(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}$</p><p><strong>速度</strong>：$v=r \dot{\theta} \boldsymbol{e}<em>{\theta}+\dot{r} \boldsymbol{e}</em>{r}$</p><p><em>实际上只需要记住：</em>$\dot e<em>\theta =-\dot \theta e_r,\dot e_r = \dot\theta e</em>\theta$</p></blockquote>
+            <p><strong>坐标系变换</strong></p><p>一般是飞机在空中飞行的风速和飞机速度，或者水中的行船问题等类似的问题</p><blockquote><p>画个图就 vans</p></blockquote><p>当然坐标系变换也可以是证明题，例如：</p><blockquote><p>证明：把两个物体以不同的速度抛出，则二者的相对速度是常矢量</p></blockquote><p><strong>坐标系的互化</strong></p><p>常用的坐标系有：</p><ul><li>直角坐标系</li></ul><blockquote><p>在一个倾角为$\alpha$的山坡上开炮，相同的速度大小情况下，当发射角为多少时最远。（真的就高中题目呗）</p></blockquote><ul><li>极坐标系</li></ul><blockquote><p>一根细棒在水平面内以恒定角速度 $\omega$ 旋转，有一只昆虫从圆心出发，以恒定速率 $u$ 向外爬，求爬行速度和加速度。</p><p><strong>径向加速度</strong>：$a_{r} \boldsymbol{e}_{r}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}$</p><p><strong>横向加速度</strong>：$a_{\theta} \boldsymbol{e}_{\theta}=(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}$</p><p><strong>速度</strong>：$v=r \dot{\theta} \boldsymbol{e}_{\theta}+\dot{r} \boldsymbol{e}_{r}$</p><p>_实际上只需要记住：_$\dot e_\theta =-\dot \theta e_r,\dot e_r = \dot\theta e_\theta$</p></blockquote>
           </div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
@@ -2283,10 +2274,10 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <li>随遇平衡</li>
 </ul>
 <p>条件：$\nabla E_p=0$</p>
-<h3 id="功能原理-机械能守恒定律"><a href="#功能原理-机械能守恒定律" class="headerlink" title="功能原理 机械能守恒定律"></a>功能原理 机械能守恒定律</h3><h4 id="质点系的动能定理"><a href="#质点系的动能定理" class="headerlink" title="质点系的动能定理"></a>质点系的动能定理</h4><p>$\sum W<em>i =W</em>{ext}+W_{int}$</p>
-<p>$\Rightarrow W<em>{ext}+W{int}=\sum E</em>{ki}+ \sum E_{ki0}$</p>
-<h4 id="质点系的功能原理"><a href="#质点系的功能原理" class="headerlink" title="质点系的功能原理"></a>质点系的功能原理</h4><p>质点系在运动过程中，所有外力的功和系统内非保守内力的功的总和等于系统机械能够的增量。$W<em>{ext}+W</em>{int(非保守力)}=E-E_0$</p>
-<h4 id="机械能守恒定律"><a href="#机械能守恒定律" class="headerlink" title="机械能守恒定律"></a>机械能守恒定律</h4><p>当$W<em>{ext}+W</em>{int(非保守力)}=0$时：$E=E_0$</p>
+<h3 id="功能原理-机械能守恒定律"><a href="#功能原理-机械能守恒定律" class="headerlink" title="功能原理 机械能守恒定律"></a>功能原理 机械能守恒定律</h3><h4 id="质点系的动能定理"><a href="#质点系的动能定理" class="headerlink" title="质点系的动能定理"></a>质点系的动能定理</h4><p>$\sum W_i =W_{ext}+W_{int}$</p>
+<p>$\Rightarrow W_{ext}+W{int}=\sum E_{ki}+ \sum E_{ki0}$</p>
+<h4 id="质点系的功能原理"><a href="#质点系的功能原理" class="headerlink" title="质点系的功能原理"></a>质点系的功能原理</h4><p>质点系在运动过程中，所有外力的功和系统内非保守内力的功的总和等于系统机械能够的增量。$W_{ext}+W_{int(非保守力)}=E-E_0$</p>
+<h4 id="机械能守恒定律"><a href="#机械能守恒定律" class="headerlink" title="机械能守恒定律"></a>机械能守恒定律</h4><p>当$W_{ext}+W_{int(非保守力)}=0$时：$E=E_0$</p>
 <p>当作用于质点系的外力和非保守内力都不做功或所做功的代数和等于零时，系统的总机械能保持不变。</p>
 <ul>
 <li>功总是和能量的变化与转换过程相联系，功是能量变化和转换的一种量度，而能量是代表物体系统在一定条件下所具有的作功本领。</li>
@@ -2301,7 +2292,7 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 </ul>
 <p><strong>克尼希定理</strong>：</p>
 <ul>
-<li>质点系相对基本参考系的动能（<em>绝对动能</em>） 等于质点系在质心参考系中的动能（<em>相对动能</em>）加上<em>质心动能</em></li>
+<li>质点系相对基本参考系的动能（_绝对动能_） 等于质点系在质心参考系中的动能（_相对动能_）加上<em>质心动能</em></li>
 <li>$E_k = \frac{1}{2} mv_c^2 + E_k’= \frac{1}{2} mv_c^2 + \sum \frac{1}{2} m_i v_i ^2$</li>
 </ul>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
@@ -2324,7 +2315,7 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
           </div>
 <h2 id="力矩-、角动量定理"><a href="#力矩-、角动量定理" class="headerlink" title="力矩 、角动量定理"></a>力矩 、角动量定理</h2><h4 id="力矩、质点的角动量定理"><a href="#力矩、质点的角动量定理" class="headerlink" title="力矩、质点的角动量定理"></a>力矩、质点的角动量定理</h4><ul>
 <li>$L = r\times p\Rightarrow$ (对t微分) $\displaystyle\frac{\mathrm d L}{\mathrm d t} = r\times F$ 定义为$M$（力矩）</li>
-<li>反之，对上式积分，$\int \vec M \mathrm d t = \vec L <em> 2 - \vec L </em> 1$（角冲量）（或者写成 $\mathrm d \vec L = \vec M \mathrm d t$ ）地方</li>
+<li>反之，对上式积分，$\int \vec M \mathrm d t = \vec L _ 2 - \vec L _ 1$（角冲量）（或者写成 $\mathrm d \vec L = \vec M \mathrm d t$ ）地方</li>
 </ul>
 <p><strong><span class="label label-info">「角动量定理」</span></strong>：质点对任一固定点的角动量的时间变化率，等于外力对该点的力矩。</p>
 <h4 id="质点系的角动量定理"><a href="#质点系的角动量定理" class="headerlink" title="质点系的角动量定理"></a>质点系的角动量定理</h4><blockquote>
@@ -2467,13 +2458,13 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <p>力矩对定轴转动刚体做功：$W = \int _{\theta_1}^{\theta_2}M_z \mathrm{d} \theta$</p>
 <p>力矩的功率：$P= \frac{\mathrm{d} W}{\mathrm{ d} t}=M_z \omega$</p>
 <p><strong><span class="label label-info">「刚体定轴转动的动能」</span></strong>：$E_k = \frac 1 2 I\omega^2$</p>
-<p><strong><span class="label label-info">「刚体绕定轴转动的动能定理」</span></strong>：$W = \int<em>{\theta_1}^{\theta_2} I \omega \mathrm{d} \omega = E</em>{k2} - E_{k1 = }=\frac 1 2 I\omega_2^2-\frac 1 2 I\omega_1^2$</p>
+<p><strong><span class="label label-info">「刚体绕定轴转动的动能定理」</span></strong>：$W = \int_{\theta_1}^{\theta_2} I \omega \mathrm{d} \omega = E_{k2} - E_{k1 = }=\frac 1 2 I\omega_2^2-\frac 1 2 I\omega_1^2$</p>
 <h3 id="刚体的定点转动（进动）（Precession）"><a href="#刚体的定点转动（进动）（Precession）" class="headerlink" title="刚体的定点转动（进动）（Precession）"></a>刚体的定点转动（进动）（Precession）</h3><p>陀螺的进动角速度：$\omega_\mathrm p = \frac {\mathrm d \phi}{\mathrm d t} = \frac{|\mathrm d L|}{\mathrm d t\cdot L\sin \theta} = \frac{mgr_c}{I\omega}$<br><div class="note note-warning">
             <p>注意角加速度的方向。</p><p>注意理解场平架陀螺仪工作原理。</p>
           </div></p>
 <h3 id="刚体动力学：总结"><a href="#刚体动力学：总结" class="headerlink" title="刚体动力学：总结"></a>刚体动力学：总结</h3><p>质心运动定理：$\vec{F}= m\vec{a_c}$</p>
 <p>转动定律：$M_c = I_c \alpha ,\quad v_c = R \omega$</p>
-<p>平面平行运动能量：（科尼希定理）$E<em>k = E</em>{kc} +E_k’ = \frac{1}{2} mv_c^2 + \frac{1}{2}I_c \omega^2$</p>
+<p>平面平行运动能量：（科尼希定理）$E_k = E_{kc} +E_k’ = \frac{1}{2} mv_c^2 + \frac{1}{2}I_c \omega^2$</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>基础物理学</category>
@@ -2501,8 +2492,8 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <h4 id="简谐振动的合成"><a href="#简谐振动的合成" class="headerlink" title="简谐振动的合成"></a>简谐振动的合成</h4><ul>
 <li>同方向、同频率的两个简谐振动的合成<ul>
 <li>矢量图解法<ul>
-<li>$\tan \varphi<em>0 = \frac{A_1\sin\varphi</em>{10}+A<em>2\sin\varphi</em>{20}}{A<em>1\cos\varphi</em>{10}+A<em>2\cos\varphi</em>{20}}$</li>
-<li>$A=\sqrt{A<em>1^2+A_2^2+2A_1A_2\cos (\varphi</em>{20}-\varphi_{10})}$</li>
+<li>$\tan \varphi_0 = \frac{A_1\sin\varphi_{10}+A_2\sin\varphi_{20}}{A_1\cos\varphi_{10}+A_2\cos\varphi_{20}}$</li>
+<li>$A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos (\varphi_{20}-\varphi_{10})}$</li>
 <li>$x=A\cos (\omega t+\varphi_0)$</li>
 </ul>
 </li>
@@ -2551,7 +2542,7 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 </ul>
 <h4 id="谐振子的受迫振动和共振"><a href="#谐振子的受迫振动和共振" class="headerlink" title="谐振子的受迫振动和共振"></a>谐振子的受迫振动和共振</h4><ul>
 <li>受迫振动的运动方程及其解的可叠加性<ul>
-<li>受迫振动驱动力为 $F<em>d= F</em>{d0}\cos \omega_dt$</li>
+<li>受迫振动驱动力为 $F_d= F_{d0}\cos \omega_dt$</li>
 <li>受迫振动的解为$x(t) = A_0e^{-\delta t}\cos (\omega t+\varphi_0)+B\cos(\omega_dt+\varphi_d)$，其中第一项称为暂态解，第二项称为定态解</li>
 <li>（复数法）定态解的振幅$\displaystyle B=|x|=\frac{\alpha}{\sqrt{(\omega_0^2-\omega_d^2)^2+4\delta^2\omega_d^2}}$</li>
 <li>定态解的相位$\displaystyle\varphi_d=\arctan\frac{-2\delta \omega_d}{\omega_0^2-\omega_d^2}$</li>
@@ -2730,6 +2721,135 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
       </tags>
   </entry>
   <entry>
+    <title>静电场</title>
+    <url>/2020/08/20/study/Physics/Ch8_9/</url>
+    <content><![CDATA[<p>基础物理学第 8 - 9 章</p>
+<a id="more"></a>
+<div class="note note-secondary">
+            <ul><li>静电场<ul><li>电相互作用</li><li>静电场的高斯定理</li><li>静电场的环路定理、电势</li></ul></li><li>静电场中的导体、电介质<ul><li>静电场中的导体</li><li>静电场中的电介质</li><li>静电场的能量</li></ul></li></ul>
+          </div>
+<h2 id="电相互作用-真空中的静电场"><a href="#电相互作用-真空中的静电场" class="headerlink" title="电相互作用 真空中的静电场"></a>电相互作用 真空中的静电场</h2><h3 id="电相互作用"><a href="#电相互作用" class="headerlink" title="电相互作用"></a>电相互作用</h3><p><strong><span class="label label-info">「电荷守恒定律」</span></strong>：在一个与外界没有点和交换的系统内，正负电荷的代数和，在任何物理过程中都保持不变。</p>
+<p><strong><span class="label label-info">「电荷量子化」</span></strong>：微小粒子的带电量的变化不是连续的，它只能是 <span class="label label-success">元电荷 e</span> 的整数倍。</p>
+<h4 id="库仑定律"><a href="#库仑定律" class="headerlink" title="库仑定律"></a>库仑定律</h4><p><strong><span class="label label-info">「库仑定律」</span></strong>：</p>
+<ul>
+<li><p>在真空中，两个静止点电荷之间的相互作用力大小，与它们的电量的乘积成正比，与其距离平方成反比，作用力方向沿着它们的连线，同号电荷相斥，异号电荷相吸。</p>
+</li>
+<li><p>$\displaystyle\boldsymbol{F} _ {12}=k\frac{q  _ 1q _ 2}{r _ {12}^2}\boldsymbol{e} _ {12}=\frac{1}{4\pi\varepsilon _ 0}\frac{q _ 1q _ 2}{r _ {12}^2}\boldsymbol{e} _ {12}$</p>
+</li>
+</ul>
+<p><strong><span class="label label-info">「静电力的叠加原理」</span></strong>：总静电力等于其他点电荷单独存在作用在该点电荷上的静电力的矢量和</p>
+<h4 id="电场和电场强度"><a href="#电场和电场强度" class="headerlink" title="电场和电场强度"></a>电场和电场强度</h4><ul>
+<li>电场、电场力、场强</li>
+</ul>
+<p><strong><span class="label label-info">「场强的叠加原理」</span></strong>：（类似静电力的叠加原理）</p>
+<div class="note note-primary">
+            <p>通过线积分、面积分、体积分计算电场强度。</p>
+          </div>
+<div class="note note-warning">
+            <p><strong><span class="label label-info">「电偶极子」</span></strong>：由两个大小相等，符号相反的点电荷 +q 和 -q 组成。从负电荷到正电荷的矢量称为电偶极子的臂 l，电荷 q 和 l 的乘积称为电偶极矩 p（电矩）。</p>
+          </div>
+<h3 id="静电场的高斯定理"><a href="#静电场的高斯定理" class="headerlink" title="静电场的高斯定理"></a>静电场的高斯定理</h3><h4 id="电场线"><a href="#电场线" class="headerlink" title="电场线"></a>电场线</h4><p>数量和场强大小成正比</p>
+<h4 id="电场通量"><a href="#电场通量" class="headerlink" title="电场通量"></a>电场通量</h4><ul>
+<li>通量（Flux）</li>
+</ul>
+<h4 id="静电场的高斯定理-1"><a href="#静电场的高斯定理-1" class="headerlink" title="静电场的高斯定理"></a>静电场的高斯定理</h4><p>静电场中任何闭合曲面 S 的电场通量 $\varPhi _ E$ 等于该曲面内所包围的电荷的代数和 $\sum q _ i$ 除以 $\varepsilon _ 0$</p>
+<div class="note note-primary">
+            <p><strong><span class="label label-info">「注意」</span></strong> </p><ol><li>如何证明？</li><li>类比到引力场</li></ol>
+          </div>
+<h4 id="静电场高斯定理的微分形式"><a href="#静电场高斯定理的微分形式" class="headerlink" title="静电场高斯定理的微分形式"></a>静电场高斯定理的微分形式</h4><ul>
+<li>$\displaystyle\nabla\cdot\boldsymbol{E} =\frac{1}{\varepsilon}\rho _ c$</li>
+</ul>
+<h3 id="静电场的环路定理-电势"><a href="#静电场的环路定理-电势" class="headerlink" title="静电场的环路定理 电势"></a>静电场的环路定理 电势</h3><h4 id="静电场的环路定理"><a href="#静电场的环路定理" class="headerlink" title="静电场的环路定理"></a>静电场的环路定理</h4><ul>
+<li>静电场力所作的功，与路径无关（静电场力是保守力）</li>
+</ul>
+<p><strong><span class="label label-info">「静电场的环路定理」</span></strong>：静电场中，场强沿任意闭合环路的线积分恒等于 0：</p>
+<ul>
+<li>$\displaystyle\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}=0$</li>
+</ul>
+<p>微分形式：</p>
+<ul>
+<li>$\nabla\times \boldsymbol{E}=0$</li>
+</ul>
+<h4 id="电势差和电势"><a href="#电势差和电势" class="headerlink" title="电势差和电势"></a>电势差和电势</h4><ul>
+<li>$\displaystyle U _ {PQ}=\int _ P^Q\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}$</li>
+<li>常常选用无穷远为势能零点</li>
+</ul>
+<h4 id="电势叠加原理"><a href="#电势叠加原理" class="headerlink" title="电势叠加原理"></a>电势叠加原理</h4><p><strong><span class="label label-info">「电势叠加原理」</span></strong>：点电荷系中电子厂中某点的电势，是哥哥点电荷单独存在时电场在该点的电势的代数和。</p>
+<h4 id="等势面-电势的梯度"><a href="#等势面-电势的梯度" class="headerlink" title="等势面 电势的梯度"></a>等势面 电势的梯度</h4><ul>
+<li>$\boldsymbol{E}=-\mathrm{grad}~V$</li>
+</ul>
+<blockquote>
+<p>**静电场的基本微分方程</p>
+<p>泊松方程：$\nabla^2V=-\frac{1}{\varepsilon _ 0}\rho _ e$</p>
+<p>拉普拉斯方程：$\nabla^2V=0$</p>
+</blockquote>
+<hr>
+<h2 id="静电场中的导体"><a href="#静电场中的导体" class="headerlink" title="静电场中的导体"></a>静电场中的导体</h2><h3 id="静电场中的导体-1"><a href="#静电场中的导体-1" class="headerlink" title="静电场中的导体"></a>静电场中的导体</h3><h4 id="导体的静电平衡条件"><a href="#导体的静电平衡条件" class="headerlink" title="导体的静电平衡条件"></a>导体的静电平衡条件</h4><p><strong><span class="label label-info">「条件」</span></strong>：导体内场强处处为 0</p>
+<blockquote>
+<p>利用了：<strong>静电场边值问题的唯一性定理</strong></p>
+</blockquote>
+<div class="note note-primary">
+            <ol><li>导体是等势体，导体表面是等势面</li><li>导体内部没有静电荷，电荷只分布在导体表面上</li><li>导体以外靠近其表面处的场强处处与表面垂直，其大小取决于导体表面的面电荷密度。</li></ol>
+          </div>
+<h4 id="导体壳-静电屏蔽"><a href="#导体壳-静电屏蔽" class="headerlink" title="导体壳 静电屏蔽"></a>导体壳 静电屏蔽</h4><p><strong><span class="label label-info">「腔内无带电梯」</span></strong>：在静电平衡状态下，导体壳的内表面上处处没有电荷，电荷只分布在外表面上，空腔内没有电场。</p>
+<p><strong><span class="label label-info">「有带电体」</span></strong>：内表面和腔内电荷的代数和为 0.</p>
+<p><strong><span class="label label-info">「静电屏蔽」</span></strong>：接地良好的道题刻可以把内部带电梯对外界的影响全部消除。</p>
+<h4 id="电容-电容器"><a href="#电容-电容器" class="headerlink" title="电容 电容器"></a>电容 电容器</h4><p><strong><span class="label label-info">「孤立导体的电容」</span></strong>：$C = \frac{q}{V}$</p>
+<p><strong><span class="label label-info">「电容器的电容」</span></strong>：$C = \frac{q}{U_{AB}}$</p>
+<div class="note note-primary">
+            <p><strong>电容计算</strong>：</p><ol><li>平行板电容器</li><li>同心球电容器</li><li>同轴柱形电容器</li></ol><p>并联的电容：加和</p><p>串联的电容：倒数 = 倒数加和</p>
+          </div>
+<h3 id="静电场中的电介质"><a href="#静电场中的电介质" class="headerlink" title="静电场中的电介质"></a>静电场中的电介质</h3><h4 id="电介质计划"><a href="#电介质计划" class="headerlink" title="电介质计划"></a>电介质计划</h4><ul>
+<li>位移极化、取向极化、极化电荷、束缚电荷</li>
+</ul>
+<h4 id="极化强度和极化电荷"><a href="#极化强度和极化电荷" class="headerlink" title="极化强度和极化电荷"></a>极化强度和极化电荷</h4><p>$P = \frac{\sum \boldsymbol p_i}{\Delta V}$</p>
+<p>闭合曲面 S 内向外移动的极化电荷总量为净余的极化电荷总量的负值：</p>
+<ul>
+<li>$\displaystyle\iint_{(S)}P\cdot \mathrm d S=-\sum q’_i$</li>
+</ul>
+<h4 id="各向同性线性电介质的极化规律"><a href="#各向同性线性电介质的极化规律" class="headerlink" title="各向同性线性电介质的极化规律"></a>各向同性线性电介质的极化规律</h4><ul>
+<li>$P=\chi_e\varepsilon_0 E$</li>
+</ul>
+<p>产生<strong>退极化场</strong>：E’</p>
+<h4 id="电位移-有电介质时的高斯定理"><a href="#电位移-有电介质时的高斯定理" class="headerlink" title="电位移 有电介质时的高斯定理"></a>电位移 有电介质时的高斯定理</h4><ul>
+<li>$D=\varepsilon_0E+P$</li>
+<li>$D=\varepsilon_r\varepsilon_0E=\varepsilon E$</li>
+</ul>
+<p><strong><span class="label label-info">「D的高斯定理」</span></strong>：$\nabla\cdot D=\rho_0$</p>
+<ul>
+<li>$D = \varepsilon E=\varepsilon_r\varepsilon_0E$</li>
+<li>$C=\varepsilon_rC_0$</li>
+</ul>
+<h3 id="静电场的能量"><a href="#静电场的能量" class="headerlink" title="静电场的能量"></a>静电场的能量</h3><h4 id="带点体系的静电能"><a href="#带点体系的静电能" class="headerlink" title="带点体系的静电能"></a>带点体系的静电能</h4><ul>
+<li>点电荷之间的相互作用能<ul>
+<li>$\displaystyle W_{int}=\frac{1}{8\pi\varepsilon_0}\sum\sum\frac{q_iq_j}{r_{ij}}$</li>
+</ul>
+</li>
+<li>电荷连续分布情形的静电能<ul>
+<li>$\displaystyle W=\frac{1}{2}\sum qV$</li>
+</ul>
+</li>
+<li>电荷在外电场中的能量</li>
+<li>电容器储能<ul>
+<li>$\displaystyle W=\frac{1}{2}QU$</li>
+</ul>
+</li>
+</ul>
+<h4 id="电场的能量和能量密度"><a href="#电场的能量和能量密度" class="headerlink" title="电场的能量和能量密度"></a>电场的能量和能量密度</h4><p><strong><span class="label label-info">「电能密度」</span></strong>：$\displaystyle w_e = \frac{W_e}{V} = \frac{1}{2}DE$</p>
+<p>各向同性时：</p>
+<ul>
+<li>$\displaystyle w_e=\frac{1}{2}\varepsilon_0E^2(or~\frac{1}{2}\varepsilon_r\varepsilon_0E^2)$</li>
+</ul>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>基础物理学</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+        <tag>波</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>欧拉图和哈密顿图</title>
     <url>/2020/06/25/study/ComputerScience/DiscreteMath/EulerHarmiltonGraph/</url>
     <content><![CDATA[<!-- TODO: -->
@@ -2747,7 +2867,7 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <p><strong>Thm</strong>：有向图 D 是半欧拉图，当且仅当其是<strong>单向连通</strong>的且有两个奇度顶点，一个入度比出度大 1，一个入度比出度小 1，其余每个顶点的<strong>出度等于入度</strong>。</p>
 <p><strong>Thm</strong>：G 是非平凡的欧拉图，当且仅当 G 是连通的且为几个不重合的圈的并</p>
 <div class="note note-primary">
-            <p><strong>Fleury Alg （求欧拉回路）</strong></p><ol><li>任取 $v_0\in V(G)$，令 $P_0=v_0$</li><li>设 $P_i = v_0e_1\dots e_i v_i$，若 $E(G) - {e_1,e_2,\dots,e_i}$中没有与 $v_i$ 关联的边，则停止，否则按以下条件选下一条边：<ol><li>$e_{i+1}$ 与 $v_i$ 关联</li><li>优先选：$e_{i+1}$ 不是 $G-{e_1,\dots,e_i}$ 中的桥</li></ol></li></ol>
+            <p><strong>Fleury Alg （求欧拉回路）</strong></p><ol><li>任取 $v_0\in V(G)$，令 $P_0=v_0$</li><li>设 $P_i = v_0e_1\dots e_i v_i$，若 $E(G) - \{e_1,e_2,\dots,e_i\}$中没有与 $v_i$ 关联的边，则停止，否则按以下条件选下一条边：<ol><li>$e_{i+1}$ 与 $v_i$ 关联</li><li>优先选：$e_{i+1}$ 不是 $G-\{e_1,\dots,e_i\}$ 中的桥</li></ol></li></ol>
           </div>
 <h2 id="哈密顿图"><a href="#哈密顿图" class="headerlink" title="哈密顿图"></a>哈密顿图</h2><p><strong>Def</strong>：</p>
 <ul>
@@ -2788,12 +2908,12 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <li>$E$ 是无序积 $V\times V$的有穷多重子集，称作<strong>边集</strong>，其中的元素称为<strong>有向边</strong>，简称为<strong>边</strong></li>
 </ol>
 <div class="note note-primary">
-            <p><strong>基本概念</strong></p><ul><li><strong>无向图</strong>和<strong>有向图</strong>统称为<strong>图</strong>，通常用 $G$ 表示无向图，用 $D$ 表示有向图</li><li>图的顶点数称为这个图的<strong>阶</strong>，因而也有 <strong>n 阶图</strong></li><li>一条边也没有的图称为<strong>零图</strong>，n 阶的零图记作 $N<em>n$，1 阶的零图称作平凡图</em>注：零图不是没有顶点的图_</li><li>图的定义中规定顶点集 $V$ 为非空集合，但是我们也定义<strong>空图</strong>为一个没有顶点的图，记作 $\emptyset$，方便我们的计算</li><li>在用图形表示图时，如果给每一个顶点和每一条边都指定一个特定的符号（字母或数字）则称这样的图为<strong>标定图</strong>，否则称作<strong>非标定图</strong></li><li>将有向图中的所有边，改为无向边之后得到的无向图称作这个有向图的<strong>基图</strong></li><li>在无向图中，若有 $e_k=(v_i,v_j)\in E$ 则称 $v_i,v_j$ 为 $e_k$的<strong>端点</strong>，$e_k$ 与 $v_i,v_j$ <strong>关联</strong>，并且称 $e_k$ 与 $v_i,v_j$ 的<strong>关联次数</strong>为 1，若 $i = j$ 则称$e_k$ 与这个顶点的关联次数为 2，并称 $e_k$ 为<strong>环</strong>，如果顶点 $v$ 不与 $e_k$ 关联，则称 $e_k$ 与 $v$ 的关联次数为 0。<br>与此同时，若两个顶点之间有一条边连接，则称这两个顶点<strong>相邻</strong>，若两条边至少有一个公共端点，则称这两条边<strong>相邻</strong></li><li>在有向图中，若有 $e_k=&lt; v_i,v_j &gt;\in E$ 称 $v_i$ 为<strong>始点</strong>，$v_j$ 为<strong>终点</strong>，都是<strong>端点</strong>，并称 $e_k$ 与 $v_i,v_j$ <strong>关联</strong>。其中若 $i=j$ 则称 $e_k$ 是<strong>环</strong>。<br>同时：两个顶点之间为一条有向边，则称这两个顶点<strong>相邻</strong>，若两条边中的一条边的终点是另一条边的始点，则称两条边<strong>相邻</strong></li><li>图中没有边相关联的顶点称为<strong>孤立点</strong></li><li>在无向图中我们称：<ul><li>$N_G(v)={u|u\in V\wedge (u,v)\in E\wedge u\neq v}$ 为 $v$ 的<strong>邻域</strong></li><li>$\overline N_G(v) = N_G(v)\cup{v}$ 称为 $v$ 的<strong>闭邻域</strong></li><li>$I_G(v) = {e|e\in E\wedge e与v关联}$ 称为 $v$ 的<strong>关联集</strong></li></ul></li><li>在有向图中我们称：<ul><li>$\Gamma^+_D(v) ={u|u\in V\wedge &lt; v,u &gt;\in E\wedge u \neq v}$ 为 $v$ 的<strong>后继元集</strong></li><li>$\Gamma^-_D(v) = {u| u\in V \wedge &lt; u,v &gt; \in E\wedge u\neq v}$ 为 $v$ 的<strong>先驱元集</strong></li><li>$N_D(v) = \Gamma^+\cup\Gamma^-$ 为 $v$ 的<strong>邻域</strong></li><li>$\overline N_D=N_D\cup{v}$ 为 $v$ 的<strong>闭邻域</strong></li></ul></li></ul>
+            <p><strong>基本概念</strong></p><ul><li><strong>无向图</strong>和<strong>有向图</strong>统称为<strong>图</strong>，通常用 $G$ 表示无向图，用 $D$ 表示有向图</li><li>图的顶点数称为这个图的<strong>阶</strong>，因而也有 <strong>n 阶图</strong></li><li>一条边也没有的图称为<strong>零图</strong>，n 阶的零图记作 $N_n$，1 阶的零图称作平凡图<br>_注：零图不是没有顶点的图_</li><li>图的定义中规定顶点集 $V$ 为非空集合，但是我们也定义<strong>空图</strong>为一个没有顶点的图，记作 $\emptyset$，方便我们的计算</li><li>在用图形表示图时，如果给每一个顶点和每一条边都指定一个特定的符号（字母或数字）则称这样的图为<strong>标定图</strong>，否则称作<strong>非标定图</strong></li><li>将有向图中的所有边，改为无向边之后得到的无向图称作这个有向图的<strong>基图</strong></li><li>在无向图中，若有 $e_k=(v_i,v_j)\in E$ 则称 $v_i,v_j$ 为 $e_k$的<strong>端点</strong>，$e_k$ 与 $v_i,v_j$ <strong>关联</strong>，并且称 $e_k$ 与 $v_i,v_j$ 的<strong>关联次数</strong>为 1，若 $i = j$ 则称$e_k$ 与这个顶点的关联次数为 2，并称 $e_k$ 为<strong>环</strong>，如果顶点 $v$ 不与 $e_k$ 关联，则称 $e_k$ 与 $v$ 的关联次数为 0。<br>与此同时，若两个顶点之间有一条边连接，则称这两个顶点<strong>相邻</strong>，若两条边至少有一个公共端点，则称这两条边<strong>相邻</strong></li><li>在有向图中，若有 $e_k=&lt; v_i,v_j &gt;\in E$ 称 $v_i$ 为<strong>始点</strong>，$v_j$ 为<strong>终点</strong>，都是<strong>端点</strong>，并称 $e_k$ 与 $v_i,v_j$ <strong>关联</strong>。其中若 $i=j$ 则称 $e_k$ 是<strong>环</strong>。<br>同时：两个顶点之间为一条有向边，则称这两个顶点<strong>相邻</strong>，若两条边中的一条边的终点是另一条边的始点，则称两条边<strong>相邻</strong></li><li>图中没有边相关联的顶点称为<strong>孤立点</strong></li><li>在无向图中我们称：<ul><li>$N_G(v)=\{u|u\in V\wedge (u,v)\in E\wedge u\neq v\}$ 为 $v$ 的<strong>邻域</strong></li><li>$\overline N_G(v) = N_G(v)\cup\{v\}$ 称为 $v$ 的<strong>闭邻域</strong></li><li>$I_G(v) = \{e|e\in E\wedge e与v关联\}$ 称为 $v$ 的<strong>关联集</strong></li></ul></li><li>在有向图中我们称：<ul><li>$\Gamma^+_D(v) =\{u|u\in V\wedge &lt; v,u &gt;\in E\wedge u \neq v\}$ 为 $v$ 的<strong>后继元集</strong></li><li>$\Gamma^-_D(v) = \{u| u\in V \wedge &lt; u,v &gt; \in E\wedge u\neq v\}$ 为 $v$ 的<strong>先驱元集</strong></li><li>$N_D(v) = \Gamma^+\cup\Gamma^-$ 为 $v$ 的<strong>邻域</strong></li><li>$\overline N_D=N_D\cup\{v\}$ 为 $v$ 的<strong>闭邻域</strong></li></ul></li></ul>
           </div>
 <p><strong>Def</strong>：（平行边）在无向图中，如果关联一对顶点的无向边多于一条，则称为<strong>平行边</strong>，平行边的条数称为<strong>重数</strong>，在邮箱图中，如果关联一对顶点的有向边多于 1 条，并且这些边的终点始点相同，则称为<strong>平行边</strong>，含有平行边的图称作<strong>多重图</strong>，不含平行边、也不含自环的图称为<strong>简单图</strong></p>
 <p><strong>Def</strong>：（出度、入度、度数）设 $G=&lt; V,E &gt;$ 为无向图，$\forall v\in V$ 称 $v$ 为边的端点的次数为 $v$ 的次数为 $v$ 的<strong>度数</strong>，相同的定义有向图上的<strong>入度</strong>，<strong>出度</strong>，<strong>度数</strong></p>
 <div class="note note-primary">
-            <p>一些定义</p><p>无向图中：</p><ul><li>最大度 $\Delta(G) = \max{d(v)|v\in V(G)}$</li><li>最小度 $\delta(G) = \min{d(v)|v\in V(G)}$</li></ul><p>类似的定义，在有向图中：</p><ul><li>最大度 $\Delta(G) = \max{d(v)|v\in V(G)}$</li><li>最小度 $\delta(G) = \min{d(v)|v\in V(G)}$</li><li>最大出度 $\Delta^+(G)$</li><li>最小出度 $\delta^+(G)$</li><li>最大入度 $\Delta^-(G)$</li><li>最小入度 $\delta^-(G)$</li></ul><p>此外，我们将<strong>度数</strong>为 1 的顶点称为<strong>悬挂顶点</strong>，相关联的边称为<strong>悬挂边</strong>。</p><p>当然，有<strong>奇度节点</strong>，<strong>偶度节点</strong></p>
+            <p>一些定义</p><p>无向图中：</p><ul><li>最大度 $\Delta(G) = \max\{d(v)|v\in V(G)\}$</li><li>最小度 $\delta(G) = \min\{d(v)|v\in V(G)\}$</li></ul><p>类似的定义，在有向图中：</p><ul><li>最大度 $\Delta(G) = \max\{d(v)|v\in V(G)\}$</li><li>最小度 $\delta(G) = \min\{d(v)|v\in V(G)\}$</li><li>最大出度 $\Delta^+(G)$</li><li>最小出度 $\delta^+(G)$</li><li>最大入度 $\Delta^-(G)$</li><li>最小入度 $\delta^-(G)$</li></ul><p>此外，我们将<strong>度数</strong>为 1 的顶点称为<strong>悬挂顶点</strong>，相关联的边称为<strong>悬挂边</strong>。</p><p>当然，有<strong>奇度节点</strong>，<strong>偶度节点</strong></p>
           </div>
 <h3 id="握手定理"><a href="#握手定理" class="headerlink" title="握手定理"></a>握手定理</h3><p><strong>Thm</strong>：（握手定理）</p>
 <ol>
@@ -2816,14 +2936,14 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <p><strong>Def</strong>：（正则图）若无向图 $G$ 中的每一个顶点 $d(v) = k$ 则称该图为<strong>k-正则图</strong></p>
 <h3 id="子图、母图、补图"><a href="#子图、母图、补图" class="headerlink" title="子图、母图、补图"></a>子图、母图、补图</h3><p><strong>Def</strong>：（母图）若 $V’\subseteq V,E’\subseteq E$ 则称 $G$ 是 $G’$ 的母图</p>
 <p><strong>Def</strong>：（导出的子图 $G[V’],G[E’]$）设 $V’ \subseteq V,V’\neq \emptyset$，选择 $G$ 中两个顶点都在 $V’$ 中的顶点构成的边组成的边集 $E’$ 作为边集，构成的图；相似定义用边集构造的导出的子图</p>
-<p><strong>Def</strong>：（补图）若$\overline E={(u,v)|u,v\in V, u\neq v,(u,v)\notin E}$ 构成的图 $\overline G$</p>
+<p><strong>Def</strong>：（补图）若$\overline E=\{(u,v)|u,v\in V, u\neq v,(u,v)\notin E\}$ 构成的图 $\overline G$</p>
 <p><strong>自补图</strong>：与自身的补图同构</p>
 <h3 id="对于图的运算"><a href="#对于图的运算" class="headerlink" title="对于图的运算"></a>对于图的运算</h3><p><strong>Def</strong>：删除边、删除一个边集</p>
 <p><strong>Def</strong>：删除点、删除一个顶点集（去掉关联的一切边）</p>
 <p><strong>Def</strong>：添加新边</p>
 <p><strong>Def</strong>：（收缩）将 $e$ 的两个端点用新的点表示，并将原先与两个顶点相邻的边与之相连</p>
-<h2 id="通路与回路"><a href="#通路与回路" class="headerlink" title="通路与回路"></a>通路与回路</h2><p><strong>Def</strong>：（通路、始点、终点、长度）一个交替序列：$\varGamma = v<em>{i0}e</em>{j1}\dots e<em>{jl}v</em>{il}$</p>
-<p><strong>Def</strong>：（回路）一个 $v<em>{i0} =v</em>{il}$ 的通路</p>
+<h2 id="通路与回路"><a href="#通路与回路" class="headerlink" title="通路与回路"></a>通路与回路</h2><p><strong>Def</strong>：（通路、始点、终点、长度）一个交替序列：$\varGamma = v_{i0}e_{j1}\dots e_{jl}v_{il}$</p>
+<p><strong>Def</strong>：（回路）一个 $v_{i0} =v_{il}$ 的通路</p>
 <p><strong>Def</strong>：（简单通路、简单回路）边各异的通路、回路</p>
 <p><strong>Def</strong>：（初级通路、初级回路）（除了始点和终点外）点各异的简单通路、简单回路</p>
 <blockquote>
@@ -2840,7 +2960,7 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <p><strong>Def</strong>：（短程线、距离）$u\sim v$ 时，称 $u,v$ 之间的长度最短的通路为 $u,v$ 之间的<strong>短程线</strong>，长度称为<strong>距离</strong></p>
 <p><strong>Def</strong>：（割点、点割集）若 $\forall V’’\subset V’$ 都有$p(G-V’’)=p(G)$ 但 $p(G-V’) &gt;p(G)$ 则称为点割集，若 $V’$ 中只含有一个点，则称 $v$ 为割点。</p>
 <p><strong>Def</strong>：（边割集、割边、桥）</p>
-<p><strong>Def</strong>：（点连通度、k-连通图）若 $G$ 为无向连通图且不是完全图，则称 $\kappa (G) = \min{|V’||V’为G的点割集}$ 为<strong>点连通度</strong>，简称<strong>连通度</strong>。规定完全图的连通度为 n-1。若 $\kappa \ge k$ 则称 $G$ 为 k-连通图。</p>
+<p><strong>Def</strong>：（点连通度、k-连通图）若 $G$ 为无向连通图且不是完全图，则称 $\kappa (G) = \min\{|V’||V’为G的点割集\}$ 为<strong>点连通度</strong>，简称<strong>连通度</strong>。规定完全图的连通度为 n-1。若 $\kappa \ge k$ 则称 $G$ 为 k-连通图。</p>
 <p><strong>Def</strong>：（边连通度 $\lambda(G)$、r 边-连通图）</p>
 <p><strong>Thm</strong>：$\kappa(G)\le\lambda (G)\le\delta(G)$</p>
 <blockquote>
@@ -2878,7 +2998,7 @@ m_{ij} = \begin{cases}
             <p><strong>性质</strong></p><p>不难看出，该矩阵：</p><ol><li>每列元素之和为 0 恰好有一个 -1 一个 1</li><li>每行 -1 个数为 $v_i$ 的入度，1 的个数为出度</li><li>两列相同，当且仅当这两列对应了平行边</li></ol>
           </div>
 <h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><p><strong>Def</strong>：（有向图的邻接矩阵）$a_{ij}$ 为 $v_i$ 邻接到顶点 $v_j$ 边的条数记为 $A(D)$。</p>
-<p><strong>Thm</strong>：$A$ 的 $l$ 次幂中 $a<em>{ij}$ 表示 D 中长度为 $l$ 的通路数目，$a</em>{ii}$ 位回路数。矩阵元素和为总数。</p>
+<p><strong>Thm</strong>：$A$ 的 $l$ 次幂中 $a_{ij}$ 表示 D 中长度为 $l$ 的通路数目，$a_{ii}$ 位回路数。矩阵元素和为总数。</p>
 <h3 id="可达矩阵"><a href="#可达矩阵" class="headerlink" title="可达矩阵"></a>可达矩阵</h3><p><strong>Def</strong>：在有向图中，令</p>
 <script type="math/tex; mode=display">
 p_{ij}=
@@ -2989,12 +3109,12 @@ a^{n-1}a,& n >0\\
 </ol>
 <p><strong>Thm</strong>：（判定定理 2）设 $G$ 为群，$H$ 是 $G$ 的非空子集，则 $H$ 是 $G$ 的子群，当且仅当 $\forall a,b\in H, ab^{-1}\in H$</p>
 <p><strong>Thm</strong>：（判定定理 3）设 $G$ 为群，$H$ 是 $G$ 的非空子集，则 $H$ 是 $G$ 的有穷子群，当且仅当 $\forall a,b\in H,ab\in H$</p>
-<p><strong>Def</strong>：（中心）设 $G$ 是群，令 $C$ 是与 $G$ 中所有元素都可交换的元素构成的集合，$C={a|a\in G\wedge \forall x\in G(ax=xa)}$ 则称 $C$ 为 $G$ 的中心，且是 $G$ 的一个子群。</p>
+<p><strong>Def</strong>：（中心）设 $G$ 是群，令 $C$ 是与 $G$ 中所有元素都可交换的元素构成的集合，$C=\{a|a\in G\wedge \forall x\in G(ax=xa)\}$ 则称 $C$ 为 $G$ 的中心，且是 $G$ 的一个子群。</p>
 <p><strong>Def</strong>：（由 $B$ 生成的子群）设 $B$ 是 $G$ 的子集，将所有包含 $B$ 的子群的交记作 $<B>$。</B></p>
 <div class="note note-caution">
             <p><strong>Caution</strong></p><p>未知正确性：</p><ul><li>$<B>$ 中只含有 $B$ 中的元素或其逆元。</B></li></ul>
           </div>
-<p><strong>Def</strong>：设 $H$ 是群 $G$ 的子群，$a\in G$，令$Ha ={ha|h\in H}$ 称之为子群 $H$ 在 $G$ 中的右陪集，并称 $a$ 为 $Ha$ 的代表元素。</p>
+<p><strong>Def</strong>：设 $H$ 是群 $G$ 的子群，$a\in G$，令$Ha =\{ha|h\in H\}$ 称之为子群 $H$ 在 $G$ 中的右陪集，并称 $a$ 为 $Ha$ 的代表元素。</p>
 <p><strong>Thm</strong>：设 $H$ 是 $G$ 的子群，则</p>
 <ol>
 <li>$He =H$</li>
@@ -3010,10 +3130,10 @@ a^{n-1}a,& n >0\\
 <p><strong>Inf</strong>：设 $H$ 是 $G$ 的子群，则</p>
 <ol>
 <li>$\forall a,b\in G, Ha = Hb 或 Ha\cap Hb =\emptyset$</li>
-<li>$\cup{Ha|a\in G} = G$</li>
+<li>$\cup\{Ha|a\in G\} = G$</li>
 </ol>
 <div class="note note-primary">
-            <p><strong>Tips</strong></p><p>于此同时，$H$ 的所有右陪集的集合 ${Ha|a\in G}$ 恰好构成 G 的一个划分，并且，这个划分的所有划分快都和 $H$ 等势。</p><p>用同样的方法可以定义 $H$ 的左陪集。</p>
+            <p><strong>Tips</strong></p><p>于此同时，$H$ 的所有右陪集的集合 $\{Ha|a\in G\}$ 恰好构成 G 的一个划分，并且，这个划分的所有划分快都和 $H$ 等势。</p><p>用同样的方法可以定义 $H$ 的左陪集。</p>
           </div>
 <p><strong>Def</strong>：（指数）$H$ 在 $G$ 中的左右陪集数相等，记作 $H$ 在 $G$ 中的指数 $[G:H]$</p>
 <p><strong>Thm</strong>：（Lagrange 定理）设 $G$ 是一个有限群，$H$ 是 $G$ 的子群，则 $|G| = |H|\cdot [G:H]$</p>
@@ -3029,7 +3149,7 @@ a^{n-1}a,& n >0\\
 <p><strong>Thm</strong>：</p>
 <ol>
 <li>设 $G$ 是循环群，则 $G$ 的子群是循环群</li>
-<li>$G$ 是无限循环群，则 $G$ 的子群除了 ${e}$ 之外都是无限循环群</li>
+<li>$G$ 是无限循环群，则 $G$ 的子群除了 $\{e\}$ 之外都是无限循环群</li>
 <li>若 $G$ 是 $n$ 阶循环群，则对于 $n$ 的每一个正因子 $d$，$G$ 恰好含有一个 $d$ 阶子群</li>
 </ol>
 <!-- TODO: to complete -->
@@ -3048,21 +3168,21 @@ a^{n-1}a,& n >0\\
     <content><![CDATA[<p>半个上午的时间，回顾一下上章的内容，呼</p>
 <p>在现实中的许多的问题都可以抽象为代数问题，还是要好好学吖~</p>
 <a id="more"></a>
-<h2 id="格的定义和性质"><a href="#格的定义和性质" class="headerlink" title="格的定义和性质"></a>格的定义和性质</h2><p><strong>Def</strong>：（格）设$<S,\preccurlyeq>$ 是偏序集，若 $\forall x,y\in S,{x,y}$ 都有最小上界和最大下界，则称 $S$ 关于偏序 $\preccurlyeq$ 成一个格</S,\preccurlyeq></p>
+<h2 id="格的定义和性质"><a href="#格的定义和性质" class="headerlink" title="格的定义和性质"></a>格的定义和性质</h2><p><strong>Def</strong>：（格）设$&lt; S,\preccurlyeq &gt;$ 是偏序集，若 $\forall x,y\in S,\{x,y\}$ 都有最小上界和最大下界，则称 $S$ 关于偏序 $\preccurlyeq$ 成一个格</p>
 <div class="note note-default">
-            <p>由于最小上界和最大下界的唯一性，可以把求 ${x,y}$ 的最小上界和最大下界看成二元运算，$\wedge$ 为最大下界，$\vee$ 为最小上界</p>
+            <p>由于最小上界和最大下界的唯一性，可以把求 $\{x,y\}$ 的最小上界和最大下界看成二元运算，$\wedge$ 为最大下界，$\vee$ 为最小上界</p>
           </div>
 <p><strong>Thm</strong>：（格的对偶原理）设 $f$ 是含有格中元素以及符号 $=,\preccurlyeq,\succcurlyeq,\vee,\wedge$ 的命题，若 $f$ 对于一切格为真，则 $f$ 的对偶命题 $f’$ 也对一切格为真</p>
 <p><strong>Thm</strong>：格中的 $\wedge,\vee$运算满足交换律，结合律，幂等律，吸收律</p>
-<p><strong>Thm</strong>：设 $<S,*,\circ>$是一个具有两个二元运算的代数系统，且对于两个运算满足交换律，结合律，吸收律，则可以适当的定义 $S$ 中的偏序 $\preccurlyeq$ 使之成为一个格。</S,*,\circ></p>
-<p><strong>Def</strong>：设 $<S,*,\circ>$ 是代数系统，如果 $*$ 和 $\circ$ 满足结合律，分配律，吸收律，则该代数系统构成一个格</S,*,\circ></p>
-<div class="note note-default">
+<p><strong>Thm</strong>：设 $&lt; S,*,\circ &gt;$是一个具有两个二元运算的代数系统，且对于两个运算满足交换律，结合律，吸收律，则可以适当的定义 $S$ 中的偏序 $\preccurlyeq$ 使之成为一个格。</p>
+<p><strong>Def</strong>：设 $&lt; S,<em>,\circ &gt;$ 是代数系统，如果 $</em>$ 和 $\circ$ 满足结合律，交换律，吸收律，则该代数系统构成一个格</p>
+<div class="note note-primary">
             <p>注意：这里的幂等律在上面三个运算律满足时自然满足</p>
           </div>
 <p><strong>Thm</strong>：设 $L$ 是格，则 $\forall a,b\in L$ 有 $a\preccurlyeq b\iff a\wedge b =a\iff a\vee b=b$</p>
 <p><strong>Thm</strong>：设 $L$ 是格，$\forall a,b,c,d\in L,(a\preccurlyeq b 且 c\preccurlyeq d)\rightarrow(a\wedge c\preccurlyeq b\wedge d,a\vee c\preccurlyeq b\vee d)$</p>
 <p><strong>Def</strong>：子格</p>
-<h2 id="分配格、有补格、布尔代数"><a href="#分配格、有补格、布尔代数" class="headerlink" title="分配格、有补格、布尔代数"></a>分配格、有补格、布尔代数</h2><p><strong>Def</strong>：（分配格）设 $<L,\wedge,\vee>$ 是格，若 $\forall a,b,c\in L$ 有</L,\wedge,\vee></p>
+<h2 id="分配格、有补格、布尔代数"><a href="#分配格、有补格、布尔代数" class="headerlink" title="分配格、有补格、布尔代数"></a>分配格、有补格、布尔代数</h2><p><strong>Def</strong>：（分配格）设 $&lt; L,\wedge,\vee &gt;$ 是格，若 $\forall a,b,c\in L$ 有</p>
 <script type="math/tex; mode=display">
 a\wedge(b\vee c) =(a\wedge b)\vee (a\wedge c)\\
 a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格。</p>
@@ -3073,7 +3193,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <p><strong>Inf</strong>：小于 5 元的格都是分配格</p>
 <p><strong>Inf</strong>：任何一条链都是分配格</p>
 <p><strong>Def</strong>：（全下界，全上界）设 $L$ 是格，若存在 $a\in L$ 使得 $\forall x\in L,a\preccurlyeq x$ 则称为 $L$ 的全下界；对称的定义 $L$ 的全上界</p>
-<p><strong>Def</strong>：设 $L$ 是格，若 $L$ 存在全下界和全上界，则称 $L$ 为有界格，记作 $<L,\wedge,\vee,0,1>$</L,\wedge,\vee,0,1></p>
+<p><strong>Def</strong>：设 $L$ 是格，若 $L$ 存在全下界和全上界，则称 $L$ 为有界格，记作 $&lt; L,\wedge,\vee,0,1 &gt;$</p>
 <p><strong>Def</strong>：（补元）在有界格中，$a\in L$，若存在 $b\in L$ 使得 $a\wedge b =0$ 且 $a\vee b =1$，则称 $b$ 为 $a$ 的补元</p>
 <p><strong>Thm</strong>：在有界分配格中，若 $a\in L$ 且对于 $a$ 存在补元 $b$ 则 $b$ 是 $a$ 唯一的补元 记作 $b = a’$</p>
 <p><strong>Def</strong>：（布尔格、布尔代数）如果一个格是有补分配格，则称之为布尔格或布尔代数</p>
@@ -3231,14 +3351,14 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 </li>
 <li><p><strong>Thm</strong>：范式存在定理</p>
 <blockquote>
-<p><em>Method 求范式</em></p>
+<p>_Method 求范式_</p>
 <ol>
 <li><p>消去 $\rightarrow$ 和 $\leftrightarrow$</p>
 </li>
 <li><p>消去双重否定</p>
 </li>
 <li><p>使用分配律</p>
-<p><em>这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂</em></p>
+<p>_这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂_</p>
 </li>
 </ol>
 </blockquote>
@@ -3249,7 +3369,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 </li>
 <li><p><strong>Thm</strong>：任何命题公式存在与之等值的主析取范式和主合取范式，并且唯一。</p>
 <blockquote>
-<p><em>Method 求主范式</em></p>
+<p>_Method 求主范式_</p>
 <ol>
 <li>先化成范式</li>
 <li>在缺少某一项时，用排中律 $A\vee \neg A = 1$ 和结合律<strong>添加</strong>缺少的命题变元</li>
@@ -3258,7 +3378,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 </li>
 </ul>
 <blockquote>
-<p><em>Method 主范式互化</em></p>
+<p>_Method 主范式互化_</p>
 <ol>
 <li>取 $\neg A$，并化为范式</li>
 <li>则 $A=\neg\neg A$ 用德摩根律展开</li>
@@ -3267,14 +3387,14 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <h3 id="联结词的完备集"><a href="#联结词的完备集" class="headerlink" title="联结词的完备集"></a>联结词的完备集</h3><ul>
 <li><strong>Def</strong>：n 元真值函数</li>
 <li><strong>Def</strong>：联结词完备集</li>
-<li><strong>Thm</strong>：${\neg,\wedge,\vee}$ 是联结词完备集<ul>
-<li><strong>Inf</strong>：${\neg,\wedge}$ 也是联结词完备集</li>
+<li><strong>Thm</strong>：$\{\neg,\wedge,\vee\}$ 是联结词完备集<ul>
+<li><strong>Inf</strong>：$\{\neg,\wedge\}$ 也是联结词完备集</li>
 </ul>
 </li>
 </ul>
 <blockquote>
 <p>这边可以联系一下 Lambda Calculus 中的各类运算，都可以用 Lambda 定义。也就是说，只需要一些操作，就可以满足全部的需要</p>
-<p>${\uparrow}$和${\downarrow}$ 是联结词完备集。其中</p>
+<p>$\{\uparrow\}$和$\{\downarrow\}$ 是联结词完备集。其中</p>
 <ul>
 <li>$p\uparrow q\Leftrightarrow \neg(p\wedge q)$</li>
 <li>$p\downarrow q\Leftrightarrow \neg(p\vee q)$</li>
@@ -3287,7 +3407,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <li><p><strong>Def</strong>：消解式、消解规则</p>
 <blockquote>
 <p>文字 $I$ 的补 $I^c$：$I=p\rightarrow I^c=\neg p,I=\neg p\rightarrow I^c=p$</p>
-<p><em>Method 消解规则</em></p>
+<p>_Method 消解规则_</p>
 <p>$C_1=C_1’\vee I,C_2=C_2’\vee I^c$ 是简单析取式，则称$Res(C_1,C_2)=C1’\vee C2’$ 为消解式<br>注意这里的 $C_1,C_2$ 中是可以含有 $I$ 的，但是不方便计算，后面在消解序列定义时，也直接用了合取范式这一定义。</p>
 </blockquote>
 </li>
@@ -3306,7 +3426,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 </li>
 <li><p><strong>Thm</strong>：（消解的完全性）如果 S 不可满足，则 S 有否证</p>
 <blockquote>
-<p><em>Method 消解算法</em></p>
+<p>_Method 消解算法_</p>
 <ol>
 <li>求合取范式</li>
 <li>$S_0,S_2$ 为不含任何元素的集合，$S_1$ 为 $S$ 所有简单析取式构成的集合</li>
@@ -3322,10 +3442,10 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <h2 id="命题逻辑的推理理论"><a href="#命题逻辑的推理理论" class="headerlink" title="命题逻辑的推理理论"></a>命题逻辑的推理理论</h2><h3 id="推理的形式结构"><a href="#推理的形式结构" class="headerlink" title="推理的形式结构"></a>推理的形式结构</h3><ul>
 <li><p><strong>Def</strong>：推理是有效的</p>
 </li>
-<li><p><strong>Thm</strong>：推理正确${A_i}\models B\iff \wedge A_i \rightarrow B$ 为永真式</p>
+<li><p><strong>Thm</strong>：推理正确$\{A_i\}\models B\iff \wedge A_i \rightarrow B$ 为永真式</p>
 <blockquote>
 <p>$p\Rightarrow q$ 表示 $p\rightarrow q$ 为重言式</p>
-<p><em>Method 判断 $\wedge A_i \rightarrow B$ 是重言式的方法</em></p>
+<p>_Method 判断 $\wedge A_i \rightarrow B$ 是重言式的方法_</p>
 <ol>
 <li>真值表法</li>
 <li>等值演算法</li>
@@ -3361,7 +3481,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 </li>
 <li><p>构造证明方法</p>
 <ul>
-<li>附加前提证明法：$\wedge A<em>i \rightarrow (A</em>{i+1} \rightarrow B) \Leftrightarrow \wedge A_i \rightarrow B$</li>
+<li>附加前提证明法：$\wedge A_i \rightarrow (A_{i+1} \rightarrow B) \Leftrightarrow \wedge A_i \rightarrow B$</li>
 <li>归谬法：$\wedge A_i \wedge B$ 为矛盾式</li>
 <li>消解证明法</li>
 </ul>
@@ -3454,7 +3574,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 </li>
 <li><p><strong>Thm</strong>：前束范式存在定理</p>
 <blockquote>
-<p><em>Method 求前束范式</em></p>
+<p>_Method 求前束范式_</p>
 <ol>
 <li>替换$\leftrightarrow,\rightarrow$ 为 $\wedge,\vee,\neg$</li>
 <li>用量词否定等值式，将 $\neg$ 调至原子公式之前</li>
@@ -3565,7 +3685,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <ol>
 <li>$\forall k \in \mathrm N, R^{s+k} = R^{t+k}$</li>
 <li>$\forall k, i \in \mathrm N , R^{s+tp+i} =R^{s+i}, where p = t - s$</li>
-<li>$Let~S = {R^0, R^1, \dots, R^t-1}, \forall q \in \mathrm N, R^q \in S$</li>
+<li>$Let~S = \{R^0, R^1, \dots, R^t-1\}, \forall q \in \mathrm N, R^q \in S$</li>
 </ol>
 <h3 id="关系的性质"><a href="#关系的性质" class="headerlink" title="关系的性质"></a>关系的性质</h3><ul>
 <li>Def：自反的、反自反的</li>
@@ -3621,7 +3741,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <li>Def：常函数、恒等函数、单调递增/减、严格单调递增、特征函数、自然映射</li>
 </ul>
 <h3 id="集合的复合和反函数"><a href="#集合的复合和反函数" class="headerlink" title="集合的复合和反函数"></a>集合的复合和反函数</h3><ul>
-<li>Thm：$dom(F\circ G)= { x| x\in dom(F) \wedge x \in dom(G)}$</li>
+<li>Thm：$dom(F\circ G)= \{ x| x\in dom(F) \wedge x \in dom(G)\}$</li>
 <li><p>Thm：</p>
 <ul>
 <li>$f,g满射\rightarrow f\circ g满射$</li>
@@ -3679,6 +3799,75 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
       </tags>
   </entry>
   <entry>
+    <title>Lambda 演算简介（3）</title>
+    <url>/2020/06/11/study/ComputerScience/LambdaCalculi/LambdaCalc3/</url>
+    <content><![CDATA[<p>Lambda 演算中的 Y 组合子</p>
+<a id="more"></a>
+<h2 id="Y-组合子：递归实现"><a href="#Y-组合子：递归实现" class="headerlink" title="Y 组合子：递归实现"></a>Y 组合子：递归实现</h2><p>在之前，我们都在做一些简单的操作，例如实现了分支结构 <code>s e1 e2</code> ，现在我们要考虑如何实现第二种结构：循环与递归（recursion）。</p>
+<p>在 Lambda 演算的世界里，递归是容易实现的，利用如下的 Y 组合子：</p>
+<p><code>Y = lambda y.(lambda x.y (x x)) (lambda x.y (x x))</code></p>
+<p>即：$\mathrm{Y = \lambda y.(\lambda x.y~(x~x))~(\lambda x.y~(x~x))}$</p>
+<p>我们试着计算 <code>Y Y</code> 的值：</p>
+<pre><code class="hljs racket">         Y Y
+(beta) &#x3D;&gt;(lambda x.Y (x x)) (lambda x.Y (x x))
+(alpha)&#x3D;&gt;(lambda x.Y (x x)) (lambda z.Y (z z))
+(beta) &#x3D;&gt;Y ((lambda z.Y (z z)) (lambda z.Y (z z)))
+(alpha)&#x3D;&gt;(lambda a. (lambda b . a (b b)) (lambda b. a (b b)))
+         ((lambda z. Y (z z)) (lambda z. Y (z z)))
+(beta) &#x3D;&gt;Y (Y Y)
+...... &#x3D;&gt;Y (Y (Y Y))
+......</code></pre>
+<p>可以发现，Y 组合子通过 <code>Y Y</code> 创造了自身！这似乎是一个无穷递归，我们换一个例子看一看：假定 <code>f</code> 是一个关于 <code>x</code> 的函数，例如<code>f = (lambda x.add1 x)</code></p>
+<pre><code class="hljs racket">         (Y f) x
+(beta) &#x3D;&gt;(lambda y.(y (lambda x.y (x x) lambda x.y(x x))) f) x
+(alpha)&#x3D;&gt;(f ((lambda x.f (x x)) (lambda x.f (x x)))) x
+(beta) &lt;&#x3D;(f (Y f)) x
+...... &lt;&#x3D;(f (f ( ... f(Y f))...) x</code></pre>
+<p>这还不够，因为 <code>f</code> 是一个一元的函数，按照这个形式，即使给 <code>f</code> 一定的条件，使之在某处停下，我们也无法使之<strong>停下的条件</strong>与任何一个 <code>x</code> 有关。就以上面的表达式为例：</p>
+<p><code>(Y f) =&gt; add1 (add1 (add1 ... )) x</code> 内部的 <code>add1</code> 并不会停下！</p>
+<p>例如：<code>f (f (f)) x</code> 在这里，前面是先演算的内容，但是很明显在第三层停下递归并不是 <code>x</code> 所控制的。这并不是我们想要的，但是已经十分接近了！给这个形式做一些改变，则需要一个形式保留下来这个结构，并且将 <code>add1</code> 换为一个二元运算 <code>mult</code>：</p>
+<pre><code class="hljs racket">         (Y (lambda t.lambda x.mult x (t x)))) a
+...... &#x3D;&gt;(lambda t.lambda x.mult x (t x) (Y lambda t.lambda x.mult(t x)) x) a
+(alpha)&#x3D;&gt;(lambda t.lambda x&#39;.mult x&#39; (t x&#39;) (Y lambda t.lambda x.mult(t x)) x) a
+(beta) &#x3D;&gt;(lambda x&#39;. mult x&#39; (Y (lambda t.lambda x.mult x (t x))) x)) a
+(beta) &#x3D;&gt;mult a (Y (lambda t.lambda x.mult x (t x))) a)
+...... &#x3D;&gt;mult a (mult a (mult a ( ... )))</code></pre>
+<p>最后我们加上一些判断，使之在某个地方停下，以及对于 <code>x</code> 的变换：</p>
+<pre><code class="hljs racket">LET: metafact &#x3D; lambda fact . (lambda n . IsZero n 1 (Mult n (fact (Pred n))))
+
+   metafact (Y metafact) n
+&#x3D;&gt; lambda n. zero? n 1 (mult n (Y metafact (Pred n))) n
+&#x3D;&gt; mult n (Y metafact (Pred n))
+&#x3D;&gt; mult n (metafact ((lambda x.metafact (x x)) (lambda x.metafact (x x))) (Pred n))
+&#x3D;&gt; mult n (metafact (Y metafact) (Pred n))</code></pre>
+<div class="note note-primary">
+            <p><strong>一点思考</strong></p><p>读者应分析结构：<code>lambda t.lambda x.f (t x) x</code>，指出其中 <code>f</code> 和 <code>t</code> 的作用：（在此仅给出个人的理解）</p><ul><li><code>f</code> 为函数算子</li><li><code>t</code> 为传入形式的复制</li></ul><p>如果从柯里化的角度看 Y 组合子是否更好？</p>
+          </div>
+<h2 id="SKI组合子"><a href="#SKI组合子" class="headerlink" title="SKI组合子"></a>SKI组合子</h2><p>先给出 SKI 组合子的定义：</p>
+<ul>
+<li><code>S = (lambda x y z.(x z (y z)))</code> </li>
+<li><code>K = (lambda x y. x)</code></li>
+<li><code>I = (lambda x.x)</code></li>
+</ul>
+<p>这个定义时很奇怪的，如何说呢，请看：</p>
+<pre><code class="hljs racket">  S K K x
+&#x3D;&gt;(K x) (K x)
+&#x3D;&gt;(lambda x y. x) x (K x)
+&#x3D;&gt;x</code></pre>
+<p>也就是说 <code>I = S K K</code>，其中 <code>=</code> 表示<strong>外延等价</strong>（extensional equivalence），当 <code>E x</code> 和 <code>E&#39; x</code> <strong>总是</strong>有相同的约化结果恒成立，则称 <code>E = E&#39;</code>。（另一种等价指<strong>内涵等价</strong>（intensional equivalence），当<code>E</code> 与 <code>E</code> 完全相同或经过 $\alpha$-转换后有相同的结果）。</p>
+<blockquote>
+<p>在此略去 <strong>组合子演算</strong> 部分，这一部分可以参考<a href="http://cgnail.github.io/academic/lambda-5/">这篇文章</a></p>
+</blockquote>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>Lambda演算</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编程语言和 Lambda 演算叙旧</title>
     <url>/2020/06/09/study/ComputerScience/LambdaCalculi/LambdaCalc0/</url>
     <content><![CDATA[<p>摘自Wikipedia，知乎等。</p>
@@ -3732,9 +3921,9 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <blockquote>
 <p>用 $\mathrm{FV[exp]}$ 表示一个集合，表示在一个 Lambda 表达式 $\mathrm{exp}$ 中的所有自由变量：</p>
 <ol>
-<li>$\mathrm{exp}$ 是变量，则 $\mathrm{FV(exp) = {exp}}$</li>
+<li>$\mathrm{exp}$ 是变量，则 $\mathrm{FV(exp) = \{exp\}}$</li>
 <li>$\mathrm{exp}$ 是应用 $\mathrm{(e1~e2)}$，则 $\mathrm{FV(exp) = FV[e1]\cup FV[e2]}$</li>
-<li>$\mathrm{exp}$ 是抽象 $\lambda \mathrm{x.~deri}$，则 $\mathrm{FV(exp) = FV(deri) \backslash {x}}$</li>
+<li>$\mathrm{exp}$ 是抽象 $\lambda \mathrm{x.~deri}$，则 $\mathrm{FV(exp) = FV(deri) \backslash \{x\}}$</li>
 </ol>
 </blockquote>
 <p>例如：</p>
@@ -3756,11 +3945,11 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <h4 id="alpha-转化"><a href="#alpha-转化" class="headerlink" title="alpha-转化"></a>alpha-转化</h4><p>如果两个 Lambda 表达式$(\mathrm{\lambda x.e1}),(\mathrm{\lambda y.e2})$满足$\mathrm y\not\in\mathrm{FV[e1]}$ 并且 $\mathrm{e2=e1[x\leftarrow y]}$ 则称这两个表达式是 $\alpha$-等价（$\alpha$-equivalent）的。用符号 $\mathop{\rightarrow}\limits^\alpha$ 表示这一转化。</p>
 <blockquote>
 <p>$\alpha$-转化翻译成 <strong>转化</strong> 一词，是因为其注重了其转化的语义。</p>
-<p>在英文中我们使用：<em>equivalent</em> 表示该关系，实则描述的是一种等价关系。</p>
+<p>在英文中我们使用：_equivalent_ 表示该关系，实则描述的是一种等价关系。</p>
 </blockquote>
 <h4 id="beta-规约"><a href="#beta-规约" class="headerlink" title="beta-规约"></a>beta-规约</h4><p>$\beta$-规约是一个操作：将$\mathrm{(\lambda x.e1)~e2}$，转化为 $\mathrm{e1[x\leftarrow e2]}$。用符号 $\mathop {\rightarrow}\limits^\beta$ 表示这一操作。</p>
 <blockquote>
-<p>规约来自：<em>reduction</em> 一词，个人认为翻译为 <strong>约化</strong> 更为准确。</p>
+<p>规约来自：_reduction_ 一词，个人认为翻译为 <strong>约化</strong> 更为准确。</p>
 </blockquote>
 <div class="note note-primary">
             <h4 id="alpha-转化和-beta-规约的实例"><a href="#alpha-转化和-beta-规约的实例" class="headerlink" title="alpha-转化和 beta-规约的实例"></a>alpha-转化和 beta-规约的实例</h4><script type="math/tex; mode=display">\begin{aligned}\mathrm{(\lambda x.a~x~b)~(\lambda y.y)}&\mathop {\rightarrow}\limits^\beta\mathrm{a~(\lambda y.y)~b}\\\mathrm{(\lambda x.a~x~b)~(\lambda y.x)}&\mathop {\rightarrow}\limits^\alpha\mathrm{(\lambda q.a~q~b)~(\lambda y.x)}\\&\mathop{\rightarrow}\limits^\beta \mathrm{a~(\lambda y.x)~b}\end{aligned}</script>
@@ -3976,7 +4165,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <p>一个自然数可以定义为集合：</p>
 <ul>
 <li>$0=\emptyset$</li>
-<li>后继：$n^+=n\cup{n}$</li>
+<li>后继：$n^+=n\cup\{n\}$</li>
 </ul>
 <p>一个有穷集的势定义为与其等势的一个自然数。</p>
 </blockquote>
@@ -4004,75 +4193,6 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <p>类型化lambda演算的主要变化是增加了一个叫做「基类型」（base types）的概念。在类型化lambda演算中，你可以使用一些由原子值构成的论域（universe）， 这些值分为不同的简单类型。因此，例如，我们可以有一个类型 $N$，它由包含了自然数集合，也可以有一个类型 $B$，对应布尔值<code>true</code> / <code>false</code>，以及一个对应于字符串类型的类 $S$。</p>
 <p>现在我们有了基本类型，接下来我们讨论函数的类型。函数将一种类型（参数的类型）的值映射到的第二种类型（返回值的类型）的值。对于一个接受类型A的输入参数，并且返回类型B的值的函数，我们将它的类型写为$A \rightarrow B$ 。$\rightarrow$叫做函数类型构造器（function type constructor），它是右关联的，所以 $A \rightarrow B \rightarrow C$ 表示 $A \rightarrow (B \rightarrow C)$。</p>
 <p>TODO: 未完待续</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>Lambda演算</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Lambda 演算简介（3）</title>
-    <url>/2020/06/11/study/ComputerScience/LambdaCalculi/LambdaCalc3/</url>
-    <content><![CDATA[<p>Lambda 演算中的 Y 组合子</p>
-<a id="more"></a>
-<h2 id="Y-组合子：递归实现"><a href="#Y-组合子：递归实现" class="headerlink" title="Y 组合子：递归实现"></a>Y 组合子：递归实现</h2><p>在之前，我们都在做一些简单的操作，例如实现了分支结构 <code>s e1 e2</code> ，现在我们要考虑如何实现第二种结构：循环与递归（recursion）。</p>
-<p>在 Lambda 演算的世界里，递归是容易实现的，利用如下的 Y 组合子：</p>
-<p><code>Y = lambda y.(lambda x.y (x x)) (lambda x.y (x x))</code></p>
-<p>即：$\mathrm{Y = \lambda y.(\lambda x.y~(x~x))~(\lambda x.y~(x~x))}$</p>
-<p>我们试着计算 <code>Y Y</code> 的值：</p>
-<pre><code class="hljs racket">         Y Y
-(beta) &#x3D;&gt;(lambda x.Y (x x)) (lambda x.Y (x x))
-(alpha)&#x3D;&gt;(lambda x.Y (x x)) (lambda z.Y (z z))
-(beta) &#x3D;&gt;Y ((lambda z.Y (z z)) (lambda z.Y (z z)))
-(alpha)&#x3D;&gt;(lambda a. (lambda b . a (b b)) (lambda b. a (b b)))
-         ((lambda z. Y (z z)) (lambda z. Y (z z)))
-(beta) &#x3D;&gt;Y (Y Y)
-...... &#x3D;&gt;Y (Y (Y Y))
-......</code></pre>
-<p>可以发现，Y 组合子通过 <code>Y Y</code> 创造了自身！这似乎是一个无穷递归，我们换一个例子看一看：假定 <code>f</code> 是一个关于 <code>x</code> 的函数，例如<code>f = (lambda x.add1 x)</code></p>
-<pre><code class="hljs racket">         (Y f) x
-(beta) &#x3D;&gt;(lambda y.(y (lambda x.y (x x) lambda x.y(x x))) f) x
-(alpha)&#x3D;&gt;(f ((lambda x.f (x x)) (lambda x.f (x x)))) x
-(beta) &lt;&#x3D;(f (Y f)) x
-...... &lt;&#x3D;(f (f ( ... f(Y f))...) x</code></pre>
-<p>这还不够，因为 <code>f</code> 是一个一元的函数，按照这个形式，即使给 <code>f</code> 一定的条件，使之在某处停下，我们也无法使之<strong>停下的条件</strong>与任何一个 <code>x</code> 有关。就以上面的表达式为例：</p>
-<p><code>(Y f) =&gt; add1 (add1 (add1 ... )) x</code> 内部的 <code>add1</code> 并不会停下！</p>
-<p>例如：<code>f (f (f)) x</code> 在这里，前面是先演算的内容，但是很明显在第三层停下递归并不是 <code>x</code> 所控制的。这并不是我们想要的，但是已经十分接近了！给这个形式做一些改变，则需要一个形式保留下来这个结构，并且将 <code>add1</code> 换为一个二元运算 <code>mult</code>：</p>
-<pre><code class="hljs racket">         (Y (lambda t.lambda x.mult x (t x)))) a
-...... &#x3D;&gt;(lambda t.lambda x.mult x (t x) (Y lambda t.lambda x.mult(t x)) x) a
-(alpha)&#x3D;&gt;(lambda t.lambda x&#39;.mult x&#39; (t x&#39;) (Y lambda t.lambda x.mult(t x)) x) a
-(beta) &#x3D;&gt;(lambda x&#39;. mult x&#39; (Y (lambda t.lambda x.mult x (t x))) x)) a
-(beta) &#x3D;&gt;mult a (Y (lambda t.lambda x.mult x (t x))) a)
-...... &#x3D;&gt;mult a (mult a (mult a ( ... )))</code></pre>
-<p>最后我们加上一些判断，使之在某个地方停下，以及对于 <code>x</code> 的变换：</p>
-<pre><code class="hljs racket">LET: metafact &#x3D; lambda fact . (lambda n . IsZero n 1 (Mult n (fact (Pred n))))
-
-   metafact (Y metafact) n
-&#x3D;&gt; lambda n. zero? n 1 (mult n (Y metafact (Pred n))) n
-&#x3D;&gt; mult n (Y metafact (Pred n))
-&#x3D;&gt; mult n (metafact ((lambda x.metafact (x x)) (lambda x.metafact (x x))) (Pred n))
-&#x3D;&gt; mult n (metafact (Y metafact) (Pred n))</code></pre>
-<div class="note note-primary">
-            <p><strong>一点思考</strong></p><p>读者应分析结构：<code>lambda t.lambda x.f (t x) x</code>，指出其中 <code>f</code> 和 <code>t</code> 的作用：（在此仅给出个人的理解）</p><ul><li><code>f</code> 为函数算子</li><li><code>t</code> 为传入形式的复制</li></ul><p>如果从柯里化的角度看 Y 组合子是否更好？</p>
-          </div>
-<h2 id="SKI组合子"><a href="#SKI组合子" class="headerlink" title="SKI组合子"></a>SKI组合子</h2><p>先给出 SKI 组合子的定义：</p>
-<ul>
-<li><code>S = (lambda x y z.(x z (y z)))</code> </li>
-<li><code>K = (lambda x y. x)</code></li>
-<li><code>I = (lambda x.x)</code></li>
-</ul>
-<p>这个定义时很奇怪的，如何说呢，请看：</p>
-<pre><code class="hljs racket">  S K K x
-&#x3D;&gt;(K x) (K x)
-&#x3D;&gt;(lambda x y. x) x (K x)
-&#x3D;&gt;x</code></pre>
-<p>也就是说 <code>I = S K K</code>，其中 <code>=</code> 表示<strong>外延等价</strong>（extensional equivalence），当 <code>E x</code> 和 <code>E&#39; x</code> <strong>总是</strong>有相同的约化结果恒成立，则称 <code>E = E&#39;</code>。（另一种等价指<strong>内涵等价</strong>（intensional equivalence），当<code>E</code> 与 <code>E</code> 完全相同或经过 $\alpha$-转换后有相同的结果）。</p>
-<blockquote>
-<p>在此略去 <strong>组合子演算</strong> 部分，这一部分可以参考<a href="http://cgnail.github.io/academic/lambda-5/">这篇文章</a></p>
-</blockquote>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>程序设计</category>
@@ -4125,7 +4245,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 </li>
 </ul>
 <h2 id="质量、动量和动量守恒定律"><a href="#质量、动量和动量守恒定律" class="headerlink" title="质量、动量和动量守恒定律"></a>质量、动量和动量守恒定律</h2><div class="note note-primary">
-            <p><strong>理想实验：两质点间的相互作用</strong></p><p><strong>理想实验</strong>：假设两个质点只受到它们之间相互作用的影响，而与宇宙间的其他物质隔绝。</p><p><strong>实验内容</strong>：</p><blockquote><ol><li><p>在时刻$t$：</p><p>质点 1 在$A$，速度为$v_1$</p><p>质点 2 在$B$，速度为$v_2$</p></li><li><p>在稍后的时刻$t’$：</p><p>质点 1 在$A’$，速度为$v_1’$</p><p>质点 2 在$B’$，速度为$v_2’$</p></li><li><p>在时间间隔$\Delta t$内，两质点的速度变化分别为：</p><ul><li>$\Delta v_1 = v_1’-v_1$</li><li>$\Delta v_2 = v_2’-v_2$</li></ul></li></ol></blockquote><p><strong>实验结果分析</strong>(从实验数据归纳出的四点结论)：</p><blockquote><ol><li>在任意给定的时间间隔$\Delta t$内，速度变化$\Delta v_1$和$\Delta v_2$的方向相反。</li><li>$\Delta t \to 0$时，矢量$\mathrm{d} v_1$和$\mathrm{d} v_2$排在两质点的瞬时连线上。</li><li>不论时间间隔大小如何，两物体速度变化的大小之比为定值$\Delta v<em>1=-K</em>{12}\Delta v_2$</li><li>比例系数与质点有关（与如何运动无关）：$K_{12}=\frac{m_2}{m_1}$</li></ol></blockquote>
+            <p><strong>理想实验：两质点间的相互作用</strong></p><p><strong>理想实验</strong>：假设两个质点只受到它们之间相互作用的影响，而与宇宙间的其他物质隔绝。</p><p><strong>实验内容</strong>：</p><blockquote><ol><li><p>在时刻$t$：</p><p>质点 1 在$A$，速度为$v_1$</p><p>质点 2 在$B$，速度为$v_2$</p></li><li><p>在稍后的时刻$t’$：</p><p>质点 1 在$A’$，速度为$v_1’$</p><p>质点 2 在$B’$，速度为$v_2’$</p></li><li><p>在时间间隔$\Delta t$内，两质点的速度变化分别为：</p><ul><li>$\Delta v_1 = v_1’-v_1$</li><li>$\Delta v_2 = v_2’-v_2$</li></ul></li></ol></blockquote><p><strong>实验结果分析</strong>(从实验数据归纳出的四点结论)：</p><blockquote><ol><li>在任意给定的时间间隔$\Delta t$内，速度变化$\Delta v_1$和$\Delta v_2$的方向相反。</li><li>$\Delta t \to 0$时，矢量$\mathrm{d} v_1$和$\mathrm{d} v_2$排在两质点的瞬时连线上。</li><li>不论时间间隔大小如何，两物体速度变化的大小之比为定值$\Delta v_1=-K_{12}\Delta v_2$</li><li>比例系数与质点有关（与如何运动无关）：$K_{12}=\frac{m_2}{m_1}$</li></ol></blockquote>
           </div>
 <h3 id="物体的质量（Mass）"><a href="#物体的质量（Mass）" class="headerlink" title="物体的质量（Mass）"></a>物体的质量（Mass）</h3><ul>
 <li>惯性质量：表征物体速度改变难易程度（即惯性大小）的物理量</li>
@@ -4135,7 +4255,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <p>选取某一质点$0$作为<strong>标准质点</strong>，并让质点$1,2,3,\dots$分别与标准质点$0$相互作用，使标准质点$0$产生同样的速度变化 . 为了标明是相应于这种特定情况下的实验结果，我们将这类实验中 各质点的速度变化分别表示为$\Delta v_0,\Delta v_1^0,\Delta v_2^0,\dots$</p>
 <p>于是，$\Delta v_1^0,\Delta v_2^0,\dots$的大小就反映出了 各质点在相互作用过程中<strong>速度改变的难易程度</strong>，即质点<strong>惯性</strong>的大小，<strong>速度改变大的质点惯性小</strong>。</p>
 <p><strong>分析</strong>:</p>
-<p>将前述理想实验的普遍结果$\Delta v<em>1=-K</em>{12}\Delta v_2$应用于这里所安排的特殊实验，我们可以对于各个质点对$\lbrace 0,1\rbrace,\lbrace 0,2\rbrace,\lbrace 0,3\rbrace,\dots$所进行的实验，分别写出：</p>
+<p>将前述理想实验的普遍结果$\Delta v_1=-K_{12}\Delta v_2$应用于这里所安排的特殊实验，我们可以对于各个质点对$\lbrace 0,1\rbrace,\lbrace 0,2\rbrace,\lbrace 0,3\rbrace,\dots$所进行的实验，分别写出：</p>
 <script type="math/tex; mode=display">
 \Delta v_0=-K_{01}\Delta v_1^0
 \\
@@ -4195,7 +4315,7 @@ or \quad &\pmb{p}_1+\pmb{p}_2=Constant
 <ul>
 <li><p>$\frac{\mathrm{d}p_1}{\mathrm{d}t}=-\frac{\mathrm{d}p_2}{\mathrm{d}t}$表明，在任意时刻，构成孤立系的两个质点的动量瞬时变化率大小相等，方向相反。从另一个角度来看，当两个质点相互作用时，我们可以说每一个质点对另一个质点都作用一个力。</p>
 </li>
-<li><p>与此同时，质点 1 对质点 2 的作用力$F<em>{21}$，则为单位时间内质点 1 传递给质点 2 的动量，即$F</em>{12}=-F_{21}$</p>
+<li><p>与此同时，质点 1 对质点 2 的作用力$F_{21}$，则为单位时间内质点 1 传递给质点 2 的动量，即$F_{12}=-F_{21}$</p>
 </li>
 </ul>
 <p><strong>力的累积效应</strong>：</p>
@@ -4204,7 +4324,7 @@ or \quad &\pmb{p}_1+\pmb{p}_2=Constant
 <li>对$r$积累：$W,\Delta E$ 功、动能定理、机械能守恒</li>
 </ul>
 <h3 id="力的叠加原理、质点系动量守恒的条件"><a href="#力的叠加原理、质点系动量守恒的条件" class="headerlink" title="力的叠加原理、质点系动量守恒的条件"></a>力的叠加原理、质点系动量守恒的条件</h3><p><strong>质点系</strong>：由若干个相互作用着的质点组成。</p>
-<p><strong>力的叠加原理</strong>：假定每个质点$i$的动量$p<em>i$的增加是所有其他质点传递给它的动量的矢量和；换言之，每个质点$i$所受到的力$F_i$，等于所有其他质点$j$对它的作用力$F</em>{ij}$的矢量和，即$\frac{dp<em>i}{dt}=F_i=\sum\limits</em>{j \neq i}{F_{ij}}$。</p>
+<p><strong>力的叠加原理</strong>：假定每个质点$i$的动量$p_i$的增加是所有其他质点传递给它的动量的矢量和；换言之，每个质点$i$所受到的力$F_i$，等于所有其他质点$j$对它的作用力$F_{ij}$的矢量和，即$\frac{dp_i}{dt}=F_i=\sum\limits_{j \neq i}{F_{ij}}$。</p>
 <p><strong>系统</strong>：从一个大体系中分离出一部分作为考虑对象。</p>
 <p><strong>外界</strong>：大体系的其余部分。</p>
 <p><strong>内力</strong>：系统内各质点之间的相互作用力</p>
@@ -4251,7 +4371,7 @@ F=F^{in}+F^{ex}=\sum{(F^{in}+F^{ex})}=\sum F^{ex}</script><p>所以，系统的�
 </blockquote>
 <h3 id="牛顿运动定律的表述"><a href="#牛顿运动定律的表述" class="headerlink" title="牛顿运动定律的表述"></a>牛顿运动定律的表述</h3><p><strong>牛顿第一定律</strong>：任何物体，只要没有外力改变它的状态，便永远保持静止或匀速直线运动的状态。<strong>惯性</strong>：物体保持其运动状态不变的性质。</p>
 <p><strong>牛顿第二定律</strong>：在受到外力作用时，物体所获得的加速度的大小与外力矢量和的大小成正比，并与物体的质量成反比，加速度的方向与外力矢量和的方向相同，即$F=ma$</p>
-<p><strong>牛顿第三定律</strong>：两物体相互作用时，作用力和反作用力大小相等，方向相反，在同一条直线上。若用 1 和 2 表示这两个物体，则有$F<em>{12}=-F</em>{21}$.</p>
+<p><strong>牛顿第三定律</strong>：两物体相互作用时，作用力和反作用力大小相等，方向相反，在同一条直线上。若用 1 和 2 表示这两个物体，则有$F_{12}=-F_{21}$.</p>
 <blockquote>
 <ul>
 <li>作用力和反作用力总是成对出现。</li>
@@ -4285,7 +4405,7 @@ F=F^{in}+F^{ex}=\sum{(F^{in}+F^{ex})}=\sum F^{ex}</script><p>所以，系统的�
 <p>当然，通过整理实验观测结果去寻求力，往往是比较困难的。</p>
 <h4 id="自然界中几种常见力"><a href="#自然界中几种常见力" class="headerlink" title="自然界中几种常见力"></a>自然界中几种常见力</h4><ul>
 <li><p><strong>万有引力</strong></p>
-<p>$F_{21}=-G\frac{m_1m_2}{r^2}{e}_r,\ e_r=\frac{\vec r}{r}$</p>
+<p>$F_{21}=-G\frac{m_1m_2}{r^2}{e}_r,\\ e_r=\frac{\vec r}{r}$</p>
 <p>$g_0=9.83m/s^2$</p>
 </li>
 </ul>
@@ -4373,12 +4493,12 @@ t'&=t
    a&=\frac{dv}{dt}=\frac{\mathrm{d}(\dot r \vec e_r+r\dot \theta \vec e_ \theta )}{\mathrm d t}\\
    &=\ddot r \vec e_r+\dot r\dot\theta\vec e_\theta+\dot r\dot \theta\vec e_\theta+r\ddot\theta\vec e_\theta+r\dot \theta(-\dot \theta\vec e_r)\\
    &=-r\dot\theta^2\vec e_r+2v\dot \theta \vec e_\theta
-\end{aligned}</script><p>在这里：$-r\dot\theta^2\vec e<em>r$是惯性离心力的表示，而后者就是科里奥利力$\pmb F</em>\mathrm c=-2mv’w\pmb e_\theta = 2m\pmb v’ \times\pmb \omega$</p>
+\end{aligned}</script><p>在这里：$-r\dot\theta^2\vec e_r$是惯性离心力的表示，而后者就是科里奥利力$\pmb F_\mathrm c=-2mv’w\pmb e_\theta = 2m\pmb v’ \times\pmb \omega$</p>
 <h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><blockquote>
 <p>这部分好难，唉</p>
 </blockquote>
 <div class="note note-primary">
-            <h3 id="知道运动状态求力"><a href="#知道运动状态求力" class="headerlink" title="知道运动状态求力"></a>知道运动状态求力</h3><p>最简单的题目，例如</p><blockquote><p><em>例题 2-2</em></p><p>一辆货车以 $3m/s$ 恒定速度前进，煤以 $5t/s$ 的速率竖直注入车厢，求牵引力</p><p>实际上很简单，用微元法并运用动量守恒列方程即可，一道十分简单的变质量运动问题。</p></blockquote><p>也有</p><blockquote><p><em>例题 2-17</em></p><p>超速离心机的转速为 $1000转/s$ ，求转轴 $10\mathrm{cm}$ 处的分子受到惯性力和重力之比</p></blockquote><h3 id="变质量系统问题题解"><a href="#变质量系统问题题解" class="headerlink" title="变质量系统问题题解"></a>变质量系统问题题解</h3><p>稍难一些的变质量运动问题：</p><blockquote><p><em>例题 2-7</em></p><p>一架喷气式飞机以 $v=210~\mathrm{m/s}$ 飞行，其引擎每秒吸入 $75~\mathrm{kg}$ 空气，并与 $3~\mathrm{kg}$ 燃料混合后，以相对于飞机 $u=490~\mathrm{m/s}$ 的速度向后喷出，求推力。</p></blockquote><p>实际上可以直接给出一个标准的解题方式：</p><p>设火箭在 $t$ 时刻有质量 $m’$，速度为 $v$，使用微元法，在 $dt$ 时间内，有燃料 $dm$ 相对火箭以 $u$ 的速度喷出，火箭速度为 $v+dv$：</p><script type="math/tex; mode=display">\begin{array}{l}\vec F\mathrm dt=m'\mathrm d\vec v+\vec u\mathrm dm\\\Rightarrow\vec v =\vec v_0+\mathrm u\ln\frac {m'}{m'_0}\end{array}</script><p>用微元法是解决变质量系统问题的常用方法</p><blockquote><p><em>例题 2.2</em> 火箭运动的基本原理</p></blockquote><p>密舍尔斯基方程：$m’\frac{\mathrm d\vec{v}}{\mathrm dt}=\vec{F}+\vec u \frac {\mathrm d m’}{\mathrm d t}$</p><p>$\vec{u}$ （离开的质量部分）相对速度</p><h3 id="知道力求运动状态"><a href="#知道力求运动状态" class="headerlink" title="知道力求运动状态"></a>知道力求运动状态</h3><p>这一部分的题目相对简单，选择合理的坐标系并且列出运动方程即可。一般分情况讨论的问题居多</p><blockquote><p><em>例题 2-11</em></p><p>给定一个平面和三个木块（水平一排相靠放在桌上），现 F 作用在最左侧的木块，讨论不同推力、不同摩擦系数情况下，物体的相互作用力大小。</p><p>这里直接列一些公式和条件即可解出，求运动状态的特征不明显。</p></blockquote><p>或者是</p><blockquote><p><em>例题 2-14</em></p><p>物体 $m$ 从高度为 $h$ 初下落如水中，在水中有粘滞阻力 $bv^2$ 求 $x(t),v(t)$</p><p>直角坐标系下解出结果即可</p></blockquote><p>极坐标系下常常有旋转半径约束，只需要记住 $\displaystyle F=mr^2\omega=mvr=m\frac{v^2}r$</p><blockquote><p><em>例题 2-19</em></p><p>有一个密度均匀的球体，以角速度 $\omega$ 绕自身几何对称轴旋转，若维持其表面物质不因快速旋转二被甩掉的力只有万有引力，求其密度的最小值。</p></blockquote><h3 id="伽利略变换、相对运动、非惯性系"><a href="#伽利略变换、相对运动、非惯性系" class="headerlink" title="伽利略变换、相对运动、非惯性系"></a>伽利略变换、相对运动、非惯性系</h3><p>这类题目较少，但实则非常难</p><blockquote><p>升降机中光滑桌面上有物体 $m_A=100g$ ，通过滑轮与物体 $m_B=200g$ 相连。当升降机以加速度 $a$ 上升，求升降机内、地面上两人看到的 $A,B$ 的加速度。</p><p>细心一点，多花点时间计算和复查，问题不大。</p></blockquote><h3 id="动量定理、动量守恒"><a href="#动量定理、动量守恒" class="headerlink" title="动量定理、动量守恒"></a>动量定理、动量守恒</h3><p>多用矢量表示动量。</p><blockquote><p>设有一静止的原子核，衰变辐射出一个电子和一个反中微子后成为一个新的原子核。已知电子和反中微子的运动方向互相垂直，且电子动量为$1.2\times10^{-22}\mathrm{kg·m·s^{-1}}$，反中微子的动量为$6.4\times10^{-23}\mathrm{kg·m·s^{-1}}$。问新的原子核的动量的值和方向如何？</p></blockquote><p>动量定理的题目一般不难：</p><blockquote><p>质量$m=1kg$的质点从 O 点开始沿半径 R=2m 的圆周逆时针运动。以 O 点为自然坐标原点，已知质点的运动方程为 $s=0.5\pi t^2\mathrm m$。试求从 $t=\sqrt 2s$ 到 $t=2s$ 这段时间内质点所受合外力的冲量。</p></blockquote>
+            <h3 id="知道运动状态求力"><a href="#知道运动状态求力" class="headerlink" title="知道运动状态求力"></a>知道运动状态求力</h3><p>最简单的题目，例如</p><blockquote><p>_例题 2-2_</p><p>一辆货车以 $3m/s$ 恒定速度前进，煤以 $5t/s$ 的速率竖直注入车厢，求牵引力</p><p>实际上很简单，用微元法并运用动量守恒列方程即可，一道十分简单的变质量运动问题。</p></blockquote><p>也有</p><blockquote><p>_例题 2-17_</p><p>超速离心机的转速为 $1000转/s$ ，求转轴 $10\mathrm{cm}$ 处的分子受到惯性力和重力之比</p></blockquote><h3 id="变质量系统问题题解"><a href="#变质量系统问题题解" class="headerlink" title="变质量系统问题题解"></a>变质量系统问题题解</h3><p>稍难一些的变质量运动问题：</p><blockquote><p>_例题 2-7_</p><p>一架喷气式飞机以 $v=210~\mathrm{m/s}$ 飞行，其引擎每秒吸入 $75~\mathrm{kg}$ 空气，并与 $3~\mathrm{kg}$ 燃料混合后，以相对于飞机 $u=490~\mathrm{m/s}$ 的速度向后喷出，求推力。</p></blockquote><p>实际上可以直接给出一个标准的解题方式：</p><p>设火箭在 $t$ 时刻有质量 $m’$，速度为 $v$，使用微元法，在 $dt$ 时间内，有燃料 $dm$ 相对火箭以 $u$ 的速度喷出，火箭速度为 $v+dv$：</p><script type="math/tex; mode=display">\begin{array}{l}\vec F\mathrm dt=m'\mathrm d\vec v+\vec u\mathrm dm\\\Rightarrow\vec v =\vec v_0+\mathrm u\ln\frac {m'}{m'_0}\end{array}</script><p>用微元法是解决变质量系统问题的常用方法</p><blockquote><p>_例题 2.2_ 火箭运动的基本原理</p></blockquote><p>密舍尔斯基方程：$m’\frac{\mathrm d\vec{v}}{\mathrm dt}=\vec{F}+\vec u \frac {\mathrm d m’}{\mathrm d t}$</p><p>$\vec{u}$ （离开的质量部分）相对速度</p><h3 id="知道力求运动状态"><a href="#知道力求运动状态" class="headerlink" title="知道力求运动状态"></a>知道力求运动状态</h3><p>这一部分的题目相对简单，选择合理的坐标系并且列出运动方程即可。一般分情况讨论的问题居多</p><blockquote><p>_例题 2-11_</p><p>给定一个平面和三个木块（水平一排相靠放在桌上），现 F 作用在最左侧的木块，讨论不同推力、不同摩擦系数情况下，物体的相互作用力大小。</p><p>这里直接列一些公式和条件即可解出，求运动状态的特征不明显。</p></blockquote><p>或者是</p><blockquote><p>_例题 2-14_</p><p>物体 $m$ 从高度为 $h$ 初下落如水中，在水中有粘滞阻力 $bv^2$ 求 $x(t),v(t)$</p><p>直角坐标系下解出结果即可</p></blockquote><p>极坐标系下常常有旋转半径约束，只需要记住 $\displaystyle F=mr^2\omega=mvr=m\frac{v^2}r$</p><blockquote><p>_例题 2-19_</p><p>有一个密度均匀的球体，以角速度 $\omega$ 绕自身几何对称轴旋转，若维持其表面物质不因快速旋转二被甩掉的力只有万有引力，求其密度的最小值。</p></blockquote><h3 id="伽利略变换、相对运动、非惯性系"><a href="#伽利略变换、相对运动、非惯性系" class="headerlink" title="伽利略变换、相对运动、非惯性系"></a>伽利略变换、相对运动、非惯性系</h3><p>这类题目较少，但实则非常难</p><blockquote><p>升降机中光滑桌面上有物体 $m_A=100g$ ，通过滑轮与物体 $m_B=200g$ 相连。当升降机以加速度 $a$ 上升，求升降机内、地面上两人看到的 $A,B$ 的加速度。</p><p>细心一点，多花点时间计算和复查，问题不大。</p></blockquote><h3 id="动量定理、动量守恒"><a href="#动量定理、动量守恒" class="headerlink" title="动量定理、动量守恒"></a>动量定理、动量守恒</h3><p>多用矢量表示动量。</p><blockquote><p>设有一静止的原子核，衰变辐射出一个电子和一个反中微子后成为一个新的原子核。已知电子和反中微子的运动方向互相垂直，且电子动量为$1.2\times10^{-22}\mathrm{kg·m·s^{-1}}$，反中微子的动量为$6.4\times10^{-23}\mathrm{kg·m·s^{-1}}$。问新的原子核的动量的值和方向如何？</p></blockquote><p>动量定理的题目一般不难：</p><blockquote><p>质量$m=1kg$的质点从 O 点开始沿半径 R=2m 的圆周逆时针运动。以 O 点为自然坐标原点，已知质点的运动方程为 $s=0.5\pi t^2\mathrm m$。试求从 $t=\sqrt 2s$ 到 $t=2s$ 这段时间内质点所受合外力的冲量。</p></blockquote>
           </div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>

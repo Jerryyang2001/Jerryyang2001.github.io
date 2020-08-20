@@ -250,9 +250,9 @@
 <blockquote>
 <p>用 $\mathrm{FV[exp]}$ 表示一个集合，表示在一个 Lambda 表达式 $\mathrm{exp}$ 中的所有自由变量：</p>
 <ol>
-<li>$\mathrm{exp}$ 是变量，则 $\mathrm{FV(exp) = {exp}}$</li>
+<li>$\mathrm{exp}$ 是变量，则 $\mathrm{FV(exp) = \{exp\}}$</li>
 <li>$\mathrm{exp}$ 是应用 $\mathrm{(e1~e2)}$，则 $\mathrm{FV(exp) = FV[e1]\cup FV[e2]}$</li>
-<li>$\mathrm{exp}$ 是抽象 $\lambda \mathrm{x.~deri}$，则 $\mathrm{FV(exp) = FV(deri) \backslash {x}}$</li>
+<li>$\mathrm{exp}$ 是抽象 $\lambda \mathrm{x.~deri}$，则 $\mathrm{FV(exp) = FV(deri) \backslash \{x\}}$</li>
 </ol>
 </blockquote>
 <p>例如：</p>
@@ -274,11 +274,11 @@
 <h4 id="alpha-转化"><a href="#alpha-转化" class="headerlink" title="alpha-转化"></a>alpha-转化</h4><p>如果两个 Lambda 表达式$(\mathrm{\lambda x.e1}),(\mathrm{\lambda y.e2})$满足$\mathrm y\not\in\mathrm{FV[e1]}$ 并且 $\mathrm{e2=e1[x\leftarrow y]}$ 则称这两个表达式是 $\alpha$-等价（$\alpha$-equivalent）的。用符号 $\mathop{\rightarrow}\limits^\alpha$ 表示这一转化。</p>
 <blockquote>
 <p>$\alpha$-转化翻译成 <strong>转化</strong> 一词，是因为其注重了其转化的语义。</p>
-<p>在英文中我们使用：<em>equivalent</em> 表示该关系，实则描述的是一种等价关系。</p>
+<p>在英文中我们使用：_equivalent_ 表示该关系，实则描述的是一种等价关系。</p>
 </blockquote>
 <h4 id="beta-规约"><a href="#beta-规约" class="headerlink" title="beta-规约"></a>beta-规约</h4><p>$\beta$-规约是一个操作：将$\mathrm{(\lambda x.e1)~e2}$，转化为 $\mathrm{e1[x\leftarrow e2]}$。用符号 $\mathop {\rightarrow}\limits^\beta$ 表示这一操作。</p>
 <blockquote>
-<p>规约来自：<em>reduction</em> 一词，个人认为翻译为 <strong>约化</strong> 更为准确。</p>
+<p>规约来自：_reduction_ 一词，个人认为翻译为 <strong>约化</strong> 更为准确。</p>
 </blockquote>
 <div class="note note-primary">
             <h4 id="alpha-转化和-beta-规约的实例"><a href="#alpha-转化和-beta-规约的实例" class="headerlink" title="alpha-转化和 beta-规约的实例"></a>alpha-转化和 beta-规约的实例</h4><script type="math/tex; mode=display">\begin{aligned}\mathrm{(\lambda x.a~x~b)~(\lambda y.y)}&\mathop {\rightarrow}\limits^\beta\mathrm{a~(\lambda y.y)~b}\\\mathrm{(\lambda x.a~x~b)~(\lambda y.x)}&\mathop {\rightarrow}\limits^\alpha\mathrm{(\lambda q.a~q~b)~(\lambda y.x)}\\&\mathop{\rightarrow}\limits^\beta \mathrm{a~(\lambda y.x)~b}\end{aligned}</script>

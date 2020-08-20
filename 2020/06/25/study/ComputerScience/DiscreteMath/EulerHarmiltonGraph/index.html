@@ -241,7 +241,7 @@
 <p><strong>Thm</strong>：有向图 D 是半欧拉图，当且仅当其是<strong>单向连通</strong>的且有两个奇度顶点，一个入度比出度大 1，一个入度比出度小 1，其余每个顶点的<strong>出度等于入度</strong>。</p>
 <p><strong>Thm</strong>：G 是非平凡的欧拉图，当且仅当 G 是连通的且为几个不重合的圈的并</p>
 <div class="note note-primary">
-            <p><strong>Fleury Alg （求欧拉回路）</strong></p><ol><li>任取 $v_0\in V(G)$，令 $P_0=v_0$</li><li>设 $P_i = v_0e_1\dots e_i v_i$，若 $E(G) - {e_1,e_2,\dots,e_i}$中没有与 $v_i$ 关联的边，则停止，否则按以下条件选下一条边：<ol><li>$e_{i+1}$ 与 $v_i$ 关联</li><li>优先选：$e_{i+1}$ 不是 $G-{e_1,\dots,e_i}$ 中的桥</li></ol></li></ol>
+            <p><strong>Fleury Alg （求欧拉回路）</strong></p><ol><li>任取 $v_0\in V(G)$，令 $P_0=v_0$</li><li>设 $P_i = v_0e_1\dots e_i v_i$，若 $E(G) - \{e_1,e_2,\dots,e_i\}$中没有与 $v_i$ 关联的边，则停止，否则按以下条件选下一条边：<ol><li>$e_{i+1}$ 与 $v_i$ 关联</li><li>优先选：$e_{i+1}$ 不是 $G-\{e_1,\dots,e_i\}$ 中的桥</li></ol></li></ol>
           </div>
 <h2 id="哈密顿图"><a href="#哈密顿图" class="headerlink" title="哈密顿图"></a>哈密顿图</h2><p><strong>Def</strong>：</p>
 <ul>
