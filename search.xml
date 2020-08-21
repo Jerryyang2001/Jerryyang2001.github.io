@@ -244,9 +244,10 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
             <p>为啥我 7：30写得差不多了，睡了一觉，你们都还在写啊？？？就两道大题啊喂！！！</p><p>给孩子留个生路叭！！！</p>
           </div>
 <div>
-            <input type="checkbox" disabled>基础物理
+            <input type="checkbox" disabled checked="checked">基础物理
           </div>
-<p>08-21 09:00-11:00(星期五)</p>
+<span class="label label-danger">爆炸【危】</span> 08-21 09:00-11:00(星期五)
+
 <div>
             <input type="checkbox" disabled>离散数学
           </div>
@@ -356,7 +357,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 </ul>
 </li>
 </ul>
-<h5 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h5><div>
+<h4 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h4><div>
             <input type="checkbox" disabled checked="checked">判断是否是命题、符号化、判断真值
           </div>
 <ul>
@@ -399,7 +400,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <li>归谬法</li>
 <li>消解证明法</li>
 </ul>
-<h5 id="一阶逻辑"><a href="#一阶逻辑" class="headerlink" title="一阶逻辑"></a>一阶逻辑</h5><div>
+<h4 id="一阶逻辑"><a href="#一阶逻辑" class="headerlink" title="一阶逻辑"></a>一阶逻辑</h4><div>
             <input type="checkbox" disabled checked="checked">符号化、判断真值、解释、个体域
           </div>
 <div>
@@ -417,7 +418,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <div>
             <input type="checkbox" disabled checked="checked">推理理论
           </div>
-<h5 id="集合论"><a href="#集合论" class="headerlink" title="集合论"></a>集合论</h5><div>
+<h4 id="集合论"><a href="#集合论" class="headerlink" title="集合论"></a>集合论</h4><div>
             <input type="checkbox" disabled checked="checked">表示法、集合运算（交并、广义交并、绝对补、相对补、幂集）
           </div>
 <div>
@@ -427,7 +428,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <li><span class="label label-success">容斥原理</span>
 </li>
 </ul>
-<h5 id="二元关系和函数"><a href="#二元关系和函数" class="headerlink" title="二元关系和函数"></a>二元关系和函数</h5><div>
+<h4 id="二元关系和函数"><a href="#二元关系和函数" class="headerlink" title="二元关系和函数"></a>二元关系和函数</h4><div>
             <input type="checkbox" disabled checked="checked">关系的定义、运算（逆、右复合）
           </div>
 <div>
@@ -473,7 +474,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <li>集合等势证明</li>
 <li>连续统假设</li>
 </ul>
-<h5 id="二元运算、代数系统"><a href="#二元运算、代数系统" class="headerlink" title="二元运算、代数系统"></a>二元运算、代数系统</h5><div>
+<h4 id="二元运算、代数系统"><a href="#二元运算、代数系统" class="headerlink" title="二元运算、代数系统"></a>二元运算、代数系统</h4><div>
             <input type="checkbox" disabled checked="checked">判断是否封闭（子代数）
           </div>
 <div>
@@ -485,7 +486,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <div class="note note-primary">
             <p>同态：</p><p>指一个映射，使得 $f(x * y) = f(x)\circ f(y)$</p>
           </div>
-<h5 id="群"><a href="#群" class="headerlink" title="群"></a>群</h5><div>
+<h4 id="群"><a href="#群" class="headerlink" title="群"></a>群</h4><div>
             <input type="checkbox" disabled checked="checked">判断是否是半群、独异点、群
           </div>
 <div>
@@ -512,7 +513,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <li>定义在陪集上的等价关系</li>
 <li>指数、拉格朗日定理</li>
 </ul>
-<h5 id="格"><a href="#格" class="headerlink" title="格"></a>格</h5><div>
+<h4 id="格"><a href="#格" class="headerlink" title="格"></a>格</h4><div>
             <input type="checkbox" disabled>定义、性质
           </div>
 <ul>
@@ -537,7 +538,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <ul>
 <li>交换、分配律、同一律、补元律</li>
 </ul>
-<h5 id="图"><a href="#图" class="headerlink" title="图"></a>图</h5><div>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><div>
             <input type="checkbox" disabled>一大堆的定义！
           </div>
 <ul>
@@ -587,7 +588,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <ul>
 <li>矩阵表示：关联矩阵$M(D)$、邻接矩阵$A(D)$、可达矩阵</li>
 </ul>
-<h5 id="欧拉图、哈密顿图"><a href="#欧拉图、哈密顿图" class="headerlink" title="欧拉图、哈密顿图"></a>欧拉图、哈密顿图</h5><div>
+<h4 id="欧拉图、哈密顿图"><a href="#欧拉图、哈密顿图" class="headerlink" title="欧拉图、哈密顿图"></a>欧拉图、哈密顿图</h4><div>
             <input type="checkbox" disabled>欧拉图
           </div>
 <ul>
@@ -597,7 +598,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <li>构造欧拉通路</li>
 </ul>
 <div class="note note-primary">
-            <p><span class="label label-success">Method</span> <strong>Fluery算法</strong></p><!-- TODO: -->
+            <p><span class="label label-success">Method</span> <strong>Fluery算法</strong></p>
           </div>
 <div>
             <input type="checkbox" disabled>哈密顿图
@@ -627,7 +628,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <div>
             <input type="checkbox" disabled checked="checked">TSP
           </div>
-<h5 id="树"><a href="#树" class="headerlink" title="树"></a>树</h5><div>
+<h4 id="树"><a href="#树" class="headerlink" title="树"></a>树</h4><div>
             <input type="checkbox" disabled>定义、性质
           </div>
 <ul>
@@ -667,7 +668,7 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <li>前中后</li>
 <li>波兰符号法、逆波兰符号法</li>
 </ul>
-<h5 id="平面图"><a href="#平面图" class="headerlink" title="平面图"></a>平面图</h5><div>
+<h4 id="平面图"><a href="#平面图" class="headerlink" title="平面图"></a>平面图</h4><div>
             <input type="checkbox" disabled>定义
           </div>  <span class="label label-danger">又一大堆</span>
 <ul>
@@ -709,62 +710,11 @@ hexo s <span class="hljs-comment"># 精简模式</span></code></pre>
 <ul>
 <li>和原来的图的关系？</li>
 </ul>
-<h3 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h3><div class="note note-primary">
-            <p>极值的判断：</p><ol><li>正定极小</li><li>负定极大</li><li>半正定、半负定不确定</li><li>其他：不是极值点</li></ol>
-          </div>
-<div class="note note-success">
-            <p>一定要看清楚曲线是否只是一部分。如 <code>y &gt; 0</code></p>
-          </div>
-<div class="note note-primary">
-            <p>积分区域内有不可导点？</p>
-          </div>
-<div class="note note-success">
-            <p>方向导数 = ?</p><p>全微分 = ?</p>
-          </div>
-<div class="note note-primary">
-            <p>连续、可偏导、可微的关系</p>
-          </div>
-<div class="note note-success">
-            <p>幂级数和函数在 <code>x = 0</code> 处有时需要单独考虑</p>
-          </div>
-<div class="note note-primary">
-            <p>$\displaystyle\ln (1+x) = x - \frac 1 2 x^2 + \frac 1 3 x^3 + \dots$</p><p>$\displaystyle\frac{1}{1-x} = 1 + x + x^2 + \dots$</p>
-          </div>
-<div class="note note-success">
-            <p>正向、上（下）侧</p><p>Gauss / Green / Stokes 公式都怎么用？</p>
-          </div>
-<div class="note note-primary">
-            <p>梯度、散度、旋度</p><p>别忘了连续的场：无源 = 无旋 = 有势</p>
-          </div>
-<div class="note note-success">
-            <p>反常积分 + 级数</p>
-          </div>
-<div class="note note-primary">
-            <p>极限怎么求（泰勒公式等）。</p>
-          </div>
-<div class="note note-success">
-            <p>别忘了和函数要求出收敛域。</p>
-          </div>
-<div class="note note-primary">
-            <p>有的题目，大可不必用 <code>Stokes</code> 公式！</p><p>例如：</p><script type="math/tex; mode=display">?=I=\int_C(y^2-z)dx+(2z-x^2)dy +(3x^2-y^2)dz,\\C为x+y+z=2和\frac{x^2}{4}+y^2=1的交线</script><p>令</p><script type="math/tex; mode=display">\begin{aligned}  &x = 2\cos \theta\\  &y=2\sin\theta\\  &z=2-x-y\end{aligned}</script>
-          </div>
-<div class="note note-success">
-            <p>几个积分中值定理！</p>
-          </div>
-<div class="note note-primary">
-            <p>柯西不等式的积分形式</p><p>重积分证明一些积分相关的不等式</p>
-          </div>
-<div class="note note-success">
-            <p>曲率？？？挠率？？？</p>
-          </div>
-<div class="note note-primary">
-            <p><a class="btn" href="/2020/05/22/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry/" title="向量空间" target="_blank">向量空间</a></p>
-          </div>
-<div class="note note-primary">
-            <p>$arsh~x=ln(x+\sqrt{x^2+1})$</p>
-          </div>
 <div class="note note-warning">
-            <p><strong>难题</strong></p><script type="math/tex; mode=display">\begin{aligned}  侧面：&I_1 =\iint \frac{y\ dx\wedge dz}{x^2+y^2+z^2}\\  底面：&I_2 = 0\\  I &= I_1 + I_2 \\    &= \int_{-R}^R\int_{-R}^R 2 \frac{\sqrt{R^2-z^2}\ dz\ dx}{x^2 + R^2}\\    &= \frac{\pi^2R}{2}\\\\    &\frac{\partial f}{\partial x} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial x},\quad \frac{\partial f}{\partial y} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial y}\\    \Rightarrow& \sqrt{f_x^2 + f_y ^ 2} = f_r\\    &|\iint_D f\ dx\ dy\ | = |\iint_D f\cdot r\ dr \ d\theta \ |\\    =&\frac{1}{2} |0 - \iint_D r^2 f_r\ dr \ d\theta|\ dr \ d\theta\\    \le&\frac{1}{2}\iint_Dr^2\max|f_r|\\    =&2\pi\cdot\frac{1}{6}\max |f_r|\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}  (1)\quad&u_{xx}+u_{yy}+cu = 0, c<0\\  &若取得正最大，则为极大值，Hessian 负定\\  &而极大值点处u_{xx} + u_{yy}>0\\  &u_{xx} < 0,\ u_{xx}u_{yy}-u_{xy}^2 >0\\  &简单讨论一下不可能，取得负最小值的时类似证明即可\\\\  (2)\quad&在u上只有可能有非负最小值和非正最大值\\  &最小值记为 m\ge 0，最大值记为M\le 0 而 M \ge m,则 M = m =0\\  \Rightarrow& u(x,y) = 0\end{aligned}</script>
+            <h4 id="几个算法"><a href="#几个算法" class="headerlink" title="几个算法"></a>几个算法</h4><ol><li>求传递闭包 Warshall</li><li></li></ol><h4 id="几个性质"><a href="#几个性质" class="headerlink" title="几个性质"></a>几个性质</h4><ol><li>等价关系：自反、对称、传递</li><li>偏序关系：自反、反对称、传递</li><li>函数：单射、满射、双射</li><li></li></ol>
+          </div>
+<h3 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h3><div class="note note-primary">
+            <p>极值的判断：</p><ol><li>正定极小</li><li>负定极大</li><li>半正定、半负定不确定</li><li>其他：不是极值点</li></ol><p>一定要看清楚曲线是否只是一部分。如 <code>y &gt; 0</code></p><p>积分区域内有不可导点？</p><p>方向导数 = ?</p><p>全微分 = ?</p><p>连续、可偏导、可微的关系</p><p>幂级数和函数在 <code>x = 0</code> 处有时需要单独考虑</p><p>$\displaystyle\ln (1+x) = x - \frac 1 2 x^2 + \frac 1 3 x^3 + \dots$</p><p>$\displaystyle\frac{1}{1-x} = 1 + x + x^2 + \dots$</p><p>正向、上（下）侧</p><p>Gauss / Green / Stokes 公式都怎么用？</p><p>梯度、散度、旋度</p><p>别忘了连续的场：无源 = 无旋 = 有势</p><p>反常积分 + 级数</p><p>极限怎么求（泰勒公式等）。</p><p>别忘了和函数要求出收敛域。</p><p>有的题目，大可不必用 <code>Stokes</code> 公式！</p><p>例如：</p><script type="math/tex; mode=display">?=I=\int_C(y^2-z)dx+(2z-x^2)dy +(3x^2-y^2)dz,\\C为x+y+z=2和\frac{x^2}{4}+y^2=1的交线</script><p>令</p><script type="math/tex; mode=display">\begin{aligned}  &x = 2\cos \theta\\  &y=2\sin\theta\\  &z=2-x-y\end{aligned}</script><p>几个积分中值定理！</p><p>柯西不等式的积分形式</p><p>重积分证明一些积分相关的不等式</p><p>曲率？？？挠率？？？</p><p><a class="btn" href="/2020/05/22/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry/" title="向量空间" target="_blank">向量空间</a></p><p>$arsh~x=ln(x+\sqrt{x^2+1})$</p><p><strong>难题</strong></p><script type="math/tex; mode=display">\begin{aligned}  侧面：&I_1 =\iint \frac{y\ dx\wedge dz}{x^2+y^2+z^2}\\  底面：&I_2 = 0\\  I &= I_1 + I_2 \\    &= \int_{-R}^R\int_{-R}^R 2 \frac{\sqrt{R^2-z^2}\ dz\ dx}{x^2 + R^2}\\    &= \frac{\pi^2R}{2}\\\\    &\frac{\partial f}{\partial x} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial x},\quad \frac{\partial f}{\partial y} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial y}\\    \Rightarrow& \sqrt{f_x^2 + f_y ^ 2} = f_r\\    &|\iint_D f\ dx\ dy\ | = |\iint_D f\cdot r\ dr \ d\theta \ |\\    =&\frac{1}{2} |0 - \iint_D r^2 f_r\ dr \ d\theta|\ dr \ d\theta\\    \le&\frac{1}{2}\iint_Dr^2\max|f_r|\\    =&2\pi\cdot\frac{1}{6}\max |f_r|\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}  (1)\quad&u_{xx}+u_{yy}+cu = 0, c<0\\  &若取得正最大，则为极大值，Hessian 负定\\  &而极大值点处u_{xx} + u_{yy}>0\\  &u_{xx} < 0,\ u_{xx}u_{yy}-u_{xy}^2 >0\\  &简单讨论一下不可能，取得负最小值的时类似证明即可\\\\  (2)\quad&在u上只有可能有非负最小值和非正最大值\\  &最小值记为 m\ge 0，最大值记为M\le 0 而 M \ge m,则 M = m =0\\  \Rightarrow& u(x,y) = 0\end{aligned}</script>
           </div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
@@ -1686,133 +1636,6 @@ T'\\N'\\B'
         <tag>高等数学</tag>
         <tag>多元函数</tag>
         <tag>微分</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则表达式文法</title>
-    <url>/2020/07/01/study/ComputerScience/RegExp/</url>
-    <content><![CDATA[<p>正则表达式规则</p>
-<a id="more"></a>
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="描述模式"><a href="#描述模式" class="headerlink" title="描述模式"></a>描述模式</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>连接操作</td>
-<td><code>AB &lt;=&gt; &#123;AB&#125;</code></td>
-</tr>
-<tr>
-<td>或操作</td>
-<td>`A</td>
-<td>B &lt;=&gt;{A,B}`</td>
-</tr>
-<tr>
-<td>闭包操作</td>
-<td><code>A* &lt;=&gt; U&#123;A^i&#125; i&gt;=0</code></td>
-</tr>
-<tr>
-<td>空字符串</td>
-<td><code>eps</code></td>
-</tr>
-<tr>
-<td>括号</td>
-<td>提升优先级</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="正则表达式的定义"><a href="#正则表达式的定义" class="headerlink" title="正则表达式的定义"></a>正则表达式的定义</h3><p>一个正则表达式可以是：</p>
-<ol>
-<li>空字符串</li>
-<li>单个字符</li>
-<li>被括号包含的一个正则表达式</li>
-<li>两个正则表达式连接成的表达式</li>
-<li>由或运算分隔的两个表达式</li>
-<li>由闭包运算标记的表达式</li>
-</ol>
-<h5 id><a href="#" class="headerlink" title=" "></a> </h5><h3 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>记法</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>通配符</td>
-<td><code>.</code></td>
-<td><code>A.B</code></td>
-</tr>
-<tr>
-<td>指定的集合</td>
-<td>包含在<code>[]</code>中的字符</td>
-<td><code>[ABC]*</code></td>
-</tr>
-<tr>
-<td>范围</td>
-<td>包含在<code>[]</code>中，由<code>-</code>分隔</td>
-<td><code>[A-Z0-9]</code></td>
-</tr>
-<tr>
-<td>补集</td>
-<td>包含在<code>[]</code>中的，且以<code>^</code>开头</td>
-<td><code>[^A-Z]</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="闭包的简写"><a href="#闭包的简写" class="headerlink" title="闭包的简写"></a>闭包的简写</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>记法</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>至少一次</td>
-<td><code>+</code></td>
-<td><code>[0-9]+</code>（与下面这个等价）</td>
-</tr>
-<tr>
-<td>至少 0 次</td>
-<td><code>*</code></td>
-<td><code>[0-9][0-9]*</code></td>
-</tr>
-<tr>
-<td>指定次数 <code>n</code></td>
-<td><code>A&#123;n&#125;</code></td>
-<td><code>[0-9]&#123;11&#125;</code></td>
-</tr>
-<tr>
-<td>指定次数范围 <code>a &lt;= n &lt;= b</code></td>
-<td><code>A&#123;a-b&#125;</code></td>
-<td><code>[A-Z]&#123;0-2&#125;</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="转义符："><a href="#转义符：" class="headerlink" title="转义符："></a>转义符：</h3><ul>
-<li>任意空白字符：<code>\s</code></li>
-<li>表示闭包的字符：<code>\*</code>，…</li>
-<li>其他常见的字符：<code>\n</code>，<code>\t</code>，…</li>
-</ul>
-<p><img src="/2020/07/01/study/ComputerScience/RegExp/image-20200622153014750.png" alt="image-20200622153014750"></p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
       </tags>
   </entry>
   <entry>
@@ -4203,6 +4026,133 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
       </tags>
   </entry>
   <entry>
+    <title>Data Structure</title>
+    <url>/2020/08/19/study/ComputerScience/mixed/datastructure-review/</url>
+    <content><![CDATA[<p>数据结构复习</p>
+<a id="more"></a>
+<h3 id="0、绪论"><a href="#0、绪论" class="headerlink" title="0、绪论"></a>0、绪论</h3><ol>
+<li>时间复杂度的计算</li>
+<li>空间复杂度</li>
+</ol>
+<div class="note note-info">
+            <p><strong><span class="label label-info">「评估数据结构与对应的算法」</span></strong></p><ol><li>时间复杂度如何？</li><li>空间复杂度如何？</li><li>相比其他算法的优缺点？</li><li>如何实现？（注意细节）</li><li>能手算吗？</li></ol>
+          </div>
+<h3 id="1、线性表"><a href="#1、线性表" class="headerlink" title="1、线性表"></a>1、线性表</h3><p><strong><span class="label label-info">「顺序表」</span></strong></p>
+<ol>
+<li>存储方式（动态、静态）</li>
+<li>插入（时间复杂度）</li>
+<li>删除（时间复杂度）</li>
+<li>顺序搜索（成功的平均比较次数、失败的比较次数）</li>
+<li>有序表合并、无序表合并</li>
+</ol>
+<p><strong><span class="label label-info">「链表」</span></strong></p>
+<ol>
+<li>单链表存储、插入、删除、合并</li>
+<li>循环链表</li>
+<li>双向链表</li>
+</ol>
+<blockquote>
+<p>应用</p>
+<ol>
+<li>多项式的表示</li>
+</ol>
+</blockquote>
+<h3 id="2、栈与队列"><a href="#2、栈与队列" class="headerlink" title="2、栈与队列"></a>2、栈与队列</h3><p><strong><span class="label label-info">「栈」</span></strong></p>
+<ol>
+<li>定义</li>
+<li>初始化</li>
+<li>操作：压栈、退栈</li>
+</ol>
+<p><strong><span class="label label-info">「队列」</span></strong></p>
+<ol>
+<li>存储（定义）</li>
+<li>入队、出队</li>
+<li>循环队列（定义、入队、出队）</li>
+</ol>
+<h3 id="3、串"><a href="#3、串" class="headerlink" title="3、串"></a>3、串</h3><ol>
+<li>存储方式</li>
+<li>模式匹配（BF，KMP）</li>
+</ol>
+<h3 id="4、数组和广义表"><a href="#4、数组和广义表" class="headerlink" title="4、数组和广义表"></a>4、数组和广义表</h3><ol>
+<li>n维数组</li>
+<li>特殊矩阵的压缩存储（稀疏矩阵）</li>
+<li>十字链表</li>
+<li>广义表（定义、存储方式）</li>
+</ol>
+<h3 id="5、树"><a href="#5、树" class="headerlink" title="5、树"></a>5、树</h3><ol>
+<li>定义（高度、兄弟、……）</li>
+<li>性质</li>
+<li>完全二叉树、满二叉树</li>
+<li>完全二叉树的顺序存储</li>
+<li>二叉树深度优先遍历（先中后）</li>
+<li>二叉树层次遍历</li>
+<li>线索化</li>
+<li>树的存储方式（双亲法、指针法、链表法、孩子兄弟法）</li>
+<li>树和二叉树的转换</li>
+<li>树的各种遍历法</li>
+<li>森林化为二叉树</li>
+</ol>
+<div class="note note-primary">
+            <p><strong>应用</strong></p><ol><li><strong><span class="label label-info">「堆」</span></strong>：上浮下沉</li><li><strong><span class="label label-info">「Huffman编码树」</span></strong></li></ol>
+          </div>
+<h3 id="6、查找"><a href="#6、查找" class="headerlink" title="6、查找"></a>6、查找</h3><ol>
+<li>顺序表（二分法 $ASL \sim log2(n + 1) - 1$）</li>
+<li>BST：定义、插入、删除</li>
+<li>AVL（咕咕咕）：如何旋转、如何删除维护</li>
+<li>B树、B+树（插入、删除）</li>
+</ol>
+<p><strong><span class="label label-info">「哈希散列」</span></strong></p>
+<ol>
+<li>散列函数</li>
+<li>直接定址法（$Hash = a\cdot key + b$）</li>
+<li>分析法</li>
+<li>取余法</li>
+<li>平方取中法</li>
+<li>折叠法</li>
+<li>冲突处理（再哈希、链地址法、线性探查法、二次探查法）</li>
+</ol>
+<h3 id="7、图"><a href="#7、图" class="headerlink" title="7、图"></a>7、图</h3><ol>
+<li>定义（完全图、连通、强连通）</li>
+<li>存储方式（邻接矩阵、邻接表）</li>
+<li>遍历（dfs、bfs）</li>
+<li>最小生成树（Prim、Kruskal）</li>
+<li>AOV与拓扑排序</li>
+<li>AOE与关键路径</li>
+<li>最短路径（Dijkstra）</li>
+</ol>
+<h3 id="8、排序"><a href="#8、排序" class="headerlink" title="8、排序"></a>8、排序</h3><blockquote>
+<p>不废话，直接看图！</p>
+</blockquote>
+<p>插入排序</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/insertionSort.gif" alt="插入排序"></p>
+<p>希尔排序</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_shellsort_anim.gif" alt="希尔排序"></p>
+<p>冒泡排序</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/bubbleSort.gif" alt="冒泡排序"></p>
+<p>快速排序</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/quickSort.gif" alt="快速排序"></p>
+<p>选择排序</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/selectionSort.gif" alt="选择排序"></p>
+<p>堆排序</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/heapSort.gif" alt="堆排序1"></p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_heapsort_anim.gif" alt="堆排序2"></p>
+<p>归并排序</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/mergeSort.gif" alt="归并排序"></p>
+<p>基数排序</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/radixSort.gif" alt="基数排序"></p>
+<div class="note note-warning">
+            <p>区分插入排序和选择排序？</p><p>如何手算快速排序？</p>
+          </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>动量守恒和质点动力学</title>
     <url>/2020/06/08/study/Physics/Ch2ConservationOfMomentumAndDynamicsofMassPoint/</url>
     <content><![CDATA[<p>想当初，我也记过这么多东西，吖……</p>
@@ -4506,6 +4456,133 @@ t'&=t
       </categories>
       <tags>
         <tag>物理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式文法</title>
+    <url>/2020/07/01/study/ComputerScience/mixed/RegExp/</url>
+    <content><![CDATA[<p>正则表达式规则</p>
+<a id="more"></a>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="描述模式"><a href="#描述模式" class="headerlink" title="描述模式"></a>描述模式</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>连接操作</td>
+<td><code>AB &lt;=&gt; &#123;AB&#125;</code></td>
+</tr>
+<tr>
+<td>或操作</td>
+<td>`A</td>
+<td>B &lt;=&gt;{A,B}`</td>
+</tr>
+<tr>
+<td>闭包操作</td>
+<td><code>A* &lt;=&gt; U&#123;A^i&#125; i&gt;=0</code></td>
+</tr>
+<tr>
+<td>空字符串</td>
+<td><code>eps</code></td>
+</tr>
+<tr>
+<td>括号</td>
+<td>提升优先级</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="正则表达式的定义"><a href="#正则表达式的定义" class="headerlink" title="正则表达式的定义"></a>正则表达式的定义</h3><p>一个正则表达式可以是：</p>
+<ol>
+<li>空字符串</li>
+<li>单个字符</li>
+<li>被括号包含的一个正则表达式</li>
+<li>两个正则表达式连接成的表达式</li>
+<li>由或运算分隔的两个表达式</li>
+<li>由闭包运算标记的表达式</li>
+</ol>
+<h5 id><a href="#" class="headerlink" title=" "></a> </h5><h3 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>记法</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通配符</td>
+<td><code>.</code></td>
+<td><code>A.B</code></td>
+</tr>
+<tr>
+<td>指定的集合</td>
+<td>包含在<code>[]</code>中的字符</td>
+<td><code>[ABC]*</code></td>
+</tr>
+<tr>
+<td>范围</td>
+<td>包含在<code>[]</code>中，由<code>-</code>分隔</td>
+<td><code>[A-Z0-9]</code></td>
+</tr>
+<tr>
+<td>补集</td>
+<td>包含在<code>[]</code>中的，且以<code>^</code>开头</td>
+<td><code>[^A-Z]</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="闭包的简写"><a href="#闭包的简写" class="headerlink" title="闭包的简写"></a>闭包的简写</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>记法</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>至少一次</td>
+<td><code>+</code></td>
+<td><code>[0-9]+</code>（与下面这个等价）</td>
+</tr>
+<tr>
+<td>至少 0 次</td>
+<td><code>*</code></td>
+<td><code>[0-9][0-9]*</code></td>
+</tr>
+<tr>
+<td>指定次数 <code>n</code></td>
+<td><code>A&#123;n&#125;</code></td>
+<td><code>[0-9]&#123;11&#125;</code></td>
+</tr>
+<tr>
+<td>指定次数范围 <code>a &lt;= n &lt;= b</code></td>
+<td><code>A&#123;a-b&#125;</code></td>
+<td><code>[A-Z]&#123;0-2&#125;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="转义符："><a href="#转义符：" class="headerlink" title="转义符："></a>转义符：</h3><ul>
+<li>任意空白字符：<code>\s</code></li>
+<li>表示闭包的字符：<code>\*</code>，…</li>
+<li>其他常见的字符：<code>\n</code>，<code>\t</code>，…</li>
+</ul>
+<p><img src="/2020/07/01/study/ComputerScience/mixed/RegExp/image-20200622153014750.png" alt="image-20200622153014750"></p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
       </tags>
   </entry>
 </search>
