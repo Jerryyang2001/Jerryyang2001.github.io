@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.1k 字
+      3.3k 字
     </span>
   
 
@@ -193,7 +193,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      36
+      38
        分钟
     </span>
   
@@ -709,7 +709,7 @@
 <li>和原来的图的关系？</li>
 </ul>
 <div class="note note-warning">
-            <h4 id="几个算法"><a href="#几个算法" class="headerlink" title="几个算法"></a>几个算法</h4><ol><li>求传递闭包 Warshall</li><li></li></ol><h4 id="几个性质"><a href="#几个性质" class="headerlink" title="几个性质"></a>几个性质</h4><ol><li>等价关系：自反、对称、传递</li><li>偏序关系：自反、反对称、传递</li><li>函数：单射、满射、双射</li><li></li></ol>
+            <h4 id="几个算法"><a href="#几个算法" class="headerlink" title="几个算法"></a>几个算法</h4><ol><li>求传递闭包 Warshall</li><li></li></ol><h4 id="几个性质"><a href="#几个性质" class="headerlink" title="几个性质"></a>几个性质</h4><ol><li>等价关系：自反、对称、传递</li><li>偏序关系：自反、反对称、传递</li><li>函数：单射、满射、双射</li><li>二元运算：交换律、结合律、幂等律、分配律</li><li>代数系统：同态、同构、同类型</li><li>群：（半群—&gt;独异点—&gt;群—&gt;交换群）、消去律、中心、<strong>「正规子群」</strong></li><li>格：$\wedge,\vee$ 有交换律、结合律、幂等律、吸收律。<ol><li>满足交换、结合、吸收律的两个二元运算构成格</li><li>分配格、有补格（0，1）</li><li>补元、有补格</li></ol></li><li>图（碎碎念）<ol><li>度、悬挂</li><li>零图、空图</li><li>邻域、关联集</li><li>多重图、简单图</li><li>简单通路、圈</li></ol></li><li>欧拉图、半欧拉图<ol><li>判定定理（有向图、无向图、欧拉图、半欧拉图）</li><li>Fluery 算法</li></ol></li><li>哈密顿图、半哈密顿图<ol><li>充分条件</li></ol></li><li>最短路问题<ol><li>Dijkstra 算法</li></ol></li><li>中国邮递员问题<ol><li>找欧拉回路</li></ol></li><li>TSP</li><li>树</li><li>平面图<ol><li>两个容易忘的式子</li></ol></li></ol>
           </div>
 <h3 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h3><div class="note note-primary">
             <p>极值的判断：</p><ol><li>正定极小</li><li>负定极大</li><li>半正定、半负定不确定</li><li>其他：不是极值点</li></ol><p>一定要看清楚曲线是否只是一部分。如 <code>y &gt; 0</code></p><p>积分区域内有不可导点？</p><p>方向导数 = ?</p><p>全微分 = ?</p><p>连续、可偏导、可微的关系</p><p>幂级数和函数在 <code>x = 0</code> 处有时需要单独考虑</p><p>$\displaystyle\ln (1+x) = x - \frac 1 2 x^2 + \frac 1 3 x^3 + \dots$</p><p>$\displaystyle\frac{1}{1-x} = 1 + x + x^2 + \dots$</p><p>正向、上（下）侧</p><p>Gauss / Green / Stokes 公式都怎么用？</p><p>梯度、散度、旋度</p><p>别忘了连续的场：无源 = 无旋 = 有势</p><p>反常积分 + 级数</p><p>极限怎么求（泰勒公式等）。</p><p>别忘了和函数要求出收敛域。</p><p>有的题目，大可不必用 <code>Stokes</code> 公式！</p><p>例如：</p><script type="math/tex; mode=display">?=I=\int_C(y^2-z)dx+(2z-x^2)dy +(3x^2-y^2)dz,\\C为x+y+z=2和\frac{x^2}{4}+y^2=1的交线</script><p>令</p><script type="math/tex; mode=display">\begin{aligned}  &x = 2\cos \theta\\  &y=2\sin\theta\\  &z=2-x-y\end{aligned}</script><p>几个积分中值定理！</p><p>柯西不等式的积分形式</p><p>重积分证明一些积分相关的不等式</p><p>曲率？？？挠率？？？</p><p><a class="btn" href="/2020/05/22/study/Advanced-Mathematics/Vectors-and-Analytic-Geometry/" title="向量空间" target="_blank">向量空间</a></p><p>$arsh~x=ln(x+\sqrt{x^2+1})$</p><p><strong>难题</strong></p><script type="math/tex; mode=display">\begin{aligned}  侧面：&I_1 =\iint \frac{y\ dx\wedge dz}{x^2+y^2+z^2}\\  底面：&I_2 = 0\\  I &= I_1 + I_2 \\    &= \int_{-R}^R\int_{-R}^R 2 \frac{\sqrt{R^2-z^2}\ dz\ dx}{x^2 + R^2}\\    &= \frac{\pi^2R}{2}\\\\    &\frac{\partial f}{\partial x} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial x},\quad \frac{\partial f}{\partial y} = \frac{\partial f}{\partial r}\frac{\partial r}{\partial y}\\    \Rightarrow& \sqrt{f_x^2 + f_y ^ 2} = f_r\\    &|\iint_D f\ dx\ dy\ | = |\iint_D f\cdot r\ dr \ d\theta \ |\\    =&\frac{1}{2} |0 - \iint_D r^2 f_r\ dr \ d\theta|\ dr \ d\theta\\    \le&\frac{1}{2}\iint_Dr^2\max|f_r|\\    =&2\pi\cdot\frac{1}{6}\max |f_r|\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}  (1)\quad&u_{xx}+u_{yy}+cu = 0, c<0\\  &若取得正最大，则为极大值，Hessian 负定\\  &而极大值点处u_{xx} + u_{yy}>0\\  &u_{xx} < 0,\ u_{xx}u_{yy}-u_{xy}^2 >0\\  &简单讨论一下不可能，取得负最小值的时类似证明即可\\\\  (2)\quad&在u上只有可能有非负最小值和非正最大值\\  &最小值记为 m\ge 0，最大值记为M\le 0 而 M \ge m,则 M = m =0\\  \Rightarrow& u(x,y) = 0\end{aligned}</script>

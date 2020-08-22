@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      556 字
+      1.2k 字
     </span>
   
 
@@ -193,7 +193,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      14
        分钟
     </span>
   
@@ -228,21 +228,97 @@
             <div class="markdown-body" id="post-body">
               <p>数据结构复习</p>
 <a id="more"></a>
-<h3 id="0、绪论"><a href="#0、绪论" class="headerlink" title="0、绪论"></a>0、绪论</h3><ol>
-<li>时间复杂度的计算</li>
-<li>空间复杂度</li>
+<h3 id="0、绪论"><a href="#0、绪论" class="headerlink" title="0、绪论"></a>0、绪论</h3><h3 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h3><p>四种基本的逻辑结构：</p>
+<ol>
+<li>集合结构</li>
+<li>线性结构</li>
+<li>树结构</li>
+<li>图结构</li>
+</ol>
+<p><code>ADT</code>的概念：</p>
+<pre><code class="hljs cpp">ADT 数据类型 &#123;
+  数据对象：&lt;Definition&gt;
+  数据关系：&lt;Definition&gt;
+      基本操作：&lt;Definition&gt;
+&#125;</code></pre>
+<p>注意C和C++的区别，以及常用的语句</p>
+<ol>
+<li>没有 template，没有 class</li>
+<li><code>#define</code> 的使用</li>
+<li><code>typedef</code>、<code>union</code> 的使用</li>
+<li>异常处理：用的是 <code>Status</code> 表示（就是 <code>int</code> ），也有用 <code>exit</code> 的</li>
+</ol>
+<p>简单提一下 <code>#define</code> 和 <code>typedef</code>：</p>
+<pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IDENTIFIER expr</span>
+<span class="hljs-comment">// 在编译时会被直接替换成 expr</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IDENTIFIER(x,y,z) expr</span>
+<span class="hljs-comment">// 在编译时会被直接替换成expr，并且将expr中的 x y z 替换</span>
+<span class="hljs-comment">// 例如</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PI 1.57 + 1.57</span>
+<span class="hljs-built_in">cout</span> &lt;&lt; PI; <span class="hljs-comment">// 编译时替换成 cout &lt;&lt; 1.57 + 1.57;</span>
+<span class="hljs-comment">// 想一想 PI*PI 是什么</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ISROOT(node) (node-&gt;father == nullptr)</span>
+<span class="hljs-built_in">cout</span> &lt;&lt; ISROOT(tree._root_ptr);
+<span class="hljs-comment">// 编译时替换成 cout &lt;&lt; (tree._root_ptr -&gt; father == nullptr);</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> Status;
+Status x; <span class="hljs-comment">// 等价于 int x;</span>
+<span class="hljs-comment">// 注意：不能有 template&lt;</span></code></pre>
+<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>写出下面这个算法的时间复杂度：</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">func</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str, <span class="hljs-keyword">char</span> c)</span></span>
+<span class="hljs-function"></span>&#123;
+  <span class="hljs-keyword">int</span> cnt = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">size_t</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">strlen</span>(str); ++i)
+    <span class="hljs-keyword">if</span> (str[i] == c) cnt ++;
+  <span class="hljs-keyword">return</span> cnt;
+&#125;
+<span class="hljs-comment">// n 为 str 长度</span>
+<span class="hljs-comment">// 则 func 是 o(?)</span></code></pre>
+<p>最好、最坏时间复杂度</p>
+<h3 id="评估算法"><a href="#评估算法" class="headerlink" title="评估算法"></a>评估算法</h3><p><strong><span class="label label-info">「算法的特性」</span></strong>：</p>
+<ol>
+<li>有穷性</li>
+<li>确定性</li>
+<li>可行性</li>
+<li>输入</li>
+<li>输出</li>
+</ol>
+<p><strong><span class="label label-info">「算法的评估」</span></strong>：</p>
+<ol>
+<li>高效性</li>
+<li>正确性</li>
+<li>健壮性</li>
+<li>可读性</li>
 </ol>
 <div class="note note-info">
-            <p><strong><span class="label label-info">「评估数据结构与对应的算法」</span></strong></p><ol><li>时间复杂度如何？</li><li>空间复杂度如何？</li><li>相比其他算法的优缺点？</li><li>如何实现？（注意细节）</li><li>能手算吗？</li></ol>
+            <p><strong><span class="label label-info">「要点：」</span></strong></p><blockquote><ol><li>时间复杂度如何？</li><li>空间复杂度如何？</li><li>相比其他算法的优缺点？</li><li>如何实现？（注意细节）</li><li>能手算吗？</li></ol></blockquote>
           </div>
 <h3 id="1、线性表"><a href="#1、线性表" class="headerlink" title="1、线性表"></a>1、线性表</h3><p><strong><span class="label label-info">「顺序表」</span></strong></p>
 <ol>
-<li>存储方式（动态、静态）</li>
-<li>插入（时间复杂度）</li>
-<li>删除（时间复杂度）</li>
-<li>顺序搜索（成功的平均比较次数、失败的比较次数）</li>
-<li>有序表合并、无序表合并</li>
+<li>静态 <code>#define MAXSIZE 100</code></li>
+<li>动态 <code>new</code> or <code>malloc</code></li>
 </ol>
+<p>内存中的特点如何？</p>
+<ul>
+<li>插入o(n)：<ul>
+<li>思考：能不能用 <code>memcpy</code> 函数？</li>
+</ul>
+</li>
+<li>删除o(n)：<ul>
+<li>这两个都要注意：表的长度要减少1</li>
+</ul>
+</li>
+<li>搜索o(n)：<ul>
+<li>成功的平均比较次数 ASL = ？</li>
+<li>失败的比较次数？</li>
+</ul>
+</li>
+<li>合并<ul>
+<li>无序：o(na*nb)</li>
+<li>有序：o(na+nb)</li>
+</ul>
+</li>
+</ul>
 <p><strong><span class="label label-info">「链表」</span></strong></p>
 <ol>
 <li>单链表存储、插入、删除、合并</li>
@@ -255,37 +331,154 @@
 <li>多项式的表示</li>
 </ol>
 </blockquote>
-<h3 id="2、栈与队列"><a href="#2、栈与队列" class="headerlink" title="2、栈与队列"></a>2、栈与队列</h3><p><strong><span class="label label-info">「栈」</span></strong></p>
+<h3 id="2、栈与队列"><a href="#2、栈与队列" class="headerlink" title="2、栈与队列"></a>2、栈与队列</h3><p>链式存储！</p>
 <ol>
+<li><strong><span class="label label-info">「栈」</span></strong>：LIFO<ol>
 <li>定义</li>
 <li>初始化</li>
-<li>操作：压栈、退栈</li>
+<li>压栈</li>
+<li>出栈<br>Q：一个 n 元素序列依次进栈，则其不同的出栈队列有多少种<br>A：卡特兰数</li>
 </ol>
-<p><strong><span class="label label-info">「队列」</span></strong></p>
+</li>
+<li><strong><span class="label label-info">「队列」</span></strong>：FIFO<ol>
+<li>链式表示</li>
+<li>循环队列（这个定义是啥？）<ol>
+<li>重点是如何判断 overflow</li>
+<li>入队？出队？</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="3、串"><a href="#3、串" class="headerlink" title="3、串"></a>3、串</h3><p>如何定义？</p>
 <ol>
-<li>存储（定义）</li>
-<li>入队、出队</li>
-<li>循环队列（定义、入队、出队）</li>
+<li>截止符 <code>\0</code></li>
+<li>编码方式：Unicode or ASCII ？「这个考到就离谱」</li>
+<li>子串</li>
+<li>定长存储表示（堆分配）</li>
 </ol>
-<h3 id="3、串"><a href="#3、串" class="headerlink" title="3、串"></a>3、串</h3><ol>
-<li>存储方式</li>
-<li>模式匹配（BF，KMP）</li>
+<p>操作：</p>
+<ol>
+<li>连接</li>
+<li>求子串</li>
+<li>插入（类似顺序表）</li>
+<li>链式存储（块链）</li>
 </ol>
-<h3 id="4、数组和广义表"><a href="#4、数组和广义表" class="headerlink" title="4、数组和广义表"></a>4、数组和广义表</h3><ol>
-<li>n维数组</li>
-<li>特殊矩阵的压缩存储（稀疏矩阵）</li>
-<li>十字链表</li>
-<li>广义表（定义、存储方式）</li>
+<p>模式匹配算法</p>
+<ol>
+<li>BF算法（一个个找）</li>
+<li>KMP算法（跳转表）「如何求 <code>next</code> 表」<ul>
+<li>类似于有限状态自动机状态转移</li>
+<li>KMP的时间复杂度（求 <code>next</code> 表）</li>
+</ul>
+</li>
 </ol>
+<h3 id="4、数组和广义表"><a href="#4、数组和广义表" class="headerlink" title="4、数组和广义表"></a>4、数组和广义表</h3><ul>
+<li>一维数组</li>
+<li>多维数组<ul>
+<li>【写给自己】记得别再傻傻的用 <code>new int **</code> 了！</li>
+</ul>
+</li>
+</ul>
+<p>特殊矩阵压缩：</p>
+<ol>
+<li>对称：只存储对角线及以上（下）<ul>
+<li>行号、列号的计算？</li>
+</ul>
+</li>
+<li>三对角矩阵： <code>k = 2 * i + j</code></li>
+<li>稀疏矩阵：<ol>
+<li>存放方式（三元组法）</li>
+<li>快速转置算法</li>
+<li>矩阵乘法</li>
+<li>十字链表存储</li>
+</ol>
+</li>
+</ol>
+<p>广义表：</p>
+<ol>
+<li>都是指针、链式！</li>
+<li>表头表尾如何定义（链表结点）<ol>
+<li>原子节点：tag=0+原子的值</li>
+<li>表节点：tag = 1 + <code>表头指针 hp</code> + <code>表尾指针 tp</code></li>
+</ol>
+</li>
+<li>第二种定义：<ol>
+<li>分三个：<code>utype</code>，<code>info</code>，<code>tp</code></li>
+</ol>
+</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>utype</th>
+<th>info</th>
+<th>tp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>被引用次数</td>
+<td>表头</td>
+</tr>
+<tr>
+<td>1</td>
+<td>数据值（atom）</td>
+<td>下一个节点</td>
+</tr>
+<tr>
+<td>2</td>
+<td>（子）表</td>
+<td>下一个节点</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h3 id="5、树"><a href="#5、树" class="headerlink" title="5、树"></a>5、树</h3><ol>
-<li>定义（高度、兄弟、……）</li>
+<li><p>定义（高度、兄弟、……）</p>
+<ol>
 <li>性质</li>
 <li>完全二叉树、满二叉树</li>
-<li>完全二叉树的顺序存储</li>
-<li>二叉树深度优先遍历（先中后）</li>
-<li>二叉树层次遍历</li>
-<li>线索化</li>
-<li>树的存储方式（双亲法、指针法、链表法、孩子兄弟法）</li>
+</ol>
+</li>
+<li><p>存储方式</p>
+<ol>
+<li>（完全）二叉树的顺序存储：有可能编号从 1 开始</li>
+<li>链表存储：<ol>
+<li>二叉链表：<code>lc</code> + <code>data</code> + <code>rc</code></li>
+<li>三叉链表：<code>lc</code> + <code>data</code> + <code>father</code> + <code>rc</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>二叉树深度优先遍历（先中后）</p>
+<ol>
+<li>表达式求值 【危】</li>
+</ol>
+</li>
+<li>二叉树层次遍历<ol>
+<li>其中使用了____（线性数据结构）？</li>
+</ol>
+</li>
+<li>线索化<ol>
+<li><code>prec</code> + <code>lc</code> + <code>data</code> + <code>rc</code> + <code>suss</code></li>
+<li>中序遍历建立</li>
+</ol>
+</li>
+<li>树的存储方式<ol>
+<li>双亲法、</li>
+<li>指针法、</li>
+<li>链表法、</li>
+<li>孩子兄弟法</li>
+</ol>
+</li>
+</ol>
+<div class="note note-warning">
+            <p><strong><span class="label label-warning">「TODO」</span></strong></p><p>明天再更</p>
+          </div>
+<ol>
 <li>树和二叉树的转换</li>
 <li>树的各种遍历法</li>
 <li>森林化为二叉树</li>
