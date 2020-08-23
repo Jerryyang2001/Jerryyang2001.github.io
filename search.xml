@@ -3702,6 +3702,9 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 <span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> Status;
 Status x; <span class="hljs-comment">// 等价于 int x;</span>
 <span class="hljs-comment">// 注意：不能有 template&lt;</span></code></pre>
+<div class="note note-primary">
+            <p><em><span class="label label-info">「再碎碎念一下」</span></em></p><p><code>template</code> 还记得多少。</p><p><code>new</code> <code>delete</code> 填程序可能考的（释放空间，析构函数）</p><p>万一出卷老师一时兴起，和我一样作死用 <code>virtual</code> 写 avl::bst 咋办</p><p><code>typedef</code> 和 <code>#define</code> 定义的顺序不一样</p><p>我慌了。</p>
+          </div>
 <h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p><strong><span class="label label-info">「全场暴毙」</span></strong>：写出下面这个算法的时间复杂度</p>
 <pre><code class="hljs cpp"><span class="hljs-comment">// n 为 str 长度</span>
 <span class="hljs-comment">// 则 func 是 o(?)</span>
@@ -4160,7 +4163,7 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 </tbody>
 </table>
 </div>
-<h3 id="7、树"><a href="#7、树" class="headerlink" title="7、树"></a>7、树</h3><p>基础概念：自己看离散「超凶」：<a class="btn" href="2020/05/28/study/ComputerScience/DiscreteMath/GraphTheory/" title="图的基本概念" target="_blank">图的基本概念</a></p>
+<h3 id="7、图"><a href="#7、图" class="headerlink" title="7、图"></a>7、图</h3><p>基础概念：自己看离散「超凶」：<a class="btn" href="2020/05/28/study/ComputerScience/DiscreteMath/GraphTheory/" title="图的基本概念" target="_blank">图的基本概念</a></p>
 <ol>
 <li>存储方式<ol>
 <li>「邻接矩阵」：<code>A[i, j] = ( &lt; i, j &gt; in E) ? weight(i, j) : ((i == j) ? 0 : UNDEFINED)</code><ol>
