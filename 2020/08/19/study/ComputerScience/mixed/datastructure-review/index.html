@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.1k 字
+      3k 字
     </span>
   
 
@@ -576,17 +576,23 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 <li>“匀称”？AVL<ol>
 <li>平衡条件：<code>-1 &lt;= lc.height - rc.height &lt;= 1</code> 其中：<code>lc.height - rc.height</code> 被称为「平衡因子」。</li>
 <li>维持平衡方法：旋转<ol>
-<li>单旋：</li>
+<li>单旋：<ol>
 <li><code>right(node)</code></li>
 <li><code>left(node)</code></li>
-<li>双旋：</li>
+</ol>
+</li>
+<li>双旋：<ol>
 <li>左右 <code>leftright(node) = left(node-&gt;lc) + right(node)</code></li>
 <li>右左 <code>rightleft(node) = right(node -&gt; rc) + left(node)</code></li>
-<li>什么时候用？</li>
+</ol>
+</li>
+<li>什么时候用？<ol>
 <li><code>left</code> ：<code>node-&gt;lc-&gt;lc</code> 高</li>
 <li><code>right</code>：<code>node-&gt;rc-&gt;rc</code> 高</li>
 <li><code>leftright</code>：<code>node-&gt;lc-&gt;rc</code> 高</li>
 <li><code>rightleft</code>：<code>node-&gt;rc-&gt;lc</code> 高</li>
+</ol>
+</li>
 </ol>
 </li>
 <li>插入：<ol>
@@ -606,17 +612,19 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 <li>实际上和BST(AVL)很像（算是BST(AVL)的推广？）</li>
 <li>BST(AVL)在每个结点上都是用一个 <code>key</code> 把原来的有序表分成了两块，例如：<code>(key=1, lc = &#123;key &lt; 1&#125;, rc = &#123;key &gt; 1&#125;)</code> 【意会一下】</li>
 <li>B树（思想上）就是分成了k块（<code>m/2 &lt;= k &lt;= m</code>）：<code>(ptr[0] = &#123;key &lt; key[1]&#125;, key[1], ptr[1] = &#123;key[1] &lt; key &lt; key[2]&#125;, key[2], ... , ptr[k] = &#123;key[k] &lt; key &lt; key[k+1]&#125;, key[k+1], ptr[k+1] = &#123;key[k+1] &lt; key])</code>（还是提一下：分成k块只要切k-1刀，所以key从1开始索引）</li>
-<li>细节看ppt。（平衡因子 = 0、叶子结点为 F 的作用、上层最左侧的 key 也在最左侧的 ptr 中）</li>
+<li>细节看ppt。（平衡因子 = 0、叶子结点为 F 的作用）</li>
 </ol>
 </li>
 <li>查找<code>targ_key</code>：<ol>
 <li>从根结点开始 <code>current_node = root</code></li>
 <li>如果<code>current_node</code> 是 F（叶子），返回<code>not found</code>，否则在这个结点上找<code>targ_key</code>（顺序查找！就那么几个点，二分很可能效率更低！）<ol>
 <li>找到：返回</li>
-<li>没找到，在 <code>ptr[next]</code> 中继续找，其中 ：</li>
+<li>没找到，在 <code>ptr[next]</code> 中继续找，其中 ：<ol>
 <li>next = x <code>(key[x] &lt; targ_key &lt; key[x+1])</code></li>
 <li>next = k <code>(key[k] &lt; targ_key &amp;&amp; 该结点只有 k+1 个key)</code></li>
 <li>next = 0 <code>(targ_key &lt; key[0])</code> </li>
+</ol>
+</li>
 </ol>
 </li>
 <li>转 2</li>
@@ -654,7 +662,7 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 </ol>
 </li>
 </ol>
-<p>「Hash」</p>
+<p><strong><span class="label label-info">「Hash」</span></strong></p>
 <ol>
 <li>两个问题：<ol>
 <li>均匀的散列函数（简单快速）</li>
@@ -781,7 +789,7 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 <tr>
 <td>选择</td>
 <td>$O(n^2)$</td>
-<td>y</td>
+<td>n</td>
 <td>选剩下的最大的扔到最后</td>
 </tr>
 <tr>
@@ -1191,6 +1199,45 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
 
 
 
