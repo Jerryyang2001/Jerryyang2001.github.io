@@ -3703,7 +3703,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 Status x; <span class="hljs-comment">// 等价于 int x;</span>
 <span class="hljs-comment">// 注意：不能有 template&lt;</span></code></pre>
 <div class="note note-primary">
-            <p><em><span class="label label-info">「再碎碎念一下」</span></em></p><p><code>template</code> 还记得多少。</p><p><code>new</code> <code>delete</code> 填程序可能考的（释放空间，析构函数）</p><p>万一出卷老师一时兴起，和我一样作死用 <code>virtual</code> 写 avl::bst 咋办</p><p><code>typedef</code> 和 <code>#define</code> 定义的顺序不一样</p><p>我慌了。</p>
+            <p><em><span class="label label-info">「再碎碎念一下」</span></em></p><p><code>template</code> 还记得多少。</p><p><code>new</code> <code>delete</code> 填程序可能考的（释放空间，析构函数）</p><p>万一出卷老师一时兴起，和我一样作死用 <code>virtual</code> 写 <code>avl::bst</code> 咋办</p><p><code>typedef</code> 和 <code>#define</code> 定义的顺序不一样</p><p>我慌了。</p>
           </div>
 <h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p><strong><span class="label label-info">「全场暴毙」</span></strong>：写出下面这个算法的时间复杂度</p>
 <pre><code class="hljs cpp"><span class="hljs-comment">// n 为 str 长度</span>
@@ -3932,7 +3932,7 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 </li>
 <li>（无序）顺序表查找<ol>
 <li>检查哨？（这玩意的意义到现在也没懂）</li>
-<li><code>ASL = (n - 1) / 2</code></li>
+<li><code>ASL = (n + 1) / 2</code></li>
 <li><code>ASL = n + 1 (fail)</code></li>
 </ol>
 </li>
