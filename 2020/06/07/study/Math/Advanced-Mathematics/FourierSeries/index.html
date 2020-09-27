@@ -1,0 +1,674 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&quot;auto&quot;>
+
+
+
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp">
+  <link rel="icon" type="image/png" href="/img/favicon.webp">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="欢迎来到些些同学的藏宝阁">
+  <meta name="author" content="Jerry Yang">
+  <meta name="keywords" content="study">
+  <title>傅里叶级数 - 些些同学的藏宝阁</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>些些同学的藏宝阁</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/schedule/">
+                <i class="iconfont icon-plan"></i>
+                日程
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-07 19:40" pubdate>
+      2020年6月7日
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      747 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">傅里叶级数</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>傅里叶级数，真的就看上去简单。</p>
+<a id="more"></a>
+<h2 id="三角函数系及其正交性"><a href="#三角函数系及其正交性" class="headerlink" title="三角函数系及其正交性"></a>三角函数系及其正交性</h2><p>在这里就直接给出这个单位正交系：</p>
+<p>$1,\frac{1}{\sqrt{2\pi}}\cos x,\frac{1}{\sqrt{2\pi}}\sin x,\frac{1}{\sqrt{2\pi}}\cos 2x,\frac{1}{\sqrt{2\pi}}\sin 2x,\dots$</p>
+<p>但是我们用的更多的是：</p>
+<p>$1,\cos x,\sin x,\cos 2x,\sin 2x,\dots$</p>
+<blockquote>
+<p>这里正交指的是<strong>积分</strong>：$\displaystyle<f,g>=\int_a^b f\cdot g$</f,g></p>
+</blockquote>
+<h2 id="周期为-2pi-的函数的傅里叶级数及其收敛性"><a href="#周期为-2pi-的函数的傅里叶级数及其收敛性" class="headerlink" title="周期为 2pi 的函数的傅里叶级数及其收敛性"></a>周期为 2pi 的函数的傅里叶级数及其收敛性</h2><h3 id="周期函数的傅氏系数和傅氏级数"><a href="#周期函数的傅氏系数和傅氏级数" class="headerlink" title="周期函数的傅氏系数和傅氏级数"></a>周期函数的傅氏系数和傅氏级数</h3><ul>
+<li><strong>Def</strong>：（傅里叶系数、傅里叶级数）将</li>
+</ul>
+<script type="math/tex; mode=display">
+a_n=\frac 1 \pi\int_{-\pi}^{\pi}f(x)\cos nx\mathrm dx(n=0,1,2,\dots)\\
+b_n=\frac 1 \pi\int_{-\pi}^{\pi}f(x)\sin nx\mathrm dx(n=1,2,3,\dots)</script><p>称为函数$f$ 的<strong>傅里叶系数</strong>，而</p>
+<script type="math/tex; mode=display">
+\frac {a_0} 2+\sum\limits_{n=1}^\infty(a_n\cos nx+b_n\sin nx)</script><p>称为<strong>傅里叶级数</strong></p>
+<blockquote>
+<p>问题在于，这个级数的和函数不一定和原函数相等，因而，我们用$\displaystyle f\sim \frac {a_0} 2+\sum\limits_{n=1}^\infty(a_n\cos nx+b_n\sin nx)$ 来表示。</p>
+</blockquote>
+<h3 id="傅氏级数的收敛性定理和傅氏展开式"><a href="#傅氏级数的收敛性定理和傅氏展开式" class="headerlink" title="傅氏级数的收敛性定理和傅氏展开式"></a>傅氏级数的收敛性定理和傅氏展开式</h3><blockquote>
+<p>吐槽一下工科数分，人家高等数学讲的炒鸡清楚！</p>
+</blockquote>
+<ul>
+<li><p><strong>Def</strong>：（分段连续）$f(x)$ 在 $[a,b]$ 上除了<strong>有限个</strong>第一类间断点外处处连续。</p>
+</li>
+<li><p><strong>Def</strong>：（分段单调）$f(x)$ 在 $[a,b]$ 上有<strong>有限个</strong>单调区间。</p>
+</li>
+<li><p><strong>Def</strong>：（<code>Dirichlet</code> 条件）$f(x)$ 分段连续且分段单调</p>
+</li>
+<li><p><strong>Thm</strong>：（傅里叶级数的收敛性定理）如果 $f$ 在 $[-\pi,\pi]$ 满足 <code>Dirichlet</code> 条件，则其傅氏级数在$[-\pi,\pi]$任意一点都收敛，且和函数为</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+\displaystyle S(x) =\begin{cases}f(x),&连续点\\
+\frac{f(x+0)+f(x-0)}{2},&间断点
+\end{cases}</script><ul>
+<li><strong>Thm</strong>：（傅里叶级数的收敛性原理2）若 $f(x)$ 以 $2\pi$ 为周期，且在区间 $[-\pi,\pi]$ 上分段可微，则该傅里叶级数在任一点处收敛到和函数 $\displaystyle S(x) =\frac 1 2(f(x+0)+f(x-0)),-\infty&lt;x&lt;\infty$</li>
+</ul>
+<blockquote>
+<p>这个时候，我们才能用 $=$ 替换 $\sim$</p>
+</blockquote>
+<div class="note note-success">
+            <p>有了这个定理之后，就可以求出一系列看似无法求出的和</p>
+          </div>
+<h3 id="奇偶周期函数的傅氏级数"><a href="#奇偶周期函数的傅氏级数" class="headerlink" title="奇偶周期函数的傅氏级数"></a>奇偶周期函数的傅氏级数</h3><ul>
+<li><p>偶函数：$b_n=0,~f(x)=\frac {a_0}{2}+\sum\limits_{n=1}^{\infty} a_n\cos nx$ 称为<strong>傅氏余弦函数</strong></p>
+</li>
+<li><p>奇函数：$a_n=0,~f(x) \sim \sum\limits_{n=1}^\infty b_n\sin nx$ 称为<strong>傅氏正弦函数</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>这个结论是显然的，只是给个定义</p>
+</blockquote>
+<h3 id="任意周期函数的傅氏级数"><a href="#任意周期函数的傅氏级数" class="headerlink" title="任意周期函数的傅氏级数"></a>任意周期函数的傅氏级数</h3><p>我们替换$a_n,b_n$ 中的系数做一些替换即可，若定义在$[-l,l]$，周期为$2l$</p>
+<script type="math/tex; mode=display">
+a_n=\frac 1 l\int_{-l}^{l}f(x)\cos nx\mathrm dx(n=0,1,2,\dots)\\
+b_n=\frac 1 l\int_{-l}^{l}f(x)\sin nx\mathrm dx(n=1,2,3,\dots)</script><p>但是重点在于，傅氏级数不仅仅可以用于讨论周期函数，也可以拿来讨论任意一个函数。</p>
+<p><strong>周期延拓函数</strong> $F(x)$：$F(x)=f(x-2kl)$</p>
+<p>又如在 $[0,l]$ 上的函数：</p>
+<ul>
+<li><strong>奇延拓</strong>：<script type="math/tex; mode=display">
+F_1(x)=\begin{cases}
+f(x),&0<x\le l\\
+0,&x=0\\
+-f(-x),&-l\le x<0
+\end{cases}</script></li>
+</ul>
+<ul>
+<li><strong>偶延拓</strong>：<script type="math/tex; mode=display">
+F_2(x)=\begin{cases}
+f(x),&0\le x\le l\\
+f(-x),&-l\le x<0
+\end{cases}</script></li>
+</ul>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Series/">级数</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6/">傅里叶</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/08/study/Physics/Ch2ConservationOfMomentumAndDynamicsofMassPoint/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">动量守恒和质点动力学</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/06/study/Math/DiscreteMath/PropositionalLogic/">
+                        <span class="hidden-mobile">数理逻辑</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz",
+          app_key: "vhuFwrNX5X0JUsN8f4YXXLQq",
+          placeholder: "ヾﾉ≧∀≦)o 来啊，快活啊!",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-home-fill"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 3,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "傅里叶级数&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
