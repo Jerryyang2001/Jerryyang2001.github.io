@@ -5249,4 +5249,90 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
         <tag>计算机图形学</tag>
       </tags>
   </entry>
+  <entry>
+    <title>最（凸）优化方法 [Overview and Intro]</title>
+    <url>/2020/09/26/study/Math/ConvexOptimization/index/</url>
+    <content><![CDATA[<p>2020-2021-1 最优化方法</p>
+<a id="more"></a>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="数学优化"><a href="#数学优化" class="headerlink" title="数学优化"></a>数学优化</h3><p>数学优化问题：（数学规划）</p>
+<div class="note note-primary">
+            <p>从一个<strong>可行解集合</strong>中,<strong>寻找</strong>出<strong>最优</strong>元素。</p>
+          </div>
+<p>数学形式：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    &\min . &f_0(x)\\
+    &~\mathrm{s.t.} & f_i(x) \leq b_i, i = 1,\dots,m
+\end{aligned}</script><p>其中：</p>
+<ul>
+<li>优化变量：$x$</li>
+<li>目标函数：$f_0:\R^n\rightarrow\R$</li>
+<li>约束函数：$f_i:\R^n\rightarrow\R$</li>
+<li>最优解：在<strong>所有满足约束的向量</strong>中，向量 $x^<em>$ 对应的目标函数值<em>*最小</em></em></li>
+</ul>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
+<li>投资组合优化<ul>
+<li>优化变量：各资产分配的资本数</li>
+<li>约束：总预算、每⼀份资产的资本范围、最⼩收益</li>
+<li>⽬标：总风险或回报</li>
+</ul>
+</li>
+<li>电⼦设计中的器件尺⼨<ul>
+<li>优化变量：器件的长和宽</li>
+<li>约束：⼯程约束、时间要求、最⼤⾯积</li>
+<li>⽬标：总功耗</li>
+</ul>
+</li>
+<li>数据拟合<ul>
+<li>优化变量：模型参数</li>
+<li>约束：先验信息、参数限制</li>
+<li>⽬标：预测误差</li>
+</ul>
+</li>
+</ul>
+<h3 id="求解优化问题"><a href="#求解优化问题" class="headerlink" title="求解优化问题"></a>求解优化问题</h3><ul>
+<li>一般形式的优化问题<ul>
+<li>难以求解</li>
+<li>折中：长时间的计算代价、找不到解</li>
+</ul>
+</li>
+<li>特定问题<ul>
+<li>最小二乘</li>
+<li>线性规划</li>
+<li>凸优化问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="最小二乘"><a href="#最小二乘" class="headerlink" title="最小二乘"></a>最小二乘</h3><p>形式：$\displaystyle\min.||Ax-b||_2^2$</p>
+<ul>
+<li>有解析解 $x* = (A^TA)^{-1}A^Tb$</li>
+<li>有可靠的求解算法和软件 <!-- TODO --></li>
+<li>计算时间：正比于 $n^2k(A\in \R^{k\times n})$</li>
+<li>技术成熟</li>
+<li>最⼩⼆乘的使⽤<ul>
+<li>判别⼗分简单</li>
+<li>使⽤标准⽅法增强灵活性（加权、正则化）</li>
+</ul>
+</li>
+</ul>
+<h3 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h3><script type="math/tex; mode=display">
+\begin{aligned}
+    &\min. &c^Tx\\
+    &\mathrm{~s.t.} &a_i^Tx\le b_i
+\end{aligned}</script><ul>
+<li>没有解析解</li>
+<li>具有可靠且有效的求解算法和软件</li>
+<li>计算时间：正⽐于$n^2m~(if~m \ge n)$，若具有特殊结构，求解更快。</li>
+<li>成熟技术</li>
+<li>判别难于最⼩⼆乘</li>
+<li>⼀些标准的技巧可⽤于将某些问题转化为线性规划（分段线性⽅程、包含范数的问题）</li>
+</ul>
+<!-- TODO: ppt p48 --><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>凸优化</tag>
+      </tags>
+  </entry>
 </search>

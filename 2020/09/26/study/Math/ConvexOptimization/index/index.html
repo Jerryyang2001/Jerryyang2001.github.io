@@ -17,7 +17,7 @@
   <meta name="description" content="欢迎来到些些同学的藏宝阁">
   <meta name="author" content="Jerry Yang">
   <meta name="keywords" content="study">
-  <title>静电场 - 些些同学的藏宝阁</title>
+  <title>最（凸）优化方法 [Overview and Intro] - 些些同学的藏宝阁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -172,8 +172,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-20 14:00" pubdate>
-      2020年8月20日
+    <time datetime="2020-09-26 00:00" pubdate>
+      2020年9月26日
     </time>
   </div>
 
@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      449 字
     </span>
   
 
@@ -193,7 +193,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15
+      5
        分钟
     </span>
   
@@ -223,127 +223,85 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">静电场</h1>
+            <h1 style="display: none">最（凸）优化方法 [Overview and Intro]</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>基础物理学第 8 - 9 章</p>
+              <p>2020-2021-1 最优化方法</p>
 <a id="more"></a>
-<div class="note note-secondary">
-            <ul><li>静电场<ul><li>电相互作用</li><li>静电场的高斯定理</li><li>静电场的环路定理、电势</li></ul></li><li>静电场中的导体、电介质<ul><li>静电场中的导体</li><li>静电场中的电介质</li><li>静电场的能量</li></ul></li></ul>
-          </div>
-<h2 id="电相互作用-真空中的静电场"><a href="#电相互作用-真空中的静电场" class="headerlink" title="电相互作用 真空中的静电场"></a>电相互作用 真空中的静电场</h2><h3 id="电相互作用"><a href="#电相互作用" class="headerlink" title="电相互作用"></a>电相互作用</h3><p><strong><span class="label label-info">「电荷守恒定律」</span></strong>：在一个与外界没有点和交换的系统内，正负电荷的代数和，在任何物理过程中都保持不变。</p>
-<p><strong><span class="label label-info">「电荷量子化」</span></strong>：微小粒子的带电量的变化不是连续的，它只能是 <span class="label label-success">元电荷 e</span> 的整数倍。</p>
-<h4 id="库仑定律"><a href="#库仑定律" class="headerlink" title="库仑定律"></a>库仑定律</h4><p><strong><span class="label label-info">「库仑定律」</span></strong>：</p>
-<ul>
-<li><p>在真空中，两个静止点电荷之间的相互作用力大小，与它们的电量的乘积成正比，与其距离平方成反比，作用力方向沿着它们的连线，同号电荷相斥，异号电荷相吸。</p>
-</li>
-<li><p>$\displaystyle\boldsymbol{F} _ {12}=k\frac{q  _ 1q _ 2}{r _ {12}^2}\boldsymbol{e} _ {12}=\frac{1}{4\pi\varepsilon _ 0}\frac{q _ 1q _ 2}{r _ {12}^2}\boldsymbol{e} _ {12}$</p>
-</li>
-</ul>
-<p><strong><span class="label label-info">「静电力的叠加原理」</span></strong>：总静电力等于其他点电荷单独存在作用在该点电荷上的静电力的矢量和</p>
-<h4 id="电场和电场强度"><a href="#电场和电场强度" class="headerlink" title="电场和电场强度"></a>电场和电场强度</h4><ul>
-<li>电场、电场力、场强</li>
-</ul>
-<p><strong><span class="label label-info">「场强的叠加原理」</span></strong>：（类似静电力的叠加原理）</p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="数学优化"><a href="#数学优化" class="headerlink" title="数学优化"></a>数学优化</h3><p>数学优化问题：（数学规划）</p>
 <div class="note note-primary">
-            <p>通过线积分、面积分、体积分计算电场强度。</p>
+            <p>从一个<strong>可行解集合</strong>中,<strong>寻找</strong>出<strong>最优</strong>元素。</p>
           </div>
-<div class="note note-warning">
-            <p><strong><span class="label label-info">「电偶极子」</span></strong>：由两个大小相等，符号相反的点电荷 +q 和 -q 组成。从负电荷到正电荷的矢量称为电偶极子的臂 l，电荷 q 和 l 的乘积称为电偶极矩 p（电矩）。</p>
-          </div>
-<h3 id="静电场的高斯定理"><a href="#静电场的高斯定理" class="headerlink" title="静电场的高斯定理"></a>静电场的高斯定理</h3><h4 id="电场线"><a href="#电场线" class="headerlink" title="电场线"></a>电场线</h4><p>数量和场强大小成正比</p>
-<h4 id="电场通量"><a href="#电场通量" class="headerlink" title="电场通量"></a>电场通量</h4><ul>
-<li>通量（Flux）</li>
-</ul>
-<h4 id="静电场的高斯定理-1"><a href="#静电场的高斯定理-1" class="headerlink" title="静电场的高斯定理"></a>静电场的高斯定理</h4><p>静电场中任何闭合曲面 S 的电场通量 $\varPhi _ E$ 等于该曲面内所包围的电荷的代数和 $\sum q _ i$ 除以 $\varepsilon _ 0$</p>
-<div class="note note-primary">
-            <p><strong><span class="label label-info">「注意」</span></strong> </p><ol><li>如何证明？</li><li>类比到引力场</li></ol>
-          </div>
-<h4 id="静电场高斯定理的微分形式"><a href="#静电场高斯定理的微分形式" class="headerlink" title="静电场高斯定理的微分形式"></a>静电场高斯定理的微分形式</h4><ul>
-<li>$\displaystyle\nabla\cdot\boldsymbol{E} =\frac{1}{\varepsilon}\rho _ c$</li>
-</ul>
-<h3 id="静电场的环路定理-电势"><a href="#静电场的环路定理-电势" class="headerlink" title="静电场的环路定理 电势"></a>静电场的环路定理 电势</h3><h4 id="静电场的环路定理"><a href="#静电场的环路定理" class="headerlink" title="静电场的环路定理"></a>静电场的环路定理</h4><ul>
-<li>静电场力所作的功，与路径无关（静电场力是保守力）</li>
-</ul>
-<p><strong><span class="label label-info">「静电场的环路定理」</span></strong>：静电场中，场强沿任意闭合环路的线积分恒等于 0：</p>
+<p>数学形式：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    &\min . &f_0(x)\\
+    &~\mathrm{s.t.} & f_i(x) \leq b_i, i = 1,\dots,m
+\end{aligned}</script><p>其中：</p>
 <ul>
-<li>$\displaystyle\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}=0$</li>
+<li>优化变量：$x$</li>
+<li>目标函数：$f_0:\R^n\rightarrow\R$</li>
+<li>约束函数：$f_i:\R^n\rightarrow\R$</li>
+<li>最优解：在<strong>所有满足约束的向量</strong>中，向量 $x^<em>$ 对应的目标函数值<em>*最小</em></em></li>
 </ul>
-<p>微分形式：</p>
-<ul>
-<li>$\nabla\times \boldsymbol{E}=0$</li>
-</ul>
-<h4 id="电势差和电势"><a href="#电势差和电势" class="headerlink" title="电势差和电势"></a>电势差和电势</h4><ul>
-<li>$\displaystyle U _ {PQ}=\int _ P^Q\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}$</li>
-<li>常常选用无穷远为势能零点</li>
-</ul>
-<h4 id="电势叠加原理"><a href="#电势叠加原理" class="headerlink" title="电势叠加原理"></a>电势叠加原理</h4><p><strong><span class="label label-info">「电势叠加原理」</span></strong>：点电荷系中电子厂中某点的电势，是哥哥点电荷单独存在时电场在该点的电势的代数和。</p>
-<h4 id="等势面-电势的梯度"><a href="#等势面-电势的梯度" class="headerlink" title="等势面 电势的梯度"></a>等势面 电势的梯度</h4><ul>
-<li>$\boldsymbol{E}=-\mathrm{grad}~V$</li>
-</ul>
-<blockquote>
-<p>**静电场的基本微分方程</p>
-<p>泊松方程：$\nabla^2V=-\frac{1}{\varepsilon _ 0}\rho _ e$</p>
-<p>拉普拉斯方程：$\nabla^2V=0$</p>
-</blockquote>
-<hr>
-<h2 id="静电场中的导体"><a href="#静电场中的导体" class="headerlink" title="静电场中的导体"></a>静电场中的导体</h2><h3 id="静电场中的导体-1"><a href="#静电场中的导体-1" class="headerlink" title="静电场中的导体"></a>静电场中的导体</h3><h4 id="导体的静电平衡条件"><a href="#导体的静电平衡条件" class="headerlink" title="导体的静电平衡条件"></a>导体的静电平衡条件</h4><p><strong><span class="label label-info">「条件」</span></strong>：导体内场强处处为 0</p>
-<blockquote>
-<p>利用了：<strong>静电场边值问题的唯一性定理</strong></p>
-</blockquote>
-<div class="note note-primary">
-            <ol><li>导体是等势体，导体表面是等势面</li><li>导体内部没有静电荷，电荷只分布在导体表面上</li><li>导体以外靠近其表面处的场强处处与表面垂直，其大小取决于导体表面的面电荷密度。</li></ol>
-          </div>
-<h4 id="导体壳-静电屏蔽"><a href="#导体壳-静电屏蔽" class="headerlink" title="导体壳 静电屏蔽"></a>导体壳 静电屏蔽</h4><p><strong><span class="label label-info">「腔内无带电梯」</span></strong>：在静电平衡状态下，导体壳的内表面上处处没有电荷，电荷只分布在外表面上，空腔内没有电场。</p>
-<p><strong><span class="label label-info">「有带电体」</span></strong>：内表面和腔内电荷的代数和为 0.</p>
-<p><strong><span class="label label-info">「静电屏蔽」</span></strong>：接地良好的道题刻可以把内部带电梯对外界的影响全部消除。</p>
-<h4 id="电容-电容器"><a href="#电容-电容器" class="headerlink" title="电容 电容器"></a>电容 电容器</h4><p><strong><span class="label label-info">「孤立导体的电容」</span></strong>：$C = \frac{q}{V}$</p>
-<p><strong><span class="label label-info">「电容器的电容」</span></strong>：$C = \frac{q}{U_{AB}}$</p>
-<div class="note note-primary">
-            <p><strong>电容计算</strong>：</p><ol><li>平行板电容器</li><li>同心球电容器</li><li>同轴柱形电容器</li></ol><p>并联的电容：加和</p><p>串联的电容：倒数 = 倒数加和</p>
-          </div>
-<h3 id="静电场中的电介质"><a href="#静电场中的电介质" class="headerlink" title="静电场中的电介质"></a>静电场中的电介质</h3><h4 id="电介质计划"><a href="#电介质计划" class="headerlink" title="电介质计划"></a>电介质计划</h4><ul>
-<li>位移极化、取向极化、极化电荷、束缚电荷</li>
-</ul>
-<h4 id="极化强度和极化电荷"><a href="#极化强度和极化电荷" class="headerlink" title="极化强度和极化电荷"></a>极化强度和极化电荷</h4><p>$P = \frac{\sum \boldsymbol p_i}{\Delta V}$</p>
-<p>闭合曲面 S 内向外移动的极化电荷总量为净余的极化电荷总量的负值：</p>
-<ul>
-<li>$\displaystyle\iint_{(S)}P\cdot \mathrm d S=-\sum q’_i$</li>
-</ul>
-<h4 id="各向同性线性电介质的极化规律"><a href="#各向同性线性电介质的极化规律" class="headerlink" title="各向同性线性电介质的极化规律"></a>各向同性线性电介质的极化规律</h4><ul>
-<li>$P=\chi_e\varepsilon_0 E$</li>
-</ul>
-<p>产生<strong>退极化场</strong>：E’</p>
-<h4 id="电位移-有电介质时的高斯定理"><a href="#电位移-有电介质时的高斯定理" class="headerlink" title="电位移 有电介质时的高斯定理"></a>电位移 有电介质时的高斯定理</h4><ul>
-<li>$D=\varepsilon_0E+P$</li>
-<li>$D=\varepsilon_r\varepsilon_0E=\varepsilon E$</li>
-</ul>
-<p><strong><span class="label label-info">「D的高斯定理」</span></strong>：$\nabla\cdot D=\rho_0$</p>
-<ul>
-<li>$D = \varepsilon E=\varepsilon_r\varepsilon_0E$</li>
-<li>$C=\varepsilon_rC_0$</li>
-</ul>
-<h3 id="静电场的能量"><a href="#静电场的能量" class="headerlink" title="静电场的能量"></a>静电场的能量</h3><h4 id="带点体系的静电能"><a href="#带点体系的静电能" class="headerlink" title="带点体系的静电能"></a>带点体系的静电能</h4><ul>
-<li>点电荷之间的相互作用能<ul>
-<li>$\displaystyle W_{int}=\frac{1}{8\pi\varepsilon_0}\sum\sum\frac{q_iq_j}{r_{ij}}$</li>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
+<li>投资组合优化<ul>
+<li>优化变量：各资产分配的资本数</li>
+<li>约束：总预算、每⼀份资产的资本范围、最⼩收益</li>
+<li>⽬标：总风险或回报</li>
 </ul>
 </li>
-<li>电荷连续分布情形的静电能<ul>
-<li>$\displaystyle W=\frac{1}{2}\sum qV$</li>
+<li>电⼦设计中的器件尺⼨<ul>
+<li>优化变量：器件的长和宽</li>
+<li>约束：⼯程约束、时间要求、最⼤⾯积</li>
+<li>⽬标：总功耗</li>
 </ul>
 </li>
-<li>电荷在外电场中的能量</li>
-<li>电容器储能<ul>
-<li>$\displaystyle W=\frac{1}{2}QU$</li>
+<li>数据拟合<ul>
+<li>优化变量：模型参数</li>
+<li>约束：先验信息、参数限制</li>
+<li>⽬标：预测误差</li>
 </ul>
 </li>
 </ul>
-<h4 id="电场的能量和能量密度"><a href="#电场的能量和能量密度" class="headerlink" title="电场的能量和能量密度"></a>电场的能量和能量密度</h4><p><strong><span class="label label-info">「电能密度」</span></strong>：$\displaystyle w_e = \frac{W_e}{V} = \frac{1}{2}DE$</p>
-<p>各向同性时：</p>
-<ul>
-<li>$\displaystyle w_e=\frac{1}{2}\varepsilon_0E^2(or~\frac{1}{2}\varepsilon_r\varepsilon_0E^2)$</li>
+<h3 id="求解优化问题"><a href="#求解优化问题" class="headerlink" title="求解优化问题"></a>求解优化问题</h3><ul>
+<li>一般形式的优化问题<ul>
+<li>难以求解</li>
+<li>折中：长时间的计算代价、找不到解</li>
 </ul>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+</li>
+<li>特定问题<ul>
+<li>最小二乘</li>
+<li>线性规划</li>
+<li>凸优化问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="最小二乘"><a href="#最小二乘" class="headerlink" title="最小二乘"></a>最小二乘</h3><p>形式：$\displaystyle\min.||Ax-b||_2^2$</p>
+<ul>
+<li>有解析解 $x* = (A^TA)^{-1}A^Tb$</li>
+<li>有可靠的求解算法和软件 <!-- TODO --></li>
+<li>计算时间：正比于 $n^2k(A\in \R^{k\times n})$</li>
+<li>技术成熟</li>
+<li>最⼩⼆乘的使⽤<ul>
+<li>判别⼗分简单</li>
+<li>使⽤标准⽅法增强灵活性（加权、正则化）</li>
+</ul>
+</li>
+</ul>
+<h3 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h3><script type="math/tex; mode=display">
+\begin{aligned}
+    &\min. &c^Tx\\
+    &\mathrm{~s.t.} &a_i^Tx\le b_i
+\end{aligned}</script><ul>
+<li>没有解析解</li>
+<li>具有可靠且有效的求解算法和软件</li>
+<li>计算时间：正⽐于$n^2m~(if~m \ge n)$，若具有特殊结构，求解更快。</li>
+<li>成熟技术</li>
+<li>判别难于最⼩⼆乘</li>
+<li>⼀些标准的技巧可⽤于将某些问题转化为线性规划（分段线性⽅程、包含范数的问题）</li>
+</ul>
+<!-- TODO: ppt p48 --><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
             <div>
@@ -352,7 +310,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E5%9F%BA%E7%A1%80%E7%89%A9%E7%90%86%E5%AD%A6/">基础物理学</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
                     
                   </div>
                 
@@ -360,9 +318,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%89%A9%E7%90%86/">物理</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E6%B3%A2/">波</a>
+                      <a class="hover-with-bg" href="/tags/%E5%87%B8%E4%BC%98%E5%8C%96/">凸优化</a>
                     
                   </div>
                 
@@ -373,9 +329,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/09/26/study/Math/ConvexOptimization/index/">
+                      <a href="/2020/09/26/study/ComputerScience/ComputerGraphic/Application_of_math%20_in_CG/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">最（凸）优化方法 [Overview and Intro]</span>
+                        <span class="hidden-mobile">数学在计算机图形学中的应用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -383,8 +339,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/08/19/study/ComputerScience/mixed/datastructure-review/">
-                        <span class="hidden-mobile">数据结构复习</span>
+                      <a href="/2020/08/20/study/Physics/Ch8_9/">
+                        <span class="hidden-mobile">静电场</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -581,7 +537,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "静电场&nbsp;",
+        "最（凸）优化方法 [Overview and Intro]&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
