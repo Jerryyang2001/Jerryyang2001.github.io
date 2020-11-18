@@ -4,6 +4,181 @@
   
   
   <entry>
+    <title>概率统计与随机过程 1 - 随机事件及其概率</title>
+    <link href="/2020/11/18/study/Math/Probabilities/notes1/"/>
+    <url>/2020/11/18/study/Math/Probabilities/notes1/</url>
+    
+    <content type="html"><![CDATA[<h1 id="随机事件及其概率"><a href="#随机事件及其概率" class="headerlink" title="随机事件及其概率"></a>随机事件及其概率</h1><h3 id="1-1-随机事件"><a href="#1-1-随机事件" class="headerlink" title="1.1 随机事件"></a>1.1 随机事件</h3><ul><li><p>Def：样本空间</p></li><li><p>Def：随机事件</p></li></ul><h5 id="随机事件的概率"><a href="#随机事件的概率" class="headerlink" title="随机事件的概率"></a>随机事件的概率</h5><ul><li><p>Def 1.1：频率</p></li><li><p>Thm 1.1：频率满足：</p><ul><li>$0\le f_n(A)\le 1$</li><li>$f_n(\varOmega)=1$</li><li>互不相容的随机事件，$f_n(\cup A_i)=\sum f_n(A_i)$</li></ul></li></ul><h5 id="概率的公理化定义"><a href="#概率的公理化定义" class="headerlink" title="概率的公理化定义"></a>概率的公理化定义</h5><ul><li><p>设$E$是随机试验，$\varOmega$ 是 $E$ 的样本空间，对于每一个随机事件，赋予唯一的实数$P(A)$，满足：非负性、规范性、可列可加性，则称集合函数$P(\cdot)$为概率测度</p></li><li><p>Thms：</p><ul><li>$P(\empty)=0$</li><li>$P(\cup A_i)=\sum P(A_i)$</li><li>$P(\bar A) = 1-P(A)$</li><li>$P(A\cup B) + P(AB) = P(A)+P(B)$</li><li>$A\sub B\rightarrow P(B-A)=P(B)-P(A)$</li><li>$A\sub B\rightarrow P(A)\le P(B)$</li></ul></li></ul><h3 id="1-3-古典概型"><a href="#1-3-古典概型" class="headerlink" title="1.3 古典概型"></a>1.3 古典概型</h3><ul><li><p>Def 1.3：一个古典概型 $E$ 满足：</p><ol><li>样本空间只有有限个基本事件</li><li>每个基本事件出现可能性相同</li></ol></li></ul><h3 id="1-4-条件概率"><a href="#1-4-条件概率" class="headerlink" title="1.4 条件概率"></a>1.4 条件概率</h3><ul><li><p>Def 1.5：设 $\varOmega$ 是随机试验 $E$ 的样本空间，$A_1,A_2,\dots, A_n$ 是随机事件，若满足：</p><ol><li>$A_iA_j = \empty,~\forall i\ne j$</li><li>$\cup A_j = \varOmega$</li></ol><p>则称$A_1,A_2,\dots, A_n$ 是$\varOmega$ 的一个有穷划分。</p><blockquote><p>相同定义 <span class="label label-primary">可列无穷划分</span></p></blockquote></li></ul><h5 id="全概率公式和贝叶斯公式"><a href="#全概率公式和贝叶斯公式" class="headerlink" title="全概率公式和贝叶斯公式"></a>全概率公式和贝叶斯公式</h5><p><strong>全概率公式</strong></p><ul><li>Thm 1.3：设随机事件组是 $\varOmega$ 的一组可列无穷划分 $P(A_i) &gt; 0,\forall i$，则对于任意随机事件 $B$，有：$P(B) = \sum P(A_i)P(B|A_i)$</li></ul><p><strong>Bayes 公式</strong></p><ul><li><p>Thm 1.4：设$A_1, A_2,\dots$ 是样本空间$\varOmega$ 的一组可列无穷划分，$P&gt;0,B\subset \varOmega$ 则：</p><script type="math/tex; mode=display">  P(A_i|B) = \frac{P(A_i)P(B|A_i)}{\sum P(A_i)P(B|A_i)}, i = 1, 2,\dots</script></li></ul><h3 id="1-5-随机事件的独立性"><a href="#1-5-随机事件的独立性" class="headerlink" title="1.5 随机事件的独立性"></a>1.5 随机事件的独立性</h3><h5 id="两个随机事件的独立性"><a href="#两个随机事件的独立性" class="headerlink" title="两个随机事件的独立性"></a>两个随机事件的独立性</h5><ul><li>Def 1.6：设$A,B$是两个随机事件，若：$P(AB) = P(A)P(B)$则称 $A, B$ 是两个相互独立的随机事件</li></ul><blockquote><p>$\varOmega,~\empty$ 与任一事件相互独立</p></blockquote><ul><li><p>Thm 1.5：$P(A),P(B)&gt;0$ 时 $A,B独立\iff P(A|B)=P(A), P(B|A)=P(B)$</p></li><li><p>Thm 1.6 「独立扩张定理」：$A,B独立\iff \bar A,B~A,\bar B~ \bar A,\bar B 独立$</p></li></ul><h5 id="多个随机事件的独立性"><a href="#多个随机事件的独立性" class="headerlink" title="多个随机事件的独立性"></a>多个随机事件的独立性</h5><ul><li><p>Def 1.7：三个独立的随机事件，满足：</p><script type="math/tex; mode=display">  \begin{cases}      两两独立\\      P(ABC) = P(A)P(B)P(C)  \end{cases}</script></li><li><p>Def 1.8：n 个事件的独立性</p></li></ul><blockquote><p>独立的多个随机事件满足：</p><ol><li>$P(\cap A_i) = \prod P(A_i)$</li><li>$P(\cup A_i) = 1 - \prod[1-P(A_i)]$</li></ol></blockquote><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    
+    
+    <categories>
+      
+      <category>数学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>概率论</tag>
+      
+      <tag>统计</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>概率统计与随机过程 2 - 随机变量及其概率分布</title>
+    <link href="/2020/11/18/study/Math/Probabilities/notes2/"/>
+    <url>/2020/11/18/study/Math/Probabilities/notes2/</url>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h1 id="随机变量及其概率分布"><a href="#随机变量及其概率分布" class="headerlink" title="随机变量及其概率分布"></a>随机变量及其概率分布</h1><h3 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h3><p><strong>Def</strong> 2.1：设 $E$ 时一个随机试验，$\varOmega$是其样本空间，如果对于每一个试验的结果 $\omega\in \varOmega$，由唯一的实数$X(\omega)$与之对应，这个定义在试验样本空间上的实值函数$X(\omega)$称为$E$的随机变量</p><h3 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h3><p><strong>Def</strong> 2.2：设 $X(\omega)$是随机变量，称 $F(x) = P(X\le x),~-\infty&lt;x&lt;\infty$</p><p>结论：</p><ul><li>$P(x_1 &lt; X\le x_2) = F(x_2) - F(x_1)$</li><li>$P(x_1\le X&lt; x2) = F(x_2-0) - F(x_1-0)$</li><li>$P(x_1 &lt; X&lt; x2) = F(x_2-0) - F(x_1)$</li><li>$P(x_1\le X\le x2) = F(x_2) - F(x_1-0)$</li></ul><h5 id="分布函数的性质"><a href="#分布函数的性质" class="headerlink" title="分布函数的性质"></a>分布函数的性质</h5><ol><li>$0\le F(x) \le 1$</li><li>单调不降</li><li>右连续函数</li><li>有可数个间断点</li></ol><h3 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h3><h5 id="离散型随机变量的分布律"><a href="#离散型随机变量的分布律" class="headerlink" title="离散型随机变量的分布律"></a>离散型随机变量的分布律</h5><p><strong>Def</strong> 2.3：设离散随机变量$X$可能取得一切之为 $x_1, x_2,\dots, x_n$ 称为 $X$ 分布律（列），也称为 $X$ 的概率函数。</p><ul><li>$X$ 的分布函数 $F(x) = \sum\limits_{x_k\le x} p_k$</li></ul><h5 id="常见的离散分布"><a href="#常见的离散分布" class="headerlink" title="常见的离散分布"></a>常见的离散分布</h5><h6 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="0 - 1 分布"></a>0 - 1 分布</h6><ul><li>0 - 1 分布：$X$ 只取 $0$ 和 $1$ 两个值，且$P(X=1)=p,~P(X=0)=1-p$，则称 $X$ 服从 $(0-1)$ 分布。</li></ul><h6 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h6><ul><li><p><strong>Def</strong>：n次独立试验概型</p></li><li><p><strong>伯努利试验</strong>只有两个可能结果，$A,~\bar A$，且$P(A)=p$</p><ul><li>$n$ 重伯努利试验是指将试验独立重复 $n$ 次。</li><li>$X$ 表示 $n$ 重伯努利试验中事件 $A$ 发生的次数</li></ul><p>称随机变量$X$服从参数为$n,~p$ 的二项分布，$X\sim B(n,p)$</p></li><li><p>$P(X=k) = C_n^k p^k (1-p)^{n-k}$</p></li><li><p><strong>Thm</strong>：$X$是伯努利试验中$A$发生的次数，$p$是每次试验中 $A$ 发生的概率，则 $X\sim b(n,p)$</p></li><li><p><strong>Def</strong>：最可能成功次数$k = \lfloor (n+1)p \rfloor~(n+1)p不是整数$</p></li></ul><h6 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h6><ul><li><p>$\displaystyle P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!},~X\sim P(\lambda)$</p></li><li><p>泊松定理：设 $\lambda &gt;0$是一个常数，$n$ 是任意正整数，设$np_n=\lambda$。则对于任意固定的非负整数$k$有 $\displaystyle\lim_{n\rightarrow \infty}C_n^kp_n^k(1-p_n)^{n-k}=\frac{\lambda^ke^{-\lambda}}{k!}$</p></li></ul><h6 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h6><ul><li>$\displaystyle P(X=k) = q^{k-1} p, k=1,2,\dots$</li></ul><h6 id="超几何分布"><a href="#超几何分布" class="headerlink" title="超几何分布"></a>超几何分布</h6><ul><li>$\displaystyle P(X=k) = \frac{C_M^k\cdot C_{N-M}^{n-k}}{C_N^n}, k = 0, 1, 2, \dots, l=\min\{n,M\}$</li><li>$X\sim H(N,M,n)$</li></ul><h6 id="负二项分布"><a href="#负二项分布" class="headerlink" title="负二项分布"></a>负二项分布</h6><ul><li>$\displaystyle P(X=k) = C_{k-1}^{r-1}p^r(1-p)^{k-r}$</li><li>$X\sim Nb(r,p)$</li></ul><h3 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h3><ul><li><strong>Def</strong> 2.5：$F(x) = \int_{-\infty}^xf(x)\mathrm dx,-\infty &lt; x &lt; \infty$<ul><li>其中$f(x)$ 是非负可积函数，称为$X$的概率分布密度函数（概率密度函数<code>Probability Density Function</code>）</li><li>规范性：$\displaystyle\int_R f(x) \mathrm dx =1$</li><li>$P(x&lt; X \le x+\Delta x)\approx f(x)\Delta x$</li><li>连续性，$F(-\infty) = 0$，$F(\infty)=1$</li></ul></li><li>$P(a&lt;X\le b) = \int_a^bf(x)\mathrm dx$</li></ul><h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><h6 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h6><script type="math/tex; mode=display">f(x)=\begin{cases}  \displaystyle\frac{1}{b-a},&a\le x\le b,\\  0,&otherwise\end{cases}\\\\F(x) = P(X\le x) = \begin{cases}  0,&x < a\\  \displaystyle\frac{x-a}{b-a}, &a\le x \le b\\  1, &x>b\end{cases}</script><ul><li>$X\sim U[a,b]$</li></ul><h6 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h6><script type="math/tex; mode=display">f(x) = \begin{cases}  \lambda e^{-\lambda x}, &x>0\\  0, & x\le 0\end{cases}\\F(x) = \begin{cases}  1- e^{-\lambda x}, &x>0\\  0, &x\le 0\end{cases}</script><ul><li>$X\sim e(\lambda)$</li><li>$E(X) = \lambda$</li></ul><h6 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h6><ul><li><strong>Def</strong>：$\displaystyle f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$<ul><li>$X\sim N(\mu, \sigma^2)$</li><li>$\mu$ 为位置参数，$\sigma$ 为尺度参数</li><li>关于$\mu$对称，最大值</li><li>$\sigma$固定，形状保持不变</li><li>拐点为：$x=\mu\pm\sigma$</li></ul></li><li>$erf(x)=F(x)= \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\mathrm dx$</li><li>$3\sigma,~6\sigma$理论</li></ul><h6 id="标准正态分布-N-0-1"><a href="#标准正态分布-N-0-1" class="headerlink" title="标准正态分布 $N(0,1)$"></a>标准正态分布 $N(0,1)$</h6><ul><li>$\mu = 0, \sigma = 1$ 的正态分布称为标准正态分布</li><li>密度函数和分布函数通常用 $\varphi(x),\Phi(x)$ 表示</li></ul><script type="math/tex; mode=display">\begin{aligned}  &\varphi(x) = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}\\  &\Phi(x) = \int_{-\infty}^x\varphi(x)\mathrm dx\end{aligned}</script><ul><li>$\Phi(0)=0.5,~\Phi(-x) = 1-\Phi(x)$</li></ul><h6 id="非标准正态分布与标准正态分布的关系"><a href="#非标准正态分布与标准正态分布的关系" class="headerlink" title="非标准正态分布与标准正态分布的关系"></a>非标准正态分布与标准正态分布的关系</h6><ul><li><strong>Thm</strong>（一般正态分布的标准化）：若$X\sim N(\mu, \sigma^2)$，则$U=\frac{X-\mu}{\sigma}\sim N(0,1)$</li></ul><h6 id="alpha-分位点"><a href="#alpha-分位点" class="headerlink" title="$\alpha$分位点"></a>$\alpha$分位点</h6><ul><li><strong>Def</strong>：$P(X&gt;\mu_\alpha) = \alpha,\quad0&lt;\alpha&lt;1$</li></ul><h3 id="2-5-随机变量函数的分布"><a href="#2-5-随机变量函数的分布" class="headerlink" title="2.5 随机变量函数的分布"></a>2.5 随机变量函数的分布</h3><h5 id="已知离散随机变量X的分布，求函数-Y-g-X-的分布"><a href="#已知离散随机变量X的分布，求函数-Y-g-X-的分布" class="headerlink" title="已知离散随机变量X的分布，求函数 Y=g(X) 的分布"></a>已知离散随机变量X的分布，求函数 Y=g(X) 的分布</h5><script type="math/tex; mode=display">P(Y=y_j) = P(g(X)=y_j) = \sum_{\{x_k|g(x_k) = y_j\}}P(X=x_k), j = 1, 2, \dots,</script><p>离散型均匀分布：</p><script type="math/tex; mode=display">Y = [NX+1],\quad where~X\sim U(0, 1)</script><h5 id="一致连续型随机变量X的概率密度，求-g-X-的概率密度"><a href="#一致连续型随机变量X的概率密度，求-g-X-的概率密度" class="headerlink" title="一致连续型随机变量X的概率密度，求 g(X) 的概率密度"></a>一致连续型随机变量X的概率密度，求 g(X) 的概率密度</h5><ul><li>分布函数法</li><li>Key Point：$F_Y(y)=P(Y\le y)=P(g(x)\le y)=\displaystyle\int_{\{x|g(x)&lt;y\}}f_X(x)\mathrm dx$</li></ul><script type="math/tex; mode=display">Y = aX+b\Rightarrowf_Y(y)=\frac{\mathrm d}{\mathrm dy}F_Y(y) =\\ \begin{cases}  \frac 1 a f_X(\frac{y-b}{a}),&a>0\\  -\frac{1}{a} f_X(\frac{y-b}{a}),&a<0\\\end{cases}</script><h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><p>$X\sim N(0,1),~Y=X^2$</p><script type="math/tex; mode=display">f_Y(y) = F'_Y(y) =\begin{cases}  \frac{1}{\sqrt{2\pi y}}e^{-\frac{y}{2}},& y>0\\  0,&y\le 0\end{cases}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    
+    
+    <categories>
+      
+      <category>数学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>概率论</tag>
+      
+      <tag>统计</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>概率统计与随机过程 3 - 随机向量及其概率分布</title>
+    <link href="/2020/11/18/study/Math/Probabilities/notes3/"/>
+    <url>/2020/11/18/study/Math/Probabilities/notes3/</url>
+    
+    <content type="html"><![CDATA[<h1 id="随机向量及其概率分布"><a href="#随机向量及其概率分布" class="headerlink" title="随机向量及其概率分布"></a>随机向量及其概率分布</h1><h3 id="二维随机向量的联合分布函数"><a href="#二维随机向量的联合分布函数" class="headerlink" title="二维随机向量的联合分布函数"></a>二维随机向量的联合分布函数</h3><p><strong>Def</strong>：（二位随机向量）假设 $\Omega = \{\omega\}$ 是随机试验 E 的样本空间，$X(\omega),~Y(\omega)$ 是定义在$\Omega$ 上的两个随机变量，由他们构成一个二维向量$(X,Y)$称为随机试验 E 的一个二维向量。</p><p><strong>Def</strong>：（二维随机变量的联合分布函数）：假设$(X,Y)$是二维随机向量，对于任意实数$x,y$，二元函数$F(x,y)=P(X\le x,Y\le y)$ 称为二维随机向量$(X,Y)$ 的联合分布函数（分布函数）。</p><h5 id="联合分布函数的性质"><a href="#联合分布函数的性质" class="headerlink" title="联合分布函数的性质"></a>联合分布函数的性质</h5><ol><li>$0\le F\le 1$</li><li>$F$ 是变量 $x,~y$ 的不降函数。</li><li>右连续性</li><li>$\forall x_1<x_2, 1 y_ < y _ 2:~p(x\\_1\le x \le x\\_2,y\\_1\le y\\_2)="F(x\\_2,y\\_2)" +f(x\\_1, y\\_1) - f(x\\_1,y\\_2) f(x\\_2,>0$</x_2,></li></ol><h5 id="二维离散型随机向量"><a href="#二维离散型随机向量" class="headerlink" title="二维离散型随机向量"></a>二维离散型随机向量</h5><p><strong>Def</strong>：（二维离散型随机向量）若随机向量$(X,Y)$最多取可列无穷多个点$(x_i, y_j), i, j\in \mathrm N$，则称$P(X=x_i,Y=y_j)=p_{ij}$为$(X,Y)$ 的联合分布律（分布律）</p><h5 id="离散型随机向量的联合分布律"><a href="#离散型随机向量的联合分布律" class="headerlink" title="离散型随机向量的联合分布律"></a>离散型随机向量的联合分布律</h5><p><strong>Def</strong></p><ul><li>$p_{ij}\ge 0$</li><li>$\sum_{j=1}^\infty \sum p{ij}=1$</li><li>$F(x,y) = \sum_{y_j\le y} \sum_{x_j\le x} p_{ij}$</li></ul><h3 id="二维随机连续向量"><a href="#二维随机连续向量" class="headerlink" title="二维随机连续向量"></a>二维随机连续向量</h3><ul><li><p><strong>Def</strong>：（连续型随机向量）$F(x,y)$ 是二维随机向量$(X, Y)$ 的联合分布函数，若存在非负可积函数 $f(x,y)$ ，有 $F(x,y)=\int_{-\infty}^y\int_{-\infty}^0$ 则称$(X,Y)$ 的二维连续型随机向量，$f(x,y)$ 称为二维连续性密度函数</p></li><li><p>性质：</p><ol><li>非负性</li><li>规范性</li><li>$f(x,y) =\frac{\partial^2}{\partial x\partial y}F(x,y)$</li><li>$P((X,Y)\in G) = \iint_G f\mathrm dx \mathrm dy$</li></ol></li></ul><h5 id="二维随机型随机向量"><a href="#二维随机型随机向量" class="headerlink" title="二维随机型随机向量"></a>二维随机型随机向量</h5><ol><li>二维均匀分布：<ul><li>面积为 $A$ 若 $(X,Y)$ 具有概率密度：$f(x,y) = 1/A~if~(x,y)\in G~else~0$</li></ul></li><li>二维正态分布</li></ol><script type="math/tex; mode=display">f(x,y) = \frac{1}{2\pi \sigma_1\sigma_1\sqrt{1-\rho^2}}\exp\{-\frac{1}{2(1-\rho^2)}[\frac{(x-\mu_1)^2}{\sigma_1^2}-2\rho\frac{(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}+\frac{(y-\mu)2)^2}{\sigma_2^2}  ]\}</script><h3 id="边缘分布"><a href="#边缘分布" class="headerlink" title="边缘分布"></a>边缘分布</h3><p><strong>Def</strong>：（边缘分布函数）假设二维随机向量$(X,Y)$ 的联合概率分布函数 $F(x,y)$，令$F_1(x) = F(x,+\infty),F_2(y) = F(+\infty, y)$为关于 $X$ 和 $Y$ 的边缘分布函数</p><p><strong>Thm</strong>：$F_X(x) = F_1(x),~F_Y(y) = F_2(y)$</p><h5 id="离散型边缘分布律"><a href="#离散型边缘分布律" class="headerlink" title="离散型边缘分布律"></a>离散型边缘分布律</h5><ul><li>$\displaystyle F_X(x) = \sum_{x_i\le x}\sum p_{ij}$</li><li>$P(X = x_i) = \sum_{j=1}^\infty p_{ij},~P(X = x_j) = \sum_{i=1}^\infty p_{ij}$</li><li>$p_{i\cdot}=P(X=x_i),~p_{\cdot j}=P(Y=y_j)$</li></ul><h5 id="连续性随机向量的边缘分布函数"><a href="#连续性随机向量的边缘分布函数" class="headerlink" title="连续性随机向量的边缘分布函数"></a>连续性随机向量的边缘分布函数</h5><ul><li><strong>Def</strong>：（边缘概率密度）$F_X(x) = F(x, +\infty) = \int_{-\infty}^x\int_{-\infty}^{+\infty}f(x,y)\mathrm dy\mathrm dx=\int_{-\infty}^{x}f_1(x)\mathrm dx$<ul><li>$f_X(x) = f_1(x) = \int_{-\infty}^\infty f(x,y)\mathrm dy$</li></ul></li></ul><h3 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h3><ul><li><strong>Def</strong>：(条件分布函数）假设$X,~Y$ 是两个随机变量，<ul><li>若对于固定的 $x$ 有 $P(X=x)\ge 0$ 则对于任意的 $y\in R$ 称：$P(Y\le y|X=x)=\frac{P(X=x, Y\le y)}{P(X = x)}$ 为 $X = x$ 条件下，$Y$ 的条件分布函数，记为 $F_{Y|X}(y|x)$</li><li>若对于固定的 $y$ 有 $P(Y=y)\ge 0$ 则对于任意的 $x\in R$ 称：$P(X\le x|Y=y)=\frac{P(Y=y, X\le x)}{P(Y = y)}$ 为 $Y = y$ 条件下，$X$ 的条件分布函数，记为 $F_{Y|X}(x|y)$</li></ul></li></ul><h5 id="连续型随机变量的条件分布函数"><a href="#连续型随机变量的条件分布函数" class="headerlink" title="连续型随机变量的条件分布函数"></a>连续型随机变量的条件分布函数</h5><ul><li>对于连续型随机变量，考虑极限：<br>$\displaystyle\lim_{\Delta x\rightarrow 0}\frac{P(x-\Delta x&lt; X\le x,Y\le y)}{P(x-\Delta x &lt; X\le x)}=\frac{\int_{-\infty}^yf(x,y)\mathrm dy}{f_X(x)}~-\infty &lt; y &lt; +\infty$</li></ul><h5 id="离散型随机变量的条件分布律"><a href="#离散型随机变量的条件分布律" class="headerlink" title="离散型随机变量的条件分布律"></a>离散型随机变量的条件分布律</h5><ul><li>设 $(X,Y)$ 是二维离散型随机变量，联合分布律为$P(X=x_i,Y=y_j)=p_{ij},~i,j=1,2,\dots$<ul><li>可知：$P(Y=y_j|X=x_i)=\displaystyle\frac{p_{ij}}{p_{i\cdot}}$</li><li>类似的 $F_{Y|X} (y|x) = \frac{\sum_{y_j\le y}P_{ij}}{p_{i\cdot}}$</li></ul></li></ul><h5 id="连续型随机变量的条件分布、条件分布密度"><a href="#连续型随机变量的条件分布、条件分布密度" class="headerlink" title="连续型随机变量的条件分布、条件分布密度"></a>连续型随机变量的条件分布、条件分布密度</h5><ul><li>设二维连续型随机变量$(X,Y)$ 的连续概率密度函数为$f(x,y)$ 对于固定的 $x$，$(X,Y)$ 关于边缘概率密度 $f_X(x)&gt;0$ 则在$X=x$条件下，$Y$ 的条件分布函数：<br>$\displaystyle\lim_{\Delta x\rightarrow 0}\frac{P(x-\Delta x&lt; X\le x,Y\le y)}{P(x-\Delta x &lt; X\le x)}=\frac{\int_{-\infty}^yf(x,y)\mathrm dy}{f_X(x)}=\int_{-\infty}^y\frac{f(x,y)}{f_X(x)}\mathrm dy=\int_{-\infty}^yf_{Y|X}(y|x)\mathrm dy$</li><li><p>$f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}$ 称为在 $X = x$ 下，$Y$ 的条件分布函数</p></li><li><p>类似于<em>乘法公式</em>$f_{X,Y}(x,y)=f_Y(y)f_{X|Y}(x|y)$</p></li></ul><h3 id="随机变量的独立性"><a href="#随机变量的独立性" class="headerlink" title="随机变量的独立性"></a>随机变量的独立性</h3><ul><li><p>随机变量 X Y 独立是指：与 X 相关的任一事件发生与否与 Y 有关的任一事件发生与否无关。</p></li><li><p><strong>Def</strong>（随机变量间的独立性）：设随机向量的联合分布函数为$F(x,y)$，而$F_X(x),F_Y(y)$ 分别为随机变量 X, Y 的分布函数，若 $\forall (x,y)\in R^2, F(x,y)=F_X(x)F_Y(y)$ 则 X Y 相互独立</p></li><li><p><strong>Thm</strong>：若$(X,Y)$ 时二维离散型随机向量，其联合分布律为：$P(X=x_i,Y=y_i)=p_{ij}$ 则 X Y 相互独立的充要条件是 $\forall (x_i,y_i),p_{ij}=P(X=x_i)P(Y=y_j)$</p></li><li><p><strong>Thm</strong>：若$(X,Y)$ 时二维连续型随机向量，其联合概率密度函数为：$f(x,y)$ 则 X Y 相互独立的充要条件是 $\forall (x,y),f(x,y) = f_X(x)f_Y(y)$</p></li></ul><h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><ul><li>$(X,Y)\sim N(\mu_1,\mu_2,\sigma_1^2,\sigma_2^2,\rho)$<ul><li>$\rho$：相关系数</li><li>独立 $\iff\rho=0$</li></ul></li><li>矩形区域的均匀分布 → 独立</li><li>若联合密度 $f(x,y)$ 可分离变量，即 $f(x,y)=g(x)h(y)$ 且定义域互不影响，则 $X$ 与 $Y$ 相互独立。</li><li>独立 → 条件分布与边缘分布相同。</li></ul><h3 id="n-维随机向量"><a href="#n-维随机向量" class="headerlink" title="n 维随机向量"></a>n 维随机向量</h3><ul><li><strong>Def</strong>（联合分布）：n维随机向量的联合分布</li><li><strong>Def</strong>（概率分布律）</li><li><strong>Def</strong>（联合概率密度函数）：$F=\int\int\dots\int f$<ul><li><strong>Thm</strong>：规范性</li></ul></li><li><strong>Def</strong>（k维边缘分布）：$F_{X_1,..,X_k}=F(X_1, ..,X_k,+\infty,+\infty,…,+\infty)$<ul><li><strong>Def</strong>（1维边缘分布、密度函数）</li></ul></li><li><strong>Def</strong>（条件分布）</li><li><strong>Def</strong>（n维随机向量的独立性）：$F(x_1,x_2,…,x_n)=\Pi F_{X_i}$</li><li><strong>Def</strong>：X，Y独立，则$\bar X,S^2, \bar Y,S^2$独立</li></ul><h3 id="随机向量函数的分布"><a href="#随机向量函数的分布" class="headerlink" title="随机向量函数的分布"></a>随机向量函数的分布</h3><ul><li>$Z=g(X,Y)=X+Y$</li><li>$Z=XY$</li><li>$Z=Z/Y$</li><li>$Z=\min\{X,Y\}~(or~\max\{X,Y\})$</li><li>$Z=\sqrt{X^2+Y^2}$</li></ul><h5 id="二维离散型随机向量函数的分布"><a href="#二维离散型随机向量函数的分布" class="headerlink" title="二维离散型随机向量函数的分布"></a>二维离散型随机向量函数的分布</h5><script type="math/tex; mode=display">P(Z=z_k)=\sum_{Z=z_k}P(X=x_i,Y=y_i)</script><ul><li>分布可加性：<ul><li>$X\sim P(\lambda_1),Y\sim P(\lambda_2)$ 且独立，则 $X+Y\sim P(\lambda_1+\lambda_2)$</li><li>$X\sim b(n,p),Y\sim b(m,p)$ 且独立，则 $X+Y\sim b(n+m,p)$</li></ul></li></ul><blockquote><p>求法！</p></blockquote><ul><li>例如：X，Y独立，$\displaystyle P(Z=z_i)=\sum_{j=1}^\infty P(x=z_j-y_j)P(Y=y_j)$<ul><li>离散场合的卷积公式</li></ul></li></ul><h5 id="二维连续型随机向量函数的分布密度"><a href="#二维连续型随机向量函数的分布密度" class="headerlink" title="二维连续型随机向量函数的分布密度"></a>二维连续型随机向量函数的分布密度</h5><blockquote><p><em>review</em>: $x\sim f(x)$ 求 $Y=h(X)$ 密度：$F_X(y)=P(h(x)\le y) = \int f(y)\mathrm dy$</p><p><em>solution</em>: $F_Z(z)=P(Z\le z)=\iint_{g(x,y)\le z} f(x,y)\mathrm dx\mathrm dy$</p></blockquote><h5 id="z-x-y"><a href="#z-x-y" class="headerlink" title="z=x+y"></a>z=x+y</h5><script type="math/tex; mode=display">\begin{aligned}F(z)&=P(X+Y\le Z)&\\&=\int_{-\infty}^{+\infty}\int^{z-y}_{-\infty} f(x,y)\mathrm dx\mathrm dy\\\Rightarrow\qquad&p(z) = \int_{-\infty}^{+\infty} p(x,z-x)\mathrm dx = \int_{-\infty}^{+\infty} p(z-y, y)\mathrm dy\end{aligned}</script><ul><li><p>（卷积公式）X，Y 相互独立，则对于$Z=X+Y$：$p_Z(z)=\int_{-\infty}^{+\infty}p(x)p(z-x)\mathrm dx=\int_{-\infty}^{+\infty}p(z-y)p(y)\mathrm dy$</p></li><li><p>正态分布具有可加性</p></li><li><p>$\Gamma$ 函数与卡方分布 $X\sim\chi(n) = P(n/2, 1/2)$，$x_1…x_n~\sim N(0,1)$，$\sum x_i^2\sim \chi(n)$</p><ul><li>$X,Y\sim \Gamma(\alpha_{1,2},\beta)\rightarrow X+Y\sim\Gamma(\alpha_1+\alpha_2,\beta)$</li></ul></li></ul><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    
+    
+    <categories>
+      
+      <category>数学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>概率论</tag>
+      
+      <tag>统计</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GCN introduction</title>
+    <link href="/2020/11/04/KGCode/gcn/"/>
+    <url>/2020/11/04/KGCode/gcn/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Graph-Convolutional-Network"><a href="#Graph-Convolutional-Network" class="headerlink" title="Graph Convolutional Network"></a>Graph Convolutional Network</h1><blockquote><p>翻译自：<a href="http://tkipf.github.io/graph-convolutional-networks/">Graph Convolutional Networks | Thomas Kipf | University of Amsterdam</a></p></blockquote><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>现实世界中许多重要的数据（集）常常以图和网络的形式呈现，例如：社交网络，知识图谱，蛋白质相互作用网络，万维网等等（只举几例）。但是，直到最近，注意力很少放在对这些结构化的数据，建立泛化的神经网络模型之上。</p><p>最近几年，一些论文重新考虑了这些问题（统一的神经网络，去处理任意的结构化图数据） <a href="http://arxiv.org/abs/1312.6203">Bruna et al.</a>, ICLR 2014; <a href="http://arxiv.org/abs/1506.05163">Henaff et al.</a>, 2015; <a href="http://papers.nips.cc/paper/5954-convolutional-networks-on-graphs-for-learning-molecular-fingerprints">Duvenaud et al.</a>, NIPS 2015; <a href="https://arxiv.org/abs/1511.05493">Li et al.</a>, ICLR 2016; <a href="https://arxiv.org/abs/1606.09375">Defferrard et al.</a>, NIPS 2016; <a href="http://arxiv.org/abs/1609.02907">Kipf &amp; Welling</a>, ICLR 2017，其中一些，现在已经在他们主导的领域，取得了非常可喜的成果。</p><p>在这篇文章中，我将对近些年在这方面的研究给出一个概要，并且指出不同方法的优缺点。这些讨论主要聚焦于最近发表的这两篇论文：</p><ul><li>Kipf &amp; Welling (ICLR 2017), <a href="http://arxiv.org/abs/1609.02907">Semi-Supervised Classification with Graph Convolutional Networks</a> (disclaimer: I’m the first author)</li><li>Defferrard et al. (NIPS 2016), <a href="https://arxiv.org/abs/1606.09375">Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering</a></li></ul><p>以及 Ferenc Huszar 写的一篇回顾/讨论的文章：<a href="http://www.inference.vc/how-powerful-are-graph-convolutions-review-of-kipf-welling-2016-2/">How powerful are Graph Convolutions?</a> ，这篇文章主要讨论了这几类模型的一些限制。我<a href="http://tkipf.github.io/graph-convolutional-networks/#the-issue-with-regular-graphs">在这里</a>写了一点对这篇文章的评论（在文章的末尾）。</p><h3 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h3><ul><li>对GNN的简单描述</li><li>谱域卷积与GCNs</li><li>Demo：简单一阶GCN模型的图嵌入</li><li>将 GCNs 作为 <em>Weisfeiler-Lehman</em> 算法的可微分</li></ul><p>如果你已经熟悉了 GCNs 与相关的方法，你可以直接跳到<a href="http://tkipf.github.io/graph-convolutional-networks/#gcns-part-iii-embedding-the-karate-club-network">Embedding the karate club network</a>。</p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    
+    
+    <categories>
+      
+      <category>Deep Learning</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Deep Learning</tag>
+      
+      <tag>GCN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>【综述】聚类方法</title>
+    <link href="/2020/11/01/KGCode/Cluster/"/>
+    <url>/2020/11/01/KGCode/Cluster/</url>
+    
+    <content type="html"><![CDATA[<p>聚类方法综述。</p><a id="more"></a><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    
+    
+    <categories>
+      
+      <category>KGCode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>KGCode</tag>
+      
+      <tag>聚类</tag>
+      
+      <tag>算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>知识融合简述</title>
+    <link href="/2020/11/01/KGCode/kginteraction/"/>
+    <url>/2020/11/01/KGCode/kginteraction/</url>
+    
+    <content type="html"><![CDATA[<p>知识融合方法概述</p><a id="more"></a><h1 id="知识融合"><a href="#知识融合" class="headerlink" title="知识融合"></a>知识融合</h1><h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><h5 id="知识图谱的异构"><a href="#知识图谱的异构" class="headerlink" title="知识图谱的异构"></a>知识图谱的异构</h5><p>从KG的构建看：</p><ol><li>早期知识工程的理想是构建一个统一的知识库</li><li>人类知识体系复杂</li><li>不同人对某些知识由主观看法</li><li>知识会随时间自然演化</li><li>同一领域由不同组织构建自己的知识库</li><li>交叉领域中的交叉只是往往是独立构建</li><li>知识图谱构建优先考虑重用现有知识</li></ol><p>从KG应用的角度看：</p><ol><li>不同领域的系统需要进行交互</li><li>系统需要处理来自不同领域的知识</li></ol><blockquote><p>知识具有共享性的同时，还需要兼顾自治性和动态性，知识的构建过程中和应用场景决定了知识异构是一种自然现象，不能完全消除。</p></blockquote><p>知识异构的两个层次：</p><ol><li>语言曾异构：语法、逻辑、表达能力不匹配<ul><li>语法异构：采用不同的描述语言</li><li>逻辑异构：逻辑表示不匹配</li><li>元语异构：元语的语义有差异</li><li>表达能力异构：不同语言表达能力的差异</li></ul></li><li>模型层异构：概念化、解释不匹配<ul><li>概念化异构</li><li>解释不匹配</li></ul></li></ol><h5 id="知识图谱中的数据特点"><a href="#知识图谱中的数据特点" class="headerlink" title="知识图谱中的数据特点"></a>知识图谱中的数据特点</h5><p>KG：</p><ul><li>包含语义信息、推理</li><li>形式更加灵活、扩展性</li></ul><blockquote><ul><li>包含一定的抽象层知识和大量的实力层事实</li><li>知识图谱中的知识融合要考虑两个层次的融合问题</li></ul></blockquote><h5 id="Why-知识融合"><a href="#Why-知识融合" class="headerlink" title="Why 知识融合"></a>Why 知识融合</h5><ol><li>数据清洗<ul><li>构建知识图谱可能存在异构</li><li>KG应用的预处理</li></ul></li><li>数据集成<ul><li>需要同时利用或融合多个不同来源的知识图谱</li><li>不同源的知识图谱可能存在重叠的知识</li></ul></li></ol><h5 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h5><p>合并多个知识图谱</p><ol><li>解决本体的匹配<ul><li>等价类、子类</li><li>等价属性、子属性</li></ul></li><li>解决实力层的匹配<ol><li>等价实例</li></ol></li></ol><p>复杂映射</p><ol><li>语义映射<ul><li>（复杂）概念的上下文</li><li>属性的上下文</li></ul></li><li>函数映射<ul><li>计算函数</li><li>合并函数</li><li>复杂函数</li></ul></li></ol><p>映射的势：<code>1 : 1 or N : M</code></p><h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><h5 id="本体匹配"><a href="#本体匹配" class="headerlink" title="本体匹配"></a>本体匹配</h5><p>本体匹配框架</p><p><img src="/2020/11/01/KGCode/kginteraction/assets\image-20201101214147985.png" alt="image-20201101214147985"></p><ul><li>预处理：解析、清洗、构造基础数据</li><li>匹配计算：<strong>构造匹配搜索，相似度计算</strong></li><li>后处理：<strong>匹配结果抽取</strong>，匹配调谐</li></ul><h6 id="基础匹配器："><a href="#基础匹配器：" class="headerlink" title="基础匹配器："></a>基础匹配器：</h6><p><strong>字符串匹配器</strong></p><ul><li>编辑距离、最小编辑距离（Levenshtein distance）</li><li>Wagner and Fisher distance: 类似于Levenshtein distance，但给予del ins sub 不同的权重</li><li>汉明距离：$\displaystyle{\delta(s,t)=1-\frac{(\sum_{i=1}^{\min(|s|,|t|)}s[i]\ne t[i])+||s||-||t||}{\max (|s|,|t|)}}$ </li><li>字串相似度：$\delta(s,t)=\displaystyle\frac {2|x|}{|s|+|t|}$</li><li>Dice 系数（用于度量两个集合的相似性）：$sim_{Dice}(s,t)=\displaystyle\frac {2|s\cap t|}{|s|+|t|}$</li><li>Jaccard 系数（与Dice系数相似）：$sim(s,t)=\displaystyle\frac{|S\cap T|}{|S\cup T|}$</li><li>N-Gram</li></ul><h6 id="文本匹配器"><a href="#文本匹配器" class="headerlink" title="文本匹配器"></a>文本匹配器</h6><ul><li>TF-IDF：评估某个字或者某个词对于一个文档的重要程度</li><li>思想：将文档变为向量的形式，通过向量相似度实现文档匹配</li><li>本体中的概念和属性往往由大量相关的文本信息标签、注释、描述等等</li><li>带匹配的对象的相关文本组织为文档形式，再转化为文档向量</li><li>实际应用中非常有效，能解决很多实际应用场景</li></ul><blockquote><p>虚拟文档</p></blockquote><h6 id="结构匹配器"><a href="#结构匹配器" class="headerlink" title="结构匹配器"></a>结构匹配器</h6><ul><li>思想：利用本体的结构信息来弥补文本信息量不足的情况</li><li></li></ul><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    
+    
+    <categories>
+      
+      <category>KGCode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>KGCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2020/09/30/talk-chat/%E6%83%B3%E6%83%B32020-2021-1/"/>
+    <url>/2020/09/30/talk-chat/%E6%83%B3%E6%83%B32020-2021-1/</url>
+    
+    <content type="html"><![CDATA[<h1 id="想想2020-2021-1"><a href="#想想2020-2021-1" class="headerlink" title="想想2020-2021-1"></a>想想2020-2021-1</h1><p><img src="/2020/09/30/talk-chat/%E6%83%B3%E6%83%B32020-2021-1/_STUDY\ProgramDesign\repos\Jerryyang2001.github.io\source\_posts\talk-chat\想想2020-2021-1.assets\image-20200930195543477.png" alt="image-20200930195543477"></p><ol><li>电路</li><li>数电</li><li>计算机体系结构：<ul><li>CMU：CSAPP</li><li>MIT：6.004 计算结构 Computation Structure</li></ul></li><li>概率论：MIT：</li><li>最优化：凸老师就是完全按照 Stanford 的教授的课程讲的</li><li>复变：</li></ol><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>离散数学 [Overview]</title>
     <link href="/2020/09/26/study/Math/DiscreteMath/index/"/>
     <url>/2020/09/26/study/Math/DiscreteMath/index/</url>
@@ -62,7 +237,7 @@
     <link href="/2020/09/26/study/Math/ConvexOptimization/index/"/>
     <url>/2020/09/26/study/Math/ConvexOptimization/index/</url>
     
-    <content type="html"><![CDATA[<p>2020-2021-1 最优化方法</p><a id="more"></a><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="数学优化"><a href="#数学优化" class="headerlink" title="数学优化"></a>数学优化</h3><p>数学优化问题：（数学规划）</p><div class="note note-primary">            <p>从一个<strong>可行解集合</strong>中,<strong>寻找</strong>出<strong>最优</strong>元素。</p>          </div><p>数学形式：</p><script type="math/tex; mode=display">\begin{aligned}    &\min . &f_0(x)\\    &~\mathrm{s.t.} & f_i(x) \leq b_i, i = 1,\dots,m\end{aligned}</script><p>其中：</p><ul><li>优化变量：$x$</li><li>目标函数：$f_0:\R^n\rightarrow\R$</li><li>约束函数：$f_i:\R^n\rightarrow\R$</li><li>最优解：在<strong>所有满足约束的向量</strong>中，向量 $x^<em>$ 对应的目标函数值<em>*最小</em></em></li></ul><h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul><li>投资组合优化<ul><li>优化变量：各资产分配的资本数</li><li>约束：总预算、每⼀份资产的资本范围、最⼩收益</li><li>⽬标：总风险或回报</li></ul></li><li>电⼦设计中的器件尺⼨<ul><li>优化变量：器件的长和宽</li><li>约束：⼯程约束、时间要求、最⼤⾯积</li><li>⽬标：总功耗</li></ul></li><li>数据拟合<ul><li>优化变量：模型参数</li><li>约束：先验信息、参数限制</li><li>⽬标：预测误差</li></ul></li></ul><h3 id="求解优化问题"><a href="#求解优化问题" class="headerlink" title="求解优化问题"></a>求解优化问题</h3><ul><li>一般形式的优化问题<ul><li>难以求解</li><li>折中：长时间的计算代价、找不到解</li></ul></li><li>特定问题<ul><li>最小二乘</li><li>线性规划</li><li>凸优化问题</li></ul></li></ul><h3 id="最小二乘"><a href="#最小二乘" class="headerlink" title="最小二乘"></a>最小二乘</h3><p>形式：$\displaystyle\min.||Ax-b||_2^2$</p><ul><li>有解析解 $x* = (A^TA)^{-1}A^Tb$</li><li>有可靠的求解算法和软件 <!-- TODO --></li><li>计算时间：正比于 $n^2k(A\in \R^{k\times n})$</li><li>技术成熟</li><li>最⼩⼆乘的使⽤<ul><li>判别⼗分简单</li><li>使⽤标准⽅法增强灵活性（加权、正则化）</li></ul></li></ul><h3 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h3><script type="math/tex; mode=display">\begin{aligned}    &\min. &c^Tx\\    &\mathrm{~s.t.} &a_i^Tx\le b_i\end{aligned}</script><ul><li>没有解析解</li><li>具有可靠且有效的求解算法和软件</li><li>计算时间：正⽐于$n^2m~(if~m \ge n)$，若具有特殊结构，求解更快。</li><li>成熟技术</li><li>判别难于最⼩⼆乘</li><li>⼀些标准的技巧可⽤于将某些问题转化为线性规划（分段线性⽅程、包含范数的问题）</li></ul><!-- TODO: ppt p48 --><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+    <content type="html"><![CDATA[<p>2020-2021-1 最优化方法</p><a id="more"></a><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="数学优化"><a href="#数学优化" class="headerlink" title="数学优化"></a>数学优化</h3><p>数学优化问题：（数学规划）</p><div class="note note-primary">            <p>从一个<strong>可行解集合</strong>中,<strong>寻找</strong>出<strong>最优</strong>元素。</p>          </div><p>数学形式：</p><script type="math/tex; mode=display">\begin{aligned}    &\min . &f_0(x)\\    &~\mathrm{s.t.} & f_i(x) \leq b_i, i = 1,\dots,m\end{aligned}</script><p>其中：</p><ul><li>优化变量：$x$</li><li>目标函数：$f_0:\mathrm{R}^n\rightarrow\mathrm{R}$</li><li>约束函数：$f_i:\mathrm{R}^n\rightarrow\mathrm{R}$</li><li>最优解：在<strong>所有满足约束的向量</strong>中，向量 $x^<em>$ 对应的目标函数值<em>*最小</em></em></li></ul><h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul><li>投资组合优化<ul><li>优化变量：各资产分配的资本数</li><li>约束：总预算、每⼀份资产的资本范围、最⼩收益</li><li>⽬标：总风险或回报</li></ul></li><li>电⼦设计中的器件尺⼨<ul><li>优化变量：器件的长和宽</li><li>约束：⼯程约束、时间要求、最⼤⾯积</li><li>⽬标：总功耗</li></ul></li><li>数据拟合<ul><li>优化变量：模型参数</li><li>约束：先验信息、参数限制</li><li>⽬标：预测误差</li></ul></li></ul><h3 id="求解优化问题"><a href="#求解优化问题" class="headerlink" title="求解优化问题"></a>求解优化问题</h3><ul><li>一般形式的优化问题<ul><li>难以求解</li><li>折中：长时间的计算代价、找不到解</li></ul></li><li>特定问题<ul><li>最小二乘</li><li>线性规划</li><li>凸优化问题</li></ul></li></ul><h3 id="最小二乘"><a href="#最小二乘" class="headerlink" title="最小二乘"></a>最小二乘</h3><p>形式：$\displaystyle\min.||Ax-b||_2^2$</p><ul><li>有解析解 $x* = (A^TA)^{-1}A^Tb$</li><li>有可靠的求解算法和软件 <!-- TODO --></li><li>计算时间：正比于 $n^2k(A\in \mathrm{R}^{k\times n})$</li><li>技术成熟</li><li>最⼩⼆乘的使⽤<ul><li>判别⼗分简单</li><li>使⽤标准⽅法增强灵活性（加权、正则化）</li></ul></li></ul><h3 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h3><script type="math/tex; mode=display">\begin{aligned}    &\min. &c^Tx\\    &\mathrm{~s.t.} &a_i^Tx\le b_i\end{aligned}</script><ul><li>没有解析解</li><li>具有可靠且有效的求解算法和软件</li><li>计算时间：正⽐于$n^2m~(if~m \ge n)$，若具有特殊结构，求解更快。</li><li>成熟技术</li><li>判别难于最⼩⼆乘</li><li>⼀些标准的技巧可⽤于将某些问题转化为线性规划（分段线性⽅程、包含范数的问题）</li></ul><!-- TODO: ppt p48 --><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
     
     
     <categories>

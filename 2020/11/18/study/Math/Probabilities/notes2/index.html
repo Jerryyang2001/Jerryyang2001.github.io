@@ -1,0 +1,738 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&quot;auto&quot;>
+
+
+
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp">
+  <link rel="icon" type="image/png" href="/img/favicon.webp">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="欢迎来到些些同学的藏宝阁">
+  <meta name="author" content="Jerry Yang">
+  <meta name="keywords" content="study">
+  <title>概率统计与随机过程 2 - 随机变量及其概率分布 - 些些同学的藏宝阁</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>些些同学的藏宝阁</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/schedule/">
+                <i class="iconfont icon-plan"></i>
+                日程
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-11-18 00:00" pubdate>
+      2020年11月18日
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      18
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">概率统计与随机过程 2 - 随机变量及其概率分布</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <a id="more"></a>
+<h1 id="随机变量及其概率分布"><a href="#随机变量及其概率分布" class="headerlink" title="随机变量及其概率分布"></a>随机变量及其概率分布</h1><h3 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h3><p><strong>Def</strong> 2.1：设 $E$ 时一个随机试验，$\varOmega$是其样本空间，如果对于每一个试验的结果 $\omega\in \varOmega$，由唯一的实数$X(\omega)$与之对应，这个定义在试验样本空间上的实值函数$X(\omega)$称为$E$的随机变量</p>
+<h3 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h3><p><strong>Def</strong> 2.2：设 $X(\omega)$是随机变量，称 $F(x) = P(X\le x),~-\infty&lt;x&lt;\infty$</p>
+<p>结论：</p>
+<ul>
+<li>$P(x_1 &lt; X\le x_2) = F(x_2) - F(x_1)$</li>
+<li>$P(x_1\le X&lt; x2) = F(x_2-0) - F(x_1-0)$</li>
+<li>$P(x_1 &lt; X&lt; x2) = F(x_2-0) - F(x_1)$</li>
+<li>$P(x_1\le X\le x2) = F(x_2) - F(x_1-0)$</li>
+</ul>
+<h5 id="分布函数的性质"><a href="#分布函数的性质" class="headerlink" title="分布函数的性质"></a>分布函数的性质</h5><ol>
+<li>$0\le F(x) \le 1$</li>
+<li>单调不降</li>
+<li>右连续函数</li>
+<li>有可数个间断点</li>
+</ol>
+<h3 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h3><h5 id="离散型随机变量的分布律"><a href="#离散型随机变量的分布律" class="headerlink" title="离散型随机变量的分布律"></a>离散型随机变量的分布律</h5><p><strong>Def</strong> 2.3：设离散随机变量$X$可能取得一切之为 $x_1, x_2,\dots, x_n$ 称为 $X$ 分布律（列），也称为 $X$ 的概率函数。</p>
+<ul>
+<li>$X$ 的分布函数 $F(x) = \sum\limits_{x_k\le x} p_k$</li>
+</ul>
+<h5 id="常见的离散分布"><a href="#常见的离散分布" class="headerlink" title="常见的离散分布"></a>常见的离散分布</h5><h6 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="0 - 1 分布"></a>0 - 1 分布</h6><ul>
+<li>0 - 1 分布：$X$ 只取 $0$ 和 $1$ 两个值，且$P(X=1)=p,~P(X=0)=1-p$，则称 $X$ 服从 $(0-1)$ 分布。</li>
+</ul>
+<h6 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h6><ul>
+<li><p><strong>Def</strong>：n次独立试验概型</p>
+</li>
+<li><p><strong>伯努利试验</strong>只有两个可能结果，$A,~\bar A$，且$P(A)=p$</p>
+<ul>
+<li>$n$ 重伯努利试验是指将试验独立重复 $n$ 次。</li>
+<li>$X$ 表示 $n$ 重伯努利试验中事件 $A$ 发生的次数</li>
+</ul>
+<p>称随机变量$X$服从参数为$n,~p$ 的二项分布，$X\sim B(n,p)$</p>
+</li>
+<li><p>$P(X=k) = C_n^k p^k (1-p)^{n-k}$</p>
+</li>
+<li><p><strong>Thm</strong>：$X$是伯努利试验中$A$发生的次数，$p$是每次试验中 $A$ 发生的概率，则 $X\sim b(n,p)$</p>
+</li>
+<li><p><strong>Def</strong>：最可能成功次数$k = \lfloor (n+1)p \rfloor~(n+1)p不是整数$</p>
+</li>
+</ul>
+<h6 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h6><ul>
+<li><p>$\displaystyle P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!},~X\sim P(\lambda)$</p>
+</li>
+<li><p>泊松定理：设 $\lambda &gt;0$是一个常数，$n$ 是任意正整数，设$np_n=\lambda$。则对于任意固定的非负整数$k$有 $\displaystyle\lim_{n\rightarrow \infty}C_n^kp_n^k(1-p_n)^{n-k}=\frac{\lambda^ke^{-\lambda}}{k!}$</p>
+</li>
+</ul>
+<h6 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h6><ul>
+<li>$\displaystyle P(X=k) = q^{k-1} p, k=1,2,\dots$</li>
+</ul>
+<h6 id="超几何分布"><a href="#超几何分布" class="headerlink" title="超几何分布"></a>超几何分布</h6><ul>
+<li>$\displaystyle P(X=k) = \frac{C_M^k\cdot C_{N-M}^{n-k}}{C_N^n}, k = 0, 1, 2, \dots, l=\min\{n,M\}$</li>
+<li>$X\sim H(N,M,n)$</li>
+</ul>
+<h6 id="负二项分布"><a href="#负二项分布" class="headerlink" title="负二项分布"></a>负二项分布</h6><ul>
+<li>$\displaystyle P(X=k) = C_{k-1}^{r-1}p^r(1-p)^{k-r}$</li>
+<li>$X\sim Nb(r,p)$</li>
+</ul>
+<h3 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h3><ul>
+<li><strong>Def</strong> 2.5：$F(x) = \int_{-\infty}^xf(x)\mathrm dx,-\infty &lt; x &lt; \infty$<ul>
+<li>其中$f(x)$ 是非负可积函数，称为$X$的概率分布密度函数（概率密度函数<code>Probability Density Function</code>）</li>
+<li>规范性：$\displaystyle\int_R f(x) \mathrm dx =1$</li>
+<li>$P(x&lt; X \le x+\Delta x)\approx f(x)\Delta x$</li>
+<li>连续性，$F(-\infty) = 0$，$F(\infty)=1$</li>
+</ul>
+</li>
+<li>$P(a&lt;X\le b) = \int_a^bf(x)\mathrm dx$</li>
+</ul>
+<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><h6 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h6><script type="math/tex; mode=display">
+f(x)=\begin{cases}
+  \displaystyle\frac{1}{b-a},&a\le x\le b,\\
+  0,&otherwise
+\end{cases}\\
+\\
+F(x) = P(X\le x) = \begin{cases}
+  0,&x < a\\
+  \displaystyle\frac{x-a}{b-a}, &a\le x \le b\\
+  1, &x>b
+\end{cases}</script><ul>
+<li>$X\sim U[a,b]$</li>
+</ul>
+<h6 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h6><script type="math/tex; mode=display">
+f(x) = \begin{cases}
+  \lambda e^{-\lambda x}, &x>0\\
+  0, & x\le 0
+\end{cases}
+\\
+F(x) = \begin{cases}
+  1- e^{-\lambda x}, &x>0\\
+  0, &x\le 0
+\end{cases}</script><ul>
+<li>$X\sim e(\lambda)$</li>
+<li>$E(X) = \lambda$</li>
+</ul>
+<h6 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h6><ul>
+<li><strong>Def</strong>：$\displaystyle f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$<ul>
+<li>$X\sim N(\mu, \sigma^2)$</li>
+<li>$\mu$ 为位置参数，$\sigma$ 为尺度参数</li>
+<li>关于$\mu$对称，最大值</li>
+<li>$\sigma$固定，形状保持不变</li>
+<li>拐点为：$x=\mu\pm\sigma$</li>
+</ul>
+</li>
+<li>$erf(x)=F(x)= \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\mathrm dx$</li>
+<li>$3\sigma,~6\sigma$理论</li>
+</ul>
+<h6 id="标准正态分布-N-0-1"><a href="#标准正态分布-N-0-1" class="headerlink" title="标准正态分布 $N(0,1)$"></a>标准正态分布 $N(0,1)$</h6><ul>
+<li>$\mu = 0, \sigma = 1$ 的正态分布称为标准正态分布</li>
+<li>密度函数和分布函数通常用 $\varphi(x),\Phi(x)$ 表示</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  &\varphi(x) = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}\\
+  &\Phi(x) = \int_{-\infty}^x\varphi(x)\mathrm dx
+\end{aligned}</script><ul>
+<li>$\Phi(0)=0.5,~\Phi(-x) = 1-\Phi(x)$</li>
+</ul>
+<h6 id="非标准正态分布与标准正态分布的关系"><a href="#非标准正态分布与标准正态分布的关系" class="headerlink" title="非标准正态分布与标准正态分布的关系"></a>非标准正态分布与标准正态分布的关系</h6><ul>
+<li><strong>Thm</strong>（一般正态分布的标准化）：若$X\sim N(\mu, \sigma^2)$，则$U=\frac{X-\mu}{\sigma}\sim N(0,1)$</li>
+</ul>
+<h6 id="alpha-分位点"><a href="#alpha-分位点" class="headerlink" title="$\alpha$分位点"></a>$\alpha$分位点</h6><ul>
+<li><strong>Def</strong>：$P(X&gt;\mu_\alpha) = \alpha,\quad0&lt;\alpha&lt;1$</li>
+</ul>
+<h3 id="2-5-随机变量函数的分布"><a href="#2-5-随机变量函数的分布" class="headerlink" title="2.5 随机变量函数的分布"></a>2.5 随机变量函数的分布</h3><h5 id="已知离散随机变量X的分布，求函数-Y-g-X-的分布"><a href="#已知离散随机变量X的分布，求函数-Y-g-X-的分布" class="headerlink" title="已知离散随机变量X的分布，求函数 Y=g(X) 的分布"></a>已知离散随机变量X的分布，求函数 Y=g(X) 的分布</h5><script type="math/tex; mode=display">
+P(Y=y_j) = P(g(X)=y_j) = \sum_{\{x_k|g(x_k) = y_j\}}P(X=x_k), j = 1, 2, \dots,</script><p>离散型均匀分布：</p>
+<script type="math/tex; mode=display">
+Y = [NX+1],\quad where~X\sim U(0, 1)</script><h5 id="一致连续型随机变量X的概率密度，求-g-X-的概率密度"><a href="#一致连续型随机变量X的概率密度，求-g-X-的概率密度" class="headerlink" title="一致连续型随机变量X的概率密度，求 g(X) 的概率密度"></a>一致连续型随机变量X的概率密度，求 g(X) 的概率密度</h5><ul>
+<li>分布函数法</li>
+<li>Key Point：$F_Y(y)=P(Y\le y)=P(g(x)\le y)=\displaystyle\int_{\{x|g(x)&lt;y\}}f_X(x)\mathrm dx$</li>
+</ul>
+<script type="math/tex; mode=display">
+Y = aX+b\Rightarrow
+f_Y(y)=\frac{\mathrm d}{\mathrm dy}F_Y(y) =\\ \begin{cases}
+  \frac 1 a f_X(\frac{y-b}{a}),&a>0\\
+  -\frac{1}{a} f_X(\frac{y-b}{a}),&a<0\\
+\end{cases}</script><h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><p>$X\sim N(0,1),~Y=X^2$</p>
+<script type="math/tex; mode=display">
+f_Y(y) = F'_Y(y) =\begin{cases}
+  \frac{1}{\sqrt{2\pi y}}e^{-\frac{y}{2}},& y>0\\
+  0,&y\le 0
+\end{cases}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BB%9F%E8%AE%A1/">统计</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/11/18/study/Math/Probabilities/notes1/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">概率统计与随机过程 1 - 随机事件及其概率</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/18/study/Math/Probabilities/notes3/">
+                        <span class="hidden-mobile">概率统计与随机过程 3 - 随机向量及其概率分布</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz",
+          app_key: "vhuFwrNX5X0JUsN8f4YXXLQq",
+          placeholder: "ヾﾉ≧∀≦)o 来啊，快活啊!",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-home-fill"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 3,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "概率统计与随机过程 2 - 随机变量及其概率分布&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
