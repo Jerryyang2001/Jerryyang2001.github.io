@@ -17,7 +17,7 @@
   <meta name="description" content="欢迎来到些些同学的藏宝阁">
   <meta name="author" content="Jerry Yang">
   <meta name="keywords" content="study">
-  <title>些些同学的藏宝阁</title>
+  <title>「概率统计与随机过程」 4 - 随机向量的数字特征 - 些些同学的藏宝阁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -172,8 +172,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-09-30 19:54" pubdate>
-      2020年9月30日
+    <time datetime="2020-12-02 00:00" pubdate>
+      2020年12月2日
     </time>
   </div>
 
@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      54 字
+      981 字
     </span>
   
 
@@ -193,7 +193,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      15
        分钟
     </span>
   
@@ -223,28 +223,157 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">「概率统计与随机过程」 4 - 随机向量的数字特征</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="想想2020-2021-1"><a href="#想想2020-2021-1" class="headerlink" title="想想2020-2021-1"></a>想想2020-2021-1</h1><p><img src="/2020/09/30/talk-chat/%E6%83%B3%E6%83%B32020-2021-1/_STUDY\ProgramDesign\repos\Jerryyang2001.github.io\source\_posts\talk-chat\想想2020-2021-1.assets\image-20200930195543477.png" srcset="/img/loading.gif" alt="image-20200930195543477"></p>
-<ol>
-<li>电路</li>
-<li>数电</li>
-<li>计算机体系结构：<ul>
-<li>CMU：CSAPP</li>
-<li>MIT：6.004 计算结构 Computation Structure</li>
+              <p>随机向量的数字特征</p>
+<a id="more"></a>
+<h1 id="Chapter4-随机向量的数字特征"><a href="#Chapter4-随机向量的数字特征" class="headerlink" title="Chapter4-随机向量的数字特征"></a>Chapter4-随机向量的数字特征</h1><h3 id="随机变量的数学期望"><a href="#随机变量的数学期望" class="headerlink" title="随机变量的数学期望"></a>随机变量的数学期望</h3><h5 id="离散型"><a href="#离散型" class="headerlink" title="离散型"></a>离散型</h5><ul>
+<li>设离散随机变量的分布列为：$P(X=x_i)=p_i$ 若级数 $\sum x_ip_i$ 绝对收敛，则称该级数为 $X$ 的数学期望，记为 $E(X)=\sum x_ip_i$<ul>
+<li>与项的排列顺序无关</li>
+<li>有限个值 → 必然存在</li>
 </ul>
 </li>
-<li>概率论：MIT：</li>
-<li>最优化：凸老师就是完全按照 Stanford 的教授的课程讲的</li>
-<li>复变：</li>
+</ul>
+<h5 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h5><ul>
+<li>设连续型随机变量，其密度函数为：$f(x)$ 若积分 $\int_{-\infty}^\infty xf(x)\mathrm dx$ 绝对收敛，则称该积分为 $X$ 的数学期望，记为$E(X)=\int_{-\infty}^{+\infty}xf(x)\mathrm dx$</li>
+<li>例如柯西分布：$F(x)=\frac{1}{\pi}(\arctan x+\frac{\pi}{2})$</li>
+</ul>
+<h5 id="常见随机变量的数学期望"><a href="#常见随机变量的数学期望" class="headerlink" title="常见随机变量的数学期望"></a>常见随机变量的数学期望</h5><ul>
+<li>离散型<ul>
+<li>0-1 分布：$E(x)=\sum x_ip_i=p$</li>
+<li>二项分布：$E(x)=np$</li>
+<li>泊松分布$P(\lambda)$：$E(X)=\lambda$</li>
+<li>超几何分布$H(N,M,n)$：$E(X) = \frac M N n$</li>
+</ul>
+</li>
+<li>连续型<ul>
+<li>均匀分布$U(a,b)$：$E(X)=\int_{-\infty}^{+\infty}xf(x)\mathrm dx$</li>
+<li>指数分布$e(\lambda)$：$E(X) = 1/ \lambda$</li>
+<li>正态分布$N(\mu,\sigma^2)$：$E(X)=\mu$</li>
+</ul>
+</li>
+</ul>
+<h5 id="随机变量函数的数学期望"><a href="#随机变量函数的数学期望" class="headerlink" title="随机变量函数的数学期望"></a>随机变量函数的数学期望</h5><ul>
+<li>若 $Y$ 是 $X$ 的函数，绝对收敛的情况下：$E(Y)=\sum g(x_i)P(X=x_i)=\int g(x)f(x)\mathrm dx$<ul>
+<li>取值 × 各自概率</li>
+</ul>
+</li>
+<li>随机向量函数情况</li>
+<li>$E(\max X,Y)=\frac 1 {\sqrt \pi}, X,Y\sim N(0,1)$</li>
+<li>$E(·)$是线性的</li>
+<li>$X,Y$ 独立 则：$E(XY) = E(X)E(Y)$</li>
+</ul>
+<h3 id="随机变量的方差"><a href="#随机变量的方差" class="headerlink" title="随机变量的方差"></a>随机变量的方差</h3><ul>
+<li>方差：随机变量偏离中心的程度 $DX=Var(X)=E(X-EX)^2$</li>
+<li>标准差：$\sigma(X)$</li>
+</ul>
+<h5 id="常见随机变量的方差"><a href="#常见随机变量的方差" class="headerlink" title="常见随机变量的方差"></a>常见随机变量的方差</h5><script type="math/tex; mode=display">
+DX=EX^2-(EX)^2</script><ul>
+<li>离散型：<ul>
+<li>(0-1) 分布：$EX=p,EX^2=p\rightarrow DX=p(1-p)$</li>
+<li>$b(n,p)$：$DX=np(1-p)$</li>
+<li>泊松分布：$DX=\lambda$</li>
+</ul>
+</li>
+<li>连续：<ul>
+<li>$U(a,b)$：$DX=\frac{(b-a)^2}{12}$</li>
+<li>$e(\lambda)$：$DX=1/\lambda^2$</li>
+<li>$N(\mu,\sigma^2)$：$DX=\sigma^2$</li>
+</ul>
+</li>
+</ul>
+<h5 id="方差的性质"><a href="#方差的性质" class="headerlink" title="方差的性质"></a>方差的性质</h5><ol>
+<li>对于常数 c $Dc=0$</li>
+<li>$D(aX+b)=a^2DX$</li>
+<li>$X,Y$ 独立，则 $D(X\pm Y)=DX+DY$<ol>
+<li>$D(\sum c_iX_i)=\sum c_i^2DX_i$</li>
 </ol>
+</li>
+<li>$DX=E(X^2)-(EX)^2$</li>
+<li>$DX=0\iff P(X=EX=c)=1$</li>
+<li>$X_i\sim N(\mu_i,\sigma_i^2)$ 则：$\sum c_iX_i\sim N(\sum c_iu_i, \sum c_i^2 \sigma_i^2)$</li>
+</ol>
+<ul>
+<li>切比雪夫不等式：$E(X)=\mu,DX=\sigma^2\rightarrow P(|X-\mu|&gt;\varepsilon)\le \sigma^2/\varepsilon^2$</li>
+</ul>
+<h3 id="协方差与相关系数"><a href="#协方差与相关系数" class="headerlink" title="协方差与相关系数"></a>协方差与相关系数</h3><ul>
+<li><strong>Def</strong>：$\displaystyle Cov(x,y)=E(X-EX)(Y-EY)$</li>
+<li><strong>Def</strong>：$\displaystyle\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{DX}\sqrt{DY}}$</li>
+<li><strong>Def</strong>：$D(X\pm Y)=DX+DY+2Cov(X,Y)$<ul>
+<li>推广至 n 个：$D(\sum c_iX_i)=\sum c_i^2DX_i+2\sum c_ic_jCov(X_i,X_j)$</li>
+</ul>
+</li>
+<li>常用计算公式：$Cov(X,Y)=EXY-EX\cdot EY$</li>
+</ul>
+<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><ul>
+<li>$Cov(X,Y)=Cov(Y,X)$</li>
+<li>$DX=Cov(X,X)$</li>
+<li>$Cov(X,c)=0$</li>
+<li>$Cov(X+Y,Z)=Cov(X,Z)+Cov(Y,Z)$</li>
+<li>$Y_i=a_iX+b_i\rightarrow \rho_{Y_1Y_2}=\frac{a_1a_2}{|a_1a_2|}\rho_{X_1X_2}$ </li>
+<li>$Y=aX+b\rightarrow \rho_{XY}=\pm1$</li>
+<li>$|\rho_{XY}|=1$ 的充要条件为 $X$ 与 $Y$ 以概率 $1$ 线性相关：<br>存在常数 $a,b,a\ne0$ 使得 $P(Y=aX+b)=1$</li>
+</ul>
+<h5 id="独立与不相关的关系"><a href="#独立与不相关的关系" class="headerlink" title="独立与不相关的关系"></a>独立与不相关的关系</h5><ul>
+<li><strong>Def</strong>（不相关）：若$\rho_{XY}=0$ （$Cov(X,Y)=0$） 则称 $X,Y$ 不相关。</li>
+<li><strong>Thm</strong>：相互独立 则 不相关</li>
+</ul>
+<p>特殊的，例如：</p>
+<ol>
+<li>二维正态随机变量：相关$\iff$独立$\iff\rho=0$</li>
+<li>$(0-1)$分布：等价</li>
+</ol>
+<h3 id="协方差矩阵"><a href="#协方差矩阵" class="headerlink" title="协方差矩阵"></a>协方差矩阵</h3><h5 id="矩"><a href="#矩" class="headerlink" title="矩"></a>矩</h5><ul>
+<li><strong>Def</strong>（矩）：若 $X,Y$ 为随机变量<ol>
+<li>$\alpha_k=EX^k$ 称为 $X$ 的 $k$ 阶原点矩<br>$\alpha_1=EX$</li>
+<li>$\beta_k=E(X-EX)^k$ 称为 $X$ 的 $k$ 阶中心矩<br>$\beta_1=0,\quad\beta_2=DX$</li>
+<li>$k,l\in N_+$ 则 $\gamma_{kl} = E(X-EX)^k(Y-EY)^l$ 称为 $X$ 与 $Y$ 的 $k+l$ 阶混合中心矩<br>$\gamma_{11} = Cov(X,Y)$</li>
+</ol>
+</li>
+</ul>
+<h5 id="协方差矩阵-1"><a href="#协方差矩阵-1" class="headerlink" title="协方差矩阵"></a>协方差矩阵</h5><ul>
+<li><strong>Def</strong>（协方差矩阵）：$\mathbf X=(X_1,X_2,\dots,X_n)^T$ 为 n 维随机向量<ol>
+<li>$\mu=(\mu_1,\mu_2,\dots)^T$ 为随机向量 $X$ 的数学期望</li>
+<li>$\sigma^2=(\sigma_1^2, \sigma_2^2,\dots)^T$为随机向量 $X$ 的方差</li>
+<li>协方差矩阵为：</li>
+</ol>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+\Sigma=\left(\begin{matrix}
+  \sigma_{11}& \sigma_{12}&\dots& \sigma_{1n}\\
+  \sigma_{21}& \sigma_{22}&\dots& \sigma_{2n}\\
+  \vdots&\vdots&\ddots&\vdots\\
+  \sigma_{n1}& \sigma_{n2}&\dots& \sigma_{nn}\\
+\end{matrix}\right)</script><h5 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h5><ul>
+<li>$\mathbf{diag}\Sigma=\sigma^2$</li>
+<li>半正定的对称阵，即$\Sigma\in S_+$</li>
+<li>$\sigma^2_{ij}\le \sigma_{ii}\sigma_{jj}$</li>
+<li>n 维正态分布：$f(\mathbb{x})=\frac{1}{(2\pi)^{n/2}|\sigma|^{1/2}}\exp\{-\frac{1}{2} (x-\mu)^T\Sigma^{-1}(x-\mu)\}$</li>
+</ul>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BB%9F%E8%AE%A1/">统计</a>
+                    
+                  </div>
                 
               </div>
               
@@ -253,18 +382,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/01/KGCode/kginteraction/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">知识融合简述</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/09/26/study/Math/DiscreteMath/index/">
-                        <span class="hidden-mobile">离散数学 [Overview]</span>
+                      <a href="/2020/11/20/study/Math/ComplexFunctions/ch1/">
+                        <span class="hidden-mobile">「复变函数」</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -461,7 +584,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "&nbsp;",
+        "「概率统计与随机过程」 4 - 随机向量的数字特征&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -522,6 +645,45 @@
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
 
 
 

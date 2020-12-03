@@ -17,7 +17,7 @@
   <meta name="description" content="欢迎来到些些同学的藏宝阁">
   <meta name="author" content="Jerry Yang">
   <meta name="keywords" content="study">
-  <title>概率统计与随机过程 3 - 随机向量及其概率分布 - 些些同学的藏宝阁</title>
+  <title>「概率统计与随机过程」 3 - 随机向量及其概率分布 - 些些同学的藏宝阁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      188 字
+      199 字
     </span>
   
 
@@ -223,10 +223,12 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">概率统计与随机过程 3 - 随机向量及其概率分布</h1>
+            <h1 style="display: none">「概率统计与随机过程」 3 - 随机向量及其概率分布</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="随机向量及其概率分布"><a href="#随机向量及其概率分布" class="headerlink" title="随机向量及其概率分布"></a>随机向量及其概率分布</h1><h3 id="二维随机向量的联合分布函数"><a href="#二维随机向量的联合分布函数" class="headerlink" title="二维随机向量的联合分布函数"></a>二维随机向量的联合分布函数</h3><p><strong>Def</strong>：（二位随机向量）假设 $\Omega = \{\omega\}$ 是随机试验 E 的样本空间，$X(\omega),~Y(\omega)$ 是定义在$\Omega$ 上的两个随机变量，由他们构成一个二维向量$(X,Y)$称为随机试验 E 的一个二维向量。</p>
+              <p>随机向量及其概率分布</p>
+<a id="more"></a>
+<h1 id="Chapter3-随机向量及其概率分布"><a href="#Chapter3-随机向量及其概率分布" class="headerlink" title="Chapter3-随机向量及其概率分布"></a>Chapter3-随机向量及其概率分布</h1><h3 id="二维随机向量的联合分布函数"><a href="#二维随机向量的联合分布函数" class="headerlink" title="二维随机向量的联合分布函数"></a>二维随机向量的联合分布函数</h3><p><strong>Def</strong>：（二位随机向量）假设 $\Omega = \{\omega\}$ 是随机试验 E 的样本空间，$X(\omega),~Y(\omega)$ 是定义在$\Omega$ 上的两个随机变量，由他们构成一个二维向量$(X,Y)$称为随机试验 E 的一个二维向量。</p>
 <p><strong>Def</strong>：（二维随机变量的联合分布函数）：假设$(X,Y)$是二维随机向量，对于任意实数$x,y$，二元函数$F(x,y)=P(X\le x,Y\le y)$ 称为二维随机向量$(X,Y)$ 的联合分布函数（分布函数）。</p>
 <h5 id="联合分布函数的性质"><a href="#联合分布函数的性质" class="headerlink" title="联合分布函数的性质"></a>联合分布函数的性质</h5><ol>
 <li>$0\le F\le 1$</li>
@@ -377,7 +379,24 @@ p(z) = \int_{-\infty}^{+\infty} p(x,z-x)\mathrm dx = \int_{-\infty}^{+\infty} p(
 </ul>
 </li>
 </ul>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<h5 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h5><ol>
+<li>先求出分布函数</li>
+<li>关于 z 求导数得到结果</li>
+</ol>
+<h5 id="最大值最小值函数"><a href="#最大值最小值函数" class="headerlink" title="最大值最小值函数"></a>最大值最小值函数</h5><p>相互独立情况下：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  &N=\min\{X_i\}, M = \max\{X_i\}\\
+  &F_{\min}(z)=1-\Pi[1-F_{X_i}(z)]\\
+  &F_{\max}(z)=\Pi F_{X_i}(z)
+\end{aligned}</script><p>如果相同分布：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  &F_{\min}(z)=1-[1-F(z)]^n\\
+  &F_{\max}(z)=F(z)^n\\
+  &f_{\min}(z) =n[1-F(z)]^{n-1} f(z)\\
+  &f_{\max}(z) =nF(z)^{n-1} f(z)
+\end{aligned}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
             <div>
@@ -409,7 +428,7 @@ p(z) = \int_{-\infty}^{+\infty} p(x,z-x)\mathrm dx = \int_{-\infty}^{+\infty} p(
                     
                       <a href="/2020/11/18/study/Math/Probabilities/notes2/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">概率统计与随机过程 2 - 随机变量及其概率分布</span>
+                        <span class="hidden-mobile">「概率统计与随机过程」 2 - 随机变量及其概率分布</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -417,8 +436,8 @@ p(z) = \int_{-\infty}^{+\infty} p(x,z-x)\mathrm dx = \int_{-\infty}^{+\infty} p(
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/04/KGCode/gcn/">
-                        <span class="hidden-mobile">GCN introduction</span>
+                      <a href="/2020/11/01/KGCode/kginteraction/">
+                        <span class="hidden-mobile">知识融合简述</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -615,7 +634,7 @@ p(z) = \int_{-\infty}^{+\infty} p(x,z-x)\mathrm dx = \int_{-\infty}^{+\infty} p(
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "概率统计与随机过程 3 - 随机向量及其概率分布&nbsp;",
+        "「概率统计与随机过程」 3 - 随机向量及其概率分布&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

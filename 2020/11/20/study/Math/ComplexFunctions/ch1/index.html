@@ -17,7 +17,7 @@
   <meta name="description" content="欢迎来到些些同学的藏宝阁">
   <meta name="author" content="Jerry Yang">
   <meta name="keywords" content="study">
-  <title>【综述】聚类方法 - 些些同学的藏宝阁</title>
+  <title>「复变函数」 - 些些同学的藏宝阁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -172,8 +172,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-11-01 00:00" pubdate>
-      2020年11月1日
+    <time datetime="2020-11-20 00:00" pubdate>
+      2020年11月20日
     </time>
   </div>
 
@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6 字
+      764 字
     </span>
   
 
@@ -193,7 +193,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      10
        分钟
     </span>
   
@@ -223,11 +223,147 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">【综述】聚类方法</h1>
+            <h1 style="display: none">「复变函数」</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>聚类方法综述。</p>
+              <p>复数与复变函数</p>
 <a id="more"></a>
+<h1 id="Ch1-复数与复变函数"><a href="#Ch1-复数与复变函数" class="headerlink" title="Ch1 复数与复变函数"></a>Ch1 复数与复变函数</h1><h2 id="复数的概念与运算"><a href="#复数的概念与运算" class="headerlink" title="复数的概念与运算"></a>复数的概念与运算</h2><h3 id="复数的概念"><a href="#复数的概念" class="headerlink" title="复数的概念"></a>复数的概念</h3><ol>
+<li>定义：$(x,y)$ -&gt; $z=x+iy,i^2=-1$</li>
+<li>$\mathrm{Re}(z)$</li>
+<li>$\mathrm{Im}(z)$</li>
+<li>相等：实部虚部对应相等</li>
+</ol>
+<h5 id="复数的四则运算"><a href="#复数的四则运算" class="headerlink" title="复数的四则运算"></a>复数的四则运算</h5><ol>
+<li>加减</li>
+<li>乘除</li>
+</ol>
+<h5 id="满足的运算规律"><a href="#满足的运算规律" class="headerlink" title="满足的运算规律"></a>满足的运算规律</h5><ol>
+<li>交换</li>
+<li>结合</li>
+<li>分配</li>
+</ol>
+<h5 id="共轭复数"><a href="#共轭复数" class="headerlink" title="共轭复数"></a>共轭复数</h5><p>$\bar z = x - iy$</p>
+<ol>
+<li>$z \bar z = |z|$</li>
+<li>$\overline{z_1\pm z_2} = \bar{z_1}\pm\bar{z_2}$</li>
+<li>$\overline{z_1z_2} = \bar{z_1}\bar{z_2}$</li>
+<li>$z+\bar z = \mathrm{Re}(z)$</li>
+<li>$(z-\bar z)/i = \mathrm{Im}(z)$</li>
+</ol>
+<h3 id="复数的几何表示"><a href="#复数的几何表示" class="headerlink" title="复数的几何表示"></a>复数的几何表示</h3><ol>
+<li><p>点表示：$z=x+iy\leftrightarrow (x,y)$</p>
+<p>复平面、虚轴</p>
+</li>
+<li><p>向量表示</p>
+</li>
+<li><p>三角表达：$z=r(\cos\theta+i\sin \theta)$</p>
+</li>
+</ol>
+<h5 id="复数的模和辐角"><a href="#复数的模和辐角" class="headerlink" title="复数的模和辐角"></a>复数的模和辐角</h5><ol>
+<li>模 $|z| = r = \sqrt{x^2+y^2}$</li>
+<li>辐角 $\mathrm{Arg}~z = \theta$</li>
+</ol>
+<blockquote>
+<p>利用欧拉公式：</p>
+<ul>
+<li>$z = re^{i\theta}$</li>
+</ul>
+<p>$z = 0$ 辐角不确定</p>
+<p>辐角的主值 $-\pi&lt;\theta_0\le\pi$</p>
+</blockquote>
+<p>辐角主值计算：</p>
+<ol>
+<li>求 $\arctan \frac y x$</li>
+<li>求 $\theta_0$</li>
+</ol>
+<div class="note note-caution">
+            <ul><li>$\mathrm{Arg}(z_1z_2)=\mathrm{Arg}z_1+\mathrm{Arg}z_2$</li><li>$\mathrm{Arg}(z_1/z_2)=\mathrm{Arg}z_1-\mathrm{Arg}z_2$</li></ul><p>注意这里指的是集合相等</p><ul><li>$|z_1z_2|=|z_1||z_2|$</li><li>$|z_1/z_2|=|z_1|/|z_2|$</li></ul>
+          </div>
+<p>做题全靠猜</p>
+<h3 id="复数的乘幂和方根"><a href="#复数的乘幂和方根" class="headerlink" title="复数的乘幂和方根"></a>复数的乘幂和方根</h3><h5 id="复数的乘幂"><a href="#复数的乘幂" class="headerlink" title="复数的乘幂"></a>复数的乘幂</h5><script type="math/tex; mode=display">
+\begin{aligned}
+&z=re^{i\theta} = r(\cos\theta+i\sin\theta)\\
+&z^n = z\cdot z\cdot z\cdot\dots\cdot z\\
+&z^n=re^{in\theta}=r(\cos n\theta+i\sin n\theta)
+\end{aligned}</script><h5 id="复数的方根"><a href="#复数的方根" class="headerlink" title="复数的方根"></a>复数的方根</h5><script type="math/tex; mode=display">
+\begin{aligned}
+&z=re^{i\theta} = r(\cos\theta+i\sin\theta)\\
+&\sqrt[n]z= \sqrt[n]r(\cos\frac{\theta + 2k\pi}n+i\sin\frac{\theta + 2k\pi}n)\\
+\end{aligned}</script><h3 id="复数在几何上的应用举例"><a href="#复数在几何上的应用举例" class="headerlink" title="复数在几何上的应用举例"></a>复数在几何上的应用举例</h3><div class="note note-primary">
+            <p>$z^n=1$</p>
+          </div>
+<div class="note note-primary">
+            <ul><li>复数表示复平面上的过$z_1,~z_2$的直线方程：$z-z_1=t(z_2-z_1)$</li></ul>
+          </div>
+<div class="note note-success">
+            <ul><li>复数表示圆方程：$|z-z_0| = R$</li></ul>
+          </div>
+<div class="note note-secondary">
+            <ol><li>中垂线：$|z-z_1|=|z-z_2|$</li><li>特殊直线：$\mathrm{Im}(i+z)=4$</li></ol>
+          </div>
+<h3 id="复球面与无穷远点"><a href="#复球面与无穷远点" class="headerlink" title="复球面与无穷远点"></a>复球面与无穷远点</h3><ul>
+<li>引入无穷远点，表达复数</li>
+</ul>
+<h2 id="复变函数的极限与连续性"><a href="#复变函数的极限与连续性" class="headerlink" title="复变函数的极限与连续性"></a>复变函数的极限与连续性</h2><h3 id="复平面上的区域"><a href="#复平面上的区域" class="headerlink" title="复平面上的区域"></a>复平面上的区域</h3><h5 id="区域的概念"><a href="#区域的概念" class="headerlink" title="区域的概念"></a>区域的概念</h5><p><strong>区域：连通的开集</strong></p>
+<!-- TODO: 不是开集的情况 -->
+<blockquote>
+<p>开集：$\forall z\in A,\exists U(z)\subset A$，即$\mathrm{int}A = A$</p>
+<ul>
+<li>内点、外点、边界点<br>连通：折线连接</li>
+<li>单连通、复连通（用闭曲线包围部分是否都在原集合内定义）</li>
+</ul>
+</blockquote>
+<ul>
+<li>$z_0$ 的 $\delta$ 邻域</li>
+<li>去心邻域</li>
+</ul>
+<blockquote>
+<p>可以定义 $\infin$的邻域和去心邻域</p>
+</blockquote>
+<h5 id="简单曲线、单连通、多连通"><a href="#简单曲线、单连通、多连通" class="headerlink" title="简单曲线、单连通、多连通"></a>简单曲线、单连通、多连通</h5><p><strong>简单曲线</strong>：</p>
+<ul>
+<li>连续</li>
+<li>导函数连续，且 $(x’)^2+(y’)^2 \ne 0$</li>
+<li>不相交（没有重点）：$t_1=t_2\Leftrightarrow z(t_1)=z(t_2)$</li>
+</ul>
+<p><strong>连通区域</strong>：</p>
+<ul>
+<li>单连通</li>
+<li>多连通</li>
+</ul>
+<h3 id="复变函数的概念"><a href="#复变函数的概念" class="headerlink" title="复变函数的概念"></a>复变函数的概念</h3><p><strong>Def1.1 复变函数</strong>：（可以是多值的）</p>
+<p>映射下的象和原象</p>
+<p>复变函数的集合表示</p>
+<h3 id="复变函数的极限和连续性"><a href="#复变函数的极限和连续性" class="headerlink" title="复变函数的极限和连续性"></a>复变函数的极限和连续性</h3><p><strong>Def1.1 极限的定义</strong>：</p>
+<p><strong>Thm1</strong>：设$f$在$z_0$的某个去心领域有定义，则：</p>
+<script type="math/tex; mode=display">
+\lim f(z) = A\iff \begin{cases}
+   \lim u = \mathrm{Re}(A)\\
+   \lim v = \mathrm{Im}(A)
+\end{cases}</script><p>极限的性质：</p>
+<ul>
+<li>唯一性</li>
+<li>局部有界性</li>
+<li>有理运算法则</li>
+</ul>
+<p><strong>Def1.3 连续、在区域内连续</strong></p>
+<p><strong>Thm1.2</strong>：$f$ 在 $z_0$ 连续. $\iff$ $u$，$v$ 在 $(x_0,y_0)$ 同时连续</p>
+<ul>
+<li>有理运算不改变连续性</li>
+<li>函数复合不改变连续性</li>
+</ul>
+<hr>
+<p>Homework:</p>
+<p>P24</p>
+<p>1 -&gt; 2, 3</p>
+<p>2</p>
+<p>4 -&gt; 1, 6</p>
+<p>8 -&gt; 3, 5</p>
+<p>12</p>
+<p>14 -&gt; 1, 3</p>
+<p>19</p>
+<p>26 -&gt; 2, 4</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
@@ -237,7 +373,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/KGCode/">KGCode</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
                     
                   </div>
                 
@@ -245,11 +381,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/KGCode/">KGCode</a>
+                      <a class="hover-with-bg" href="/tags/Advanced-Mathematics/">高等数学</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E8%81%9A%E7%B1%BB/">聚类</a>
-                    
-                      <a class="hover-with-bg" href="/tags/Algorithm/">算法</a>
+                      <a class="hover-with-bg" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">复变函数</a>
                     
                   </div>
                 
@@ -260,9 +394,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/04/KGCode/gcn/">
+                      <a href="/2020/12/02/study/Math/Probabilities/notes4/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">GCN introduction</span>
+                        <span class="hidden-mobile">「概率统计与随机过程」 4 - 随机向量的数字特征</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -270,8 +404,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/01/KGCode/kginteraction/">
-                        <span class="hidden-mobile">知识融合简述</span>
+                      <a href="/2020/11/20/study/Math/ComplexFunctions/ch2/">
+                        <span class="hidden-mobile">「复变函数」复变函数的导数和解析函数</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -468,7 +602,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "【综述】聚类方法&nbsp;",
+        "「复变函数」&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
