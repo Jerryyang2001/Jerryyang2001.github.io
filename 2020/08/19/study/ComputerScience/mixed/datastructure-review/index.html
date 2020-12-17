@@ -19,27 +19,33 @@
   <meta name="keywords" content="study">
   <title>数据结构复习 - 些些同学的藏宝阁</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
     
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
   
 
   
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -47,6 +53,10 @@
 <!-- 自定义样式保持在最底部 -->
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"jerryyang2001.github.io","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 5.0.2"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
@@ -163,20 +173,23 @@
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container page-header text-center fade-in-up">
-            <span class="h2" id="subtitle">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="数据结构复习">
               
             </span>
 
             
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-19 00:00" pubdate>
-      2020年8月19日
-    </time>
-  </div>
-
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-08-19 00:00" pubdate>
+        2020年8月19日 凌晨
+      </time>
+    </span>
+  
+</div>
 
 <div class="mt-1">
   
@@ -221,11 +234,17 @@
     <div class="col-lg-8 nopadding-md">
       <div class="container nopadding-md" id="board-ctn">
         <div class="py-5" id="board">
-          <article class="post-content mx-auto" id="post">
+          <article class="post-content mx-auto">
             <!-- SEO header -->
             <h1 style="display: none">数据结构复习</h1>
             
-            <div class="markdown-body" id="post-body">
+              <p class="note note-info">
+                
+                  本文最后更新于：4 个月前
+                
+              </p>
+            
+            <div class="markdown-body">
               <p>数据结构复习</p>
 <a id="more"></a>
 <h3 id="0、绪论"><a href="#0、绪论" class="headerlink" title="0、绪论"></a>0、绪论</h3><h4 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h4><p>四种基本的逻辑结构：</p>
@@ -236,11 +255,7 @@
 <li>图结构</li>
 </ol>
 <p><code>ADT</code>的概念：</p>
-<pre><code class="hljs cpp">ADT 数据类型 &#123;
-  数据对象：&lt;Definition&gt;
-  数据关系：&lt;Definition&gt;
-    基本操作：&lt;Definition&gt;
-&#125;</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp">ADT 数据类型 &#123;<br>  数据对象：&lt;Definition&gt;<br>  数据关系：&lt;Definition&gt;<br>    基本操作：&lt;Definition&gt;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>注意C和C++的区别，以及常用的语句</p>
 <ol>
 <li>没有 template，没有 class</li>
@@ -249,34 +264,12 @@
 <li>异常处理：用的是 <code>Status</code> 表示（就是 <code>int</code> ），也有用 <code>exit</code> 的</li>
 </ol>
 <p>简单提一下 <code>#define</code> 和 <code>typedef</code>：</p>
-<pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IDENTIFIER expr</span>
-<span class="hljs-comment">// 在编译时会被直接替换成 expr</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IDENTIFIER(x,y,z) expr</span>
-<span class="hljs-comment">// 在编译时会被直接替换成expr，并且将expr中的 x y z 替换</span>
-<span class="hljs-comment">// 例如</span>
-
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PI 1.57 + 1.57</span>
-<span class="hljs-built_in">cout</span> &lt;&lt; PI; <span class="hljs-comment">// 编译时替换成 cout &lt;&lt; 1.57 + 1.57;</span>
-<span class="hljs-comment">// 想一想 PI*PI 是什么</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ISROOT(node) (node-&gt;father == nullptr)</span>
-<span class="hljs-built_in">cout</span> &lt;&lt; ISROOT(tree._root_ptr);
-<span class="hljs-comment">// 编译时替换成 cout &lt;&lt; (tree._root_ptr -&gt; father == nullptr);</span>
-<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> Status;
-Status x; <span class="hljs-comment">// 等价于 int x;</span>
-<span class="hljs-comment">// 注意：不能有 template&lt;</span></code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IDENTIFIER expr</span><br><span class="hljs-comment">// 在编译时会被直接替换成 expr</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IDENTIFIER(x,y,z) expr</span><br><span class="hljs-comment">// 在编译时会被直接替换成expr，并且将expr中的 x y z 替换</span><br><span class="hljs-comment">// 例如</span><br><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PI 1.57 + 1.57</span><br><span class="hljs-built_in">cout</span> &lt;&lt; PI; <span class="hljs-comment">// 编译时替换成 cout &lt;&lt; 1.57 + 1.57;</span><br><span class="hljs-comment">// 想一想 PI*PI 是什么</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ISROOT(node) (node-&gt;father == nullptr)</span><br><span class="hljs-built_in">cout</span> &lt;&lt; ISROOT(tree._root_ptr);<br><span class="hljs-comment">// 编译时替换成 cout &lt;&lt; (tree._root_ptr -&gt; father == nullptr);</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> Status;<br>Status x; <span class="hljs-comment">// 等价于 int x;</span><br><span class="hljs-comment">// 注意：不能有 template&lt;</span><br></code></pre></td></tr></table></figure>
 <div class="note note-primary">
             <p><em><span class="label label-info">「再碎碎念一下」</span></em></p><p><code>template</code> 还记得多少。</p><p><code>new</code> <code>delete</code> 填程序可能考的（释放空间，析构函数）</p><p>万一出卷老师一时兴起，和我一样作死用 <code>virtual</code> 写 <code>avl::bst</code> 咋办</p><p><code>typedef</code> 和 <code>#define</code> 定义的顺序不一样</p><p>我慌了。</p>
           </div>
 <h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p><strong><span class="label label-info">「全场暴毙」</span></strong>：写出下面这个算法的时间复杂度</p>
-<pre><code class="hljs cpp"><span class="hljs-comment">// n 为 str 长度</span>
-<span class="hljs-comment">// 则 func 是 o(?)</span>
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">func</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str, <span class="hljs-keyword">char</span> c)</span></span>
-<span class="hljs-function"></span>&#123;
-  <span class="hljs-keyword">int</span> cnt = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">size_t</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">strlen</span>(str); ++i)
-    <span class="hljs-keyword">if</span> (str[i] == c) cnt ++;
-  <span class="hljs-keyword">return</span> cnt;
-&#125;</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">// n 为 str 长度</span><br><span class="hljs-comment">// 则 func 是 o(?)</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">func</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str, <span class="hljs-keyword">char</span> c)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-keyword">int</span> cnt = <span class="hljs-number">0</span>;<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">size_t</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">strlen</span>(str); ++i)<br>    <span class="hljs-keyword">if</span> (str[i] == c) cnt ++;<br>  <span class="hljs-keyword">return</span> cnt;<br>&#125;<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>Ans：$O(n^2)$</p>
 </blockquote>
@@ -499,13 +492,7 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 </ol>
 </li>
 </ol>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">search</span><span class="hljs-params">(SeqTable st, KeyTp key)</span></span>
-<span class="hljs-function"></span>&#123;
-  <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
-  st.elem[<span class="hljs-number">0</span>].key = key;
-  <span class="hljs-keyword">for</span> (i = st.length; st.elem[i].key != key; --i);
-  <span class="hljs-keyword">return</span> i;
-&#125;</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">search</span><span class="hljs-params">(SeqTable st, KeyTp key)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;<br>  st.elem[<span class="hljs-number">0</span>].key = key;<br>  <span class="hljs-keyword">for</span> (i = st.length; st.elem[i].key != key; --i);<br>  <span class="hljs-keyword">return</span> i;<br>&#125;<br></code></pre></td></tr></table></figure>
 <ol>
 <li>（有序）顺序表查找「二分查找法」<ol>
 <li>可以得到「判定树<code>Decision Tree</code>」</li>
@@ -688,15 +675,7 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 </ol>
 </li>
 </ol>
-<pre><code class="hljs python">Hash(key) = key % <span class="hljs-number">11</span>;
-[\ \ \ \ \ <span class="hljs-number">60</span> <span class="hljs-number">17</span> <span class="hljs-number">29</span> \ \ \]
-<span class="hljs-comment"># 插入 38， 且产生随机数 9</span>
-<span class="hljs-comment"># 线性探测：(d = 3)</span>
-[\ \ \ \ \ <span class="hljs-number">60</span> <span class="hljs-number">17</span> <span class="hljs-number">29</span> <span class="hljs-number">38</span> \ \]
-<span class="hljs-comment"># 二次：（d = -1)</span>
-[\ \ \ \ <span class="hljs-number">38</span> <span class="hljs-number">60</span> <span class="hljs-number">17</span> <span class="hljs-number">29</span> \ \ \]
-<span class="hljs-comment"># 伪随机：(d = 9)</span>
-[\ \ \ <span class="hljs-number">38</span> \ <span class="hljs-number">60</span> <span class="hljs-number">17</span> <span class="hljs-number">29</span> \ \ \]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python">Hash(key) = key % <span class="hljs-number">11</span>;<br>[\ \ \ \ \ <span class="hljs-number">60</span> <span class="hljs-number">17</span> <span class="hljs-number">29</span> \ \ \]<br><span class="hljs-comment"># 插入 38， 且产生随机数 9</span><br><span class="hljs-comment"># 线性探测：(d = 3)</span><br>[\ \ \ \ \ <span class="hljs-number">60</span> <span class="hljs-number">17</span> <span class="hljs-number">29</span> <span class="hljs-number">38</span> \ \]<br><span class="hljs-comment"># 二次：（d = -1)</span><br>[\ \ \ \ <span class="hljs-number">38</span> <span class="hljs-number">60</span> <span class="hljs-number">17</span> <span class="hljs-number">29</span> \ \ \]<br><span class="hljs-comment"># 伪随机：(d = 9)</span><br>[\ \ \ <span class="hljs-number">38</span> \ <span class="hljs-number">60</span> <span class="hljs-number">17</span> <span class="hljs-number">29</span> \ \ \]<br></code></pre></td></tr></table></figure>
 <div class="table-container">
 <table>
 <thead>
@@ -846,43 +825,7 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 <li>对左侧序列，右侧序列执行快排。</li>
 </ol>
 </blockquote>
-<pre><code class="hljs python"><span class="hljs-comment"># 第一个是 Pivot</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">qsort</span>(<span class="hljs-params">seq : list, l : int, r : int</span>):</span>
-    <span class="hljs-keyword">if</span> l &gt;= r:
-        <span class="hljs-keyword">return</span>
-    pivot = seq[l]
-    i, j = l, r
-    <span class="hljs-keyword">while</span> (i &lt; j):
-        <span class="hljs-keyword">while</span> (i &lt; j <span class="hljs-keyword">and</span> seq[j] &gt;= pivot):
-            j--
-        seq[i] = seq[j]
-        <span class="hljs-keyword">while</span>(i &lt; j <span class="hljs-keyword">and</span> seq[i] &lt;= pivot):
-            i++
-        seq[j] = seq[i]
-    <span class="hljs-comment"># 此时 i == j</span>
-    seq[i] = pivot
-    <span class="hljs-comment"># 对左右两侧的表分别排序</span>
-    qsort(seq, l, i - <span class="hljs-number">1</span>)
-    qsort(seq, i + <span class="hljs-number">1</span>, r)
-
-
-<span class="hljs-comment"># 随机 Pivot</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">qsort</span>(<span class="hljs-params">seq: list, l: int, r: int</span>):</span>
-    <span class="hljs-keyword">if</span> l == r:
-        <span class="hljs-keyword">return</span>
-    p = randint(l, r)
-    pivot = seq[p] <span class="hljs-comment"># 随便选一个 pivot</span>
-    i, j = l, r
-    <span class="hljs-keyword">while</span> (i&lt;j):
-        <span class="hljs-keyword">while</span> (pivot &lt;= seq[r] <span class="hljs-keyword">and</span> l &lt; r):
-            r--
-        p, seq[p] = r, seq[r]
-        <span class="hljs-keyword">while</span> (pivot &gt;= seq[l] <span class="hljs-keyword">and</span> l &lt; r):
-            l++
-        p, seq[p] = l, seq[l]
-    seq[i] = pivot
-    qsort(seq, l, i - <span class="hljs-number">1</span>)
-    qsort(seq, i + <span class="hljs-number">1</span>, r)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 第一个是 Pivot</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">qsort</span>(<span class="hljs-params">seq : list, l : int, r : int</span>):</span><br>    <span class="hljs-keyword">if</span> l &gt;= r:<br>        <span class="hljs-keyword">return</span><br>    pivot = seq[l]<br>    i, j = l, r<br>    <span class="hljs-keyword">while</span> (i &lt; j):<br>        <span class="hljs-keyword">while</span> (i &lt; j <span class="hljs-keyword">and</span> seq[j] &gt;= pivot):<br>            j--<br>        seq[i] = seq[j]<br>        <span class="hljs-keyword">while</span>(i &lt; j <span class="hljs-keyword">and</span> seq[i] &lt;= pivot):<br>            i++<br>        seq[j] = seq[i]<br>    <span class="hljs-comment"># 此时 i == j</span><br>    seq[i] = pivot<br>    <span class="hljs-comment"># 对左右两侧的表分别排序</span><br>    qsort(seq, l, i - <span class="hljs-number">1</span>)<br>    qsort(seq, i + <span class="hljs-number">1</span>, r)<br>    <br><br><span class="hljs-comment"># 随机 Pivot</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">qsort</span>(<span class="hljs-params">seq: list, l: int, r: int</span>):</span><br>    <span class="hljs-keyword">if</span> l == r:<br>        <span class="hljs-keyword">return</span><br>    p = randint(l, r)<br>    pivot = seq[p] <span class="hljs-comment"># 随便选一个 pivot</span><br>    i, j = l, r<br>    <span class="hljs-keyword">while</span> (i&lt;j):<br>        <span class="hljs-keyword">while</span> (pivot &lt;= seq[r] <span class="hljs-keyword">and</span> l &lt; r):<br>            r--<br>        p, seq[p] = r, seq[r]<br>        <span class="hljs-keyword">while</span> (pivot &gt;= seq[l] <span class="hljs-keyword">and</span> l &lt; r):<br>            l++<br>        p, seq[p] = l, seq[l]<br>    seq[i] = pivot<br>    qsort(seq, l, i - <span class="hljs-number">1</span>)<br>    qsort(seq, i + <span class="hljs-number">1</span>, r)<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>不保证正确。嘿嘿😶</p>
 </blockquote>
@@ -961,8 +904,8 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
                 
   <div id="vcomments"></div>
   <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
         new Valine({
           el: "#vcomments",
           app_id: "ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz",
@@ -978,11 +921,11 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
           serverURLs: "",
         });
       });
-    }
-    waitElementVisible('vcomments', loadValine);
+    });
   </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
 
 
               </article>
@@ -995,7 +938,7 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
         <div id="toc">
   <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
+  <div class="toc-body" id="toc-body"></div>
 </div>
 
       </div>
@@ -1007,16 +950,15 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 
 
     
-  </main>
 
-  
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
-  
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
      aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
@@ -1037,21 +979,16 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
     </div>
   </div>
 </div>
-  
-
-  
-
-  
-
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-      <i class="iconfont icon-home-fill"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid</span></a>
-    </div>
     
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> with <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
   <div class="statistics">
     
     
@@ -1077,17 +1014,33 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
   </div>
 
 
-    
+  
 
-    
-  </div>
+  
 </footer>
 
 <!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
 <script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 <!-- Plugins -->
 
@@ -1098,8 +1051,23 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 
 
 
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
 
@@ -1108,95 +1076,29 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 
 
 
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
   <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: '#post-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 3,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "数据结构复习&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "right",
-      visible: "hover",
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
       
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
+      typing(title)
+      
+    })(window, document);
   </script>
 
 
 
   <script  src="/js/local-search.js" ></script>
   <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
       }
-    );
+    })()
   </script>
 
 
@@ -1238,7 +1140,7 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
       };
     </script>
 
-    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
 
   
 
@@ -1252,8 +1154,8 @@ Status x; <span class="hljs-comment">// 等价于 int x;</span>
 
 
 
-
-
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 
