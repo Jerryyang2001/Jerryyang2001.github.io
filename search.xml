@@ -673,6 +673,66 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
       </tags>
   </entry>
   <entry>
+    <title>角动量守恒</title>
+    <url>/2020/06/08/study/Physics/Ch4/</url>
+    <content><![CDATA[<p>基础物理学Ch4 角动量守恒</p>
+<a id="more"></a>
+<h2 id="角动量、角动量守恒定律"><a href="#角动量、角动量守恒定律" class="headerlink" title="角动量、角动量守恒定律"></a>角动量、角动量守恒定律</h2><p><strong><span class="label label-info">「角动量」</span></strong>：$\vec L = \vec r \times \vec p = \vec r \times m \vec v$（角动量、动量矩）</p>
+<p>在圆周运动中：$L = mr^2 w$</p>
+<div class="note note-success">
+            <p><strong>角动量守恒定律</strong>：$L_1+L_2 = const$</p><blockquote><p>一个系统由两个质点组成，若两个质点只受到它们之间的相互作用，则这个系统的总角动量保持恒定。</p></blockquote>
+          </div>
+<h2 id="力矩-、角动量定理"><a href="#力矩-、角动量定理" class="headerlink" title="力矩 、角动量定理"></a>力矩 、角动量定理</h2><h4 id="力矩、质点的角动量定理"><a href="#力矩、质点的角动量定理" class="headerlink" title="力矩、质点的角动量定理"></a>力矩、质点的角动量定理</h4><ul>
+<li>$L = r\times p\Rightarrow$ (对t微分) $\displaystyle\frac{\mathrm d L}{\mathrm d t} = r\times F$ 定义为$M$（力矩）</li>
+<li>反之，对上式积分，$\int \vec M \mathrm d t = \vec L _ 2 - \vec L _ 1$（角冲量）（或者写成 $\mathrm d \vec L = \vec M \mathrm d t$ ）地方</li>
+</ul>
+<p><strong><span class="label label-info">「角动量定理」</span></strong>：质点对任一固定点的角动量的时间变化率，等于外力对该点的力矩。</p>
+<h4 id="质点系的角动量定理"><a href="#质点系的角动量定理" class="headerlink" title="质点系的角动量定理"></a>质点系的角动量定理</h4><blockquote>
+<p>$L = \sum L = \sum r \times p=\sum r\times mv$</p>
+<p>对 $t$ 求导：$\frac{\mathrm d L}{\mathrm d t} = M^{ex}+M^{in}$</p>
+<p>而在质点系中，由牛顿第三定律：$M^{in}=0$</p>
+</blockquote>
+<p><strong><span class="label label-info">「质点系的角动量定理」</span></strong>：</p>
+<ul>
+<li>质点系对惯性系中某个参考点的角动量的时间变化率，等与作用在该质点系上的所有外力对该给定参考点的总力矩。</li>
+<li>$\frac {\mathrm d L}{\mathrm d t} = M^{ex}$</li>
+</ul>
+<p><strong><span class="label label-info">「质点系的角动量守恒定律」</span></strong>：（总外力矩为零时）$L = const , \mathrm dL =0$</p>
+<h4 id="质心系的角动量定理"><a href="#质心系的角动量定理" class="headerlink" title="质心系的角动量定理"></a>质心系的角动量定理</h4><p><strong><span class="label label-info">「质点组相对于质心的角动量」</span></strong>：</p>
+<ul>
+<li>$L = \vec r_c \times m\vec v_c+\sum \vec r_i \times m_i \vec v_i’ = L_c+m\boldsymbol r_c\times\boldsymbol a_c$</li>
+<li>质点系对固定点 O 的角动量 L，等于质点系对其质心 C 的角动量 $L_c$ 加上质量集中在质心上随之运动时对 O 点的角动量 $m\boldsymbol r_c\times\boldsymbol a_c$</li>
+</ul>
+<p><strong><span class="label label-info">「质心系角动量定理」</span></strong></p>
+<ul>
+<li>$M_c^{ex} = \frac{\mathrm dL_c}{\mathrm dt}$</li>
+<li>质点系对质心的角动量的时间变化率，等与作用在该质点系上的所有外力对质心的总力矩。</li>
+</ul>
+<p><strong><span class="label label-info">「质点组对质心的角动量守恒」</span></strong></p>
+<h2 id="质点在有心力场中的运动"><a href="#质点在有心力场中的运动" class="headerlink" title="质点在有心力场中的运动"></a>质点在有心力场中的运动</h2><h4 id="质心在有心力场中运动的一般描述"><a href="#质心在有心力场中运动的一般描述" class="headerlink" title="质心在有心力场中运动的一般描述"></a>质心在有心力场中运动的一般描述</h4><script type="math/tex; mode=display">
+\begin{cases}
+  e_r方向\qquad m(\ddot{r} - r\dot\theta^2)=F(r)\\
+  e_\theta 方向\qquad m(2\dot r\dot\theta + r\ddot\theta)=0
+\end{cases}</script><h4 id="机械能守恒和角动量守恒-离心势能和有效势"><a href="#机械能守恒和角动量守恒-离心势能和有效势" class="headerlink" title="机械能守恒和角动量守恒 离心势能和有效势"></a>机械能守恒和角动量守恒 离心势能和有效势</h4><p>机械能守恒定律可以改写为：$\displaystyle\tilde{E}_p(r)=E_p(r)+\frac{L^2}{2mr^2}$</p>
+<ul>
+<li>有效势能</li>
+<li>离心势能</li>
+</ul>
+<blockquote>
+<p>将二维问题，化为一维问题。</p>
+</blockquote>
+<div class="note note-info">
+            <p><strong><span class="label label-info">「守恒定律」</span></strong></p><ol><li>动量</li><li>能量</li><li>角动量</li><li>质量</li><li>电荷</li><li>宇称守恒定律</li></ol>
+          </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>基础物理学</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>刚体运动学</title>
     <url>/2020/06/08/study/Physics/Ch5/</url>
     <content><![CDATA[<p>基础物理学Ch5 刚体运动学</p>
@@ -775,189 +835,6 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <p>转动定律：$M_c = I_c \alpha ,\quad v_c = R \omega$</p>
 <p>平面平行运动能量：（科尼希定理）$E_k = E_{kc} +E_k’ = \frac{1}{2} mv_c^2 + \frac{1}{2}I_c \omega^2$</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>基础物理学</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>角动量守恒</title>
-    <url>/2020/06/08/study/Physics/Ch4/</url>
-    <content><![CDATA[<p>基础物理学Ch4 角动量守恒</p>
-<a id="more"></a>
-<h2 id="角动量、角动量守恒定律"><a href="#角动量、角动量守恒定律" class="headerlink" title="角动量、角动量守恒定律"></a>角动量、角动量守恒定律</h2><p><strong><span class="label label-info">「角动量」</span></strong>：$\vec L = \vec r \times \vec p = \vec r \times m \vec v$（角动量、动量矩）</p>
-<p>在圆周运动中：$L = mr^2 w$</p>
-<div class="note note-success">
-            <p><strong>角动量守恒定律</strong>：$L_1+L_2 = const$</p><blockquote><p>一个系统由两个质点组成，若两个质点只受到它们之间的相互作用，则这个系统的总角动量保持恒定。</p></blockquote>
-          </div>
-<h2 id="力矩-、角动量定理"><a href="#力矩-、角动量定理" class="headerlink" title="力矩 、角动量定理"></a>力矩 、角动量定理</h2><h4 id="力矩、质点的角动量定理"><a href="#力矩、质点的角动量定理" class="headerlink" title="力矩、质点的角动量定理"></a>力矩、质点的角动量定理</h4><ul>
-<li>$L = r\times p\Rightarrow$ (对t微分) $\displaystyle\frac{\mathrm d L}{\mathrm d t} = r\times F$ 定义为$M$（力矩）</li>
-<li>反之，对上式积分，$\int \vec M \mathrm d t = \vec L _ 2 - \vec L _ 1$（角冲量）（或者写成 $\mathrm d \vec L = \vec M \mathrm d t$ ）地方</li>
-</ul>
-<p><strong><span class="label label-info">「角动量定理」</span></strong>：质点对任一固定点的角动量的时间变化率，等于外力对该点的力矩。</p>
-<h4 id="质点系的角动量定理"><a href="#质点系的角动量定理" class="headerlink" title="质点系的角动量定理"></a>质点系的角动量定理</h4><blockquote>
-<p>$L = \sum L = \sum r \times p=\sum r\times mv$</p>
-<p>对 $t$ 求导：$\frac{\mathrm d L}{\mathrm d t} = M^{ex}+M^{in}$</p>
-<p>而在质点系中，由牛顿第三定律：$M^{in}=0$</p>
-</blockquote>
-<p><strong><span class="label label-info">「质点系的角动量定理」</span></strong>：</p>
-<ul>
-<li>质点系对惯性系中某个参考点的角动量的时间变化率，等与作用在该质点系上的所有外力对该给定参考点的总力矩。</li>
-<li>$\frac {\mathrm d L}{\mathrm d t} = M^{ex}$</li>
-</ul>
-<p><strong><span class="label label-info">「质点系的角动量守恒定律」</span></strong>：（总外力矩为零时）$L = const , \mathrm dL =0$</p>
-<h4 id="质心系的角动量定理"><a href="#质心系的角动量定理" class="headerlink" title="质心系的角动量定理"></a>质心系的角动量定理</h4><p><strong><span class="label label-info">「质点组相对于质心的角动量」</span></strong>：</p>
-<ul>
-<li>$L = \vec r_c \times m\vec v_c+\sum \vec r_i \times m_i \vec v_i’ = L_c+m\boldsymbol r_c\times\boldsymbol a_c$</li>
-<li>质点系对固定点 O 的角动量 L，等于质点系对其质心 C 的角动量 $L_c$ 加上质量集中在质心上随之运动时对 O 点的角动量 $m\boldsymbol r_c\times\boldsymbol a_c$</li>
-</ul>
-<p><strong><span class="label label-info">「质心系角动量定理」</span></strong></p>
-<ul>
-<li>$M_c^{ex} = \frac{\mathrm dL_c}{\mathrm dt}$</li>
-<li>质点系对质心的角动量的时间变化率，等与作用在该质点系上的所有外力对质心的总力矩。</li>
-</ul>
-<p><strong><span class="label label-info">「质点组对质心的角动量守恒」</span></strong></p>
-<h2 id="质点在有心力场中的运动"><a href="#质点在有心力场中的运动" class="headerlink" title="质点在有心力场中的运动"></a>质点在有心力场中的运动</h2><h4 id="质心在有心力场中运动的一般描述"><a href="#质心在有心力场中运动的一般描述" class="headerlink" title="质心在有心力场中运动的一般描述"></a>质心在有心力场中运动的一般描述</h4><script type="math/tex; mode=display">
-\begin{cases}
-  e_r方向\qquad m(\ddot{r} - r\dot\theta^2)=F(r)\\
-  e_\theta 方向\qquad m(2\dot r\dot\theta + r\ddot\theta)=0
-\end{cases}</script><h4 id="机械能守恒和角动量守恒-离心势能和有效势"><a href="#机械能守恒和角动量守恒-离心势能和有效势" class="headerlink" title="机械能守恒和角动量守恒 离心势能和有效势"></a>机械能守恒和角动量守恒 离心势能和有效势</h4><p>机械能守恒定律可以改写为：$\displaystyle\tilde{E}_p(r)=E_p(r)+\frac{L^2}{2mr^2}$</p>
-<ul>
-<li>有效势能</li>
-<li>离心势能</li>
-</ul>
-<blockquote>
-<p>将二维问题，化为一维问题。</p>
-</blockquote>
-<div class="note note-info">
-            <p><strong><span class="label label-info">「守恒定律」</span></strong></p><ol><li>动量</li><li>能量</li><li>角动量</li><li>质量</li><li>电荷</li><li>宇称守恒定律</li></ol>
-          </div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>基础物理学</category>
-      </categories>
-      <tags>
-        <tag>物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>狭义相对论</title>
-    <url>/2020/06/08/study/Physics/Ch7/</url>
-    <content><![CDATA[<p>基础物理学Ch7 狭义相对论</p>
-<a id="more"></a>
-<h2 id="狭义相对论的基本假设"><a href="#狭义相对论的基本假设" class="headerlink" title="狭义相对论的基本假设"></a>狭义相对论的基本假设</h2><h3 id="绝对时空观与伽利略相对性原理"><a href="#绝对时空观与伽利略相对性原理" class="headerlink" title="绝对时空观与伽利略相对性原理"></a>绝对时空观与伽利略相对性原理</h3><ol>
-<li>长度、时间间隔、质量、相互作用力与参考系无关</li>
-<li>速度、位移、加速度满足伽利略变换关系（速度变换式、时空变换式）</li>
-</ol>
-<h3 id="电磁学发展及其与绝对时空观的规律"><a href="#电磁学发展及其与绝对时空观的规律" class="headerlink" title="电磁学发展及其与绝对时空观的规律"></a>电磁学发展及其与绝对时空观的规律</h3><ol>
-<li>电磁学规律：<ul>
-<li>Maxwell方程组</li>
-<li>$c = \frac{1}{\sqrt{\epsilon_0 \mu_0}}$</li>
-</ul>
-</li>
-<li>电磁学规律与绝对时空观的矛盾<ul>
-<li>光速与参考系无关</li>
-</ul>
-</li>
-<li>矛盾解决<ul>
-<li>伽利略速度变换正确，而光速只适用于特殊的参考系：<code>以太参考系</code></li>
-<li>相对性原理对电磁学规律也适用，为了保持光速不变，需要建立新的时空变换关系</li>
-</ul>
-</li>
-</ol>
-<h3 id="狭义相对论的基本内容"><a href="#狭义相对论的基本内容" class="headerlink" title="狭义相对论的基本内容"></a>狭义相对论的基本内容</h3><ul>
-<li>事件何时发生？在哪里发生？</li>
-<li>事件之间相隔多远？相隔多久？</li>
-<li>时间和空间是否有关联？</li>
-<li>时间和长度的测量与参考系是否有关？</li>
-<li>物体的质量与运动是否有关？</li>
-</ul>
-<h3 id="两个基本假设"><a href="#两个基本假设" class="headerlink" title="两个基本假设"></a>两个基本假设</h3><ol>
-<li>相对性原理（The Relativity Postulate）：物理性质在所有惯性系中具有相同的表达形式</li>
-<li>光速不变原理（The Speed of Light Postulate）</li>
-</ol>
-<h3 id="相对论时空观"><a href="#相对论时空观" class="headerlink" title="相对论时空观"></a>相对论时空观</h3><p>$S$系观测，$S’$系运动</p>
-<ol>
-<li>同时具有相对意义。</li>
-<li>时间延缓（Time Dilation）<br><strong>固有时</strong>：某个参考系中同一个地点发生的两事件的时间间隔<br>在$S$系中观测：$\Delta t=\frac{\Delta t_0}{ \sqrt{1-(v/c)^2}}$<br><em>运动的钟走得慢</em><br>时间间隔是<strong>相对的</strong>，与参考系有关。</li>
-<li>长度收缩（length contraction）<br><strong>固有长度</strong>：静止棒在一个静止的坐标系中的长度<br>在$S$系中观测：$l = l’ \sqrt{1-(v/c)^2}$<br>运动的棒长度变短或收缩，长度或时间间隔是<strong>相对</strong>的，与参考系有关。</li>
-</ol>
-<h2 id="洛伦兹变换"><a href="#洛伦兹变换" class="headerlink" title="洛伦兹变换"></a>洛伦兹变换</h2><script type="math/tex; mode=display">
-\begin{cases}
-    （S观测\rightarrow S'观测）已知P在S系中的时空坐标t,x:
-    \\ \qquad x = vt+x'\sqrt{1-\beta^2} \rightarrow x' = \frac{x- vt}{\sqrt{1-\beta ^2}}\\
-    （S观测\rightarrow S'观测）已知P在S系中的时空坐标t,x：
-    \\ \qquad x' = x\sqrt{1-\beta^2} - vt'\rightarrow t' = \frac{t-\frac v c^2 x}{\sqrt{1-\beta^2}}
-\end{cases}</script><script type="math/tex; mode=display">
-\Rightarrow
-\begin{cases}
-    x' = \gamma (x- vt)\\
-    y' = y\\
-    z' = z\\
-    t' = \gamma(t -\frac{v}{c^2}x)\\
-    \gamma = \frac{1}{\sqrt{1 - \beta ^2}}
-\end{cases}</script><p>做全微分：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-   &dx' =\gamma({dx - vdt}),\\
-   &dt' = \gamma(dt - (v/c^2)dx)\\
-   \Rightarrow &u_x' = \frac{dx}{dt} = \frac{u_x -v}{1-\frac v {c^2}u_x }\\
-\end{aligned}</script><p>类似的，可以得到：</p>
-<p>正变换：</p>
-<script type="math/tex; mode=display">
-\left\{
-   \begin{aligned}
-      u_{x}^{\prime}&=\frac{u_{x}-v}{1-\frac{v}{c^{2}} u_{x}} \\
-      u_{y}^{\prime}&=\frac{u_{y}}{\gamma\left(1-\frac{v}{c^{2}} u_{x}\right)} \\
-      u_{z}^{\prime}&=\frac{u_{z}}{\gamma\left(1-\frac{v}{c^{2}} u_{x}\right)}
-   \end{aligned}
-\right.</script><p>逆变换：</p>
-<script type="math/tex; mode=display">
-\left\{
-   \begin{aligned}
-      u_{x} &=\frac{u_{x}^{\prime}+v}{1+\frac{v}{c^{2}} u_{x}^{\prime}} \\
-      u_{y}&= \frac{u_{y}^{\prime}}{\gamma\left(1+\frac{v}{c^{2}} u_{x}^{\prime}\right)} \\
-      u_{z} &=\frac{u_{z}^{\prime}}{\gamma\left(1+\frac{v}{c^{2}} u_{x}^{\prime}\right)}
-   \end{aligned}
-\right.</script><h3 id="同时的相对性"><a href="#同时的相对性" class="headerlink" title="同时的相对性"></a>同时的相对性</h3><p>在S’系中观测S系的事件：$\Delta t’ = \frac{\Delta t - \frac{v}{c^2}\Delta x}{\sqrt{1-\beta^2}}$</p>
-<ol>
-<li>因果律不变</li>
-<li>两件事有因果关系，则$\Delta x/ \Delta t&lt;c$</li>
-<li>两件事没有因果关系，则可能$\Delta x /\Delta t &gt; c$</li>
-</ol>
-<h2 id="相对论动力学"><a href="#相对论动力学" class="headerlink" title="相对论动力学"></a>相对论动力学</h2><h3 id="动量与质量"><a href="#动量与质量" class="headerlink" title="动量与质量"></a>动量与质量</h3><p>$m = \frac{m}{\sqrt{1-\beta^2}}$</p>
-<p><strong>相对论动量</strong>：$\vec p = m\vec v = \gamma m_0\vec v$</p>
-<p>其中$m_0$称为<strong>静质量</strong>。</p>
-<h3 id="力、功、动能"><a href="#力、功、动能" class="headerlink" title="力、功、动能"></a>力、功、动能</h3><p>$\vec F = \frac{d\vec p}{dt} = m \frac{d\vec{ v}}{dt}+\vec v \frac{dm}{dt}$</p>
-<p>相对论动能：$E_k -0 = \sum_0^v \vec v\cdot d\vec p = \frac{m_0v^2}{\sqrt{1-v^2/c^2}}+m_0c^2\sqrt{1-v^2/c^2} -m_0c^2=mc^2-m_0c^2$</p>
-<h3 id="能量、质能关系"><a href="#能量、质能关系" class="headerlink" title="能量、质能关系"></a>能量、质能关系</h3><p><strong>静质量</strong>：$E_0 = m_0c^2$</p>
-<p><strong>质量亏损</strong>：$B = \sum m_{0i} -m_0 = \Delta m$</p>
-<p><strong>结合能</strong>：$E_B = Bc^2=\Delta m c^2$</p>
-<p><strong>相对论质能关系</strong>：$E = mc^2 = m_0c^2 +E_k $</p>
-<p><strong>总能量</strong>：$E = mc^2$</p>
-<h3 id="能量、动量的关系"><a href="#能量、动量的关系" class="headerlink" title="能量、动量的关系"></a>能量、动量的关系</h3><p>$E^2-p^2c^2 = m_0^2 c^4,\qquad E^2 = E_0^2 +p^2c^2$</p>
-<p>光的波粒二象性$E = h\mu ,\quad p = h/\lambda$</p>
-<h3 id="能量、动量、力的相对论变换"><a href="#能量、动量、力的相对论变换" class="headerlink" title="能量、动量、力的相对论变换"></a>能量、动量、力的相对论变换</h3><h4 id="动量、能量的相对论变换"><a href="#动量、能量的相对论变换" class="headerlink" title="动量、能量的相对论变换"></a>动量、能量的相对论变换</h4><ol>
-<li>E，p关系：$E^2/c^2 - p^2$和时空变换：$c^2t^2 -r^2$是洛伦兹不变量。</li>
-<li>对应关系</li>
-</ol>
-<script type="math/tex; mode=display">
-\left\{\begin{aligned}
-   p'_{x'} &= \gamma (p_x - u \frac{E}{c^2})\\
-   p'_{y'} &= p_y\\
-   p'_{z'} &= p_z\\
-   E' &= \gamma (E - up_x)
-\end{aligned}\right.</script><h4 id="力的相对论变换"><a href="#力的相对论变换" class="headerlink" title="力的相对论变换"></a>力的相对论变换</h4><p>$F_x =F_x’$</p>
-<p>$F_y = F_y’ /\gamma$</p>
-<p>$F_z = F_z’ /\gamma$</p>
-<h2 id="广义相对论"><a href="#广义相对论" class="headerlink" title="广义相对论"></a>广义相对论</h2><ol>
-<li>等效原理</li>
-<li>广义协变性原理</li>
-<li>马赫原理</li>
-</ol>
-<h4 id="广义相对论的数学基础"><a href="#广义相对论的数学基础" class="headerlink" title="广义相对论的数学基础"></a>广义相对论的数学基础</h4><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>基础物理学</category>
       </categories>
@@ -1087,6 +964,129 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
       <tags>
         <tag>物理</tag>
         <tag>波</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>狭义相对论</title>
+    <url>/2020/06/08/study/Physics/Ch7/</url>
+    <content><![CDATA[<p>基础物理学Ch7 狭义相对论</p>
+<a id="more"></a>
+<h2 id="狭义相对论的基本假设"><a href="#狭义相对论的基本假设" class="headerlink" title="狭义相对论的基本假设"></a>狭义相对论的基本假设</h2><h3 id="绝对时空观与伽利略相对性原理"><a href="#绝对时空观与伽利略相对性原理" class="headerlink" title="绝对时空观与伽利略相对性原理"></a>绝对时空观与伽利略相对性原理</h3><ol>
+<li>长度、时间间隔、质量、相互作用力与参考系无关</li>
+<li>速度、位移、加速度满足伽利略变换关系（速度变换式、时空变换式）</li>
+</ol>
+<h3 id="电磁学发展及其与绝对时空观的规律"><a href="#电磁学发展及其与绝对时空观的规律" class="headerlink" title="电磁学发展及其与绝对时空观的规律"></a>电磁学发展及其与绝对时空观的规律</h3><ol>
+<li>电磁学规律：<ul>
+<li>Maxwell方程组</li>
+<li>$c = \frac{1}{\sqrt{\epsilon_0 \mu_0}}$</li>
+</ul>
+</li>
+<li>电磁学规律与绝对时空观的矛盾<ul>
+<li>光速与参考系无关</li>
+</ul>
+</li>
+<li>矛盾解决<ul>
+<li>伽利略速度变换正确，而光速只适用于特殊的参考系：<code>以太参考系</code></li>
+<li>相对性原理对电磁学规律也适用，为了保持光速不变，需要建立新的时空变换关系</li>
+</ul>
+</li>
+</ol>
+<h3 id="狭义相对论的基本内容"><a href="#狭义相对论的基本内容" class="headerlink" title="狭义相对论的基本内容"></a>狭义相对论的基本内容</h3><ul>
+<li>事件何时发生？在哪里发生？</li>
+<li>事件之间相隔多远？相隔多久？</li>
+<li>时间和空间是否有关联？</li>
+<li>时间和长度的测量与参考系是否有关？</li>
+<li>物体的质量与运动是否有关？</li>
+</ul>
+<h3 id="两个基本假设"><a href="#两个基本假设" class="headerlink" title="两个基本假设"></a>两个基本假设</h3><ol>
+<li>相对性原理（The Relativity Postulate）：物理性质在所有惯性系中具有相同的表达形式</li>
+<li>光速不变原理（The Speed of Light Postulate）</li>
+</ol>
+<h3 id="相对论时空观"><a href="#相对论时空观" class="headerlink" title="相对论时空观"></a>相对论时空观</h3><p>$S$系观测，$S’$系运动</p>
+<ol>
+<li>同时具有相对意义。</li>
+<li>时间延缓（Time Dilation）<br><strong>固有时</strong>：某个参考系中同一个地点发生的两事件的时间间隔<br>在$S$系中观测：$\Delta t=\frac{\Delta t_0}{ \sqrt{1-(v/c)^2}}$<br><em>运动的钟走得慢</em><br>时间间隔是<strong>相对的</strong>，与参考系有关。</li>
+<li>长度收缩（length contraction）<br><strong>固有长度</strong>：静止棒在一个静止的坐标系中的长度<br>在$S$系中观测：$l = l’ \sqrt{1-(v/c)^2}$<br>运动的棒长度变短或收缩，长度或时间间隔是<strong>相对</strong>的，与参考系有关。</li>
+</ol>
+<h2 id="洛伦兹变换"><a href="#洛伦兹变换" class="headerlink" title="洛伦兹变换"></a>洛伦兹变换</h2><script type="math/tex; mode=display">
+\begin{cases}
+    （S观测\rightarrow S'观测）已知P在S系中的时空坐标t,x:
+    \\ \qquad x = vt+x'\sqrt{1-\beta^2} \rightarrow x' = \frac{x- vt}{\sqrt{1-\beta ^2}}\\
+    （S观测\rightarrow S'观测）已知P在S系中的时空坐标t,x：
+    \\ \qquad x' = x\sqrt{1-\beta^2} - vt'\rightarrow t' = \frac{t-\frac v c^2 x}{\sqrt{1-\beta^2}}
+\end{cases}</script><script type="math/tex; mode=display">
+\Rightarrow
+\begin{cases}
+    x' = \gamma (x- vt)\\
+    y' = y\\
+    z' = z\\
+    t' = \gamma(t -\frac{v}{c^2}x)\\
+    \gamma = \frac{1}{\sqrt{1 - \beta ^2}}
+\end{cases}</script><p>做全微分：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+   &dx' =\gamma({dx - vdt}),\\
+   &dt' = \gamma(dt - (v/c^2)dx)\\
+   \Rightarrow &u_x' = \frac{dx}{dt} = \frac{u_x -v}{1-\frac v {c^2}u_x }\\
+\end{aligned}</script><p>类似的，可以得到：</p>
+<p>正变换：</p>
+<script type="math/tex; mode=display">
+\left\{
+   \begin{aligned}
+      u_{x}^{\prime}&=\frac{u_{x}-v}{1-\frac{v}{c^{2}} u_{x}} \\
+      u_{y}^{\prime}&=\frac{u_{y}}{\gamma\left(1-\frac{v}{c^{2}} u_{x}\right)} \\
+      u_{z}^{\prime}&=\frac{u_{z}}{\gamma\left(1-\frac{v}{c^{2}} u_{x}\right)}
+   \end{aligned}
+\right.</script><p>逆变换：</p>
+<script type="math/tex; mode=display">
+\left\{
+   \begin{aligned}
+      u_{x} &=\frac{u_{x}^{\prime}+v}{1+\frac{v}{c^{2}} u_{x}^{\prime}} \\
+      u_{y}&= \frac{u_{y}^{\prime}}{\gamma\left(1+\frac{v}{c^{2}} u_{x}^{\prime}\right)} \\
+      u_{z} &=\frac{u_{z}^{\prime}}{\gamma\left(1+\frac{v}{c^{2}} u_{x}^{\prime}\right)}
+   \end{aligned}
+\right.</script><h3 id="同时的相对性"><a href="#同时的相对性" class="headerlink" title="同时的相对性"></a>同时的相对性</h3><p>在S’系中观测S系的事件：$\Delta t’ = \frac{\Delta t - \frac{v}{c^2}\Delta x}{\sqrt{1-\beta^2}}$</p>
+<ol>
+<li>因果律不变</li>
+<li>两件事有因果关系，则$\Delta x/ \Delta t&lt;c$</li>
+<li>两件事没有因果关系，则可能$\Delta x /\Delta t &gt; c$</li>
+</ol>
+<h2 id="相对论动力学"><a href="#相对论动力学" class="headerlink" title="相对论动力学"></a>相对论动力学</h2><h3 id="动量与质量"><a href="#动量与质量" class="headerlink" title="动量与质量"></a>动量与质量</h3><p>$m = \frac{m}{\sqrt{1-\beta^2}}$</p>
+<p><strong>相对论动量</strong>：$\vec p = m\vec v = \gamma m_0\vec v$</p>
+<p>其中$m_0$称为<strong>静质量</strong>。</p>
+<h3 id="力、功、动能"><a href="#力、功、动能" class="headerlink" title="力、功、动能"></a>力、功、动能</h3><p>$\vec F = \frac{d\vec p}{dt} = m \frac{d\vec{ v}}{dt}+\vec v \frac{dm}{dt}$</p>
+<p>相对论动能：$E_k -0 = \sum_0^v \vec v\cdot d\vec p = \frac{m_0v^2}{\sqrt{1-v^2/c^2}}+m_0c^2\sqrt{1-v^2/c^2} -m_0c^2=mc^2-m_0c^2$</p>
+<h3 id="能量、质能关系"><a href="#能量、质能关系" class="headerlink" title="能量、质能关系"></a>能量、质能关系</h3><p><strong>静质量</strong>：$E_0 = m_0c^2$</p>
+<p><strong>质量亏损</strong>：$B = \sum m_{0i} -m_0 = \Delta m$</p>
+<p><strong>结合能</strong>：$E_B = Bc^2=\Delta m c^2$</p>
+<p><strong>相对论质能关系</strong>：$E = mc^2 = m_0c^2 +E_k $</p>
+<p><strong>总能量</strong>：$E = mc^2$</p>
+<h3 id="能量、动量的关系"><a href="#能量、动量的关系" class="headerlink" title="能量、动量的关系"></a>能量、动量的关系</h3><p>$E^2-p^2c^2 = m_0^2 c^4,\qquad E^2 = E_0^2 +p^2c^2$</p>
+<p>光的波粒二象性$E = h\mu ,\quad p = h/\lambda$</p>
+<h3 id="能量、动量、力的相对论变换"><a href="#能量、动量、力的相对论变换" class="headerlink" title="能量、动量、力的相对论变换"></a>能量、动量、力的相对论变换</h3><h4 id="动量、能量的相对论变换"><a href="#动量、能量的相对论变换" class="headerlink" title="动量、能量的相对论变换"></a>动量、能量的相对论变换</h4><ol>
+<li>E，p关系：$E^2/c^2 - p^2$和时空变换：$c^2t^2 -r^2$是洛伦兹不变量。</li>
+<li>对应关系</li>
+</ol>
+<script type="math/tex; mode=display">
+\left\{\begin{aligned}
+   p'_{x'} &= \gamma (p_x - u \frac{E}{c^2})\\
+   p'_{y'} &= p_y\\
+   p'_{z'} &= p_z\\
+   E' &= \gamma (E - up_x)
+\end{aligned}\right.</script><h4 id="力的相对论变换"><a href="#力的相对论变换" class="headerlink" title="力的相对论变换"></a>力的相对论变换</h4><p>$F_x =F_x’$</p>
+<p>$F_y = F_y’ /\gamma$</p>
+<p>$F_z = F_z’ /\gamma$</p>
+<h2 id="广义相对论"><a href="#广义相对论" class="headerlink" title="广义相对论"></a>广义相对论</h2><ol>
+<li>等效原理</li>
+<li>广义协变性原理</li>
+<li>马赫原理</li>
+</ol>
+<h4 id="广义相对论的数学基础"><a href="#广义相对论的数学基础" class="headerlink" title="广义相对论的数学基础"></a>广义相对论的数学基础</h4><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>基础物理学</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
       </tags>
   </entry>
   <entry>
@@ -1351,49 +1351,6 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
       </tags>
   </entry>
   <entry>
-    <title>Lambda 演算简介（3）</title>
-    <url>/2020/06/11/study/ComputerScience/LambdaCalculi/LambdaCalc3/</url>
-    <content><![CDATA[<p>Lambda 演算中的 Y 组合子</p>
-<a id="more"></a>
-<h2 id="Y-组合子：递归实现"><a href="#Y-组合子：递归实现" class="headerlink" title="Y 组合子：递归实现"></a>Y 组合子：递归实现</h2><p>在之前，我们都在做一些简单的操作，例如实现了分支结构 <code>s e1 e2</code> ，现在我们要考虑如何实现第二种结构：循环与递归（recursion）。</p>
-<p>在 Lambda 演算的世界里，递归是容易实现的，利用如下的 Y 组合子：</p>
-<p><code>Y = lambda y.(lambda x.y (x x)) (lambda x.y (x x))</code></p>
-<p>即：$\mathrm{Y = \lambda y.(\lambda x.y~(x~x))~(\lambda x.y~(x~x))}$</p>
-<p>我们试着计算 <code>Y Y</code> 的值：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">         Y Y<br>(beta) &#x3D;&gt;(lambda x.Y (x x)) (lambda x.Y (x x))<br>(alpha)&#x3D;&gt;(lambda x.Y (x x)) (lambda z.Y (z z))<br>(beta) &#x3D;&gt;Y ((lambda z.Y (z z)) (lambda z.Y (z z)))<br>(alpha)&#x3D;&gt;(lambda a. (lambda b . a (b b)) (lambda b. a (b b)))<br>         ((lambda z. Y (z z)) (lambda z. Y (z z)))<br>(beta) &#x3D;&gt;Y (Y Y)<br>...... &#x3D;&gt;Y (Y (Y Y))<br>......<br></code></pre></td></tr></table></figure>
-<p>可以发现，Y 组合子通过 <code>Y Y</code> 创造了自身！这似乎是一个无穷递归，我们换一个例子看一看：假定 <code>f</code> 是一个关于 <code>x</code> 的函数，例如<code>f = (lambda x.add1 x)</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">         (Y f) x<br>(beta) &#x3D;&gt;(lambda y.(y (lambda x.y (x x) lambda x.y(x x))) f) x<br>(alpha)&#x3D;&gt;(f ((lambda x.f (x x)) (lambda x.f (x x)))) x<br>(beta) &lt;&#x3D;(f (Y f)) x<br>...... &lt;&#x3D;(f (f ( ... f(Y f))...) x<br></code></pre></td></tr></table></figure>
-<p>这还不够，因为 <code>f</code> 是一个一元的函数，按照这个形式，即使给 <code>f</code> 一定的条件，使之在某处停下，我们也无法使之<strong>停下的条件</strong>与任何一个 <code>x</code> 有关。就以上面的表达式为例：</p>
-<p><code>(Y f) =&gt; add1 (add1 (add1 ... )) x</code> 内部的 <code>add1</code> 并不会停下！</p>
-<p>例如：<code>f (f (f)) x</code> 在这里，前面是先演算的内容，但是很明显在第三层停下递归并不是 <code>x</code> 所控制的。这并不是我们想要的，但是已经十分接近了！给这个形式做一些改变，则需要一个形式保留下来这个结构，并且将 <code>add1</code> 换为一个二元运算 <code>mult</code>：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">         (Y (lambda t.lambda x.mult x (t x)))) a<br>...... &#x3D;&gt;(lambda t.lambda x.mult x (t x) (Y lambda t.lambda x.mult(t x)) x) a<br>(alpha)&#x3D;&gt;(lambda t.lambda x&#39;.mult x&#39; (t x&#39;) (Y lambda t.lambda x.mult(t x)) x) a<br>(beta) &#x3D;&gt;(lambda x&#39;. mult x&#39; (Y (lambda t.lambda x.mult x (t x))) x)) a<br>(beta) &#x3D;&gt;mult a (Y (lambda t.lambda x.mult x (t x))) a)<br>...... &#x3D;&gt;mult a (mult a (mult a ( ... )))<br></code></pre></td></tr></table></figure>
-<p>最后我们加上一些判断，使之在某个地方停下，以及对于 <code>x</code> 的变换：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">LET: metafact &#x3D; lambda fact . (lambda n . IsZero n 1 (Mult n (fact (Pred n))))<br><br>   metafact (Y metafact) n<br>&#x3D;&gt; lambda n. zero? n 1 (mult n (Y metafact (Pred n))) n<br>&#x3D;&gt; mult n (Y metafact (Pred n))<br>&#x3D;&gt; mult n (metafact ((lambda x.metafact (x x)) (lambda x.metafact (x x))) (Pred n))<br>&#x3D;&gt; mult n (metafact (Y metafact) (Pred n))<br></code></pre></td></tr></table></figure>
-<div class="note note-primary">
-            <p><strong>一点思考</strong></p><p>读者应分析结构：<code>lambda t.lambda x.f (t x) x</code>，指出其中 <code>f</code> 和 <code>t</code> 的作用：（在此仅给出个人的理解）</p><ul><li><code>f</code> 为函数算子</li><li><code>t</code> 为传入形式的复制</li></ul><p>如果从柯里化的角度看 Y 组合子是否更好？</p>
-          </div>
-<h2 id="SKI组合子"><a href="#SKI组合子" class="headerlink" title="SKI组合子"></a>SKI组合子</h2><p>先给出 SKI 组合子的定义：</p>
-<ul>
-<li><code>S = (lambda x y z.(x z (y z)))</code> </li>
-<li><code>K = (lambda x y. x)</code></li>
-<li><code>I = (lambda x.x)</code></li>
-</ul>
-<p>这个定义时很奇怪的，如何说呢，请看：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">  S K K x<br>&#x3D;&gt;(K x) (K x)<br>&#x3D;&gt;(lambda x y. x) x (K x)<br>&#x3D;&gt;x<br></code></pre></td></tr></table></figure>
-<p>也就是说 <code>I = S K K</code>，其中 <code>=</code> 表示<strong>外延等价</strong>（extensional equivalence），当 <code>E x</code> 和 <code>E&#39; x</code> <strong>总是</strong>有相同的约化结果恒成立，则称 <code>E = E&#39;</code>。（另一种等价指<strong>内涵等价</strong>（intensional equivalence），当<code>E</code> 与 <code>E</code> 完全相同或经过 $\alpha$-转换后有相同的结果）。</p>
-<blockquote>
-<p>在此略去 <strong>组合子演算</strong> 部分，这一部分可以参考<a href="http://cgnail.github.io/academic/lambda-5/">这篇文章</a></p>
-</blockquote>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>程序设计</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>Lambda演算</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Lambda 演算简介（2）</title>
     <url>/2020/06/11/study/ComputerScience/LambdaCalculi/LambdaCalc2/</url>
     <content><![CDATA[<p>Lambda 演算中的常见概念</p>
@@ -1587,6 +1544,49 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
 <p>类型化lambda演算的主要变化是增加了一个叫做「基类型」（base types）的概念。在类型化lambda演算中，你可以使用一些由原子值构成的论域（universe）， 这些值分为不同的简单类型。因此，例如，我们可以有一个类型 $N$，它由包含了自然数集合，也可以有一个类型 $B$，对应布尔值<code>true</code> / <code>false</code>，以及一个对应于字符串类型的类 $S$。</p>
 <p>现在我们有了基本类型，接下来我们讨论函数的类型。函数将一种类型（参数的类型）的值映射到的第二种类型（返回值的类型）的值。对于一个接受类型A的输入参数，并且返回类型B的值的函数，我们将它的类型写为$A \rightarrow B$ 。$\rightarrow$叫做函数类型构造器（function type constructor），它是右关联的，所以 $A \rightarrow B \rightarrow C$ 表示 $A \rightarrow (B \rightarrow C)$。</p>
 <p>TODO: 未完待续</p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>程序设计</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>Lambda演算</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lambda 演算简介（3）</title>
+    <url>/2020/06/11/study/ComputerScience/LambdaCalculi/LambdaCalc3/</url>
+    <content><![CDATA[<p>Lambda 演算中的 Y 组合子</p>
+<a id="more"></a>
+<h2 id="Y-组合子：递归实现"><a href="#Y-组合子：递归实现" class="headerlink" title="Y 组合子：递归实现"></a>Y 组合子：递归实现</h2><p>在之前，我们都在做一些简单的操作，例如实现了分支结构 <code>s e1 e2</code> ，现在我们要考虑如何实现第二种结构：循环与递归（recursion）。</p>
+<p>在 Lambda 演算的世界里，递归是容易实现的，利用如下的 Y 组合子：</p>
+<p><code>Y = lambda y.(lambda x.y (x x)) (lambda x.y (x x))</code></p>
+<p>即：$\mathrm{Y = \lambda y.(\lambda x.y~(x~x))~(\lambda x.y~(x~x))}$</p>
+<p>我们试着计算 <code>Y Y</code> 的值：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">         Y Y<br>(beta) &#x3D;&gt;(lambda x.Y (x x)) (lambda x.Y (x x))<br>(alpha)&#x3D;&gt;(lambda x.Y (x x)) (lambda z.Y (z z))<br>(beta) &#x3D;&gt;Y ((lambda z.Y (z z)) (lambda z.Y (z z)))<br>(alpha)&#x3D;&gt;(lambda a. (lambda b . a (b b)) (lambda b. a (b b)))<br>         ((lambda z. Y (z z)) (lambda z. Y (z z)))<br>(beta) &#x3D;&gt;Y (Y Y)<br>...... &#x3D;&gt;Y (Y (Y Y))<br>......<br></code></pre></td></tr></table></figure>
+<p>可以发现，Y 组合子通过 <code>Y Y</code> 创造了自身！这似乎是一个无穷递归，我们换一个例子看一看：假定 <code>f</code> 是一个关于 <code>x</code> 的函数，例如<code>f = (lambda x.add1 x)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">         (Y f) x<br>(beta) &#x3D;&gt;(lambda y.(y (lambda x.y (x x) lambda x.y(x x))) f) x<br>(alpha)&#x3D;&gt;(f ((lambda x.f (x x)) (lambda x.f (x x)))) x<br>(beta) &lt;&#x3D;(f (Y f)) x<br>...... &lt;&#x3D;(f (f ( ... f(Y f))...) x<br></code></pre></td></tr></table></figure>
+<p>这还不够，因为 <code>f</code> 是一个一元的函数，按照这个形式，即使给 <code>f</code> 一定的条件，使之在某处停下，我们也无法使之<strong>停下的条件</strong>与任何一个 <code>x</code> 有关。就以上面的表达式为例：</p>
+<p><code>(Y f) =&gt; add1 (add1 (add1 ... )) x</code> 内部的 <code>add1</code> 并不会停下！</p>
+<p>例如：<code>f (f (f)) x</code> 在这里，前面是先演算的内容，但是很明显在第三层停下递归并不是 <code>x</code> 所控制的。这并不是我们想要的，但是已经十分接近了！给这个形式做一些改变，则需要一个形式保留下来这个结构，并且将 <code>add1</code> 换为一个二元运算 <code>mult</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">         (Y (lambda t.lambda x.mult x (t x)))) a<br>...... &#x3D;&gt;(lambda t.lambda x.mult x (t x) (Y lambda t.lambda x.mult(t x)) x) a<br>(alpha)&#x3D;&gt;(lambda t.lambda x&#39;.mult x&#39; (t x&#39;) (Y lambda t.lambda x.mult(t x)) x) a<br>(beta) &#x3D;&gt;(lambda x&#39;. mult x&#39; (Y (lambda t.lambda x.mult x (t x))) x)) a<br>(beta) &#x3D;&gt;mult a (Y (lambda t.lambda x.mult x (t x))) a)<br>...... &#x3D;&gt;mult a (mult a (mult a ( ... )))<br></code></pre></td></tr></table></figure>
+<p>最后我们加上一些判断，使之在某个地方停下，以及对于 <code>x</code> 的变换：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">LET: metafact &#x3D; lambda fact . (lambda n . IsZero n 1 (Mult n (fact (Pred n))))<br><br>   metafact (Y metafact) n<br>&#x3D;&gt; lambda n. zero? n 1 (mult n (Y metafact (Pred n))) n<br>&#x3D;&gt; mult n (Y metafact (Pred n))<br>&#x3D;&gt; mult n (metafact ((lambda x.metafact (x x)) (lambda x.metafact (x x))) (Pred n))<br>&#x3D;&gt; mult n (metafact (Y metafact) (Pred n))<br></code></pre></td></tr></table></figure>
+<div class="note note-primary">
+            <p><strong>一点思考</strong></p><p>读者应分析结构：<code>lambda t.lambda x.f (t x) x</code>，指出其中 <code>f</code> 和 <code>t</code> 的作用：（在此仅给出个人的理解）</p><ul><li><code>f</code> 为函数算子</li><li><code>t</code> 为传入形式的复制</li></ul><p>如果从柯里化的角度看 Y 组合子是否更好？</p>
+          </div>
+<h2 id="SKI组合子"><a href="#SKI组合子" class="headerlink" title="SKI组合子"></a>SKI组合子</h2><p>先给出 SKI 组合子的定义：</p>
+<ul>
+<li><code>S = (lambda x y z.(x z (y z)))</code> </li>
+<li><code>K = (lambda x y. x)</code></li>
+<li><code>I = (lambda x.x)</code></li>
+</ul>
+<p>这个定义时很奇怪的，如何说呢，请看：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs racket">  S K K x<br>&#x3D;&gt;(K x) (K x)<br>&#x3D;&gt;(lambda x y. x) x (K x)<br>&#x3D;&gt;x<br></code></pre></td></tr></table></figure>
+<p>也就是说 <code>I = S K K</code>，其中 <code>=</code> 表示<strong>外延等价</strong>（extensional equivalence），当 <code>E x</code> 和 <code>E&#39; x</code> <strong>总是</strong>有相同的约化结果恒成立，则称 <code>E = E&#39;</code>。（另一种等价指<strong>内涵等价</strong>（intensional equivalence），当<code>E</code> 与 <code>E</code> 完全相同或经过 $\alpha$-转换后有相同的结果）。</p>
+<blockquote>
+<p>在此略去 <strong>组合子演算</strong> 部分，这一部分可以参考<a href="http://cgnail.github.io/academic/lambda-5/">这篇文章</a></p>
+</blockquote>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>程序设计</category>
@@ -2574,6 +2574,54 @@ f(-x),&-l\le x<0
       </tags>
   </entry>
   <entry>
+    <title>幂级数</title>
+    <url>/2020/06/01/study/Math/Advanced-Mathematics/PowerSeries/</url>
+    <content><![CDATA[<p>幂级数</p>
+<a id="more"></a>
+<h2 id="幂级数的收敛半径与收敛区间"><a href="#幂级数的收敛半径与收敛区间" class="headerlink" title="幂级数的收敛半径与收敛区间"></a>幂级数的收敛半径与收敛区间</h2><p><strong>Thm</strong>：（幂级数的收敛情况）幂级数的收敛情况有且仅有以下三种：</p>
+<ol>
+<li>收敛范围是整个实轴</li>
+<li>收敛范围是一个对称区间</li>
+<li>仅在 $x=0$ 收敛</li>
+</ol>
+<p><strong>Thm</strong>：（幂级数的收敛半径）对于幂级数的系数 $a_n$，若 $\rho =\overline{\lim\limits_{n\rightarrow \infty}}\sqrt[n]{|a_n|}$ 则</p>
+<ol>
+<li>当 $0\le \rho&lt;+\infty,|x|&lt;\frac 1 \rho$ 幂级数绝对收敛</li>
+<li>当 $0&lt;\rho&lt;\infty, |x|&gt;\frac 1 \rho$ 幂级数发散</li>
+</ol>
+<p>其中 $R=\frac 1 \rho$ 称作<strong>收敛半径</strong>，称 $(-R,R)$ 为<strong>收敛区间</strong></p>
+<div class="note note-primary">
+            <p><strong>Tips</strong></p><p>收敛区间和收敛域是不同的，区别在于端点处可能条件收敛</p>
+          </div>
+<p><strong>Thm</strong>：幂级数在 $x =x_1$ 处收敛，则在 $(-|x_1|,|x_1|)$ 上绝对收敛。若 $x=x_2$ 发散，则它在 $|x|&gt;|x_2|$ 处也发散</p>
+<blockquote>
+<p>这个定理很好证明，用 M 判别法即可</p>
+</blockquote>
+<p><strong>Thm</strong>：对于幂级数的系数 $a_n$ 满足 $\lim\limits_{n\rightarrow\infty}|\frac{a_{n+1}}{a_n}|=l$ 则 $R=\frac 1 l$（包含 0 和无穷的情况）</p>
+<h2 id="幂级数的性质"><a href="#幂级数的性质" class="headerlink" title="幂级数的性质"></a>幂级数的性质</h2><p><strong>Thm</strong>：（内闭一致收敛）设一个幂级数的收敛半径为 $R&gt;0$，在收敛区间内，幂级数内闭一致收敛</p>
+<blockquote>
+<p>如果在 R 处也收敛，则可以补全一致收敛到 R 处，也就是说 $在R处收敛\rightarrow 在[0,R]一致收敛$</p>
+</blockquote>
+<p><strong>Thm</strong>：幂级数的和函数是在收敛区间内是一个连续函数</p>
+<p><strong>Thm</strong>：幂级数的和函数是在收敛区间内的可微函数，且可以逐项求微，收敛区间不变</p>
+<p><strong>Thm</strong>：幂级数在积分后，收敛区间不变</p>
+<p><strong>Thm</strong>：在可导的情况下，幂级数可以逐项求导任意多次。</p>
+<p><strong>Thm</strong>：在 $x=R$ 处收敛，则和函数在 $[0,R]$ 连续</p>
+<blockquote>
+<p>通过函数项级数的判定即可得到这些定理</p>
+</blockquote>
+<h2 id="斯特林公式"><a href="#斯特林公式" class="headerlink" title="斯特林公式"></a>斯特林公式</h2><p>公式：$\displaystyle n!=\sqrt{2\pi n} (\frac n e)^ne^{\frac{\theta}{12n}}\approx\sqrt{2\pi n} (\frac n e)^n,\theta\in(0,1)$</p>
+<p>沃利斯公式：$\displaystyle \frac \pi 2=\lim\limits_{n \to \infty}\frac{[(2n)!!]^2}{[(2n-1)!!]^2(2n+1)}$</p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>级数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多元数量值函数微分学及其应用</title>
     <url>/2020/06/04/study/Math/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Derivative/</url>
     <content><![CDATA[<p>到这里，这个学期的内容就大致整理完整了。</p>
@@ -2912,54 +2960,6 @@ T'\\N'\\B'
         <tag>高等数学</tag>
         <tag>多元函数</tag>
         <tag>微分</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>幂级数</title>
-    <url>/2020/06/01/study/Math/Advanced-Mathematics/PowerSeries/</url>
-    <content><![CDATA[<p>幂级数</p>
-<a id="more"></a>
-<h2 id="幂级数的收敛半径与收敛区间"><a href="#幂级数的收敛半径与收敛区间" class="headerlink" title="幂级数的收敛半径与收敛区间"></a>幂级数的收敛半径与收敛区间</h2><p><strong>Thm</strong>：（幂级数的收敛情况）幂级数的收敛情况有且仅有以下三种：</p>
-<ol>
-<li>收敛范围是整个实轴</li>
-<li>收敛范围是一个对称区间</li>
-<li>仅在 $x=0$ 收敛</li>
-</ol>
-<p><strong>Thm</strong>：（幂级数的收敛半径）对于幂级数的系数 $a_n$，若 $\rho =\overline{\lim\limits_{n\rightarrow \infty}}\sqrt[n]{|a_n|}$ 则</p>
-<ol>
-<li>当 $0\le \rho&lt;+\infty,|x|&lt;\frac 1 \rho$ 幂级数绝对收敛</li>
-<li>当 $0&lt;\rho&lt;\infty, |x|&gt;\frac 1 \rho$ 幂级数发散</li>
-</ol>
-<p>其中 $R=\frac 1 \rho$ 称作<strong>收敛半径</strong>，称 $(-R,R)$ 为<strong>收敛区间</strong></p>
-<div class="note note-primary">
-            <p><strong>Tips</strong></p><p>收敛区间和收敛域是不同的，区别在于端点处可能条件收敛</p>
-          </div>
-<p><strong>Thm</strong>：幂级数在 $x =x_1$ 处收敛，则在 $(-|x_1|,|x_1|)$ 上绝对收敛。若 $x=x_2$ 发散，则它在 $|x|&gt;|x_2|$ 处也发散</p>
-<blockquote>
-<p>这个定理很好证明，用 M 判别法即可</p>
-</blockquote>
-<p><strong>Thm</strong>：对于幂级数的系数 $a_n$ 满足 $\lim\limits_{n\rightarrow\infty}|\frac{a_{n+1}}{a_n}|=l$ 则 $R=\frac 1 l$（包含 0 和无穷的情况）</p>
-<h2 id="幂级数的性质"><a href="#幂级数的性质" class="headerlink" title="幂级数的性质"></a>幂级数的性质</h2><p><strong>Thm</strong>：（内闭一致收敛）设一个幂级数的收敛半径为 $R&gt;0$，在收敛区间内，幂级数内闭一致收敛</p>
-<blockquote>
-<p>如果在 R 处也收敛，则可以补全一致收敛到 R 处，也就是说 $在R处收敛\rightarrow 在[0,R]一致收敛$</p>
-</blockquote>
-<p><strong>Thm</strong>：幂级数的和函数是在收敛区间内是一个连续函数</p>
-<p><strong>Thm</strong>：幂级数的和函数是在收敛区间内的可微函数，且可以逐项求微，收敛区间不变</p>
-<p><strong>Thm</strong>：幂级数在积分后，收敛区间不变</p>
-<p><strong>Thm</strong>：在可导的情况下，幂级数可以逐项求导任意多次。</p>
-<p><strong>Thm</strong>：在 $x=R$ 处收敛，则和函数在 $[0,R]$ 连续</p>
-<blockquote>
-<p>通过函数项级数的判定即可得到这些定理</p>
-</blockquote>
-<h2 id="斯特林公式"><a href="#斯特林公式" class="headerlink" title="斯特林公式"></a>斯特林公式</h2><p>公式：$\displaystyle n!=\sqrt{2\pi n} (\frac n e)^ne^{\frac{\theta}{12n}}\approx\sqrt{2\pi n} (\frac n e)^n,\theta\in(0,1)$</p>
-<p>沃利斯公式：$\displaystyle \frac \pi 2=\lim\limits_{n \to \infty}\frac{[(2n)!!]^2}{[(2n-1)!!]^2(2n+1)}$</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>高等数学</tag>
-        <tag>级数</tag>
       </tags>
   </entry>
   <entry>
@@ -3389,92 +3389,6 @@ T'\\N'\\B'
       </tags>
   </entry>
   <entry>
-    <title>最（凸）优化方法 [Overview and Intro]</title>
-    <url>/2020/09/26/study/Math/ConvexOptimization/index/</url>
-    <content><![CDATA[<p>2020-2021-1 最优化方法</p>
-<a id="more"></a>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="数学优化"><a href="#数学优化" class="headerlink" title="数学优化"></a>数学优化</h3><p>数学优化问题：（数学规划）</p>
-<div class="note note-primary">
-            <p>从一个<strong>可行解集合</strong>中,<strong>寻找</strong>出<strong>最优</strong>元素。</p>
-          </div>
-<p>数学形式：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-    &\min . &f_0(x)\\
-    &~\mathrm{s.t.} & f_i(x) \leq b_i, i = 1,\dots,m
-\end{aligned}</script><p>其中：</p>
-<ul>
-<li>优化变量：$x$</li>
-<li>目标函数：$f_0:\mathrm{R}^n\rightarrow\mathrm{R}$</li>
-<li>约束函数：$f_i:\mathrm{R}^n\rightarrow\mathrm{R}$</li>
-<li>最优解：在<strong>所有满足约束的向量</strong>中，向量 $x^<em>$ 对应的目标函数值<em>*最小</em></em></li>
-</ul>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
-<li>投资组合优化<ul>
-<li>优化变量：各资产分配的资本数</li>
-<li>约束：总预算、每⼀份资产的资本范围、最⼩收益</li>
-<li>⽬标：总风险或回报</li>
-</ul>
-</li>
-<li>电⼦设计中的器件尺⼨<ul>
-<li>优化变量：器件的长和宽</li>
-<li>约束：⼯程约束、时间要求、最⼤⾯积</li>
-<li>⽬标：总功耗</li>
-</ul>
-</li>
-<li>数据拟合<ul>
-<li>优化变量：模型参数</li>
-<li>约束：先验信息、参数限制</li>
-<li>⽬标：预测误差</li>
-</ul>
-</li>
-</ul>
-<h3 id="求解优化问题"><a href="#求解优化问题" class="headerlink" title="求解优化问题"></a>求解优化问题</h3><ul>
-<li>一般形式的优化问题<ul>
-<li>难以求解</li>
-<li>折中：长时间的计算代价、找不到解</li>
-</ul>
-</li>
-<li>特定问题<ul>
-<li>最小二乘</li>
-<li>线性规划</li>
-<li>凸优化问题</li>
-</ul>
-</li>
-</ul>
-<h3 id="最小二乘"><a href="#最小二乘" class="headerlink" title="最小二乘"></a>最小二乘</h3><p>形式：$\displaystyle\min.||Ax-b||_2^2$</p>
-<ul>
-<li>有解析解 $x* = (A^TA)^{-1}A^Tb$</li>
-<li>有可靠的求解算法和软件 <!-- TODO --></li>
-<li>计算时间：正比于 $n^2k(A\in \mathrm{R}^{k\times n})$</li>
-<li>技术成熟</li>
-<li>最⼩⼆乘的使⽤<ul>
-<li>判别⼗分简单</li>
-<li>使⽤标准⽅法增强灵活性（加权、正则化）</li>
-</ul>
-</li>
-</ul>
-<h3 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h3><script type="math/tex; mode=display">
-\begin{aligned}
-    &\min. &c^Tx\\
-    &\mathrm{~s.t.} &a_i^Tx\le b_i
-\end{aligned}</script><ul>
-<li>没有解析解</li>
-<li>具有可靠且有效的求解算法和软件</li>
-<li>计算时间：正⽐于$n^2m~(if~m \ge n)$，若具有特殊结构，求解更快。</li>
-<li>成熟技术</li>
-<li>判别难于最⼩⼆乘</li>
-<li>⼀些标准的技巧可⽤于将某些问题转化为线性规划（分段线性⽅程、包含范数的问题）</li>
-</ul>
-<!-- TODO: ppt p48 --><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>凸优化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>「复变函数」</title>
     <url>/2020/11/20/study/Math/ComplexFunctions/ch1/</url>
     <content><![CDATA[<p>复数与复变函数</p>
@@ -3625,101 +3539,6 @@ T'\\N'\\B'
       </tags>
   </entry>
   <entry>
-    <title>「复变函数」复变函数积分</title>
-    <url>/2020/11/20/study/Math/ComplexFunctions/ch3/</url>
-    <content><![CDATA[<p>复变函数的积分</p>
-<a id="more"></a>
-<h1 id="Ch3-复变函数的积分"><a href="#Ch3-复变函数的积分" class="headerlink" title="Ch3 复变函数的积分"></a>Ch3 复变函数的积分</h1><h3 id="复变函数积分的概念及其计算"><a href="#复变函数积分的概念及其计算" class="headerlink" title="复变函数积分的概念及其计算"></a>复变函数积分的概念及其计算</h3><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><ul>
-<li><p><strong>Def</strong>：同实函数定义：分割求和 $\displaystyle\int_C f(z)\mathrm dz = \lim \limits_{\delta \rightarrow 0}\sum f(\gamma_k)\delta z_k$</p>
-</li>
-<li><p>对应了两个实函数第二型曲线积分</p>
-</li>
-<li><p>性质：</p>
-<ul>
-<li>$\displaystyle\int_Lf\mathrm dz=\int_{L_1}f\mathrm dz+\int_{L_2}f(z)\mathrm dz$</li>
-<li>方向性</li>
-<li>线性性质</li>
-<li>$\displaystyle|\int_Lf\mathrm dz| \le \int_L|f||\mathrm dz|\le MS$</li>
-</ul>
-</li>
-</ul>
-<h5 id="计算方法1：参数方程法"><a href="#计算方法1：参数方程法" class="headerlink" title="计算方法1：参数方程法"></a>计算方法1：<strong>参数方程法</strong></h5><ul>
-<li><p>$\displaystyle let~z=x(t) + iy(t)\rightarrow \int_Lf\mathrm dz=\int f(z(t)) z’(t)\mathrm dt$</p>
-</li>
-<li><p>例：</p>
-<script type="math/tex; mode=display">\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1.\end{cases}</script><p>其中 $L$ 为圆<br>利用：$z-z_0=\rho\cdot e^{i\theta}$，并且注意方向！（$\theta$的积分方向上）</p>
-</li>
-</ul>
-<h3 id="Cauchy-积分定理"><a href="#Cauchy-积分定理" class="headerlink" title="Cauchy 积分定理"></a>Cauchy 积分定理</h3><ul>
-<li>若 $f(z) = u(x,y)+iv(x,y)$在单连通域 $D$ 内解析，$f’$ 连续且$u,v$ 有一节连续偏导数，满足 $C-R$ 方程。则对于任一分段光滑的简单闭曲线 $L_1$：$\displaystyle \int _{L_1} f(z)\mathrm dz = 0$</li>
-<li>$f(z)$ 在单连通域 $D$ 内解析，$f’$ 在 $D$ 内连续时，复积分 $\displaystyle \int _Lf(z)\mathrm dz$ 与路径无关</li>
-</ul>
-<h5 id="柯西-古萨基本定理"><a href="#柯西-古萨基本定理" class="headerlink" title="柯西-古萨基本定理"></a>柯西-古萨基本定理</h5><ul>
-<li><strong>Thm</strong>：设 $f(z)$ 在简单闭曲线 $L$ 上以及它所围的区域 $D$ 内解析，则$\displaystyle \int _{L} f(z)\mathrm dz = 0$</li>
-<li><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，对于 $D$ 内任一分段光滑的闭曲线 $L_1$：$\displaystyle \int _{L_1} f(z)\mathrm dz = 0$</li>
-<li><strong>Thm</strong>：（复合闭路定理）设 $L, L_k$ 为n+1条取逆时针方向的简单闭曲线，$L_k$ 互不相交，互不包含，$L, L_k$ 围成复连通域$D$，$f(z)$ 在$\bar D$ 上解析，则：<script type="math/tex; mode=display">\displaystyle\oint_Lf(z)\mathrm dz = \sum_{k=1}^n\oint_{L_k}f(z) \mathrm dz</script></li>
-</ul>
-<blockquote>
-<p>注意曲线的性质：简单闭曲线、闭曲线</p>
-</blockquote>
-<h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><script type="math/tex; mode=display">\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1.\end{cases}</script><p>其中 $L$ 为圆</p>
-<blockquote>
-<p>利用：$z-z_0=\rho\cdot e^{i\theta}$，并且注意方向！（$\theta$的积分方向上）</p>
-</blockquote>
-<p>利用复合闭路定理：$L$ 可以为任意包含$z_0$的闭曲线。</p>
-<ul>
-<li><strong>Thm</strong>：闭路变形定理</li>
-</ul>
-<p>重要结论：</p>
-<script type="math/tex; mode=display">
-\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1,n\in \mathrm Z.\end{cases}</script><h5 id="review：2020-11-06-星期五"><a href="#review：2020-11-06-星期五" class="headerlink" title="review：2020/11/06 星期五"></a>review：2020/11/06 星期五</h5><blockquote>
-<ul>
-<li>$\int_Lf\mathrm dz=0$</li>
-<li>$\int_Lf\mathrm dz=\sum\int_{L_k}f\mathrm dz$</li>
-<li>$\int \frac{1}{(z-z_0)^{n}}\mathrm dz$</li>
-<li>$|z| = 1\Rightarrow|\mathrm dz|=|e^{i\theta}i\mathrm d\theta|=d\theta=\frac{1}{iz}\mathrm dz$</li>
-</ul>
-</blockquote>
-<h3 id="原函数与不定积分"><a href="#原函数与不定积分" class="headerlink" title="原函数与不定积分"></a>原函数与不定积分</h3><ul>
-<li><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，则复函数 $F(z)=\int_{z_0}^zf(z)\mathrm dz$ 在 $D$ 内解析，且 $F’=f$</li>
-<li><strong>Def</strong>：（原函数）若存在$\Phi(z),\forall z\in D,\Phi ‘(z)=f(z)$ 称 $\Phi(z)$ 为 $f(z)$ 在 $D$ 内的一个原函数</li>
-</ul>
-<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><ol>
-<li><p>单连通域 $D$ 内的解析函数存在原函数</p>
-</li>
-<li><p>表示全体原函数的表达式：$\int f(z)\mathrm dz$称为$f$的不定积分</p>
-</li>
-</ol>
-<ul>
-<li><strong>Thm</strong>：对于解析函数 $f$，$\Phi(z)$ 是其原函数，则$\int_{z_1}^{z_2}=\Phi(z_2)-\Phi(z_1)$</li>
-</ul>
-<h3 id="柯西积分公式、高阶导数公式"><a href="#柯西积分公式、高阶导数公式" class="headerlink" title="柯西积分公式、高阶导数公式"></a>柯西积分公式、高阶导数公式</h3><ul>
-<li><strong>Thm</strong>：（Cauchy积分公式）$f(z)$ 在 $D$ 和 $D$ 的边界上解析，则 $\forall z\in D, f(z) = \frac{1}{2\pi i}\oint_L\frac{f(\varsigma)}{\varsigma - z}\mathrm d \varsigma$</li>
-</ul>
-<blockquote>
-<p>$\displaystyle L:|z-z_0|=R\Rightarrow f(z_0) = \frac{1}{2\pi}\int_0^{2\pi}f(z_0+Re^{i\theta})\mathrm d\theta$</p>
-</blockquote>
-<h5 id="高阶导数公式"><a href="#高阶导数公式" class="headerlink" title="高阶导数公式"></a>高阶导数公式</h5><ul>
-<li>设 $f$ 在 $D$ 及其边界上解析，则$f$在D内有任意阶导数，且$\forall z\in D$,<br>$\displaystyle f^{(n)}(z) = \frac{n!}{2\pi i}\oint_L\frac{f(\varsigma)}{(\varsigma-z)^{n+1}}\mathrm d\varsigma$</li>
-</ul>
-<h5 id="Thms"><a href="#Thms" class="headerlink" title="Thms"></a>Thms</h5><ul>
-<li><p><strong>Thm</strong>（柯西不等式）设 $f$ 在 $D$ 内解析，$z_0\in D$，圆周 $K_R$ 及其内部均含于 $D$，则$|f^{(n)}(z_0)|\le \frac{n! M(R)}{R^n}$，$M(R) = \max_{|z-z_0|=R}|f(z)|$</p>
-</li>
-<li><p><strong>Thm</strong>（柳维尔定理）$f(z)$ 在整个复平面上解析且有界，则 $f(z)$ 在复平面上恒为常数。</p>
-</li>
-<li><p><strong>Thm</strong>（莫雷拉定理）$f(z)$ 在单连通区域 $D$ 内解析且有界，，且对于任一简单闭曲线$L$上：$\int_Lf(z)\mathrm dz =0$，则$f(z)$ 在 $D$ 内解析。</p>
-</li>
-</ul>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>高等数学</tag>
-        <tag>复变函数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>「复变函数」复变函数的导数和解析函数</title>
     <url>/2020/11/20/study/Math/ComplexFunctions/ch2/</url>
     <content><![CDATA[<p>复变函数的导数和解析函数<br><a id="more"></a></p>
@@ -3825,6 +3644,101 @@ P47
       </tags>
   </entry>
   <entry>
+    <title>「复变函数」复变函数积分</title>
+    <url>/2020/11/20/study/Math/ComplexFunctions/ch3/</url>
+    <content><![CDATA[<p>复变函数的积分</p>
+<a id="more"></a>
+<h1 id="Ch3-复变函数的积分"><a href="#Ch3-复变函数的积分" class="headerlink" title="Ch3 复变函数的积分"></a>Ch3 复变函数的积分</h1><h3 id="复变函数积分的概念及其计算"><a href="#复变函数积分的概念及其计算" class="headerlink" title="复变函数积分的概念及其计算"></a>复变函数积分的概念及其计算</h3><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><ul>
+<li><p><strong>Def</strong>：同实函数定义：分割求和 $\displaystyle\int_C f(z)\mathrm dz = \lim \limits_{\delta \rightarrow 0}\sum f(\gamma_k)\delta z_k$</p>
+</li>
+<li><p>对应了两个实函数第二型曲线积分</p>
+</li>
+<li><p>性质：</p>
+<ul>
+<li>$\displaystyle\int_Lf\mathrm dz=\int_{L_1}f\mathrm dz+\int_{L_2}f(z)\mathrm dz$</li>
+<li>方向性</li>
+<li>线性性质</li>
+<li>$\displaystyle|\int_Lf\mathrm dz| \le \int_L|f||\mathrm dz|\le MS$</li>
+</ul>
+</li>
+</ul>
+<h5 id="计算方法1：参数方程法"><a href="#计算方法1：参数方程法" class="headerlink" title="计算方法1：参数方程法"></a>计算方法1：<strong>参数方程法</strong></h5><ul>
+<li><p>$\displaystyle let~z=x(t) + iy(t)\rightarrow \int_Lf\mathrm dz=\int f(z(t)) z’(t)\mathrm dt$</p>
+</li>
+<li><p>例：</p>
+<script type="math/tex; mode=display">\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1.\end{cases}</script><p>其中 $L$ 为圆<br>利用：$z-z_0=\rho\cdot e^{i\theta}$，并且注意方向！（$\theta$的积分方向上）</p>
+</li>
+</ul>
+<h3 id="Cauchy-积分定理"><a href="#Cauchy-积分定理" class="headerlink" title="Cauchy 积分定理"></a>Cauchy 积分定理</h3><ul>
+<li>若 $f(z) = u(x,y)+iv(x,y)$在单连通域 $D$ 内解析，$f’$ 连续且$u,v$ 有一节连续偏导数，满足 $C-R$ 方程。则对于任一分段光滑的简单闭曲线 $L_1$：$\displaystyle \int _{L_1} f(z)\mathrm dz = 0$</li>
+<li>$f(z)$ 在单连通域 $D$ 内解析，$f’$ 在 $D$ 内连续时，复积分 $\displaystyle \int _Lf(z)\mathrm dz$ 与路径无关</li>
+</ul>
+<h5 id="柯西-古萨基本定理"><a href="#柯西-古萨基本定理" class="headerlink" title="柯西-古萨基本定理"></a>柯西-古萨基本定理</h5><ul>
+<li><strong>Thm</strong>：设 $f(z)$ 在简单闭曲线 $L$ 上以及它所围的区域 $D$ 内解析，则$\displaystyle \int _{L} f(z)\mathrm dz = 0$</li>
+<li><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，对于 $D$ 内任一分段光滑的闭曲线 $L_1$：$\displaystyle \int _{L_1} f(z)\mathrm dz = 0$</li>
+<li><strong>Thm</strong>：（复合闭路定理）设 $L, L_k$ 为n+1条取逆时针方向的简单闭曲线，$L_k$ 互不相交，互不包含，$L, L_k$ 围成复连通域$D$，$f(z)$ 在$\bar D$ 上解析，则：<script type="math/tex; mode=display">\displaystyle\oint_Lf(z)\mathrm dz = \sum_{k=1}^n\oint_{L_k}f(z) \mathrm dz</script></li>
+</ul>
+<blockquote>
+<p>注意曲线的性质：简单闭曲线、闭曲线</p>
+</blockquote>
+<h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><script type="math/tex; mode=display">\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1.\end{cases}</script><p>其中 $L$ 为圆</p>
+<blockquote>
+<p>利用：$z-z_0=\rho\cdot e^{i\theta}$，并且注意方向！（$\theta$的积分方向上）</p>
+</blockquote>
+<p>利用复合闭路定理：$L$ 可以为任意包含$z_0$的闭曲线。</p>
+<ul>
+<li><strong>Thm</strong>：闭路变形定理</li>
+</ul>
+<p>重要结论：</p>
+<script type="math/tex; mode=display">
+\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1,n\in \mathrm Z.\end{cases}</script><h5 id="review：2020-11-06-星期五"><a href="#review：2020-11-06-星期五" class="headerlink" title="review：2020/11/06 星期五"></a>review：2020/11/06 星期五</h5><blockquote>
+<ul>
+<li>$\int_Lf\mathrm dz=0$</li>
+<li>$\int_Lf\mathrm dz=\sum\int_{L_k}f\mathrm dz$</li>
+<li>$\int \frac{1}{(z-z_0)^{n}}\mathrm dz$</li>
+<li>$|z| = 1\Rightarrow|\mathrm dz|=|e^{i\theta}i\mathrm d\theta|=d\theta=\frac{1}{iz}\mathrm dz$</li>
+</ul>
+</blockquote>
+<h3 id="原函数与不定积分"><a href="#原函数与不定积分" class="headerlink" title="原函数与不定积分"></a>原函数与不定积分</h3><ul>
+<li><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，则复函数 $F(z)=\int_{z_0}^zf(z)\mathrm dz$ 在 $D$ 内解析，且 $F’=f$</li>
+<li><strong>Def</strong>：（原函数）若存在$\Phi(z),\forall z\in D,\Phi ‘(z)=f(z)$ 称 $\Phi(z)$ 为 $f(z)$ 在 $D$ 内的一个原函数</li>
+</ul>
+<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><ol>
+<li><p>单连通域 $D$ 内的解析函数存在原函数</p>
+</li>
+<li><p>表示全体原函数的表达式：$\int f(z)\mathrm dz$称为$f$的不定积分</p>
+</li>
+</ol>
+<ul>
+<li><strong>Thm</strong>：对于解析函数 $f$，$\Phi(z)$ 是其原函数，则$\int_{z_1}^{z_2}=\Phi(z_2)-\Phi(z_1)$</li>
+</ul>
+<h3 id="柯西积分公式、高阶导数公式"><a href="#柯西积分公式、高阶导数公式" class="headerlink" title="柯西积分公式、高阶导数公式"></a>柯西积分公式、高阶导数公式</h3><ul>
+<li><strong>Thm</strong>：（Cauchy积分公式）$f(z)$ 在 $D$ 和 $D$ 的边界上解析，则 $\forall z\in D, f(z) = \frac{1}{2\pi i}\oint_L\frac{f(\varsigma)}{\varsigma - z}\mathrm d \varsigma$</li>
+</ul>
+<blockquote>
+<p>$\displaystyle L:|z-z_0|=R\Rightarrow f(z_0) = \frac{1}{2\pi}\int_0^{2\pi}f(z_0+Re^{i\theta})\mathrm d\theta$</p>
+</blockquote>
+<h5 id="高阶导数公式"><a href="#高阶导数公式" class="headerlink" title="高阶导数公式"></a>高阶导数公式</h5><ul>
+<li>设 $f$ 在 $D$ 及其边界上解析，则$f$在D内有任意阶导数，且$\forall z\in D$,<br>$\displaystyle f^{(n)}(z) = \frac{n!}{2\pi i}\oint_L\frac{f(\varsigma)}{(\varsigma-z)^{n+1}}\mathrm d\varsigma$</li>
+</ul>
+<h5 id="Thms"><a href="#Thms" class="headerlink" title="Thms"></a>Thms</h5><ul>
+<li><p><strong>Thm</strong>（柯西不等式）设 $f$ 在 $D$ 内解析，$z_0\in D$，圆周 $K_R$ 及其内部均含于 $D$，则$|f^{(n)}(z_0)|\le \frac{n! M(R)}{R^n}$，$M(R) = \max_{|z-z_0|=R}|f(z)|$</p>
+</li>
+<li><p><strong>Thm</strong>（柳维尔定理）$f(z)$ 在整个复平面上解析且有界，则 $f(z)$ 在复平面上恒为常数。</p>
+</li>
+<li><p><strong>Thm</strong>（莫雷拉定理）$f(z)$ 在单连通区域 $D$ 内解析且有界，，且对于任一简单闭曲线$L$上：$\int_Lf(z)\mathrm dz =0$，则$f(z)$ 在 $D$ 内解析。</p>
+</li>
+</ul>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>复变函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>「复变函数」复数项级数</title>
     <url>/2020/11/20/study/Math/ComplexFunctions/ch4/</url>
     <content><![CDATA[<p>复数项级数的概念和性质</p>
@@ -3867,6 +3781,127 @@ P47
         <tag>高等数学</tag>
         <tag>复变函数</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>最（凸）优化方法 [Overview and Intro]</title>
+    <url>/2020/09/26/study/Math/ConvexOptimization/index/</url>
+    <content><![CDATA[<p>2020-2021-1 最优化方法</p>
+<a id="more"></a>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="数学优化"><a href="#数学优化" class="headerlink" title="数学优化"></a>数学优化</h3><p>数学优化问题：（数学规划）</p>
+<div class="note note-primary">
+            <p>从一个<strong>可行解集合</strong>中,<strong>寻找</strong>出<strong>最优</strong>元素。</p>
+          </div>
+<p>数学形式：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    &\min . &f_0(x)\\
+    &~\mathrm{s.t.} & f_i(x) \leq b_i, i = 1,\dots,m
+\end{aligned}</script><p>其中：</p>
+<ul>
+<li>优化变量：$x$</li>
+<li>目标函数：$f_0:\mathrm{R}^n\rightarrow\mathrm{R}$</li>
+<li>约束函数：$f_i:\mathrm{R}^n\rightarrow\mathrm{R}$</li>
+<li>最优解：在<strong>所有满足约束的向量</strong>中，向量 $x^<em>$ 对应的目标函数值<em>*最小</em></em></li>
+</ul>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
+<li>投资组合优化<ul>
+<li>优化变量：各资产分配的资本数</li>
+<li>约束：总预算、每⼀份资产的资本范围、最⼩收益</li>
+<li>⽬标：总风险或回报</li>
+</ul>
+</li>
+<li>电⼦设计中的器件尺⼨<ul>
+<li>优化变量：器件的长和宽</li>
+<li>约束：⼯程约束、时间要求、最⼤⾯积</li>
+<li>⽬标：总功耗</li>
+</ul>
+</li>
+<li>数据拟合<ul>
+<li>优化变量：模型参数</li>
+<li>约束：先验信息、参数限制</li>
+<li>⽬标：预测误差</li>
+</ul>
+</li>
+</ul>
+<h3 id="求解优化问题"><a href="#求解优化问题" class="headerlink" title="求解优化问题"></a>求解优化问题</h3><ul>
+<li>一般形式的优化问题<ul>
+<li>难以求解</li>
+<li>折中：长时间的计算代价、找不到解</li>
+</ul>
+</li>
+<li>特定问题<ul>
+<li>最小二乘</li>
+<li>线性规划</li>
+<li>凸优化问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="最小二乘"><a href="#最小二乘" class="headerlink" title="最小二乘"></a>最小二乘</h3><p>形式：$\displaystyle\min.||Ax-b||_2^2$</p>
+<ul>
+<li>有解析解 $x* = (A^TA)^{-1}A^Tb$</li>
+<li>有可靠的求解算法和软件 <!-- TODO --></li>
+<li>计算时间：正比于 $n^2k(A\in \mathrm{R}^{k\times n})$</li>
+<li>技术成熟</li>
+<li>最⼩⼆乘的使⽤<ul>
+<li>判别⼗分简单</li>
+<li>使⽤标准⽅法增强灵活性（加权、正则化）</li>
+</ul>
+</li>
+</ul>
+<h3 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h3><script type="math/tex; mode=display">
+\begin{aligned}
+    &\min. &c^Tx\\
+    &\mathrm{~s.t.} &a_i^Tx\le b_i
+\end{aligned}</script><ul>
+<li>没有解析解</li>
+<li>具有可靠且有效的求解算法和软件</li>
+<li>计算时间：正⽐于$n^2m~(if~m \ge n)$，若具有特殊结构，求解更快。</li>
+<li>成熟技术</li>
+<li>判别难于最⼩⼆乘</li>
+<li>⼀些标准的技巧可⽤于将某些问题转化为线性规划（分段线性⽅程、包含范数的问题）</li>
+</ul>
+<!-- TODO: ppt p48 --><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>凸优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>对偶</title>
+    <url>/2020/12/17/study/Math/ConvexOptimization/notes5/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="对偶"><a href="#对偶" class="headerlink" title="对偶"></a>对偶</h1><h3 id="Lagrange-对偶函数"><a href="#Lagrange-对偶函数" class="headerlink" title="Lagrange 对偶函数"></a>Lagrange 对偶函数</h3><h4 id="Lagrange"><a href="#Lagrange" class="headerlink" title="Lagrange"></a>Lagrange</h4><p>考虑标准形式的优化问题，拉格朗日函数定义为：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&L:R^n\times R^m\times R^p\rightarrow R\\
+&L(x, \lambda, \nu)=f_0(x)+\sum_{i=1}^m \lambda_if_i(x)+\sum_{i=1}^p \nu_ih_i(x)\\
+\end{aligned}</script><ul>
+<li>定义域为：$D\times R^m\times R^p$</li>
+<li>目标函数和约束函数的加权和</li>
+<li>$\lambda_i$ 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
+<li>$\nu_i$ 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
+</ul>
+<h4 id="拉格朗日对偶函数"><a href="#拉格朗日对偶函数" class="headerlink" title="拉格朗日对偶函数"></a>拉格朗日对偶函数</h4><script type="math/tex; mode=display">
+\begin{aligned}
+    &g:R^m\times R^p\rightarrow R\\
+    &g=\inf_{x\in D} L(x,\lambda, \nu)
+\end{aligned}</script><ul>
+<li><p>函数 $g$ 为凹函数（任何优化问题的 Lagrange 对偶函数为凹函数）</p>
+<ul>
+<li>$\sup L(x,\lambda, \nu)$ 为凸函数</li>
+</ul>
+</li>
+<li><p>最优值下界：若 $\lambda \ge 0$，则 $g(\lambda, \nu)\le p^ <em>$（$p^ </em>$ 为原优化问题最优值）</p>
+</li>
+</ul>
+<h4 id="拉格朗日对偶函数与共轭函数"><a href="#拉格朗日对偶函数与共轭函数" class="headerlink" title="拉格朗日对偶函数与共轭函数"></a>拉格朗日对偶函数与共轭函数</h4><p>共轭函数 $f^*=\sup_{x\in D}(y^Tx-f(x))$</p>
+<h3 id="对偶问题"><a href="#对偶问题" class="headerlink" title="对偶问题"></a>对偶问题</h3><script type="math/tex; mode=display">
+\begin{aligned}
+    &\max.g(\lambda,\nu)\\
+    &s.t.~~\lambda\succeq 0
+\end{aligned}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
   </entry>
   <entry>
     <title>欧拉图和哈密顿图</title>
@@ -4910,6 +4945,139 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
       </tags>
   </entry>
   <entry>
+    <title>「概率统计与随机过程」 2 - 随机变量及其概率分布</title>
+    <url>/2020/11/18/study/Math/Probabilities/notes2/</url>
+    <content><![CDATA[<p>随机变量及其概率分布</p>
+<a id="more"></a>
+<h2 id="随机变量及其概率分布"><a href="#随机变量及其概率分布" class="headerlink" title="随机变量及其概率分布"></a>随机变量及其概率分布</h2><h3 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h3><p><strong>Def</strong>：设 $E$ 时一个随机试验，$\varOmega$ 是其样本空间，如果对于每一个试验的结果 $\omega\in \varOmega$，由唯一的实数$X(\omega)$与之对应，这个定义在试验样本空间上的实值函数$X(\omega)$称为$E$的随机变量。</p>
+<h3 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h3><p><strong>Def</strong>（随机变量的分布函数）设 $X(\omega)$是随机变量，称 $F(x) = P(X\le x),~-\infty&lt;x&lt;\infty$</p>
+<p><strong>Thm</strong>：一些定义</p>
+<ul>
+<li>$P(x_1 &lt; X\le x_2) = F(x_2) - F(x_1)$</li>
+<li>$P(x_1\le X&lt; x2) = F(x_2-0) - F(x_1-0)$</li>
+<li>$P(x_1 &lt; X&lt; x2) = F(x_2-0) - F(x_1)$</li>
+<li>$P(x_1\le X\le x2) = F(x_2) - F(x_1-0)$</li>
+</ul>
+<p><strong>Thm</strong>：分布函数的性质</p>
+<ol>
+<li>$0\le F(x) \le 1$</li>
+<li>单调不降</li>
+<li>右连续函数：$F(x+0)=F(x)$</li>
+<li>有<em>可数</em>个间断点</li>
+</ol>
+<h3 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h3><h4 id="离散型随机变量的分布律"><a href="#离散型随机变量的分布律" class="headerlink" title="离散型随机变量的分布律"></a>离散型随机变量的分布律</h4><p><strong>Def</strong>（概率函数）设离散随机变量$X$可能取得一切之为 $x_1, x_2,\dots, x_n$ 称为 $X$ 分布律（列），也称为 $X$ 的概率函数。</p>
+<blockquote>
+<p>分布律也可以用表格的形式表示：<br>|X|x1|x2|x3|…|<br>|—-|—-|—-|—-|—-|<br>|P|p1|p2|p3|…|</p>
+</blockquote>
+<p>$X$ 的分布函数 $F(x) = \sum\limits_{x_k\le x} p_k$</p>
+<h4 id="常见的离散分布"><a href="#常见的离散分布" class="headerlink" title="常见的离散分布"></a>常见的离散分布</h4><h5 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="0 - 1 分布"></a>0 - 1 分布</h5><p><strong>Def</strong>：$0 - 1$分布：$X$ 只取 $0$ 和 $1$ 两个值，且$P(X=1)=p,~P(X=0)=1-p$，则称 $X$ 服从 $(0-1)$ 分布。</p>
+<h5 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h5><p><strong>Def</strong>：n次独立试验概型</p>
+<blockquote>
+<p><strong>伯努利试验</strong>只有两个可能结果，$A,~\bar A$，且$P(A)=p$</p>
+<ul>
+<li>$n$ 重伯努利试验是指将试验独立重复 $n$ 次。</li>
+<li>$X$ 表示 $n$ 重伯努利试验中事件 $A$ 发生的次数</li>
+</ul>
+<p>称随机变量$X$服从参数为$n,~p$ 的二项分布，$X\sim B(n,p)$</p>
+<ul>
+<li>$P(X=k) = C_n^k p^k (1-p)^{n-k}$</li>
+</ul>
+</blockquote>
+<p><strong>Thm</strong>：$X$是伯努利试验中$A$发生的次数，$p$是每次试验中 $A$ 发生的概率，则 $X\sim b(n,p)$</p>
+<p><strong>Def</strong>：最可能成功次数$k = \lfloor (n+1)p \rfloor~(n+1)p不是整数$</p>
+<h5 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h5><p><strong>Def</strong>（泊松分布）$\displaystyle P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!},~X\sim P(\lambda)$</p>
+<p><strong>Thm</strong>（泊松定理）设 $\lambda &gt;0$是一个常数，$n$ 是任意正整数，设$np_n=\lambda$。则对于任意固定的非负整数$k$有 $\displaystyle\lim_{n\rightarrow \infty}C_n^kp_n^k(1-p_n)^{n-k}=\frac{\lambda^ke^{-\lambda}}{k!}$</p>
+<h5 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h5><p>$\displaystyle P(X=k) = q^{k-1} p, k=1,2,\dots$</p>
+<h5 id="超几何分布"><a href="#超几何分布" class="headerlink" title="超几何分布"></a>超几何分布</h5><p>$\displaystyle P(X=k) = \frac{C_M^k\cdot C_{N-M}^{n-k}}{C_N^n}, k = 0, 1, 2, \dots, l=\min\{n,M\}$</p>
+<ul>
+<li>$X\sim H(N,M,n)$</li>
+</ul>
+<h5 id="负二项分布"><a href="#负二项分布" class="headerlink" title="负二项分布**"></a>负二项分布**</h5><p>$\displaystyle P(X=k) = C_{k-1}^{r-1}p^r(1-p)^{k-r}$</p>
+<ul>
+<li>$X\sim Nb(r,p)$</li>
+</ul>
+<h4 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h4><p><strong>Def</strong>（连续性随机变量）$F(x) = \int_{-\infty}^xf(x)\mathrm dx,-\infty &lt; x &lt; \infty$</p>
+<ul>
+<li>其中$f(x)$ 是非负可积函数，称为$X$的概率分布密度函数（概率密度函数<code>Probability Density Function</code>）</li>
+<li>规范性：$\displaystyle\int_R f(x) \mathrm dx =1$</li>
+<li>$P(x&lt; X \le x+\Delta x)\approx f(x)\Delta x$</li>
+<li>连续性，$F(-\infty) = 0$，$F(\infty)=1$</li>
+</ul>
+<p><strong>Def</strong>（累积分布函数）$\displaystyle P(a&lt;X\le b) = \int_a^bf(x)\mathrm dx$</p>
+<h5 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h5><script type="math/tex; mode=display">
+f(x)=\begin{cases}
+  \displaystyle\frac{1}{b-a},&a\le x\le b,\\
+  0,&otherwise
+\end{cases}\\
+\\
+F(x) = P(X\le x) = \begin{cases}
+  0,&x < a\\
+  \displaystyle\frac{x-a}{b-a}, &a\le x \le b\\
+  1, &x>b
+\end{cases}</script><ul>
+<li>$X\sim U[a,b]$</li>
+</ul>
+<h5 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h5><script type="math/tex; mode=display">
+f(x) = \begin{cases}
+  \lambda e^{-\lambda x}, &x>0\\
+  0, & x\le 0
+\end{cases}
+\\
+F(x) = \begin{cases}
+  1- e^{-\lambda x}, &x>0\\
+  0, &x\le 0
+\end{cases}</script><ul>
+<li>$X\sim e(\lambda)$</li>
+</ul>
+<h5 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h5><p><strong>Def</strong>：$\displaystyle f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</p>
+<ul>
+<li>$X\sim N(\mu, \sigma^2)$</li>
+<li>$\mu$ 为位置参数，$\sigma$ 为尺度参数</li>
+<li>关于$\mu$对称，最大值</li>
+<li>$\sigma$固定，形状保持不变</li>
+<li>拐点为：$x=\mu\pm\sigma$</li>
+<li>$erf(x)=F(x)= \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\mathrm dx$</li>
+<li>$3\sigma,~6\sigma$理论</li>
+</ul>
+<p><strong>Def</strong>（标准正态分布）$N(0,1)$</p>
+<ul>
+<li>$\mu = 0, \sigma = 1$ 的正态分布称为标准正态分布</li>
+<li>密度函数和分布函数通常用 $\varphi(x),\Phi(x)$ 表示</li>
+<li>$\Phi(0)=0.5,~\Phi(-x) = 1-\Phi(x)$</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  &\varphi(x) = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}\\
+  &\Phi(x) = \int_{-\infty}^x\varphi(x)\mathrm dx
+\end{aligned}</script><p><strong>Thm</strong>（一般正态分布的标准化）：若$X\sim N(\mu, \sigma^2)$，则$U=\frac{X-\mu}{\sigma}\sim N(0,1)$</p>
+<p><strong>Def</strong>：（$\alpha$分位点）$P(X&gt;\mu_\alpha) = \alpha,\quad0&lt;\alpha&lt;1$</p>
+<h3 id="随机变量函数的分布"><a href="#随机变量函数的分布" class="headerlink" title="随机变量函数的分布"></a>随机变量函数的分布</h3><h4 id="已知离散随机变量X的分布，求函数-Y-g-X-的分布"><a href="#已知离散随机变量X的分布，求函数-Y-g-X-的分布" class="headerlink" title="已知离散随机变量X的分布，求函数 Y = g(X) 的分布"></a>已知离散随机变量X的分布，求函数 Y = g(X) 的分布</h4><script type="math/tex; mode=display">
+P(Y=y_j) = P(g(X)=y_j) = \sum_{\{x_k|g(x_k) = y_j\}}P(X=x_k), j = 1, 2, \dots,</script><p>离散型均匀分布：</p>
+<script type="math/tex; mode=display">
+Y = [NX+1],\quad where~X\sim U(0, 1)</script><h4 id="一致连续型随机变量X的概率密度，求-g-X-的概率密度"><a href="#一致连续型随机变量X的概率密度，求-g-X-的概率密度" class="headerlink" title="一致连续型随机变量X的概率密度，求 g(X) 的概率密度"></a>一致连续型随机变量X的概率密度，求 g(X) 的概率密度</h4><ul>
+<li><strong>分布函数法</strong></li>
+<li>Key Point：$F_Y(y)=P(Y\le y)=P(g(x)\le y)=\displaystyle\int_{\{x|g(x)&lt;y\}}f_X(x)\mathrm dx$</li>
+</ul>
+<script type="math/tex; mode=display">
+Y = aX+b\Rightarrow
+f_Y(y)=\frac{\mathrm d}{\mathrm dy}F_Y(y) =\begin{cases}
+  \frac 1 a f_X(\frac{y-b}{a}),&a>0\\
+  -\frac{1}{a} f_X(\frac{y-b}{a}),&a<0\\
+\end{cases}</script><p>「例」：$X\sim N(0,1),~Y=X^2$</p>
+<script type="math/tex; mode=display">
+f_Y(y) = F'_Y(y) =\begin{cases}
+  \frac{1}{\sqrt{2\pi y}}e^{-\frac{y}{2}},& y>0\\
+  0,&y\le 0
+\end{cases}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>概率论</tag>
+        <tag>统计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>「概率统计与随机过程」 3 - 随机向量及其概率分布</title>
     <url>/2020/11/18/study/Math/Probabilities/notes3/</url>
     <content><![CDATA[<p>随机向量及其概率分布</p>
@@ -5219,139 +5387,6 @@ p(z) = \int_{-\infty}^{+\infty} p(x,z-x)\mathrm dx = \int_{-\infty}^{+\infty} p(
             <h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><h4 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="0 - 1 分布"></a>0 - 1 分布</h4><ol><li>形式：$P(X=0)=1-p, P(X=1)=p$</li><li>期望：$EX=p$</li><li>方差：$DX=p(1-p)$</li></ol><h4 id="二项分布-b-n-p"><a href="#二项分布-b-n-p" class="headerlink" title="二项分布 $b(n,p)$"></a>二项分布 $b(n,p)$</h4><ol><li>形式：$P(X=k) = C_n^kp^k(1-p)^k$</li><li>期望：$EX=np$</li><li>方差：$DX=np(1-p)$</li></ol><h4 id="泊松分布-P-lambda"><a href="#泊松分布-P-lambda" class="headerlink" title="泊松分布 $P(\lambda)$"></a>泊松分布 $P(\lambda)$</h4><ol><li>形式：$P(X=k)=\frac{\lambda^k e^{-\lambda}}{k!}$</li><li>期望：$EX=\lambda$</li><li>方差：$DX=\lambda$</li></ol><h4 id="超几何分布-H-N-M-n-not-important"><a href="#超几何分布-H-N-M-n-not-important" class="headerlink" title="超几何分布 $H(N,M,n)$ -- not important"></a>超几何分布 $H(N,M,n)$ <code>-- not important</code></h4><ol><li>形式：$P(X=k)=\frac{C_M^kC_{N-M}^{N-k}}{C_N^n}$</li><li>期望：$EX=nM/N$</li><li>方差：$DX=\frac{nM(N-n)(N-M)}{N^2(N-1)}$</li></ol><h4 id="均匀分布-U-a-b"><a href="#均匀分布-U-a-b" class="headerlink" title="均匀分布 $U(a,b)$"></a>均匀分布 $U(a,b)$</h4><ol><li>形式：$P(X=x) = 1/(b-a)\quad if ~  ~ x \in [a,b]$</li><li>期望：$EX=\frac{1}{2}(a+b)$</li><li>方差：$DX=\frac{(b-a)^2}{12}$</li></ol><h4 id="指数分布-e-lambda"><a href="#指数分布-e-lambda" class="headerlink" title="指数分布 $e(\lambda)$"></a>指数分布 $e(\lambda)$</h4><ol><li>形式：$P(X=x)=\lambda e^{-\lambda x}$</li><li>期望：$EX=1/\lambda$</li><li>方差：$DX=1/\lambda^2$</li></ol><h4 id="高斯分布（正态分布）-N-mu-sigma-2"><a href="#高斯分布（正态分布）-N-mu-sigma-2" class="headerlink" title="高斯分布（正态分布） $N(\mu,\sigma^2)$"></a>高斯分布（正态分布） $N(\mu,\sigma^2)$</h4><ol><li>形式：$P(X=x)=\frac{1}{\sqrt{2\pi}\sigma}\exp[-\frac{(x-\mu)^2}{2\sigma^2}]$</li><li>期望：$EX=\mu$</li><li>方差：$DX=\sigma^2$</li></ol>
           </div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>概率论</tag>
-        <tag>统计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「概率统计与随机过程」 2 - 随机变量及其概率分布</title>
-    <url>/2020/11/18/study/Math/Probabilities/notes2/</url>
-    <content><![CDATA[<p>随机变量及其概率分布</p>
-<a id="more"></a>
-<h2 id="随机变量及其概率分布"><a href="#随机变量及其概率分布" class="headerlink" title="随机变量及其概率分布"></a>随机变量及其概率分布</h2><h3 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h3><p><strong>Def</strong>：设 $E$ 时一个随机试验，$\varOmega$ 是其样本空间，如果对于每一个试验的结果 $\omega\in \varOmega$，由唯一的实数$X(\omega)$与之对应，这个定义在试验样本空间上的实值函数$X(\omega)$称为$E$的随机变量。</p>
-<h3 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h3><p><strong>Def</strong>（随机变量的分布函数）设 $X(\omega)$是随机变量，称 $F(x) = P(X\le x),~-\infty&lt;x&lt;\infty$</p>
-<p><strong>Thm</strong>：一些定义</p>
-<ul>
-<li>$P(x_1 &lt; X\le x_2) = F(x_2) - F(x_1)$</li>
-<li>$P(x_1\le X&lt; x2) = F(x_2-0) - F(x_1-0)$</li>
-<li>$P(x_1 &lt; X&lt; x2) = F(x_2-0) - F(x_1)$</li>
-<li>$P(x_1\le X\le x2) = F(x_2) - F(x_1-0)$</li>
-</ul>
-<p><strong>Thm</strong>：分布函数的性质</p>
-<ol>
-<li>$0\le F(x) \le 1$</li>
-<li>单调不降</li>
-<li>右连续函数：$F(x+0)=F(x)$</li>
-<li>有<em>可数</em>个间断点</li>
-</ol>
-<h3 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h3><h4 id="离散型随机变量的分布律"><a href="#离散型随机变量的分布律" class="headerlink" title="离散型随机变量的分布律"></a>离散型随机变量的分布律</h4><p><strong>Def</strong>（概率函数）设离散随机变量$X$可能取得一切之为 $x_1, x_2,\dots, x_n$ 称为 $X$ 分布律（列），也称为 $X$ 的概率函数。</p>
-<blockquote>
-<p>分布律也可以用表格的形式表示：<br>|X|x1|x2|x3|…|<br>|—-|—-|—-|—-|—-|<br>|P|p1|p2|p3|…|</p>
-</blockquote>
-<p>$X$ 的分布函数 $F(x) = \sum\limits_{x_k\le x} p_k$</p>
-<h4 id="常见的离散分布"><a href="#常见的离散分布" class="headerlink" title="常见的离散分布"></a>常见的离散分布</h4><h5 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="0 - 1 分布"></a>0 - 1 分布</h5><p><strong>Def</strong>：$0 - 1$分布：$X$ 只取 $0$ 和 $1$ 两个值，且$P(X=1)=p,~P(X=0)=1-p$，则称 $X$ 服从 $(0-1)$ 分布。</p>
-<h5 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h5><p><strong>Def</strong>：n次独立试验概型</p>
-<blockquote>
-<p><strong>伯努利试验</strong>只有两个可能结果，$A,~\bar A$，且$P(A)=p$</p>
-<ul>
-<li>$n$ 重伯努利试验是指将试验独立重复 $n$ 次。</li>
-<li>$X$ 表示 $n$ 重伯努利试验中事件 $A$ 发生的次数</li>
-</ul>
-<p>称随机变量$X$服从参数为$n,~p$ 的二项分布，$X\sim B(n,p)$</p>
-<ul>
-<li>$P(X=k) = C_n^k p^k (1-p)^{n-k}$</li>
-</ul>
-</blockquote>
-<p><strong>Thm</strong>：$X$是伯努利试验中$A$发生的次数，$p$是每次试验中 $A$ 发生的概率，则 $X\sim b(n,p)$</p>
-<p><strong>Def</strong>：最可能成功次数$k = \lfloor (n+1)p \rfloor~(n+1)p不是整数$</p>
-<h5 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h5><p><strong>Def</strong>（泊松分布）$\displaystyle P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!},~X\sim P(\lambda)$</p>
-<p><strong>Thm</strong>（泊松定理）设 $\lambda &gt;0$是一个常数，$n$ 是任意正整数，设$np_n=\lambda$。则对于任意固定的非负整数$k$有 $\displaystyle\lim_{n\rightarrow \infty}C_n^kp_n^k(1-p_n)^{n-k}=\frac{\lambda^ke^{-\lambda}}{k!}$</p>
-<h5 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h5><p>$\displaystyle P(X=k) = q^{k-1} p, k=1,2,\dots$</p>
-<h5 id="超几何分布"><a href="#超几何分布" class="headerlink" title="超几何分布"></a>超几何分布</h5><p>$\displaystyle P(X=k) = \frac{C_M^k\cdot C_{N-M}^{n-k}}{C_N^n}, k = 0, 1, 2, \dots, l=\min\{n,M\}$</p>
-<ul>
-<li>$X\sim H(N,M,n)$</li>
-</ul>
-<h5 id="负二项分布"><a href="#负二项分布" class="headerlink" title="负二项分布**"></a>负二项分布**</h5><p>$\displaystyle P(X=k) = C_{k-1}^{r-1}p^r(1-p)^{k-r}$</p>
-<ul>
-<li>$X\sim Nb(r,p)$</li>
-</ul>
-<h4 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h4><p><strong>Def</strong>（连续性随机变量）$F(x) = \int_{-\infty}^xf(x)\mathrm dx,-\infty &lt; x &lt; \infty$</p>
-<ul>
-<li>其中$f(x)$ 是非负可积函数，称为$X$的概率分布密度函数（概率密度函数<code>Probability Density Function</code>）</li>
-<li>规范性：$\displaystyle\int_R f(x) \mathrm dx =1$</li>
-<li>$P(x&lt; X \le x+\Delta x)\approx f(x)\Delta x$</li>
-<li>连续性，$F(-\infty) = 0$，$F(\infty)=1$</li>
-</ul>
-<p><strong>Def</strong>（累积分布函数）$\displaystyle P(a&lt;X\le b) = \int_a^bf(x)\mathrm dx$</p>
-<h5 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h5><script type="math/tex; mode=display">
-f(x)=\begin{cases}
-  \displaystyle\frac{1}{b-a},&a\le x\le b,\\
-  0,&otherwise
-\end{cases}\\
-\\
-F(x) = P(X\le x) = \begin{cases}
-  0,&x < a\\
-  \displaystyle\frac{x-a}{b-a}, &a\le x \le b\\
-  1, &x>b
-\end{cases}</script><ul>
-<li>$X\sim U[a,b]$</li>
-</ul>
-<h5 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h5><script type="math/tex; mode=display">
-f(x) = \begin{cases}
-  \lambda e^{-\lambda x}, &x>0\\
-  0, & x\le 0
-\end{cases}
-\\
-F(x) = \begin{cases}
-  1- e^{-\lambda x}, &x>0\\
-  0, &x\le 0
-\end{cases}</script><ul>
-<li>$X\sim e(\lambda)$</li>
-</ul>
-<h5 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h5><p><strong>Def</strong>：$\displaystyle f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</p>
-<ul>
-<li>$X\sim N(\mu, \sigma^2)$</li>
-<li>$\mu$ 为位置参数，$\sigma$ 为尺度参数</li>
-<li>关于$\mu$对称，最大值</li>
-<li>$\sigma$固定，形状保持不变</li>
-<li>拐点为：$x=\mu\pm\sigma$</li>
-<li>$erf(x)=F(x)= \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\mathrm dx$</li>
-<li>$3\sigma,~6\sigma$理论</li>
-</ul>
-<p><strong>Def</strong>（标准正态分布）$N(0,1)$</p>
-<ul>
-<li>$\mu = 0, \sigma = 1$ 的正态分布称为标准正态分布</li>
-<li>密度函数和分布函数通常用 $\varphi(x),\Phi(x)$ 表示</li>
-<li>$\Phi(0)=0.5,~\Phi(-x) = 1-\Phi(x)$</li>
-</ul>
-<script type="math/tex; mode=display">
-\begin{aligned}
-  &\varphi(x) = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}\\
-  &\Phi(x) = \int_{-\infty}^x\varphi(x)\mathrm dx
-\end{aligned}</script><p><strong>Thm</strong>（一般正态分布的标准化）：若$X\sim N(\mu, \sigma^2)$，则$U=\frac{X-\mu}{\sigma}\sim N(0,1)$</p>
-<p><strong>Def</strong>：（$\alpha$分位点）$P(X&gt;\mu_\alpha) = \alpha,\quad0&lt;\alpha&lt;1$</p>
-<h3 id="随机变量函数的分布"><a href="#随机变量函数的分布" class="headerlink" title="随机变量函数的分布"></a>随机变量函数的分布</h3><h4 id="已知离散随机变量X的分布，求函数-Y-g-X-的分布"><a href="#已知离散随机变量X的分布，求函数-Y-g-X-的分布" class="headerlink" title="已知离散随机变量X的分布，求函数 Y = g(X) 的分布"></a>已知离散随机变量X的分布，求函数 Y = g(X) 的分布</h4><script type="math/tex; mode=display">
-P(Y=y_j) = P(g(X)=y_j) = \sum_{\{x_k|g(x_k) = y_j\}}P(X=x_k), j = 1, 2, \dots,</script><p>离散型均匀分布：</p>
-<script type="math/tex; mode=display">
-Y = [NX+1],\quad where~X\sim U(0, 1)</script><h4 id="一致连续型随机变量X的概率密度，求-g-X-的概率密度"><a href="#一致连续型随机变量X的概率密度，求-g-X-的概率密度" class="headerlink" title="一致连续型随机变量X的概率密度，求 g(X) 的概率密度"></a>一致连续型随机变量X的概率密度，求 g(X) 的概率密度</h4><ul>
-<li><strong>分布函数法</strong></li>
-<li>Key Point：$F_Y(y)=P(Y\le y)=P(g(x)\le y)=\displaystyle\int_{\{x|g(x)&lt;y\}}f_X(x)\mathrm dx$</li>
-</ul>
-<script type="math/tex; mode=display">
-Y = aX+b\Rightarrow
-f_Y(y)=\frac{\mathrm d}{\mathrm dy}F_Y(y) =\begin{cases}
-  \frac 1 a f_X(\frac{y-b}{a}),&a>0\\
-  -\frac{1}{a} f_X(\frac{y-b}{a}),&a<0\\
-\end{cases}</script><p>「例」：$X\sim N(0,1),~Y=X^2$</p>
-<script type="math/tex; mode=display">
-f_Y(y) = F'_Y(y) =\begin{cases}
-  \frac{1}{\sqrt{2\pi y}}e^{-\frac{y}{2}},& y>0\\
-  0,&y\le 0
-\end{cases}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -6280,40 +6315,5 @@ t'&=t
         <tag>摘抄</tag>
         <tag>计算机图形学</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>对偶</title>
-    <url>/2020/12/17/study/Math/ConvexOptimization/notes5/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="对偶"><a href="#对偶" class="headerlink" title="对偶"></a>对偶</h1><h3 id="Lagrange-对偶函数"><a href="#Lagrange-对偶函数" class="headerlink" title="Lagrange 对偶函数"></a>Lagrange 对偶函数</h3><h4 id="Lagrange"><a href="#Lagrange" class="headerlink" title="Lagrange"></a>Lagrange</h4><p>考虑标准形式的优化问题，拉格朗日函数定义为：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&L:R^n\times R^m\times R^p\rightarrow R\\
-&L(x, \lambda, \nu)=f_0(x)+\sum_{i=1}^m \lambda_if_i(x)+\sum_{i=1}^p \nu_ih_i(x)\\
-\end{aligned}</script><ul>
-<li>定义域为：$D\times R^m\times R^p$</li>
-<li>目标函数和约束函数的加权和</li>
-<li>$\lambda_i$ 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
-<li>$\nu_i$ 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
-</ul>
-<h4 id="拉格朗日对偶函数"><a href="#拉格朗日对偶函数" class="headerlink" title="拉格朗日对偶函数"></a>拉格朗日对偶函数</h4><script type="math/tex; mode=display">
-\begin{aligned}
-    &g:R^m\times R^p\rightarrow R\\
-    &g=\inf_{x\in D} L(x,\lambda, \nu)
-\end{aligned}</script><ul>
-<li><p>函数 $g$ 为凹函数（任何优化问题的 Lagrange 对偶函数为凹函数）</p>
-<ul>
-<li>$\sup L(x,\lambda, \nu)$ 为凸函数</li>
-</ul>
-</li>
-<li><p>最优值下界：若 $\lambda \ge 0$，则 $g(\lambda, \nu)\le p^ <em>$（$p^ </em>$ 为原优化问题最优值）</p>
-</li>
-</ul>
-<h4 id="拉格朗日对偶函数与共轭函数"><a href="#拉格朗日对偶函数与共轭函数" class="headerlink" title="拉格朗日对偶函数与共轭函数"></a>拉格朗日对偶函数与共轭函数</h4><p>共轭函数 $f^*=\sup_{x\in D}(y^Tx-f(x))$</p>
-<h3 id="对偶问题"><a href="#对偶问题" class="headerlink" title="对偶问题"></a>对偶问题</h3><script type="math/tex; mode=display">
-\begin{aligned}
-    &\max.g(\lambda,\nu)\\
-    &s.t.~~\lambda\succeq 0
-\end{aligned}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
   </entry>
 </search>
