@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      1.2k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      19
+      18
        分钟
     </span>
   
@@ -240,15 +240,15 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：15 分钟前
+                  本文最后更新于：2 天前
                 
               </p>
             
             <div class="markdown-body">
               <p>随机变量及其概率分布</p>
 <a id="more"></a>
-<h2 id="Chapter-2-随机变量及其概率分布"><a href="#Chapter-2-随机变量及其概率分布" class="headerlink" title="Chapter 2 - 随机变量及其概率分布"></a>Chapter 2 - 随机变量及其概率分布</h2><h3 id="§-2-1-随机变量"><a href="#§-2-1-随机变量" class="headerlink" title="§ 2-1 随机变量"></a>§ 2-1 随机变量</h3><p><strong>Def</strong>：设 $E$ 时一个随机试验，$\varOmega$ 是其样本空间，如果对于每一个试验的结果 $\omega\in \varOmega$，由唯一的实数$X(\omega)$与之对应，这个定义在试验样本空间上的实值函数$X(\omega)$称为$E$的随机变量。</p>
-<h3 id="§-2-2-随机变量的分布函数"><a href="#§-2-2-随机变量的分布函数" class="headerlink" title="§ 2-2 随机变量的分布函数"></a>§ 2-2 随机变量的分布函数</h3><p><strong>Def</strong>（随机变量的分布函数）设 $X(\omega)$是随机变量，称 $F(x) = P(X\le x),~-\infty&lt;x&lt;\infty$</p>
+<h2 id="随机变量及其概率分布"><a href="#随机变量及其概率分布" class="headerlink" title="随机变量及其概率分布"></a>随机变量及其概率分布</h2><h3 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h3><p><strong>Def</strong>：设 $E$ 时一个随机试验，$\varOmega$ 是其样本空间，如果对于每一个试验的结果 $\omega\in \varOmega$，由唯一的实数$X(\omega)$与之对应，这个定义在试验样本空间上的实值函数$X(\omega)$称为$E$的随机变量。</p>
+<h3 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h3><p><strong>Def</strong>（随机变量的分布函数）设 $X(\omega)$是随机变量，称 $F(x) = P(X\le x),~-\infty&lt;x&lt;\infty$</p>
 <p><strong>Thm</strong>：一些定义</p>
 <ul>
 <li>$P(x_1 &lt; X\le x_2) = F(x_2) - F(x_1)$</li>
@@ -263,7 +263,7 @@
 <li>右连续函数：$F(x+0)=F(x)$</li>
 <li>有<em>可数</em>个间断点</li>
 </ol>
-<h3 id="§-2-3-离散型随机变量"><a href="#§-2-3-离散型随机变量" class="headerlink" title="§ 2-3 离散型随机变量"></a>§ 2-3 离散型随机变量</h3><h4 id="离散型随机变量的分布律"><a href="#离散型随机变量的分布律" class="headerlink" title="离散型随机变量的分布律"></a>离散型随机变量的分布律</h4><p><strong>Def</strong>（概率函数）设离散随机变量$X$可能取得一切之为 $x_1, x_2,\dots, x_n$ 称为 $X$ 分布律（列），也称为 $X$ 的概率函数。</p>
+<h3 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h3><h4 id="离散型随机变量的分布律"><a href="#离散型随机变量的分布律" class="headerlink" title="离散型随机变量的分布律"></a>离散型随机变量的分布律</h4><p><strong>Def</strong>（概率函数）设离散随机变量$X$可能取得一切之为 $x_1, x_2,\dots, x_n$ 称为 $X$ 分布律（列），也称为 $X$ 的概率函数。</p>
 <blockquote>
 <p>分布律也可以用表格的形式表示：<br>|X|x1|x2|x3|…|<br>|—-|—-|—-|—-|—-|<br>|P|p1|p2|p3|…|</p>
 </blockquote>
@@ -349,7 +349,7 @@ F(x) = \begin{cases}
   &\Phi(x) = \int_{-\infty}^x\varphi(x)\mathrm dx
 \end{aligned}</script><p><strong>Thm</strong>（一般正态分布的标准化）：若$X\sim N(\mu, \sigma^2)$，则$U=\frac{X-\mu}{\sigma}\sim N(0,1)$</p>
 <p><strong>Def</strong>：（$\alpha$分位点）$P(X&gt;\mu_\alpha) = \alpha,\quad0&lt;\alpha&lt;1$</p>
-<h3 id="§-2-5-随机变量函数的分布"><a href="#§-2-5-随机变量函数的分布" class="headerlink" title="§ 2-5 随机变量函数的分布"></a>§ 2-5 随机变量函数的分布</h3><h4 id="已知离散随机变量X的分布，求函数-Y-g-X-的分布"><a href="#已知离散随机变量X的分布，求函数-Y-g-X-的分布" class="headerlink" title="已知离散随机变量X的分布，求函数 Y = g(X) 的分布"></a>已知离散随机变量X的分布，求函数 Y = g(X) 的分布</h4><script type="math/tex; mode=display">
+<h3 id="随机变量函数的分布"><a href="#随机变量函数的分布" class="headerlink" title="随机变量函数的分布"></a>随机变量函数的分布</h3><h4 id="已知离散随机变量X的分布，求函数-Y-g-X-的分布"><a href="#已知离散随机变量X的分布，求函数-Y-g-X-的分布" class="headerlink" title="已知离散随机变量X的分布，求函数 Y = g(X) 的分布"></a>已知离散随机变量X的分布，求函数 Y = g(X) 的分布</h4><script type="math/tex; mode=display">
 P(Y=y_j) = P(g(X)=y_j) = \sum_{\{x_k|g(x_k) = y_j\}}P(X=x_k), j = 1, 2, \dots,</script><p>离散型均匀分布：</p>
 <script type="math/tex; mode=display">
 Y = [NX+1],\quad where~X\sim U(0, 1)</script><h4 id="一致连续型随机变量X的概率密度，求-g-X-的概率密度"><a href="#一致连续型随机变量X的概率密度，求-g-X-的概率密度" class="headerlink" title="一致连续型随机变量X的概率密度，求 g(X) 的概率密度"></a>一致连续型随机变量X的概率密度，求 g(X) 的概率密度</h4><ul>
