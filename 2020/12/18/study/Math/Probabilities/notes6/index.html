@@ -17,7 +17,7 @@
   <meta name="description" content="欢迎来到些些同学的藏宝阁">
   <meta name="author" content="Jerry Yang">
   <meta name="keywords" content="study">
-  <title>GCN introduction - 些些同学的藏宝阁</title>
+  <title>「概率统计与随机过程」 6 - 抽样分布 - 些些同学的藏宝阁</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -174,7 +174,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="GCN introduction">
+            <span class="h2" id="subtitle" title="「概率统计与随机过程」 6 - 抽样分布">
               
             </span>
 
@@ -184,8 +184,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-04 00:00" pubdate>
-        2020年11月4日 凌晨
+      <time datetime="2020-12-18 00:00" pubdate>
+        2020年12月18日 凌晨
       </time>
     </span>
   
@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      418 字
+      906 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      13
        分钟
     </span>
   
@@ -236,36 +236,75 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">GCN introduction</h1>
+            <h1 style="display: none">「概率统计与随机过程」 6 - 抽样分布</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：20 天前
+                  本文最后更新于：3 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <p>图卷积神经网络</p>
+              <p>Chapter 6 抽样分布</p>
 <a id="more"></a>
-<h1 id="Graph-Convolutional-Network"><a href="#Graph-Convolutional-Network" class="headerlink" title="Graph Convolutional Network"></a>Graph Convolutional Network</h1><blockquote>
-<p>翻译自：<a target="_blank" rel="noopener" href="http://tkipf.github.io/graph-convolutional-networks/">Graph Convolutional Networks | Thomas Kipf | University of Amsterdam</a></p>
-</blockquote>
-<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>现实世界中许多重要的数据（集）常常以图和网络的形式呈现，例如：社交网络，知识图谱，蛋白质相互作用网络，万维网等等（只举几例）。但是，直到最近，注意力很少放在对这些结构化的数据，建立泛化的神经网络模型之上。</p>
-<p>最近几年，一些论文重新考虑了这些问题（统一的神经网络，去处理任意的结构化图数据） <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1312.6203">Bruna et al.</a>, ICLR 2014; <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1506.05163">Henaff et al.</a>, 2015; <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/5954-convolutional-networks-on-graphs-for-learning-molecular-fingerprints">Duvenaud et al.</a>, NIPS 2015; <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1511.05493">Li et al.</a>, ICLR 2016; <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.09375">Defferrard et al.</a>, NIPS 2016; <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1609.02907">Kipf &amp; Welling</a>, ICLR 2017，其中一些，现在已经在他们主导的领域，取得了非常可喜的成果。</p>
-<p>在这篇文章中，我将对近些年在这方面的研究给出一个概要，并且指出不同方法的优缺点。这些讨论主要聚焦于最近发表的这两篇论文：</p>
+<h2 id="抽样分布"><a href="#抽样分布" class="headerlink" title="抽样分布"></a>抽样分布</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ol>
+<li><p><strong>总体</strong>：在一个统计问题中，研究对象的全体。（所研究对象的某个（某些）数量指标的全体，一个随机变量（多维随机变量）记为 $X$）</p>
+</li>
+<li><p><strong>样本</strong>：</p>
 <ul>
-<li>Kipf &amp; Welling (ICLR 2017), <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1609.02907">Semi-Supervised Classification with Graph Convolutional Networks</a> (disclaimer: I’m the first author)</li>
-<li>Defferrard et al. (NIPS 2016), <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.09375">Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering</a></li>
+<li>分组样本</li>
+<li>完全样本</li>
 </ul>
-<p>以及 Ferenc Huszar 写的一篇回顾/讨论的文章：<a target="_blank" rel="noopener" href="http://www.inference.vc/how-powerful-are-graph-convolutions-review-of-kipf-welling-2016-2/">How powerful are Graph Convolutions?</a> ，这篇文章主要讨论了这几类模型的一些限制。我<a target="_blank" rel="noopener" href="http://tkipf.github.io/graph-convolutional-networks/#the-issue-with-regular-graphs">在这里</a>写了一点对这篇文章的评论（在文章的末尾）。</p>
-<h3 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h3><ul>
-<li>对GNN的简单描述</li>
-<li>谱域卷积与GCNs</li>
-<li>Demo：简单一阶GCN模型的图嵌入</li>
-<li>将 GCNs 作为 <em>Weisfeiler-Lehman</em> 算法的可微分</li>
+</li>
+</ol>
+<p><strong>Def</strong>（简单随机样本）设总体 $X$ 的分布为 $F(X)$，$X_1, X_2,…,X_n$ 是是相互独立和总体同分布的随机变量，则称其为来自总体 X 容量为 n 的简单随机样本。</p>
+<p><em>性质</em>：</p>
+<ul>
+<li>样本联合分布函数为 $F(x_1,\dots,x_n)=\prod F(x_i)$</li>
+<li>简单随机样本的联合分布律：$P(X_1=x^{(1)}, \dots, X_n=x^{(n)})=\prod P(X_i=x^{(i)})$</li>
 </ul>
-<p>如果你已经熟悉了 GCNs 与相关的方法，你可以直接跳到<a target="_blank" rel="noopener" href="http://tkipf.github.io/graph-convolutional-networks/#gcns-part-iii-embedding-the-karate-club-network">Embedding the karate club network</a>。</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<h4 id="统计量"><a href="#统计量" class="headerlink" title="统计量"></a>统计量</h4><p><strong>Def</strong>（统计量）设 $X_1, \dots, X_n$ 为取自总体的样本，若样本函数 $T=T(X_1, \dots, X_n)$ 不含有任何未知的参数。则称 $T$ 为统计量。统计量的分布称为抽样分布。</p>
+<p><em>例如</em>：</p>
+<ul>
+<li><strong>Def</strong>（样本均值）$\bar X=\frac{1}{n}\sum_1^nX_i$ 为样本均值</li>
+<li><strong>Def</strong>（样本方差）$S_n^2=\frac{1}{n-1}\sum_{i=1}^n(X_i-\bar X)^2$ 为样本方差。$S=\sqrt{S_n^2}$ 为样本标准差</li>
+<li><strong>Def</strong>（偏差平方和）：$\sum(X_i-\bar X)^2=\sum X_i^2-\frac{1}{n}(\sum X_i)^2=\sum X_i^2-n\bar X^2$</li>
+<li><strong>Def</strong>（原点矩、中心矩）$A_k=\frac{1}{n}\sum X_i^k,~B_k=\frac{1}{n}\sum (X_i-\bar X)^k$</li>
+</ul>
+<p><strong>Thm</strong>：对于总体 $X$，均值为 $\mu=EX$ 方差 $\sigma^2$ 都存在，$X_1,\dots,X_n$ 是来自总体容量为 $n$ 的简单随机样本。则</p>
+<ul>
+<li>$E\bar X=\mu$</li>
+<li>$D\bar X=\sigma^2/n$</li>
+<li>$ES_n^2=\sigma^2$</li>
+</ul>
+<h3 id="常用分布"><a href="#常用分布" class="headerlink" title="常用分布"></a>常用分布</h3><h4 id="卡方分布"><a href="#卡方分布" class="headerlink" title="卡方分布"></a>卡方分布</h4><p><strong>Def</strong>：设$X_1,\dots,X_n$ iid，$N(0,1)$ 的随机变量，则 $\chi^2=\sigma_{i=1}^nX_i^2$ 服从自由度为 $n$ 的 $\chi^2$-分布。</p>
+<p><strong>Thm</strong>：$\chi^2\sim \chi^2(n)$ 则：$f(x)=\frac{1}{2^{n/2}\Gamma(n/2)}e^{n/2-1}e^{-x/2},~x&gt;0$</p>
+<p><strong>Thm</strong>：（可加性）若$X_1\sim \chi^2(m),~X_2\sim \chi^2(n)$ 且 $X_1,X_2$ 独立，则$X_1+X_2\sim\chi^2(m+n)$ </p>
+<p><strong>Thm</strong>：（数字特征）若$X\sim \chi^2(m)$ 则：$EX=n,DX=2n$</p>
+<p><strong>Def</strong>：（上侧 $\alpha$ 分位点）：$P(\chi^2\ge\chi^2_\alpha(n))=\alpha$ 则称 $\chi^2(n)$ 为自由度为 n 的 $\chi^2$-分布的上侧$\alpha$-分位点</p>
+<h4 id="t-分布"><a href="#t-分布" class="headerlink" title="t-分布"></a>t-分布</h4><p><strong>Def</strong>：$X$ 是标准正态分布，$Y$服从自由度为 $n$ 的 $\chi^2$ 分布且相互独立，称随机变量 $T=\frac{X}{\sqrt{Y/n}}$ 服从自由度为 $n$ 的 t-分布。</p>
+<p><strong>Thm</strong>：概率密度为</p>
+<script type="math/tex; mode=display">
+f(t)=\frac{\Gamma(\frac{n+1}{2})}{\Gamma(\frac{n}{2})\sqrt{n\pi}}(1+\frac{t^2}{n})^{-\frac{n+1}{2}}</script><p><strong>Def</strong>（分位点）上侧$\alpha$-分位点</p>
+<h4 id="F-分布"><a href="#F-分布" class="headerlink" title="F-分布"></a>F-分布</h4><p>$X\sim \chi^2(m),~Y\sim\chi^2(n)$ idd. 称$F=\frac{X/m}{Y/n}$服从自由度为 F-分布</p>
+<p><strong>Thm</strong>：密度函数、分位点 $F_{1-\alpha}(m,n)=1/F_\alpha(n,m)$</p>
+<h3 id="正态总体中统计量的分布"><a href="#正态总体中统计量的分布" class="headerlink" title="正态总体中统计量的分布"></a>正态总体中统计量的分布</h3><p><strong>Thm</strong>（单个正态总体统计量的分布）：设$X$ 服从正态<br>分布 $N(\mu,\sigma^2),X_1,\dots,X_n$ 是来自总体 $X$ 容量为 $n$ 的简单随机样本：</p>
+<ol>
+<li>$\displaystyle U=\frac{\bar X-\mu}{\sigma/\sqrt{n}}\sim N(0,1)$</li>
+<li>$\displaystyle\bar X$ 与 $S^2$ 独立</li>
+<li>$\displaystyle W=\frac{(n-1)S^2}{\sigma^2}=\sum (\frac{X-\bar X}{\sigma})^2\sim \chi^2(n-1)$</li>
+<li>$\displaystyle T=\frac{\bar X-\mu}{S}\sqrt{n}\sim t(n-1)$</li>
+</ol>
+<p><strong>Thm</strong>（两个正态总体统计量的分布）：</p>
+<ol>
+<li>$\displaystyle\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{\sqrt{\sigma_1^2/m+\sigma_2^2/n}}\sim N(0,1)$</li>
+<li>$\displaystyle\frac{(m-1)S_{1m}^2}{\sigma^2_1}+\frac{(n-1)S_{2n}^2}{\sigma^2_2}\sim\chi^2(m+n-2)$</li>
+<li>$\displaystyle\sigma_1=\sigma_2=\sigma$ 则 $\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{S_\omega\sqrt{1/m+1/n}}\sim t(m+n-2)$ 其中 $S_\omega=\frac{(m-1)S_{1m}^2+(n-1)S_{2n}^2}{m+n-2}$</li>
+<li>$\displaystyle\frac{S_{1m}^2/\sigma_1^2}{S^2_{2n}/\sigma_2^2}\sim F(m-1,n-1)$</li>
+</ol>
+<div class="note note-info">
+            <p><code>wdtmd！！！</code></p>
+          </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
             <div>
@@ -274,7 +313,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Deep-Learning/">Deep Learning</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
                     
                   </div>
                 
@@ -282,14 +321,37 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Deep-Learning/">Deep Learning</a>
+                      <a class="hover-with-bg" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a>
                     
-                      <a class="hover-with-bg" href="/tags/GCN/">GCN</a>
+                      <a class="hover-with-bg" href="/tags/%E7%BB%9F%E8%AE%A1/">统计</a>
                     
                   </div>
                 
               </div>
               
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/12/23/study/Math/Probabilities/notes7/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">「随机数学与数理统计」7 - 参数估计</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/11/study/Math/Probabilities/notes5/">
+                        <span class="hidden-mobile">「概率统计与随机过程」 5 - 极限定理</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
@@ -500,6 +562,45 @@
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
 
 
 
