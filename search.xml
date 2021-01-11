@@ -3393,22 +3393,24 @@ T'\\N'\\B'
     <url>/2020/11/20/study/Math/ComplexFunctions/ch1/</url>
     <content><![CDATA[<p>复数与复变函数</p>
 <a id="more"></a>
-<h1 id="Ch1-复数与复变函数"><a href="#Ch1-复数与复变函数" class="headerlink" title="Ch1 复数与复变函数"></a>Ch1 复数与复变函数</h1><h2 id="复数的概念与运算"><a href="#复数的概念与运算" class="headerlink" title="复数的概念与运算"></a>复数的概念与运算</h2><h3 id="复数的概念"><a href="#复数的概念" class="headerlink" title="复数的概念"></a>复数的概念</h3><ol>
-<li>定义：$(x,y)$ -&gt; $z=x+iy,i^2=-1$</li>
+<h2 id="Ch1-复数与复变函数"><a href="#Ch1-复数与复变函数" class="headerlink" title="Ch1 复数与复变函数"></a>Ch1 复数与复变函数</h2><h3 id="复数的概念与运算"><a href="#复数的概念与运算" class="headerlink" title="复数的概念与运算"></a>复数的概念与运算</h3><h4 id="复数的概念"><a href="#复数的概念" class="headerlink" title="复数的概念"></a>复数的概念</h4><p><strong>Def</strong>（复数）$(x,y)$ -&gt; $z=x+iy,i^2=-1$</p>
+<ol>
 <li>$\mathrm{Re}(z)$</li>
 <li>$\mathrm{Im}(z)$</li>
 <li>相等：实部虚部对应相等</li>
 </ol>
-<h5 id="复数的四则运算"><a href="#复数的四则运算" class="headerlink" title="复数的四则运算"></a>复数的四则运算</h5><ol>
+<h5 id="复数的代数运算"><a href="#复数的代数运算" class="headerlink" title="复数的代数运算"></a>复数的代数运算</h5><ol>
 <li>加减</li>
 <li>乘除</li>
 </ol>
-<h5 id="满足的运算规律"><a href="#满足的运算规律" class="headerlink" title="满足的运算规律"></a>满足的运算规律</h5><ol>
+<p>满足的运算规律：</p>
+<ol>
 <li>交换</li>
 <li>结合</li>
 <li>分配</li>
 </ol>
 <h5 id="共轭复数"><a href="#共轭复数" class="headerlink" title="共轭复数"></a>共轭复数</h5><p>$\bar z = x - iy$</p>
+<p><strong>共轭复数的性质</strong>：</p>
 <ol>
 <li>$z \bar z = |z|$</li>
 <li>$\overline{z_1\pm z_2} = \bar{z_1}\pm\bar{z_2}$</li>
@@ -3416,9 +3418,8 @@ T'\\N'\\B'
 <li>$z+\bar z = \mathrm{Re}(z)$</li>
 <li>$(z-\bar z)/i = \mathrm{Im}(z)$</li>
 </ol>
-<h3 id="复数的几何表示"><a href="#复数的几何表示" class="headerlink" title="复数的几何表示"></a>复数的几何表示</h3><ol>
-<li><p>点表示：$z=x+iy\leftrightarrow (x,y)$</p>
-<p>复平面、虚轴</p>
+<h4 id="复数的几何表示"><a href="#复数的几何表示" class="headerlink" title="复数的几何表示"></a>复数的几何表示</h4><ol>
+<li><p>点表示：$z=x+iy\leftrightarrow (x,y)$<br>复平面、实轴、虚轴</p>
 </li>
 <li><p>向量表示</p>
 </li>
@@ -3440,51 +3441,47 @@ T'\\N'\\B'
 <p>辐角主值计算：</p>
 <ol>
 <li>求 $\arctan \frac y x$</li>
-<li>求 $\theta_0$</li>
+<li>求 $\theta_0$，注意：$\theta_0\in(-\pi,\pi]$</li>
 </ol>
 <div class="note note-caution">
             <ul><li>$\mathrm{Arg}(z_1z_2)=\mathrm{Arg}z_1+\mathrm{Arg}z_2$</li><li>$\mathrm{Arg}(z_1/z_2)=\mathrm{Arg}z_1-\mathrm{Arg}z_2$</li></ul><p>注意这里指的是集合相等</p><ul><li>$|z_1z_2|=|z_1||z_2|$</li><li>$|z_1/z_2|=|z_1|/|z_2|$</li></ul>
           </div>
-<p>做题全靠猜</p>
-<h3 id="复数的乘幂和方根"><a href="#复数的乘幂和方根" class="headerlink" title="复数的乘幂和方根"></a>复数的乘幂和方根</h3><h5 id="复数的乘幂"><a href="#复数的乘幂" class="headerlink" title="复数的乘幂"></a>复数的乘幂</h5><script type="math/tex; mode=display">
+<h4 id="复数的乘幂和方根"><a href="#复数的乘幂和方根" class="headerlink" title="复数的乘幂和方根"></a>复数的乘幂和方根</h4><h5 id="复数的乘幂"><a href="#复数的乘幂" class="headerlink" title="复数的乘幂"></a>复数的乘幂</h5><script type="math/tex; mode=display">
 \begin{aligned}
 &z=re^{i\theta} = r(\cos\theta+i\sin\theta)\\
 &z^n = z\cdot z\cdot z\cdot\dots\cdot z\\
 &z^n=re^{in\theta}=r(\cos n\theta+i\sin n\theta)
-\end{aligned}</script><h5 id="复数的方根"><a href="#复数的方根" class="headerlink" title="复数的方根"></a>复数的方根</h5><script type="math/tex; mode=display">
+\end{aligned}</script><p><strong>Thm</strong>（棣莫弗公式）$|z|=r=1$ 时：$(\cos \theta+i\sin \theta)^n=\cos n\theta + i \sin n\theta$</p>
+<h5 id="复数的方根"><a href="#复数的方根" class="headerlink" title="复数的方根"></a>复数的方根</h5><script type="math/tex; mode=display">
 \begin{aligned}
 &z=re^{i\theta} = r(\cos\theta+i\sin\theta)\\
 &\sqrt[n]z= \sqrt[n]r(\cos\frac{\theta + 2k\pi}n+i\sin\frac{\theta + 2k\pi}n)\\
-\end{aligned}</script><h3 id="复数在几何上的应用举例"><a href="#复数在几何上的应用举例" class="headerlink" title="复数在几何上的应用举例"></a>复数在几何上的应用举例</h3><div class="note note-primary">
-            <p>$z^n=1$</p>
+\end{aligned}</script><h4 id="复数在几何上的应用举例"><a href="#复数在几何上的应用举例" class="headerlink" title="复数在几何上的应用举例"></a>复数在几何上的应用举例</h4><div class="note note-primary">
+            <p>求解：$z^n=1$</p>
           </div>
 <div class="note note-primary">
-            <ul><li>复数表示复平面上的过$z_1,~z_2$的直线方程：$z-z_1=t(z_2-z_1)$</li></ul>
+            <p>复数表示复平面上的过$z_1,~z_2$的直线方程：$z-z_1=t(z_2-z_1)$</p>
           </div>
 <div class="note note-success">
-            <ul><li>复数表示圆方程：$|z-z_0| = R$</li></ul>
+            <p>复数表示圆方程：$|z-z_0| = R$</p>
           </div>
 <div class="note note-secondary">
             <ol><li>中垂线：$|z-z_1|=|z-z_2|$</li><li>特殊直线：$\mathrm{Im}(i+z)=4$</li></ol>
           </div>
-<h3 id="复球面与无穷远点"><a href="#复球面与无穷远点" class="headerlink" title="复球面与无穷远点"></a>复球面与无穷远点</h3><ul>
-<li>引入无穷远点，表达复数</li>
+<h4 id="复球面与无穷远点"><a href="#复球面与无穷远点" class="headerlink" title="复球面与无穷远点"></a>复球面与无穷远点</h4><ul>
+<li>引入无穷远点，表达复数：扩充复平面</li>
 </ul>
-<h2 id="复变函数的极限与连续性"><a href="#复变函数的极限与连续性" class="headerlink" title="复变函数的极限与连续性"></a>复变函数的极限与连续性</h2><h3 id="复平面上的区域"><a href="#复平面上的区域" class="headerlink" title="复平面上的区域"></a>复平面上的区域</h3><h5 id="区域的概念"><a href="#区域的概念" class="headerlink" title="区域的概念"></a>区域的概念</h5><p><strong>区域：连通的开集</strong></p>
-<!-- TODO: 不是开集的情况 -->
+<h2 id="复变函数的极限与连续性"><a href="#复变函数的极限与连续性" class="headerlink" title="复变函数的极限与连续性"></a>复变函数的极限与连续性</h2><h3 id="复平面上的区域"><a href="#复平面上的区域" class="headerlink" title="复平面上的区域"></a>复平面上的区域</h3><h4 id="区域的概念"><a href="#区域的概念" class="headerlink" title="区域的概念"></a>区域的概念</h4><p><strong>Def</strong>（开集）所有点都是集合的内点</p>
+<p><strong>Def</strong>（区域）连通的开集</p>
 <blockquote>
 <p>开集：$\forall z\in A,\exists U(z)\subset A$，即$\mathrm{int}A = A$</p>
 <ul>
 <li>内点、外点、边界点<br>连通：折线连接</li>
 <li>单连通、复连通（用闭曲线包围部分是否都在原集合内定义）</li>
 </ul>
-</blockquote>
-<ul>
-<li>$z_0$ 的 $\delta$ 邻域</li>
-<li>去心邻域</li>
-</ul>
-<blockquote>
-<p>可以定义 $\infin$的邻域和去心邻域</p>
+<p>$z_0$ 的 $\delta$ 邻域</p>
+<p>去心邻域</p>
+<p>同理定义 $\infin$的邻域和去心邻域</p>
 </blockquote>
 <h5 id="简单曲线、单连通、多连通"><a href="#简单曲线、单连通、多连通" class="headerlink" title="简单曲线、单连通、多连通"></a>简单曲线、单连通、多连通</h5><p><strong>简单曲线</strong>：</p>
 <ul>
@@ -3497,11 +3494,13 @@ T'\\N'\\B'
 <li>单连通</li>
 <li>多连通</li>
 </ul>
-<h3 id="复变函数的概念"><a href="#复变函数的概念" class="headerlink" title="复变函数的概念"></a>复变函数的概念</h3><p><strong>Def1.1 复变函数</strong>：（可以是多值的）</p>
-<p>映射下的象和原象</p>
-<p>复变函数的集合表示</p>
-<h3 id="复变函数的极限和连续性"><a href="#复变函数的极限和连续性" class="headerlink" title="复变函数的极限和连续性"></a>复变函数的极限和连续性</h3><p><strong>Def1.1 极限的定义</strong>：</p>
-<p><strong>Thm1</strong>：设$f$在$z_0$的某个去心领域有定义，则：</p>
+<h4 id="复变函数的概念"><a href="#复变函数的概念" class="headerlink" title="复变函数的概念"></a>复变函数的概念</h4><p><strong>Def</strong>（复变函数）<em>可以是多值的</em></p>
+<ul>
+<li>映射下的象和原象</li>
+<li>复变函数的集合表示</li>
+</ul>
+<h3 id="复变函数的极限和连续性"><a href="#复变函数的极限和连续性" class="headerlink" title="复变函数的极限和连续性"></a>复变函数的极限和连续性</h3><p><strong>Def</strong>（极限）</p>
+<p><strong>Thm</strong>：设$f$在$z_0$的某个去心领域有定义，则：</p>
 <script type="math/tex; mode=display">
 \lim f(z) = A\iff \begin{cases}
    \lim u = \mathrm{Re}(A)\\
@@ -3512,23 +3511,12 @@ T'\\N'\\B'
 <li>局部有界性</li>
 <li>有理运算法则</li>
 </ul>
-<p><strong>Def1.3 连续、在区域内连续</strong></p>
-<p><strong>Thm1.2</strong>：$f$ 在 $z_0$ 连续. $\iff$ $u$，$v$ 在 $(x_0,y_0)$ 同时连续</p>
+<p><strong>Def</strong>（连续、在区域内连续）</p>
+<p><strong>Thm</strong>：$f$ 在 $z_0$ 连续. $\iff$ $u$，$v$ 在 $(x_0,y_0)$ 同时连续</p>
 <ul>
 <li>有理运算不改变连续性</li>
 <li>函数复合不改变连续性</li>
 </ul>
-<hr>
-<p>Homework:</p>
-<p>P24</p>
-<p>1 -&gt; 2, 3</p>
-<p>2</p>
-<p>4 -&gt; 1, 6</p>
-<p>8 -&gt; 3, 5</p>
-<p>12</p>
-<p>14 -&gt; 1, 3</p>
-<p>19</p>
-<p>26 -&gt; 2, 4</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>数学</category>
@@ -3542,44 +3530,42 @@ T'\\N'\\B'
     <title>「复变函数」复变函数的导数和解析函数</title>
     <url>/2020/11/20/study/Math/ComplexFunctions/ch2/</url>
     <content><![CDATA[<p>复变函数的导数和解析函数<br><a id="more"></a></p>
-<h1 id="Ch2-复变函数的导数和解析函数"><a href="#Ch2-复变函数的导数和解析函数" class="headerlink" title="Ch2 复变函数的导数和解析函数"></a>Ch2 复变函数的导数和解析函数</h1><h3 id="解析函数的概念及其判定"><a href="#解析函数的概念及其判定" class="headerlink" title="解析函数的概念及其判定"></a><strong>解析函数的概念及其判定</strong></h3><h5 id="复变函数的导数"><a href="#复变函数的导数" class="headerlink" title="复变函数的导数"></a>复变函数的导数</h5><p><strong>Def</strong>：复变函数的导数、可导、在 D 内可导</p>
-<p>求导公式：有理运算、反函数</p>
-<h5 id="复变函数的可微性"><a href="#复变函数的可微性" class="headerlink" title="复变函数的可微性"></a>复变函数的可微性</h5><ul>
-<li><p><strong>Def</strong>：可微 $\iff$ 可导</p>
-</li>
-<li><p><strong>Thm</strong>：（可导的必要条件）C-R 方程</p>
-</li>
-<li><p><strong>Thm</strong>：（可导的充要条件）</p>
+<h2 id="Ch2-复变函数的导数和解析函数"><a href="#Ch2-复变函数的导数和解析函数" class="headerlink" title="Ch2 复变函数的导数和解析函数"></a>Ch2 复变函数的导数和解析函数</h2><h3 id="解析函数的概念及其判定"><a href="#解析函数的概念及其判定" class="headerlink" title="解析函数的概念及其判定"></a>解析函数的概念及其判定</h3><h4 id="复变函数的导数、微分"><a href="#复变函数的导数、微分" class="headerlink" title="复变函数的导数、微分"></a>复变函数的导数、微分</h4><p><strong>Def</strong>：复变函数的导数、可导、在 D 内可导</p>
+<p>求导公式：有理运算求导、反函数求导</p>
+<p><strong>复变函数的可微性</strong>：</p>
+<p><strong>Def</strong>（可微）$\mathrm dw=f’(z_0)\Delta z$</p>
+<p><strong>Thm</strong>：可微 $\iff$ 可导</p>
+<p><strong>Thm</strong>（可导的必要条件）C-R 方程：</p>
+<script type="math/tex; mode=display">
+\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},
+\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x},</script><p><strong>Thm</strong>（可导的充要条件）</p>
 <ol>
 <li>$u,~v$ 在$(x,y)$可微</li>
 <li>$u,~v$ 在$(x,y)$满足 C-R 方程</li>
 </ol>
-</li>
-</ul>
-<h5 id="解析函数"><a href="#解析函数" class="headerlink" title="解析函数"></a>解析函数</h5><p><strong>Def</strong>：解析</p>
-<ul>
-<li>在区域 D 内可导和解析等价（连通开集）</li>
-</ul>
-<p><strong>Thm</strong>：在区域 D 内解析 $\iff$</p>
+<h4 id="解析函数"><a href="#解析函数" class="headerlink" title="解析函数"></a>解析函数</h4><p><strong>Def</strong>（解析、在区域D内解析）在 $z_0\in C$ 及其某个邻域内处处可导—&gt;解析</p>
+<p><strong>Thm</strong> 设函数 $f(z)=u(x,y)+iv(x,y)$ 定义在区域 D 内，若它的任意一点 $z\in D$ 可导，则必有</p>
+<ol>
+<li>$u,v$ 偏导数在 $(x,y)$ 出存在</li>
+<li>满足 C-R 方程</li>
+</ol>
+<p><em>Inference</em>：在上述定理的条件下，$f(z)$ 在点 $z$ 处的导数为</p>
+<script type="math/tex; mode=display">
+f'(z)=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=
+\frac{1}{i}\frac{\partial u}{\partial y} + \frac{\partial v}{\partial y}</script><p><strong>Thm</strong>：在区域 D 内解析 $\iff$</p>
 <ol>
 <li>$u,~v$ 在 D 可微</li>
 <li>$u,~v$ 在 D 内任一点处满足 C-R 条件</li>
 </ol>
-<!-- Homework
-P47
-1 = 2 4
-2 = 3 4
-3 = 2 4
-6 -->
 <h5 id="解析函数和调和函数"><a href="#解析函数和调和函数" class="headerlink" title="解析函数和调和函数"></a>解析函数和调和函数</h5><blockquote>
 <p>若二元实函数在D内由二阶连续偏导数，且满足Laplace方程$\displaystyle\frac{\partial^2\varphi}{\partial x^2}+\frac{\partial^2\varphi}{\partial y^2} = 0$，则称其为D内的调和函数。</p>
 </blockquote>
 <p><strong>Thm</strong>：$f$解析，则$u,~v$ 是 D 内的调和函数</p>
-<p><strong>Def</strong>：解析函数的虚部 $v$ 称为实部 $u$ 的共轭调和函数。</p>
+<p><strong>Def</strong>（共轭调和函数）解析函数的虚部 $v$ 称为实部 $u$ 的共轭调和函数。</p>
 <blockquote>
 <p>$f = v+iu$不一定解析。</p>
 </blockquote>
-<h3 id="基本初等函数"><a href="#基本初等函数" class="headerlink" title="基本初等函数"></a><strong>基本初等函数</strong></h3><h5 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h5><p>$\displaystyle w = e^z = e^x(\cos y + i \sin y)$</p>
+<h3 id="基本初等函数"><a href="#基本初等函数" class="headerlink" title="基本初等函数"></a>基本初等函数</h3><h4 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h4><p>$\displaystyle w = e^z = e^x(\cos y + i \sin y)$</p>
 <p><strong>性质</strong>：</p>
 <ul>
 <li>$|e^z| = e^x, Arg~e^z = y+2k\pi$</li>
@@ -3590,7 +3576,7 @@ P47
 <div class="note note-primary">
             <ol><li>$y = 0\Rightarrow w = e^x$</li><li>$x = 0\Rightarrow w = e^{iy}=\cos y+i\sin y$</li></ol>
           </div>
-<h5 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h5><p>$\displaystyle w=\mathrm{Ln} z = \ln |z| + i \mathrm{Arg}z =\ln |z| + i (\mathrm{arg}z + 2k\pi)$</p>
+<h4 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h4><p>$\displaystyle w=\mathrm{Ln} z = \ln |z| + i \mathrm{Arg}z =\ln |z| + i (\mathrm{arg}z + 2k\pi)$</p>
 <p><strong>性质</strong>：</p>
 <ul>
 <li>$\mathrm{Ln}z$ 为无穷多值函数</li>
@@ -3603,7 +3589,7 @@ P47
 <blockquote>
 <p>这里就是选取一个合适的 $k$</p>
 </blockquote>
-<h5 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h5><p>$w = z^\alpha = e^{a\mathrm{Ln} z}$</p>
+<h4 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h4><p>$w = z^\alpha = e^{a\mathrm{Ln} z}$</p>
 <ul>
 <li>可能是多值函数：考虑$\alpha$对于$\mathrm{Ln}z = \ln|z| +i(\arg~z+2k\pi)$ 中 $k$ 的影响<ul>
 <li>$\alpha$ 是整数：单值函数</li>
@@ -3614,7 +3600,7 @@ P47
 </li>
 <li>解析性：除<strong>原点</strong>和<strong>负实轴</strong>外的其他点处解析</li>
 </ul>
-<h5 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h5><p>$\sin z = \frac{e^{iz}-e^{iz}}{2i},\qquad\cos z = \frac{e^{iz}+e^{-iz}}{2}$</p>
+<h4 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h4><p>$\sin z = \frac{e^{iz}-e^{iz}}{2i},\qquad\cos z = \frac{e^{iz}+e^{-iz}}{2}$</p>
 <ul>
 <li>以 $2\pi$ 为周期</li>
 <li>三角恒等式成立</li>
@@ -3623,18 +3609,17 @@ P47
 <li>复数的欧拉公式 $e^{iz} = \cos z + i\sin z$ 成立</li>
 <li>$\sin z$ 的零点为 $z= k\pi$ $\cos z$ 的零点为 $z = k\pi + \frac{\pi}{2}$</li>
 </ul>
-<h5 id="双曲函数"><a href="#双曲函数" class="headerlink" title="双曲函数"></a>双曲函数</h5><p>$\sh z=\frac{e^z-e^{-z}}{2},\qquad\ch z=\frac{e^z+e^{-z}}{2}$</p>
+<h4 id="双曲函数"><a href="#双曲函数" class="headerlink" title="双曲函数"></a>双曲函数</h4><p>$\sh z=\frac{e^z-e^{-z}}{2},\qquad\ch z=\frac{e^z+e^{-z}}{2}$</p>
 <ul>
 <li>周期性、奇偶性、解析性</li>
 </ul>
-<h5 id="反三角函数、反双曲函数"><a href="#反三角函数、反双曲函数" class="headerlink" title="反三角函数、反双曲函数"></a>反三角函数、反双曲函数</h5><script type="math/tex; mode=display">
+<h4 id="反三角函数、反双曲函数"><a href="#反三角函数、反双曲函数" class="headerlink" title="反三角函数、反双曲函数"></a>反三角函数、反双曲函数</h4><script type="math/tex; mode=display">
 \begin{cases}
 \mathrm{Arccos}~z =-i\mathrm{Ln}(z+\sqrt{z^2-1})\\
 \mathrm{Arcsin}~z =-i\mathrm{Ln}(iz+\sqrt{1-z^2})\\
 \mathrm{Arch}~z =\mathrm{Ln}(z+\sqrt{z^2+1})\\
 \mathrm{Arsh}~z =\mathrm{Ln}(z+\sqrt{z^2-1})\\
-\end{cases}</script><!-- Homework: 14(2,3)/15(3,5)/20-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+\end{cases}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -3648,87 +3633,49 @@ P47
     <url>/2020/11/20/study/Math/ComplexFunctions/ch3/</url>
     <content><![CDATA[<p>复变函数的积分</p>
 <a id="more"></a>
-<h1 id="Ch3-复变函数的积分"><a href="#Ch3-复变函数的积分" class="headerlink" title="Ch3 复变函数的积分"></a>Ch3 复变函数的积分</h1><h3 id="复变函数积分的概念及其计算"><a href="#复变函数积分的概念及其计算" class="headerlink" title="复变函数积分的概念及其计算"></a>复变函数积分的概念及其计算</h3><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><ul>
-<li><p><strong>Def</strong>：同实函数定义：分割求和 $\displaystyle\int_C f(z)\mathrm dz = \lim \limits_{\delta \rightarrow 0}\sum f(\gamma_k)\delta z_k$</p>
-</li>
-<li><p>对应了两个实函数第二型曲线积分</p>
-</li>
-<li><p>性质：</p>
+<h2 id="复变函数的积分"><a href="#复变函数的积分" class="headerlink" title="复变函数的积分"></a>复变函数的积分</h2><h3 id="复变函数积分的概念及其计算"><a href="#复变函数积分的概念及其计算" class="headerlink" title="复变函数积分的概念及其计算"></a>复变函数积分的概念及其计算</h3><p><strong>Def</strong>（复变函数的积分）同实函数定义：分割求和 $\displaystyle\int_C f(z)\mathrm dz = \lim \limits_{\delta \rightarrow 0}\sum f(\gamma_k)\delta z_k$</p>
+<p><strong>Thm</strong>：设 $f(z)$ 是区域 $D$ 内的连续函数，则复变函数 $f(z)$ 沿 $D$ 内简单光滑有向曲线 $C$ 的积分一定存在，且公式 $\int f(z)\mathrm dz=\int u\mathrm dx-v\mathrm dy + i\int v\mathrm dx+u\mathrm dy$ 成立</p>
+<p><strong>性质</strong>：</p>
 <ul>
 <li>$\displaystyle\int_Lf\mathrm dz=\int_{L_1}f\mathrm dz+\int_{L_2}f(z)\mathrm dz$</li>
 <li>方向性</li>
 <li>线性性质</li>
-<li>$\displaystyle|\int_Lf\mathrm dz| \le \int_L|f||\mathrm dz|\le MS$</li>
+<li>（积分估值不等式）$\displaystyle|\int_Lf\mathrm dz| \le \int_L|f||\mathrm dz|\le MS$</li>
 </ul>
-</li>
-</ul>
-<h5 id="计算方法1：参数方程法"><a href="#计算方法1：参数方程法" class="headerlink" title="计算方法1：参数方程法"></a>计算方法1：<strong>参数方程法</strong></h5><ul>
-<li><p>$\displaystyle let~z=x(t) + iy(t)\rightarrow \int_Lf\mathrm dz=\int f(z(t)) z’(t)\mathrm dt$</p>
-</li>
-<li><p>例：</p>
+<p><strong>计算方法——参数方程法</strong>：</p>
+<p>$\displaystyle let~z=x(t) + iy(t)\rightarrow \int_Lf\mathrm dz=\int f(z(t)) z’(t)\mathrm dt$</p>
+<p>例：</p>
 <script type="math/tex; mode=display">\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1.\end{cases}</script><p>其中 $L$ 为圆<br>利用：$z-z_0=\rho\cdot e^{i\theta}$，并且注意方向！（$\theta$的积分方向上）</p>
-</li>
-</ul>
-<h3 id="Cauchy-积分定理"><a href="#Cauchy-积分定理" class="headerlink" title="Cauchy 积分定理"></a>Cauchy 积分定理</h3><ul>
-<li>若 $f(z) = u(x,y)+iv(x,y)$在单连通域 $D$ 内解析，$f’$ 连续且$u,v$ 有一节连续偏导数，满足 $C-R$ 方程。则对于任一分段光滑的简单闭曲线 $L_1$：$\displaystyle \int _{L_1} f(z)\mathrm dz = 0$</li>
-<li>$f(z)$ 在单连通域 $D$ 内解析，$f’$ 在 $D$ 内连续时，复积分 $\displaystyle \int _Lf(z)\mathrm dz$ 与路径无关</li>
-</ul>
-<h5 id="柯西-古萨基本定理"><a href="#柯西-古萨基本定理" class="headerlink" title="柯西-古萨基本定理"></a>柯西-古萨基本定理</h5><ul>
-<li><strong>Thm</strong>：设 $f(z)$ 在简单闭曲线 $L$ 上以及它所围的区域 $D$ 内解析，则$\displaystyle \int _{L} f(z)\mathrm dz = 0$</li>
-<li><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，对于 $D$ 内任一分段光滑的闭曲线 $L_1$：$\displaystyle \int _{L_1} f(z)\mathrm dz = 0$</li>
-<li><strong>Thm</strong>：（复合闭路定理）设 $L, L_k$ 为n+1条取逆时针方向的简单闭曲线，$L_k$ 互不相交，互不包含，$L, L_k$ 围成复连通域$D$，$f(z)$ 在$\bar D$ 上解析，则：<script type="math/tex; mode=display">\displaystyle\oint_Lf(z)\mathrm dz = \sum_{k=1}^n\oint_{L_k}f(z) \mathrm dz</script></li>
-</ul>
-<blockquote>
+<h3 id="柯西-古萨基本定理及其推广"><a href="#柯西-古萨基本定理及其推广" class="headerlink" title="柯西-古萨基本定理及其推广"></a>柯西-古萨基本定理及其推广</h3><p><strong>Thm</strong>（Cauchy 积分定理）若 $f(z) = u(x,y)+iv(x,y)$在单连通域 $D$ 内解析，$f’$ 连续且$u,v$ 有一节连续偏导数，满足 $C-R$ 方程。则对于任一分段光滑的简单闭曲线 $L_ 1$ 有</p>
+<script type="math/tex; mode=display">
+\displaystyle \int _ {L _ 1} f(z)\mathrm dz = 0</script><p><strong>Thm</strong>：若 $f$ 在单连通区域 $B$ 内处处解析，那么 $f$ 沿着任何 $B$ 内的闭曲线的积分等于 0</p>
+<p><strong>Thm</strong>：$f(z)$ 在单连通域 $D$ 内解析，$f’$ 在 $D$ 内连续时，复积分 $\displaystyle \int _Lf(z)\mathrm dz$ 与路径无关</p>
+<!-- **Thm**（柯西-古萨基本定理）设 $f(z)$ 在简单闭曲线 $L$ 上以及它所围的区域 $D$ 内解析，则$\displaystyle \int _{L} f(z)\mathrm dz = 0$ -->
+<h4 id="复合闭路定理"><a href="#复合闭路定理" class="headerlink" title="复合闭路定理"></a>复合闭路定理</h4><p><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，对于 $D$ 内任一分段光滑的闭曲线 $L _ 1$：$\displaystyle\int _{L_1} f(z)\mathrm dz = 0$</p>
+<p><strong>Thm</strong>（复合闭路定理）设 $L, L_k$ 为n+1条取逆时针方向的简单闭曲线，$L_k$ 互不相交，互不包含，$L, L_k$ 围成复连通域$D$，$f(z)$ 在$\bar D$ 上解析，则：</p>
+<script type="math/tex; mode=display">\displaystyle\oint_Lf(z)\mathrm dz = \sum_{k=1}^n\oint_{L_k}f(z) \mathrm dz</script><blockquote>
 <p>注意曲线的性质：简单闭曲线、闭曲线</p>
 </blockquote>
 <h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><script type="math/tex; mode=display">\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1.\end{cases}</script><p>其中 $L$ 为圆</p>
 <blockquote>
-<p>利用：$z-z_0=\rho\cdot e^{i\theta}$，并且注意方向！（$\theta$的积分方向上）</p>
+<p>利用：$z-z_0=\rho\cdot e^{i\theta}$，并且注意方向！（$\theta$的积分方向）</p>
 </blockquote>
 <p>利用复合闭路定理：$L$ 可以为任意包含$z_0$的闭曲线。</p>
-<ul>
-<li><strong>Thm</strong>：闭路变形定理</li>
-</ul>
+<p><strong>Thm</strong>：闭路变形定理</p>
 <p>重要结论：</p>
 <script type="math/tex; mode=display">
-\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1,n\in \mathrm Z.\end{cases}</script><h5 id="review：2020-11-06-星期五"><a href="#review：2020-11-06-星期五" class="headerlink" title="review：2020/11/06 星期五"></a>review：2020/11/06 星期五</h5><blockquote>
-<ul>
-<li>$\int_Lf\mathrm dz=0$</li>
-<li>$\int_Lf\mathrm dz=\sum\int_{L_k}f\mathrm dz$</li>
-<li>$\int \frac{1}{(z-z_0)^{n}}\mathrm dz$</li>
-<li>$|z| = 1\Rightarrow|\mathrm dz|=|e^{i\theta}i\mathrm d\theta|=d\theta=\frac{1}{iz}\mathrm dz$</li>
-</ul>
-</blockquote>
-<h3 id="原函数与不定积分"><a href="#原函数与不定积分" class="headerlink" title="原函数与不定积分"></a>原函数与不定积分</h3><ul>
-<li><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，则复函数 $F(z)=\int_{z_0}^zf(z)\mathrm dz$ 在 $D$ 内解析，且 $F’=f$</li>
-<li><strong>Def</strong>：（原函数）若存在$\Phi(z),\forall z\in D,\Phi ‘(z)=f(z)$ 称 $\Phi(z)$ 为 $f(z)$ 在 $D$ 内的一个原函数</li>
-</ul>
-<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><ol>
-<li><p>单连通域 $D$ 内的解析函数存在原函数</p>
-</li>
-<li><p>表示全体原函数的表达式：$\int f(z)\mathrm dz$称为$f$的不定积分</p>
-</li>
-</ol>
-<ul>
-<li><strong>Thm</strong>：对于解析函数 $f$，$\Phi(z)$ 是其原函数，则$\int_{z_1}^{z_2}=\Phi(z_2)-\Phi(z_1)$</li>
-</ul>
-<h3 id="柯西积分公式、高阶导数公式"><a href="#柯西积分公式、高阶导数公式" class="headerlink" title="柯西积分公式、高阶导数公式"></a>柯西积分公式、高阶导数公式</h3><ul>
-<li><strong>Thm</strong>：（Cauchy积分公式）$f(z)$ 在 $D$ 和 $D$ 的边界上解析，则 $\forall z\in D, f(z) = \frac{1}{2\pi i}\oint_L\frac{f(\varsigma)}{\varsigma - z}\mathrm d \varsigma$</li>
-</ul>
-<blockquote>
-<p>$\displaystyle L:|z-z_0|=R\Rightarrow f(z_0) = \frac{1}{2\pi}\int_0^{2\pi}f(z_0+Re^{i\theta})\mathrm d\theta$</p>
-</blockquote>
-<h5 id="高阶导数公式"><a href="#高阶导数公式" class="headerlink" title="高阶导数公式"></a>高阶导数公式</h5><ul>
-<li>设 $f$ 在 $D$ 及其边界上解析，则$f$在D内有任意阶导数，且$\forall z\in D$,<br>$\displaystyle f^{(n)}(z) = \frac{n!}{2\pi i}\oint_L\frac{f(\varsigma)}{(\varsigma-z)^{n+1}}\mathrm d\varsigma$</li>
-</ul>
-<h5 id="Thms"><a href="#Thms" class="headerlink" title="Thms"></a>Thms</h5><ul>
-<li><p><strong>Thm</strong>（柯西不等式）设 $f$ 在 $D$ 内解析，$z_0\in D$，圆周 $K_R$ 及其内部均含于 $D$，则$|f^{(n)}(z_0)|\le \frac{n! M(R)}{R^n}$，$M(R) = \max_{|z-z_0|=R}|f(z)|$</p>
-</li>
-<li><p><strong>Thm</strong>（柳维尔定理）$f(z)$ 在整个复平面上解析且有界，则 $f(z)$ 在复平面上恒为常数。</p>
-</li>
-<li><p><strong>Thm</strong>（莫雷拉定理）$f(z)$ 在单连通区域 $D$ 内解析且有界，，且对于任一简单闭曲线$L$上：$\int_Lf(z)\mathrm dz =0$，则$f(z)$ 在 $D$ 内解析。</p>
-</li>
-</ul>
+\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1,n\in \mathrm Z.\end{cases}</script><h3 id="原函数与不定积分"><a href="#原函数与不定积分" class="headerlink" title="原函数与不定积分"></a>原函数与不定积分</h3><p><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，则复函数 $F(z)=\int_{z_0}^zf(z)\mathrm dz$ 在 $D$ 内解析，且 $F’=f$</p>
+<p><strong>Def</strong>（原函数）若存在$\Phi(z),\forall z\in D,\Phi ‘(z)=f(z)$ 称 $\Phi(z)$ 为 $f(z)$ 在 $D$ 内的一个原函数</p>
+<p><strong>性质</strong>：</p>
+<p>单连通域 $D$ 内的解析函数存在原函数</p>
+<p>表示全体原函数的表达式：$\int f(z)\mathrm dz$称为$f$的不定积分</p>
+<p><strong>Thm</strong>：对于解析函数 $f$，$\Phi(z)$ 是其原函数，则$\int_{z_1}^{z_2}=\Phi(z_2)-\Phi(z_1)$</p>
+<h3 id="柯西积分公式、高阶导数公式"><a href="#柯西积分公式、高阶导数公式" class="headerlink" title="柯西积分公式、高阶导数公式"></a>柯西积分公式、高阶导数公式</h3><p><strong>Thm</strong>（Cauchy积分公式）$f(z)$ 在 $D$ 和 $D$ 的边界上解析，则 $\forall z\in D, f(z) = \frac{1}{2\pi i}\oint_L\frac{f(\varsigma)}{\varsigma - z}\mathrm d \varsigma$</p>
+<p><strong>Thm</strong>（解析函数的平均值公式）$\displaystyle L:|z-z_0|=R\Rightarrow f(z_0) = \frac{1}{2\pi}\int_0^{2\pi}f(z_0+Re^{i\theta})\mathrm d\theta$</p>
+<p><strong>Thm</strong>（高阶导数公式）设 $f$ 在 $D$ 及其边界上解析，则$f$在D内有任意阶导数，且$\forall z\in D$,$\displaystyle f^{(n)}(z) = \frac{n!}{2\pi i}\oint_L\frac{f(\varsigma)}{(\varsigma-z)^{n+1}}\mathrm d\varsigma$</p>
+<h4 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h4><p><strong>Thm</strong>（柯西不等式）设 $f$ 在 $D$ 内解析，$z_0\in D$，圆周 $K_R$ 及其内部均含于 $D$，则$|f^{(n)}(z_0)|\le \frac{n! M(R)}{R^n}$，$M(R) = \max_{|z-z_0|=R}|f(z)|$</p>
+<p><strong>Thm</strong>（柳维尔定理）$f(z)$ 在整个复平面上解析且有界，则 $f(z)$ 在复平面上恒为常数。</p>
+<p><strong>Thm</strong>（莫雷拉定理）$f(z)$ 在单连通区域 $D$ 内解析且有界，且对于任一简单闭曲线$L$上：$\int_Lf(z)\mathrm dz =0$，则$f(z)$ 在 $D$ 内解析。</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>数学</category>
@@ -3739,25 +3686,19 @@ P47
       </tags>
   </entry>
   <entry>
-    <title>「复变函数」复数项级数</title>
-    <url>/2020/11/20/study/Math/ComplexFunctions/ch4/</url>
-    <content><![CDATA[<p>复数项级数的概念和性质</p>
-<a id="more"></a>
-<h1 id="复数项级数的概念和性质"><a href="#复数项级数的概念和性质" class="headerlink" title="复数项级数的概念和性质"></a>复数项级数的概念和性质</h1><h3 id="复数项级数"><a href="#复数项级数" class="headerlink" title="复数项级数"></a>复数项级数</h3><ul>
-<li><strong>Def</strong>：无穷复数列 $\{c_n\}\rightarrow_{n\rightarrow \infty} A \iff \forall \varepsilon&gt;0,\exists N,n&gt;N\rightarrow |c_n-A|&lt;\varepsilon$</li>
-<li><strong>Thm</strong>：（判别法则）$c_n=a_n+ib_n$收敛于$a+bi$ iff $a_n\rightarrow a, b_n\rightarrow b$</li>
-<li><strong>Def</strong>：复数项级数$\sum_{n=1}^\infty c_n$，通项 $c_n$。</li>
-<li><strong>Def</strong>：前 n 项之和$\sum_{k=1}^n c_k$</li>
-</ul>
-<h5 id="Thms"><a href="#Thms" class="headerlink" title="Thms"></a>Thms</h5><ul>
-<li><strong>Thm</strong>：（必要条件）级数$\sum c_n$收敛，则 $\lim_{n\rightarrow \infty} c_n=0$</li>
-<li><strong>Thm</strong>：（柯西收敛准则）$\sum c_n$ 收敛 $\iff \forall \varepsilon&gt;0,\exists N,\forall p\in N_+, n&gt;N\rightarrow|S_{n+p} - S_n|\le \varepsilon$</li>
-</ul>
-<h5 id="按模收敛"><a href="#按模收敛" class="headerlink" title="按模收敛"></a>按模收敛</h5><ul>
-<li><strong>Def</strong>：（按模收敛）$\sum |c_n|$</li>
-<li><strong>Def</strong>：（条件收敛）$\sum |c_n|$ 不收敛，$\sum c_n$ 收敛</li>
-</ul>
-<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><ul>
+    <title>「复变函数」复变函数积分</title>
+    <url>/2021/01/11/study/Math/ComplexFunctions/ch4/</url>
+    <content><![CDATA[<h2 id="复数项级数的概念和性质"><a href="#复数项级数的概念和性质" class="headerlink" title="复数项级数的概念和性质"></a>复数项级数的概念和性质</h2><h3 id="复数项级数"><a href="#复数项级数" class="headerlink" title="复数项级数"></a>复数项级数</h3><p><strong>Def</strong>：无穷复数列 $\{c_n\}\rightarrow_{n\rightarrow \infty} A \iff \forall \varepsilon&gt;0,\exist N,n&gt;N\rightarrow |c_n-A|&lt;\varepsilon$</p>
+<p><strong>Thm</strong>（判别法则）$c_n=a_n+ib_n$ 收敛于 $a+bi~\iff~a_n\rightarrow a, b_n\rightarrow b$</p>
+<p><strong>Def</strong>（复数项级数）$\sum_{n=1}^\infty c_n$，通项 $c_n$。</p>
+<p><strong>Def</strong>（前 n 项之和）$\sum_{k=1}^n c_k$</p>
+<p><strong>Thm</strong>：（必要条件）级数 $\sum c_n$ 收敛，则 $\lim_{n\rightarrow \infty} c_n=0$</p>
+<p><strong>Thm</strong>：（柯西收敛准则）$\sum c_n$ 收敛 $\iff \forall \varepsilon&gt;0,\exist N,\forall p\in N_+, n&gt;N\rightarrow|S_{n+p} - S_n|\le \varepsilon$</p>
+<h4 id="按模收敛"><a href="#按模收敛" class="headerlink" title="按模收敛"></a>按模收敛</h4><p><strong>Def</strong>（按模收敛）$\sum |c_n|$</p>
+<p><strong>Thm</strong>（绝对收敛准则）当 $\sum |c_n|$ 收敛时，$\sum c_n$ 收敛</p>
+<p><strong>Def</strong>（条件收敛）$\sum |c_n|$ 不收敛，$\sum c_n$ 收敛</p>
+<p><strong>性质</strong>：</p>
+<ul>
 <li>$\sum c_n=s$，$k$为任意常数，则$\sum kc_n=k\sum c_n$</li>
 <li>线性性质</li>
 <li>去掉或加上有限项不改变级数的敛散性。</li>
@@ -3766,13 +3707,51 @@ P47
 </ul>
 </li>
 </ul>
-<blockquote>
+<h3 id="幂级数"><a href="#幂级数" class="headerlink" title="幂级数"></a>幂级数</h3><h4 id="函数项级数"><a href="#函数项级数" class="headerlink" title="函数项级数"></a>函数项级数</h4><p>若存在$\sum u_n(z_0)$ 收敛，则称$z_0$ 为收敛点；收敛点的全体为收敛域 $D$。</p>
+<p>对于任一 $z\in D$，有一个确定的和 $S(z)$ 称为和函数。</p>
+<p>如等比级数：$\sum z_n$ 当 $|z|&lt;1$ 时，$|z|=1,~\theta = 2k\pi$ 时收敛，其他情况下发散。</p>
+<h4 id="幂级数的收敛性"><a href="#幂级数的收敛性" class="headerlink" title="幂级数的收敛性"></a>幂级数的收敛性</h4><p><strong>Def</strong>（$(z-z_0)$ 的幂级数）$\sum c_i(z-z_0)^i$</p>
+<p><strong>Thm</strong>（Abel 定理）</p>
 <ul>
-<li>P78: 15 23 28(1) 29(3)</li>
-<li>P104: 1 2 4 3(2 3 5)</li>
+<li>若$\sum c_i(z-z_0)^i$ 在 $z=z_0\ne 0$ 收敛，则对$\forall |z|&lt; |z_0|$ 绝对收敛</li>
+<li>若$\sum c_i(z-z_0)^i$ 在 $z=z_0\ne 0$ 发散，则对$\forall |z|&gt; |z_0|$ 发散</li>
 </ul>
-<p>下次习题课</p>
-</blockquote>
+<p><strong>Thm</strong>：若$\lim |c_{n+1}/c_n|=\lambda \ne 0$ or $\lim |c_n|^{1/n}=\lambda \ne 0$ 则 $R=1/\lambda$</p>
+<p><strong>性质</strong>：</p>
+<ol>
+<li>代数运算（线性性质）</li>
+<li>柯西乘积</li>
+</ol>
+<h4 id="幂级数的收敛圆和收敛半径"><a href="#幂级数的收敛圆和收敛半径" class="headerlink" title="幂级数的收敛圆和收敛半径"></a>幂级数的收敛圆和收敛半径</h4><p>仅有三种情况：</p>
+<ol>
+<li>在 $z=0$ 收敛</li>
+<li>在圆域内收敛</li>
+<li>在复平面内收敛</li>
+</ol>
+<h5 id="求法"><a href="#求法" class="headerlink" title="求法"></a>求法</h5><p><strong>Thm</strong>：若：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\lim_{n\rightarrow \infty}\left|\frac{c_{n+1}}{c_n}\right|=\lambda\ne 0\\
+&\quad or\\
+&\lim_{n\rightarrow \infty}\sqrt[n]{|c_n|}=\lambda\ne 0
+\end{aligned}</script><p>则其收敛半径为$\displaystyle R=\frac{1}{\lambda}$</p>
+<p><strong>Thm</strong>：设$\sum c_nz^n$的收敛半径为 $R&gt;0$ 和函数为 $S(z)$ 则：</p>
+<ol>
+<li>和函数在 $|z|&lt;R$ 解析</li>
+<li>$S(z)$ 可以逐项求导、逐项积分</li>
+</ol>
+<h3 id="Taylor-级数"><a href="#Taylor-级数" class="headerlink" title="Taylor 级数"></a>Taylor 级数</h3><p><strong>Def</strong>（展开为幂级数）若 $f$ 在 $z_0$ 邻域内有任意阶导数，则$\sum \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n$ 为 $f$ 在 $z_0$ 的 Taylor 级数，当 $z_0=0$ 时，为麦克劳林级数。</p>
+<p><strong>Thm</strong>：$f$ 在 $D$ 内解析，$z_0\in D$ 则当 $|z-z_0|&lt;R$ 时，$f(z)$ 都可以唯一的展开为 $z-z_0$ 的幂级数。（$R$ 为 $x_0$ 到边界的最小距离）</p>
+<p><strong>Thm</strong>：$f$ 在 $D$ 内解析，$z_0\in D$，$d$为到边界上各个点的最短距离，当 $|z-z_0|&lt;d$ 时，$f(z)$ 可以唯一的展开为幂级数</p>
+<p><em>Inference</em>：$f$ 在 $D$ 内解析，$z_0\in D$，$\alpha$ 为距离 $z _ 0$ 最近的一个奇点，则使得展开成立的 $R=|\alpha-z_0|$</p>
+<h3 id="洛朗级数"><a href="#洛朗级数" class="headerlink" title="洛朗级数"></a>洛朗级数</h3><h4 id="解析函数的洛朗展开定理"><a href="#解析函数的洛朗展开定理" class="headerlink" title="解析函数的洛朗展开定理"></a>解析函数的洛朗展开定理</h4><p><strong>Def</strong>（双边幂级数）$\sum_{-\infty}^{\infty}c_n(z-z_0)^n$ （其在收敛圆环域$R_1&lt;|z-z_0|&lt;R_2$ 内解析）</p>
+<p><strong>Thm</strong>：$f(z)$ 在圆环域内解析，则在圆域内 $f(z)$ 可以唯一的表示为双边幂级数 $f(z)=\sum_{-\infty}^{\infty}c_n(z-z_0)^n$</p>
+<p>其中：$\displaystyle c_n=\frac{1}{2\pi i}\int\frac{f(z)}{(z-z_0)^{n+1}}\mathrm dz \quad(n=0,\pm 1, \pm 2,…)$</p>
+<p><strong>求展开的方法</strong>：</p>
+<ol>
+<li>直接展开法</li>
+<li>简介展开法</li>
+</ol>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>数学</category>
@@ -6305,9 +6284,9 @@ t'&=t
 </ul>
 <h3 id="常用分布"><a href="#常用分布" class="headerlink" title="常用分布"></a>常用分布</h3><h4 id="卡方分布"><a href="#卡方分布" class="headerlink" title="卡方分布"></a>卡方分布</h4><p><strong>Def</strong>：设$X_1,\dots,X_n$ iid，$N(0,1)$ 的随机变量，则 $\chi^2=\sigma_{i=1}^nX_i^2$ 服从自由度为 $n$ 的 $\chi^2$-分布。</p>
 <p><strong>Thm</strong>：$\chi^2\sim \chi^2(n)$ 则：$f(x)=\frac{1}{2^{n/2}\Gamma(n/2)}e^{n/2-1}e^{-x/2},~x&gt;0$</p>
-<p><strong>Thm</strong>：（可加性）若$X_1\sim \chi^2(m),~X_2\sim \chi^2(n)$ 且 $X_1,X_2$ 独立，则$X_1+X_2\sim\chi^2(m+n)$ </p>
-<p><strong>Thm</strong>：（数字特征）若$X\sim \chi^2(m)$ 则：$EX=n,DX=2n$</p>
-<p><strong>Def</strong>：（上侧 $\alpha$ 分位点）：$P(\chi^2\ge\chi^2_\alpha(n))=\alpha$ 则称 $\chi^2(n)$ 为自由度为 n 的 $\chi^2$-分布的上侧$\alpha$-分位点</p>
+<p><strong>Thm</strong>（可加性）若$X_1\sim \chi^2(n),~X_2\sim \chi^2(n)$ 且 $X_1,X_2$ 独立，则$X_1+X_2\sim\chi^2(m+n)$ </p>
+<p><strong>Thm</strong>（数字特征）若$X\sim \chi^2(m)$ 则：$EX=n,DX=2n$</p>
+<p><strong>Def</strong>（上侧 $\alpha$ 分位点）：$P(\chi^2\ge\chi^2_\alpha(n))=\alpha$ 则称 $\chi^2(n)$ 为自由度为 n 的 $\chi^2$-分布的上侧$\alpha$-分位点</p>
 <h4 id="t-分布"><a href="#t-分布" class="headerlink" title="t-分布"></a>t-分布</h4><p><strong>Def</strong>：$X$ 是标准正态分布，$Y$服从自由度为 $n$ 的 $\chi^2$ 分布且相互独立，称随机变量 $T=\frac{X}{\sqrt{Y/n}}$ 服从自由度为 $n$ 的 t-分布。</p>
 <p><strong>Thm</strong>：概率密度为</p>
 <script type="math/tex; mode=display">
@@ -6328,9 +6307,7 @@ f(t)=\frac{\Gamma(\frac{n+1}{2})}{\Gamma(\frac{n}{2})\sqrt{n\pi}}(1+\frac{t^2}{n
 <li>$\displaystyle\sigma_1=\sigma_2=\sigma$ 则 $\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{S_\omega\sqrt{1/m+1/n}}\sim t(m+n-2)$ 其中 $S_\omega=\frac{(m-1)S_{1m}^2+(n-1)S_{2n}^2}{m+n-2}$</li>
 <li>$\displaystyle\frac{S_{1m}^2/\sigma_1^2}{S^2_{2n}/\sigma_2^2}\sim F(m-1,n-1)$</li>
 </ol>
-<div class="note note-info">
-            <p><code>wdtmd！！！</code></p>
-          </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -6475,5 +6452,406 @@ L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)</script><p><s
         <tag>概率论</tag>
         <tag>统计</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>「复变函数」留数及其应用</title>
+    <url>/2021/01/11/study/Math/ComplexFunctions/ch5/</url>
+    <content><![CDATA[<h2 id="留数及其应用"><a href="#留数及其应用" class="headerlink" title="留数及其应用"></a>留数及其应用</h2><h3 id="孤立奇点"><a href="#孤立奇点" class="headerlink" title="孤立奇点"></a>孤立奇点</h3><p><strong>Def</strong>（孤立奇点）$f(z)$ 在 $z_0$ 不解析，在其某个去心邻域内解析，则称$z_0$为 $f(z)$ 的孤立奇点</p>
+<p><strong>可去奇点</strong>：Laurent 级数不含有负幂项 -&gt; 令 $f(z_0)=c_0$</p>
+<ul>
+<li>只需要重新定义 $f(z_0)=c_0$ 就可以解析，例如 $(e^z-1) / z,\quad z=0$</li>
+</ul>
+<p><strong>（m 阶）极点</strong>：负幂项只有有限个。</p>
+<ul>
+<li>$\lim_{z\rightarrow z_0} f(z)=\infin$</li>
+</ul>
+<p><strong>本性奇点</strong>：负幂项有无穷多项。</p>
+<p><strong>Thm</strong>：设函数 $f(z)$ 在 $0&lt;|z-z_0|&lt;\delta$ 内解析，若 $z_0$ 为本性奇点，则 $\forall a,\exists\{z_n\},\lim_{z_n\rightarrow z_0}f(z_0) = a$</p>
+<h4 id="零点和极点的关系"><a href="#零点和极点的关系" class="headerlink" title="零点和极点的关系"></a>零点和极点的关系</h4><p><strong>Def</strong>（零点）$f(z_0)=0$ 则称 $z_0$ 为 $f(z_0)$ 的零点</p>
+<p><strong>Def</strong>（m 级零点）若 $f(z)=(z-_0)^m\varphi(z)$ 在 $z_0$ 处解析，且 $\varphi(z)$ 在 $z_0$ 处解析 $\varphi(z_0)\ne0$ 则称 $z_0$ 为 $f(z)$ 的 m 级零点</p>
+<p><strong>Thm</strong>：若 $f$ 在 $z_0$ 解析，则： $z_0$ 为 m 阶零点 $\iff f^{(n)}(z_0)=0, (n &lt; m)~,f^{(m)}\ne 0$</p>
+<p><strong>Thm</strong>：若 $z_0$ 是 $f(z)$ 的 m 阶极点 $\iff$ $z_0$ 是 $1/f(z)$ 的 m 阶零点。</p>
+<p><strong>Thm</strong>：若 $z_0$ 为 $f,g$ 的 $m, n (m&lt;n)$ 级零点，则 $z_0$ 为 $f(z)/g(z)$ 的 $m - n$ 阶零点，为 $f(z)g(z)$ 的 $m+n$ 阶零点。</p>
+<h4 id="在无穷远点的形态"><a href="#在无穷远点的形态" class="headerlink" title="在无穷远点的形态"></a>在无穷远点的形态</h4><p><strong>Def</strong>：若 $f(z)$ 在无穷远点$z=\infin$ 的去心邻域 $U(\infty)=\{z|0&lt;R&lt;|z|&lt;\infty\}$ 内解析，则称 $\infin$ 为 f 的孤立奇点。</p>
+<p><strong>Def</strong>：若 $t=0$ 是 $\displaystyle\varphi(t)=f(\frac 1 t)$ 的可去奇点，m 级极点，本性极点，则 $t=\infin$ 是 $f(z)$ 的可去奇点，m 级极点，本性极点。</p>
+<h3 id="留数和留数定理"><a href="#留数和留数定理" class="headerlink" title="留数和留数定理"></a>留数和留数定理</h3><p><strong>Def</strong>（留数）设$z_0$为 $f(z)$ 的有限孤立奇点，我们把 $f(z)$ 在 $z_0$ 的去心邻域内的洛朗级数展开式两端逐项积分留下的积分值除以 $2\pi i$ 后得到的数称为 $f(z)$ 在 $z_0$ 的留数：$\mathrm{Res}[f(z),z_0]=\frac{1}{2\pi i}\oint f(z) dz=c_{-1}$</p>
+<p><strong>Def</strong>（无穷远处的留数）$Res[f(z),+\infin]=\frac{1}{2\pi i}\oint_{L-}f(z)=-C_{-1}$（f 在圆环域 $0&lt;R&lt;|z|&lt;\infin$ 解析）</p>
+<p><em>留数计算方法</em>：</p>
+<ol>
+<li>若 $z_0$ 为可去奇点：$Res[f,z_0]=c_{-1}=0$</li>
+<li>1 级极点：$Res[f,z_0]=\lim_{z\rightarrow z_0}(z-z_0)f(z)$</li>
+<li>m 级极点：$Res[f,z_0]=\frac{1}{(m-1)!}]\lim_{z-z_0}\frac{\mathrm d^{m-1}}{\mathrm dz^{m-1}}[(z-z_0)^mf(z)]$</li>
+<li>若 $f(z)=P(z)/Q(z)$，$P,Q$ 解析，且 $P(z_0)\ne 0,~Q(z_0) = 0,~Q’(z_0)\ne 0$ 则 $\displaystyle Res=\frac{P(z_0)}{Q’(z_0)}$</li>
+<li>$\displaystyle Res[f(z),\infty]=-Res[-\frac{1}{z^2}f(\frac{1}{z}),0 ]$</li>
+</ol>
+<p><strong>Thm</strong>（留数定理）设函数 $f(z)$ 在 $D$ 内除了有限个孤立奇点外处处解析，$L$是$D$ 内的一个逆时针的简单闭曲线，则$\displaystyle\oint f(z)\mathrm dz =2\pi i\sum_{k=1}^m\mathrm{Res}[f(z),z_k]$</p>
+<p><strong>Thm</strong>：若函数$f(z)$ 在扩充复平面内处有限个孤立奇点外解析，则 $f(z)$ 在各个极点的留数和为 0：$\displaystyle\mathrm{Res}[f(z),+\infin]+\sum\mathrm{Res}[f(z),z_k]=0$</p>
+<h3 id="利用留数计算某些实积分"><a href="#利用留数计算某些实积分" class="headerlink" title="利用留数计算某些实积分"></a>利用留数计算某些实积分</h3><h4 id="∫R-cos-θ-sin-θ-dθ"><a href="#∫R-cos-θ-sin-θ-dθ" class="headerlink" title="∫R(cos θ, sin θ) dθ"></a>∫R(cos θ, sin θ) dθ</h4><p>设 $z=e^{i\theta}$ 则：</p>
+<script type="math/tex; mode=display">
+\oint_{0}^{2\pi}R(\cos \theta,\sin\theta)\mathrm d\theta=\oint_{|z|=1}\frac{1}{iz}R(\frac{z+z^{-1}}{2},\frac{z-z^{-1}}{2i})\mathrm dz</script><h4 id="∫R-x-dx"><a href="#∫R-x-dx" class="headerlink" title="∫R(x) dx"></a>∫R(x) dx</h4><p>其中</p>
+<script type="math/tex; mode=display">
+R(x)=\frac{P_m(x)}{Q_n(x)}=\frac{a_0+a_1x+\cdots+a_mx^m}{b_0+b_1x+\cdots+b_nx^n}</script><p>满足：</p>
+<ul>
+<li>$n-m\ge2$</li>
+<li>在实轴上$Q_n(z)\ne 0$</li>
+</ul>
+<p>则：</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}R(x)\mathrm dx =2\pi i\sum Res[R(z),z_k]</script><p>其中 $z_k$ 为上半平面内所有奇点</p>
+<h4 id="∫-R-x-·-exp-i·a·x-dx"><a href="#∫-R-x-·-exp-i·a·x-dx" class="headerlink" title="∫ R(x) · exp(i·a·x) dx"></a>∫ R(x) · exp(i·a·x) dx</h4><script type="math/tex; mode=display">
+R=P(x)/Q(x)</script><p>其中 $m-n\ge 1,Q(x)\ne 0$</p>
+<p>则：</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}R(x)e^{iax}\mathrm dx = 2\pi i\sum Res(R(z)e^{iax},z_k)</script><p>其中 $z_k$ 为上半平面内所有奇点</p>
+<p>也就是：</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}R(x)\cos ax\mathrm dx+i\int_{-\infty}^{\infty}R(x)\sin ax\mathrm dx = 2\pi i\sum Res(R(z)e^{iax},z_k)</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>复变函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「复变函数」共形映射</title>
+    <url>/2021/01/11/study/Math/ComplexFunctions/ch6/</url>
+    <content><![CDATA[<p>:no_mouth:</p>
+<a id="more"></a>
+<h2 id="共形映射"><a href="#共形映射" class="headerlink" title="共形映射"></a>共形映射</h2><h3 id="共形映射的概念"><a href="#共形映射的概念" class="headerlink" title="共形映射的概念"></a>共形映射的概念</h3><h4 id="解析函数导数的几何意义"><a href="#解析函数导数的几何意义" class="headerlink" title="解析函数导数的几何意义"></a>解析函数导数的几何意义</h4><ol>
+<li><p>复平面上有向曲线的切向量：$z=z(t)$ 的切向量为 $z’(t)$</p>
+</li>
+<li><p>导数幅角的几何意义：表示曲线 $C$ 经过 $w=f(z)$ 后在 $z_0$ 的转动角，且大小和方向仅与 $z_0$ 有关，而与 $C$ 无关。</p>
+</li>
+</ol>
+<p><em>旋转角的不变性</em>：</p>
+<p>函数 $w=f(z)$ 在 D 内解析，且 $f’\ne0$ 则曲线 $L$ 的象曲线方程为：</p>
+<p>$\Gamma:w=f(z(t)),~t\in[\alpha,\beta]$，$\Gamma$ 在 $w=w(t_0)$ 的邻域内光滑，且：</p>
+<p>$w’(t_0)=f’(z)z’(t_0)\ne 0$ 则$\Gamma$ 在$w_0=f(z_0)$ 的切向量为 $w’(t_0)$</p>
+<p>则：$Arg~w’(t_0)=Arg~f’(z_0)+Arg~z’(t_0)$</p>
+<ol>
+<li>导数模 $|f’|$ 的几何意义：经过映射后 $z_0$ 的任何曲线在 $z_0$ 的伸缩率。$|f’(z_0)|=\lim_{z\rightarrow z_0} \left|\frac{w-w_0}{z-z_0}\right|$</li>
+</ol>
+<p><em>伸缩率不变性</em>：解析函数，伸缩率与曲线 $C$ 无关，具有伸缩率不变性。</p>
+<p><strong>Thm</strong>：设函数 $f$ 在 D 内解析，且 $z_0\in D,~f’(z_0)\ne 0$ 则该映射在该点处有保角性和伸缩率不变性</p>
+<h4 id="共形映射的概念和单叶解析函数的共形性"><a href="#共形映射的概念和单叶解析函数的共形性" class="headerlink" title="共形映射的概念和单叶解析函数的共形性"></a>共形映射的概念和单叶解析函数的共形性</h4><p><strong>Def</strong>（保角）</p>
+<ul>
+<li>函数在某一点处具有保角性和伸缩率不变性 $\implies$ <strong>保角的</strong></li>
+<li>函数在 $D$ 内每一点处都是<strong>保角的</strong> $\implies$ <strong>保角映射</strong></li>
+<li>$D$内的单叶、保角映射 $\implies$ 共形映射</li>
+</ul>
+<p><strong>Thm</strong>：$f$ 为 $D$ 内的解析函数，$z_0\in D$ 若 $f’\ne 0$ 则在$z_0$是保角的。若对任何 $z\in D$ 都有 $f’\ne 0$ 则为保角映射</p>
+<p><strong>Thm</strong>：$w=f(z)$ 是 $D$ 内的单叶映射，则它将 $z$ 平面上的区域 $D$ 共形映射为 $w$ 平面上的区域 $G=f(D)$ 它的反函数 $z=f^{-1}(w)$ 在 $G$ 内单叶解析，且：$[f^{-1}(w)]’=\frac{1}{f’(z)}$</p>
+<div class="note note-primary">
+            <h2 id="review"><a href="#review" class="headerlink" title="review"></a>review</h2><ol><li>复数的概念：<ol><li>形式：（指数、三角、$x+iy$）</li><li>模长、幅角（<em>辐角主值</em>）</li><li>幂函数 $z^n, z^{\frac{1}{n}}$</li><li>初等函数的计算</li></ol></li><li>积分<ol><li>L 不封闭、L 封闭</li><li>留数定理<ol><li>点的分类</li><li>计算留数</li></ol></li></ol></li></ol>
+          </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>高等数学</tag>
+        <tag>复变函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/01/09/study/Math/Probabilities/notes10/</url>
+    <content><![CDATA[<h2 id="马尔科夫链"><a href="#马尔科夫链" class="headerlink" title="马尔科夫链"></a>马尔科夫链</h2><h3 id="马尔科夫链的基本概念"><a href="#马尔科夫链的基本概念" class="headerlink" title="马尔科夫链的基本概念"></a>马尔科夫链的基本概念</h3><p><strong>Def</strong>（马尔科夫链）随机过程 $\{X_n,n\ge 0\}$ 如果满足如下条件：</p>
+<ol>
+<li>状态空间 $I=\{x_0, x_1, …, x_n,…\}$ 为可数集</li>
+<li>对于一切 $n\ge 1$ 和所有的 $x$, $x_{i_0}, x_{i_1},…,x_{i_{n-1}}\in I$ 都有</li>
+</ol>
+<script type="math/tex; mode=display">
+P(X_n=x|X_0=x_{i_0},X_1=X_{i_1},...,X_{n-1}=x_{i_{n-1}})=P(X_n=x|X_{n-1}=x_{n-1})</script><p>则称 $\{X_n,n\ge 0\}$ 是马尔科夫链。</p>
+<p><strong>Def</strong>（n 步转移概率）设 $\{X_n,n\ge 0\}$ 是一个马尔科夫链，称 $p_{ij}(m,m+n)=P(X_{m+n}=j|X_m=i)$ 为马氏链的 n 步转移概率（$\forall i,j\in I$）。</p>
+<p>由 $p_{ij}(m,m+n)$ 组成的矩阵 $P(m,m+n)=(p_{ij}(m,m+n))$ 称为 $\{X_n,n\ge 0\}$ 的 <strong>n 步转移概率矩阵</strong>。</p>
+<p><strong>Def</strong>（齐次的马尔科夫链）设 $\{X_n,n\ge 0\}$ 为一马尔科夫链，如果对所有的 $m\ge 0$，$n\ge 1, i,j\in I$ 有 $P(X_{m+n}=j|X_m=i)=P(X_n=j|X_0=i)$ 则称为齐次的马氏链。</p>
+<p>此时，一步转移概率矩阵记为 $P=P(1)=(p_{ij})$。</p>
+<p><strong>Thm</strong>：若对于一切的 $n$ 和 $i,j\in I$ 有：</p>
+<script type="math/tex; mode=display">
+P(X_{n+1}=j|X_n=i)=P(X_1=j|X_0=i)</script><p>则 $\{X_n,n\ge 0\}$ 是齐次的马氏链</p>
+<p><strong>Thm</strong>：齐次的马氏链的 $P(n)$ 有：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+    p_{ij}\ge 0,\\
+    \sum p_{ij}=1
+\end{cases}</script><h3 id="多步转移概率的确定"><a href="#多步转移概率的确定" class="headerlink" title="多步转移概率的确定"></a>多步转移概率的确定</h3><p><strong>Pre</strong>（条件的全概率公式）设随机事件 $A_1,…A_n,…$ 构成完备事件组：</p>
+<script type="math/tex; mode=display">
+\bigcup_{i=1}^\infty A_i=\Omega,A_iA_j=\varnothing</script><p>则：$P(B|C)=\sum_{i=1}^\infty P(A_i|C)P(B|A_iC)$</p>
+<p><strong>Thm</strong>：设 $\{X_n,n\ge 0\}$ 是齐次马尔科夫链，其状态空间为 $I=\{0,1,…\}$ n 步转移矩阵为 $P(n)$。则对于任意时刻 $m,n\ge 1$，有$P(m+n)=P(m)P(n)$（C-K 方程）</p>
+<p>根据 C-K 方程：$P(n)=P^n$</p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+  </entry>
+  <entry>
+    <title>「随机数学与数理统计」8 - 假设检验</title>
+    <url>/2020/12/23/study/Math/Probabilities/notes8/</url>
+    <content><![CDATA[<a id="more"></a>
+<h2 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a>假设检验</h2><h3 id="假设检验的基本概念"><a href="#假设检验的基本概念" class="headerlink" title="假设检验的基本概念"></a>假设检验的基本概念</h3><p><em>假设检验的基本步骤</em>：</p>
+<ol>
+<li>建立假设：<ul>
+<li>在假设检验中，通常把一个被检验的假设称为原假设 $H_0$，将不应轻易加以否定的假设作为原假设。当 $H_0$ 被拒绝时而接受的假设称为备择假设 $H_1$，它们常常成对出现。</li>
+<li>例如：$H_0:\theta \ge 10,H_1:\theta &lt; 10$</li>
+</ul>
+</li>
+<li>选择检验统计量，给出拒绝域形式<ul>
+<li>由样本对原假设进行判断总是通过一个统计量完成的，该统计量被称为检验统计量。使得原假设被拒绝的样本观测值所在的区域称为拒绝域 $W$。例如：$W=\{(x_1,x_2,…,x_n):\bar x \le c\}$</li>
+</ul>
+</li>
+<li>选择显著性水平 $\alpha$<ul>
+<li>预先给定数 $\alpha$（显著性水平），根据：$P(reject~H_0|H_0~right)\le\alpha$</li>
+</ul>
+</li>
+<li>给出拒绝域，确定显著性水平后，可以给出检验的拒绝域 $W$</li>
+<li>做出判断<ul>
+<li>给出了观察值 $x_1,…,x_n$ 若 $(x_1,…,x_n)\in W$ 则拒绝 $H_0$；反之接受 $H_0$</li>
+</ul>
+</li>
+</ol>
+<p><em>两类错误</em>：</p>
+<ol>
+<li>第一类错误（$H_0$ 成立，而样本满足拒绝域）的概率 $\alpha$</li>
+<li>第二类错误（$H_0$ 不成立，而样本不满足拒绝域）的概率 $\beta$</li>
+</ol>
+<h3 id="单个正态总体参数的假设检验"><a href="#单个正态总体参数的假设检验" class="headerlink" title="单个正态总体参数的假设检验"></a>单个正态总体参数的假设检验</h3><h4 id="均值-μ-的检验-（σ-已知）"><a href="#均值-μ-的检验-（σ-已知）" class="headerlink" title="均值 μ 的检验 （σ 已知）"></a>均值 μ 的检验 （σ 已知）</h4><p>检验统计量：$\displaystyle U=\frac{\bar x-\mu_0}{\sigma/\sqrt n}$</p>
+<p><em>双边检验</em>：$H_0:\mu=\mu_0\leftrightarrow H_1:\mu\ne\mu_0$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    &U=\frac{\bar{X}-\mu_0}{\sigma/\sqrt n}\sim N(0,1)\\
+    &P(reject~H_0|H_0~right)\le \alpha
+\end{aligned}</script><p>$\bar X$ 为 $\mu$ 的无偏估计则：$\displaystyle P(reject~H_0|H_0~right)=P(\frac{|\bar{X}-\mu_0|}{\sigma/\sqrt n}\ge \frac{k}{\sigma/\sqrt n})$</p>
+<p>拒绝域为：</p>
+<script type="math/tex; mode=display">
+W=\left\{ (x_1,...,x_n)||\bar x-\mu_0|\ge \frac{\sigma}{\sqrt n}u_{\alpha/2} \right\}</script><p><em>单边右检验</em>：$H_0:\mu\le \mu_0$</p>
+<script type="math/tex; mode=display">
+P(\frac{\bar X-\mu_0}{\sigma /\sqrt n}\ge \frac{k}{\sigma /\sqrt n})\le \alpha</script><p>拒绝域为：</p>
+<script type="math/tex; mode=display">
+S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \ge \frac{\sigma}{\sqrt n}u_\alpha \right\}</script><p><em>单边左检验</em>：$H_0:\mu\ge \mu_0$ 拒绝域为 $\displaystyle S=\left\{  (x_1,…,x_n)|\bar x-\mu_0 \le -\frac{\sigma}{\sqrt n}u_\alpha\right\}$</p>
+<h4 id="均值-μ-的检验-（σ-未知）"><a href="#均值-μ-的检验-（σ-未知）" class="headerlink" title="均值 μ 的检验 （σ 未知）"></a>均值 μ 的检验 （σ 未知）</h4><p>使用 t 检验法，将上述的 $\sigma$ 替换为 $S_n=\sqrt{\frac{1}{n-1}\sum(x_i-\bar x)^2}$，正态分布替换为自由度为 n-1 的 t - 分布，检验统计量为：$\displaystyle T=\frac{\bar x-\mu_0}{s_n/\sqrt n}$</p>
+<p>双侧检验，拒绝域为：</p>
+<script type="math/tex; mode=display">
+W=\left\{ (x_1,...,x_n)||\bar x-\mu_0|\ge \frac{s_n}{\sqrt n}t_{\alpha/2}(n-1) \right\}</script><p>单侧右检验，拒绝域为：</p>
+<script type="math/tex; mode=display">
+S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \ge \frac{s_n}{\sqrt n}t_\alpha(n-1) \right\}</script><p>单侧左检验，拒绝域为：</p>
+<script type="math/tex; mode=display">
+S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \le -\frac{s_n}{\sqrt n}t_\alpha(n-1) \right\}</script><h4 id="方差-σ2-的检验"><a href="#方差-σ2-的检验" class="headerlink" title="方差 σ2 的检验"></a>方差 σ2 的检验</h4><h5 id="μ未知"><a href="#μ未知" class="headerlink" title="μ未知"></a>μ未知</h5><p>利用：</p>
+<script type="math/tex; mode=display">
+\frac{(n-1)S_n^2}{\sigma_0^2}\sim \chi^2(n-1)</script><h5 id="μ已知"><a href="#μ已知" class="headerlink" title="μ已知"></a>μ已知</h5><script type="math/tex; mode=display">
+\frac{\sum(X_i-\mu)^2}{\sigma_0^2}\sim\chi^2(n)</script><h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>分布</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>σ已知</td>
+<td>U~N(0,1)</td>
+</tr>
+<tr>
+<td>σ未知</td>
+<td>T~t(n-1)</td>
+</tr>
+<tr>
+<td>μ已知</td>
+<td>χ2~χ2(n)</td>
+</tr>
+<tr>
+<td>μ未知</td>
+<td>χ2~χ2(n-1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="两个正态总体参数的假设检验"><a href="#两个正态总体参数的假设检验" class="headerlink" title="两个正态总体参数的假设检验"></a>两个正态总体参数的假设检验</h3><h4 id="均值μ1，μ2的检验（σ12-σ22已知）"><a href="#均值μ1，μ2的检验（σ12-σ22已知）" class="headerlink" title="均值μ1，μ2的检验（σ12 σ22已知）"></a>均值μ1，μ2的检验（σ12 σ22已知）</h4><blockquote>
+<p>检验 $μ_1~\underline{~~}~μ_2$</p>
+</blockquote>
+<script type="math/tex; mode=display">
+U=\frac{\bar X-\bar Y}{\sqrt{\sigma_1^2/m+\sigma_2^2/n}}\sim N(0,1)</script><h4 id="均值μ1，μ2的检验（σ12-σ22未知）"><a href="#均值μ1，μ2的检验（σ12-σ22未知）" class="headerlink" title="均值μ1，μ2的检验（σ12 σ22未知）"></a>均值μ1，μ2的检验（σ12 σ22未知）</h4><script type="math/tex; mode=display">
+T=\frac{\bar X-\bar Y}{S_w\sqrt{1/m+1/n}}\sim t(m+n-2),\\
+S_w=\sqrt{\frac{(m-1)S_{1m}^2+(n-1)S_{2n}^2}{m+n-2}}</script><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>$H_0$</th>
+<th>拒绝域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\sigma_1, \sigma_2$ 已知</td>
+</tr>
+<tr>
+<td>$\mu_1 =\mu_2$</td>
+<td>$abs(u)\ge u_{\alpha/2}$</td>
+</tr>
+<tr>
+<td>$\mu_1 =\mu_2$</td>
+<td>$u\ge u_{\alpha}$</td>
+</tr>
+<tr>
+<td>$\mu_1 \ge\mu_2$</td>
+<td>$u\le u_{1-\alpha}=u_{-\alpha}$</td>
+</tr>
+<tr>
+<td>$\sigma_1, \sigma_2$ 未知</td>
+</tr>
+<tr>
+<td>$\mu_1=\mu_2$</td>
+<td>$abs(t) \ge t_{\alpha/2}(m+n-2)$</td>
+</tr>
+<tr>
+<td>$\mu_1\le \mu_2$</td>
+<td>$t\ge t_\alpha(m+n-2)$</td>
+</tr>
+<tr>
+<td>$\mu_1\ge \mu_2$</td>
+<td>$t\le -t_\alpha(m+n-2)$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="方差-σ12，σ22-的检验（μ1，μ2未知）"><a href="#方差-σ12，σ22-的检验（μ1，μ2未知）" class="headerlink" title="方差 σ12，σ22 的检验（μ1，μ2未知）"></a>方差 σ12，σ22 的检验（μ1，μ2未知）</h4><blockquote>
+<p>检验 $\sigma_1^2 ~ \mathrm{\underline{~~~}} ~\sigma_2^2$</p>
+</blockquote>
+<script type="math/tex; mode=display">
+F=\frac{S_{1m}^2}{S_{2n}^2}\sim F(m-1, n-1)</script><h4 id="方差-σ12，σ22-的检验（μ1，μ2已知）"><a href="#方差-σ12，σ22-的检验（μ1，μ2已知）" class="headerlink" title="方差 σ12，σ22 的检验（μ1，μ2已知）"></a>方差 σ12，σ22 的检验（μ1，μ2已知）</h4><script type="math/tex; mode=display">
+F=\frac{\sum_{i=1}^m (x_i-\mu_1)^2/m}{\sum_{i=1}^n (y_i-\mu_1)^2/n}\sim F(m, n)</script><p><strong>Summary:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>$H_0$</th>
+<th>拒绝域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mu_1,\mu_2$ 已知</td>
+</tr>
+<tr>
+<td>$\sigma_1^2=\sigma_2^2$</td>
+<td>$f\le F_{1-\alpha/2}(m,n)$ 或 $f\ge F_{\alpha/2}(m,n)$</td>
+</tr>
+<tr>
+<td>$\sigma_1^2\le \sigma_2^2$</td>
+<td>$f\ge F_\alpha(m,n)$</td>
+</tr>
+<tr>
+<td>$\sigma_1^2\ge \sigma_2^2$</td>
+<td>$f\le F_{1-\alpha}(m,n)$</td>
+</tr>
+<tr>
+<td>$\mu_1,\mu_2$ 未知</td>
+</tr>
+<tr>
+<td>$\sigma_1^2=\sigma_2^2$</td>
+<td>$f\le F_{1-\alpha/2}(m,n)$ 或 $f\ge F_{\alpha/2}(m,n)$</td>
+</tr>
+<tr>
+<td>$\sigma_1^2\le \sigma_2^2$</td>
+<td>$f\ge F_\alpha(m,n)$</td>
+</tr>
+<tr>
+<td>$\sigma_1^2\ge \sigma_2^2$</td>
+<td>$f\le F_{1-\alpha}(m,n)$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="总体分布的-χ2-拟合优度检验"><a href="#总体分布的-χ2-拟合优度检验" class="headerlink" title="总体分布的 χ2-拟合优度检验"></a>总体分布的 χ2-拟合优度检验</h3><h4 id="理论分布完全已知"><a href="#理论分布完全已知" class="headerlink" title="理论分布完全已知"></a>理论分布完全已知</h4><h5 id="理论分布-F0-是取有限个值的离散分布"><a href="#理论分布-F0-是取有限个值的离散分布" class="headerlink" title="理论分布 F0 是取有限个值的离散分布"></a>理论分布 F0 是取有限个值的离散分布</h5><p><strong>Thm</strong>（K · 皮尔逊）若假设 $H_0$ 成立，则当样本容量 $n\rightarrow \infty$ 时，则 $\chi^2=\sum_{i=1}^2\frac{(\gamma_i-np_i)^2}{np_i}<br>$ 渐进分布为 $\chi^2(r-1)$。</p>
+<p>若理论分布律为：$P(X=a_i)=p_i$，原假设可以写为：$H_0:P(X=a_i)=p_i$，$r$ 为x取值的个数</p>
+<p>使用：</p>
+<script type="math/tex; mode=display">
+\chi^2=\sum_{i=1}^2\frac{(\gamma_i-np_i)^2}{np_i}</script><p>拟合优度：$p(\chi^2_0)=P(\chi^2\ge \chi^2_0)$</p>
+<p>利用：$\chi^2=\sum\frac{(\gamma_i-np_i)^2}{np_i}$ 在 $n\rightarrow \infin$ 时，其渐进分布为 $\chi^2(r-1)$</p>
+<p>当 $\chi^2\ge\chi^2_\alpha(r-1)$ 则拒绝假设。</p>
+<h5 id="理想分布为一般情况"><a href="#理想分布为一般情况" class="headerlink" title="理想分布为一般情况"></a>理想分布为一般情况</h5><p>假设可以写为：$H_0:F(x)=F_0(x)$</p>
+<ol>
+<li>选择常数，将区间分割成：$(-\infty, a_1],…,(a_{i-1},a_i],…,…(a_r-1,\infty]$</li>
+<li>计算 $p_i=F_0(a_i)-F_0(a_{i-1})$</li>
+<li>计算统计量 $\chi^2=\sum\frac{(\gamma_i-np_i)^2}{np_i}$</li>
+<li>计算出观察值 $\chi^2$<ul>
+<li>若 $\chi^2\ge\chi^2_\alpha(r-1)$ 则拒绝假设。</li>
+</ul>
+</li>
+</ol>
+<h4 id="理论分布-F0-含有未知参数的情况"><a href="#理论分布-F0-含有未知参数的情况" class="headerlink" title="理论分布 F0 含有未知参数的情况"></a>理论分布 F0 含有未知参数的情况</h4><p>我们的假设为：</p>
+<script type="math/tex; mode=display">
+H_0:F(x)=F_0(x:\theta_1,...,\theta_k)\leftrightarrow
+H_0:F(x)\ne F_0(x:\theta_1,...,\theta_k)</script><ol>
+<li>使用最大似然估计确定参数</li>
+<li>统计量 $\chi^2=\sum\frac{(\gamma_i-np_i)^2}{np_i}\sim \chi^2(r-k-1)$ k 为未知参数个数</li>
+<li>当 $\chi^2\ge\chi^2_\alpha(r-1)$ 则拒绝假设。</li>
+</ol>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>概率论</tag>
+        <tag>统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/01/06/study/Math/Probabilities/notes9/</url>
+    <content><![CDATA[<h2 id="随机过程的基本概念"><a href="#随机过程的基本概念" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h2><h3 id="随机过程的基本概念-1"><a href="#随机过程的基本概念-1" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h3><p><strong>Def</strong>（随机过程）设 $\Omega=\{\omega\}$ 是随机试验 $E$ 的样本空间，$T\subset (-\inf,+\inf)$ 如果对于一个固定的 $t\in T$，有定义在 $\Omega$ 上的随机变量，$X(\omega,t),\omega\in \Omega$ ,令 $t$ 在 $T$ 中变动，得到依赖于 $t$ 的一族随机变量 $\{X(\omega, t), t\in T\}$ 称为随机过程。</p>
+<h3 id="有限维的分布函数族"><a href="#有限维的分布函数族" class="headerlink" title="有限维的分布函数族"></a>有限维的分布函数族</h3><p><strong>Def</strong>（随机过程分布函数）$F(t; x)=P(X(t, w)\le x)$ 为 $X(t, w)$ 的分布函数。（一维）</p>
+<p><strong>Def</strong>（随机过程分布函数）$F(t _ 1,t _ 2…,t _ n; x _ 1, x _ 2,…,x _ n)=P(X(t_1, w)\le x _ 1,X(t _ 2, w)\le x _ 2,…)$ 为 $X(t, w)$ 的分布函数。</p>
+<h3 id="随机过程的数字特征"><a href="#随机过程的数字特征" class="headerlink" title="随机过程的数字特征"></a>随机过程的数字特征</h3><p>均值函数：</p>
+<script type="math/tex; mode=display">
+m_X(t)=EX(t)</script><p>均方值函数：</p>
+<script type="math/tex; mode=display">
+\varPsi^2(t)=EX^2(t)</script><p>方差函数：</p>
+<script type="math/tex; mode=display">
+D_X(t)=E(X(t)-m_X(t))^2</script><p>相关函数：</p>
+<script type="math/tex; mode=display">
+R_X(s,t)=EX(s)X(t)</script><p>协方差函数：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+C_X(s,t)&=Cov(X(s),X(t))\\
+&=R_X(s,t)-m_X(s)m_X(t)
+\end{aligned}</script><h3 id="泊松过程和维纳过程"><a href="#泊松过程和维纳过程" class="headerlink" title="泊松过程和维纳过程"></a>泊松过程和维纳过程</h3><h4 id="独立增量过程"><a href="#独立增量过程" class="headerlink" title="独立增量过程"></a>独立增量过程</h4><p><strong>Def</strong>（独立增量过程）设 $\{X(t) ,t\in T\}$ 是一个随机过程，对于任意的 $t_1,…,t_n$ 增量 $X(t_2)-X(t_1) …$ 是独立的，则称 $X(t)$ 是一个<strong>独立增量过程</strong>。</p>
+<p>增量 $X(t+h)-X(t)$ 的分布仅依赖于$h$ 而不依赖于 t，则称 $X(t)$ 是齐次的。</p>
+<p>例如：</p>
+<p>$X_n$ 是独立同分布的随机变量序列，部分和序列 $S_n=\sum X_i$ 是齐次的独立增量过程。</p>
+<p><strong>Thm</strong>：独立增量过程在 $P(X(0)=0)=1$ 的条件下，$X(t)$的任意有限维分布函数族可以由增量 $X(t)-X(s)$ 的分布唯一确定。</p>
+<p><strong>Thm</strong>：独立增量过程 $\{X(t),t\in T\}$ 的均值函数 $m_X(t)$ 和方差函数 $X_X(t)$ 存在，在 $P(X(0)=0)=1$ 的条件下，其协方差函数：</p>
+<script type="math/tex; mode=display">
+C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" class="headerlink" title="泊松过程"></a>泊松过程</h4><p><strong>Def</strong>（泊松过程）设 $\{N(t), t\ge 0\}$ 表示 $[0, t]$ 内随机点发生的数目，$N(t)$ 有以下性质，则称其为一个强度为 $\lambda,\lambda\ge 0$ 的泊松过程：</p>
+<ol>
+<li>齐次性（平稳性）</li>
+<li>独立增量性（无后效性）</li>
+<li>普通性</li>
+<li>$P(N(0)=0)=1$</li>
+</ol>
+<h5 id="泊松过程的有限维分布和数字特征"><a href="#泊松过程的有限维分布和数字特征" class="headerlink" title="泊松过程的有限维分布和数字特征"></a>泊松过程的有限维分布和数字特征</h5><ol>
+<li><p>有限维分布：$\{N(t) ,t\ge 0\}$ 是一个强度为 $\lambda$ 的泊松过程，则 $N(t)$ 的一维分布是参数为 $\lambda t$ 的泊松分布，即：$N(t)\sim P(\lambda t)$</p>
+</li>
+<li><p>数字特征：</p>
+<ul>
+<li>$m_N(t)=\lambda t$</li>
+<li>$D_N(t)=\lambda t$</li>
+<li>$C_N(s,t)=\lambda \min \{s,t\}$</li>
+</ul>
+</li>
+<li><p>设 $\{N(t) ,t\ge 0\}$ 是一个强度为 $\lambda$ 的泊松分布，则 $N(s)-N(t)$ 是一个参数为 $\lambda(s-t)$ 的泊松分布</p>
+</li>
+</ol>
+<p>同时，我们把强度为 $\lambda$  的泊松过程 $\{N(t),t\ge 0\}$ 中机点出现的时刻 $W_1,…,W_n,…$ 为强度为 $\lambda$ 的泊松流。</p>
+<p>记 $T_i=W_i-W_{i-1}$ 其表示的第 $i-1$ 个随机点与第 $i$ 个随机点在时刻 $t_{i-1}$ 出现的间隔时间。则 $T\sim e(\lambda)$，反之：</p>
+<p><strong>Thm</strong>：如果任意相邻两个随机点出现的间隔时间相互独立同服从于参数为 $\lambda$ 的指数分布，则随机点流构成强度为 $\lambda$ 的泊松过程。</p>
+<h4 id="维纳过程"><a href="#维纳过程" class="headerlink" title="维纳过程"></a>维纳过程</h4><p><strong>Def</strong>（维纳过程 / 布朗运动）随机过程满足如下条件：</p>
+<ol>
+<li>$W(0)=0$</li>
+<li>$W(t)$ 是齐次增量过程</li>
+<li>$t&gt;s\ge0$ 时，$W(t)-W(s)=h(X_{[s/\delta]+1}+…+X_{[s/\delta]})$是独立同分布的随机变量。</li>
+<li>$EW(t)=0,t&gt;0$</li>
+</ol>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
   </entry>
 </search>

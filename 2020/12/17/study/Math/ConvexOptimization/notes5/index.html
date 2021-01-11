@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      251 字
+      503 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      6
        分钟
     </span>
   
@@ -240,7 +240,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：5 天前
                 
               </p>
             
@@ -276,7 +276,32 @@
 \begin{aligned}
     &\max.g(\lambda,\nu)\\
     &s.t.~~\lambda\succeq 0
-\end{aligned}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+\end{aligned}</script><ul>
+<li>通过 Lagrange 对偶函数获取 $p^*$ 的最佳下界</li>
+<li>凸优化问题：$d^<em>\le p^</em>$</li>
+</ul>
+<p>例如线性规划问题：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\min.&c^Tx\\
+s.t.&Ax=b\\&x\succeq 0
+\end{aligned}</script><p>对偶问题为：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  \max.&-b^Tv\\
+  s.t.&A^Tv+c\succeq0
+\end{aligned}</script><blockquote>
+<p>对于一个线性规划问题，其对偶问题也是线性规划问题</p>
+</blockquote>
+<h4 id="弱对偶与强对偶"><a href="#弱对偶与强对偶" class="headerlink" title="弱对偶与强对偶"></a>弱对偶与强对偶</h4><p>（弱对偶）对于凸优化和非凸优化都有：$d^<em>\le p^</em>$</p>
+<p>（强对偶）对偶间隙 $p^<em>-d^</em> =0$</p>
+<p>凸优化问题中保证强对偶的条件称为<strong>约束准则</strong>。</p>
+<h4 id="Slater-约束准则"><a href="#Slater-约束准则" class="headerlink" title="Slater 约束准则"></a>Slater 约束准则</h4><p><strong>Thm</strong>：若某个凸优化问题中，存在一点 $x\in \mathrm{relint}~D=\{x\in D|B(x,r)\cap \mathrm{aff}D\subset D\}$ 使得该问题是<strong>严格可行</strong>的（$x\in relint~D,f_i(x)&lt;0,Ax=b$）则为强对偶问题。</p>
+<h3 id="KKT-最优性条件"><a href="#KKT-最优性条件" class="headerlink" title="KKT 最优性条件"></a>KKT 最优性条件</h3><p>（互补松弛性）$\lambda^<em>_if_i(x^</em>)=0$</p>
+<p>（原始可行性）$f_i(x)\le 0$</p>
+<p>（对偶可行性）$\lambda_i\ge 0$</p>
+<p>（稳定性条件）$\displaystyle\frac{\partial}{\partial x}L(x,\lambda,\nu)=0$</p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
             <div>
