@@ -3688,7 +3688,9 @@ f'(z)=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=
   <entry>
     <title>「复变函数」复变函数积分</title>
     <url>/2021/01/11/study/Math/ComplexFunctions/ch4/</url>
-    <content><![CDATA[<h2 id="复数项级数的概念和性质"><a href="#复数项级数的概念和性质" class="headerlink" title="复数项级数的概念和性质"></a>复数项级数的概念和性质</h2><h3 id="复数项级数"><a href="#复数项级数" class="headerlink" title="复数项级数"></a>复数项级数</h3><p><strong>Def</strong>：无穷复数列 $\{c_n\}\rightarrow_{n\rightarrow \infty} A \iff \forall \varepsilon&gt;0,\exist N,n&gt;N\rightarrow |c_n-A|&lt;\varepsilon$</p>
+    <content><![CDATA[<p>复变函数积分</p>
+<a id="more"></a>
+<h2 id="复数项级数的概念和性质"><a href="#复数项级数的概念和性质" class="headerlink" title="复数项级数的概念和性质"></a>复数项级数的概念和性质</h2><h3 id="复数项级数"><a href="#复数项级数" class="headerlink" title="复数项级数"></a>复数项级数</h3><p><strong>Def</strong>：无穷复数列 $\{c_n\}\rightarrow_{n\rightarrow \infty} A \iff \forall \varepsilon&gt;0,\exist N,n&gt;N\rightarrow |c_n-A|&lt;\varepsilon$</p>
 <p><strong>Thm</strong>（判别法则）$c_n=a_n+ib_n$ 收敛于 $a+bi~\iff~a_n\rightarrow a, b_n\rightarrow b$</p>
 <p><strong>Def</strong>（复数项级数）$\sum_{n=1}^\infty c_n$，通项 $c_n$。</p>
 <p><strong>Def</strong>（前 n 项之和）$\sum_{k=1}^n c_k$</p>
@@ -6456,7 +6458,9 @@ L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)</script><p><s
   <entry>
     <title>「复变函数」留数及其应用</title>
     <url>/2021/01/11/study/Math/ComplexFunctions/ch5/</url>
-    <content><![CDATA[<h2 id="留数及其应用"><a href="#留数及其应用" class="headerlink" title="留数及其应用"></a>留数及其应用</h2><h3 id="孤立奇点"><a href="#孤立奇点" class="headerlink" title="孤立奇点"></a>孤立奇点</h3><p><strong>Def</strong>（孤立奇点）$f(z)$ 在 $z_0$ 不解析，在其某个去心邻域内解析，则称$z_0$为 $f(z)$ 的孤立奇点</p>
+    <content><![CDATA[<p>留数及其应用</p>
+<a id="more"></a>
+<h2 id="留数及其应用"><a href="#留数及其应用" class="headerlink" title="留数及其应用"></a>留数及其应用</h2><h3 id="孤立奇点"><a href="#孤立奇点" class="headerlink" title="孤立奇点"></a>孤立奇点</h3><p><strong>Def</strong>（孤立奇点）$f(z)$ 在 $z_0$ 不解析，在其某个去心邻域内解析，则称$z_0$为 $f(z)$ 的孤立奇点</p>
 <p><strong>可去奇点</strong>：Laurent 级数不含有负幂项 -&gt; 令 $f(z_0)=c_0$</p>
 <ul>
 <li>只需要重新定义 $f(z_0)=c_0$ 就可以解析，例如 $(e^z-1) / z,\quad z=0$</li>
@@ -6556,9 +6560,10 @@ R=P(x)/Q(x)</script><p>其中 $m-n\ge 1,Q(x)\ne 0$</p>
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2021/01/09/study/Math/Probabilities/notes10/</url>
-    <content><![CDATA[<h2 id="马尔科夫链"><a href="#马尔科夫链" class="headerlink" title="马尔科夫链"></a>马尔科夫链</h2><h3 id="马尔科夫链的基本概念"><a href="#马尔科夫链的基本概念" class="headerlink" title="马尔科夫链的基本概念"></a>马尔科夫链的基本概念</h3><p><strong>Def</strong>（马尔科夫链）随机过程 $\{X_n,n\ge 0\}$ 如果满足如下条件：</p>
+    <title>「概率统计与随机过程」 10 - 马尔科夫链</title>
+    <url>/2020/12/11/study/Math/Probabilities/notes10/</url>
+    <content><![CDATA[<p>马尔科夫链<br><a id="more"></a></p>
+<h2 id="马尔科夫链"><a href="#马尔科夫链" class="headerlink" title="马尔科夫链"></a>马尔科夫链</h2><h3 id="马尔科夫链的基本概念"><a href="#马尔科夫链的基本概念" class="headerlink" title="马尔科夫链的基本概念"></a>马尔科夫链的基本概念</h3><p><strong>Def</strong>（马尔科夫链）随机过程 $\{X_n,n\ge 0\}$ 如果满足如下条件：</p>
 <ol>
 <li>状态空间 $I=\{x_0, x_1, …, x_n,…\}$ 为可数集</li>
 <li>对于一切 $n\ge 1$ 和所有的 $x$, $x_{i_0}, x_{i_1},…,x_{i_{n-1}}\in I$ 都有</li>
@@ -6577,17 +6582,42 @@ P(X_{n+1}=j|X_n=i)=P(X_1=j|X_0=i)</script><p>则 $\{X_n,n\ge 0\}$ 是齐次的�
 \begin{cases}
     p_{ij}\ge 0,\\
     \sum p_{ij}=1
-\end{cases}</script><h3 id="多步转移概率的确定"><a href="#多步转移概率的确定" class="headerlink" title="多步转移概率的确定"></a>多步转移概率的确定</h3><p><strong>Pre</strong>（条件的全概率公式）设随机事件 $A_1,…A_n,…$ 构成完备事件组：</p>
+\end{cases}</script><h3 id="齐次马尔科夫链的有限维分布"><a href="#齐次马尔科夫链的有限维分布" class="headerlink" title="齐次马尔科夫链的有限维分布"></a>齐次马尔科夫链的有限维分布</h3><p><strong>Def</strong>（分布律）设 $\{X_n,n\ge0\}$ 是一个齐次的马尔科夫链，状态空间为 $I=\{0,1,2,…\}$ 对于任意时刻 $n\ge 0$，称离散型随机变量的分布律为齐次马氏链的一维分布律，记为 $\mathbb p(n)=(p_0(n),….)$</p>
+<p>当 $n=0$ 时，称为初始分布律。</p>
+<p><strong>Thm</strong>：$p(n)=p(0)P(n)$，其中 $P(n)$ 为多步转移概率矩阵。</p>
+<h3 id="多步转移概率的确定"><a href="#多步转移概率的确定" class="headerlink" title="多步转移概率的确定"></a>多步转移概率的确定</h3><p><strong>Pre</strong>（条件的全概率公式）设随机事件 $A_1,…A_n,…$ 构成完备事件组：</p>
 <script type="math/tex; mode=display">
 \bigcup_{i=1}^\infty A_i=\Omega,A_iA_j=\varnothing</script><p>则：$P(B|C)=\sum_{i=1}^\infty P(A_i|C)P(B|A_iC)$</p>
 <p><strong>Thm</strong>：设 $\{X_n,n\ge 0\}$ 是齐次马尔科夫链，其状态空间为 $I=\{0,1,…\}$ n 步转移矩阵为 $P(n)$。则对于任意时刻 $m,n\ge 1$，有$P(m+n)=P(m)P(n)$（C-K 方程）</p>
 <p>根据 C-K 方程：$P(n)=P^n$</p>
+<h3 id="遍历性"><a href="#遍历性" class="headerlink" title="遍历性"></a>遍历性</h3><p><strong>Def</strong>（极限分布）设 $\{X_n,n\ge 0\}$ 是齐次马氏链，状态空间为 $I=\{0, 1,2,…\}$，对于所有的 $i,j$ 而言，n 步转移概率极限存在且与 $i$ 无关，</p>
+<script type="math/tex; mode=display">
+P(n)=P^n\rightarrow^{n\rightarrow\infty}\left[
+\begin{matrix}
+    \pi_0&\pi_1&\cdots&\pi_j&\cdots\\
+    \pi_0&\pi_1&\cdots&\pi_j&\cdots\\
+    \vdots&\vdots&\ddots&\vdots\\
+    \pi_0&\pi_1&\cdots&\pi_j&\cdots\\
+    \vdots&\vdots&&\vdots
+\end{matrix}
+\right]</script><p>则称此链具有遍历性。</p>
+<p><strong>Thm</strong>：若 $\{X_n,n\ge 0\}$ 是齐次马氏链，一部转移概率为 $P$ 若存在 n 步转移概率矩阵 $P(n)$ 无零元，则此链具有遍历性，其极限分布是：</p>
+<script type="math/tex; mode=display">
+\pi P=\pi</script><p>的满足归一性条件（$\mathbf 1^T\pi=1$）的为一解</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>概率论</tag>
+        <tag>统计</tag>
+      </tags>
   </entry>
   <entry>
     <title>「随机数学与数理统计」8 - 假设检验</title>
     <url>/2020/12/23/study/Math/Probabilities/notes8/</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<p>假设检验</p>
+<a id="more"></a>
 <h2 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a>假设检验</h2><h3 id="假设检验的基本概念"><a href="#假设检验的基本概念" class="headerlink" title="假设检验的基本概念"></a>假设检验的基本概念</h3><p><em>假设检验的基本步骤</em>：</p>
 <ol>
 <li>建立假设：<ul>
@@ -6797,9 +6827,11 @@ H_0:F(x)\ne F_0(x:\theta_1,...,\theta_k)</script><ol>
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2021/01/06/study/Math/Probabilities/notes9/</url>
-    <content><![CDATA[<h2 id="随机过程的基本概念"><a href="#随机过程的基本概念" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h2><h3 id="随机过程的基本概念-1"><a href="#随机过程的基本概念-1" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h3><p><strong>Def</strong>（随机过程）设 $\Omega=\{\omega\}$ 是随机试验 $E$ 的样本空间，$T\subset (-\inf,+\inf)$ 如果对于一个固定的 $t\in T$，有定义在 $\Omega$ 上的随机变量，$X(\omega,t),\omega\in \Omega$ ,令 $t$ 在 $T$ 中变动，得到依赖于 $t$ 的一族随机变量 $\{X(\omega, t), t\in T\}$ 称为随机过程。</p>
+    <title>「概率统计与随机过程」 9 - 随机过程的基本概念</title>
+    <url>/2020/12/11/study/Math/Probabilities/notes9/</url>
+    <content><![CDATA[<p>:no_mouth:</p>
+<a id="more"></a>
+<h2 id="随机过程的基本概念"><a href="#随机过程的基本概念" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h2><h3 id="随机过程的基本概念-1"><a href="#随机过程的基本概念-1" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h3><p><strong>Def</strong>（随机过程）设 $\Omega=\{\omega\}$ 是随机试验 $E$ 的样本空间，$T\subset (-\inf,+\inf)$ 如果对于一个固定的 $t\in T$，有定义在 $\Omega$ 上的随机变量，$X(\omega,t),\omega\in \Omega$ ,令 $t$ 在 $T$ 中变动，得到依赖于 $t$ 的一族随机变量 $\{X(\omega, t), t\in T\}$ 称为随机过程。</p>
 <h3 id="有限维的分布函数族"><a href="#有限维的分布函数族" class="headerlink" title="有限维的分布函数族"></a>有限维的分布函数族</h3><p><strong>Def</strong>（随机过程分布函数）$F(t; x)=P(X(t, w)\le x)$ 为 $X(t, w)$ 的分布函数。（一维）</p>
 <p><strong>Def</strong>（随机过程分布函数）$F(t _ 1,t _ 2…,t _ n; x _ 1, x _ 2,…,x _ n)=P(X(t_1, w)\le x _ 1,X(t _ 2, w)\le x _ 2,…)$ 为 $X(t, w)$ 的分布函数。</p>
 <h3 id="随机过程的数字特征"><a href="#随机过程的数字特征" class="headerlink" title="随机过程的数字特征"></a>随机过程的数字特征</h3><p>均值函数：</p>
@@ -6853,5 +6885,23 @@ C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" 
 <li>$EW(t)=0,t&gt;0$</li>
 </ol>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>概率论</tag>
+        <tag>统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第二学期</title>
+    <url>/2021/01/12/study/Physics/second-semister/</url>
+    <content><![CDATA[<!--  --><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>基础物理学</category>
+      </categories>
+      <tags>
+        <tag>物理 复习</tag>
+      </tags>
   </entry>
 </search>

@@ -17,7 +17,7 @@
   <meta name="description" content="欢迎来到些些同学的藏宝阁">
   <meta name="author" content="Jerry Yang">
   <meta name="keywords" content="study">
-  <title>些些同学的藏宝阁</title>
+  <title>第二学期 - 些些同学的藏宝阁</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -174,7 +174,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="">
+            <span class="h2" id="subtitle" title="第二学期">
               
             </span>
 
@@ -184,8 +184,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-01-06 11:05" pubdate>
-        2021年1月6日 上午
+      <time datetime="2021-01-12 00:00" pubdate>
+        2021年1月12日 凌晨
       </time>
     </span>
   
@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      892 字
+      0 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      1
        分钟
     </span>
   
@@ -236,74 +236,35 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">第二学期</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 天前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="随机过程的基本概念"><a href="#随机过程的基本概念" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h2><h3 id="随机过程的基本概念-1"><a href="#随机过程的基本概念-1" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h3><p><strong>Def</strong>（随机过程）设 $\Omega=\{\omega\}$ 是随机试验 $E$ 的样本空间，$T\subset (-\inf,+\inf)$ 如果对于一个固定的 $t\in T$，有定义在 $\Omega$ 上的随机变量，$X(\omega,t),\omega\in \Omega$ ,令 $t$ 在 $T$ 中变动，得到依赖于 $t$ 的一族随机变量 $\{X(\omega, t), t\in T\}$ 称为随机过程。</p>
-<h3 id="有限维的分布函数族"><a href="#有限维的分布函数族" class="headerlink" title="有限维的分布函数族"></a>有限维的分布函数族</h3><p><strong>Def</strong>（随机过程分布函数）$F(t; x)=P(X(t, w)\le x)$ 为 $X(t, w)$ 的分布函数。（一维）</p>
-<p><strong>Def</strong>（随机过程分布函数）$F(t _ 1,t _ 2…,t _ n; x _ 1, x _ 2,…,x _ n)=P(X(t_1, w)\le x _ 1,X(t _ 2, w)\le x _ 2,…)$ 为 $X(t, w)$ 的分布函数。</p>
-<h3 id="随机过程的数字特征"><a href="#随机过程的数字特征" class="headerlink" title="随机过程的数字特征"></a>随机过程的数字特征</h3><p>均值函数：</p>
-<script type="math/tex; mode=display">
-m_X(t)=EX(t)</script><p>均方值函数：</p>
-<script type="math/tex; mode=display">
-\varPsi^2(t)=EX^2(t)</script><p>方差函数：</p>
-<script type="math/tex; mode=display">
-D_X(t)=E(X(t)-m_X(t))^2</script><p>相关函数：</p>
-<script type="math/tex; mode=display">
-R_X(s,t)=EX(s)X(t)</script><p>协方差函数：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-C_X(s,t)&=Cov(X(s),X(t))\\
-&=R_X(s,t)-m_X(s)m_X(t)
-\end{aligned}</script><h3 id="泊松过程和维纳过程"><a href="#泊松过程和维纳过程" class="headerlink" title="泊松过程和维纳过程"></a>泊松过程和维纳过程</h3><h4 id="独立增量过程"><a href="#独立增量过程" class="headerlink" title="独立增量过程"></a>独立增量过程</h4><p><strong>Def</strong>（独立增量过程）设 $\{X(t) ,t\in T\}$ 是一个随机过程，对于任意的 $t_1,…,t_n$ 增量 $X(t_2)-X(t_1) …$ 是独立的，则称 $X(t)$ 是一个<strong>独立增量过程</strong>。</p>
-<p>增量 $X(t+h)-X(t)$ 的分布仅依赖于$h$ 而不依赖于 t，则称 $X(t)$ 是齐次的。</p>
-<p>例如：</p>
-<p>$X_n$ 是独立同分布的随机变量序列，部分和序列 $S_n=\sum X_i$ 是齐次的独立增量过程。</p>
-<p><strong>Thm</strong>：独立增量过程在 $P(X(0)=0)=1$ 的条件下，$X(t)$的任意有限维分布函数族可以由增量 $X(t)-X(s)$ 的分布唯一确定。</p>
-<p><strong>Thm</strong>：独立增量过程 $\{X(t),t\in T\}$ 的均值函数 $m_X(t)$ 和方差函数 $X_X(t)$ 存在，在 $P(X(0)=0)=1$ 的条件下，其协方差函数：</p>
-<script type="math/tex; mode=display">
-C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" class="headerlink" title="泊松过程"></a>泊松过程</h4><p><strong>Def</strong>（泊松过程）设 $\{N(t), t\ge 0\}$ 表示 $[0, t]$ 内随机点发生的数目，$N(t)$ 有以下性质，则称其为一个强度为 $\lambda,\lambda\ge 0$ 的泊松过程：</p>
-<ol>
-<li>齐次性（平稳性）</li>
-<li>独立增量性（无后效性）</li>
-<li>普通性</li>
-<li>$P(N(0)=0)=1$</li>
-</ol>
-<h5 id="泊松过程的有限维分布和数字特征"><a href="#泊松过程的有限维分布和数字特征" class="headerlink" title="泊松过程的有限维分布和数字特征"></a>泊松过程的有限维分布和数字特征</h5><ol>
-<li><p>有限维分布：$\{N(t) ,t\ge 0\}$ 是一个强度为 $\lambda$ 的泊松过程，则 $N(t)$ 的一维分布是参数为 $\lambda t$ 的泊松分布，即：$N(t)\sim P(\lambda t)$</p>
-</li>
-<li><p>数字特征：</p>
-<ul>
-<li>$m_N(t)=\lambda t$</li>
-<li>$D_N(t)=\lambda t$</li>
-<li>$C_N(s,t)=\lambda \min \{s,t\}$</li>
-</ul>
-</li>
-<li><p>设 $\{N(t) ,t\ge 0\}$ 是一个强度为 $\lambda$ 的泊松分布，则 $N(s)-N(t)$ 是一个参数为 $\lambda(s-t)$ 的泊松分布</p>
-</li>
-</ol>
-<p>同时，我们把强度为 $\lambda$  的泊松过程 $\{N(t),t\ge 0\}$ 中机点出现的时刻 $W_1,…,W_n,…$ 为强度为 $\lambda$ 的泊松流。</p>
-<p>记 $T_i=W_i-W_{i-1}$ 其表示的第 $i-1$ 个随机点与第 $i$ 个随机点在时刻 $t_{i-1}$ 出现的间隔时间。则 $T\sim e(\lambda)$，反之：</p>
-<p><strong>Thm</strong>：如果任意相邻两个随机点出现的间隔时间相互独立同服从于参数为 $\lambda$ 的指数分布，则随机点流构成强度为 $\lambda$ 的泊松过程。</p>
-<h4 id="维纳过程"><a href="#维纳过程" class="headerlink" title="维纳过程"></a>维纳过程</h4><p><strong>Def</strong>（维纳过程 / 布朗运动）随机过程满足如下条件：</p>
-<ol>
-<li>$W(0)=0$</li>
-<li>$W(t)$ 是齐次增量过程</li>
-<li>$t&gt;s\ge0$ 时，$W(t)-W(s)=h(X_{[s/\delta]+1}+…+X_{[s/\delta]})$是独立同分布的随机变量。</li>
-<li>$EW(t)=0,t&gt;0$</li>
-</ol>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+              <!--  --><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%9F%BA%E7%A1%80%E7%89%A9%E7%90%86%E5%AD%A6/">基础物理学</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%89%A9%E7%90%86-%E5%A4%8D%E4%B9%A0/">物理 复习</a>
+                    
+                  </div>
                 
               </div>
               
@@ -312,18 +273,12 @@ C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" 
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/01/09/study/Math/Probabilities/notes10/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/12/23/study/Math/Probabilities/notes7/">
-                        <span class="hidden-mobile">「随机数学与数理统计」7 - 参数估计</span>
+                      <a href="/2021/01/11/study/Math/ComplexFunctions/ch4/">
+                        <span class="hidden-mobile">「复变函数」复变函数积分</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -540,6 +495,45 @@ C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" 
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
 
 
 

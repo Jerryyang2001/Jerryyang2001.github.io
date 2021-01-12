@@ -17,7 +17,7 @@
   <meta name="description" content="欢迎来到些些同学的藏宝阁">
   <meta name="author" content="Jerry Yang">
   <meta name="keywords" content="study">
-  <title>「概率统计与随机过程」 2 - 随机变量及其概率分布 - 些些同学的藏宝阁</title>
+  <title>「概率统计与随机过程」 9 - 随机过程的基本概念 - 些些同学的藏宝阁</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -174,7 +174,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="「概率统计与随机过程」 2 - 随机变量及其概率分布">
+            <span class="h2" id="subtitle" title="「概率统计与随机过程」 9 - 随机过程的基本概念">
               
             </span>
 
@@ -184,8 +184,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-18 00:00" pubdate>
-        2020年11月18日 凌晨
+      <time datetime="2020-12-11 00:00" pubdate>
+        2020年12月11日 凌晨
       </time>
     </span>
   
@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.2k 字
+      893 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      18
+      11
        分钟
     </span>
   
@@ -236,137 +236,71 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">「概率统计与随机过程」 2 - 随机变量及其概率分布</h1>
+            <h1 style="display: none">「概率统计与随机过程」 9 - 随机过程的基本概念</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：25 天前
+                  本文最后更新于：12 小时前
                 
               </p>
             
             <div class="markdown-body">
-              <p>随机变量及其概率分布</p>
+              <p>:no_mouth:</p>
 <a id="more"></a>
-<h2 id="随机变量及其概率分布"><a href="#随机变量及其概率分布" class="headerlink" title="随机变量及其概率分布"></a>随机变量及其概率分布</h2><h3 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h3><p><strong>Def</strong>：设 $E$ 时一个随机试验，$\varOmega$ 是其样本空间，如果对于每一个试验的结果 $\omega\in \varOmega$，由唯一的实数$X(\omega)$与之对应，这个定义在试验样本空间上的实值函数$X(\omega)$称为$E$的随机变量。</p>
-<h3 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h3><p><strong>Def</strong>（随机变量的分布函数）设 $X(\omega)$是随机变量，称 $F(x) = P(X\le x),~-\infty&lt;x&lt;\infty$</p>
-<p><strong>Thm</strong>：一些定义</p>
-<ul>
-<li>$P(x_1 &lt; X\le x_2) = F(x_2) - F(x_1)$</li>
-<li>$P(x_1\le X&lt; x2) = F(x_2-0) - F(x_1-0)$</li>
-<li>$P(x_1 &lt; X&lt; x2) = F(x_2-0) - F(x_1)$</li>
-<li>$P(x_1\le X\le x2) = F(x_2) - F(x_1-0)$</li>
-</ul>
-<p><strong>Thm</strong>：分布函数的性质</p>
-<ol>
-<li>$0\le F(x) \le 1$</li>
-<li>单调不降</li>
-<li>右连续函数：$F(x+0)=F(x)$</li>
-<li>有<em>可数</em>个间断点</li>
-</ol>
-<h3 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h3><h4 id="离散型随机变量的分布律"><a href="#离散型随机变量的分布律" class="headerlink" title="离散型随机变量的分布律"></a>离散型随机变量的分布律</h4><p><strong>Def</strong>（概率函数）设离散随机变量$X$可能取得一切之为 $x_1, x_2,\dots, x_n$ 称为 $X$ 分布律（列），也称为 $X$ 的概率函数。</p>
-<blockquote>
-<p>分布律也可以用表格的形式表示：<br>|X|x1|x2|x3|…|<br>|—-|—-|—-|—-|—-|<br>|P|p1|p2|p3|…|</p>
-</blockquote>
-<p>$X$ 的分布函数 $F(x) = \sum\limits_{x_k\le x} p_k$</p>
-<h4 id="常见的离散分布"><a href="#常见的离散分布" class="headerlink" title="常见的离散分布"></a>常见的离散分布</h4><h5 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="0 - 1 分布"></a>0 - 1 分布</h5><p><strong>Def</strong>：$0 - 1$分布：$X$ 只取 $0$ 和 $1$ 两个值，且$P(X=1)=p,~P(X=0)=1-p$，则称 $X$ 服从 $(0-1)$ 分布。</p>
-<h5 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h5><p><strong>Def</strong>：n次独立试验概型</p>
-<blockquote>
-<p><strong>伯努利试验</strong>只有两个可能结果，$A,~\bar A$，且$P(A)=p$</p>
-<ul>
-<li>$n$ 重伯努利试验是指将试验独立重复 $n$ 次。</li>
-<li>$X$ 表示 $n$ 重伯努利试验中事件 $A$ 发生的次数</li>
-</ul>
-<p>称随机变量$X$服从参数为$n,~p$ 的二项分布，$X\sim B(n,p)$</p>
-<ul>
-<li>$P(X=k) = C_n^k p^k (1-p)^{n-k}$</li>
-</ul>
-</blockquote>
-<p><strong>Thm</strong>：$X$是伯努利试验中$A$发生的次数，$p$是每次试验中 $A$ 发生的概率，则 $X\sim b(n,p)$</p>
-<p><strong>Def</strong>：最可能成功次数$k = \lfloor (n+1)p \rfloor~(n+1)p不是整数$</p>
-<h5 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h5><p><strong>Def</strong>（泊松分布）$\displaystyle P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!},~X\sim P(\lambda)$</p>
-<p><strong>Thm</strong>（泊松定理）设 $\lambda &gt;0$是一个常数，$n$ 是任意正整数，设$np_n=\lambda$。则对于任意固定的非负整数$k$有 $\displaystyle\lim_{n\rightarrow \infty}C_n^kp_n^k(1-p_n)^{n-k}=\frac{\lambda^ke^{-\lambda}}{k!}$</p>
-<h5 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h5><p>$\displaystyle P(X=k) = q^{k-1} p, k=1,2,\dots$</p>
-<h5 id="超几何分布"><a href="#超几何分布" class="headerlink" title="超几何分布"></a>超几何分布</h5><p>$\displaystyle P(X=k) = \frac{C_M^k\cdot C_{N-M}^{n-k}}{C_N^n}, k = 0, 1, 2, \dots, l=\min\{n,M\}$</p>
-<ul>
-<li>$X\sim H(N,M,n)$</li>
-</ul>
-<h5 id="负二项分布"><a href="#负二项分布" class="headerlink" title="负二项分布**"></a>负二项分布**</h5><p>$\displaystyle P(X=k) = C_{k-1}^{r-1}p^r(1-p)^{k-r}$</p>
-<ul>
-<li>$X\sim Nb(r,p)$</li>
-</ul>
-<h4 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h4><p><strong>Def</strong>（连续性随机变量）$F(x) = \int_{-\infty}^xf(x)\mathrm dx,-\infty &lt; x &lt; \infty$</p>
-<ul>
-<li>其中$f(x)$ 是非负可积函数，称为$X$的概率分布密度函数（概率密度函数<code>Probability Density Function</code>）</li>
-<li>规范性：$\displaystyle\int_R f(x) \mathrm dx =1$</li>
-<li>$P(x&lt; X \le x+\Delta x)\approx f(x)\Delta x$</li>
-<li>连续性，$F(-\infty) = 0$，$F(\infty)=1$</li>
-</ul>
-<p><strong>Def</strong>（累积分布函数）$\displaystyle P(a&lt;X\le b) = \int_a^bf(x)\mathrm dx$</p>
-<h5 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h5><script type="math/tex; mode=display">
-f(x)=\begin{cases}
-  \displaystyle\frac{1}{b-a},&a\le x\le b,\\
-  0,&otherwise
-\end{cases}\\
-\\
-F(x) = P(X\le x) = \begin{cases}
-  0,&x < a\\
-  \displaystyle\frac{x-a}{b-a}, &a\le x \le b\\
-  1, &x>b
-\end{cases}</script><ul>
-<li>$X\sim U[a,b]$</li>
-</ul>
-<h5 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h5><script type="math/tex; mode=display">
-f(x) = \begin{cases}
-  \lambda e^{-\lambda x}, &x>0\\
-  0, & x\le 0
-\end{cases}
-\\
-F(x) = \begin{cases}
-  1- e^{-\lambda x}, &x>0\\
-  0, &x\le 0
-\end{cases}</script><ul>
-<li>$X\sim e(\lambda)$</li>
-</ul>
-<h5 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h5><p><strong>Def</strong>：$\displaystyle f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</p>
-<ul>
-<li>$X\sim N(\mu, \sigma^2)$</li>
-<li>$\mu$ 为位置参数，$\sigma$ 为尺度参数</li>
-<li>关于$\mu$对称，最大值</li>
-<li>$\sigma$固定，形状保持不变</li>
-<li>拐点为：$x=\mu\pm\sigma$</li>
-<li>$erf(x)=F(x)= \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\mathrm dx$</li>
-<li>$3\sigma,~6\sigma$理论</li>
-</ul>
-<p><strong>Def</strong>（标准正态分布）$N(0,1)$</p>
-<ul>
-<li>$\mu = 0, \sigma = 1$ 的正态分布称为标准正态分布</li>
-<li>密度函数和分布函数通常用 $\varphi(x),\Phi(x)$ 表示</li>
-<li>$\Phi(0)=0.5,~\Phi(-x) = 1-\Phi(x)$</li>
-</ul>
+<h2 id="随机过程的基本概念"><a href="#随机过程的基本概念" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h2><h3 id="随机过程的基本概念-1"><a href="#随机过程的基本概念-1" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h3><p><strong>Def</strong>（随机过程）设 $\Omega=\{\omega\}$ 是随机试验 $E$ 的样本空间，$T\subset (-\inf,+\inf)$ 如果对于一个固定的 $t\in T$，有定义在 $\Omega$ 上的随机变量，$X(\omega,t),\omega\in \Omega$ ,令 $t$ 在 $T$ 中变动，得到依赖于 $t$ 的一族随机变量 $\{X(\omega, t), t\in T\}$ 称为随机过程。</p>
+<h3 id="有限维的分布函数族"><a href="#有限维的分布函数族" class="headerlink" title="有限维的分布函数族"></a>有限维的分布函数族</h3><p><strong>Def</strong>（随机过程分布函数）$F(t; x)=P(X(t, w)\le x)$ 为 $X(t, w)$ 的分布函数。（一维）</p>
+<p><strong>Def</strong>（随机过程分布函数）$F(t _ 1,t _ 2…,t _ n; x _ 1, x _ 2,…,x _ n)=P(X(t_1, w)\le x _ 1,X(t _ 2, w)\le x _ 2,…)$ 为 $X(t, w)$ 的分布函数。</p>
+<h3 id="随机过程的数字特征"><a href="#随机过程的数字特征" class="headerlink" title="随机过程的数字特征"></a>随机过程的数字特征</h3><p>均值函数：</p>
+<script type="math/tex; mode=display">
+m_X(t)=EX(t)</script><p>均方值函数：</p>
+<script type="math/tex; mode=display">
+\varPsi^2(t)=EX^2(t)</script><p>方差函数：</p>
+<script type="math/tex; mode=display">
+D_X(t)=E(X(t)-m_X(t))^2</script><p>相关函数：</p>
+<script type="math/tex; mode=display">
+R_X(s,t)=EX(s)X(t)</script><p>协方差函数：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-  &\varphi(x) = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}\\
-  &\Phi(x) = \int_{-\infty}^x\varphi(x)\mathrm dx
-\end{aligned}</script><p><strong>Thm</strong>（一般正态分布的标准化）：若$X\sim N(\mu, \sigma^2)$，则$U=\frac{X-\mu}{\sigma}\sim N(0,1)$</p>
-<p><strong>Def</strong>：（$\alpha$分位点）$P(X&gt;\mu_\alpha) = \alpha,\quad0&lt;\alpha&lt;1$</p>
-<h3 id="随机变量函数的分布"><a href="#随机变量函数的分布" class="headerlink" title="随机变量函数的分布"></a>随机变量函数的分布</h3><h4 id="已知离散随机变量X的分布，求函数-Y-g-X-的分布"><a href="#已知离散随机变量X的分布，求函数-Y-g-X-的分布" class="headerlink" title="已知离散随机变量X的分布，求函数 Y = g(X) 的分布"></a>已知离散随机变量X的分布，求函数 Y = g(X) 的分布</h4><script type="math/tex; mode=display">
-P(Y=y_j) = P(g(X)=y_j) = \sum_{\{x_k|g(x_k) = y_j\}}P(X=x_k), j = 1, 2, \dots,</script><p>离散型均匀分布：</p>
+C_X(s,t)&=Cov(X(s),X(t))\\
+&=R_X(s,t)-m_X(s)m_X(t)
+\end{aligned}</script><h3 id="泊松过程和维纳过程"><a href="#泊松过程和维纳过程" class="headerlink" title="泊松过程和维纳过程"></a>泊松过程和维纳过程</h3><h4 id="独立增量过程"><a href="#独立增量过程" class="headerlink" title="独立增量过程"></a>独立增量过程</h4><p><strong>Def</strong>（独立增量过程）设 $\{X(t) ,t\in T\}$ 是一个随机过程，对于任意的 $t_1,…,t_n$ 增量 $X(t_2)-X(t_1) …$ 是独立的，则称 $X(t)$ 是一个<strong>独立增量过程</strong>。</p>
+<p>增量 $X(t+h)-X(t)$ 的分布仅依赖于$h$ 而不依赖于 t，则称 $X(t)$ 是齐次的。</p>
+<p>例如：</p>
+<p>$X_n$ 是独立同分布的随机变量序列，部分和序列 $S_n=\sum X_i$ 是齐次的独立增量过程。</p>
+<p><strong>Thm</strong>：独立增量过程在 $P(X(0)=0)=1$ 的条件下，$X(t)$的任意有限维分布函数族可以由增量 $X(t)-X(s)$ 的分布唯一确定。</p>
+<p><strong>Thm</strong>：独立增量过程 $\{X(t),t\in T\}$ 的均值函数 $m_X(t)$ 和方差函数 $X_X(t)$ 存在，在 $P(X(0)=0)=1$ 的条件下，其协方差函数：</p>
 <script type="math/tex; mode=display">
-Y = [NX+1],\quad where~X\sim U(0, 1)</script><h4 id="一致连续型随机变量X的概率密度，求-g-X-的概率密度"><a href="#一致连续型随机变量X的概率密度，求-g-X-的概率密度" class="headerlink" title="一致连续型随机变量X的概率密度，求 g(X) 的概率密度"></a>一致连续型随机变量X的概率密度，求 g(X) 的概率密度</h4><ul>
-<li><strong>分布函数法</strong></li>
-<li>Key Point：$F_Y(y)=P(Y\le y)=P(g(x)\le y)=\displaystyle\int_{\{x|g(x)&lt;y\}}f_X(x)\mathrm dx$</li>
+C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" class="headerlink" title="泊松过程"></a>泊松过程</h4><p><strong>Def</strong>（泊松过程）设 $\{N(t), t\ge 0\}$ 表示 $[0, t]$ 内随机点发生的数目，$N(t)$ 有以下性质，则称其为一个强度为 $\lambda,\lambda\ge 0$ 的泊松过程：</p>
+<ol>
+<li>齐次性（平稳性）</li>
+<li>独立增量性（无后效性）</li>
+<li>普通性</li>
+<li>$P(N(0)=0)=1$</li>
+</ol>
+<h5 id="泊松过程的有限维分布和数字特征"><a href="#泊松过程的有限维分布和数字特征" class="headerlink" title="泊松过程的有限维分布和数字特征"></a>泊松过程的有限维分布和数字特征</h5><ol>
+<li><p>有限维分布：$\{N(t) ,t\ge 0\}$ 是一个强度为 $\lambda$ 的泊松过程，则 $N(t)$ 的一维分布是参数为 $\lambda t$ 的泊松分布，即：$N(t)\sim P(\lambda t)$</p>
+</li>
+<li><p>数字特征：</p>
+<ul>
+<li>$m_N(t)=\lambda t$</li>
+<li>$D_N(t)=\lambda t$</li>
+<li>$C_N(s,t)=\lambda \min \{s,t\}$</li>
 </ul>
-<script type="math/tex; mode=display">
-Y = aX+b\Rightarrow
-f_Y(y)=\frac{\mathrm d}{\mathrm dy}F_Y(y) =\begin{cases}
-  \frac 1 a f_X(\frac{y-b}{a}),&a>0\\
-  -\frac{1}{a} f_X(\frac{y-b}{a}),&a<0\\
-\end{cases}</script><p>「例」：$X\sim N(0,1),~Y=X^2$</p>
-<script type="math/tex; mode=display">
-f_Y(y) = F'_Y(y) =\begin{cases}
-  \frac{1}{\sqrt{2\pi y}}e^{-\frac{y}{2}},& y>0\\
-  0,&y\le 0
-\end{cases}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+</li>
+<li><p>设 $\{N(t) ,t\ge 0\}$ 是一个强度为 $\lambda$ 的泊松分布，则 $N(s)-N(t)$ 是一个参数为 $\lambda(s-t)$ 的泊松分布</p>
+</li>
+</ol>
+<p>同时，我们把强度为 $\lambda$  的泊松过程 $\{N(t),t\ge 0\}$ 中机点出现的时刻 $W_1,…,W_n,…$ 为强度为 $\lambda$ 的泊松流。</p>
+<p>记 $T_i=W_i-W_{i-1}$ 其表示的第 $i-1$ 个随机点与第 $i$ 个随机点在时刻 $t_{i-1}$ 出现的间隔时间。则 $T\sim e(\lambda)$，反之：</p>
+<p><strong>Thm</strong>：如果任意相邻两个随机点出现的间隔时间相互独立同服从于参数为 $\lambda$ 的指数分布，则随机点流构成强度为 $\lambda$ 的泊松过程。</p>
+<h4 id="维纳过程"><a href="#维纳过程" class="headerlink" title="维纳过程"></a>维纳过程</h4><p><strong>Def</strong>（维纳过程 / 布朗运动）随机过程满足如下条件：</p>
+<ol>
+<li>$W(0)=0$</li>
+<li>$W(t)$ 是齐次增量过程</li>
+<li>$t&gt;s\ge0$ 时，$W(t)-W(s)=h(X_{[s/\delta]+1}+…+X_{[s/\delta]})$是独立同分布的随机变量。</li>
+<li>$EW(t)=0,t&gt;0$</li>
+</ol>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
             <div>
@@ -396,9 +330,9 @@ f_Y(y) = F'_Y(y) =\begin{cases}
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/18/study/Math/Probabilities/notes1/">
+                      <a href="/2020/12/11/study/Math/Probabilities/notes10/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">「概率统计与随机过程」 1 - 随机事件及其概率</span>
+                        <span class="hidden-mobile">「概率统计与随机过程」 10 - 马尔科夫链</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -406,8 +340,8 @@ f_Y(y) = F'_Y(y) =\begin{cases}
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/18/study/Math/Probabilities/notes3/">
-                        <span class="hidden-mobile">「概率统计与随机过程」 3 - 随机向量及其概率分布</span>
+                      <a href="/2020/12/02/study/Math/Probabilities/notes4/">
+                        <span class="hidden-mobile">「概率统计与随机过程」 4 - 随机向量的数字特征</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
