@@ -1,0 +1,721 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&quot;auto&quot;>
+
+
+
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp">
+  <link rel="icon" type="image/png" href="/img/favicon.webp">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="欢迎来到些些同学的藏宝阁">
+  <meta name="author" content="Jerry Yang">
+  <meta name="keywords" content="study">
+  <title>「凸优化」 对偶 - 些些同学的藏宝阁</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"jerryyang2001.github.io","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>些些同学的藏宝阁</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/schedule/">
+                <i class="iconfont icon-plan"></i>
+                日程
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="「凸优化」 对偶">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-09-26 00:00" pubdate>
+        2020年9月26日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      17
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">「凸优化」 对偶</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2 分钟前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>凸优化-对偶</p>
+<a id="more"></a>
+<h2 id="对偶"><a href="#对偶" class="headerlink" title="对偶"></a>对偶</h2><h3 id="Lagrange-对偶问题"><a href="#Lagrange-对偶问题" class="headerlink" title="Lagrange 对偶问题"></a>Lagrange 对偶问题</h3><h4 id="Lagrange-函数"><a href="#Lagrange-函数" class="headerlink" title="Lagrange 函数"></a>Lagrange 函数</h4><p>考虑标准形式的优化问题，拉格朗日函数定义为：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&L:R^n\times R^m\times R^p\rightarrow R\\
+&L(x, \lambda, \nu)=f_0(x)+\sum_{i=1}^m \lambda_if_i(x)+\sum_{i=1}^p \nu_ih_i(x)\\
+\end{aligned}</script><ul>
+<li>定义域为：$D\times R^m\times R^p$</li>
+<li>目标函数和约束函数的加权和</li>
+<li>$\lambda_i$ 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
+<li>$\nu_i$ 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
+</ul>
+<h4 id="Lagrange-对偶函数"><a href="#Lagrange-对偶函数" class="headerlink" title="Lagrange 对偶函数"></a>Lagrange 对偶函数</h4><script type="math/tex; mode=display">
+\begin{aligned}
+    &g:R^m\times R^p\rightarrow R\\
+    &g=\inf_{x\in D} L(x,\lambda, \nu)
+\end{aligned}</script><ul>
+<li>函数 $g$ 为凹函数（任何优化问题的 Lagrange 对偶函数为凹函数）<ul>
+<li>$\sup L(x,\lambda, \nu)$ 为凸函数</li>
+</ul>
+</li>
+<li>最优值下界：若 $\lambda \ge 0$，则 $g(\lambda, \nu)\le p^ <em>$（$p^ </em>$ 为原优化问题最优值）</li>
+</ul>
+<p><strong>例：线性方程组的最小二乘解</strong></p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\min~~&x^Tx\\
+s.t.~~&Ax=b
+\end{aligned}</script><p>下界性质：$p^*\ge -\frac 1 4 \nu^TAA^T\nu-b^T\nu,\quad \forall \nu$</p>
+<p><strong>例：标准形式的线性规划</strong></p>
+<p>下界性质：$p^*\ge-b^T\nu,\quad if~A^T\nu +c\succeq 0$</p>
+<p><strong>例：双向划分问题</strong></p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\min~~&x^TWx\\
+s.t.~~&x_i^2=1,\quad i = 1,...,n
+\end{aligned}</script><p>下界性质：$p^*\ge -\mathbf 1^T\nu, \quad if~W+\mathbf{diag}(\nu)\succeq 0$</p>
+<h4 id="Lagrange-对偶函数与共轭函数"><a href="#Lagrange-对偶函数与共轭函数" class="headerlink" title="Lagrange 对偶函数与共轭函数"></a>Lagrange 对偶函数与共轭函数</h4><p>共轭函数 $f^*=\sup_{x\in D}(y^Tx-f(x))$</p>
+<p>而对偶函数满足：</p>
+<p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210112235145873.png" srcset="/img/loading.gif" alt="image-20210112235145873"></p>
+<p>若已知共轭函数，可以简化对偶函数的表达</p>
+<p>例如：熵的最大化</p>
+<h3 id="对偶问题"><a href="#对偶问题" class="headerlink" title="对偶问题"></a>对偶问题</h3><script type="math/tex; mode=display">
+\begin{aligned}
+    \max~~&g(\lambda,\nu)\\
+    s.t.~~&\lambda\succeq 0
+\end{aligned}</script><ul>
+<li>凸优化问题的最优值表示为 $d^*$</li>
+<li>通过 Lagrange 对偶函数获取 $p^*$ 的最佳下界</li>
+<li>凸优化问题：$d^<em>\le p^</em>$</li>
+</ul>
+<p><strong>例：线性规划</strong></p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\min.&c^Tx\\
+s.t.&Ax=b\\&x\succeq 0
+\end{aligned}</script><p>对偶问题为：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  \max.&-b^Tv\\
+  s.t.&A^Tv+c\succeq0
+\end{aligned}</script><blockquote>
+<p><em>对于一个线性规划问题，其对偶问题也是线性规划问题</em></p>
+</blockquote>
+<h3 id="弱对偶与强对偶"><a href="#弱对偶与强对偶" class="headerlink" title="弱对偶与强对偶"></a>弱对偶与强对偶</h3><p><strong>Thm</strong>（弱对偶）对于凸优化和非凸优化都有：$d^<em>\le p^</em>$</p>
+<ul>
+<li>可以⽤来寻找困难问题的⾮平凡下界</li>
+</ul>
+<p><strong>Thm</strong>（强对偶）对偶间隙 $p^<em>-d^</em> =0$</p>
+<ul>
+<li>并非总是满足，但在凸优化问题中常常满足</li>
+</ul>
+<p>凸优化问题中保证强对偶的条件称为<strong>约束准则</strong>。</p>
+<h3 id="几何解释"><a href="#几何解释" class="headerlink" title="几何解释"></a>几何解释</h3><p>考虑只有一个约束 $f_1(0)\le 0$ 的问题</p>
+<p>定义集合：$G=\{(f_0(x),f_1(x)|x\in D\}$</p>
+<p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210112235935306.png" srcset="/img/loading.gif" alt="image-20210112235935306"></p>
+<p>如果是凸的：</p>
+<p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210113000037678.png" srcset="/img/loading.gif" alt="image-20210113000037678"></p>
+<h3 id="最优性条件"><a href="#最优性条件" class="headerlink" title="最优性条件"></a>最优性条件</h3><p><strong>Def</strong>（相对内部）$\mathrm{Rel~int}~D=\{x\in D|B(x,r)\cap\mathrm{aff~}D\sub D,\exist r&gt;0\}$</p>
+<h4 id="Slater-约束准则"><a href="#Slater-约束准则" class="headerlink" title="Slater 约束准则"></a>Slater 约束准则</h4><p><strong>Thm</strong>：若某个凸优化问题中，存在一点 $x\in \mathrm{relint}~D=\{x\in D|B(x,r)\cap \mathrm{aff}D\subset D\}$ 使得该问题是<strong>严格可行</strong>的（$x\in relint~D,f_i(x)&lt;0,Ax=b$）则为强对偶问题。</p>
+<p>弱化后：若不等式约束时仿射的，只要可行域非空，则必有$d^<em>=p^</em>$</p>
+<h4 id="KKT-最优性条件"><a href="#KKT-最优性条件" class="headerlink" title="KKT 最优性条件"></a>KKT 最优性条件</h4><h5 id="KKT-条件"><a href="#KKT-条件" class="headerlink" title="KKT 条件"></a>KKT 条件</h5><p>一般可微优化问题，对偶间隙为 0 需要满足 KKT 条件，包含以下四个部分：</p>
+<ol>
+<li>（互补松弛性）$\lambda^<em>_if_i(x^</em>)=0$</li>
+<li>（原始可行性）$f_i(x)\le 0$</li>
+<li>（对偶可行性）$\lambda_i\ge 0$</li>
+<li>（稳定性条件）$\displaystyle\frac{\partial}{\partial x}L(x,\lambda,\nu)=0$</li>
+</ol>
+<p><strong>例：注水</strong></p>
+<h5 id="互补松弛性"><a href="#互补松弛性" class="headerlink" title="互补松弛性"></a>互补松弛性</h5><p>若对偶问题满足 $p^<em>=d^</em>$ 且所有函数可微，则最优解满足：</p>
+<script type="math/tex; mode=display">
+\lambda_i^*f_i(x^*)=0</script><h5 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h5><script type="math/tex; mode=display">
+\inf L=L(x^*,\lambda^*,\nu^*)</script><p>则：</p>
+<script type="math/tex; mode=display">
+\frac{\partial L(x,\lambda^*,\nu^*)}{\partial x}|_{x=x^*}=0</script><h5 id="对偶、问题重形式化"><a href="#对偶、问题重形式化" class="headerlink" title="对偶、问题重形式化"></a>对偶、问题重形式化</h5><p>常用方法：</p>
+<ol>
+<li>引入新的变量和对应的约束</li>
+<li>将显示约束转换为隐式表达（反之亦然）</li>
+<li>变换目标或约束函数变换</li>
+</ol>
+<h6 id="引入新的变量和对应的约束"><a href="#引入新的变量和对应的约束" class="headerlink" title="引入新的变量和对应的约束"></a>引入新的变量和对应的约束</h6><p>例如：$\min~~f_0(Ax+b)$</p>
+<p>对偶问题：$g=\inf_xf_0(Ax+b)=p^*$</p>
+<p>重形式化后：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\min~~&f_0(y)&\\
+s.t.~~&Ax+b-y=0&\\
+\rightarrow~~ &g(\nu)=
+\begin{cases}
+-f_0^*(\nu)+b^T\nu &A^T\nu = 0\\
+-\infty&otherwise
+\end{cases}
+\end{aligned}</script><p>例：范数逼近问题</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\min~~&\|Ax-b\|\\
+\rightarrow\min~~&\|y\|\\
+s.t.~~&y=Ax-b
+\end{aligned}</script><h6 id="隐式约束"><a href="#隐式约束" class="headerlink" title="隐式约束"></a>隐式约束</h6><p>例如：带框的线性规划</p>
+<p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210113091100433.png" srcset="/img/loading.gif" alt="image-20210113091100433"></p>
+<h3 id="扰动、灵敏度分析"><a href="#扰动、灵敏度分析" class="headerlink" title="扰动、灵敏度分析"></a>扰动、灵敏度分析</h3><p>优化问题及其对偶问题的形式为：</p>
+<p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210113091241349.png" srcset="/img/loading.gif" alt="image-20210113091241349"></p>
+<p>则其扰动问题及其对偶</p>
+<p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210113091257572.png" srcset="/img/loading.gif" alt="image-20210113091257572"></p>
+<p>其中，$x$ 为原问题的优化变量，$u,~v$ 为参数</p>
+<p>得到的 $p^*(u,v)$ 为最优值，是 $u$ 和 $v$ 的函数</p>
+<h4 id="扰动问题的性质"><a href="#扰动问题的性质" class="headerlink" title="扰动问题的性质"></a>扰动问题的性质</h4><p><strong>Thm</strong>：若原问题是凸的，则 $p^*(u,v)$ 是凸函数</p>
+<p><strong>Thm</strong>：若原问题为凸，且对偶间隙为 0，$\lambda^<em>,w^</em>$ 为原问题的最优解，则：$p^<em>(u,v)\ge p^</em>(0,0)-\lambda^{<em>T}u-w^{</em>T}v$</p>
+<h4 id="灵敏度分析"><a href="#灵敏度分析" class="headerlink" title="灵敏度分析"></a>灵敏度分析</h4><p>$p^<em>(u,v)\ge p^</em>(0,0)-\lambda^{<em>T}u-w^{</em>T}v$</p>
+<p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210113091841863.png" srcset="/img/loading.gif" alt="image-20210113091841863"></p>
+<h5 id="局部灵敏度分析"><a href="#局部灵敏度分析" class="headerlink" title="局部灵敏度分析"></a>局部灵敏度分析</h5><p><strong>Thm</strong>：若原问题是凸的，且强对偶性成立， $p^*(u,v)$ 在 $(0,0)$ 可微，则有</p>
+<script type="math/tex; mode=display">
+\lambda_i^*=-\frac{\partial p^*(0,0)}{\partial u_i},\quad \nu_i^*=-\frac{\partial p^*(0,0)}{\partial v_i}</script><p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210113092052504.png" srcset="/img/loading.gif" alt="image-20210113092052504"></p>
+<h3 id="广义不等式"><a href="#广义不等式" class="headerlink" title="广义不等式"></a>广义不等式</h3><blockquote>
+<p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210113092110526.png" srcset="/img/loading.gif" alt="image-20210113092110526"></p>
+</blockquote>
+<ul>
+<li>不等式约束的 Lagrange 乘子为向量 $\lambda_i\in R^{k_i}$</li>
+<li>拉格朗日函数为：$L=f_0(x)+\sum_{i=1}^m\lambda_i^Tf_i(x)+\sum_{i=1}^p\nu_ih_i(x)$</li>
+</ul>
+<p><strong>Thm</strong>（下界性质）若 $\lambda_i\succeq_{K_i^<em>}0$ 则 $g\le p^</em>$</p>
+<p><strong>例：半定规划</strong></p>
+<blockquote>
+<p><img src="/2020/09/26/study/Math/ConvexOptimization/notes5/image-20210113092457953.png" srcset="/img/loading.gif" alt="image-20210113092457953"></p>
+</blockquote>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%87%B8%E4%BC%98%E5%8C%96/">凸优化</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/09/26/study/Math/ConvexOptimization/index/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">最（凸）优化方法 [Overview and Intro]</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/09/26/study/Math/DiscreteMath/index/">
+                        <span class="hidden-mobile">离散数学 [Overview]</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz",
+          app_key: "vhuFwrNX5X0JUsN8f4YXXLQq",
+          placeholder: "ヾﾉ≧∀≦)o 来啊，快活啊!",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> with <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

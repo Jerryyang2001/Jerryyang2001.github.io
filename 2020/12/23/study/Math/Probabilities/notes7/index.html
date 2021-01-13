@@ -240,7 +240,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：20 天前
+                  本文最后更新于：3 分钟前
                 
               </p>
             
@@ -335,7 +335,7 @@ L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)</script><p><s
 <li>对于离散型随机变量，若无法达到 $P=1-\alpha$ 则我们找到尽量接近的值使得$P\ge 1-\alpha$</li>
 </ul>
 <div class="note note-info">
-            <h6 id="（已知-σ）-如何求参数-theta-的置信区间？"><a href="#（已知-σ）-如何求参数-theta-的置信区间？" class="headerlink" title="（已知 σ） 如何求参数 $\theta$ 的置信区间？"></a>（已知 σ） 如何求参数 $\theta$ 的置信区间？</h6><blockquote><p>若 $X\sim N(\mu,\sigma^2)$ $\sigma^2$ 已知，$\mu$ 未知，求 $\mu$ 置信水平为 1-α 的置信区间</p></blockquote><p>注意到：$\displaystyle\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1)$</p><p>则：$P(\displaystyle|\frac{\bar X-\mu}{\sigma/\sqrt n}|&lt;z_{\alpha/2})=1-\alpha$</p><p>即：$P(\bar X-\frac{\sigma}{\sqrt n}z_{\alpha/2}&lt;\mu&lt;\bar X+\frac{\sigma}{\sqrt n}z_{\alpha/2})=1-\alpha$，其中$z_{\alpha}$ 为上侧 α 分位点</p>
+            <h4 id="（已知-σ）-如何求参数-theta-的置信区间？"><a href="#（已知-σ）-如何求参数-theta-的置信区间？" class="headerlink" title="（已知 σ） 如何求参数 $\theta$ 的置信区间？"></a>（已知 σ） 如何求参数 $\theta$ 的置信区间？</h4><blockquote><p>若 $X\sim N(\mu,\sigma^2)$ $\sigma^2$ 已知，$\mu$ 未知，求 $\mu$ 置信水平为 1-α 的置信区间</p></blockquote><p>注意到：$\displaystyle\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1)$</p><p>则：$P(\displaystyle|\frac{\bar X-\mu}{\sigma/\sqrt n}|&lt;z_{\alpha/2})=1-\alpha$</p><p>即：$P(\bar X-\frac{\sigma}{\sqrt n}z_{\alpha/2}&lt;\mu&lt;\bar X+\frac{\sigma}{\sqrt n}z_{\alpha/2})=1-\alpha$，其中$z_{\alpha}$ 为上侧 α 分位点</p>
           </div>
 <blockquote>
 <p>置信区间越短 → 精度高</p>
@@ -343,15 +343,15 @@ L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)</script><p><s
 <div class="note note-primary">
             <ol><li>寻求样本和 $\theta$ 的函数 $W(X_1,…,X_n;\theta)$ 其分布不依赖于 $\alpha$ 和其他位置参数。（<em>枢轴量</em>）</li><li>构造常数 $a,b$ 使得 $P(a&lt;W&lt;b)=1-\alpha$</li><li>从中解出 $\hat\theta_1(X_1,…,X_n),\hat\theta_2(X_1,…,X_n)$ 得到置信区间</li></ol>
           </div>
-<h3 id="单个正态总体的置信区间"><a href="#单个正态总体的置信区间" class="headerlink" title="单个正态总体的置信区间"></a>单个正态总体的置信区间</h3><h4 id="μ-的置信区间"><a href="#μ-的置信区间" class="headerlink" title="μ 的置信区间"></a>μ 的置信区间</h4><p><em>$\sigma^2$ 已知</em>，利用 $W=\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1)$ 置信区间为：</p>
+<h4 id="单个正态总体的置信区间"><a href="#单个正态总体的置信区间" class="headerlink" title="单个正态总体的置信区间"></a>单个正态总体的置信区间</h4><h5 id="μ-的置信区间"><a href="#μ-的置信区间" class="headerlink" title="μ 的置信区间"></a>μ 的置信区间</h5><p><em>$\sigma^2$ 已知</em>，利用 $W=\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1)$ 置信区间为：</p>
 <script type="math/tex; mode=display">
 \left(\bar X-\frac{\sigma}{\sqrt n}z_{\alpha/2},\bar X+\frac{\sigma}{\sqrt n}z_{\alpha/2}\right)</script><p><em>$\sigma^2$ 未知</em>，利用 $W=\frac{\bar X-\mu}{S/\sqrt n}\sim t(n-1)$</p>
 <script type="math/tex; mode=display">
-\left(\bar{X}-\frac{S}{\sqrt{n}}t_{\alpha/2} (n-1),\bar{X}+\frac{S}{\sqrt{n}}t_{\alpha/2} (n-1)\right)</script><h4 id="σ2-的置信区间"><a href="#σ2-的置信区间" class="headerlink" title="σ2 的置信区间"></a>σ2 的置信区间</h4><p><em>μ未知</em>，利用 $\frac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)$，置信区间为：</p>
+\left(\bar{X}-\frac{S}{\sqrt{n}}t_{\alpha/2} (n-1),\bar{X}+\frac{S}{\sqrt{n}}t_{\alpha/2} (n-1)\right)</script><h5 id="σ2-的置信区间"><a href="#σ2-的置信区间" class="headerlink" title="σ2 的置信区间"></a>σ2 的置信区间</h5><p><em>μ未知</em>，利用 $\frac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)$，置信区间为：</p>
 <script type="math/tex; mode=display">
 \left(\frac{(n-1)S^2}{\chi^2_{\alpha/2}(n-1)},\frac{(n-1)S^2}{\chi^2_{1-\alpha/2}(n-1)}\right)</script><p><em>μ已知</em>，在上式 $S^2$ 中用 $\mu$ 代替 $\bar X$</p>
 <script type="math/tex; mode=display">
-\left(\frac{\sum (X_i-\mu)^2}{\chi^2_{\alpha/2}(n-1)},\frac{\sum (X_i-\mu)^2}{\chi^2_{1-\alpha/2}(n-1)}\right)</script><h3 id="两个正态总体的均值差和方差比的置信区间"><a href="#两个正态总体的均值差和方差比的置信区间" class="headerlink" title="两个正态总体的均值差和方差比的置信区间"></a>两个正态总体的均值差和方差比的置信区间</h3><h4 id="μ1-μ2-的置信区间"><a href="#μ1-μ2-的置信区间" class="headerlink" title="μ1-μ2 的置信区间"></a>μ1-μ2 的置信区间</h4><p><em>σ1, σ2 已知</em>，利用：</p>
+\left(\frac{\sum (X_i-\mu)^2}{\chi^2_{\alpha/2}(n-1)},\frac{\sum (X_i-\mu)^2}{\chi^2_{1-\alpha/2}(n-1)}\right)</script><h4 id="两个正态总体的均值差和方差比的置信区间"><a href="#两个正态总体的均值差和方差比的置信区间" class="headerlink" title="两个正态总体的均值差和方差比的置信区间"></a>两个正态总体的均值差和方差比的置信区间</h4><h5 id="μ1-μ2-的置信区间"><a href="#μ1-μ2-的置信区间" class="headerlink" title="μ1-μ2 的置信区间"></a>μ1-μ2 的置信区间</h5><p><em>σ1, σ2 已知</em>，利用：</p>
 <script type="math/tex; mode=display">
 \frac{\bar X-\bar Y-(\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1^2}{m}+\frac{\sigma_2^2}{n}}}\sim N(0,1)</script><p>则：</p>
 <script type="math/tex; mode=display">
@@ -361,7 +361,7 @@ L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)</script><p><s
 <script type="math/tex; mode=display">
 \frac{\bar X-\bar Y-(\mu_1-\mu_2)}{S_w\sqrt{\frac{1}{m}+\frac{1}{n}}}\sim t(m+n-2)</script><p>因而，置信区间为：</p>
 <script type="math/tex; mode=display">
-\left(\bar X-\bar Y-t_{\frac{\alpha}{2}}(m+n-2)S_w\sqrt{\frac{1}{m}+\frac{1}{n}},\bar X-\bar Y+t_{\frac{\alpha}{2}}(m+n-2)S_w\sqrt{\frac{1}{m}+\frac{1}{n}}\right)</script><h4 id="两个正态总体方差比-σ12-σ22-的置信区间"><a href="#两个正态总体方差比-σ12-σ22-的置信区间" class="headerlink" title="两个正态总体方差比 σ12/σ22 的置信区间"></a>两个正态总体方差比 σ12/σ22 的置信区间</h4><p><em>μ1, μ2 未知</em>，利用：</p>
+\left(\bar X-\bar Y-t_{\frac{\alpha}{2}}(m+n-2)S_w\sqrt{\frac{1}{m}+\frac{1}{n}},\bar X-\bar Y+t_{\frac{\alpha}{2}}(m+n-2)S_w\sqrt{\frac{1}{m}+\frac{1}{n}}\right)</script><h5 id="两个正态总体方差比-σ12-σ22-的置信区间"><a href="#两个正态总体方差比-σ12-σ22-的置信区间" class="headerlink" title="两个正态总体方差比 σ12/σ22 的置信区间"></a>两个正态总体方差比 σ12/σ22 的置信区间</h5><p><em>μ1, μ2 未知</em>，利用：</p>
 <script type="math/tex; mode=display">
 \frac{S_{1m}^2}{S^2_{2n}}\frac{\sigma_2^2}{\sigma_1^2}\sim F(m-1,n-1)</script><p>置信区间为：</p>
 <script type="math/tex; mode=display">

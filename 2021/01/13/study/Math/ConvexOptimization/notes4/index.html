@@ -1,0 +1,733 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&quot;auto&quot;>
+
+
+
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp">
+  <link rel="icon" type="image/png" href="/img/favicon.webp">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="欢迎来到些些同学的藏宝阁">
+  <meta name="author" content="Jerry Yang">
+  <meta name="keywords" content="study">
+  <title>「凸优化」 凸优化问题 - 些些同学的藏宝阁</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"jerryyang2001.github.io","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>些些同学的藏宝阁</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/schedule/">
+                <i class="iconfont icon-plan"></i>
+                日程
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="「凸优化」 凸优化问题">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-13 00:00" pubdate>
+        2021年1月13日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      988 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">「凸优化」 凸优化问题</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2 分钟前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>凸优化-凸优化问题</p>
+<a id="more"></a>
+<h2 id="凸优化问题"><a href="#凸优化问题" class="headerlink" title="凸优化问题"></a>凸优化问题</h2><h3 id="优化问题的标准形式"><a href="#优化问题的标准形式" class="headerlink" title="优化问题的标准形式"></a>优化问题的标准形式</h3><script type="math/tex; mode=display">
+\begin{aligned}
+&\min.&f_0(x)\\
+&\mathrm{s.t.}&f_i(x)\le 0, i = 1,...,m\\
+&&h_i(x) =0
+\end{aligned}</script><p><strong>一些概念</strong>：</p>
+<ul>
+<li>$x\in R^n$ 优化变量</li>
+<li>$f_0$ 目标函数（代价函数）</li>
+<li>$f_i:R^n\rightarrow R$ 不等式约束函数</li>
+<li><p>$h$ 等式约束函数</p>
+</li>
+<li><p>优化问题的域：$D=\bigcap \mathbf{dom}~f_i\cap \bigcap \mathbf{dom}h_i$</p>
+</li>
+<li>可行解集：$x\in D$ 为可行解，且满足所有的不等式约束、等式约束</li>
+<li>最优值：<ul>
+<li>$p^*=\inf\{f_0(x)|f_i(x)\le 0, i = 1, …, m,h_i(x) = 0, i = 1, … ,p\}$</li>
+<li>没有可行解：$p^*=\infin$</li>
+<li>若问题没有下界，则：$p^*=\infty$</li>
+</ul>
+</li>
+<li>最优解 $x^<em>$：若 $x^</em>$ 可行，且 $f_0(x^<em>)=p^</em>$</li>
+<li>最优解集：$X_{opt}=\{x|f_i(x)\le 0, i = 1,…,m, h_i(x) = 0, i = 1, …, p, f_0(x)=p^*\}$</li>
+<li>$\epsilon-$次优解集：$\epsilon&gt;0,f_0(x)\le p^*+\epsilon$</li>
+</ul>
+<h4 id="局部最优点"><a href="#局部最优点" class="headerlink" title="局部最优点"></a><strong>局部最优点</strong></h4><ul>
+<li>$x$ 为局部最优点，若存在一个正实数 $R$ 使得</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\min.&f_0(z)\\
+&\mathrm{s.t.}&f_i(z)\le 0, i = 1,...,m\\
+&&h_i(z) =0
+&&||z-x||_2\le R
+\end{aligned}</script><p>例如：</p>
+<ul>
+<li>$f(x) = 1/ x, p^* = 0$ 无最优点</li>
+<li>$f(x) = -\log x, p^*=-\infin$</li>
+<li>$f(x) = x\log x,p^*=-1/e,x=1/e$</li>
+</ul>
+<h4 id="不等式约束"><a href="#不等式约束" class="headerlink" title="不等式约束"></a>不等式约束</h4><ul>
+<li>活动约束：$f\le 0$</li>
+<li>非活动约束：$f&lt;0$</li>
+</ul>
+<h4 id="等价问题"><a href="#等价问题" class="headerlink" title="等价问题"></a>等价问题</h4><p><strong>可行性优化问题的例子</strong>：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214455920.png" srcset="/img/loading.gif" alt="image-20210112214455920"></p>
+<h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><h6 id="盒子约束"><a href="#盒子约束" class="headerlink" title="盒子约束"></a>盒子约束</h6><blockquote>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214557325.png" srcset="/img/loading.gif" alt="image-20210112214557325"></p>
+<p>转化为</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214603008.png" srcset="/img/loading.gif" alt="image-20210112214603008"></p>
+</blockquote>
+<h6 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h6><blockquote>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214818420.png" srcset="/img/loading.gif" alt="image-20210112214818420"></p>
+<p>转化为</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214824405.png" srcset="/img/loading.gif" alt="image-20210112214824405"></p>
+</blockquote>
+<h5 id="等价问题的解决方法"><a href="#等价问题的解决方法" class="headerlink" title="等价问题的解决方法"></a>等价问题的解决方法</h5><p>若有：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\psi_0:R\rightarrow R &单调增\\
+&\psi_1,...,\psi_m:R\rightarrow R&\psi_i\le 0\leftrightarrow u\le 0\\
+&\psi_{m+1},...,\psi_{m+p}:R\rightarrow R&\psi_{i}(u)=0\leftrightarrow u=0\\
+&\tilde f_i(x)=\psi_i(f_i(x)),~\tilde h_i(x)=\psi_{m+i}(h_i(x))
+\end{aligned}</script><p>则，将：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220743182.png" srcset="/img/loading.gif" alt="image-20210112220743182"></p>
+<p>转化为：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220750007.png" srcset="/img/loading.gif" alt="image-20210112220750007"></p>
+<p>例如：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220825093.png" srcset="/img/loading.gif" alt="image-20210112220825093"></p>
+<p>转化为：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220834394.png" srcset="/img/loading.gif" alt="image-20210112220834394"></p>
+<p>又如：</p>
+<ul>
+<li><p>$\min.||Ax-b||_2\iff\min.||Ax+b||_2^2$</p>
+</li>
+<li><p>变量变换：$\tilde{f}_i(z)=f_i(\phi(z)),\tilde{g}_i(z)=h_i(\phi(z))$</p>
+</li>
+<li><p>目标函数和约束函数的变换：$\tilde{f}_i(z)=\varPhi_i(f_i(z)),\tilde{g}_i(z)=\varPhi_i(h_i(z))$</p>
+</li>
+<li><p>消除线性等式约束：$R(F)=N(A)$</p>
+</li>
+</ul>
+<h3 id="凸优化问题-1"><a href="#凸优化问题-1" class="headerlink" title="凸优化问题"></a>凸优化问题</h3><script type="math/tex; mode=display">
+\begin{aligned}
+&\min.&f_0(x)\\
+&\mathrm{s.t.}&f_i(x)\le 0, i = 1,...,m\\
+&&a_i^Tx=b_i
+\end{aligned}</script><ul>
+<li>$f_i$ 为凸函数 $(i=1…m)$</li>
+</ul>
+<h4 id="松弛变量"><a href="#松弛变量" class="headerlink" title="松弛变量"></a>松弛变量</h4><p>例如：</p>
+<blockquote>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112221125011.png" srcset="/img/loading.gif" alt="image-20210112221125011"></p>
+<p>转化为：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112221134254.png" srcset="/img/loading.gif" alt="image-20210112221134254"></p>
+</blockquote>
+<h4 id="局部和全局最优解"><a href="#局部和全局最优解" class="headerlink" title="局部和全局最优解"></a>局部和全局最优解</h4><ul>
+<li>凸优化问题的任意局部最优解也是全局最优解</li>
+</ul>
+<p><strong>Thm</strong>（可微函数的最优性准则）$x$为最优解，iff $x$ 是可行的，且 $\nabla f_0(x)^T(y-x)\ge 0,~\forall y\in D$</p>
+<ul>
+<li>考虑凸函数的一阶条件</li>
+</ul>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112221452875.png" srcset="/img/loading.gif" alt="image-20210112221452875"></p>
+<h4 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h4><h5 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h5><script type="math/tex; mode=display">
+\begin{aligned}
+\min.~c^Tx+d\\
+s.t.~Gx\preceq h\\
+\qquad Ax=b
+\end{aligned}</script><h5 id="线性分式规划"><a href="#线性分式规划" class="headerlink" title="线性分式规划"></a>线性分式规划</h5><script type="math/tex; mode=display">
+\begin{aligned}
+  \min.& f_0(x)&\\
+  s.t.& Gx\preceq h\\
+  &Ax=b&
+\end{aligned}</script><p>其中</p>
+<script type="math/tex; mode=display">
+f_0(x)=\frac{c^Tx+d}{e^Tx+f}</script><p>为拟凸优化问题，等价于线性规划</p>
+<h5 id="二次规划问题"><a href="#二次规划问题" class="headerlink" title="二次规划问题"></a>二次规划问题</h5><script type="math/tex; mode=display">
+\begin{aligned}
+  \min.& \frac{1}{2}x^TPx+q^Tx+r&\\
+  s.t.& Gx\preceq h\\
+  &Ax=b&
+\end{aligned}</script><h5 id="二次约束二次规划问题"><a href="#二次约束二次规划问题" class="headerlink" title="二次约束二次规划问题"></a>二次约束二次规划问题</h5><script type="math/tex; mode=display">
+\begin{aligned}
+  \min.& \frac{1}{2}x^TPx+q^Tx+r&\\
+  s.t.& \frac{1}{2}x^TP_ix+q_i^T+r_i\le 0\\
+  &Ax=b&
+\end{aligned}</script><h4 id="广义不等式约束"><a href="#广义不等式约束" class="headerlink" title="广义不等式约束"></a>广义不等式约束</h4><p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112225317172.png" srcset="/img/loading.gif" alt="image-20210112225317172"></p>
+<p>函数 $f_0:R^n\rightarrow R$ 为凸函数，$f_i:R^n\rightarrow R^{k_i}$ 为 $K_i$ 凸函数。</p>
+<p><strong>锥形式问题</strong>：目标函数、约束函数为仿射函数的形式：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233351326.png" srcset="/img/loading.gif" alt="image-20210112233351326"></p>
+<h5 id="半定规划"><a href="#半定规划" class="headerlink" title="半定规划"></a>半定规划</h5><p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233426547.png" srcset="/img/loading.gif" alt="image-20210112233426547"></p>
+<p>其中不等式约束称为<strong>线性矩阵不等式 (LMI)</strong></p>
+<p>带有多个 LMI 约束的问题，等价于单个 LMI</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233546333.png" srcset="/img/loading.gif" alt="image-20210112233546333"></p>
+<p>例如：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233619761.png" srcset="/img/loading.gif" alt="image-20210112233619761"></p>
+<h5 id="向量优化"><a href="#向量优化" class="headerlink" title="向量优化"></a>向量优化</h5><p>通用的向量优化问题：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233724371.png" srcset="/img/loading.gif" alt="image-20210112233724371"></p>
+<p>目标函数 $f_0$ 指在正常锥下最小化</p>
+<p>凸向量优化问题：</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233823612.png" srcset="/img/loading.gif" alt="image-20210112233823612"></p>
+<p>其中，$f_0$ 为 K-凸函数，其余为凸函数</p>
+<h4 id="最优解和Pareto最优解"><a href="#最优解和Pareto最优解" class="headerlink" title="最优解和Pareto最优解"></a>最优解和Pareto最优解</h4><p><strong>Def</strong>（可达目标值集合）$\mathcal O=\{f_0(x)|x~\mathrm{feasible}\}$</p>
+<p><strong>Def</strong>（最优解）$x$ 若 $f_0(x)$ 为 $\mathcal O$ 的最小元</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234101894.png" srcset="/img/loading.gif" alt="image-20210112234101894"></p>
+<p><strong>Def</strong>（Pareto 最优解） $x$ 若 $f_0(x)$ 为 $\mathcal O$ 的极小元</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234110993.png" srcset="/img/loading.gif" alt="image-20210112234110993"></p>
+<p><strong>Def</strong>（标量化）为了求得 Pareto 最优解，选择 $\lambda \succ_{K^*}0$ 来求解标量问题</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234219344.png" srcset="/img/loading.gif" alt="image-20210112234219344"></p>
+<p>通过变化 $\lambda\succ_{K^*}0$ 来找到所有的Pareto 最优点</p>
+<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234255872.png" srcset="/img/loading.gif" alt="image-20210112234255872"></p>
+<p>例如：正则化最小二乘问题</p>
+<script type="math/tex; mode=display">
+\min (w.r.t~R^2_+)\quad(\|Ax-b\|^2_2,\|x\|^2_2)</script><p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234359284.png" srcset="/img/loading.gif" alt="image-20210112234359284"></p>
+<p>粗线表示 Pareto 最优点</p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%87%B8%E4%BC%98%E5%8C%96/">凸优化</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/01/13/study/Math/ConvexOptimization/notes3/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">「凸优化」 凸函数</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/01/12/study/Physics/second-semister/">
+                        <span class="hidden-mobile">第二学期</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz",
+          app_key: "vhuFwrNX5X0JUsN8f4YXXLQq",
+          placeholder: "ヾﾉ≧∀≦)o 来啊，快活啊!",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> with <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
