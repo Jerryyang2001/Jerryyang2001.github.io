@@ -3686,10 +3686,9 @@ f'(z)=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=
       </tags>
   </entry>
   <entry>
-    <title>「复变函数」复变函数积分</title>
+    <title>「复变函数」复数项级数的概念和性质</title>
     <url>/2021/01/11/study/Math/ComplexFunctions/ch4/</url>
-    <content><![CDATA[<p>复变函数积分</p>
-<a id="more"></a>
+    <content><![CDATA[<p>复数项级数的概念和性质<br><a id="more"></a></p>
 <h2 id="复数项级数的概念和性质"><a href="#复数项级数的概念和性质" class="headerlink" title="复数项级数的概念和性质"></a>复数项级数的概念和性质</h2><h3 id="复数项级数"><a href="#复数项级数" class="headerlink" title="复数项级数"></a>复数项级数</h3><p><strong>Def</strong>：无穷复数列 $\{c_n\}\rightarrow_{n\rightarrow \infty} A \iff \forall \varepsilon&gt;0,\exist N,n&gt;N\rightarrow |c_n-A|&lt;\varepsilon$</p>
 <p><strong>Thm</strong>（判别法则）$c_n=a_n+ib_n$ 收敛于 $a+bi~\iff~a_n\rightarrow a, b_n\rightarrow b$</p>
 <p><strong>Def</strong>（复数项级数）$\sum_{n=1}^\infty c_n$，通项 $c_n$。</p>
@@ -6680,20 +6679,14 @@ R=P(x)/Q(x)</script><p>其中 $m-n\ge 1,Q(x)\ne 0$</p>
     <url>/2021/01/11/study/Math/ComplexFunctions/ch6/</url>
     <content><![CDATA[<p>:no_mouth:</p>
 <a id="more"></a>
-<h2 id="共形映射"><a href="#共形映射" class="headerlink" title="共形映射"></a>共形映射</h2><h3 id="共形映射的概念"><a href="#共形映射的概念" class="headerlink" title="共形映射的概念"></a>共形映射的概念</h3><h4 id="解析函数导数的几何意义"><a href="#解析函数导数的几何意义" class="headerlink" title="解析函数导数的几何意义"></a>解析函数导数的几何意义</h4><ol>
-<li><p>复平面上有向曲线的切向量：$z=z(t)$ 的切向量为 $z’(t)$</p>
-</li>
-<li><p>导数幅角的几何意义：表示曲线 $C$ 经过 $w=f(z)$ 后在 $z_0$ 的转动角，且大小和方向仅与 $z_0$ 有关，而与 $C$ 无关。</p>
-</li>
-</ol>
+<h2 id="共形映射"><a href="#共形映射" class="headerlink" title="共形映射"></a>共形映射</h2><h3 id="共形映射的概念"><a href="#共形映射的概念" class="headerlink" title="共形映射的概念"></a>共形映射的概念</h3><h4 id="解析函数导数的几何意义"><a href="#解析函数导数的几何意义" class="headerlink" title="解析函数导数的几何意义"></a>解析函数导数的几何意义</h4><p>复平面上有向曲线的切向量：$z=z(t)$ 的切向量为 $z’(t)$</p>
+<p><strong>导数幅角的几何意义</strong>：表示曲线 $C$ 经过 $w=f(z)$ 后在 $z_0$ 的转动角，且大小和方向仅与 $z_0$ 有关，而与 $C$ 无关。</p>
 <p><em>旋转角的不变性</em>：</p>
 <p>函数 $w=f(z)$ 在 D 内解析，且 $f’\ne0$ 则曲线 $L$ 的象曲线方程为：</p>
 <p>$\Gamma:w=f(z(t)),~t\in[\alpha,\beta]$，$\Gamma$ 在 $w=w(t_0)$ 的邻域内光滑，且：</p>
 <p>$w’(t_0)=f’(z)z’(t_0)\ne 0$ 则$\Gamma$ 在$w_0=f(z_0)$ 的切向量为 $w’(t_0)$</p>
 <p>则：$Arg~w’(t_0)=Arg~f’(z_0)+Arg~z’(t_0)$</p>
-<ol>
-<li>导数模 $|f’|$ 的几何意义：经过映射后 $z_0$ 的任何曲线在 $z_0$ 的伸缩率。$|f’(z_0)|=\lim_{z\rightarrow z_0} \left|\frac{w-w_0}{z-z_0}\right|$</li>
-</ol>
+<p><strong>导数模的几何意义</strong>：经过映射后 $z_0$ 的任何曲线在 $z_0$ 的<strong>伸缩率</strong>。$|f’(z_0)|=\lim_{z\rightarrow z_0} \left|\frac{w-w_0}{z-z_0}\right|$</p>
 <p><em>伸缩率不变性</em>：解析函数，伸缩率与曲线 $C$ 无关，具有伸缩率不变性。</p>
 <p><strong>Thm</strong>：设函数 $f$ 在 D 内解析，且 $z_0\in D,~f’(z_0)\ne 0$ 则该映射在该点处有保角性和伸缩率不变性</p>
 <h4 id="共形映射的概念和单叶解析函数的共形性"><a href="#共形映射的概念和单叶解析函数的共形性" class="headerlink" title="共形映射的概念和单叶解析函数的共形性"></a>共形映射的概念和单叶解析函数的共形性</h4><p><strong>Def</strong>（保角）</p>
@@ -6705,7 +6698,7 @@ R=P(x)/Q(x)</script><p>其中 $m-n\ge 1,Q(x)\ne 0$</p>
 <p><strong>Thm</strong>：$f$ 为 $D$ 内的解析函数，$z_0\in D$ 若 $f’\ne 0$ 则在$z_0$是保角的。若对任何 $z\in D$ 都有 $f’\ne 0$ 则为保角映射</p>
 <p><strong>Thm</strong>：$w=f(z)$ 是 $D$ 内的单叶映射，则它将 $z$ 平面上的区域 $D$ 共形映射为 $w$ 平面上的区域 $G=f(D)$ 它的反函数 $z=f^{-1}(w)$ 在 $G$ 内单叶解析，且：$[f^{-1}(w)]’=\frac{1}{f’(z)}$</p>
 <div class="note note-primary">
-            <h2 id="review"><a href="#review" class="headerlink" title="review"></a>review</h2><ol><li>复数的概念：<ol><li>形式：（指数、三角、$x+iy$）</li><li>模长、幅角（<em>辐角主值</em>）</li><li>幂函数 $z^n, z^{\frac{1}{n}}$</li><li>初等函数的计算</li></ol></li><li>积分<ol><li>L 不封闭、L 封闭</li><li>留数定理<ol><li>点的分类</li><li>计算留数</li></ol></li></ol></li></ol>
+            <h3 id="review"><a href="#review" class="headerlink" title="review"></a>review</h3><p>伸缩率：$|f’|$</p><p>旋转角：$Arg~f’$</p><p>解析 &amp; f‘≠ 0 =&gt; 保角性</p>
           </div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
@@ -6758,9 +6751,14 @@ P(n)=P^n\rightarrow^{n\rightarrow\infty}\left[
     \vdots&\vdots&&\vdots
 \end{matrix}
 \right]</script><p>则称此链具有遍历性。</p>
-<p><strong>Thm</strong>：若 $\{X_n,n\ge 0\}$ 是齐次马氏链，一部转移概率为 $P$ 若存在 n 步转移概率矩阵 $P(n)$ 无零元，则此链具有遍历性，其极限分布是：</p>
+<p>$P^n$ 求法：</p>
+<ol>
+<li>求出矩阵的特征值分解 $A=V\Lambda V^{-1}$</li>
+<li>求 $P^n$</li>
+</ol>
+<p><strong>Thm</strong>：若 $\{X_n,n\ge 0\}$ 是齐次马氏链，一部转移概率为 $P$ 若存在 n 步转移概率矩阵 $P(n)$ 无零元，则此链具有遍历性，其极限分布 $\pi$ 是：</p>
 <script type="math/tex; mode=display">
-\pi P=\pi</script><p>的满足归一性条件（$\mathbf 1^T\pi=1$）的为一解</p>
+\pi P=\pi</script><p>满足归一性条件（$\mathbf 1^T\pi=1$）的唯一解。</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>数学</category>
@@ -6988,7 +6986,7 @@ H_0:F(x)\ne F_0(x:\theta_1,...,\theta_k)</script><ol>
     <url>/2020/12/11/study/Math/Probabilities/notes9/</url>
     <content><![CDATA[<p>:no_mouth:</p>
 <a id="more"></a>
-<h2 id="随机过程的基本概念"><a href="#随机过程的基本概念" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h2><h3 id="随机过程的基本概念-1"><a href="#随机过程的基本概念-1" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h3><p><strong>Def</strong>（随机过程）设 $\Omega=\{\omega\}$ 是随机试验 $E$ 的样本空间，$T\subset (-\inf,+\inf)$ 如果对于一个固定的 $t\in T$，有定义在 $\Omega$ 上的随机变量，$X(\omega,t),\omega\in \Omega$ ,令 $t$ 在 $T$ 中变动，得到依赖于 $t$ 的一族随机变量 $\{X(\omega, t), t\in T\}$ 称为随机过程。</p>
+<h2 id="随机过程"><a href="#随机过程" class="headerlink" title="随机过程"></a>随机过程</h2><h3 id="随机过程的基本概念"><a href="#随机过程的基本概念" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h3><p><strong>Def</strong>（随机过程）设 $\Omega=\{\omega\}$ 是随机试验 $E$ 的样本空间，$T\subset (-\inf,+\inf)$ 如果对于一个固定的 $t\in T$，有定义在 $\Omega$ 上的随机变量，$X(\omega,t),\omega\in \Omega$ ,令 $t$ 在 $T$ 中变动，得到依赖于 $t$ 的一族随机变量 $\{X(\omega, t), t\in T\}$ 称为随机过程。</p>
 <h3 id="有限维的分布函数族"><a href="#有限维的分布函数族" class="headerlink" title="有限维的分布函数族"></a>有限维的分布函数族</h3><p><strong>Def</strong>（随机过程分布函数）$F(t; x)=P(X(t, w)\le x)$ 为 $X(t, w)$ 的分布函数。（一维）</p>
 <p><strong>Def</strong>（随机过程分布函数）$F(t _ 1,t _ 2…,t _ n; x _ 1, x _ 2,…,x _ n)=P(X(t_1, w)\le x _ 1,X(t _ 2, w)\le x _ 2,…)$ 为 $X(t, w)$ 的分布函数。</p>
 <h3 id="随机过程的数字特征"><a href="#随机过程的数字特征" class="headerlink" title="随机过程的数字特征"></a>随机过程的数字特征</h3><p>均值函数：</p>
@@ -7048,157 +7046,6 @@ C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" 
       <tags>
         <tag>概率论</tag>
         <tag>统计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第二学期</title>
-    <url>/2021/01/12/study/Physics/second-semister/</url>
-    <content><![CDATA[<p>基础物理学-下</p>
-<a id="more"></a>
-<h2 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h2><blockquote class="pullquote mindmap mindmap-md"><ul>
-<li>Ch18 光的吸收、散射、色散<ul>
-<li><strong>光的吸收</strong><ul>
-<li>吸收定律<ul>
-<li>布格定律</li>
-<li>比尔定律</li>
-</ul>
-</li>
-<li>一般吸收和选择吸收 吸收光谱</li>
-</ul>
-</li>
-<li><strong>光的散射</strong><ul>
-<li>光的散射、分类</li>
-<li>瑞利散射定律</li>
-</ul>
-</li>
-<li>光的色散</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="Mindmap"><a href="#Mindmap" class="headerlink" title="Mindmap"></a>Mindmap</h2><blockquote class="pullquote mindmap mindmap-md"><ul>
-<li>光的干涉<ul>
-<li>获得方法：<ul>
-<li>分波阵面法：杨氏双缝干涉</li>
-<li>分振幅法：等倾干涉、等厚干涉</li>
-</ul>
-</li>
-<li>杨氏双缝干涉<ul>
-<li>特点：<ul>
-<li>中央明条纹，堆成分布，间距相等 $\Delta x=\frac Dd\lambda$</li>
-<li>波长短 -&gt; 条纹密；波长长 -&gt; 条纹稀疏；</li>
-</ul>
-</li>
-<li>条纹位置的计算：<ul>
-<li>光程差：$\delta =r_2-r_1\approx d\sin \theta = (\pm k\lambda, ~\pm (2k+1)\lambda /2)$</li>
-<li>对应相位差</li>
-<li>条纹的位置 $x=(\pm k\frac{D\lambda}{d},\pm (2k+1)\frac{D\lambda}{2d})$</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>薄膜干涉：<ul>
-<li>公式：$\delta = 2d\sqrt{n_2^2-n_1^2\sin^2i}+\delta’$</li>
-<li>等倾干涉：特点<ul>
-<li>厚度 d 均匀</li>
-<li>干涉条纹是同心圆环，内疏外密，非等间距</li>
-<li>中心干涉级次高、半径增加，级次降低</li>
-</ul>
-</li>
-<li>等厚干涉<ul>
-<li>劈尖干涉<ul>
-<li>干涉条件：$\delta = 2nd+\lambda /2=k\lambda~or~(2k+1)\lambda / 2$ （注意半波损失）</li>
-</ul>
-</li>
-<li>牛顿环<ul>
-<li>干涉条件：$\delta =2d+\frac{\lambda}{2}=[k\lambda,(2k+1)\lambda/2]$</li>
-<li>特点</li>
-</ul>
-</li>
-<li>迈克尔逊干涉仪<ul>
-<li>动反射镜移动距离 $\Delta d = \Delta k\lambda / 2$</li>
-<li><strong>条纹移动一条，光程差相差半个波长</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>衍射<ul>
-<li>单缝衍射<ul>
-<li>条件（条纹的计算 $a \sin \theta =[\pm k\lambda,\pm (2k+1)\lambda/2]$ 暗纹、次明纹）</li>
-<li>条纹位置</li>
-<li>条纹宽度<ul>
-<li>中央条纹（角宽度、线宽度）</li>
-<li>其他条纹（角宽度、线宽度）</li>
-</ul>
-</li>
-<li>单缝衍射因子</li>
-</ul>
-</li>
-<li>圆孔衍射<ul>
-<li>艾里斑的半角宽度：$\theta_1=1.22\lambda/D$</li>
-<li>最小分辨角：$\theta_1=1.22\lambda/D$</li>
-<li>光学仪器的分辨率：$R = D/(1.22\lambda)$</li>
-</ul>
-</li>
-<li>光栅衍射<ul>
-<li>光栅方程：$d\sin \phi=\pm k\lambda$ 为明纹</li>
-<li>缺级现象：$d/b$ 为简单的整数比时，缺级</li>
-<li>光强：$I=I_0(\frac{\sin\alpha}{\alpha})^2(\frac{\sin N\beta}{\beta})^2$</li>
-<li>分辨本领<ul>
-<li>角色散本领：单位波长间隔的两条谱线散开角度的大小 $D=\frac{k}{d\cos\theta_k}$</li>
-<li>色分辨本领：恰好能分辨的两条谱线的波长差之比 $R=kN$</li>
-</ul>
-</li>
-<li>斜入射</li>
-<li>X 射线衍射<ul>
-<li>布拉格公式</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>偏振<ul>
-<li>马吕斯定律</li>
-<li>布儒斯特定律</li>
-<li>获得偏振光的方法：<ul>
-<li>偏振片</li>
-<li>布儒斯特角入射<ul>
-<li>反射光</li>
-<li>平行玻璃片堆 -&gt; 透射光</li>
-</ul>
-</li>
-<li>双折射晶体</li>
-</ul>
-</li>
-<li>双折射<ul>
-<li>寻常光和非常光、广州</li>
-<li>惠更斯作图法</li>
-<li>波片</li>
-</ul>
-</li>
-<li>偏振光干涉：</li>
-</ul>
-</li>
-<li>吸收、散射、色散<ul>
-<li>i1</li>
-<li>i2</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<p>填空题、选择题 ==&gt; 自测题</p>
-<p>计算题 ==&gt; 高于自测题 ≈ 例题、作业</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>基础物理学</category>
-      </categories>
-      <tags>
-        <tag>物理 复习</tag>
       </tags>
   </entry>
   <entry>
@@ -7990,6 +7837,78 @@ f_0(x)=\frac{c^Tx+d}{e^Tx+f}</script><p>为拟凸优化问题，等价于线性�
       </categories>
       <tags>
         <tag>凸优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「数值分析」 Chapter1</title>
+    <url>/2021/03/01/study/Math/NumericRecipies/chapter1/</url>
+    <content><![CDATA[<p>现代数值方法-01</p>
+<a id="more"></a>
+<p>TOC：</p>
+<ol>
+<li>绪论</li>
+<li>非线性方程求根</li>
+<li>线性方程组的数值解</li>
+<li>插值和逼近</li>
+<li>数值积分和数值微分</li>
+<li>常微分方程的数值解</li>
+<li>偏微分方程的数值解</li>
+</ol>
+<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><p>主要内容：</p>
+<ol>
+<li><strong>科学计算的内容</strong>：科学模拟的过程、一般策略</li>
+<li><strong>误差的概念</strong>：绝对误差、相对误差、向前/向后误差、有效数字及它们之间的关系</li>
+<li><strong>数据误差对函数值的影响</strong>：讨论函数的误差与自变量误差之间的关系</li>
+<li><strong>算法的数值稳定性</strong>：讨论初始数据的误差对计算结果的影响</li>
+<li><strong>实际计算中应该注意的问题</strong></li>
+</ol>
+<h2 id="科学计算"><a href="#科学计算" class="headerlink" title="科学计算"></a>科学计算</h2><h3 id="计算模拟解决问题的过程"><a href="#计算模拟解决问题的过程" class="headerlink" title="计算模拟解决问题的过程"></a>计算模拟解决问题的过程</h3><ol>
+<li>建立数学模型</li>
+<li>给出数值算法</li>
+<li>计算机软件实现算法</li>
+<li>运行、进行数值模拟</li>
+<li>表示计算结果</li>
+<li>解释计算结果</li>
+</ol>
+<h3 id="一般策略"><a href="#一般策略" class="headerlink" title="一般策略"></a>一般策略</h3><ol>
+<li>有限维空间代替无限维空间</li>
+<li>用有限过程代替无限过程</li>
+<li>用线性方程代替微分方程</li>
+<li>用低阶方程组代替高阶方程组</li>
+<li>用简单函数代替复杂函数</li>
+<li>用简单结构矩阵代替一般矩阵</li>
+</ol>
+<h2 id="误差的基本概念"><a href="#误差的基本概念" class="headerlink" title="误差的基本概念"></a>误差的基本概念</h2><h3 id="误差的来源"><a href="#误差的来源" class="headerlink" title="误差的来源"></a>误差的来源</h3><ol>
+<li>模型误差</li>
+<li>观测误差</li>
+<li>阶段误差</li>
+<li>舍入误差</li>
+</ol>
+<p>例1：</p>
+<ul>
+<li>$A=4\pi r^2$ 中，包含了各种误差</li>
+</ul>
+<p>例2：</p>
+<ul>
+<li>Taylor 展开：$e^{-x} = 1-x+\frac 1 2{x^2} -\frac{1}{6}x^3+E_r(x)$ </li>
+<li>略去 $E_r$ 项：产生截断误差</li>
+</ul>
+<h3 id="绝对误差"><a href="#绝对误差" class="headerlink" title="绝对误差"></a>绝对误差</h3><p><strong>Def</strong>（绝对误差） 设 $x^*$ 是准确值，$x$ 是近似值，则：</p>
+<script type="math/tex; mode=display">
+e(x)=x^*-x</script><p>为近似值 $x$ 的<strong>绝对误差</strong>，简称<strong>误差</strong>。在实际计算中，绝对误差无法求出，但只需要知道误差的一个范围，从而有<strong>绝对误差限</strong> $\varepsilon$：</p>
+<script type="math/tex; mode=display">
+|e(x)|\le \varepsilon</script><h3 id="相对误差"><a href="#相对误差" class="headerlink" title="相对误差"></a>相对误差</h3><script type="math/tex; mode=display">
+e_r(x)=\frac{x^*-x}{x^*}</script><p>若 $x^*$ 无法确定，也用：</p>
+<script type="math/tex; mode=display">
+e_r(x)=\frac{x^*-x}{x}</script><p>相应的，有相对误差限：</p>
+<script type="math/tex; mode=display">
+|e_r(x)|\le \varepsilon</script><h3 id="有效数"><a href="#有效数" class="headerlink" title="有效数"></a>有效数</h3><p>若 $x$ 为 $x^*$ 的近似值，若 $|e(x)|$ 是其某个数位的半个单位，从左起第一个非零数到这一位有 n 位，则称 n 个数字为其有效数字。</p>
+<h3 id="数据误差和计算误差"><a href="#数据误差和计算误差" class="headerlink" title="数据误差和计算误差"></a>数据误差和计算误差</h3><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数值方法</tag>
       </tags>
   </entry>
 </search>

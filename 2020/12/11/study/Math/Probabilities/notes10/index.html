@@ -14,7 +14,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="欢迎来到些些同学的藏宝阁">
+  <meta name="description" content="Je pense, donc je suis">
   <meta name="author" content="Jerry Yang">
   <meta name="keywords" content="study">
   <title>「概率统计与随机过程」 10 - 马尔科夫链 - 些些同学的藏宝阁</title>
@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      734 字
+      756 字
     </span>
   
 
@@ -240,7 +240,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 天前
+                  本文最后更新于：2 个月前
                 
               </p>
             
@@ -284,9 +284,14 @@ P(n)=P^n\rightarrow^{n\rightarrow\infty}\left[
     \vdots&\vdots&&\vdots
 \end{matrix}
 \right]</script><p>则称此链具有遍历性。</p>
-<p><strong>Thm</strong>：若 $\{X_n,n\ge 0\}$ 是齐次马氏链，一部转移概率为 $P$ 若存在 n 步转移概率矩阵 $P(n)$ 无零元，则此链具有遍历性，其极限分布是：</p>
+<p>$P^n$ 求法：</p>
+<ol>
+<li>求出矩阵的特征值分解 $A=V\Lambda V^{-1}$</li>
+<li>求 $P^n$</li>
+</ol>
+<p><strong>Thm</strong>：若 $\{X_n,n\ge 0\}$ 是齐次马氏链，一部转移概率为 $P$ 若存在 n 步转移概率矩阵 $P(n)$ 无零元，则此链具有遍历性，其极限分布 $\pi$ 是：</p>
 <script type="math/tex; mode=display">
-\pi P=\pi</script><p>的满足归一性条件（$\mathbf 1^T\pi=1$）的为一解</p>
+\pi P=\pi</script><p>满足归一性条件（$\mathbf 1^T\pi=1$）的唯一解。</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
             </div>
             <hr>
