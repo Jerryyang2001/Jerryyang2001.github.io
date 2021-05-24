@@ -1,330 +1,544 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&quot;auto&quot;>
-
-
-
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp">
-  <link rel="icon" type="image/png" href="/img/favicon.webp">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <!-- SEO相关 -->
   
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="Je pense, donc je suis">
-  <meta name="author" content="Jerry Yang">
-  <meta name="keywords" content="study">
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
   <title>数理逻辑 - 些些同学的藏宝阁</title>
+  
+    <meta name="keywords" content="离散数学,数理逻辑">
+  
 
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+  
+    <meta name="description" content="数理逻辑，可以说是到现在为止，写的最详细的了。">
+  
 
+  <!-- feed -->
+  
 
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
 
   
     
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+  <body>
     
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
 
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"jerryyang2001.github.io","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
-
-
-<body>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>些些同学的藏宝阁</strong>&nbsp;</a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header id="l_header" class="l_header auto shadow blur floatable show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/schedule/">
-                <i class="iconfont icon-plan"></i>
-                日程
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
-  </div>
-</nav>
-
-    <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="数理逻辑">
-              
-            </span>
-
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-06-06 00:00" pubdate>
-        2020年6月6日 凌晨
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      2.3k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
+		<div class="nav-main">
       
-      
-      26
-       分钟
-    </span>
-  
-
-  
-  
-</div>
-
-            
-          </div>
-
+        
+        <a class="title flat-box" target="_self" href='/'>
           
-        </div>
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="也许你在找些有意思的..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
+          
+            <div class='cover-bg lazyload placeholder' data-bg="https://bing.ioliu.cn/v1/rand?w=1920&h=1200"></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">些些同学的藏宝阁</p>
+    
+    
+      <p class="subtitle">Je pense, donc je suis</p>
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/categories/"
+              
+              
+              id="categories">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>标签</p>
+            </a>
+          
+            <a href="/about/"
+              
+              
+              id="about">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>关于</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://github.com/Jerryyang2001"
+              
+              
+              id="https:githubcomJerryyang2001">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>Github</p>
+            </a>
+          
+        
       </div>
     </div>
-  </header>
+  </div>
+</div>
 
-  <main>
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
     
-      
+  
+  </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">数理逻辑</h1>
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        数理逻辑
+      </h1>
+      <div class='new-meta-box'>
+        
+          
             
-              <p class="note note-info">
-                
-                  本文最后更新于：5 个月前
-                
-              </p>
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="fas github">
+    <p>些些同学</p>
+  </a>
+</div>
+
+          
+        
+          
             
-            <div class="markdown-body">
-              <p>数理逻辑，可以说是到现在为止，写的最详细的了。</p>
-<a id="more"></a>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="命题和联结词"><a href="#命题和联结词" class="headerlink" title="命题和联结词"></a>命题和联结词</h3><ul>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年6月6日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="数理逻辑" data-path="/2020/06/06/study/Math/DiscreteMath/PropositionalLogic/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p>数理逻辑，可以说是到现在为止，写的最详细的了。</p>
+<span id="more"></span>
+<h2 id="基本概念">基本概念</h2>
+<h3 id="命题和联结词">命题和联结词</h3>
+<ul>
 <li><p>命题</p>
 <blockquote>
 <p>命题的特征</p>
-<ol>
+<ol type="1">
 <li>陈述句</li>
 <li>唯一的真值</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p>简单命题、复合命题</p>
 <blockquote>
 <p>区别在于是否可以再拆分</p>
-</blockquote>
-</li>
-<li><p><strong>Def</strong>：合取词$\wedge$</p>
-</li>
-<li><strong>Def</strong>：否定式$\neg$</li>
-<li><strong>Def</strong>：析取词$\vee$</li>
-<li><strong>Def</strong>：异或 $\oplus$</li>
-<li><strong>Def</strong>：蕴含词$\rightarrow$</li>
-<li><strong>Def</strong>：等值词$\leftrightarrow$</li>
+</blockquote></li>
+<li><p><strong>Def</strong>：合取词<span class="math inline">\(\wedge\)</span></p></li>
+<li><p><strong>Def</strong>：否定式<span class="math inline">\(\neg\)</span></p></li>
+<li><p><strong>Def</strong>：析取词<span class="math inline">\(\vee\)</span></p></li>
+<li><p><strong>Def</strong>：异或 <span class="math inline">\(\oplus\)</span></p></li>
+<li><p><strong>Def</strong>：蕴含词<span class="math inline">\(\rightarrow\)</span></p></li>
+<li><p><strong>Def</strong>：等值词<span class="math inline">\(\leftrightarrow\)</span></p></li>
 </ul>
 <blockquote>
 <p>注意各种联结词在中文中的文字表述</p>
 <p>注意如何将各种联结词符号化</p>
 </blockquote>
-<h3 id="命题公式及其赋值"><a href="#命题公式及其赋值" class="headerlink" title="命题公式及其赋值"></a>命题公式及其赋值</h3><ul>
-<li><p><strong>Def</strong>：命题常项（命题常元）、命题变项（命题变元）</p>
-</li>
+<h3 id="命题公式及其赋值">命题公式及其赋值</h3>
+<ul>
+<li><p><strong>Def</strong>：命题常项（命题常元）、命题变项（命题变元）</p></li>
 <li><p><strong>Def</strong>：合式公式（命题公式）</p>
 <blockquote>
 <p>这里定义的是将用符号串表示的命题，变为命题公式的规则的方法。也就是描述命题公式的生成方式。</p>
 <p>这里用的定义方式称为<strong>递归定义</strong></p>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p><strong>Def</strong>： 层次</p>
 <blockquote>
 <p>层次可以用<strong>树状展开</strong>来分析得出（个人感觉很像<strong>表达式树</strong>，层次就是子树高度，令平凡的高为 0 就行）</p>
 </blockquote>
 <ul>
-<li><p>命题变项 = 0</p>
-</li>
+<li><p>命题变项 = 0</p></li>
 <li><p>用一次“词”+1（取最大值）</p>
 <blockquote>
-<p>这里注意 $\neg$ 也要 +1</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>：赋值（解释）</p>
-</li>
+<p>这里注意 <span class="math inline">\(\neg\)</span> 也要 +1</p>
+</blockquote></li>
+</ul></li>
+<li><p><strong>Def</strong>：赋值（解释）</p></li>
 <li><p><strong>Def</strong>：真值表</p>
 <blockquote>
 <p>真值表的构造法：</p>
-<ol>
+<ol type="1">
 <li>找出其中所有命题变项</li>
-<li>列出 $2^n$ 个赋值</li>
+<li>列出 <span class="math inline">\(2^n\)</span> 个赋值</li>
 <li>计算真值</li>
 </ol>
-</blockquote>
-</li>
-<li><p><strong>Def</strong>：重言式、矛盾式、可满足式</p>
-</li>
+</blockquote></li>
+<li><p><strong>Def</strong>：重言式、矛盾式、可满足式</p></li>
 </ul>
-<div class="note note-default">
-            <p>很明显，我们不能有这么傻的方法求真值。</p>
-          </div>
-<h2 id="等值演算"><a href="#等值演算" class="headerlink" title="等值演算"></a>等值演算</h2><h3 id="等值式"><a href="#等值式" class="headerlink" title="等值式"></a>等值式</h3><ul>
+<div class="note"><p>default</p></div>
+<p>很明显，我们不能有这么傻的方法求真值。</p>
+<!-- TODO: endnote-->
+<h2 id="等值演算">等值演算</h2>
+<h3 id="等值式">等值式</h3>
+<ul>
 <li><p><strong>Def</strong>：等值</p>
 <blockquote>
-<p>A 和 B 的真值永远相等，符号化：$A\leftrightarrow B$ 是重言式 也就是 $A\Leftrightarrow B$</p>
-</blockquote>
-</li>
+<p>A 和 B 的真值永远相等，符号化：<span class="math inline">\(A\leftrightarrow B\)</span> 是重言式 也就是 <span class="math inline">\(A\Leftrightarrow B\)</span></p>
+</blockquote></li>
 <li><p><strong>Def</strong>：等值式模式</p>
 <blockquote>
 <p>16 种等值式模式可以简化等值式的求值</p>
-<ol>
+<ol type="1">
 <li>双重否定律</li>
 <li>幂等律</li>
 <li>交换律</li>
@@ -342,581 +556,1013 @@
 <li>等价否定等值式</li>
 <li>归谬律</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p><strong>Def</strong>：置换规则</p>
 <blockquote>
-<p>等值演算时，使用的规则：$A\Leftrightarrow B\rightarrow \varphi(A)\Leftrightarrow \varphi (B)$</p>
-</blockquote>
-</li>
+<p>等值演算时，使用的规则：<span class="math inline">\(A\Leftrightarrow B\rightarrow \varphi(A)\Leftrightarrow \varphi (B)\)</span></p>
+</blockquote></li>
 </ul>
-<h3 id="析取范式和合取范式"><a href="#析取范式和合取范式" class="headerlink" title="析取范式和合取范式"></a>析取范式和合取范式</h3><ul>
-<li><p><strong>Def</strong>：（文字）命题变元及其否定</p>
-</li>
-<li><p><strong>Def</strong>：简单析取式、简单合取式</p>
-</li>
+<h3 id="析取范式和合取范式">析取范式和合取范式</h3>
+<ul>
+<li><p><strong>Def</strong>：（文字）命题变元及其否定</p></li>
+<li><p><strong>Def</strong>：简单析取式、简单合取式</p></li>
 <li><p><strong>Thm</strong>：</p>
 <ul>
 <li>一个简单析取式是重言式 &lt;=&gt; 它同时包含某个命题变元及其否定</li>
 <li>一个简单合取式是矛盾式 &lt;=&gt; 它同时包含某个命题变元及其否定式；</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>：（析取范式、合取范式）由有限个简单合取式、简单</p>
-</li>
-<li><p><strong>Thm</strong>：一个析取范式是矛盾式 &lt;=&gt; 它的每个简单合取式都是矛盾式；一个合取范式是重言式 &lt;=&gt; 每个简单析取式都是重言式</p>
-</li>
+</ul></li>
+<li><p><strong>Def</strong>：（析取范式、合取范式）由有限个简单合取式、简单</p></li>
+<li><p><strong>Thm</strong>：一个析取范式是矛盾式 &lt;=&gt; 它的每个简单合取式都是矛盾式；一个合取范式是重言式 &lt;=&gt; 每个简单析取式都是重言式</p></li>
 <li><p><strong>Thm</strong>：范式存在定理</p>
 <blockquote>
-<p>_Method 求范式_</p>
-<ol>
-<li><p>消去 $\rightarrow$ 和 $\leftrightarrow$</p>
-</li>
-<li><p>消去双重否定</p>
-</li>
+<p><em>Method 求范式</em></p>
+<ol type="1">
+<li><p>消去 <span class="math inline">\(\rightarrow\)</span> 和 <span class="math inline">\(\leftrightarrow\)</span></p></li>
+<li><p>消去双重否定</p></li>
 <li><p>使用分配律</p>
-<p>_这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂_</p>
-</li>
+<p><em>这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂</em></p></li>
 </ol>
-</blockquote>
-</li>
-<li><p><strong>Thm</strong>：极小项的否定是极大项、极大项的否定是极小项</p>
-</li>
-<li><p><strong>Def</strong>：主析取范式、主合取范式</p>
-</li>
+</blockquote></li>
+<li><p><strong>Thm</strong>：极小项的否定是极大项、极大项的否定是极小项</p></li>
+<li><p><strong>Def</strong>：主析取范式、主合取范式</p></li>
 <li><p><strong>Thm</strong>：任何命题公式存在与之等值的主析取范式和主合取范式，并且唯一。</p>
 <blockquote>
-<p>_Method 求主范式_</p>
-<ol>
+<p><em>Method 求主范式</em></p>
+<ol type="1">
 <li>先化成范式</li>
-<li>在缺少某一项时，用排中律 $A\vee \neg A = 1$ 和结合律<strong>添加</strong>缺少的命题变元</li>
+<li>在缺少某一项时，用排中律 <span class="math inline">\(A\vee \neg A = 1\)</span> 和结合律<strong>添加</strong>缺少的命题变元</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 </ul>
 <blockquote>
-<p>_Method 主范式互化_</p>
-<ol>
-<li>取 $\neg A$，并化为范式</li>
-<li>则 $A=\neg\neg A$ 用德摩根律展开</li>
+<p><em>Method 主范式互化</em></p>
+<ol type="1">
+<li>取 <span class="math inline">\(\neg A\)</span>，并化为范式</li>
+<li>则 <span class="math inline">\(A=\neg\neg A\)</span> 用德摩根律展开</li>
 </ol>
 </blockquote>
-<h3 id="联结词的完备集"><a href="#联结词的完备集" class="headerlink" title="联结词的完备集"></a>联结词的完备集</h3><ul>
+<h3 id="联结词的完备集">联结词的完备集</h3>
+<ul>
 <li><strong>Def</strong>：n 元真值函数</li>
 <li><strong>Def</strong>：联结词完备集</li>
-<li><strong>Thm</strong>：$\{\neg,\wedge,\vee\}$ 是联结词完备集<ul>
-<li><strong>Inf</strong>：$\{\neg,\wedge\}$ 也是联结词完备集</li>
-</ul>
-</li>
+<li><strong>Thm</strong>：<span class="math inline">\(\{\neg,\wedge,\vee\}\)</span> 是联结词完备集
+<ul>
+<li><strong>Inf</strong>：<span class="math inline">\(\{\neg,\wedge\}\)</span> 也是联结词完备集</li>
+</ul></li>
 </ul>
 <blockquote>
 <p>这边可以联系一下 Lambda Calculus 中的各类运算，都可以用 Lambda 定义。也就是说，只需要一些操作，就可以满足全部的需要</p>
-<p>$\{\uparrow\}$和$\{\downarrow\}$ 是联结词完备集。其中</p>
+<p><span class="math inline">\(\{\uparrow\}\)</span>和<span class="math inline">\(\{\downarrow\}\)</span> 是联结词完备集。其中</p>
 <ul>
-<li>$p\uparrow q\Leftrightarrow \neg(p\wedge q)$</li>
-<li>$p\downarrow q\Leftrightarrow \neg(p\vee q)$</li>
+<li><span class="math inline">\(p\uparrow q\Leftrightarrow \neg(p\wedge q)\)</span></li>
+<li><span class="math inline">\(p\downarrow q\Leftrightarrow \neg(p\vee q)\)</span></li>
 </ul>
 </blockquote>
-<h3 id="可满足性问题和消解法"><a href="#可满足性问题和消解法" class="headerlink" title="可满足性问题和消解法"></a>可满足性问题和消解法</h3><blockquote>
+<h3 id="可满足性问题和消解法">可满足性问题和消解法</h3>
+<blockquote>
 <p>这里主要讨论的是命题公式是否<strong>可满足</strong>的问题</p>
 </blockquote>
 <ul>
 <li><p><strong>Def</strong>：消解式、消解规则</p>
 <blockquote>
-<p>文字 $I$ 的补 $I^c$：$I=p\rightarrow I^c=\neg p,I=\neg p\rightarrow I^c=p$</p>
-<p>_Method 消解规则_</p>
-<p>$C_1=C_1’\vee I,C_2=C_2’\vee I^c$ 是简单析取式，则称$Res(C_1,C_2)=C1’\vee C2’$ 为消解式<br>注意这里的 $C_1,C_2$ 中是可以含有 $I$ 的，但是不方便计算，后面在消解序列定义时，也直接用了合取范式这一定义。</p>
+<p>文字 <span class="math inline">\(I\)</span> 的补 <span class="math inline">\(I^c\)</span>：<span class="math inline">\(I=p\rightarrow I^c=\neg p,I=\neg p\rightarrow I^c=p\)</span></p>
 </blockquote>
-</li>
-<li><p><strong>Thm</strong>：$C_1\wedge C_2 \approx Res(C_1,C_2)$</p>
-</li>
+<blockquote>
+<p><em>Method 消解规则</em></p>
+<p><span class="math inline">\(C_1=C_1&#39;\vee I,C_2=C_2&#39;\vee I^c\)</span> 是简单析取式，则称<span class="math inline">\(Res(C_1,C_2)=C1&#39;\vee C2&#39;\)</span> 为消解式 注意这里的 <span class="math inline">\(C_1,C_2\)</span> 中是可以含有 <span class="math inline">\(I\)</span> 的，但是不方便计算，后面在消解序列定义时，也直接用了合取范式这一定义。</p>
+</blockquote></li>
+<li><p><strong>Thm</strong>：<span class="math inline">\(C_1\wedge C_2 \approx Res(C_1,C_2)\)</span></p></li>
 <li><p><strong>Def</strong>：消解序列、否证</p>
 <blockquote>
-<p>记 $S$ 是一个合取范式，$C_1,C_2,\dots,C_i$ 是一个简单析取式序列，$C_i$ 或是$S$ 中的元素，或是序列中两个简单析取式的消解式<br>若$C_i = \lambda$ 则称该序列为一个否证。</p>
+<p>记 <span class="math inline">\(S\)</span> 是一个合取范式，<span class="math inline">\(C_1,C_2,\dots,C_i\)</span> 是一个简单析取式序列，<span class="math inline">\(C_i\)</span> 或是<span class="math inline">\(S\)</span> 中的元素，或是序列中两个简单析取式的消解式 若<span class="math inline">\(C_i = \lambda\)</span> 则称该序列为一个否证。</p>
 </blockquote>
 <ul>
-<li><strong>Inf</strong>：$S$ 有否证，不可满足。</li>
+<li><strong>Inf</strong>：<span class="math inline">\(S\)</span> 有否证，不可满足。</li>
 </ul>
 <blockquote>
 <p>这个定理和下面一个定理构成充要条件</p>
-</blockquote>
-</li>
-<li><p><strong>Thm</strong>：（消解的完全性）如果 S 不可满足，则 S 有否证</p>
-<blockquote>
-<p>_Method 消解算法_</p>
-<ol>
-<li>求合取范式</li>
-<li>$S_0,S_2$ 为不含任何元素的集合，$S_1$ 为 $S$ 所有简单析取式构成的集合</li>
-<li>对于 $S_0,S_1$ 中的任意两个可消解的子句，进行消解<br>非空则放入$S_2$，<br>空子句则找到否证，$S$ 不可满足</li>
-<li>$S_2$ 为空时，表明无法继续消解，且$S$可满足</li>
-</ol>
-</blockquote>
-</li>
+</blockquote></li>
+<li><p><strong>Thm</strong>：（消解的完全性）如果 S 不可满足，则 S 有否证 &gt; <em>Method 消解算法</em> &gt; &gt; 1. 求合取范式 &gt; 2. <span class="math inline">\(S_0,S_2\)</span> 为不含任何元素的集合，<span class="math inline">\(S_1\)</span> 为 <span class="math inline">\(S\)</span> 所有简单析取式构成的集合 &gt; 3. 对于 <span class="math inline">\(S_0,S_1\)</span> 中的任意两个可消解的子句，进行消解 &gt; 非空则放入<span class="math inline">\(S_2\)</span>， &gt; 空子句则找到否证，<span class="math inline">\(S\)</span> 不可满足 &gt; 4. <span class="math inline">\(S_2\)</span> 为空时，表明无法继续消解，且<span class="math inline">\(S\)</span>可满足</p></li>
 </ul>
 <blockquote>
 <p>一句吐槽，在罗森的《离散数学及其应用》书中，消解律就那么半页纸，讲的也比较清楚。有需要可以对比看看</p>
 </blockquote>
-<h2 id="命题逻辑的推理理论"><a href="#命题逻辑的推理理论" class="headerlink" title="命题逻辑的推理理论"></a>命题逻辑的推理理论</h2><h3 id="推理的形式结构"><a href="#推理的形式结构" class="headerlink" title="推理的形式结构"></a>推理的形式结构</h3><ul>
-<li><p><strong>Def</strong>：推理是有效的</p>
-</li>
-<li><p><strong>Thm</strong>：推理正确$\{A_i\}\models B\iff \wedge A_i \rightarrow B$ 为永真式</p>
+<h2 id="命题逻辑的推理理论">命题逻辑的推理理论</h2>
+<h3 id="推理的形式结构">推理的形式结构</h3>
+<ul>
+<li><p><strong>Def</strong>：推理是有效的</p></li>
+<li><p><strong>Thm</strong>：推理正确<span class="math inline">\(\{A_i\}\models B\iff \wedge A_i \rightarrow B\)</span> 为永真式</p>
 <blockquote>
-<p>$p\Rightarrow q$ 表示 $p\rightarrow q$ 为重言式</p>
-<p>_Method 判断 $\wedge A_i \rightarrow B$ 是重言式的方法_</p>
-<ol>
+<p><span class="math inline">\(p\Rightarrow q\)</span> 表示 <span class="math inline">\(p\rightarrow q\)</span> 为重言式</p>
+</blockquote>
+<blockquote>
+<p><em>Method 判断 <span class="math inline">\(\wedge A_i \rightarrow B\)</span> 是重言式的方法</em></p>
+<ol type="1">
 <li>真值表法</li>
 <li>等值演算法</li>
 <li>主析取范式法</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p>推理定律</p>
 <blockquote>
 <p>重言蕴含式</p>
-<ol>
-<li>附加律$A\Rightarrow A\vee B$</li>
-<li>化简律$A\wedge B\Rightarrow A$</li>
-<li>假言推理$(A\rightarrow B)\wedge A\Rightarrow B$</li>
-<li>抗拒式 $(A \rightarrow B) \wedge \neg B \Rightarrow \neg A$</li>
-<li>析取三段论$(A \rightarrow B) \wedge \neg B \Rightarrow \neg A$</li>
-<li>假言三段论$(A \rightarrow B) \wedge(B \rightarrow C) \Rightarrow(A \rightarrow C)$</li>
-<li>等价三段论$(A \leftrightarrow B) \wedge(B \leftrightarrow C) \Rightarrow(A \leftrightarrow C)$</li>
-<li>构造性二难$(A \rightarrow B) \wedge(C \rightarrow D) \wedge(A \vee C) \Rightarrow(B \vee D)$</li>
-<li>构造性二难（特殊）$(A \rightarrow B) \wedge(\neg A \rightarrow B) \Rightarrow B$</li>
-<li>破坏性二难$(A \rightarrow B) \wedge(C \rightarrow D) \wedge(\neg B \vee \neg D) \Rightarrow \neg A \vee \neg C$</li>
+<ol type="1">
+<li>附加律<span class="math inline">\(A\Rightarrow A\vee B\)</span></li>
+<li>化简律<span class="math inline">\(A\wedge B\Rightarrow A\)</span></li>
+<li>假言推理<span class="math inline">\((A\rightarrow B)\wedge A\Rightarrow B\)</span></li>
+<li>抗拒式 <span class="math inline">\((A \rightarrow B) \wedge \neg B \Rightarrow \neg A\)</span></li>
+<li>析取三段论<span class="math inline">\((A \rightarrow B) \wedge \neg B \Rightarrow \neg A\)</span></li>
+<li>假言三段论<span class="math inline">\((A \rightarrow B) \wedge(B \rightarrow C) \Rightarrow(A \rightarrow C)\)</span></li>
+<li>等价三段论<span class="math inline">\((A \leftrightarrow B) \wedge(B \leftrightarrow C) \Rightarrow(A \leftrightarrow C)\)</span></li>
+<li>构造性二难<span class="math inline">\((A \rightarrow B) \wedge(C \rightarrow D) \wedge(A \vee C) \Rightarrow(B \vee D)\)</span></li>
+<li>构造性二难（特殊）<span class="math inline">\((A \rightarrow B) \wedge(\neg A \rightarrow B) \Rightarrow B\)</span></li>
+<li>破坏性二难<span class="math inline">\((A \rightarrow B) \wedge(C \rightarrow D) \wedge(\neg B \vee \neg D) \Rightarrow \neg A \vee \neg C\)</span></li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 </ul>
-<h3 id="自然推理系统-P"><a href="#自然推理系统-P" class="headerlink" title="自然推理系统 P"></a>自然推理系统 P</h3><ul>
-<li><p><strong>Def</strong>：形式演算系统、形式语言系统</p>
-</li>
+<h3 id="自然推理系统-p">自然推理系统 P</h3>
+<ul>
+<li><p><strong>Def</strong>：形式演算系统、形式语言系统</p></li>
 <li><p><strong>Def</strong>：证明</p>
 <blockquote>
 <p>证明是一个公式序列</p>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p>构造证明方法</p>
 <ul>
-<li>附加前提证明法：$\wedge A_i \rightarrow (A_{i+1} \rightarrow B) \Leftrightarrow \wedge A_i \rightarrow B$</li>
-<li>归谬法：$\wedge A_i \wedge B$ 为矛盾式</li>
+<li>附加前提证明法：<span class="math inline">\(\wedge A_i \rightarrow (A_{i+1} \rightarrow B) \Leftrightarrow \wedge A_i \rightarrow B\)</span></li>
+<li>归谬法：<span class="math inline">\(\wedge A_i \wedge B\)</span> 为矛盾式</li>
 <li>消解证明法</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <blockquote>
 <p>常用证明方法：</p>
-<ol>
+<ol type="1">
 <li>穷举证明法、分情形证明法</li>
 <li>存在性证明中：构造性证明、非构造性的存在性证明（不存在则错误）</li>
 <li>唯一性证明：需要证明存在且唯一</li>
 </ol>
 </blockquote>
-<h2 id="一阶逻辑的基本概念"><a href="#一阶逻辑的基本概念" class="headerlink" title="一阶逻辑的基本概念"></a>一阶逻辑的基本概念</h2><h3 id="一阶逻辑命题的符号化"><a href="#一阶逻辑命题的符号化" class="headerlink" title="一阶逻辑命题的符号化"></a>一阶逻辑命题的符号化</h3><ul>
+<h2 id="一阶逻辑的基本概念">一阶逻辑的基本概念</h2>
+<h3 id="一阶逻辑命题的符号化">一阶逻辑命题的符号化</h3>
+<ul>
 <li><p><strong>Def</strong>：个体词（个体变项、个体常项）、论域（全总个体域）</p>
 <blockquote>
 <p><strong>个体词</strong>：所研究对象中可以独立存在的具体或抽象的客体。</p>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p><strong>Def</strong>：谓词</p>
 <blockquote>
 <p><strong>谓词</strong>：用来刻画个体词性质及个体词之间关系的词</p>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p><strong>Def</strong>：量词（全称量词、存在量词）</p>
 <blockquote>
 <p><strong>量词</strong>：表示个体变元在个体域中取值方式的词</p>
-</blockquote>
-</li>
+</blockquote></li>
 </ul>
-<h3 id="一阶逻辑公式及其解释"><a href="#一阶逻辑公式及其解释" class="headerlink" title="一阶逻辑公式及其解释"></a>一阶逻辑公式及其解释</h3><ul>
+<h3 id="一阶逻辑公式及其解释">一阶逻辑公式及其解释</h3>
+<ul>
 <li><p><strong>Def</strong>：一阶语言的字母表</p>
 <ul>
 <li>非逻辑符号（个体常项、函数、谓词）</li>
 <li>逻辑符号（个体变项、量词符号、联结词、括号和都好）</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>：L 的项</p>
-</li>
-<li><p><strong>Def</strong>：原子公式 $R(x_1,\dots,x_n)$</p>
-</li>
+</ul></li>
+<li><p><strong>Def</strong>：L 的项</p></li>
+<li><p><strong>Def</strong>：原子公式 <span class="math inline">\(R(x_1,\dots,x_n)\)</span></p></li>
 <li><p><strong>Def</strong>：合式公式（谓词公式）</p>
 <blockquote>
 <p>递归定义</p>
-</blockquote>
-</li>
-<li><p><strong>Def</strong>：指导变元、约束出现、自由出现、辖域</p>
-</li>
-<li><p><strong>Def</strong>：封闭、闭式</p>
-</li>
-<li><p><strong>Def</strong>：L 的解释 I 的组成</p>
-</li>
-<li><p><strong>Thm</strong>：封闭的公式在任何解释下都变成命题</p>
-</li>
-<li><p><strong>Def</strong>：（公式的）永真式、矛盾式、可满足式</p>
-</li>
-<li><p><strong>Def</strong>：代换实例</p>
-</li>
-<li><p><strong>Thm</strong>：重言式的代换实例都是重言式、矛盾式的代换实例都是矛盾式</p>
-</li>
+</blockquote></li>
+<li><p><strong>Def</strong>：指导变元、约束出现、自由出现、辖域</p></li>
+<li><p><strong>Def</strong>：封闭、闭式</p></li>
+<li><p><strong>Def</strong>：L 的解释 I 的组成</p></li>
+<li><p><strong>Thm</strong>：封闭的公式在任何解释下都变成命题</p></li>
+<li><p><strong>Def</strong>：（公式的）永真式、矛盾式、可满足式</p></li>
+<li><p><strong>Def</strong>：代换实例</p></li>
+<li><p><strong>Thm</strong>：重言式的代换实例都是重言式、矛盾式的代换实例都是矛盾式</p></li>
 </ul>
-<h2 id="一阶逻辑等值演算和推理"><a href="#一阶逻辑等值演算和推理" class="headerlink" title="一阶逻辑等值演算和推理"></a>一阶逻辑等值演算和推理</h2><h3 id="一阶逻辑等值演算和置换规则"><a href="#一阶逻辑等值演算和置换规则" class="headerlink" title="一阶逻辑等值演算和置换规则"></a>一阶逻辑等值演算和置换规则</h3><ul>
-<li><strong>Def</strong>：等值</li>
-<li><strong>Thm</strong>：等值式</li>
+<h2 id="一阶逻辑等值演算和推理">一阶逻辑等值演算和推理</h2>
+<h3 id="一阶逻辑等值演算和置换规则">一阶逻辑等值演算和置换规则</h3>
+<ul>
+<li><p><strong>Def</strong>：等值</p></li>
+<li><p><strong>Thm</strong>：等值式</p></li>
 <li><p>由永真式的代换实例得到的永真式</p>
 <ul>
-<li><p>消去量词等值式</p>
-</li>
-<li><p>量词否定等值式</p>
-</li>
+<li><p>消去量词等值式</p></li>
+<li><p>量词否定等值式</p></li>
 <li><p>量词辖域收缩扩张等值式</p>
 <blockquote>
-<p>应用这个等值式时要注意，对$A(x)$扩张时，扩张或收缩的式子中没有$x$的自由出现</p>
-</blockquote>
-</li>
-<li><p>量词分配等值式</p>
-</li>
-</ul>
-</li>
+<p>应用这个等值式时要注意，对<span class="math inline">\(A(x)\)</span>扩张时，扩张或收缩的式子中没有<span class="math inline">\(x\)</span>的自由出现</p>
+</blockquote></li>
+<li><p>量词分配等值式</p></li>
+</ul></li>
 <li><p>规则</p>
 <ul>
 <li>置换规则</li>
 <li>换名规则</li>
 <li>代替规则</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="一阶逻辑的前束范式"><a href="#一阶逻辑的前束范式" class="headerlink" title="一阶逻辑的前束范式"></a>一阶逻辑的前束范式</h3><ul>
-<li><p><strong>Def</strong>：前束范式</p>
-</li>
+<h3 id="一阶逻辑的前束范式">一阶逻辑的前束范式</h3>
+<ul>
+<li><p><strong>Def</strong>：前束范式</p></li>
 <li><p><strong>Thm</strong>：前束范式存在定理</p>
 <blockquote>
-<p>_Method 求前束范式_</p>
-<ol>
-<li>替换$\leftrightarrow,\rightarrow$ 为 $\wedge,\vee,\neg$</li>
-<li>用量词否定等值式，将 $\neg$ 调至原子公式之前</li>
+<p><em>Method 求前束范式</em></p>
+<ol type="1">
+<li>替换<span class="math inline">\(\leftrightarrow,\rightarrow\)</span> 为 <span class="math inline">\(\wedge,\vee,\neg\)</span></li>
+<li>用量词否定等值式，将 <span class="math inline">\(\neg\)</span> 调至原子公式之前</li>
 <li>用换名规则</li>
 <li>用扩张收缩律，将量词移到全式的最前面</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 </ul>
-<h3 id="一阶逻辑的推理理论"><a href="#一阶逻辑的推理理论" class="headerlink" title="一阶逻辑的推理理论"></a>一阶逻辑的推理理论</h3><ul>
+<h3 id="一阶逻辑的推理理论">一阶逻辑的推理理论</h3>
+<ul>
 <li><p><strong>Def</strong>：推理定律</p>
 <ul>
-<li>命题逻辑推理定律的代换实例</li>
-<li>基本等值式生成的推理定律</li>
-<li>其他的</li>
+<li><p>命题逻辑推理定律的代换实例</p></li>
+<li><p>基本等值式生成的推理定律</p></li>
+<li><p>其他的</p></li>
 <li><p>规则</p>
 <ul>
-<li>全称量词消去规则$\forall -$（全称实例）</li>
-<li>全称量词引入规则$\forall +$（全称引入）</li>
-<li>存在量词消去规则$\exists -$（存在实例）</li>
-<li>存在量词引入规则$\exists +$（存在引入）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>：自然推理系统</p>
-</li>
+<li>全称量词消去规则<span class="math inline">\(\forall -\)</span>（全称实例）</li>
+<li>全称量词引入规则<span class="math inline">\(\forall +\)</span>（全称引入）</li>
+<li>存在量词消去规则<span class="math inline">\(\exists -\)</span>（存在实例）</li>
+<li>存在量词引入规则<span class="math inline">\(\exists +\)</span>（存在引入）</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Def</strong>：自然推理系统</p></li>
 </ul>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/">数理逻辑</a>
-                    
-                  </div>
-                
-              </div>
-              
-              
-                <div class="post-prevnext row">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/06/07/study/Math/Advanced-Mathematics/FourierSeries/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">傅里叶级数</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2020/06/04/study/Physics/Ch6VibrationAndWaves/">
-                        <span class="hidden-mobile">振动与波</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-              <!-- Comments -->
-              <article class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    Fluid.utils.waitElementVisible('vcomments', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz",
-          app_key: "vhuFwrNX5X0JUsN8f4YXXLQq",
-          placeholder: "ヾﾉ≧∀≦)o 来啊，快活啊!",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: false,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    });
-  </script>
-  <noscript>Please enable JavaScript to view the
-    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
-  </noscript>
-
-
-              </article>
-            
-          </article>
-        </div>
-      </div>
-    </div>
+  
+  
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
+    <div class='footer'>
+      
+      
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-24T19:47:39+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年5月24日</p>
+  </a>
 </div>
 
-      </div>
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>离散数学</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数理逻辑</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://jerryyang2001.github.io/2020/06/06/study/Math/DiscreteMath/PropositionalLogic/&title=数理逻辑 - 些些同学的藏宝阁&summary=数理逻辑，可以说是到现在为止，写的最详细的了。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://jerryyang2001.github.io/2020/06/06/study/Math/DiscreteMath/PropositionalLogic/&title=数理逻辑 - 些些同学的藏宝阁&summary=数理逻辑，可以说是到现在为止，写的最详细的了。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://jerryyang2001.github.io/2020/06/06/study/Math/DiscreteMath/PropositionalLogic/&title=数理逻辑 - 些些同学的藏宝阁&summary=数理逻辑，可以说是到现在为止，写的最详细的了。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
     
   </div>
 </div>
 
-<!-- Custom -->
 
 
-    
-
-    
-      <a id="scroll-top-button" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
+        
+      
     </div>
   </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2020/06/07/study/Math/Advanced-Mathematics/FourierSeries/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>傅里叶级数</p>
+          <p class='content'>傅里叶级数，真的就看上去简单。
+
+三角函数系及其正交性
+在这里就直接给出这个单位正交系：
+\(1,\frac{1}{\sqrt{2\pi}}\cos x,\frac{1}{\sqrt{2...</p>
+        </a>
+      
+      
+        <a class='next' href='/2020/06/04/study/Physics/Ch6VibrationAndWaves/'>
+          <p class='title'>振动与波<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>基础物理学第六章-振动与波。后续会把其他这个学期学过的内容补上。
+
+简谐振动
+描述简谐振动的特征量
+
+Def：简谐运动或简谐振动
+描述简谐振动幅度和时间周期性的特征量
+
+振幅
+...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
-    
 
-    
-  </main>
+  </article>
 
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> with <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div>Je pense, donc je suis</div> 
-  </div>
+
+
+
+
+
+</div>
+<aside class='l_side'>
   
-  <div class="statistics">
+  
     
     
 
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            总访客数 
-            <span id="busuanzi_value_site_uv"></span>
-             人
-          </span>
-      
+  <header>
     
-  </div>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
 
 
-  
-
-  
-</footer>
-
-<!-- SCRIPTS -->
-
-  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
-    NProgress.start()
-    document.addEventListener('DOMContentLoaded', function() {
-      window.NProgress && window.NProgress.inc();
-    })
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-<!-- Plugins -->
-
-
-  
-    <script  src="/js/lazyload.js" ></script>
-  
-
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E9%A2%98%E5%92%8C%E8%81%94%E7%BB%93%E8%AF%8D"><span class="toc-text">命题和联结词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E9%A2%98%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E8%B5%8B%E5%80%BC"><span class="toc-text">命题公式及其赋值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97"><span class="toc-text">等值演算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%89%E5%80%BC%E5%BC%8F"><span class="toc-text">等值式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%90%E5%8F%96%E8%8C%83%E5%BC%8F%E5%92%8C%E5%90%88%E5%8F%96%E8%8C%83%E5%BC%8F"><span class="toc-text">析取范式和合取范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%94%E7%BB%93%E8%AF%8D%E7%9A%84%E5%AE%8C%E5%A4%87%E9%9B%86"><span class="toc-text">联结词的完备集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7%E9%97%AE%E9%A2%98%E5%92%8C%E6%B6%88%E8%A7%A3%E6%B3%95"><span class="toc-text">可满足性问题和消解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E6%8E%A8%E7%90%86%E7%90%86%E8%AE%BA"><span class="toc-text">命题逻辑的推理理论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E7%90%86%E7%9A%84%E5%BD%A2%E5%BC%8F%E7%BB%93%E6%9E%84"><span class="toc-text">推理的形式结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E6%8E%A8%E7%90%86%E7%B3%BB%E7%BB%9F-p"><span class="toc-text">自然推理系统 P</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">一阶逻辑的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%91%BD%E9%A2%98%E7%9A%84%E7%AC%A6%E5%8F%B7%E5%8C%96"><span class="toc-text">一阶逻辑命题的符号化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E8%A7%A3%E9%87%8A"><span class="toc-text">一阶逻辑公式及其解释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97%E5%92%8C%E6%8E%A8%E7%90%86"><span class="toc-text">一阶逻辑等值演算和推理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97%E5%92%8C%E7%BD%AE%E6%8D%A2%E8%A7%84%E5%88%99"><span class="toc-text">一阶逻辑等值演算和置换规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%9A%84%E5%89%8D%E6%9D%9F%E8%8C%83%E5%BC%8F"><span class="toc-text">一阶逻辑的前束范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%9A%84%E6%8E%A8%E7%90%86%E7%90%86%E8%AE%BA"><span class="toc-text">一阶逻辑的推理理论</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
 
   
 
 
-
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+</aside>
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
 
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="数理逻辑";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
 
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
       
-      typing(title)
+        <div class="aplayer-container">
+          
+
+
+        </div>
       
-    })(window, document);
-  </script>
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+
+        </div>
+      
+    
+  </footer>
 
 
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
 
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      var inputArea = document.querySelector("#local-search-input");
-      inputArea.onclick = function () {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-        this.onclick = null
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
       }
-    })()
-  </script>
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
 
 
+<!-- internal -->
 
 
 
   
-
   
-    <!-- MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        options: {
-          renderActions: {
-            findScript: [10, doc => {
-              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                const display = !!node.type.match(/; *mode=display/);
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                const text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = { node: text, delim: '', n: 0 };
-                math.end = { node: text, delim: '', n: 0 };
-                doc.math.push(math);
-              });
-            }, '', false],
-            insertedScript: [200, () => {
-              document.querySelectorAll('mjx-container').forEach(node => {
-                let target = node.parentNode;
-                if (target.nodeName.toLowerCase() === 'li') {
-                  target.parentNode.classList.add('has-jax');
-                }
-              });
-            }, '', false]
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=https://volantis.js.org/faqs/
+        
+        
+        
+        
+          id="https:volantisjsorgfaqs"
+        >
+        <i class='fa fa-question fa-fw'></i> 常见问题
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=https://volantis.js.org/examples/
+        
+        
+        
+        
+          id="https:volantisjsorgexamples"
+        >
+        <i class='fa fa-rss fa-fw'></i> 示例博客
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=https://volantis.js.org/contributors/
+        
+        
+        
+        
+          id="https:volantisjsorgcontributors"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=https://github.com/volantis-x/volantis-docs/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xvolantis-docs"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=https://github.com/volantis-x/hexo-theme-volantis/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xhexo-theme-volantis"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 主题源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> Dark mode
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
           }
         }
-      };
-    </script>
+      }
 
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/issues.min.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
 
   
 
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
 
 
 
@@ -927,12 +1573,569 @@
 
 
 
-<!-- 主题的启动项 保持在最底部 -->
-<script  src="/js/boot.js" ></script>
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
 
 
 
-<script type="text/x-mathjax-config">
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://jerryyang2001.github.io' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://jerryyang2001.github.io' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://jerryyang2001.github.io' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ["$","$"], ["\\(","\\)"] ],
