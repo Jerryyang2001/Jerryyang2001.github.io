@@ -40,7 +40,7 @@ math: true
    1. $e_{i+1}$ 与 $v_i$ 关联
    2. 优先选：$e_{i+1}$ 不是 $G-\{e_1,\dots,e_i\}$ 中的桥
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ## 哈密顿图
 

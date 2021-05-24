@@ -20,9 +20,9 @@ math: true
 
 ## 刚体运动学
 
-**{% label info @「刚体」 %}**：在外力作用下，形状大小不变的物体（任意两个质点之间的距离保持不变）`这是一个理想模型！`
+**「刚体」 %}**：在外力作用下，形状大小不变的物体（任意两个质点之间的距离保持不变）`这是一个理想模型！`
 
-**{% label info @「运动形式」 %}**：
+**「运动形式」 %}**：
 
 - 平动
 - 转动
@@ -52,7 +52,7 @@ math: true
 
 **角量$\omega$与线量$v$的关系**：$\vec v = \omega r \vec{e_t} = \vec \omega \times \vec r$
 
-**{% label info @「匀变速定轴转动的运动学公式」 %}**
+**「匀变速定轴转动的运动学公式」 %}**
 
 | 质点平动                     | 刚体绕轴转动                                          |
 | ---------------------------- | ----------------------------------------------------- |
@@ -98,17 +98,17 @@ math: true
 
 **垂直轴定理**（对于一个薄板而言）：$I_z = I_x +I_y$
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ### 刚体定轴转动的角动量定理和角动量守恒
 
-**{% label info @「刚体定轴转动的角动量」 %}**：$L_z = \sum\limits_i m_i r_i^2\omega = I\omega$
+**「刚体定轴转动的角动量」 %}**：$L_z = \sum\limits_i m_i r_i^2\omega = I\omega$
 
-**{% label info @「刚体定轴转动的角动量定理」 %}**：$\int M_z \mathrm{d}t = I\omega_2 -I \omega_1$
+**「刚体定轴转动的角动量定理」 %}**：$\int M_z \mathrm{d}t = I\omega_2 -I \omega_1$
 
-**{% label info @「刚体定轴转动的角动量守恒定律」 %}**：$if M_z = 0 ,\ then \  L_z = I\omega = const$
+**「刚体定轴转动的角动量守恒定律」 %}**：$if M_z = 0 ,\ then \  L_z = I\omega = const$
 
-**{% label info @「刚体定轴转动的角冲量定理」 %}**：$\int M_z\mathrm dt=I_z\omega -I_z\omega_0$
+**「刚体定轴转动的角冲量定理」 %}**：$\int M_z\mathrm dt=I_z\omega -I_z\omega_0$
 
 ### 刚体定轴转动的动能定理
 
@@ -118,9 +118,9 @@ math: true
 
 力矩的功率：$P= \frac{\mathrm{d} W}{\mathrm{ d} t}=M_z \omega$
 
-**{% label info @「刚体定轴转动的动能」 %}**：$E_k = \frac 1 2 I\omega^2$
+**「刚体定轴转动的动能」 %}**：$E_k = \frac 1 2 I\omega^2$
 
-**{% label info @「刚体绕定轴转动的动能定理」 %}**：$W = \int_{\theta_1}^{\theta_2} I \omega \mathrm{d} \omega = E_{k2} - E_{k1 = }=\frac 1 2 I\omega_2^2-\frac 1 2 I\omega_1^2$
+**「刚体绕定轴转动的动能定理」 %}**：$W = \int_{\theta_1}^{\theta_2} I \omega \mathrm{d} \omega = E_{k2} - E_{k1 = }=\frac 1 2 I\omega_2^2-\frac 1 2 I\omega_1^2$
 
 ### 刚体的定点转动（进动）（Precession）
 
@@ -131,7 +131,7 @@ math: true
 
 注意理解场平架陀螺仪工作原理。
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 
 ### 刚体动力学：总结

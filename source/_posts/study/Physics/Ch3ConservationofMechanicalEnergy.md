@@ -39,7 +39,7 @@ math: true
 
 > 功和动能都与参考系有关，动能定理只能适用于惯性系！
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ## 保守力 势能
 
@@ -63,7 +63,7 @@ $W=\int_A^b \vec P \cdot \mathrm d \vec r=mgz_A-mgz_B$
 
 $W=\frac{1}{2}kx_A^2-\frac{1}{2}kx_B^2$
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ### 保守力和非保守力
 

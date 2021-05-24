@@ -23,7 +23,7 @@
 			"",
 			"$0",
 			"",
-			"{% endnote %}",
+			"<!-- TODO: {% endnote %}-->",
 			""
 		],
 		"description": "Make notes"

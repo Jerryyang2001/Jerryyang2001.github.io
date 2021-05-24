@@ -145,7 +145,7 @@ $$
 
 即：$P(\bar X-\frac{\sigma}{\sqrt n}z_{\alpha/2}<\mu<\bar X+\frac{\sigma}{\sqrt n}z_{\alpha/2})=1-\alpha$，其中$z_{\alpha}$ 为上侧 α 分位点
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 > 置信区间越短 → 精度高
 
@@ -155,7 +155,7 @@ $$
 2. 构造常数 $a,b$ 使得 $P(a<W<b)=1-\alpha$
 3. 从中解出 $\hat\theta_1(X_1,...,X_n),\hat\theta_2(X_1,...,X_n)$ 得到置信区间
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 #### 单个正态总体的置信区间
 

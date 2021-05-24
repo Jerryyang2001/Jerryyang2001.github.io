@@ -88,7 +88,7 @@ $\displaystyle w = e^z = e^x(\cos y + i \sin y)$
 1. $y = 0\Rightarrow w = e^x$
 2. $x = 0\Rightarrow w = e^{iy}=\cos y+i\sin y$
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 #### 对数函数
 

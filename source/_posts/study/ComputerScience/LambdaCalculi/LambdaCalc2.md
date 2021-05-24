@@ -72,7 +72,7 @@ Lambda 演算中的常见概念
 
 - 请读者计算`empty? (cons e1 e2)` 和 `empty? empty`。
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ### 数
 

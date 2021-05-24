@@ -20,7 +20,7 @@ hide: false
 
 {% note primary %}
 从一个**可行解集合**中,**寻找**出**最优**元素。
-{% endnote %}
+<!-- TODO: endnote-->
 
 数学形式：
 

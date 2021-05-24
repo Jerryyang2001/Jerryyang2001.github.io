@@ -88,9 +88,9 @@ math: true
 
 {% note primary %}
 
-**{% label info @「相位落后法」 %}**
+**「相位落后法」 %}**
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 #### 波动方程
 

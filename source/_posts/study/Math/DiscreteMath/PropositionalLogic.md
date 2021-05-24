@@ -74,7 +74,7 @@ math: true
 
 很明显，我们不能有这么傻的方法求真值。
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ## 等值演算
 

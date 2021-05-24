@@ -33,7 +33,7 @@ categories: 数学
 7. 对数乘的分配律
 8. 对 a, b 的结合律
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 - **Def**：长度（范数）
 - **Def**：距离

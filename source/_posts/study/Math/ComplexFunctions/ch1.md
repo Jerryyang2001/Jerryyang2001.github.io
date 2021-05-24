@@ -85,7 +85,7 @@ $\bar z = x - iy$
 - $|z_1z_2|=|z_1||z_2|$
 - $|z_1/z_2|=|z_1|/|z_2|$
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 #### 复数的乘幂和方根
 
@@ -116,26 +116,26 @@ $$
 
 求解：$z^n=1$
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 {% note primary %}
 
 复数表示复平面上的过$z_1,~z_2$的直线方程：$z-z_1=t(z_2-z_1)$
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 {% note success %}
 
 复数表示圆方程：$|z-z_0| = R$
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 {% note secondary %}
 
 1. 中垂线：$|z-z_1|=|z-z_2|$
 2. 特殊直线：$\mathrm{Im}(i+z)=4$
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 #### 复球面与无穷远点
 

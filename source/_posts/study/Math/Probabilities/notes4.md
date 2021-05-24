@@ -202,5 +202,5 @@ $$
 
 1. 形式（自由度为 m, n）：$F=\frac{X/m}{Y/n},~X\sim \chi^2(m),~Y\sim\chi^2(n)$
 
-{% endnote %}
+<!-- TODO: endnote-->
 

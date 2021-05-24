@@ -84,7 +84,7 @@ LET: metafact = lambda fact . (lambda n . IsZero n 1 (Mult n (fact (Pred n))))
 
 如果从柯里化的角度看 Y 组合子是否更好？
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ## SKI组合子
 

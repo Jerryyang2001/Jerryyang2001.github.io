@@ -128,7 +128,7 @@ deploy:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: volantis
 auto_spacing: true
 
 
@@ -157,3 +157,17 @@ symbols_count_time:
   total_symbols: false          # 站点总字数统计
   total_time: false             # 站点总阅读时长
   exclude_codeblock: false     # 排除代码字数统计
+
+markdown_it_plus:
+  highlight: true
+  html: true
+  xhtmlOut: true
+  breaks: true
+  langPrefix:
+  linkify: true
+  typographer:
+  quotes: “”‘’
+  plugins:
+    - plugin:
+        name: markdown-it-mark
+        enable: false

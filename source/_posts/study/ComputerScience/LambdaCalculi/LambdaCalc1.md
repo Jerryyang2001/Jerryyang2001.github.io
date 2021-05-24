@@ -57,7 +57,7 @@ $\sum\limits_{i=0}^ni$：`(define (sumto n) (/ (* n (+ n 1)) 2))`
 
 列表：`list`
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ## 计算模型（Computation Models）
 
@@ -88,7 +88,7 @@ $\sum\limits_{i=0}^ni$：`(define (sumto n) (/ (* n (+ n 1)) 2))`
 >
 > 在两种情况下，都产生了矛盾，故停机问题是不可计算的。
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ## Lambda 演算语法
 
@@ -131,13 +131,13 @@ $\mathrm{(\lambda x.plus~x~x)~y}$：`(lambda x. plus x x) y`（前缀表达式�
 
 柯里化（Currying）是把接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数，并且返回接受余下的参数且返回结果的新函数的技术。在直觉上，柯里化声称：
 
-{% note primary %} “如果你固定某些参数，你将得到接受余下参数的一个函数”{% endnote %}
+{% note primary %} “如果你固定某些参数，你将得到接受余下参数的一个函数”<!-- TODO: endnote-->
 
 由这个理论，我们来构建一个加法运算：`lambda x.(lambda y. plus x y)`
 
 如果我们可以简化运算、并且提升可阅读性的话，我们也可以用前一种记法，即 `lambda x y. plus x y`。这就是柯里化的最简单使用方法，也就是说，一个复杂的多参数函数可以柯里化为一个函数。添加多个参数的函数并没有真正添加任何东西，只不过简化了语法，所以下面继续介绍的时候，在方便的时候用到多参数函数。
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ### 自由变量
 
@@ -198,7 +198,7 @@ $$
 \end{aligned}
 $$
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 #### 约化
 
@@ -234,7 +234,7 @@ $\mathrm{(\lambda x.y)~((\lambda x.x~x)~(\lambda x.x~x))}$
 
 更一般的说，若一个 Lambda 表达式可以（可能）被约化为一个完全约化的表达式，则普通顺序**一定**能演算到该形式，但应用顺序可能无法导出答案。
 
-{% endnote %}
+<!-- TODO: endnote-->
 
 ## 惰性计算（Lazy-Evaluation）
 
