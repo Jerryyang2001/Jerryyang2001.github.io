@@ -513,28 +513,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p><strong>Example (Circuit)</strong></p>
 <ul>
-<li>Primitives
-<ul>
+<li>Primitives<ul>
 <li>Ohm’s Law</li>
 <li>Node</li>
 </ul>
 </li>
-<li>Combination
-<ul>
+<li>Combination<ul>
 <li>KVL KCL Equations</li>
 <li>Node method, Loop method</li>
 </ul>
 </li>
-<li>Abstractions
-<ul>
+<li>Abstractions<ul>
 <li>Parallel Combinations</li>
 <li>Series Combinations</li>
 </ul>
 </li>
-<li>Patterns
-<ul>
-<li>in Series Combinations: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mo>=</mo><mi>V</mi><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">I = V / (R_1 + R_2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></li>
-<li>in Parallel Combinations: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>=</mo><msub><mi>R</mi><mn>1</mn></msub><mi>I</mi><mo separator="true">,</mo><mo>…</mo></mrow><annotation encoding="application/x-tex">V_1 = R_1 I,\dots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span></span></span></span></li>
+<li>Patterns<ul>
+<li>in Series Combinations: $I = V / (R_1 + R_2)$</li>
+<li>in Parallel Combinations: $V_1 = R_1 I,\dots$</li>
 </ul>
 </li>
 </ul>
@@ -642,15 +638,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>欧拉图和哈密顿图</p>
           <p class='content'>
 
- 欧拉图
-Def：
+欧拉图Def：
 
 （欧拉通路）经过图中所有边一次且仅一次的通路
 （欧拉回路）经过图中所有边一次且仅一次的回路
 （欧拉图）有欧拉回路
 （半欧拉图）有欧拉通路
 
-Thm：无向图 G 是欧拉图...</p>
+Thm：无向图 G 是欧拉图，当...</p>
         </a>
       
       
@@ -658,8 +653,7 @@ Thm：无向图 G 是欧拉图...</p>
           <p class='title'>Lambda 演算简介（2）<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>Lambda 演算中的常见概念
 
- 布尔、函数、列表等基本数据类型
- 布尔值的表示与运算
+布尔、函数、列表等基本数据类型布尔值的表示与运算
 
 
 
@@ -671,7 +665,7 @@ Lambda 表达式
 
 
 f(x) = expr
-λx.expr\mathrm{\...</p>
+$\mathrm{\lambda x....</p>
         </a>
       
     </div>

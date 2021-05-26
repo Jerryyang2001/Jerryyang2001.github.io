@@ -470,11 +470,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>Lambda 演算中的 Y 组合子</p>
 <span id="more"></span>
-<h2 id="y-组合子递归实现"><a class="markdownIt-Anchor" href="#y-组合子递归实现"></a> Y 组合子：递归实现</h2>
-<p>在之前，我们都在做一些简单的操作，例如实现了分支结构 <code>s e1 e2</code> ，现在我们要考虑如何实现第二种结构：循环与递归（recursion）。</p>
+<h2 id="Y-组合子：递归实现"><a href="#Y-组合子：递归实现" class="headerlink" title="Y 组合子：递归实现"></a>Y 组合子：递归实现</h2><p>在之前，我们都在做一些简单的操作，例如实现了分支结构 <code>s e1 e2</code> ，现在我们要考虑如何实现第二种结构：循环与递归（recursion）。</p>
 <p>在 Lambda 演算的世界里，递归是容易实现的，利用如下的 Y 组合子：</p>
 <p><code>Y = lambda y.(lambda x.y (x x)) (lambda x.y (x x))</code></p>
-<p>即：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Y</mi><mo>=</mo><mi>λ</mi><mi mathvariant="normal">y</mi><mi mathvariant="normal">.</mi><mo stretchy="false">(</mo><mi>λ</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">y</mi><mtext> </mtext><mo stretchy="false">(</mo><mi mathvariant="normal">x</mi><mtext> </mtext><mi mathvariant="normal">x</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mtext> </mtext><mo stretchy="false">(</mo><mi>λ</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">y</mi><mtext> </mtext><mo stretchy="false">(</mo><mi mathvariant="normal">x</mi><mtext> </mtext><mi mathvariant="normal">x</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{Y = \lambda y.(\lambda x.y~(x~x))~(\lambda x.y~(x~x))}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm" style="margin-right:0.025em;">Y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">λ</span><span class="mord mathrm" style="margin-right:0.01389em;">y</span><span class="mord mathrm">.</span><span class="mopen">(</span><span class="mord mathdefault">λ</span><span class="mord mathrm">x</span><span class="mord mathrm">.</span><span class="mord mathrm" style="margin-right:0.01389em;">y</span><span class="mspace nobreak"> </span><span class="mopen">(</span><span class="mord mathrm">x</span><span class="mspace nobreak"> </span><span class="mord mathrm">x</span><span class="mclose">)</span><span class="mclose">)</span><span class="mspace nobreak"> </span><span class="mopen">(</span><span class="mord mathdefault">λ</span><span class="mord mathrm">x</span><span class="mord mathrm">.</span><span class="mord mathrm" style="margin-right:0.01389em;">y</span><span class="mspace nobreak"> </span><span class="mopen">(</span><span class="mord mathrm">x</span><span class="mspace nobreak"> </span><span class="mord mathrm">x</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></span></p>
+<p>即：$\mathrm{Y = \lambda y.(\lambda x.y~(x~x))~(\lambda x.y~(x~x))}$</p>
 <p>我们试着计算 <code>Y Y</code> 的值：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">         Y Y</span><br><span class="line">(beta) =&gt;(lambda x.Y (x x)) (lambda x.Y (x x))</span><br><span class="line">(alpha)=&gt;(lambda x.Y (x x)) (lambda z.Y (z z))</span><br><span class="line">(beta) =&gt;Y ((lambda z.Y (z z)) (lambda z.Y (z z)))</span><br><span class="line">(alpha)=&gt;(lambda a. (lambda b . a (b b)) (lambda b. a (b b)))</span><br><span class="line">         ((lambda z. Y (z z)) (lambda z. Y (z z)))</span><br><span class="line">(beta) =&gt;Y (Y Y)</span><br><span class="line">...... =&gt;Y (Y (Y Y))</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
 <p>可以发现，Y 组合子通过 <code>Y Y</code> 创造了自身！这似乎是一个无穷递归，我们换一个例子看一看：假定 <code>f</code> 是一个关于 <code>x</code> 的函数，例如<code>f = (lambda x.add1 x)</code></p>
@@ -486,16 +485,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>最后我们加上一些判断，使之在某个地方停下，以及对于 <code>x</code> 的变换：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">LET: metafact = lambda fact . (lambda n . IsZero n 1 (Mult n (fact (Pred n))))</span><br><span class="line"></span><br><span class="line">   metafact (Y metafact) n</span><br><span class="line">=&gt; lambda n. zero? n 1 (mult n (Y metafact (Pred n))) n</span><br><span class="line">=&gt; mult n (Y metafact (Pred n))</span><br><span class="line">=&gt; mult n (metafact ((lambda x.metafact (x x)) (lambda x.metafact (x x))) (Pred n))</span><br><span class="line">=&gt; mult n (metafact (Y metafact) (Pred n))</span><br></pre></td></tr></table></figure>
 <div class="note quote"><p><strong>一点思考</strong></p><p>读者应分析结构：<code>lambda t.lambda x.f (t x) x</code>，指出其中 <code>f</code> 和 <code>t</code> 的作用：（在此仅给出个人的理解）</p><ul><li><code>f</code> 为函数算子</li><li><code>t</code> 为传入形式的复制</li></ul><p>如果从柯里化的角度看 Y 组合子是否更好？</p></div>
-<h2 id="ski组合子"><a class="markdownIt-Anchor" href="#ski组合子"></a> SKI组合子</h2>
-<p>先给出 SKI 组合子的定义：</p>
+<h2 id="SKI组合子"><a href="#SKI组合子" class="headerlink" title="SKI组合子"></a>SKI组合子</h2><p>先给出 SKI 组合子的定义：</p>
 <ul>
-<li><code>S = (lambda x y z.(x z (y z)))</code></li>
+<li><code>S = (lambda x y z.(x z (y z)))</code> </li>
 <li><code>K = (lambda x y. x)</code></li>
 <li><code>I = (lambda x.x)</code></li>
 </ul>
 <p>这个定义时很奇怪的，如何说呢，请看：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  S K K x</span><br><span class="line">=&gt;(K x) (K x)</span><br><span class="line">=&gt;(lambda x y. x) x (K x)</span><br><span class="line">=&gt;x</span><br></pre></td></tr></table></figure>
-<p>也就是说 <code>I = S K K</code>，其中 <code>=</code> 表示<strong>外延等价</strong>（extensional equivalence），当 <code>E x</code> 和 <code>E' x</code> <strong>总是</strong>有相同的约化结果恒成立，则称 <code>E = E'</code>。（另一种等价指<strong>内涵等价</strong>（intensional equivalence），当<code>E</code> 与 <code>E</code> 完全相同或经过 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span></span></span></span>-转换后有相同的结果）。</p>
+<p>也就是说 <code>I = S K K</code>，其中 <code>=</code> 表示<strong>外延等价</strong>（extensional equivalence），当 <code>E x</code> 和 <code>E&#39; x</code> <strong>总是</strong>有相同的约化结果恒成立，则称 <code>E = E&#39;</code>。（另一种等价指<strong>内涵等价</strong>（intensional equivalence），当<code>E</code> 与 <code>E</code> 完全相同或经过 $\alpha$-转换后有相同的结果）。</p>
 <blockquote>
 <p>在此略去 <strong>组合子演算</strong> 部分，这一部分可以参考<a target="_blank" rel="noopener" href="http://cgnail.github.io/academic/lambda-5/">这篇文章</a></p>
 </blockquote>
@@ -601,8 +599,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Lambda 演算简介（2）</p>
           <p class='content'>Lambda 演算中的常见概念
 
- 布尔、函数、列表等基本数据类型
- 布尔值的表示与运算
+布尔、函数、列表等基本数据类型布尔值的表示与运算
 
 
 
@@ -614,7 +611,7 @@ Lambda 表达式
 
 
 f(x) = expr
-λx.expr\mathrm{\...</p>
+$\mathrm{\lambda x....</p>
         </a>
       
       
@@ -622,8 +619,7 @@ f(x) = expr
           <p class='title'>编程语言和 Lambda 演算叙旧<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>摘自Wikipedia，知乎等。
 
- Lambda 演算历史
-在 20 世纪 60 年代中期的一系列论文中，Landin[1]阐述了关于编程语言的两个重要观察。首先，他认为所有编程语言都共享一套...</p>
+Lambda 演算历史在 20 世纪 60 年代中期的一系列论文中，Landin1阐述了关于编程语言的两个重要观察。首先，他认为所有编程语言都共享一套用于指定...</p>
         </a>
       
     </div>
@@ -666,7 +662,7 @@ f(x) = expr
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#y-%E7%BB%84%E5%90%88%E5%AD%90%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0"><span class="toc-text"> Y 组合子：递归实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ski%E7%BB%84%E5%90%88%E5%AD%90"><span class="toc-text"> SKI组合子</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Y-%E7%BB%84%E5%90%88%E5%AD%90%EF%BC%9A%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0"><span class="toc-text">Y 组合子：递归实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SKI%E7%BB%84%E5%90%88%E5%AD%90"><span class="toc-text">SKI组合子</span></a></li></ol>
     </div>
   </section>
 
