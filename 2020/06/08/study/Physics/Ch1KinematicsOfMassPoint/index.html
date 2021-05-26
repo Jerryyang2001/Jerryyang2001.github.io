@@ -470,207 +470,264 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>想当初，我还做了这么多笔记？</p>
 <span id="more"></span>
-<h2 id="质点运动的描述"><a href="#质点运动的描述" class="headerlink" title="质点运动的描述"></a>质点运动的描述</h2><blockquote>
+<h2 id="质点运动的描述">质点运动的描述</h2>
+<blockquote>
 <p><strong>力学</strong>：研究机械运动(宏观物体之间或物体内各部分之间的相对位置的变动)。</p>
 <p><strong>运动学</strong>：研究物体运动的描述及运动学量间的关系。</p>
 <p><strong>动力学</strong>：研究物体运动与物体间相互作用间的联系。</p>
 <p><strong>静力学</strong>：研究物体在相互作用下的平衡问题。</p>
 </blockquote>
-<h3 id="质点、参考系和坐标系"><a href="#质点、参考系和坐标系" class="headerlink" title="质点、参考系和坐标系"></a>质点、参考系和坐标系</h3><h4 id="质点-理想化的模型"><a href="#质点-理想化的模型" class="headerlink" title="质点 (理想化的模型)"></a>质点 (理想化的模型)</h4><p>若物体的形状和大小可以忽略，则可视为一个<strong>具有一定质量的几何点</strong>。</p>
+<h3 id="质点参考系和坐标系">质点、参考系和坐标系</h3>
+<h4 id="质点-理想化的模型">质点 (理想化的模型)</h4>
+<p>若物体的形状和大小可以忽略，则可视为一个<strong>具有一定质量的几何点</strong>。</p>
 <p>物体可看作质点来处理的条件：</p>
 <ul>
 <li>作平动的物体</li>
 <li>两物体间的距离远大于物体本身的线度</li>
 </ul>
-<h4 id="参考系-运动具有相对性"><a href="#参考系-运动具有相对性" class="headerlink" title="参考系 (运动具有相对性)"></a>参考系 (运动具有相对性)</h4><p>研究物体运动时所选定的参照物体。</p>
+<h4 id="参考系-运动具有相对性">参考系 (运动具有相对性)</h4>
+<p>研究物体运动时所选定的参照物体。</p>
 <blockquote>
 <p>运动具有相对性(relativity)，为此研究运动时需选定参考系(reference system)，为确定各时刻物体相对参考系的位置需建立坐标系(coordinate system)。</p>
 </blockquote>
-<h4 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h4><p>定量表示物体的位置。</p>
-<h3 id="质点运动的矢量描述（位移、速度、加速度）"><a href="#质点运动的矢量描述（位移、速度、加速度）" class="headerlink" title="质点运动的矢量描述（位移、速度、加速度）"></a>质点运动的矢量描述（位移、速度、加速度）</h3><h4 id="位置矢量-位矢、径矢-Position-Vector"><a href="#位置矢量-位矢、径矢-Position-Vector" class="headerlink" title="位置矢量(位矢、径矢 Position Vector)"></a>位置矢量(位矢、径矢 Position Vector)</h4><p>从坐标原点$O$指向质点所在位置$P$的有向线段，表征在空间某个质点 $ P $ 的位置的矢量$\vec{r}=\vec{OP}$.</p>
-<p><strong>大小（模）：</strong>$r=\sqrt{x^{2}+y^{2}+z^{2}}$</p>
-<p><strong>方向：</strong>$\cos \alpha=\frac{x}{r} ,\quad \cos \beta=\frac{y}{r} ,\quad \cos \gamma=\frac{z}{r}$</p>
-<h4 id="运动方程"><a href="#运动方程" class="headerlink" title="运动方程"></a>运动方程</h4><p>$\pmb{r}=\pmb{r}(t)=x(t) \pmb{i}+y(t) \pmb{j}+z(t) \pmb{k}$</p>
-<p>参数方程：$x=x(t) \quad y=y(t) \quad z=z(t)$ 从中小区参数$t$可以得到质点运动的轨道方程</p>
-<h4 id="位移（反映位置的变化）"><a href="#位移（反映位置的变化）" class="headerlink" title="位移（反映位置的变化）"></a>位移（反映位置的变化）</h4><blockquote>
-<p>时间间隔内质点位置的变化 $\Delta \pmb{r} = \pmb{r}(t+\Delta t) - \pmb{r}(t).$</p>
-<p>当质点在空间运动时，位矢$r$ 是时间$t$的函数，$\pmb{r}=\pmb{r}(t).$ (1,1)</p>
-</blockquote>
-<p>在时刻$t$，质点位矢为$\pmb{r}_A = \pmb{r}(t)$;</p>
-<p>在时刻$t+\Delta t$,质点位矢为$\pmb{r}_B=\pmb{r}(t+\Delta t)$</p>
-<p>于是，质点在时间间隔$\Delta t$内的位置变化，可以用自 A 到 B 的矢量$\Delta \pmb{r}$来表示，即$\Delta \pmb{r} = \pmb{r}(t+\Delta t) - \pmb{r}(t).$</p>
-<p><img src="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01a_1.png" class="lazyload" data-srcset="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01a_1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="png"></p>
-<p>在直角坐标系中：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\Delta \pmb{r}&=\Delta x \pmb{i}+\Delta \pmb{y}+\Delta z \pmb{k}
-\\
-|\Delta \pmb{r}|&=\sqrt{\Delta x^{2}+\Delta y^{2}+\Delta z^{2}}
-\end{aligned}</script><p><strong>注意：</strong></p>
-<ol>
-<li>$\widehat{A B}$ 路程（标量）<br>$\Delta \pmb{r}$​ 位移（矢量）</li>
-<li>${\pmb{r}}$ 位矢、与坐标原点有关<br>${\Delta \pmb{r}}$ 位移、与坐标原点无关</li>
-<li>${|\Delta \pmb{r}|} $ 位矢增量的大小<br>${|\Delta r|}$ 位矢大小的增量</li>
-</ol>
-<h4 id="速度（Velocity）——反映质点运动的快慢和方向"><a href="#速度（Velocity）——反映质点运动的快慢和方向" class="headerlink" title="速度（Velocity）——反映质点运动的快慢和方向"></a>速度（Velocity）——反映质点运动的快慢和方向</h4><p><strong>平均速度</strong>（单位时间内质点的位移）：$\bar{v}=\frac{\Delta \pmb{r}}{\Delta t}.$</p>
-<p><strong>瞬时速度</strong>（质点某时刻的速度）：$v=\lim \limits_{\Delta t \to 0}\frac{\Delta \pmb{r}}{\Delta t}$</p>
+<h4 id="坐标系">坐标系</h4>
+<p>定量表示物体的位置。</p>
+<h3 id="质点运动的矢量描述位移速度加速度">质点运动的矢量描述（位移、速度、加速度）</h3>
+<h4 id="位置矢量位矢径矢-position-vector">位置矢量(位矢、径矢 Position Vector)</h4>
+<p>从坐标原点<span class="math inline">\(O\)</span>指向质点所在位置<span class="math inline">\(P\)</span>的有向线段，表征在空间某个质点 $ P $ 的位置的矢量<span class="math inline">\(\vec{r}=\vec{OP}\)</span>.</p>
+<p><strong>大小（模）：</strong><span class="math inline">\(r=\sqrt{x^{2}+y^{2}+z^{2}}\)</span></p>
+<p><strong>方向：</strong><span class="math inline">\(\cos \alpha=\frac{x}{r} ,\quad \cos \beta=\frac{y}{r} ,\quad \cos \gamma=\frac{z}{r}\)</span></p>
+<h4 id="运动方程">运动方程</h4>
+<p><span class="math inline">\(\pmb{r}=\pmb{r}(t)=x(t) \pmb{i}+y(t) \pmb{j}+z(t) \pmb{k}\)</span></p>
+<p>参数方程：<span class="math inline">\(x=x(t) \quad y=y(t) \quad z=z(t)\)</span> 从中小区参数<span class="math inline">\(t\)</span>可以得到质点运动的轨道方程</p>
+<h4 id="位移反映位置的变化">位移（反映位置的变化）</h4>
 <blockquote>
-<p>直角坐标系中 $\vec{v}=v_{x} \vec{i}+v_{y} \vec{j}+v_{z} \vec{k}$</p>
-<p>大小：$v=|\vec{v}|=\sqrt{v_{x}^{2}+v_{y}^{2}+v_{z}^{2}}$</p>
+<p>时间间隔内质点位置的变化 <span class="math inline">\(\Delta \pmb{r} = \pmb{r}(t+\Delta t) - \pmb{r}(t).\)</span></p>
+<p>当质点在空间运动时，位矢<span class="math inline">\(r\)</span> 是时间<span class="math inline">\(t\)</span>的函数，<span class="math inline">\(\pmb{r}=\pmb{r}(t).\)</span> (1,1)</p>
+</blockquote>
+<p>在时刻<span class="math inline">\(t\)</span>，质点位矢为<span class="math inline">\(\pmb{r}_A = \pmb{r}(t)\)</span>;</p>
+<p>在时刻<span class="math inline">\(t+\Delta t\)</span>,质点位矢为<span class="math inline">\(\pmb{r}_B=\pmb{r}(t+\Delta t)\)</span></p>
+<p>于是，质点在时间间隔<span class="math inline">\(\Delta t\)</span>内的位置变化，可以用自 A 到 B 的矢量<span class="math inline">\(\Delta \pmb{r}\)</span>来表示，即<span class="math inline">\(\Delta \pmb{r} = \pmb{r}(t+\Delta t) - \pmb{r}(t).\)</span></p>
+<figure>
+<img src="/.io//01a_1.png" class="lazyload" data-srcset="/.io//01a_1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="png"><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>在直角坐标系中：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Delta \pmb{r}&amp;=\Delta x \pmb{i}+\Delta \pmb{y}+\Delta z \pmb{k}
+\\
+|\Delta \pmb{r}|&amp;=\sqrt{\Delta x^{2}+\Delta y^{2}+\Delta z^{2}}
+\end{aligned}
+\]</span></p>
+<p><strong>注意：</strong></p>
+<ol type="1">
+<li><span class="math inline">\(\widehat{A B}\)</span> 路程（标量） <span class="math inline">\(\Delta \pmb{r}\)</span>​ 位移（矢量）</li>
+<li><span class="math inline">\({\pmb{r}}\)</span> 位矢、与坐标原点有关 <span class="math inline">\({\Delta \pmb{r}}\)</span> 位移、与坐标原点无关</li>
+<li>${||} $ 位矢增量的大小 <span class="math inline">\({|\Delta r|}\)</span> 位矢大小的增量</li>
+</ol>
+<h4 id="速度velocity反映质点运动的快慢和方向">速度（Velocity）——反映质点运动的快慢和方向</h4>
+<p><strong>平均速度</strong>（单位时间内质点的位移）：<span class="math inline">\(\bar{v}=\frac{\Delta \pmb{r}}{\Delta t}.\)</span></p>
+<p><strong>瞬时速度</strong>（质点某时刻的速度）：<span class="math inline">\(v=\lim \limits_{\Delta t \to 0}\frac{\Delta \pmb{r}}{\Delta t}\)</span></p>
+<blockquote>
+<p>直角坐标系中 <span class="math inline">\(\vec{v}=v_{x} \vec{i}+v_{y} \vec{j}+v_{z} \vec{k}\)</span></p>
+<p>大小：<span class="math inline">\(v=|\vec{v}|=\sqrt{v_{x}^{2}+v_{y}^{2}+v_{z}^{2}}\)</span></p>
 <p>方向：为轨道上质点所在处切线方向并指向前进的一侧</p>
 </blockquote>
 <p><strong>速率</strong>：</p>
 <ul>
-<li><p>平均速率：$\bar{v}=\frac{\Delta s}{\Delta t}$</p>
-</li>
-<li><p>瞬时速率：$v=|v|=\lim\limits_{\Delta t \to 0} \frac{|\Delta \pmb{r}|}{\Delta t}=\lim\limits_{\Delta t \to 0} \frac {\Delta s}{\Delta t}=\frac{ds}{dt}$</p>
-<p>注意：一般情况下：$|\Delta \pmb{r}| \neq \Delta s \quad |\pmb{v}| \neq  \bar{v}$</p>
-<p>​ 当$\Delta t \to 0$ 时：$|\Delta \vec{r}| \rightarrow|\mathrm{d} \vec{r}|=\mathrm{d} s \quad|\vec{v}|=v$</p>
-</li>
+<li><p>平均速率：<span class="math inline">\(\bar{v}=\frac{\Delta s}{\Delta t}\)</span></p></li>
+<li><p>瞬时速率：<span class="math inline">\(v=|v|=\lim\limits_{\Delta t \to 0} \frac{|\Delta \pmb{r}|}{\Delta t}=\lim\limits_{\Delta t \to 0} \frac {\Delta s}{\Delta t}=\frac{ds}{dt}\)</span></p>
+<p>注意：一般情况下：<span class="math inline">\(|\Delta \pmb{r}| \neq \Delta s \quad |\pmb{v}| \neq \bar{v}\)</span></p>
+<p>​ 当<span class="math inline">\(\Delta t \to 0\)</span> 时：<span class="math inline">\(|\Delta \vec{r}| \rightarrow|\mathrm{d} \vec{r}|=\mathrm{d} s \quad|\vec{v}|=v\)</span></p></li>
 </ul>
-<h4 id="加速度（Acceleration）——反映瞬时速度的变化"><a href="#加速度（Acceleration）——反映瞬时速度的变化" class="headerlink" title="加速度（Acceleration）——反映瞬时速度的变化"></a>加速度（Acceleration）——反映瞬时速度的变化</h4><p>平均加速度：$\bar{a}=\frac{\pmb{v}_2-\pmb{v}_1}{\Delta t}=\frac{\Delta \pmb{v}}{\Delta t}$</p>
-<p>瞬时加速度：$a=\lim\limits_{\Delta t \to 0}\frac{v_b-v_a}{\Delta t}=\lim\limits_ {\Delta t \to 0} \frac{\Delta \pmb{v}}{\Delta t}=\frac{d^2 r}{dt^2}$</p>
+<h4 id="加速度acceleration反映瞬时速度的变化">加速度（Acceleration）——反映瞬时速度的变化</h4>
+<p>平均加速度：<span class="math inline">\(\bar{a}=\frac{\pmb{v}_2-\pmb{v}_1}{\Delta t}=\frac{\Delta \pmb{v}}{\Delta t}\)</span></p>
+<p>瞬时加速度：<span class="math inline">\(a=\lim\limits_{\Delta t \to 0}\frac{v_b-v_a}{\Delta t}=\lim\limits_ {\Delta t \to 0} \frac{\Delta \pmb{v}}{\Delta t}=\frac{d^2 r}{dt^2}\)</span></p>
 <ul>
-<li><p>加速度的方向：速度增量的方向</p>
-</li>
-<li><p>加速度的大小：$|\pmb{a}|=\sqrt{a_{x}^{2}+a_{y}^{2}+a_{z}^{2}}$</p>
-</li>
-<li><p>直角坐标系中：$\pmb{a}=a_{x} \pmb{i}+a_{y} \pmb{j}+a_{z} \pmb{k}$</p>
-</li>
+<li><p>加速度的方向：速度增量的方向</p></li>
+<li><p>加速度的大小：<span class="math inline">\(|\pmb{a}|=\sqrt{a_{x}^{2}+a_{y}^{2}+a_{z}^{2}}\)</span></p></li>
+<li><p>直角坐标系中：<span class="math inline">\(\pmb{a}=a_{x} \pmb{i}+a_{y} \pmb{j}+a_{z} \pmb{k}\)</span></p></li>
 </ul>
 <p><strong>注意</strong>：一般而言，加速度与同一时刻速度的方向之间并没有一定的关联。</p>
 <p><strong>思考</strong>：</p>
-<ol>
+<ol type="1">
 <li>位矢、速度和加速度，与参考系的选择是否有关？</li>
 <li>一旦参考系选定了，它们就与参考点的选择是否有关？</li>
 </ol>
-<h4 id="矢量描述质点运动的优点"><a href="#矢量描述质点运动的优点" class="headerlink" title="矢量描述质点运动的优点"></a>矢量描述质点运动的优点</h4><p>矢量描述与具体坐标系的选择无关，因此便于作一般性的定义陈述和公式推导。</p>
-<h4 id="坐标系的适当选择"><a href="#坐标系的适当选择" class="headerlink" title="坐标系的适当选择"></a>坐标系的适当选择</h4><p>具体计算时，根据具体问题的特点选择。例如：</p>
-<ol>
+<h4 id="矢量描述质点运动的优点">矢量描述质点运动的优点</h4>
+<p>矢量描述与具体坐标系的选择无关，因此便于作一般性的定义陈述和公式推导。</p>
+<h4 id="坐标系的适当选择">坐标系的适当选择</h4>
+<p>具体计算时，根据具体问题的特点选择。例如：</p>
+<ol type="1">
 <li>质点的加速度为常矢量时，可选用直角坐标系；</li>
 <li>质点作平面运动的加速度总是指向空间某一固定点时，可选用平面极坐标系；</li>
 <li>质点的运动轨迹固定或已知时，可选用自然坐标系。</li>
 </ol>
-<h3 id="速度、加速度在不同坐标系中的分量表示"><a href="#速度、加速度在不同坐标系中的分量表示" class="headerlink" title="速度、加速度在不同坐标系中的分量表示"></a>速度、加速度在不同坐标系中的分量表示</h3><h4 id="直角坐标系的特点"><a href="#直角坐标系的特点" class="headerlink" title="直角坐标系的特点"></a>直角坐标系的特点</h4><p>各单位矢量$(e_x,e_y,e_z)$ 或$(i,j,k)$都是不随时间变化的常矢量，即：$\frac{e_x}{dt}=\frac{e_y}{dt}=\frac{e_z}{dt}=\frac{i}{dt}=\frac{j}{dt}=\frac{k}{dt}=0$</p>
+<h3 id="速度加速度在不同坐标系中的分量表示">速度、加速度在不同坐标系中的分量表示</h3>
+<h4 id="直角坐标系的特点">直角坐标系的特点</h4>
+<p>各单位矢量<span class="math inline">\((e_x,e_y,e_z)\)</span> 或<span class="math inline">\((i,j,k)\)</span>都是不随时间变化的常矢量，即：<span class="math inline">\(\frac{e_x}{dt}=\frac{e_y}{dt}=\frac{e_z}{dt}=\frac{i}{dt}=\frac{j}{dt}=\frac{k}{dt}=0\)</span></p>
 <p>因此有：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-r&=x\pmb{i}+y\pmb{j}+z\pmb{k}
+r&amp;=x\pmb{i}+y\pmb{j}+z\pmb{k}
 \\
-v&=\frac{dx}{dt}\pmb{i}+\frac{yx}{dt}\pmb{j}+\frac{dz}{dt}\pmb{k}=v_x\pmb{i}+v_y\pmb{j}+v_z\pmb{k}
+v&amp;=\frac{dx}{dt}\pmb{i}+\frac{yx}{dt}\pmb{j}+\frac{dz}{dt}\pmb{k}=v_x\pmb{i}+v_y\pmb{j}+v_z\pmb{k}
 \\
-a&=\frac{d^2x}{dt}\pmb{i}+\frac{d^2y}{dt}\pmb{j}+\frac{d^2z}{dt}\pmb{k}=a_x\pmb{i}+a_y\pmb{j}+a_z\pmb{k}
-\end{aligned}</script><p><strong>注意</strong>：$v_x,v_y,v_z$和 $a_x,a_y,a_z$ 都是可正可负的量。</p>
-<p><img src="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01a_4.png" class="lazyload" data-srcset="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01a_4.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="a的方向"></p>
-<p><strong>正负号的含义</strong>：如图所示，当质点在$P$点处时， $a_x$与$v_x$的符号相同，说明质点在$x$轴上的投影是在作加速运动；而$a_y$与$v_y$的符号相反，说明质点在$y$轴上的投影是在作减速运动。</p>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>在地球表面附近不太大的范围内，重力加速度 g 可以看成是常量。在忽略空气阻力的情况下，二维抛体运动的水平分量和竖直分量将互相独立。这时可选取平面直角坐标系，如图所示。[missing Pic]</p>
-<script type="math/tex; mode=display">
+a&amp;=\frac{d^2x}{dt}\pmb{i}+\frac{d^2y}{dt}\pmb{j}+\frac{d^2z}{dt}\pmb{k}=a_x\pmb{i}+a_y\pmb{j}+a_z\pmb{k}
+\end{aligned}
+\]</span></p>
+<p><strong>注意</strong>：<span class="math inline">\(v_x,v_y,v_z\)</span>和 <span class="math inline">\(a_x,a_y,a_z\)</span> 都是可正可负的量。</p>
+<figure>
+<img src="/.io//01a_4.png" class="lazyload" data-srcset="/.io//01a_4.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="a的方向"><figcaption aria-hidden="true">a的方向</figcaption>
+</figure>
+<p><strong>正负号的含义</strong>：如图所示，当质点在<span class="math inline">\(P\)</span>点处时， <span class="math inline">\(a_x\)</span>与<span class="math inline">\(v_x\)</span>的符号相同，说明质点在<span class="math inline">\(x\)</span>轴上的投影是在作加速运动；而<span class="math inline">\(a_y\)</span>与<span class="math inline">\(v_y\)</span>的符号相反，说明质点在<span class="math inline">\(y\)</span>轴上的投影是在作减速运动。</p>
+<h4 id="实例">实例</h4>
+<p>在地球表面附近不太大的范围内，重力加速度 g 可以看成是常量。在忽略空气阻力的情况下，二维抛体运动的水平分量和竖直分量将互相独立。这时可选取平面直角坐标系，如图所示。[missing Pic]</p>
+<p><span class="math display">\[
 \begin{cases}
 \frac{dx}{dt}=v_0\cos{\theta_0}
 \\
 \frac{dy}{dt}=v_0\sin{\theta_0}-gt
-\end{cases}</script><p>积分后可得：</p>
-<script type="math/tex; mode=display">
+\end{cases}
+\]</span></p>
+<p>积分后可得：</p>
+<p><span class="math display">\[
 \begin{cases}
 x=(v_0\cos\theta_0) t
 \\
 y=(v_0\sin\theta_0) t
-\end{cases}</script><p>消去时间$t$可得描写抛体运动轨迹的<strong>抛物线方程</strong></p>
-<script type="math/tex; mode=display">
-y=x\tan\theta_0 - \frac{gx^2}{2v_0^2\cos^{2}{\theta_0}}</script><p><strong>射高</strong>：由$v_y=0$可得$t=v_0\sin\theta_0/g$，由此可确定：</p>
-<script type="math/tex; mode=display">
-y_{max}=\frac{v_0^2\sin^2\theta_0}{2g}</script><p><strong>射程</strong>：由$y=0$可得$t=2v_9\sin\theta_0/g$，由此可确定</p>
-<script type="math/tex; mode=display">
-x_{max}=\frac{v_0^2\sin2\theta_0}{g}</script><h4 id="平面极坐标系、横向速度和径向速度"><a href="#平面极坐标系、横向速度和径向速度" class="headerlink" title="平面极坐标系、横向速度和径向速度"></a>平面极坐标系、横向速度和径向速度</h4><p><img src="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01a_6.png" class="lazyload" data-srcset="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01a_6.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微分"></p>
-<p>如图所示，在一选定的参考系上选取一点$O$为<strong>原点</strong>，并从它出发引一条有刻度的射线$Ox$ 为<strong>极轴</strong>，即建立起了一个<strong>平面极坐标系</strong>。</p>
-<p>该平面上任意一点 $A$ 的位矢的长度为$\overline{OA}= r$，它与极轴间的夹角为$\theta$，称为<strong>辐角</strong>。只要 $r$ 和 $\theta$ 给定，$A$点的位置就确定了。</p>
-<script type="math/tex; mode=display">
+\end{cases}
+\]</span></p>
+<p>消去时间<span class="math inline">\(t\)</span>可得描写抛体运动轨迹的<strong>抛物线方程</strong></p>
+<p><span class="math display">\[
+y=x\tan\theta_0 - \frac{gx^2}{2v_0^2\cos^{2}{\theta_0}}
+\]</span></p>
+<p><strong>射高</strong>：由<span class="math inline">\(v_y=0\)</span>可得<span class="math inline">\(t=v_0\sin\theta_0/g\)</span>，由此可确定：</p>
+<p><span class="math display">\[
+y_{max}=\frac{v_0^2\sin^2\theta_0}{2g}
+\]</span></p>
+<p><strong>射程</strong>：由<span class="math inline">\(y=0\)</span>可得<span class="math inline">\(t=2v_9\sin\theta_0/g\)</span>，由此可确定</p>
+<p><span class="math display">\[
+x_{max}=\frac{v_0^2\sin2\theta_0}{g}
+\]</span></p>
+<h4 id="平面极坐标系横向速度和径向速度">平面极坐标系、横向速度和径向速度</h4>
+<figure>
+<img src="/.io//01a_6.png" class="lazyload" data-srcset="/.io//01a_6.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微分"><figcaption aria-hidden="true">微分</figcaption>
+</figure>
+<p>如图所示，在一选定的参考系上选取一点<span class="math inline">\(O\)</span>为<strong>原点</strong>，并从它出发引一条有刻度的射线<span class="math inline">\(Ox\)</span> 为<strong>极轴</strong>，即建立起了一个<strong>平面极坐标系</strong>。</p>
+<p>该平面上任意一点 <span class="math inline">\(A\)</span> 的位矢的长度为<span class="math inline">\(\overline{OA}= r\)</span>，它与极轴间的夹角为<span class="math inline">\(\theta\)</span>，称为<strong>辐角</strong>。只要 <span class="math inline">\(r\)</span> 和 <span class="math inline">\(\theta\)</span> 给定，<span class="math inline">\(A\)</span>点的位置就确定了。</p>
+<p><span class="math display">\[
 \bar{e}_{\theta}\quad \frac{\mathrm{d} \pmb{e}_{\theta}}{\mathrm{d} t}=-\frac{\mathrm{d} \theta}{\mathrm{d} t} \pmb{e}_{r} \\
 \pmb{v} =\dot{r} \pmb{e}_{r}+r \dot{\theta} \pmb{e}_{\theta}\\
-\pmb{a}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \pmb{e}_{r}+(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \pmb{e}_{\theta}</script><p>在平面极坐标系中，两个互相垂直的单位矢量$e_r$和$e_\theta$，分别沿着 $r$ 和 $\theta $ 增加的方向，它们都不是常矢量。</p>
-<script type="math/tex; mode=display">
+\pmb{a}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \pmb{e}_{r}+(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \pmb{e}_{\theta}
+\]</span></p>
+<p>在平面极坐标系中，两个互相垂直的单位矢量<span class="math inline">\(e_r\)</span>和<span class="math inline">\(e_\theta\)</span>，分别沿着 <span class="math inline">\(r\)</span> 和 $$ 增加的方向，它们都不是常矢量。</p>
+<p><span class="math display">\[
 A(r, \theta) \quad \vec{r}= r \vec{e}_{r}
 \\
 \frac{\mathrm{d} \pmb{e}_{r}}{\mathrm{d} t}=\frac{\mathrm{d} \theta}{\mathrm{d} t} \pmb{e}_{\theta}
 \quad
-\frac{\mathrm{d} \pmb{e}_{\theta}}{\mathrm{d} t} =-\frac{\mathrm{d} \theta}{\mathrm{d} t} \pmb{e}_{r}</script><p>关于各物理量的表达式，可用以下两种方法得到：</p>
+\frac{\mathrm{d} \pmb{e}_{\theta}}{\mathrm{d} t} =-\frac{\mathrm{d} \theta}{\mathrm{d} t} \pmb{e}_{r}
+\]</span></p>
+<p>关于各物理量的表达式，可用以下两种方法得到：</p>
 <p>（a）图解法</p>
-<p><img src="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01a_6b.png" class="lazyload" data-srcset="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01a_6b.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="01a_6b"></p>
-<p><strong>位矢</strong>：$\pmb{r}=r\pmb{e}_r$</p>
-<p><strong>位移</strong>：$\Delta \boldsymbol{r}=\Delta \boldsymbol{r}_{1}+\Delta \boldsymbol{r}_{2}$</p>
-<p><strong>横向位移</strong>：$\Delta \boldsymbol{r}_{1}=\overline{AC}$</p>
-<p><strong>径向位移</strong>:$\Delta r_{2}=\overline{C B}$</p>
-<p>当$\Delta t$很小时，由</p>
-<script type="math/tex; mode=display">
+<figure>
+<img src="/.io//01a_6b.png" class="lazyload" data-srcset="/.io//01a_6b.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="01a_6b"><figcaption aria-hidden="true">01a_6b</figcaption>
+</figure>
+<p><strong>位矢</strong>：<span class="math inline">\(\pmb{r}=r\pmb{e}_r\)</span></p>
+<p><strong>位移</strong>：<span class="math inline">\(\Delta \boldsymbol{r}=\Delta \boldsymbol{r}_{1}+\Delta \boldsymbol{r}_{2}\)</span></p>
+<p><strong>横向位移</strong>：<span class="math inline">\(\Delta \boldsymbol{r}_{1}=\overline{AC}\)</span></p>
+<p><strong>径向位移</strong>:<span class="math inline">\(\Delta r_{2}=\overline{C B}\)</span></p>
+<p>当<span class="math inline">\(\Delta t\)</span>很小时，由</p>
+<p><span class="math display">\[
 \begin{cases}
-&|O A|=|O C|=r\\
-&|O B|-|O C|=\Delta r
-\end{cases}</script><p>可得：</p>
-<script type="math/tex; mode=display">
+&amp;|O A|=|O C|=r\\
+&amp;|O B|-|O C|=\Delta r
+\end{cases}
+\]</span></p>
+<p>可得：</p>
+<p><span class="math display">\[
 \begin{aligned}
-\Delta \boldsymbol{r}_{1} & \approx r \Delta \theta \boldsymbol{e}_{\theta} \\
-\Delta \boldsymbol{r}_{2} & \approx \Delta r \boldsymbol{e}_{r} \\
-\boldsymbol{v}&=\lim _{\Delta t \rightarrow 0} \frac{\Delta \boldsymbol{r}}{\Delta t}=\lim_{\Delta t \rightarrow 0} \frac{r \Delta \theta \boldsymbol{e}_{\theta}}{\Delta t}+\lim_{\Delta t \rightarrow 0} \frac{\Delta r \boldsymbol{e}_{r}}{\Delta t} \\
-&=r \dot{\theta} \boldsymbol{e}_{\theta}+\dot{r} \boldsymbol{e}_{r}=v_{\theta} \boldsymbol{e}_{\theta}+v_{r} \boldsymbol{e}_{r}
-\end{aligned}</script><p><strong>横向速度</strong>：$v_{\theta} e_{\theta}=r \dot{\theta} e_{\theta}$</p>
-<p><strong>径向速度</strong>：$v_{r} \boldsymbol{e}_{r}=\dot{r} \boldsymbol{e}_{r}$</p>
-<p>​ 其中：$\dot{\theta}=\mathrm{d} \theta / \mathrm{d} t, \quad \dot{r}=\mathrm{d} r / \mathrm{d} t$</p>
+\Delta \boldsymbol{r}_{1} &amp; \approx r \Delta \theta \boldsymbol{e}_{\theta} \\
+\Delta \boldsymbol{r}_{2} &amp; \approx \Delta r \boldsymbol{e}_{r} \\
+\boldsymbol{v}&amp;=\lim _{\Delta t \rightarrow 0} \frac{\Delta \boldsymbol{r}}{\Delta t}=\lim_{\Delta t \rightarrow 0} \frac{r \Delta \theta \boldsymbol{e}_{\theta}}{\Delta t}+\lim_{\Delta t \rightarrow 0} \frac{\Delta r \boldsymbol{e}_{r}}{\Delta t} \\
+&amp;=r \dot{\theta} \boldsymbol{e}_{\theta}+\dot{r} \boldsymbol{e}_{r}=v_{\theta} \boldsymbol{e}_{\theta}+v_{r} \boldsymbol{e}_{r}
+\end{aligned}
+\]</span></p>
+<p><strong>横向速度</strong>：<span class="math inline">\(v_{\theta} e_{\theta}=r \dot{\theta} e_{\theta}\)</span></p>
+<p><strong>径向速度</strong>：<span class="math inline">\(v_{r} \boldsymbol{e}_{r}=\dot{r} \boldsymbol{e}_{r}\)</span></p>
+<p>​ 其中：<span class="math inline">\(\dot{\theta}=\mathrm{d} \theta / \mathrm{d} t, \quad \dot{r}=\mathrm{d} r / \mathrm{d} t\)</span></p>
 <p>（b）矢量微分法</p>
-<p>根据$\pmb{e}_r$和$\pmb{e}_{\theta}$与$\pmb{i}$和$\pmb{j}$之间的关系式：$\pmb{e}_{r}=\pmb{i} \cos \theta+\pmb{j} \sin \theta \quad \pmb{e}_{\theta}=-\pmb{i} \sin \theta+\pmb{j} \cos \theta$</p>
+<p>根据<span class="math inline">\(\pmb{e}_r\)</span>和<span class="math inline">\(\pmb{e}_{\theta}\)</span>与<span class="math inline">\(\pmb{i}\)</span>和<span class="math inline">\(\pmb{j}\)</span>之间的关系式：<span class="math inline">\(\pmb{e}_{r}=\pmb{i} \cos \theta+\pmb{j} \sin \theta \quad \pmb{e}_{\theta}=-\pmb{i} \sin \theta+\pmb{j} \cos \theta\)</span></p>
 <p>按照矢量求导规则，可得：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-\frac{\mathrm{d} \pmb{e}_{r}}{\mathrm{d}t}&=\lim\limits_{\Delta t \rightarrow 0} \frac{\Delta e_{r}}{\Delta t}=\lim\limits_{\Delta t \rightarrow 0} \frac{\Delta \theta}{\Delta t} \pmb{e}_{\theta}=\dot{\theta} \pmb{e}_{\theta} \\
-\frac{\mathrm{d} \pmb{e}_{\theta}}{\mathrm{d} t}&=\lim_{\Delta t \rightarrow 0} \frac{\Delta \pmb{e}_{\theta}}{\Delta t}=\lim_{\Delta t \rightarrow 0} \frac{\Delta \theta}{\Delta t}\left(-e_{r}\right)=-\dot{\theta} e_{r}
+\frac{\mathrm{d} \pmb{e}_{r}}{\mathrm{d}t}&amp;=\lim\limits_{\Delta t \rightarrow 0} \frac{\Delta e_{r}}{\Delta t}=\lim\limits_{\Delta t \rightarrow 0} \frac{\Delta \theta}{\Delta t} \pmb{e}_{\theta}=\dot{\theta} \pmb{e}_{\theta} \\
+\frac{\mathrm{d} \pmb{e}_{\theta}}{\mathrm{d} t}&amp;=\lim_{\Delta t \rightarrow 0} \frac{\Delta \pmb{e}_{\theta}}{\Delta t}=\lim_{\Delta t \rightarrow 0} \frac{\Delta \theta}{\Delta t}\left(-e_{r}\right)=-\dot{\theta} e_{r}
 \\
-\boldsymbol{v} &=\frac{\mathrm{d} \boldsymbol{r}}{\mathrm{d} t}=\frac{\mathrm{d}\left(r \boldsymbol{e}_{r}\right)}{\mathrm{d} t}=\dot{r} \boldsymbol{e}_{r}+r \frac{\mathrm{d} \boldsymbol{e}_{r}}{\mathrm{d} t}=\dot{r} \boldsymbol{e}_{r}+r \dot{\theta} \boldsymbol{e}_{\theta} \\
-\boldsymbol{a} &=\frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t}=\frac{\mathrm{d}\left(\dot{\boldsymbol{r}} \boldsymbol{e}_{r}\right)}{\mathrm{d} t}+\frac{\mathrm{d}\left(r \dot{\theta} \boldsymbol{e}_{\theta}\right)}{\mathrm{d} t} \\
-&=\dot{r}^{*} \boldsymbol{e}_{r}+\dot{r} \dot{\theta} \boldsymbol{e}_{\theta}+\dot{r} \dot{\theta} \boldsymbol{e}_{\theta}+r \ddot{\theta} \boldsymbol{e}_{\theta}-r \dot{\theta}^{2} \boldsymbol{e}_{r} \\
-&=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}+(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}
-\end{aligned}</script><p><strong>径向加速度</strong>：$a_{r} \boldsymbol{e}_{r}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}$</p>
-<p><strong>横向加速度</strong>：$a_{\theta} \boldsymbol{e}_{\theta}=(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}$</p>
-<h4 id="自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）-S-S-t"><a href="#自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）-S-S-t" class="headerlink" title="自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）$S=S(t)$"></a>自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）$S=S(t)$</h4><p><strong>自然坐标系</strong>：选定轨迹上任一点$O$为原点，用轨迹的长度$s$描写质点位置，并规定两个正交单位矢量——<strong>切向</strong>单位矢量$\pmb{e}_t$和<strong>法向</strong>单位矢量$\pmb{e}_n$.</p>
-<p><strong>曲率圆</strong>：通过曲线上的一点$A$及其两个邻近的点作一个圆，在这三个点无限趋近的极限情况下，这个圆称为$A$点的曲率圆，其半径称为曲率半径$\rho$。</p>
-<p><img src="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01b_7.png" class="lazyload" data-srcset="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01b_7.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="曲率"></p>
-<p><strong>速度</strong>：$\boldsymbol{v}=\boldsymbol{v} \boldsymbol{e}_{t}=\frac{\mathrm{d}s}{\mathrm{d}t}\pmb{e}_t$（只有切向）</p>
-<p><strong>速率</strong>：$v=\frac{\mathrm{d} s}{\mathrm{d} t}$</p>
-<p><strong>加速度</strong>：$\vec{a}=\dot{v} \vec{e}_{t}+\frac{v^{2}}{\rho} \vec{e}_{n}$</p>
+\boldsymbol{v} &amp;=\frac{\mathrm{d} \boldsymbol{r}}{\mathrm{d} t}=\frac{\mathrm{d}\left(r \boldsymbol{e}_{r}\right)}{\mathrm{d} t}=\dot{r} \boldsymbol{e}_{r}+r \frac{\mathrm{d} \boldsymbol{e}_{r}}{\mathrm{d} t}=\dot{r} \boldsymbol{e}_{r}+r \dot{\theta} \boldsymbol{e}_{\theta} \\
+\boldsymbol{a} &amp;=\frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t}=\frac{\mathrm{d}\left(\dot{\boldsymbol{r}} \boldsymbol{e}_{r}\right)}{\mathrm{d} t}+\frac{\mathrm{d}\left(r \dot{\theta} \boldsymbol{e}_{\theta}\right)}{\mathrm{d} t} \\
+&amp;=\dot{r}^{*} \boldsymbol{e}_{r}+\dot{r} \dot{\theta} \boldsymbol{e}_{\theta}+\dot{r} \dot{\theta} \boldsymbol{e}_{\theta}+r \ddot{\theta} \boldsymbol{e}_{\theta}-r \dot{\theta}^{2} \boldsymbol{e}_{r} \\
+&amp;=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}+(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}
+\end{aligned}
+\]</span></p>
+<p><strong>径向加速度</strong>：<span class="math inline">\(a_{r} \boldsymbol{e}_{r}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}\)</span></p>
+<p><strong>横向加速度</strong>：<span class="math inline">\(a_{\theta} \boldsymbol{e}_{\theta}=(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}\)</span></p>
+<h4 id="自然坐标系切向加速度和法向加速度在质点运动轨迹已知的情况下选用sst">自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）<span class="math inline">\(S=S(t)\)</span></h4>
+<p><strong>自然坐标系</strong>：选定轨迹上任一点<span class="math inline">\(O\)</span>为原点，用轨迹的长度<span class="math inline">\(s\)</span>描写质点位置，并规定两个正交单位矢量——<strong>切向</strong>单位矢量<span class="math inline">\(\pmb{e}_t\)</span>和<strong>法向</strong>单位矢量<span class="math inline">\(\pmb{e}_n\)</span>.</p>
+<p><strong>曲率圆</strong>：通过曲线上的一点<span class="math inline">\(A\)</span>及其两个邻近的点作一个圆，在这三个点无限趋近的极限情况下，这个圆称为<span class="math inline">\(A\)</span>点的曲率圆，其半径称为曲率半径<span class="math inline">\(\rho\)</span>。</p>
+<figure>
+<img src="/.io//01b_7.png" class="lazyload" data-srcset="/.io//01b_7.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="曲率"><figcaption aria-hidden="true">曲率</figcaption>
+</figure>
+<p><strong>速度</strong>：<span class="math inline">\(\boldsymbol{v}=\boldsymbol{v} \boldsymbol{e}_{t}=\frac{\mathrm{d}s}{\mathrm{d}t}\pmb{e}_t\)</span>（只有切向）</p>
+<p><strong>速率</strong>：<span class="math inline">\(v=\frac{\mathrm{d} s}{\mathrm{d} t}\)</span></p>
+<p><strong>加速度</strong>：<span class="math inline">\(\vec{a}=\dot{v} \vec{e}_{t}+\frac{v^{2}}{\rho} \vec{e}_{n}\)</span></p>
 <ul>
-<li>切向加速度：$a_t=\frac{\mathrm{d}v}{\mathrm{d}t}$</li>
-<li>法向加速度：$a_n=\frac{v^2}{\rho}$</li>
+<li>切向加速度：<span class="math inline">\(a_t=\frac{\mathrm{d}v}{\mathrm{d}t}\)</span></li>
+<li>法向加速度：<span class="math inline">\(a_n=\frac{v^2}{\rho}\)</span></li>
 </ul>
-<p>当$\Delta t$很小时，$\Delta \pmb {e}_{t} \approx \pmb{e}_{n} \Delta \varphi$，利用</p>
-<script type="math/tex; mode=display">
+<p>当<span class="math inline">\(\Delta t\)</span>很小时，<span class="math inline">\(\Delta \pmb {e}_{t} \approx \pmb{e}_{n} \Delta \varphi\)</span>，利用</p>
+<p><span class="math display">\[
 \begin{cases}
-&\frac{1}{\rho}=\lim _{\Delta s \rightarrow 0} \frac{\Delta \varphi}{\Delta s}=\frac{\mathrm{d} \varphi}{\mathrm{d} s}\\
-&\mathrm{d} e_{\mathrm{t}}=e_{\mathrm{n}} \mathrm{d} \varphi=e_{\mathrm{n}} \frac{\mathrm{d} s}{\rho}
-\end{cases}</script><p>可得：</p>
-<script type="math/tex; mode=display">
+&amp;\frac{1}{\rho}=\lim _{\Delta s \rightarrow 0} \frac{\Delta \varphi}{\Delta s}=\frac{\mathrm{d} \varphi}{\mathrm{d} s}\\
+&amp;\mathrm{d} e_{\mathrm{t}}=e_{\mathrm{n}} \mathrm{d} \varphi=e_{\mathrm{n}} \frac{\mathrm{d} s}{\rho}
+\end{cases}
+\]</span></p>
+<p>可得：</p>
+<p><span class="math display">\[
 \begin{aligned}
-a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \boldsymbol{e}_{\mathrm{t}}\right)=\frac{\mathrm{d} v}{\mathrm{d} t} \boldsymbol{e}_{\mathrm{t}}+v \frac{\mathrm{d} \boldsymbol{e}_{\mathrm{t}}}{\mathrm{d} t} \\
-&=\frac{\mathrm{d} v}{\mathrm{d} t} \boldsymbol{e}_{\mathrm{t}}+v \frac{\mathrm{d} s}{\mathrm{d} t} \frac{1}{\rho} \boldsymbol{e}_{\mathrm{n}} \\
-&=\frac{\mathrm{d} v}{\mathrm{d} t} \boldsymbol{e}_{\mathrm{t}}+\frac{v^{2}}{\rho} \boldsymbol{e}_{\mathrm{n}}=a_{\mathrm{t}} \boldsymbol{e}_{\mathrm{t}}+a_{\mathrm{n}} \boldsymbol{e}_{\mathrm{n}}
-\end{aligned}</script><h2 id="相对运动"><a href="#相对运动" class="headerlink" title="相对运动"></a>相对运动</h2><blockquote>
+a &amp;=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \boldsymbol{e}_{\mathrm{t}}\right)=\frac{\mathrm{d} v}{\mathrm{d} t} \boldsymbol{e}_{\mathrm{t}}+v \frac{\mathrm{d} \boldsymbol{e}_{\mathrm{t}}}{\mathrm{d} t} \\
+&amp;=\frac{\mathrm{d} v}{\mathrm{d} t} \boldsymbol{e}_{\mathrm{t}}+v \frac{\mathrm{d} s}{\mathrm{d} t} \frac{1}{\rho} \boldsymbol{e}_{\mathrm{n}} \\
+&amp;=\frac{\mathrm{d} v}{\mathrm{d} t} \boldsymbol{e}_{\mathrm{t}}+\frac{v^{2}}{\rho} \boldsymbol{e}_{\mathrm{n}}=a_{\mathrm{t}} \boldsymbol{e}_{\mathrm{t}}+a_{\mathrm{n}} \boldsymbol{e}_{\mathrm{n}}
+\end{aligned}
+\]</span></p>
+<h2 id="相对运动">相对运动</h2>
+<blockquote>
 <p>在解决实际问题时，常常需要处理参考系与参考系之间变换的问题。</p>
 </blockquote>
-<p>如图 1 - 10 所示，参考系$S’$相对于参考系$S$作平移。</p>
-<p><img src="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01b_10.png" class="lazyload" data-srcset="/2020/06/08/study/Physics/Ch1KinematicsOfMassPoint/01b_10.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="坐标系变换"></p>
-<p>设参考系 相对于参考系$S$的位矢为$R$，则参考系$S’$和参考系$S$间的</p>
-<p>相对运动速度(牵连速度)：$\pmb{v}_r=\frac{\mathrm{d} \pmb{R}}{\mathrm{d}t}$</p>
-<p>加速度$\pmb{a}_r$(牵连加速度)：$\pmb{a}_r=\frac{\mathrm{d} \pmb{v}_r}{\mathrm{d}t}=\frac{\mathrm{d}^2 \pmb{R}}{\mathrm{d}t^2}$</p>
-<p>若质点 P 在参考系$S$和$S’$中的位矢、速度和加速度分别为$r,v,a$和$r’,v’,a’$, 则它们间的变换关系分别为：</p>
-<script type="math/tex; mode=display">
+<p>如图 1 - 10 所示，参考系<span class="math inline">\(S&#39;\)</span>相对于参考系<span class="math inline">\(S\)</span>作平移。</p>
+<figure>
+<img src="/.io//01b_10.png" class="lazyload" data-srcset="/.io//01b_10.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="坐标系变换"><figcaption aria-hidden="true">坐标系变换</figcaption>
+</figure>
+<p>设参考系 相对于参考系<span class="math inline">\(S\)</span>的位矢为<span class="math inline">\(R\)</span>，则参考系<span class="math inline">\(S&#39;\)</span>和参考系<span class="math inline">\(S\)</span>间的</p>
+<p>相对运动速度(牵连速度)：<span class="math inline">\(\pmb{v}_r=\frac{\mathrm{d} \pmb{R}}{\mathrm{d}t}\)</span></p>
+<p>加速度<span class="math inline">\(\pmb{a}_r\)</span>(牵连加速度)：<span class="math inline">\(\pmb{a}_r=\frac{\mathrm{d} \pmb{v}_r}{\mathrm{d}t}=\frac{\mathrm{d}^2 \pmb{R}}{\mathrm{d}t^2}\)</span></p>
+<p>若质点 P 在参考系<span class="math inline">\(S\)</span>和<span class="math inline">\(S&#39;\)</span>中的位矢、速度和加速度分别为<span class="math inline">\(r,v,a\)</span>和<span class="math inline">\(r&#39;,v&#39;,a&#39;\)</span>, 则它们间的变换关系分别为：</p>
+<p><span class="math display">\[
 \begin{aligned}
-\pmb{r}'&=\pmb{r}-\pmb{R}
+\pmb{r}&#39;&amp;=\pmb{r}-\pmb{R}
 \\
-\pmb{v}'&=\frac{\mathrm{d}\pmb{r}}{\mathrm{d} t}=\frac{\mathrm{d}\pmb{R}}{\mathrm{d}t}=\pmb{v} -\pmb{v}_r
+\pmb{v}&#39;&amp;=\frac{\mathrm{d}\pmb{r}}{\mathrm{d} t}=\frac{\mathrm{d}\pmb{R}}{\mathrm{d}t}=\pmb{v} -\pmb{v}_r
 \\
-\pmb{a}'&=\frac{\mathrm{d}\pmb{v}}{\mathrm{d}t}-\frac{\mathrm{d}\pmb{v}_r}{\mathrm{d}t}=\pmb{a}-\pmb{a}_r
-\end{aligned}</script><p>这些变换关系式是建立在绝对时空观基础上的，在相对论中它们将被建立在相对论时空观基础上的洛伦兹变换所取代。</p>
+\pmb{a}&#39;&amp;=\frac{\mathrm{d}\pmb{v}}{\mathrm{d}t}-\frac{\mathrm{d}\pmb{v}_r}{\mathrm{d}t}=\pmb{a}-\pmb{a}_r
+\end{aligned}
+\]</span></p>
+<p>这些变换关系式是建立在绝对时空观基础上的，在相对论中它们将被建立在相对论时空观基础上的洛伦兹变换所取代。</p>
 <p><strong>经典力学时空观：</strong></p>
 <p>在两个作相对运动的参考系中，时间的测量是绝对的，空间的测量也是绝对的，与参考系无关。时间和长度的的绝对性是经典力学或牛顿力学的基础。</p>
-<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><div class="note quote"><p><strong>坐标系变换</strong></p><p>一般是飞机在空中飞行的风速和飞机速度，或者水中的行船问题等类似的问题</p><blockquote><p>画个图就 vans</p></blockquote><p>当然坐标系变换也可以是证明题，例如：</p><blockquote><p>证明：把两个物体以不同的速度抛出，则二者的相对速度是常矢量</p></blockquote><p><strong>坐标系的互化</strong></p><p>常用的坐标系有：</p><ul><li>直角坐标系</li></ul><blockquote><p>在一个倾角为$\alpha$的山坡上开炮，相同的速度大小情况下，当发射角为多少时最远。（真的就高中题目呗）</p></blockquote><ul><li>极坐标系</li></ul><blockquote><p>一根细棒在水平面内以恒定角速度 $\omega$ 旋转，有一只昆虫从圆心出发，以恒定速率 $u$ 向外爬，求爬行速度和加速度。</p><p><strong>径向加速度</strong>：$a_{r} \boldsymbol{e}_{r}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}$</p><p><strong>横向加速度</strong>：$a_{\theta} \boldsymbol{e}_{\theta}=(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}$</p><p><strong>速度</strong>：$v=r \dot{\theta} \boldsymbol{e}_{\theta}+\dot{r} \boldsymbol{e}_{r}$</p><p>_实际上只需要记住：_$\dot e_\theta =-\dot \theta e_r,\dot e_r = \dot\theta e_\theta$</p></blockquote></div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<h2 id="习题">习题</h2>
+<div class="note quote"><p><strong>坐标系变换</strong></p><p>一般是飞机在空中飞行的风速和飞机速度，或者水中的行船问题等类似的问题</p><blockquote><p>画个图就 vans</p></blockquote><p>当然坐标系变换也可以是证明题，例如：</p><blockquote><p>证明：把两个物体以不同的速度抛出，则二者的相对速度是常矢量</p></blockquote><p><strong>坐标系的互化</strong></p><p>常用的坐标系有：</p><ul><li>直角坐标系</li></ul><blockquote><p>在一个倾角为<span class="math inline">\(\alpha\)</span>的山坡上开炮，相同的速度大小情况下，当发射角为多少时最远。（真的就高中题目呗）</p></blockquote><ul><li>极坐标系</li></ul><blockquote><p>一根细棒在水平面内以恒定角速度 <span class="math inline">\(\omega\)</span> 旋转，有一只昆虫从圆心出发，以恒定速率 <span class="math inline">\(u\)</span> 向外爬，求爬行速度和加速度。</p><p><strong>径向加速度</strong>：<span class="math inline">\(a_{r} \boldsymbol{e}_{r}=\left(\ddot{r}-r \dot{\theta}^{2}\right) \boldsymbol{e}_{r}\)</span></p><p><strong>横向加速度</strong>：<span class="math inline">\(a_{\theta} \boldsymbol{e}_{\theta}=(r \ddot{\theta}+2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}\)</span></p><p><strong>速度</strong>：<span class="math inline">\(v=r \dot{\theta} \boldsymbol{e}_{\theta}+\dot{r} \boldsymbol{e}_{r}\)</span></p><p><em>实际上只需要记住：</em><span class="math inline">\(\dot e_\theta =-\dot \theta e_r,\dot e_r = \dot\theta e_\theta\)</span></p></blockquote></div>
+
   
   
     
@@ -772,11 +829,15 @@ a &=\frac{\mathrm{d} v}{\mathrm{d} t}=\frac{\mathrm{d}}{\mathrm{d} t}\left(v \bo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>物理学绪论</p>
           <p class='content'>基础物理学 绪论
 
-什么是物理学习物理的目的矢量代数基本知识标量只有大小（正负均可）
-矢量大小方向（一定是正值）
-矢量的书写$\vec{A}$或$\pmb{A}$
-$A\vec{e_A}$
-矢量...</p>
+什么是物理
+学习物理的目的
+矢量代数基本知识
+标量
+只有大小（正负均可）
+矢量
+大小方向（一定是正值）
+矢量的书写
+\(\vec{A}\)或\(\pmb{...</p>
         </a>
       
       
@@ -784,11 +845,13 @@ $A\vec{e_A}$
           <p class='title'>机械能守恒<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>基础物理学Ch3 机械能守恒 这部分就简单提一句
 
-功 动能定理功（Work）
+功 动能定理
+功（Work）
+
 力对质点所作的功为力在质点位移方向的分量（大小）与位移大小的乘积。（功是标量，过程量）
 
 
-一段位移的功$\mat...</p>
+一...</p>
         </a>
       
     </div>
@@ -831,7 +894,7 @@ $A\vec{e_A}$
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-text">质点运动的描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E3%80%81%E5%8F%82%E8%80%83%E7%B3%BB%E5%92%8C%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">质点、参考系和坐标系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9-%E7%90%86%E6%83%B3%E5%8C%96%E7%9A%84%E6%A8%A1%E5%9E%8B"><span class="toc-text">质点 (理想化的模型)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E7%B3%BB-%E8%BF%90%E5%8A%A8%E5%85%B7%E6%9C%89%E7%9B%B8%E5%AF%B9%E6%80%A7"><span class="toc-text">参考系 (运动具有相对性)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">坐标系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E7%9A%84%E7%9F%A2%E9%87%8F%E6%8F%8F%E8%BF%B0%EF%BC%88%E4%BD%8D%E7%A7%BB%E3%80%81%E9%80%9F%E5%BA%A6%E3%80%81%E5%8A%A0%E9%80%9F%E5%BA%A6%EF%BC%89"><span class="toc-text">质点运动的矢量描述（位移、速度、加速度）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE%E7%9F%A2%E9%87%8F-%E4%BD%8D%E7%9F%A2%E3%80%81%E5%BE%84%E7%9F%A2-Position-Vector"><span class="toc-text">位置矢量(位矢、径矢 Position Vector)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E5%8A%A8%E6%96%B9%E7%A8%8B"><span class="toc-text">运动方程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E7%A7%BB%EF%BC%88%E5%8F%8D%E6%98%A0%E4%BD%8D%E7%BD%AE%E7%9A%84%E5%8F%98%E5%8C%96%EF%BC%89"><span class="toc-text">位移（反映位置的变化）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9F%E5%BA%A6%EF%BC%88Velocity%EF%BC%89%E2%80%94%E2%80%94%E5%8F%8D%E6%98%A0%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E7%9A%84%E5%BF%AB%E6%85%A2%E5%92%8C%E6%96%B9%E5%90%91"><span class="toc-text">速度（Velocity）——反映质点运动的快慢和方向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E9%80%9F%E5%BA%A6%EF%BC%88Acceleration%EF%BC%89%E2%80%94%E2%80%94%E5%8F%8D%E6%98%A0%E7%9E%AC%E6%97%B6%E9%80%9F%E5%BA%A6%E7%9A%84%E5%8F%98%E5%8C%96"><span class="toc-text">加速度（Acceleration）——反映瞬时速度的变化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A2%E9%87%8F%E6%8F%8F%E8%BF%B0%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">矢量描述质点运动的优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E9%80%82%E5%BD%93%E9%80%89%E6%8B%A9"><span class="toc-text">坐标系的适当选择</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9F%E5%BA%A6%E3%80%81%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9C%A8%E4%B8%8D%E5%90%8C%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%AD%E7%9A%84%E5%88%86%E9%87%8F%E8%A1%A8%E7%A4%BA"><span class="toc-text">速度、加速度在不同坐标系中的分量表示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">直角坐标系的特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-text">实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E9%9D%A2%E6%9E%81%E5%9D%90%E6%A0%87%E7%B3%BB%E3%80%81%E6%A8%AA%E5%90%91%E9%80%9F%E5%BA%A6%E5%92%8C%E5%BE%84%E5%90%91%E9%80%9F%E5%BA%A6"><span class="toc-text">平面极坐标系、横向速度和径向速度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E5%9D%90%E6%A0%87%E7%B3%BB%E3%80%81%E5%88%87%E5%90%91%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%92%8C%E6%B3%95%E5%90%91%E5%8A%A0%E9%80%9F%E5%BA%A6%EF%BC%88%E5%9C%A8%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E8%BD%A8%E8%BF%B9%E5%B7%B2%E7%9F%A5%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E9%80%89%E7%94%A8%EF%BC%89-S-S-t"><span class="toc-text">自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）$S&#x3D;S(t)$</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%BF%90%E5%8A%A8"><span class="toc-text">相对运动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98"><span class="toc-text">习题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-text">质点运动的描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E5%8F%82%E8%80%83%E7%B3%BB%E5%92%8C%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">质点、参考系和坐标系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9-%E7%90%86%E6%83%B3%E5%8C%96%E7%9A%84%E6%A8%A1%E5%9E%8B"><span class="toc-text">质点 (理想化的模型)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E7%B3%BB-%E8%BF%90%E5%8A%A8%E5%85%B7%E6%9C%89%E7%9B%B8%E5%AF%B9%E6%80%A7"><span class="toc-text">参考系 (运动具有相对性)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">坐标系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E7%9A%84%E7%9F%A2%E9%87%8F%E6%8F%8F%E8%BF%B0%E4%BD%8D%E7%A7%BB%E9%80%9F%E5%BA%A6%E5%8A%A0%E9%80%9F%E5%BA%A6"><span class="toc-text">质点运动的矢量描述（位移、速度、加速度）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE%E7%9F%A2%E9%87%8F%E4%BD%8D%E7%9F%A2%E5%BE%84%E7%9F%A2-position-vector"><span class="toc-text">位置矢量(位矢、径矢 Position Vector)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E5%8A%A8%E6%96%B9%E7%A8%8B"><span class="toc-text">运动方程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E7%A7%BB%E5%8F%8D%E6%98%A0%E4%BD%8D%E7%BD%AE%E7%9A%84%E5%8F%98%E5%8C%96"><span class="toc-text">位移（反映位置的变化）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9F%E5%BA%A6velocity%E5%8F%8D%E6%98%A0%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E7%9A%84%E5%BF%AB%E6%85%A2%E5%92%8C%E6%96%B9%E5%90%91"><span class="toc-text">速度（Velocity）——反映质点运动的快慢和方向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E9%80%9F%E5%BA%A6acceleration%E5%8F%8D%E6%98%A0%E7%9E%AC%E6%97%B6%E9%80%9F%E5%BA%A6%E7%9A%84%E5%8F%98%E5%8C%96"><span class="toc-text">加速度（Acceleration）——反映瞬时速度的变化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A2%E9%87%8F%E6%8F%8F%E8%BF%B0%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">矢量描述质点运动的优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E9%80%82%E5%BD%93%E9%80%89%E6%8B%A9"><span class="toc-text">坐标系的适当选择</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9F%E5%BA%A6%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9C%A8%E4%B8%8D%E5%90%8C%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%AD%E7%9A%84%E5%88%86%E9%87%8F%E8%A1%A8%E7%A4%BA"><span class="toc-text">速度、加速度在不同坐标系中的分量表示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">直角坐标系的特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-text">实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E9%9D%A2%E6%9E%81%E5%9D%90%E6%A0%87%E7%B3%BB%E6%A8%AA%E5%90%91%E9%80%9F%E5%BA%A6%E5%92%8C%E5%BE%84%E5%90%91%E9%80%9F%E5%BA%A6"><span class="toc-text">平面极坐标系、横向速度和径向速度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E5%9D%90%E6%A0%87%E7%B3%BB%E5%88%87%E5%90%91%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%92%8C%E6%B3%95%E5%90%91%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9C%A8%E8%B4%A8%E7%82%B9%E8%BF%90%E5%8A%A8%E8%BD%A8%E8%BF%B9%E5%B7%B2%E7%9F%A5%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E9%80%89%E7%94%A8sst"><span class="toc-text">自然坐标系、切向加速度和法向加速度（在质点运动轨迹已知的情况下选用）\(S&#x3D;S(t)\)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%BF%90%E5%8A%A8"><span class="toc-text">相对运动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98"><span class="toc-text">习题</span></a></li></ol>
     </div>
   </section>
 
@@ -1478,14 +1541,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

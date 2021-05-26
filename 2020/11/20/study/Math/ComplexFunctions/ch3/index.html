@@ -470,50 +470,62 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>复变函数的积分</p>
 <span id="more"></span>
-<h2 id="复变函数的积分"><a href="#复变函数的积分" class="headerlink" title="复变函数的积分"></a>复变函数的积分</h2><h3 id="复变函数积分的概念及其计算"><a href="#复变函数积分的概念及其计算" class="headerlink" title="复变函数积分的概念及其计算"></a>复变函数积分的概念及其计算</h3><p><strong>Def</strong>（复变函数的积分）同实函数定义：分割求和 $\displaystyle\int_C f(z)\mathrm dz = \lim \limits_{\delta \rightarrow 0}\sum f(\gamma_k)\delta z_k$</p>
-<p><strong>Thm</strong>：设 $f(z)$ 是区域 $D$ 内的连续函数，则复变函数 $f(z)$ 沿 $D$ 内简单光滑有向曲线 $C$ 的积分一定存在，且公式 $\int f(z)\mathrm dz=\int u\mathrm dx-v\mathrm dy + i\int v\mathrm dx+u\mathrm dy$ 成立</p>
+<h2 id="复变函数的积分">复变函数的积分</h2>
+<h3 id="复变函数积分的概念及其计算">复变函数积分的概念及其计算</h3>
+<p><strong>Def</strong>（复变函数的积分）同实函数定义：分割求和 <span class="math inline">\(\displaystyle\int_C f(z)\mathrm dz = \lim \limits_{\delta \rightarrow 0}\sum f(\gamma_k)\delta z_k\)</span></p>
+<p><strong>Thm</strong>：设 <span class="math inline">\(f(z)\)</span> 是区域 <span class="math inline">\(D\)</span> 内的连续函数，则复变函数 <span class="math inline">\(f(z)\)</span> 沿 <span class="math inline">\(D\)</span> 内简单光滑有向曲线 <span class="math inline">\(C\)</span> 的积分一定存在，且公式 <span class="math inline">\(\int f(z)\mathrm dz=\int u\mathrm dx-v\mathrm dy + i\int v\mathrm dx+u\mathrm dy\)</span> 成立</p>
 <p><strong>性质</strong>：</p>
 <ul>
-<li>$\displaystyle\int_Lf\mathrm dz=\int_{L_1}f\mathrm dz+\int_{L_2}f(z)\mathrm dz$</li>
+<li><span class="math inline">\(\displaystyle\int_Lf\mathrm dz=\int_{L_1}f\mathrm dz+\int_{L_2}f(z)\mathrm dz\)</span></li>
 <li>方向性</li>
 <li>线性性质</li>
-<li>（积分估值不等式）$\displaystyle|\int_Lf\mathrm dz| \le \int_L|f||\mathrm dz|\le MS$</li>
+<li>（积分估值不等式）<span class="math inline">\(\displaystyle|\int_Lf\mathrm dz| \le \int_L|f||\mathrm dz|\le MS\)</span></li>
 </ul>
 <p><strong>计算方法——参数方程法</strong>：</p>
-<p>$\displaystyle let~z=x(t) + iy(t)\rightarrow \int_Lf\mathrm dz=\int f(z(t)) z’(t)\mathrm dt$</p>
-<p>例：</p>
-<script type="math/tex; mode=display">\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1.\end{cases}</script><p>其中 $L$ 为圆<br>利用：$z-z_0=\rho\cdot e^{i\theta}$，并且注意方向！（$\theta$的积分方向上）</p>
-<h3 id="柯西-古萨基本定理及其推广"><a href="#柯西-古萨基本定理及其推广" class="headerlink" title="柯西-古萨基本定理及其推广"></a>柯西-古萨基本定理及其推广</h3><p><strong>Thm</strong>（Cauchy 积分定理）若 $f(z) = u(x,y)+iv(x,y)$在单连通域 $D$ 内解析，$f’$ 连续且$u,v$ 有一节连续偏导数，满足 $C-R$ 方程。则对于任一分段光滑的简单闭曲线 $L_ 1$ 有</p>
-<script type="math/tex; mode=display">
-\displaystyle \int _ {L _ 1} f(z)\mathrm dz = 0</script><p><strong>Thm</strong>：若 $f$ 在单连通区域 $B$ 内处处解析，那么 $f$ 沿着任何 $B$ 内的闭曲线的积分等于 0</p>
-<p><strong>Thm</strong>：$f(z)$ 在单连通域 $D$ 内解析，$f’$ 在 $D$ 内连续时，复积分 $\displaystyle \int _Lf(z)\mathrm dz$ 与路径无关</p>
+<p><span class="math inline">\(\displaystyle let~z=x(t) + iy(t)\rightarrow \int_Lf\mathrm dz=\int f(z(t)) z&#39;(t)\mathrm dt\)</span></p>
+<p>例： <span class="math display">\[\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&amp;n=1,\\0,&amp;n\ne 1.\end{cases}\]</span> 其中 <span class="math inline">\(L\)</span> 为圆 利用：<span class="math inline">\(z-z_0=\rho\cdot e^{i\theta}\)</span>，并且注意方向！（<span class="math inline">\(\theta\)</span>的积分方向上）</p>
+<h3 id="柯西-古萨基本定理及其推广">柯西-古萨基本定理及其推广</h3>
+<p><strong>Thm</strong>（Cauchy 积分定理）若 <span class="math inline">\(f(z) = u(x,y)+iv(x,y)\)</span>在单连通域 <span class="math inline">\(D\)</span> 内解析，<span class="math inline">\(f&#39;\)</span> 连续且<span class="math inline">\(u,v\)</span> 有一节连续偏导数，满足 <span class="math inline">\(C-R\)</span> 方程。则对于任一分段光滑的简单闭曲线 <span class="math inline">\(L_ 1\)</span> 有</p>
+<p><span class="math display">\[
+\displaystyle \int _ {L _ 1} f(z)\mathrm dz = 0
+\]</span></p>
+<p><strong>Thm</strong>：若 <span class="math inline">\(f\)</span> 在单连通区域 <span class="math inline">\(B\)</span> 内处处解析，那么 <span class="math inline">\(f\)</span> 沿着任何 <span class="math inline">\(B\)</span> 内的闭曲线的积分等于 0</p>
+<p><strong>Thm</strong>：<span class="math inline">\(f(z)\)</span> 在单连通域 <span class="math inline">\(D\)</span> 内解析，<span class="math inline">\(f&#39;\)</span> 在 <span class="math inline">\(D\)</span> 内连续时，复积分 <span class="math inline">\(\displaystyle \int _Lf(z)\mathrm dz\)</span> 与路径无关</p>
 <!-- **Thm**（柯西-古萨基本定理）设 $f(z)$ 在简单闭曲线 $L$ 上以及它所围的区域 $D$ 内解析，则$\displaystyle \int _{L} f(z)\mathrm dz = 0$ -->
-<h4 id="复合闭路定理"><a href="#复合闭路定理" class="headerlink" title="复合闭路定理"></a>复合闭路定理</h4><p><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，对于 $D$ 内任一分段光滑的闭曲线 $L _ 1$：$\displaystyle\int _{L_1} f(z)\mathrm dz = 0$</p>
-<p><strong>Thm</strong>（复合闭路定理）设 $L, L_k$ 为n+1条取逆时针方向的简单闭曲线，$L_k$ 互不相交，互不包含，$L, L_k$ 围成复连通域$D$，$f(z)$ 在$\bar D$ 上解析，则：</p>
-<script type="math/tex; mode=display">\displaystyle\oint_Lf(z)\mathrm dz = \sum_{k=1}^n\oint_{L_k}f(z) \mathrm dz</script><blockquote>
+<h4 id="复合闭路定理">复合闭路定理</h4>
+<p><strong>Thm</strong>：设 <span class="math inline">\(f(z)\)</span> 在单连通域 <span class="math inline">\(D\)</span> 内解析，对于 <span class="math inline">\(D\)</span> 内任一分段光滑的闭曲线 <span class="math inline">\(L _ 1\)</span>：<span class="math inline">\(\displaystyle\int _{L_1} f(z)\mathrm dz = 0\)</span></p>
+<p><strong>Thm</strong>（复合闭路定理）设 <span class="math inline">\(L, L_k\)</span> 为n+1条取逆时针方向的简单闭曲线，<span class="math inline">\(L_k\)</span> 互不相交，互不包含，<span class="math inline">\(L, L_k\)</span> 围成复连通域<span class="math inline">\(D\)</span>，<span class="math inline">\(f(z)\)</span> 在<span class="math inline">\(\bar D\)</span> 上解析，则： <span class="math display">\[\displaystyle\oint_Lf(z)\mathrm dz = \sum_{k=1}^n\oint_{L_k}f(z) \mathrm dz\]</span></p>
+<blockquote>
 <p>注意曲线的性质：简单闭曲线、闭曲线</p>
 </blockquote>
-<h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><script type="math/tex; mode=display">\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1.\end{cases}</script><p>其中 $L$ 为圆</p>
+<h5 id="例">例</h5>
+<p><span class="math display">\[\displaystyle\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&amp;n=1,\\0,&amp;n\ne 1.\end{cases}\]</span></p>
+<p>其中 <span class="math inline">\(L\)</span> 为圆</p>
 <blockquote>
-<p>利用：$z-z_0=\rho\cdot e^{i\theta}$，并且注意方向！（$\theta$的积分方向）</p>
+<p>利用：<span class="math inline">\(z-z_0=\rho\cdot e^{i\theta}\)</span>，并且注意方向！（<span class="math inline">\(\theta\)</span>的积分方向）</p>
 </blockquote>
-<p>利用复合闭路定理：$L$ 可以为任意包含$z_0$的闭曲线。</p>
+<p>利用复合闭路定理：<span class="math inline">\(L\)</span> 可以为任意包含<span class="math inline">\(z_0\)</span>的闭曲线。</p>
 <p><strong>Thm</strong>：闭路变形定理</p>
 <p>重要结论：</p>
-<script type="math/tex; mode=display">
-\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&n=1,\\0,&n\ne 1,n\in \mathrm Z.\end{cases}</script><h3 id="原函数与不定积分"><a href="#原函数与不定积分" class="headerlink" title="原函数与不定积分"></a>原函数与不定积分</h3><p><strong>Thm</strong>：设 $f(z)$ 在单连通域 $D$ 内解析，则复函数 $F(z)=\int_{z_0}^zf(z)\mathrm dz$ 在 $D$ 内解析，且 $F’=f$</p>
-<p><strong>Def</strong>（原函数）若存在$\Phi(z),\forall z\in D,\Phi ‘(z)=f(z)$ 称 $\Phi(z)$ 为 $f(z)$ 在 $D$ 内的一个原函数</p>
+<p><span class="math display">\[
+\oint_L\frac{1}{(z-z_0)^n}\mathrm dz= \begin{cases}2\pi i,&amp;n=1,\\0,&amp;n\ne 1,n\in \mathrm Z.\end{cases}
+\]</span></p>
+<h3 id="原函数与不定积分">原函数与不定积分</h3>
+<p><strong>Thm</strong>：设 <span class="math inline">\(f(z)\)</span> 在单连通域 <span class="math inline">\(D\)</span> 内解析，则复函数 <span class="math inline">\(F(z)=\int_{z_0}^zf(z)\mathrm dz\)</span> 在 <span class="math inline">\(D\)</span> 内解析，且 <span class="math inline">\(F&#39;=f\)</span></p>
+<p><strong>Def</strong>（原函数）若存在<span class="math inline">\(\Phi(z),\forall z\in D,\Phi &#39;(z)=f(z)\)</span> 称 <span class="math inline">\(\Phi(z)\)</span> 为 <span class="math inline">\(f(z)\)</span> 在 <span class="math inline">\(D\)</span> 内的一个原函数</p>
 <p><strong>性质</strong>：</p>
-<p>单连通域 $D$ 内的解析函数存在原函数</p>
-<p>表示全体原函数的表达式：$\int f(z)\mathrm dz$称为$f$的不定积分</p>
-<p><strong>Thm</strong>：对于解析函数 $f$，$\Phi(z)$ 是其原函数，则$\int_{z_1}^{z_2}=\Phi(z_2)-\Phi(z_1)$</p>
-<h3 id="柯西积分公式、高阶导数公式"><a href="#柯西积分公式、高阶导数公式" class="headerlink" title="柯西积分公式、高阶导数公式"></a>柯西积分公式、高阶导数公式</h3><p><strong>Thm</strong>（Cauchy积分公式）$f(z)$ 在 $D$ 和 $D$ 的边界上解析，则 $\forall z\in D, f(z) = \frac{1}{2\pi i}\oint_L\frac{f(\varsigma)}{\varsigma - z}\mathrm d \varsigma$</p>
-<p><strong>Thm</strong>（解析函数的平均值公式）$\displaystyle L:|z-z_0|=R\Rightarrow f(z_0) = \frac{1}{2\pi}\int_0^{2\pi}f(z_0+Re^{i\theta})\mathrm d\theta$</p>
-<p><strong>Thm</strong>（高阶导数公式）设 $f$ 在 $D$ 及其边界上解析，则$f$在D内有任意阶导数，且$\forall z\in D$,$\displaystyle f^{(n)}(z) = \frac{n!}{2\pi i}\oint_L\frac{f(\varsigma)}{(\varsigma-z)^{n+1}}\mathrm d\varsigma$</p>
-<h4 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h4><p><strong>Thm</strong>（柯西不等式）设 $f$ 在 $D$ 内解析，$z_0\in D$，圆周 $K_R$ 及其内部均含于 $D$，则$|f^{(n)}(z_0)|\le \frac{n! M(R)}{R^n}$，$M(R) = \max_{|z-z_0|=R}|f(z)|$</p>
-<p><strong>Thm</strong>（柳维尔定理）$f(z)$ 在整个复平面上解析且有界，则 $f(z)$ 在复平面上恒为常数。</p>
-<p><strong>Thm</strong>（莫雷拉定理）$f(z)$ 在单连通区域 $D$ 内解析且有界，且对于任一简单闭曲线$L$上：$\int_Lf(z)\mathrm dz =0$，则$f(z)$ 在 $D$ 内解析。</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<p>单连通域 <span class="math inline">\(D\)</span> 内的解析函数存在原函数</p>
+<p>表示全体原函数的表达式：<span class="math inline">\(\int f(z)\mathrm dz\)</span>称为<span class="math inline">\(f\)</span>的不定积分</p>
+<p><strong>Thm</strong>：对于解析函数 <span class="math inline">\(f\)</span>，<span class="math inline">\(\Phi(z)\)</span> 是其原函数，则<span class="math inline">\(\int_{z_1}^{z_2}=\Phi(z_2)-\Phi(z_1)\)</span></p>
+<h3 id="柯西积分公式高阶导数公式">柯西积分公式、高阶导数公式</h3>
+<p><strong>Thm</strong>（Cauchy积分公式）<span class="math inline">\(f(z)\)</span> 在 <span class="math inline">\(D\)</span> 和 <span class="math inline">\(D\)</span> 的边界上解析，则 <span class="math inline">\(\forall z\in D, f(z) = \frac{1}{2\pi i}\oint_L\frac{f(\varsigma)}{\varsigma - z}\mathrm d \varsigma\)</span></p>
+<p><strong>Thm</strong>（解析函数的平均值公式）<span class="math inline">\(\displaystyle L:|z-z_0|=R\Rightarrow f(z_0) = \frac{1}{2\pi}\int_0^{2\pi}f(z_0+Re^{i\theta})\mathrm d\theta\)</span></p>
+<p><strong>Thm</strong>（高阶导数公式）设 <span class="math inline">\(f\)</span> 在 <span class="math inline">\(D\)</span> 及其边界上解析，则<span class="math inline">\(f\)</span>在D内有任意阶导数，且<span class="math inline">\(\forall z\in D\)</span>,<span class="math inline">\(\displaystyle f^{(n)}(z) = \frac{n!}{2\pi i}\oint_L\frac{f(\varsigma)}{(\varsigma-z)^{n+1}}\mathrm d\varsigma\)</span></p>
+<h4 id="不等式">不等式</h4>
+<p><strong>Thm</strong>（柯西不等式）设 <span class="math inline">\(f\)</span> 在 <span class="math inline">\(D\)</span> 内解析，<span class="math inline">\(z_0\in D\)</span>，圆周 <span class="math inline">\(K_R\)</span> 及其内部均含于 <span class="math inline">\(D\)</span>，则<span class="math inline">\(|f^{(n)}(z_0)|\le \frac{n! M(R)}{R^n}\)</span>，<span class="math inline">\(M(R) = \max_{|z-z_0|=R}|f(z)|\)</span></p>
+<p><strong>Thm</strong>（柳维尔定理）<span class="math inline">\(f(z)\)</span> 在整个复平面上解析且有界，则 <span class="math inline">\(f(z)\)</span> 在复平面上恒为常数。</p>
+<p><strong>Thm</strong>（莫雷拉定理）<span class="math inline">\(f(z)\)</span> 在单连通区域 <span class="math inline">\(D\)</span> 内解析且有界，且对于任一简单闭曲线<span class="math inline">\(L\)</span>上：<span class="math inline">\(\int_Lf(z)\mathrm dz =0\)</span>，则<span class="math inline">\(f(z)\)</span> 在 <span class="math inline">\(D\)</span> 内解析。</p>
+
   
   
     
@@ -611,14 +623,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/11/20/study/Math/ComplexFunctions/ch1/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「复变函数」</p>
-          <p class='content'>复数与复变函数
-
-Ch1 复数与复变函数复数的概念与运算复数的概念Def（复数）$(x,y)$ -&gt; $z=x+iy,i^2=-1$
-
-$\mathrm{Re}(z)$
-$\mathrm{...</p>
+        <a class='prev' href='/2020/11/20/study/Math/ComplexFunctions/ch2/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「复变函数」复变函数的导数和解析函数</p>
+          <p class='content'>复变函数的导数和解析函数 
+Ch2 复变函数的导数和解析函数
+解析函数的概念及其判定
+复变函数的导数、微分
+Def：复变函数的导数、可导、在 D 内可导
+求导公式：有理运算求导、反函数...</p>
         </a>
       
       
@@ -626,13 +638,16 @@ $\mathrm{...</p>
           <p class='title'>「概率统计与随机过程」 1 - 随机事件及其概率<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>随机事件及其概率
 
-随机事件及其概率随机事件Def：样本空间
+随机事件及其概率
+随机事件
+Def：样本空间
 Def：随机事件
-随机事件的概率事件的概率Def：频率
+随机事件的概率
+事件的概率
+Def：频率
 Thm：频率满足
 
-$0\le f_n(A)\le 1$
-$f_n(\var...</p>
+\(0\le f_n(A)...</p>
         </a>
       
     </div>
@@ -675,7 +690,7 @@ $f_n(\var...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86"><span class="toc-text">复变函数的积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AE%A1%E7%AE%97"><span class="toc-text">复变函数积分的概念及其计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%AF%E8%A5%BF-%E5%8F%A4%E8%90%A8%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E6%8E%A8%E5%B9%BF"><span class="toc-text">柯西-古萨基本定理及其推广</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E9%97%AD%E8%B7%AF%E5%AE%9A%E7%90%86"><span class="toc-text">复合闭路定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BE%8B"><span class="toc-text">例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%87%BD%E6%95%B0%E4%B8%8E%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-text">原函数与不定积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F%E3%80%81%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="toc-text">柯西积分公式、高阶导数公式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="toc-text">不等式</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86"><span class="toc-text">复变函数的积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AE%A1%E7%AE%97"><span class="toc-text">复变函数积分的概念及其计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%AF%E8%A5%BF-%E5%8F%A4%E8%90%A8%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E6%8E%A8%E5%B9%BF"><span class="toc-text">柯西-古萨基本定理及其推广</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E9%97%AD%E8%B7%AF%E5%AE%9A%E7%90%86"><span class="toc-text">复合闭路定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BE%8B"><span class="toc-text">例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%87%BD%E6%95%B0%E4%B8%8E%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-text">原函数与不定积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="toc-text">柯西积分公式、高阶导数公式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="toc-text">不等式</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1322,14 +1337,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

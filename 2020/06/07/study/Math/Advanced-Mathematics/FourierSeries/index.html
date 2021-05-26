@@ -470,78 +470,84 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>傅里叶级数，真的就看上去简单。</p>
 <span id="more"></span>
-<h2 id="三角函数系及其正交性"><a href="#三角函数系及其正交性" class="headerlink" title="三角函数系及其正交性"></a>三角函数系及其正交性</h2><p>在这里就直接给出这个单位正交系：</p>
-<p>$1,\frac{1}{\sqrt{2\pi}}\cos x,\frac{1}{\sqrt{2\pi}}\sin x,\frac{1}{\sqrt{2\pi}}\cos 2x,\frac{1}{\sqrt{2\pi}}\sin 2x,\dots$</p>
+<h2 id="三角函数系及其正交性">三角函数系及其正交性</h2>
+<p>在这里就直接给出这个单位正交系：</p>
+<p><span class="math inline">\(1,\frac{1}{\sqrt{2\pi}}\cos x,\frac{1}{\sqrt{2\pi}}\sin x,\frac{1}{\sqrt{2\pi}}\cos 2x,\frac{1}{\sqrt{2\pi}}\sin 2x,\dots\)</span></p>
 <p>但是我们用的更多的是：</p>
-<p>$1,\cos x,\sin x,\cos 2x,\sin 2x,\dots$</p>
+<p><span class="math inline">\(1,\cos x,\sin x,\cos 2x,\sin 2x,\dots\)</span></p>
 <blockquote>
-<p>这里正交指的是<strong>积分</strong>：$\displaystyle<f,g>=\int_a^b f\cdot g$</f,g></p>
+<p>这里正交指的是<strong>积分</strong>：<span class="math inline">\(\displaystyle&lt;f,g&gt;=\int_a^b f\cdot g\)</span></p>
 </blockquote>
-<h2 id="周期为-2pi-的函数的傅里叶级数及其收敛性"><a href="#周期为-2pi-的函数的傅里叶级数及其收敛性" class="headerlink" title="周期为 2pi 的函数的傅里叶级数及其收敛性"></a>周期为 2pi 的函数的傅里叶级数及其收敛性</h2><h3 id="周期函数的傅氏系数和傅氏级数"><a href="#周期函数的傅氏系数和傅氏级数" class="headerlink" title="周期函数的傅氏系数和傅氏级数"></a>周期函数的傅氏系数和傅氏级数</h3><ul>
+<h2 id="周期为-2pi-的函数的傅里叶级数及其收敛性">周期为 2pi 的函数的傅里叶级数及其收敛性</h2>
+<h3 id="周期函数的傅氏系数和傅氏级数">周期函数的傅氏系数和傅氏级数</h3>
+<ul>
 <li><strong>Def</strong>：（傅里叶系数、傅里叶级数）将</li>
 </ul>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 a_n=\frac 1 \pi\int_{-\pi}^{\pi}f(x)\cos nx\mathrm dx(n=0,1,2,\dots)\\
-b_n=\frac 1 \pi\int_{-\pi}^{\pi}f(x)\sin nx\mathrm dx(n=1,2,3,\dots)</script><p>称为函数$f$ 的<strong>傅里叶系数</strong>，而</p>
-<script type="math/tex; mode=display">
-\frac {a_0} 2+\sum\limits_{n=1}^\infty(a_n\cos nx+b_n\sin nx)</script><p>称为<strong>傅里叶级数</strong></p>
+b_n=\frac 1 \pi\int_{-\pi}^{\pi}f(x)\sin nx\mathrm dx(n=1,2,3,\dots)
+\]</span></p>
+<p>称为函数<span class="math inline">\(f\)</span> 的<strong>傅里叶系数</strong>，而</p>
+<p><span class="math display">\[
+\frac {a_0} 2+\sum\limits_{n=1}^\infty(a_n\cos nx+b_n\sin nx)
+\]</span></p>
+<p>称为<strong>傅里叶级数</strong></p>
 <blockquote>
-<p>问题在于，这个级数的和函数不一定和原函数相等，因而，我们用$\displaystyle f\sim \frac {a_0} 2+\sum\limits_{n=1}^\infty(a_n\cos nx+b_n\sin nx)$ 来表示。</p>
+<p>问题在于，这个级数的和函数不一定和原函数相等，因而，我们用<span class="math inline">\(\displaystyle f\sim \frac {a_0} 2+\sum\limits_{n=1}^\infty(a_n\cos nx+b_n\sin nx)\)</span> 来表示。</p>
 </blockquote>
-<h3 id="傅氏级数的收敛性定理和傅氏展开式"><a href="#傅氏级数的收敛性定理和傅氏展开式" class="headerlink" title="傅氏级数的收敛性定理和傅氏展开式"></a>傅氏级数的收敛性定理和傅氏展开式</h3><blockquote>
+<h3 id="傅氏级数的收敛性定理和傅氏展开式">傅氏级数的收敛性定理和傅氏展开式</h3>
+<blockquote>
 <p>吐槽一下工科数分，人家高等数学讲的炒鸡清楚！</p>
 </blockquote>
 <ul>
-<li><p><strong>Def</strong>：（分段连续）$f(x)$ 在 $[a,b]$ 上除了<strong>有限个</strong>第一类间断点外处处连续。</p>
-</li>
-<li><p><strong>Def</strong>：（分段单调）$f(x)$ 在 $[a,b]$ 上有<strong>有限个</strong>单调区间。</p>
-</li>
-<li><p><strong>Def</strong>：（<code>Dirichlet</code> 条件）$f(x)$ 分段连续且分段单调</p>
-</li>
-<li><p><strong>Thm</strong>：（傅里叶级数的收敛性定理）如果 $f$ 在 $[-\pi,\pi]$ 满足 <code>Dirichlet</code> 条件，则其傅氏级数在$[-\pi,\pi]$任意一点都收敛，且和函数为</p>
-</li>
+<li><p><strong>Def</strong>：（分段连续）<span class="math inline">\(f(x)\)</span> 在 <span class="math inline">\([a,b]\)</span> 上除了<strong>有限个</strong>第一类间断点外处处连续。</p></li>
+<li><p><strong>Def</strong>：（分段单调）<span class="math inline">\(f(x)\)</span> 在 <span class="math inline">\([a,b]\)</span> 上有<strong>有限个</strong>单调区间。</p></li>
+<li><p><strong>Def</strong>：（<code>Dirichlet</code> 条件）<span class="math inline">\(f(x)\)</span> 分段连续且分段单调</p></li>
+<li><p><strong>Thm</strong>：（傅里叶级数的收敛性定理）如果 <span class="math inline">\(f\)</span> 在 <span class="math inline">\([-\pi,\pi]\)</span> 满足 <code>Dirichlet</code> 条件，则其傅氏级数在<span class="math inline">\([-\pi,\pi]\)</span>任意一点都收敛，且和函数为</p></li>
 </ul>
-<script type="math/tex; mode=display">
-\displaystyle S(x) =\begin{cases}f(x),&连续点\\
-\frac{f(x+0)+f(x-0)}{2},&间断点
-\end{cases}</script><ul>
-<li><strong>Thm</strong>：（傅里叶级数的收敛性原理2）若 $f(x)$ 以 $2\pi$ 为周期，且在区间 $[-\pi,\pi]$ 上分段可微，则该傅里叶级数在任一点处收敛到和函数 $\displaystyle S(x) =\frac 1 2(f(x+0)+f(x-0)),-\infty&lt;x&lt;\infty$</li>
+<p><span class="math display">\[
+\displaystyle S(x) =\begin{cases}f(x),&amp;连续点\\
+\frac{f(x+0)+f(x-0)}{2},&amp;间断点
+\end{cases}
+\]</span></p>
+<ul>
+<li><strong>Thm</strong>：（傅里叶级数的收敛性原理2）若 <span class="math inline">\(f(x)\)</span> 以 <span class="math inline">\(2\pi\)</span> 为周期，且在区间 <span class="math inline">\([-\pi,\pi]\)</span> 上分段可微，则该傅里叶级数在任一点处收敛到和函数 <span class="math inline">\(\displaystyle S(x) =\frac 1 2(f(x+0)+f(x-0)),-\infty&lt;x&lt;\infty\)</span></li>
 </ul>
 <blockquote>
-<p>这个时候，我们才能用 $=$ 替换 $\sim$</p>
+<p>这个时候，我们才能用 <span class="math inline">\(=\)</span> 替换 <span class="math inline">\(\sim\)</span></p>
 </blockquote>
-<div class="note quote"><p>有了这个定理之后，就可以求出一系列看似无法求出的和</p></div>
-<h3 id="奇偶周期函数的傅氏级数"><a href="#奇偶周期函数的傅氏级数" class="headerlink" title="奇偶周期函数的傅氏级数"></a>奇偶周期函数的傅氏级数</h3><ul>
-<li><p>偶函数：$b_n=0,~f(x)=\frac {a_0}{2}+\sum\limits_{n=1}^{\infty} a_n\cos nx$ 称为<strong>傅氏余弦函数</strong></p>
-</li>
-<li><p>奇函数：$a_n=0,~f(x) \sim \sum\limits_{n=1}^\infty b_n\sin nx$ 称为<strong>傅氏正弦函数</strong></p>
-</li>
+<div class="note quote"><p>有了这个定理之后，就可以求出一系列看似无法求出的和</p></div>
+<h3 id="奇偶周期函数的傅氏级数">奇偶周期函数的傅氏级数</h3>
+<ul>
+<li><p>偶函数：<span class="math inline">\(b_n=0,~f(x)=\frac {a_0}{2}+\sum\limits_{n=1}^{\infty} a_n\cos nx\)</span> 称为<strong>傅氏余弦函数</strong></p></li>
+<li><p>奇函数：<span class="math inline">\(a_n=0,~f(x) \sim \sum\limits_{n=1}^\infty b_n\sin nx\)</span> 称为<strong>傅氏正弦函数</strong></p></li>
 </ul>
 <blockquote>
 <p>这个结论是显然的，只是给个定义</p>
 </blockquote>
-<h3 id="任意周期函数的傅氏级数"><a href="#任意周期函数的傅氏级数" class="headerlink" title="任意周期函数的傅氏级数"></a>任意周期函数的傅氏级数</h3><p>我们替换$a_n,b_n$ 中的系数做一些替换即可，若定义在$[-l,l]$，周期为$2l$</p>
-<script type="math/tex; mode=display">
+<h3 id="任意周期函数的傅氏级数">任意周期函数的傅氏级数</h3>
+<p>我们替换<span class="math inline">\(a_n,b_n\)</span> 中的系数做一些替换即可，若定义在<span class="math inline">\([-l,l]\)</span>，周期为<span class="math inline">\(2l\)</span> <span class="math display">\[
 a_n=\frac 1 l\int_{-l}^{l}f(x)\cos nx\mathrm dx(n=0,1,2,\dots)\\
-b_n=\frac 1 l\int_{-l}^{l}f(x)\sin nx\mathrm dx(n=1,2,3,\dots)</script><p>但是重点在于，傅氏级数不仅仅可以用于讨论周期函数，也可以拿来讨论任意一个函数。</p>
-<p><strong>周期延拓函数</strong> $F(x)$：$F(x)=f(x-2kl)$</p>
-<p>又如在 $[0,l]$ 上的函数：</p>
+b_n=\frac 1 l\int_{-l}^{l}f(x)\sin nx\mathrm dx(n=1,2,3,\dots)
+\]</span> 但是重点在于，傅氏级数不仅仅可以用于讨论周期函数，也可以拿来讨论任意一个函数。</p>
+<p><strong>周期延拓函数</strong> <span class="math inline">\(F(x)\)</span>：<span class="math inline">\(F(x)=f(x-2kl)\)</span></p>
+<p>又如在 <span class="math inline">\([0,l]\)</span> 上的函数：</p>
 <ul>
-<li><strong>奇延拓</strong>：<script type="math/tex; mode=display">
+<li><p><strong>奇延拓</strong>： <span class="math display">\[
 F_1(x)=\begin{cases}
-f(x),&0<x\le l\\
-0,&x=0\\
--f(-x),&-l\le x<0
-\end{cases}</script></li>
-</ul>
-<ul>
-<li><strong>偶延拓</strong>：<script type="math/tex; mode=display">
+f(x),&amp;0&lt;x\le l\\
+0,&amp;x=0\\
+-f(-x),&amp;-l\le x&lt;0
+\end{cases}
+\]</span></p></li>
+<li><p><strong>偶延拓</strong>： <span class="math display">\[
 F_2(x)=\begin{cases}
-f(x),&0\le x\le l\\
-f(-x),&-l\le x<0
-\end{cases}</script></li>
+f(x),&amp;0\le x\le l\\
+f(-x),&amp;-l\le x&lt;0
+\end{cases}
+\]</span></p></li>
 </ul>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -646,8 +652,8 @@ f(-x),&-l\le x<0
 
 Kinematics：研究如何描述物体的运动
 
-基本问题：已知$\pmb{r},\pmb v,\pmb a$中某一个求另外两个
-解决问题的武器：根据定义进...</p>
+基本问题：已知\(\pmb{r},\pmb v,\pmb a\)中某一个求另外两个
+解决问题的...</p>
         </a>
       
       
@@ -655,7 +661,9 @@ Kinematics：研究如何描述物体的运动
           <p class='title'>数理逻辑<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>数理逻辑，可以说是到现在为止，写的最详细的了。
 
-基本概念命题和联结词
+基本概念
+命题和联结词
+
 命题
 
 命题的特征
@@ -664,13 +672,9 @@ Kinematics：研究如何描述物体的运动
 唯一的真值
 
 
-
 简单命题、复合命题
 
-区别在于是否可以再拆分
-
-
-Def：合取词$\wed...</p>
+区别在于是否可以再拆...</p>
         </a>
       
     </div>
@@ -1360,14 +1364,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

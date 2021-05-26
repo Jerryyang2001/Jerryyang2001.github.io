@@ -470,132 +470,139 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>2020-2021-1 最优化方法</p>
 <span id="more"></span>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="数学优化"><a href="#数学优化" class="headerlink" title="数学优化"></a>数学优化</h3><p>数学优化问题：（数学规划）</p>
+<h2 id="引言">引言</h2>
+<h3 id="数学优化">数学优化</h3>
+<p>数学优化问题：（数学规划）</p>
 <blockquote>
 <p>从一个<strong>可行解集合</strong>中,<strong>寻找</strong>出<strong>最优</strong>元素。</p>
 </blockquote>
 <p>数学形式：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-    &\min . &f_0(x)\\
-    &~\mathrm{s.t.} & f_i(x) \leq b_i, i = 1,\dots,m
-\end{aligned}</script><p>其中：</p>
+    &amp;\min . &amp;f_0(x)\\
+    &amp;~\mathrm{s.t.} &amp; f_i(x) \leq b_i, i = 1,\dots,m
+\end{aligned}
+\]</span></p>
+<p>其中：</p>
 <ul>
-<li>优化变量：$x$</li>
-<li>目标函数：$f_0:\mathrm{R}^n\rightarrow\mathrm{R}$</li>
-<li>约束函数：$f_i:\mathrm{R}^n\rightarrow\mathrm{R}$</li>
-<li>最优解：在<strong>所有满足约束的向量</strong>中，向量 $x^<em>$ 对应的目标函数值<em>*最小</em></em></li>
+<li>优化变量：<span class="math inline">\(x\)</span></li>
+<li>目标函数：<span class="math inline">\(f_0:\mathrm{R}^n\rightarrow\mathrm{R}\)</span></li>
+<li>约束函数：<span class="math inline">\(f_i:\mathrm{R}^n\rightarrow\mathrm{R}\)</span></li>
+<li>最优解：在<strong>所有满足约束的向量</strong>中，向量 <span class="math inline">\(x^*\)</span> 对应的目标函数值<strong>最小</strong></li>
 </ul>
-<h5 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h5><ul>
-<li>投资组合优化<ul>
+<h5 id="应用">应用</h5>
+<ul>
+<li>投资组合优化
+<ul>
 <li>优化变量：各资产分配的资本数</li>
 <li>约束：总预算、每⼀份资产的资本范围、最⼩收益</li>
 <li>⽬标：总风险或回报</li>
-</ul>
-</li>
-<li>电⼦设计中的器件尺⼨<ul>
+</ul></li>
+<li>电⼦设计中的器件尺⼨
+<ul>
 <li>优化变量：器件的长和宽</li>
 <li>约束：⼯程约束、时间要求、最⼤⾯积</li>
 <li>⽬标：总功耗</li>
-</ul>
-</li>
-<li>数据拟合<ul>
+</ul></li>
+<li>数据拟合
+<ul>
 <li>优化变量：模型参数</li>
 <li>约束：先验信息、参数限制</li>
 <li>⽬标：预测误差</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h5 id="求解优化问题"><a href="#求解优化问题" class="headerlink" title="求解优化问题"></a>求解优化问题</h5><ul>
-<li>一般形式的优化问题<ul>
+<h5 id="求解优化问题">求解优化问题</h5>
+<ul>
+<li>一般形式的优化问题
+<ul>
 <li>难以求解</li>
 <li>折中：长时间的计算代价、找不到解</li>
-</ul>
-</li>
-<li>特定问题<ul>
+</ul></li>
+<li>特定问题
+<ul>
 <li>最小二乘</li>
 <li>线性规划</li>
 <li>凸优化问题</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h5 id="最小二乘"><a href="#最小二乘" class="headerlink" title="最小二乘"></a>最小二乘</h5><p>形式：$\displaystyle\min.||Ax-b||_2^2$</p>
+<h5 id="最小二乘">最小二乘</h5>
+<p>形式：<span class="math inline">\(\displaystyle\min.||Ax-b||_2^2\)</span></p>
 <ul>
-<li>有解析解 $x* = (A^TA)^{-1}A^Tb$</li>
+<li>有解析解 <span class="math inline">\(x* = (A^TA)^{-1}A^Tb\)</span></li>
 <li>有可靠的求解算法和软件 <!-- TODO --></li>
-<li>计算时间：正比于 $n^2k(A\in \mathrm{R}^{k\times n})$</li>
+<li>计算时间：正比于 <span class="math inline">\(n^2k(A\in \mathrm{R}^{k\times n})\)</span></li>
 <li>技术成熟</li>
-<li>最⼩⼆乘的使⽤<ul>
+<li>最⼩⼆乘的使⽤
+<ul>
 <li>判别⼗分简单</li>
 <li>使⽤标准⽅法增强灵活性（加权、正则化）</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h5 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h5><script type="math/tex; mode=display">
+<h5 id="线性规划问题">线性规划问题</h5>
+<p><span class="math display">\[
 \begin{aligned}
-    &\min. &c^Tx\\
-    &\mathrm{~s.t.} &a_i^Tx\le b_i
-\end{aligned}</script><ul>
+    &amp;\min. &amp;c^Tx\\
+    &amp;\mathrm{~s.t.} &amp;a_i^Tx\le b_i
+\end{aligned}
+\]</span></p>
+<ul>
 <li>没有解析解</li>
 <li>具有可靠且有效的求解算法和软件</li>
-<li>计算时间：正⽐于$n^2m~(if~m \ge n)$，若具有特殊结构，求解更快。</li>
+<li>计算时间：正⽐于<span class="math inline">\(n^2m~(if~m \ge n)\)</span>，若具有特殊结构，求解更快。</li>
 <li>成熟技术</li>
 <li>判别难于最⼩⼆乘</li>
 <li>⼀些标准的技巧可⽤于将某些问题转化为线性规划（分段线性⽅程、包含范数的问题）</li>
 </ul>
-<h3 id="凸优化问题"><a href="#凸优化问题" class="headerlink" title="凸优化问题"></a>凸优化问题</h3><script type="math/tex; mode=display">
-
-\begin{aligned}
-    &\mathrm{minimize.}&f_0(x)\\
-    &\mathrm{s.t.}     &f_i(x)\le b_i,\quad i = 1,\dots,m
-\end{aligned}</script><ul>
+<h3 id="凸优化问题">凸优化问题</h3>
+<p>$$</p>
+<span class="math display">\[\begin{aligned}
+    &amp;\mathrm{minimize.}&amp;f_0(x)\\
+    &amp;\mathrm{s.t.}     &amp;f_i(x)\le b_i,\quad i = 1,\dots,m
+\end{aligned}\]</span>
+<p>$$</p>
+<ul>
 <li>其中：目标函数和约束函数均为凸函数</li>
 <li>最⼩⼆乘和线性规划均为特殊的凸优化问题</li>
 </ul>
-<h5 id="求解"><a href="#求解" class="headerlink" title="求解"></a>求解</h5><ul>
+<h5 id="求解">求解</h5>
+<ul>
 <li>没有解析解</li>
 <li>有可靠、有效的算法</li>
-<li>计算时间：$O(\max\{n^3, n^2m,F\}$，$F$是求函数值、一阶导数、二阶导数的代价</li>
+<li>计算时间：<span class="math inline">\(O(\max\{n^3, n^2m,F\}\)</span>，<span class="math inline">\(F\)</span>是求函数值、一阶导数、二阶导数的代价</li>
 <li>几乎成熟</li>
 </ul>
-<h5 id="凸优化的使用"><a href="#凸优化的使用" class="headerlink" title="凸优化的使用"></a>凸优化的使用</h5><ul>
+<h5 id="凸优化的使用">凸优化的使用</h5>
+<ul>
 <li>通常很难判别</li>
 <li>具有很多技巧可以将其他问题转化为凸优化形式</li>
 <li>很多问题可以通过凸优化进⾏求解</li>
 </ul>
-<h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><p>在有约束的灯光下获取理想的照明强度</p>
-<script type="math/tex; mode=display">
+<h5 id="example">Example</h5>
+<p>在有约束的灯光下获取理想的照明强度</p>
+<p><span class="math display">\[
 \begin{aligned}
-    &\mathrm{minimize.}&\max|\log I_k-\log I_{des}|\\
-    &\mathrm{s.t.}     &0\le p_j\le p_{max}\quad i = 1,\dots,m
-\end{aligned}</script><p>通过合理转化：</p>
+    &amp;\mathrm{minimize.}&amp;\max|\log I_k-\log I_{des}|\\
+    &amp;\mathrm{s.t.}     &amp;0\le p_j\le p_{max}\quad i = 1,\dots,m
+\end{aligned}
+\]</span></p>
+<p>通过合理转化：</p>
 <ul>
 <li>最小二乘</li>
 <li>带权重的最小二乘</li>
 <li>线性规划</li>
 </ul>
 <p>都是<strong>近似</strong>解法</p>
-<h6 id="用凸优化求解"><a href="#用凸优化求解" class="headerlink" title="用凸优化求解"></a>用凸优化求解</h6><script type="math/tex; mode=display">
+<h6 id="用凸优化求解">用凸优化求解</h6>
+<p><span class="math display">\[
 \begin{aligned}
-    &\mathrm{minimize.}&\max h(I_k/I_{des})\\
-    &\mathrm{s.t.}     &0\le p_j\le p_{max}\quad i = 1,\dots,m\\
-    &h(x)= \max\{u,1/u\}
-\end{aligned}</script><h5 id="非线性规划"><a href="#非线性规划" class="headerlink" title="非线性规划"></a>非线性规划</h5><p>⾮凸的优化问题求解思路</p>
-<ul>
-<li>局部优化<ul>
-<li>在可⾏解中寻找近似最⼩的点</li>
-<li>速度快</li>
-<li>需要初始解</li>
-<li>不能提供和全局最优解的差距信息</li>
-</ul>
-</li>
-<li>全局优化<ul>
-<li>计算时间和问题规模呈指数增长关系</li>
-</ul>
-</li>
-<li>上述⽅法⼤多基于求解凸的⼦问题</li>
-</ul>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+    &amp;\mathrm{minimize.}&amp;\max h(I_k/I_{des})\\
+    &amp;\mathrm{s.t.}     &amp;0\le p_j\le p_{max}\quad i = 1,\dots,m\\
+    &amp;h(x)= \max\{u,1/u\}
+\end{aligned}
+\]</span></p>
+<h5 id="非线性规划">非线性规划</h5>
+<p>⾮凸的优化问题求解思路 - 局部优化 - 在可⾏解中寻找近似最⼩的点 - 速度快 - 需要初始解 - 不能提供和全局最优解的差距信息 - 全局优化 - 计算时间和问题规模呈指数增长关系 - 上述⽅法⼤多基于求解凸的⼦问题</p>
+
   
   
     
@@ -693,11 +700,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2021/01/13/study/Math/ConvexOptimization/notes2/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「凸优化」 凸集</p>
+        <a class='prev' href='/2021/02/18/study/Math/ComplexFunctions/index/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i></p>
+          <p class='content'>
+</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/01/13/study/Math/ConvexOptimization/notes2/'>
+          <p class='title'>「凸优化」 凸集<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>凸集合
 
 凸集
+
 仿射集合
 凸集
 重要案例
@@ -706,24 +721,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 分离与⽀撑超平⾯
 对偶锥与⼴义不等式
 
-仿射集合直线方程Def（直线方程）$x = \theta x_1 + (1-\theta)...</p>
-        </a>
-      
-      
-        <a class='next' href='/2021/01/13/study/Math/ConvexOptimization/notes3/'>
-          <p class='title'>「凸优化」 凸函数<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>凸函数
-
-凸函数
-基本性质和案例
-保凸运算
-共轭函数
-拟凸函数
-对数-凹函数和对数-凸函数
-关于广义不等式的凸性
-
-基本性质和案例凸函数
-$f:\R^n\rightarrow \R$ 为凸函数，...</p>
+仿射集合
+直线方程
+Def（直线方程）\(x = \thet...</p>
         </a>
       
     </div>
@@ -766,7 +766,7 @@ $f:\R^n\rightarrow \R$ 为凸函数，...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E4%BC%98%E5%8C%96"><span class="toc-text">数学优化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-text">应用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%82%E8%A7%A3%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="toc-text">求解优化问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98"><span class="toc-text">最小二乘</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98"><span class="toc-text">线性规划问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="toc-text">凸优化问题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%82%E8%A7%A3"><span class="toc-text">求解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">凸优化的使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Example"><span class="toc-text">Example</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92"><span class="toc-text">非线性规划</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E4%BC%98%E5%8C%96"><span class="toc-text">数学优化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-text">应用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%82%E8%A7%A3%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="toc-text">求解优化问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98"><span class="toc-text">最小二乘</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98"><span class="toc-text">线性规划问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="toc-text">凸优化问题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%82%E8%A7%A3"><span class="toc-text">求解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">凸优化的使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#example"><span class="toc-text">Example</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92"><span class="toc-text">非线性规划</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1413,14 +1413,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

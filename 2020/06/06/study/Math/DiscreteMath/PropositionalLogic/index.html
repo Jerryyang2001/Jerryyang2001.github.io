@@ -470,82 +470,75 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>数理逻辑，可以说是到现在为止，写的最详细的了。</p>
 <span id="more"></span>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="命题和联结词"><a href="#命题和联结词" class="headerlink" title="命题和联结词"></a>命题和联结词</h3><ul>
+<h2 id="基本概念">基本概念</h2>
+<h3 id="命题和联结词">命题和联结词</h3>
+<ul>
 <li><p>命题</p>
 <blockquote>
 <p>命题的特征</p>
-<ol>
+<ol type="1">
 <li>陈述句</li>
 <li>唯一的真值</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p>简单命题、复合命题</p>
 <blockquote>
 <p>区别在于是否可以再拆分</p>
-</blockquote>
-</li>
-<li><p><strong>Def</strong>：合取词$\wedge$</p>
-</li>
-<li><strong>Def</strong>：否定式$\neg$</li>
-<li><strong>Def</strong>：析取词$\vee$</li>
-<li><strong>Def</strong>：异或 $\oplus$</li>
-<li><strong>Def</strong>：蕴含词$\rightarrow$</li>
-<li><strong>Def</strong>：等值词$\leftrightarrow$</li>
+</blockquote></li>
+<li><p><strong>Def</strong>：合取词<span class="math inline">\(\wedge\)</span></p></li>
+<li><p><strong>Def</strong>：否定式<span class="math inline">\(\neg\)</span></p></li>
+<li><p><strong>Def</strong>：析取词<span class="math inline">\(\vee\)</span></p></li>
+<li><p><strong>Def</strong>：异或 <span class="math inline">\(\oplus\)</span></p></li>
+<li><p><strong>Def</strong>：蕴含词<span class="math inline">\(\rightarrow\)</span></p></li>
+<li><p><strong>Def</strong>：等值词<span class="math inline">\(\leftrightarrow\)</span></p></li>
 </ul>
 <blockquote>
 <p>注意各种联结词在中文中的文字表述</p>
 <p>注意如何将各种联结词符号化</p>
 </blockquote>
-<h3 id="命题公式及其赋值"><a href="#命题公式及其赋值" class="headerlink" title="命题公式及其赋值"></a>命题公式及其赋值</h3><ul>
-<li><p><strong>Def</strong>：命题常项（命题常元）、命题变项（命题变元）</p>
-</li>
+<h3 id="命题公式及其赋值">命题公式及其赋值</h3>
+<ul>
+<li><p><strong>Def</strong>：命题常项（命题常元）、命题变项（命题变元）</p></li>
 <li><p><strong>Def</strong>：合式公式（命题公式）</p>
 <blockquote>
 <p>这里定义的是将用符号串表示的命题，变为命题公式的规则的方法。也就是描述命题公式的生成方式。</p>
 <p>这里用的定义方式称为<strong>递归定义</strong></p>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p><strong>Def</strong>： 层次</p>
 <blockquote>
 <p>层次可以用<strong>树状展开</strong>来分析得出（个人感觉很像<strong>表达式树</strong>，层次就是子树高度，令平凡的高为 0 就行）</p>
 </blockquote>
 <ul>
-<li><p>命题变项 = 0</p>
-</li>
+<li><p>命题变项 = 0</p></li>
 <li><p>用一次“词”+1（取最大值）</p>
 <blockquote>
-<p>这里注意 $\neg$ 也要 +1</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>：赋值（解释）</p>
-</li>
+<p>这里注意 <span class="math inline">\(\neg\)</span> 也要 +1</p>
+</blockquote></li>
+</ul></li>
+<li><p><strong>Def</strong>：赋值（解释）</p></li>
 <li><p><strong>Def</strong>：真值表</p>
 <blockquote>
 <p>真值表的构造法：</p>
-<ol>
+<ol type="1">
 <li>找出其中所有命题变项</li>
-<li>列出 $2^n$ 个赋值</li>
+<li>列出 <span class="math inline">\(2^n\)</span> 个赋值</li>
 <li>计算真值</li>
 </ol>
-</blockquote>
-</li>
-<li><p><strong>Def</strong>：重言式、矛盾式、可满足式</p>
-</li>
+</blockquote></li>
+<li><p><strong>Def</strong>：重言式、矛盾式、可满足式</p></li>
 </ul>
-<div class="note quote"><p>很明显，我们不能有这么傻的方法求真值。</p></div>
-<h2 id="等值演算"><a href="#等值演算" class="headerlink" title="等值演算"></a>等值演算</h2><h3 id="等值式"><a href="#等值式" class="headerlink" title="等值式"></a>等值式</h3><ul>
+<div class="note quote"><p>很明显，我们不能有这么傻的方法求真值。</p></div>
+<h2 id="等值演算">等值演算</h2>
+<h3 id="等值式">等值式</h3>
+<ul>
 <li><p><strong>Def</strong>：等值</p>
 <blockquote>
-<p>A 和 B 的真值永远相等，符号化：$A\leftrightarrow B$ 是重言式 也就是 $A\Leftrightarrow B$</p>
-</blockquote>
-</li>
+<p>A 和 B 的真值永远相等，符号化：<span class="math inline">\(A\leftrightarrow B\)</span> 是重言式 也就是 <span class="math inline">\(A\Leftrightarrow B\)</span></p>
+</blockquote></li>
 <li><p><strong>Def</strong>：等值式模式</p>
 <blockquote>
 <p>16 种等值式模式可以简化等值式的求值</p>
-<ol>
+<ol type="1">
 <li>双重否定律</li>
 <li>幂等律</li>
 <li>交换律</li>
@@ -563,284 +556,243 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>等价否定等值式</li>
 <li>归谬律</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p><strong>Def</strong>：置换规则</p>
 <blockquote>
-<p>等值演算时，使用的规则：$A\Leftrightarrow B\rightarrow \varphi(A)\Leftrightarrow \varphi (B)$</p>
-</blockquote>
-</li>
+<p>等值演算时，使用的规则：<span class="math inline">\(A\Leftrightarrow B\rightarrow \varphi(A)\Leftrightarrow \varphi (B)\)</span></p>
+</blockquote></li>
 </ul>
-<h3 id="析取范式和合取范式"><a href="#析取范式和合取范式" class="headerlink" title="析取范式和合取范式"></a>析取范式和合取范式</h3><ul>
-<li><p><strong>Def</strong>：（文字）命题变元及其否定</p>
-</li>
-<li><p><strong>Def</strong>：简单析取式、简单合取式</p>
-</li>
+<h3 id="析取范式和合取范式">析取范式和合取范式</h3>
+<ul>
+<li><p><strong>Def</strong>：（文字）命题变元及其否定</p></li>
+<li><p><strong>Def</strong>：简单析取式、简单合取式</p></li>
 <li><p><strong>Thm</strong>：</p>
 <ul>
 <li>一个简单析取式是重言式 &lt;=&gt; 它同时包含某个命题变元及其否定</li>
 <li>一个简单合取式是矛盾式 &lt;=&gt; 它同时包含某个命题变元及其否定式；</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>：（析取范式、合取范式）由有限个简单合取式、简单</p>
-</li>
-<li><p><strong>Thm</strong>：一个析取范式是矛盾式 &lt;=&gt; 它的每个简单合取式都是矛盾式；一个合取范式是重言式 &lt;=&gt; 每个简单析取式都是重言式</p>
-</li>
+</ul></li>
+<li><p><strong>Def</strong>：（析取范式、合取范式）由有限个简单合取式、简单</p></li>
+<li><p><strong>Thm</strong>：一个析取范式是矛盾式 &lt;=&gt; 它的每个简单合取式都是矛盾式；一个合取范式是重言式 &lt;=&gt; 每个简单析取式都是重言式</p></li>
 <li><p><strong>Thm</strong>：范式存在定理</p>
 <blockquote>
-<p>_Method 求范式_</p>
-<ol>
-<li><p>消去 $\rightarrow$ 和 $\leftrightarrow$</p>
-</li>
-<li><p>消去双重否定</p>
-</li>
+<p><em>Method 求范式</em></p>
+<ol type="1">
+<li><p>消去 <span class="math inline">\(\rightarrow\)</span> 和 <span class="math inline">\(\leftrightarrow\)</span></p></li>
+<li><p>消去双重否定</p></li>
 <li><p>使用分配律</p>
-<p>_这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂_</p>
-</li>
+<p><em>这里的分配律可以让析取词和合取词放在合适的位置，即使可能会让整个式子“看起来”更复杂</em></p></li>
 </ol>
-</blockquote>
-</li>
-<li><p><strong>Thm</strong>：极小项的否定是极大项、极大项的否定是极小项</p>
-</li>
-<li><p><strong>Def</strong>：主析取范式、主合取范式</p>
-</li>
+</blockquote></li>
+<li><p><strong>Thm</strong>：极小项的否定是极大项、极大项的否定是极小项</p></li>
+<li><p><strong>Def</strong>：主析取范式、主合取范式</p></li>
 <li><p><strong>Thm</strong>：任何命题公式存在与之等值的主析取范式和主合取范式，并且唯一。</p>
 <blockquote>
-<p>_Method 求主范式_</p>
-<ol>
+<p><em>Method 求主范式</em></p>
+<ol type="1">
 <li>先化成范式</li>
-<li>在缺少某一项时，用排中律 $A\vee \neg A = 1$ 和结合律<strong>添加</strong>缺少的命题变元</li>
+<li>在缺少某一项时，用排中律 <span class="math inline">\(A\vee \neg A = 1\)</span> 和结合律<strong>添加</strong>缺少的命题变元</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 </ul>
 <blockquote>
-<p>_Method 主范式互化_</p>
-<ol>
-<li>取 $\neg A$，并化为范式</li>
-<li>则 $A=\neg\neg A$ 用德摩根律展开</li>
+<p><em>Method 主范式互化</em></p>
+<ol type="1">
+<li>取 <span class="math inline">\(\neg A\)</span>，并化为范式</li>
+<li>则 <span class="math inline">\(A=\neg\neg A\)</span> 用德摩根律展开</li>
 </ol>
 </blockquote>
-<h3 id="联结词的完备集"><a href="#联结词的完备集" class="headerlink" title="联结词的完备集"></a>联结词的完备集</h3><ul>
+<h3 id="联结词的完备集">联结词的完备集</h3>
+<ul>
 <li><strong>Def</strong>：n 元真值函数</li>
 <li><strong>Def</strong>：联结词完备集</li>
-<li><strong>Thm</strong>：$\{\neg,\wedge,\vee\}$ 是联结词完备集<ul>
-<li><strong>Inf</strong>：$\{\neg,\wedge\}$ 也是联结词完备集</li>
-</ul>
-</li>
+<li><strong>Thm</strong>：<span class="math inline">\(\{\neg,\wedge,\vee\}\)</span> 是联结词完备集
+<ul>
+<li><strong>Inf</strong>：<span class="math inline">\(\{\neg,\wedge\}\)</span> 也是联结词完备集</li>
+</ul></li>
 </ul>
 <blockquote>
 <p>这边可以联系一下 Lambda Calculus 中的各类运算，都可以用 Lambda 定义。也就是说，只需要一些操作，就可以满足全部的需要</p>
-<p>$\{\uparrow\}$和$\{\downarrow\}$ 是联结词完备集。其中</p>
+<p><span class="math inline">\(\{\uparrow\}\)</span>和<span class="math inline">\(\{\downarrow\}\)</span> 是联结词完备集。其中</p>
 <ul>
-<li>$p\uparrow q\Leftrightarrow \neg(p\wedge q)$</li>
-<li>$p\downarrow q\Leftrightarrow \neg(p\vee q)$</li>
+<li><span class="math inline">\(p\uparrow q\Leftrightarrow \neg(p\wedge q)\)</span></li>
+<li><span class="math inline">\(p\downarrow q\Leftrightarrow \neg(p\vee q)\)</span></li>
 </ul>
 </blockquote>
-<h3 id="可满足性问题和消解法"><a href="#可满足性问题和消解法" class="headerlink" title="可满足性问题和消解法"></a>可满足性问题和消解法</h3><blockquote>
+<h3 id="可满足性问题和消解法">可满足性问题和消解法</h3>
+<blockquote>
 <p>这里主要讨论的是命题公式是否<strong>可满足</strong>的问题</p>
 </blockquote>
 <ul>
 <li><p><strong>Def</strong>：消解式、消解规则</p>
 <blockquote>
-<p>文字 $I$ 的补 $I^c$：$I=p\rightarrow I^c=\neg p,I=\neg p\rightarrow I^c=p$</p>
-<p>_Method 消解规则_</p>
-<p>$C_1=C_1’\vee I,C_2=C_2’\vee I^c$ 是简单析取式，则称$Res(C_1,C_2)=C1’\vee C2’$ 为消解式<br>注意这里的 $C_1,C_2$ 中是可以含有 $I$ 的，但是不方便计算，后面在消解序列定义时，也直接用了合取范式这一定义。</p>
+<p>文字 <span class="math inline">\(I\)</span> 的补 <span class="math inline">\(I^c\)</span>：<span class="math inline">\(I=p\rightarrow I^c=\neg p,I=\neg p\rightarrow I^c=p\)</span></p>
 </blockquote>
-</li>
-<li><p><strong>Thm</strong>：$C_1\wedge C_2 \approx Res(C_1,C_2)$</p>
-</li>
+<blockquote>
+<p><em>Method 消解规则</em></p>
+<p><span class="math inline">\(C_1=C_1&#39;\vee I,C_2=C_2&#39;\vee I^c\)</span> 是简单析取式，则称<span class="math inline">\(Res(C_1,C_2)=C1&#39;\vee C2&#39;\)</span> 为消解式 注意这里的 <span class="math inline">\(C_1,C_2\)</span> 中是可以含有 <span class="math inline">\(I\)</span> 的，但是不方便计算，后面在消解序列定义时，也直接用了合取范式这一定义。</p>
+</blockquote></li>
+<li><p><strong>Thm</strong>：<span class="math inline">\(C_1\wedge C_2 \approx Res(C_1,C_2)\)</span></p></li>
 <li><p><strong>Def</strong>：消解序列、否证</p>
 <blockquote>
-<p>记 $S$ 是一个合取范式，$C_1,C_2,\dots,C_i$ 是一个简单析取式序列，$C_i$ 或是$S$ 中的元素，或是序列中两个简单析取式的消解式<br>若$C_i = \lambda$ 则称该序列为一个否证。</p>
+<p>记 <span class="math inline">\(S\)</span> 是一个合取范式，<span class="math inline">\(C_1,C_2,\dots,C_i\)</span> 是一个简单析取式序列，<span class="math inline">\(C_i\)</span> 或是<span class="math inline">\(S\)</span> 中的元素，或是序列中两个简单析取式的消解式 若<span class="math inline">\(C_i = \lambda\)</span> 则称该序列为一个否证。</p>
 </blockquote>
 <ul>
-<li><strong>Inf</strong>：$S$ 有否证，不可满足。</li>
+<li><strong>Inf</strong>：<span class="math inline">\(S\)</span> 有否证，不可满足。</li>
 </ul>
 <blockquote>
 <p>这个定理和下面一个定理构成充要条件</p>
-</blockquote>
-</li>
-<li><p><strong>Thm</strong>：（消解的完全性）如果 S 不可满足，则 S 有否证</p>
-<blockquote>
-<p>_Method 消解算法_</p>
-<ol>
-<li>求合取范式</li>
-<li>$S_0,S_2$ 为不含任何元素的集合，$S_1$ 为 $S$ 所有简单析取式构成的集合</li>
-<li>对于 $S_0,S_1$ 中的任意两个可消解的子句，进行消解<br>非空则放入$S_2$，<br>空子句则找到否证，$S$ 不可满足</li>
-<li>$S_2$ 为空时，表明无法继续消解，且$S$可满足</li>
-</ol>
-</blockquote>
-</li>
+</blockquote></li>
+<li><p><strong>Thm</strong>：（消解的完全性）如果 S 不可满足，则 S 有否证 &gt; <em>Method 消解算法</em> &gt; &gt; 1. 求合取范式 &gt; 2. <span class="math inline">\(S_0,S_2\)</span> 为不含任何元素的集合，<span class="math inline">\(S_1\)</span> 为 <span class="math inline">\(S\)</span> 所有简单析取式构成的集合 &gt; 3. 对于 <span class="math inline">\(S_0,S_1\)</span> 中的任意两个可消解的子句，进行消解 &gt; 非空则放入<span class="math inline">\(S_2\)</span>， &gt; 空子句则找到否证，<span class="math inline">\(S\)</span> 不可满足 &gt; 4. <span class="math inline">\(S_2\)</span> 为空时，表明无法继续消解，且<span class="math inline">\(S\)</span>可满足</p></li>
 </ul>
 <blockquote>
 <p>一句吐槽，在罗森的《离散数学及其应用》书中，消解律就那么半页纸，讲的也比较清楚。有需要可以对比看看</p>
 </blockquote>
-<h2 id="命题逻辑的推理理论"><a href="#命题逻辑的推理理论" class="headerlink" title="命题逻辑的推理理论"></a>命题逻辑的推理理论</h2><h3 id="推理的形式结构"><a href="#推理的形式结构" class="headerlink" title="推理的形式结构"></a>推理的形式结构</h3><ul>
-<li><p><strong>Def</strong>：推理是有效的</p>
-</li>
-<li><p><strong>Thm</strong>：推理正确$\{A_i\}\models B\iff \wedge A_i \rightarrow B$ 为永真式</p>
+<h2 id="命题逻辑的推理理论">命题逻辑的推理理论</h2>
+<h3 id="推理的形式结构">推理的形式结构</h3>
+<ul>
+<li><p><strong>Def</strong>：推理是有效的</p></li>
+<li><p><strong>Thm</strong>：推理正确<span class="math inline">\(\{A_i\}\models B\iff \wedge A_i \rightarrow B\)</span> 为永真式</p>
 <blockquote>
-<p>$p\Rightarrow q$ 表示 $p\rightarrow q$ 为重言式</p>
-<p>_Method 判断 $\wedge A_i \rightarrow B$ 是重言式的方法_</p>
-<ol>
+<p><span class="math inline">\(p\Rightarrow q\)</span> 表示 <span class="math inline">\(p\rightarrow q\)</span> 为重言式</p>
+</blockquote>
+<blockquote>
+<p><em>Method 判断 <span class="math inline">\(\wedge A_i \rightarrow B\)</span> 是重言式的方法</em></p>
+<ol type="1">
 <li>真值表法</li>
 <li>等值演算法</li>
 <li>主析取范式法</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p>推理定律</p>
 <blockquote>
 <p>重言蕴含式</p>
-<ol>
-<li>附加律$A\Rightarrow A\vee B$</li>
-<li>化简律$A\wedge B\Rightarrow A$</li>
-<li>假言推理$(A\rightarrow B)\wedge A\Rightarrow B$</li>
-<li>抗拒式 $(A \rightarrow B) \wedge \neg B \Rightarrow \neg A$</li>
-<li>析取三段论$(A \rightarrow B) \wedge \neg B \Rightarrow \neg A$</li>
-<li>假言三段论$(A \rightarrow B) \wedge(B \rightarrow C) \Rightarrow(A \rightarrow C)$</li>
-<li>等价三段论$(A \leftrightarrow B) \wedge(B \leftrightarrow C) \Rightarrow(A \leftrightarrow C)$</li>
-<li>构造性二难$(A \rightarrow B) \wedge(C \rightarrow D) \wedge(A \vee C) \Rightarrow(B \vee D)$</li>
-<li>构造性二难（特殊）$(A \rightarrow B) \wedge(\neg A \rightarrow B) \Rightarrow B$</li>
-<li>破坏性二难$(A \rightarrow B) \wedge(C \rightarrow D) \wedge(\neg B \vee \neg D) \Rightarrow \neg A \vee \neg C$</li>
+<ol type="1">
+<li>附加律<span class="math inline">\(A\Rightarrow A\vee B\)</span></li>
+<li>化简律<span class="math inline">\(A\wedge B\Rightarrow A\)</span></li>
+<li>假言推理<span class="math inline">\((A\rightarrow B)\wedge A\Rightarrow B\)</span></li>
+<li>抗拒式 <span class="math inline">\((A \rightarrow B) \wedge \neg B \Rightarrow \neg A\)</span></li>
+<li>析取三段论<span class="math inline">\((A \rightarrow B) \wedge \neg B \Rightarrow \neg A\)</span></li>
+<li>假言三段论<span class="math inline">\((A \rightarrow B) \wedge(B \rightarrow C) \Rightarrow(A \rightarrow C)\)</span></li>
+<li>等价三段论<span class="math inline">\((A \leftrightarrow B) \wedge(B \leftrightarrow C) \Rightarrow(A \leftrightarrow C)\)</span></li>
+<li>构造性二难<span class="math inline">\((A \rightarrow B) \wedge(C \rightarrow D) \wedge(A \vee C) \Rightarrow(B \vee D)\)</span></li>
+<li>构造性二难（特殊）<span class="math inline">\((A \rightarrow B) \wedge(\neg A \rightarrow B) \Rightarrow B\)</span></li>
+<li>破坏性二难<span class="math inline">\((A \rightarrow B) \wedge(C \rightarrow D) \wedge(\neg B \vee \neg D) \Rightarrow \neg A \vee \neg C\)</span></li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 </ul>
-<h3 id="自然推理系统-P"><a href="#自然推理系统-P" class="headerlink" title="自然推理系统 P"></a>自然推理系统 P</h3><ul>
-<li><p><strong>Def</strong>：形式演算系统、形式语言系统</p>
-</li>
+<h3 id="自然推理系统-p">自然推理系统 P</h3>
+<ul>
+<li><p><strong>Def</strong>：形式演算系统、形式语言系统</p></li>
 <li><p><strong>Def</strong>：证明</p>
 <blockquote>
 <p>证明是一个公式序列</p>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p>构造证明方法</p>
 <ul>
-<li>附加前提证明法：$\wedge A_i \rightarrow (A_{i+1} \rightarrow B) \Leftrightarrow \wedge A_i \rightarrow B$</li>
-<li>归谬法：$\wedge A_i \wedge B$ 为矛盾式</li>
+<li>附加前提证明法：<span class="math inline">\(\wedge A_i \rightarrow (A_{i+1} \rightarrow B) \Leftrightarrow \wedge A_i \rightarrow B\)</span></li>
+<li>归谬法：<span class="math inline">\(\wedge A_i \wedge B\)</span> 为矛盾式</li>
 <li>消解证明法</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <blockquote>
 <p>常用证明方法：</p>
-<ol>
+<ol type="1">
 <li>穷举证明法、分情形证明法</li>
 <li>存在性证明中：构造性证明、非构造性的存在性证明（不存在则错误）</li>
 <li>唯一性证明：需要证明存在且唯一</li>
 </ol>
 </blockquote>
-<h2 id="一阶逻辑的基本概念"><a href="#一阶逻辑的基本概念" class="headerlink" title="一阶逻辑的基本概念"></a>一阶逻辑的基本概念</h2><h3 id="一阶逻辑命题的符号化"><a href="#一阶逻辑命题的符号化" class="headerlink" title="一阶逻辑命题的符号化"></a>一阶逻辑命题的符号化</h3><ul>
+<h2 id="一阶逻辑的基本概念">一阶逻辑的基本概念</h2>
+<h3 id="一阶逻辑命题的符号化">一阶逻辑命题的符号化</h3>
+<ul>
 <li><p><strong>Def</strong>：个体词（个体变项、个体常项）、论域（全总个体域）</p>
 <blockquote>
 <p><strong>个体词</strong>：所研究对象中可以独立存在的具体或抽象的客体。</p>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p><strong>Def</strong>：谓词</p>
 <blockquote>
 <p><strong>谓词</strong>：用来刻画个体词性质及个体词之间关系的词</p>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p><strong>Def</strong>：量词（全称量词、存在量词）</p>
 <blockquote>
 <p><strong>量词</strong>：表示个体变元在个体域中取值方式的词</p>
-</blockquote>
-</li>
+</blockquote></li>
 </ul>
-<h3 id="一阶逻辑公式及其解释"><a href="#一阶逻辑公式及其解释" class="headerlink" title="一阶逻辑公式及其解释"></a>一阶逻辑公式及其解释</h3><ul>
+<h3 id="一阶逻辑公式及其解释">一阶逻辑公式及其解释</h3>
+<ul>
 <li><p><strong>Def</strong>：一阶语言的字母表</p>
 <ul>
 <li>非逻辑符号（个体常项、函数、谓词）</li>
 <li>逻辑符号（个体变项、量词符号、联结词、括号和都好）</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>：L 的项</p>
-</li>
-<li><p><strong>Def</strong>：原子公式 $R(x_1,\dots,x_n)$</p>
-</li>
+</ul></li>
+<li><p><strong>Def</strong>：L 的项</p></li>
+<li><p><strong>Def</strong>：原子公式 <span class="math inline">\(R(x_1,\dots,x_n)\)</span></p></li>
 <li><p><strong>Def</strong>：合式公式（谓词公式）</p>
 <blockquote>
 <p>递归定义</p>
-</blockquote>
-</li>
-<li><p><strong>Def</strong>：指导变元、约束出现、自由出现、辖域</p>
-</li>
-<li><p><strong>Def</strong>：封闭、闭式</p>
-</li>
-<li><p><strong>Def</strong>：L 的解释 I 的组成</p>
-</li>
-<li><p><strong>Thm</strong>：封闭的公式在任何解释下都变成命题</p>
-</li>
-<li><p><strong>Def</strong>：（公式的）永真式、矛盾式、可满足式</p>
-</li>
-<li><p><strong>Def</strong>：代换实例</p>
-</li>
-<li><p><strong>Thm</strong>：重言式的代换实例都是重言式、矛盾式的代换实例都是矛盾式</p>
-</li>
+</blockquote></li>
+<li><p><strong>Def</strong>：指导变元、约束出现、自由出现、辖域</p></li>
+<li><p><strong>Def</strong>：封闭、闭式</p></li>
+<li><p><strong>Def</strong>：L 的解释 I 的组成</p></li>
+<li><p><strong>Thm</strong>：封闭的公式在任何解释下都变成命题</p></li>
+<li><p><strong>Def</strong>：（公式的）永真式、矛盾式、可满足式</p></li>
+<li><p><strong>Def</strong>：代换实例</p></li>
+<li><p><strong>Thm</strong>：重言式的代换实例都是重言式、矛盾式的代换实例都是矛盾式</p></li>
 </ul>
-<h2 id="一阶逻辑等值演算和推理"><a href="#一阶逻辑等值演算和推理" class="headerlink" title="一阶逻辑等值演算和推理"></a>一阶逻辑等值演算和推理</h2><h3 id="一阶逻辑等值演算和置换规则"><a href="#一阶逻辑等值演算和置换规则" class="headerlink" title="一阶逻辑等值演算和置换规则"></a>一阶逻辑等值演算和置换规则</h3><ul>
-<li><strong>Def</strong>：等值</li>
-<li><strong>Thm</strong>：等值式</li>
+<h2 id="一阶逻辑等值演算和推理">一阶逻辑等值演算和推理</h2>
+<h3 id="一阶逻辑等值演算和置换规则">一阶逻辑等值演算和置换规则</h3>
+<ul>
+<li><p><strong>Def</strong>：等值</p></li>
+<li><p><strong>Thm</strong>：等值式</p></li>
 <li><p>由永真式的代换实例得到的永真式</p>
 <ul>
-<li><p>消去量词等值式</p>
-</li>
-<li><p>量词否定等值式</p>
-</li>
+<li><p>消去量词等值式</p></li>
+<li><p>量词否定等值式</p></li>
 <li><p>量词辖域收缩扩张等值式</p>
 <blockquote>
-<p>应用这个等值式时要注意，对$A(x)$扩张时，扩张或收缩的式子中没有$x$的自由出现</p>
-</blockquote>
-</li>
-<li><p>量词分配等值式</p>
-</li>
-</ul>
-</li>
+<p>应用这个等值式时要注意，对<span class="math inline">\(A(x)\)</span>扩张时，扩张或收缩的式子中没有<span class="math inline">\(x\)</span>的自由出现</p>
+</blockquote></li>
+<li><p>量词分配等值式</p></li>
+</ul></li>
 <li><p>规则</p>
 <ul>
 <li>置换规则</li>
 <li>换名规则</li>
 <li>代替规则</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="一阶逻辑的前束范式"><a href="#一阶逻辑的前束范式" class="headerlink" title="一阶逻辑的前束范式"></a>一阶逻辑的前束范式</h3><ul>
-<li><p><strong>Def</strong>：前束范式</p>
-</li>
+<h3 id="一阶逻辑的前束范式">一阶逻辑的前束范式</h3>
+<ul>
+<li><p><strong>Def</strong>：前束范式</p></li>
 <li><p><strong>Thm</strong>：前束范式存在定理</p>
 <blockquote>
-<p>_Method 求前束范式_</p>
-<ol>
-<li>替换$\leftrightarrow,\rightarrow$ 为 $\wedge,\vee,\neg$</li>
-<li>用量词否定等值式，将 $\neg$ 调至原子公式之前</li>
+<p><em>Method 求前束范式</em></p>
+<ol type="1">
+<li>替换<span class="math inline">\(\leftrightarrow,\rightarrow\)</span> 为 <span class="math inline">\(\wedge,\vee,\neg\)</span></li>
+<li>用量词否定等值式，将 <span class="math inline">\(\neg\)</span> 调至原子公式之前</li>
 <li>用换名规则</li>
 <li>用扩张收缩律，将量词移到全式的最前面</li>
 </ol>
-</blockquote>
-</li>
+</blockquote></li>
 </ul>
-<h3 id="一阶逻辑的推理理论"><a href="#一阶逻辑的推理理论" class="headerlink" title="一阶逻辑的推理理论"></a>一阶逻辑的推理理论</h3><ul>
+<h3 id="一阶逻辑的推理理论">一阶逻辑的推理理论</h3>
+<ul>
 <li><p><strong>Def</strong>：推理定律</p>
 <ul>
-<li>命题逻辑推理定律的代换实例</li>
-<li>基本等值式生成的推理定律</li>
-<li>其他的</li>
+<li><p>命题逻辑推理定律的代换实例</p></li>
+<li><p>基本等值式生成的推理定律</p></li>
+<li><p>其他的</p></li>
 <li><p>规则</p>
 <ul>
-<li>全称量词消去规则$\forall -$（全称实例）</li>
-<li>全称量词引入规则$\forall +$（全称引入）</li>
-<li>存在量词消去规则$\exists -$（存在实例）</li>
-<li>存在量词引入规则$\exists +$（存在引入）</li>
+<li>全称量词消去规则<span class="math inline">\(\forall -\)</span>（全称实例）</li>
+<li>全称量词引入规则<span class="math inline">\(\forall +\)</span>（全称引入）</li>
+<li>存在量词消去规则<span class="math inline">\(\exists -\)</span>（存在实例）</li>
+<li>存在量词引入规则<span class="math inline">\(\exists +\)</span>（存在引入）</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Def</strong>：自然推理系统</p></li>
 </ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Def</strong>：自然推理系统</p>
-</li>
-</ul>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -942,8 +894,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>傅里叶级数</p>
           <p class='content'>傅里叶级数，真的就看上去简单。
 
-三角函数系及其正交性在这里就直接给出这个单位正交系：
-$1,\frac{1}{\sqrt{2\pi}}\cos x,\frac{1}{\sqrt{2\pi}}\...</p>
+三角函数系及其正交性
+在这里就直接给出这个单位正交系：
+\(1,\frac{1}{\sqrt{2\pi}}\cos x,\frac{1}{\sqrt{2...</p>
         </a>
       
       
@@ -951,15 +904,13 @@ $1,\frac{1}{\sqrt{2\pi}}\cos x,\frac{1}{\sqrt{2\pi}}\...</p>
           <p class='title'>振动与波<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>基础物理学第六章-振动与波。后续会把其他这个学期学过的内容补上。
 
-简谐振动描述简谐振动的特征量
+简谐振动
+描述简谐振动的特征量
+
 Def：简谐运动或简谐振动
 描述简谐振动幅度和时间周期性的特征量
+
 振幅
-周期
-频率
-角频率
-
-
 ...</p>
         </a>
       
@@ -1003,7 +954,7 @@ Def：简谐运动或简谐振动
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E9%A2%98%E5%92%8C%E8%81%94%E7%BB%93%E8%AF%8D"><span class="toc-text">命题和联结词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E9%A2%98%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E8%B5%8B%E5%80%BC"><span class="toc-text">命题公式及其赋值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97"><span class="toc-text">等值演算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%89%E5%80%BC%E5%BC%8F"><span class="toc-text">等值式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%90%E5%8F%96%E8%8C%83%E5%BC%8F%E5%92%8C%E5%90%88%E5%8F%96%E8%8C%83%E5%BC%8F"><span class="toc-text">析取范式和合取范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%94%E7%BB%93%E8%AF%8D%E7%9A%84%E5%AE%8C%E5%A4%87%E9%9B%86"><span class="toc-text">联结词的完备集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7%E9%97%AE%E9%A2%98%E5%92%8C%E6%B6%88%E8%A7%A3%E6%B3%95"><span class="toc-text">可满足性问题和消解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E6%8E%A8%E7%90%86%E7%90%86%E8%AE%BA"><span class="toc-text">命题逻辑的推理理论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E7%90%86%E7%9A%84%E5%BD%A2%E5%BC%8F%E7%BB%93%E6%9E%84"><span class="toc-text">推理的形式结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E6%8E%A8%E7%90%86%E7%B3%BB%E7%BB%9F-P"><span class="toc-text">自然推理系统 P</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">一阶逻辑的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%91%BD%E9%A2%98%E7%9A%84%E7%AC%A6%E5%8F%B7%E5%8C%96"><span class="toc-text">一阶逻辑命题的符号化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E8%A7%A3%E9%87%8A"><span class="toc-text">一阶逻辑公式及其解释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97%E5%92%8C%E6%8E%A8%E7%90%86"><span class="toc-text">一阶逻辑等值演算和推理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97%E5%92%8C%E7%BD%AE%E6%8D%A2%E8%A7%84%E5%88%99"><span class="toc-text">一阶逻辑等值演算和置换规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%9A%84%E5%89%8D%E6%9D%9F%E8%8C%83%E5%BC%8F"><span class="toc-text">一阶逻辑的前束范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%9A%84%E6%8E%A8%E7%90%86%E7%90%86%E8%AE%BA"><span class="toc-text">一阶逻辑的推理理论</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E9%A2%98%E5%92%8C%E8%81%94%E7%BB%93%E8%AF%8D"><span class="toc-text">命题和联结词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E9%A2%98%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E8%B5%8B%E5%80%BC"><span class="toc-text">命题公式及其赋值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97"><span class="toc-text">等值演算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%89%E5%80%BC%E5%BC%8F"><span class="toc-text">等值式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%90%E5%8F%96%E8%8C%83%E5%BC%8F%E5%92%8C%E5%90%88%E5%8F%96%E8%8C%83%E5%BC%8F"><span class="toc-text">析取范式和合取范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%94%E7%BB%93%E8%AF%8D%E7%9A%84%E5%AE%8C%E5%A4%87%E9%9B%86"><span class="toc-text">联结词的完备集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7%E9%97%AE%E9%A2%98%E5%92%8C%E6%B6%88%E8%A7%A3%E6%B3%95"><span class="toc-text">可满足性问题和消解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E6%8E%A8%E7%90%86%E7%90%86%E8%AE%BA"><span class="toc-text">命题逻辑的推理理论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E7%90%86%E7%9A%84%E5%BD%A2%E5%BC%8F%E7%BB%93%E6%9E%84"><span class="toc-text">推理的形式结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E6%8E%A8%E7%90%86%E7%B3%BB%E7%BB%9F-p"><span class="toc-text">自然推理系统 P</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">一阶逻辑的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%91%BD%E9%A2%98%E7%9A%84%E7%AC%A6%E5%8F%B7%E5%8C%96"><span class="toc-text">一阶逻辑命题的符号化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%85%B6%E8%A7%A3%E9%87%8A"><span class="toc-text">一阶逻辑公式及其解释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97%E5%92%8C%E6%8E%A8%E7%90%86"><span class="toc-text">一阶逻辑等值演算和推理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97%E5%92%8C%E7%BD%AE%E6%8D%A2%E8%A7%84%E5%88%99"><span class="toc-text">一阶逻辑等值演算和置换规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%9A%84%E5%89%8D%E6%9D%9F%E8%8C%83%E5%BC%8F"><span class="toc-text">一阶逻辑的前束范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%9A%84%E6%8E%A8%E7%90%86%E7%90%86%E8%AE%BA"><span class="toc-text">一阶逻辑的推理理论</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1650,14 +1601,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

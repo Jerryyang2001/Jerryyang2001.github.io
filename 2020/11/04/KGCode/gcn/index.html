@@ -470,25 +470,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>图卷积神经网络</p>
 <span id="more"></span>
-<h1 id="Graph-Convolutional-Network"><a href="#Graph-Convolutional-Network" class="headerlink" title="Graph Convolutional Network"></a>Graph Convolutional Network</h1><blockquote>
-<p>翻译自：<a target="_blank" rel="noopener" href="http://tkipf.github.io/graph-convolutional-networks/">Graph Convolutional Networks | Thomas Kipf | University of Amsterdam</a></p>
+<h1 id="graph-convolutional-network">Graph Convolutional Network</h1>
+<blockquote>
+<p>翻译自：<a target="_blank" rel="noopener" href="http://tkipf.github.io/graph-convolutional-networks/">Graph Convolutional Networks | Thomas Kipf | University of Amsterdam</a></p>
 </blockquote>
-<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>现实世界中许多重要的数据（集）常常以图和网络的形式呈现，例如：社交网络，知识图谱，蛋白质相互作用网络，万维网等等（只举几例）。但是，直到最近，注意力很少放在对这些结构化的数据，建立泛化的神经网络模型之上。</p>
+<h3 id="概述">概述</h3>
+<p>现实世界中许多重要的数据（集）常常以图和网络的形式呈现，例如：社交网络，知识图谱，蛋白质相互作用网络，万维网等等（只举几例）。但是，直到最近，注意力很少放在对这些结构化的数据，建立泛化的神经网络模型之上。</p>
 <p>最近几年，一些论文重新考虑了这些问题（统一的神经网络，去处理任意的结构化图数据） <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1312.6203">Bruna et al.</a>, ICLR 2014; <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1506.05163">Henaff et al.</a>, 2015; <a target="_blank" rel="noopener" href="http://papers.nips.cc/paper/5954-convolutional-networks-on-graphs-for-learning-molecular-fingerprints">Duvenaud et al.</a>, NIPS 2015; <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1511.05493">Li et al.</a>, ICLR 2016; <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.09375">Defferrard et al.</a>, NIPS 2016; <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1609.02907">Kipf &amp; Welling</a>, ICLR 2017，其中一些，现在已经在他们主导的领域，取得了非常可喜的成果。</p>
 <p>在这篇文章中，我将对近些年在这方面的研究给出一个概要，并且指出不同方法的优缺点。这些讨论主要聚焦于最近发表的这两篇论文：</p>
 <ul>
-<li>Kipf &amp; Welling (ICLR 2017), <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1609.02907">Semi-Supervised Classification with Graph Convolutional Networks</a> (disclaimer: I’m the first author)</li>
+<li>Kipf &amp; Welling (ICLR 2017), <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1609.02907">Semi-Supervised Classification with Graph Convolutional Networks</a> (disclaimer: I'm the first author)</li>
 <li>Defferrard et al. (NIPS 2016), <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.09375">Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering</a></li>
 </ul>
 <p>以及 Ferenc Huszar 写的一篇回顾/讨论的文章：<a target="_blank" rel="noopener" href="http://www.inference.vc/how-powerful-are-graph-convolutions-review-of-kipf-welling-2016-2/">How powerful are Graph Convolutions?</a> ，这篇文章主要讨论了这几类模型的一些限制。我<a target="_blank" rel="noopener" href="http://tkipf.github.io/graph-convolutional-networks/#the-issue-with-regular-graphs">在这里</a>写了一点对这篇文章的评论（在文章的末尾）。</p>
-<h3 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h3><ul>
+<h3 id="大纲">大纲</h3>
+<ul>
 <li>对GNN的简单描述</li>
 <li>谱域卷积与GCNs</li>
 <li>Demo：简单一阶GCN模型的图嵌入</li>
 <li>将 GCNs 作为 <em>Weisfeiler-Lehman</em> 算法的可微分</li>
 </ul>
 <p>如果你已经熟悉了 GCNs 与相关的方法，你可以直接跳到<a target="_blank" rel="noopener" href="http://tkipf.github.io/graph-convolutional-networks/#gcns-part-iii-embedding-the-karate-club-network">Embedding the karate club network</a>。</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -590,7 +593,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「概率统计与随机过程」 3 - 随机向量及其概率分布</p>
           <p class='content'>随机向量及其概率分布
 
-随机向量及其概率分布二维随机向量的联合分布Def（二维随机向量）假设 $\Omega = \{\omega\}$ 是随机试验 E 的样本空间，$X(\omega),~Y(...</p>
+随机向量及其概率分布
+二维随机向量的联合分布
+Def（二维随机向量）假设 \(\Omega = \{\omega\}\) 是随机试验 E 的样本空间，\(X(\o...</p>
         </a>
       
       
@@ -598,13 +603,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'>知识融合简述<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>知识融合方法概述
 
-知识融合问题分析知识图谱的异构从KG的构建看：
+知识融合
+问题分析
+知识图谱的异构
+从KG的构建看：
 
 早期知识工程的理想是构建一个统一的知识库
 人类知识体系复杂
 不同人对某些知识由主观看法
-知识会随时间自然演化
-同一领域由不同...</p>
+知识会随时...</p>
         </a>
       
     </div>
@@ -1294,14 +1301,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

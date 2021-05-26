@@ -461,31 +461,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>Google C/C++ 规范文档。</p>
 <span id="more"></span>
-<h1 id="c-编程规范"><a href="#c-编程规范" class="headerlink" title="c++编程规范"></a>c++编程规范</h1><h2 id="0-扉页"><a href="#0-扉页" class="headerlink" title="0. 扉页"></a>0. 扉页</h2><div class="table-container">
+<h1 id="c编程规范">c++编程规范</h1>
+<h2 id="扉页">0. 扉页</h2>
 <table>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 86%">
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>版本:</th>
 <th>4.45</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>原作者:</td>
 <td>Benjy WeinbergerCraig SilversteinGregory EitzmannMark MentovaiTashana Landray</td>
 </tr>
-<tr>
+<tr class="even">
 <td>翻译:</td>
 <td><a target="_blank" rel="noopener" href="http://www.yulefox.com/">YuleFox</a><a target="_blank" rel="noopener" href="https://github.com/yangyubo">Yang.Y</a><a target="_blank" rel="noopener" href="http://acgtyrant.com/">acgtyrant</a><a target="_blank" rel="noopener" href="http://github.com/lilinsanity">lilinsanity</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>项目主页:</td>
 <td><a target="_blank" rel="noopener" href="http://google-styleguide.googlecode.com/">Google Style Guide</a><a target="_blank" rel="noopener" href="http://github.com/zh-google-styleguide/zh-google-styleguide">Google 开源项目风格指南 - 中文版</a></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="0-1-译者前言"><a href="#0-1-译者前言" class="headerlink" title="0.1 译者前言"></a>0.1 译者前言</h3><p>Google 经常会发布一些开源项目, 意味着会接受来自其他代码贡献者的代码. 但是如果代码贡献者的编程风格与 Google 的不一致, 会给代码阅读者和其他代码提交者造成不小的困扰. Google 因此发布了这份自己的编程风格指南, 使所有提交代码的人都能获知 Google 的编程风格.</p>
+<h3 id="译者前言">0.1 译者前言</h3>
+<p>Google 经常会发布一些开源项目, 意味着会接受来自其他代码贡献者的代码. 但是如果代码贡献者的编程风格与 Google 的不一致, 会给代码阅读者和其他代码提交者造成不小的困扰. Google 因此发布了这份自己的编程风格指南, 使所有提交代码的人都能获知 Google 的编程风格.</p>
 <p>翻译初衷:</p>
 <blockquote>
 <p>规则的作用就是避免混乱. 但规则本身一定要权威, 有说服力, 并且是理性的. 我们所见过的大部分编程规范, 其内容或不够严谨, 或阐述过于简单, 或带有一定的武断性.</p>
@@ -498,12 +503,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>中文版修订历史:</p>
 <blockquote>
 <ul>
-<li><p>2015-08 : 热心的清华大学同学 @lilinsanity 完善了「类」章节以及其它一些小章节。至此，对 Google CPP Style Guide 4.45 的翻译正式竣工。</p>
-</li>
-<li><p>2015-07 4.45 : acgtyrant 为了学习 C++ 的规范，顺便重新翻译了本 C++ 风格指南，特别是 C++11 的全新内容。排版大幅度优化，翻译措辞更地道，添加了新译者笔记。Google 总部 C++ 工程师 innocentim, 清华大学不愿意透露姓名的唐马儒先生，大阪大学大学院情报科学研究科计算机科学专攻博士 farseerfc 和其它 Arch Linux 中文社区众帮了译者不少忙，谢谢他们。因为 C++ Primer 尚未完全入门，暂时没有翻译「类」章节和其它一些小章节。</p>
-</li>
-<li><p>2009-06 3.133 : YuleFox 的 1.0 版已经相当完善, 但原版在近一年的时间里, 其规范也发生了一些变化.</p>
-</li>
+<li><p>2015-08 : 热心的清华大学同学 <span class="citation" data-cites="lilinsanity">@lilinsanity</span> 完善了「类」章节以及其它一些小章节。至此，对 Google CPP Style Guide 4.45 的翻译正式竣工。</p></li>
+<li><p>2015-07 4.45 : acgtyrant 为了学习 C++ 的规范，顺便重新翻译了本 C++ 风格指南，特别是 C++11 的全新内容。排版大幅度优化，翻译措辞更地道，添加了新译者笔记。Google 总部 C++ 工程师 innocentim, 清华大学不愿意透露姓名的唐马儒先生，大阪大学大学院情报科学研究科计算机科学专攻博士 farseerfc 和其它 Arch Linux 中文社区众帮了译者不少忙，谢谢他们。因为 C++ Primer 尚未完全入门，暂时没有翻译「类」章节和其它一些小章节。</p></li>
+<li><p>2009-06 3.133 : YuleFox 的 1.0 版已经相当完善, 但原版在近一年的时间里, 其规范也发生了一些变化.</p></li>
 </ul>
 <blockquote>
 <p>Yang.Y 与 YuleFox 一拍即合, 以项目的形式来延续中文版 : <a target="_blank" rel="noopener" href="http://github.com/yangyubo/zh-google-styleguide">Google 开源项目风格指南 - 中文版项目</a>.</p>
@@ -513,30 +515,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>2008-07 1.0 : 出自 <a target="_blank" rel="noopener" href="http://www.yulefox.com/?p=207">YuleFox 的 Blog</a>, 很多地方摘录的也是该版本.</li>
 </ul>
 </blockquote>
-<h3 id="0-2-背景"><a href="#0-2-背景" class="headerlink" title="0.2 背景"></a>0.2 背景</h3><p>C++ 是 Google 大部分开源项目的主要编程语言. 正如每个 C++ 程序员都知道的, C++ 有很多强大的特性, 但这种强大不可避免的导致它走向复杂，使代码更容易产生 bug, 难以阅读和维护.</p>
+<h3 id="背景">0.2 背景</h3>
+<p>C++ 是 Google 大部分开源项目的主要编程语言. 正如每个 C++ 程序员都知道的, C++ 有很多强大的特性, 但这种强大不可避免的导致它走向复杂，使代码更容易产生 bug, 难以阅读和维护.</p>
 <p>本指南的目的是通过详细阐述 C++ 注意事项来驾驭其复杂性. 这些规则在保证代码易于管理的同时, 也能高效使用 C++ 的语言特性.</p>
-<p><em>风格</em>, 亦被称作可读性, 也就是指导 C++ 编程的约定. 使用术语 “风格” 有些用词不当, 因为这些习惯远不止源代码文件格式化这么简单.</p>
-<p>使代码易于管理的方法之一是加强代码一致性. 让任何程序员都可以快速读懂你的代码这点非常重要. 保持统一编程风格并遵守约定意味着可以很容易根据 “模式匹配” 规则来推断各种标识符的含义. 创建通用, 必需的习惯用语和模式可以使代码更容易理解. 在一些情况下可能有充分的理由改变某些编程风格, 但我们还是应该遵循一致性原则，尽量不这么做.</p>
+<p><em>风格</em>, 亦被称作可读性, 也就是指导 C++ 编程的约定. 使用术语 "风格" 有些用词不当, 因为这些习惯远不止源代码文件格式化这么简单.</p>
+<p>使代码易于管理的方法之一是加强代码一致性. 让任何程序员都可以快速读懂你的代码这点非常重要. 保持统一编程风格并遵守约定意味着可以很容易根据 "模式匹配" 规则来推断各种标识符的含义. 创建通用, 必需的习惯用语和模式可以使代码更容易理解. 在一些情况下可能有充分的理由改变某些编程风格, 但我们还是应该遵循一致性原则，尽量不这么做.</p>
 <p>本指南的另一个观点是 C++ 特性的臃肿. C++ 是一门包含大量高级特性的庞大语言. 某些情况下, 我们会限制甚至禁止使用某些特性. 这么做是为了保持代码清爽, 避免这些特性可能导致的各种问题. 指南中列举了这类特性, 并解释为什么这些特性被限制使用.</p>
 <p>Google 主导的开源项目均符合本指南的规定.</p>
 <p>注意: 本指南并非 C++ 教程, 我们假定读者已经对 C++ 非常熟悉.</p>
-<h2 id="1-头文件"><a href="#1-头文件" class="headerlink" title="1. 头文件"></a>1. 头文件</h2><p>通常每一个 <code>.cc</code> 文件都有一个对应的 <code>.h</code> 文件. 也有一些常见例外, 如单元测试代码和只包含 <code>main()</code> 函数的 <code>.cc</code> 文件.</p>
+<h2 id="头文件">1. 头文件</h2>
+<p>通常每一个 <code>.cc</code> 文件都有一个对应的 <code>.h</code> 文件. 也有一些常见例外, 如单元测试代码和只包含 <code>main()</code> 函数的 <code>.cc</code> 文件.</p>
 <p>正确使用头文件可令代码在可读性、文件大小和性能上大为改观.</p>
 <p>下面的规则将引导你规避使用头文件时的各种陷阱.</p>
-<h3 id="1-1-Self-contained-头文件"><a href="#1-1-Self-contained-头文件" class="headerlink" title="1.1. Self-contained 头文件"></a>1.1. Self-contained 头文件</h3><p>Tip</p>
+<h3 id="self-contained-头文件">1.1. Self-contained 头文件</h3>
+<p>Tip</p>
 <p>头文件应该能够自给自足（self-contained,也就是可以作为第一个头文件被引入），以 <code>.h</code> 结尾。至于用来插入文本的文件，说到底它们并不是头文件，所以应以 <code>.inc</code> 结尾。不允许分离出 <code>-inl.h</code> 头文件的做法.</p>
 <p>所有头文件要能够自给自足。换言之，用户和重构工具不需要为特别场合而包含额外的头文件。详言之，一个头文件要有 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/headers/##define-guard">1.2. ##define 保护</a>，统统包含它所需要的其它头文件，也不要求定义任何特别 symbols.</p>
 <p>不过有一个例外，即一个文件并不是 self-contained 的，而是作为文本插入到代码某处。或者，文件内容实际上是其它头文件的特定平台（platform-specific）扩展部分。这些文件就要用 <code>.inc</code> 文件扩展名。</p>
 <p>如果 <code>.h</code> 文件声明了一个模板或内联函数，同时也在该文件加以定义。凡是有用到这些的 <code>.cc</code> 文件，就得统统包含该头文件，否则程序可能会在构建中链接失败。不要把这些定义放到分离的 <code>-inl.h</code> 文件里（译者注：过去该规范曾提倡把定义放到 -inl.h 里过）。</p>
 <p>有个例外：如果某函数模板为所有相关模板参数显式实例化，或本身就是某类的一个私有成员，那么它就只能定义在实例化该模板的 <code>.cc</code> 文件里。</p>
-<h3 id="1-2-define-保护"><a href="#1-2-define-保护" class="headerlink" title="1.2. ##define 保护"></a>1.2. ##define 保护</h3><blockquote>
+<h3 id="define-保护">1.2. ##define 保护</h3>
+<blockquote>
 <p>[!TIP]</p>
 <p>1</p>
 </blockquote>
 <p>所有头文件都应该使用 <code>##define</code> 来防止头文件被多重包含, 命名格式当是: <code>___H_</code> .</p>
 <p>为保证唯一性, 头文件的命名应该基于所在项目源代码树的全路径. 例如, 项目 <code>foo</code> 中的头文件 <code>foo/src/bar/baz.h</code> 可按如下方式保护:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> FOO_BAR_BAZ_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOO_BAR_BAZ_H_</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">// FOO_BAR_BAZ_H_</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="1-3-前置声明"><a href="#1-3-前置声明" class="headerlink" title="1.3. 前置声明"></a>1.3. 前置声明</h3><p>尽可能地避免使用前置声明。使用 <code>#include</code> 包含需要的头文件即可。</p>
+<h3 id="前置声明">1.3. 前置声明</h3>
+<p>尽可能地避免使用前置声明。使用 <code>#include</code> 包含需要的头文件即可。</p>
 <p><strong>定义：</strong></p>
 <blockquote>
 <p>所谓「前置声明」（forward declaration）是类、函数和模板的纯粹声明，没伴随着其定义.</p>
@@ -551,17 +558,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>缺点：</strong></p>
 <blockquote>
 <ul>
-<li><p>前置声明隐藏了依赖关系，头文件改动时，用户的代码会跳过必要的重新编译过程。</p>
-</li>
-<li><p>前置声明可能会被库的后续更改所破坏。前置声明函数或模板有时会妨碍头文件开发者变动其 API. 例如扩大形参类型，加个自带默认参数的模板形参等等。</p>
-</li>
-<li><p>前置声明来自命名空间 <code>std::</code> 的 symbol 时，其行为未定义。</p>
-</li>
+<li><p>前置声明隐藏了依赖关系，头文件改动时，用户的代码会跳过必要的重新编译过程。</p></li>
+<li><p>前置声明可能会被库的后续更改所破坏。前置声明函数或模板有时会妨碍头文件开发者变动其 API. 例如扩大形参类型，加个自带默认参数的模板形参等等。</p></li>
+<li><p>前置声明来自命名空间 <code>std::</code> 的 symbol 时，其行为未定义。</p></li>
 <li><p>很难判断什么时候该用前置声明，什么时候该用 <code>#include</code> 。极端情况下，用前置声明代替 <code>includes</code> 甚至都会暗暗地改变代码的含义：</p>
 <blockquote>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// b.h:</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">B</span> &#123;</span>&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">D</span> :</span> B &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good_user.cc:</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;b.h&quot;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(B*)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">void</span>*)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(D* x)</span> </span>&#123; <span class="built_in">f</span>(x); &#125;  <span class="comment">// calls f(B*)</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+</blockquote></li>
 </ul>
 <blockquote>
 <p>如果 <code>#include</code> 被 <code>B</code> 和 <code>D</code> 的前置声明替代， <code>test()</code> 就会调用 <code>f(void*)</code> .</p>
@@ -580,7 +583,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </blockquote>
 <p>至于什么时候包含头文件，参见 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/headers/##name-and-order-of-includes">1.5. #include 的路径及顺序</a> 。</p>
-<h3 id="1-4-内联函数"><a href="#1-4-内联函数" class="headerlink" title="1.4. 内联函数"></a>1.4. 内联函数</h3><p>Tip</p>
+<h3 id="内联函数">1.4. 内联函数</h3>
+<p>Tip</p>
 <p>只有当函数只有 10 行甚至更少时才将其定义为内联函数.</p>
 <p><strong>定义:</strong></p>
 <blockquote>
@@ -600,13 +604,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>另一个实用的经验准则: 内联那些包含循环或 <code>switch</code> 语句的函数常常是得不偿失 (除非在大多数情况下, 这些循环或 <code>switch</code> 语句从不被执行).</p>
 <p>有些函数即使声明为内联的也不一定会被编译器内联, 这点很重要; 比如虚函数和递归函数就不会被正常内联. 通常, 递归函数不应该声明成内联函数.（YuleFox 注: 递归调用堆栈的展开并不像循环那么简单, 比如递归层数在编译时可能是未知的, 大多数编译器都不支持内联递归函数). 虚函数内联的主要原因则是想把它的函数体放在类定义内, 为了图个方便, 抑或是当作文档描述其行为, 比如精短的存取函数.</p>
 </blockquote>
-<h3 id="1-5-include-的路径及顺序"><a href="#1-5-include-的路径及顺序" class="headerlink" title="1.5. #include 的路径及顺序"></a>1.5. <code>#include</code> 的路径及顺序</h3><p>Tip</p>
+<h3 id="include-的路径及顺序">1.5. <code>#include</code> 的路径及顺序</h3>
+<p>Tip</p>
 <p>使用标准的头文件包含顺序可增强可读性, 避免隐藏依赖: 相关头文件, C 库, C++ 库, 其他库的 .h, 本项目内的 .h.</p>
 <p>项目内头文件应按照项目源代码目录树结构排列, 避免使用 UNIX 特殊的快捷目录 <code>.</code> (当前目录) 或 <code>..</code> (上级目录). 例如, <code>google-awesome-project/src/base/logging.h</code> 应该按如下方式包含:</p>
 <figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;base/logging.h&quot;</span></span></span><br></pre></td></tr></table></figure>
 <p>又如, <code>dir/foo.cc</code> 或 <code>dir/foo_test.cc</code> 的主要作用是实现或测试 <code>dir2/foo2.h</code> 的功能, <code>foo.cc</code> 中包含头文件的次序如下:</p>
 <blockquote>
-<ol>
+<ol type="1">
 <li><code>dir2/foo2.h</code> (优先位置, 详情如下)</li>
 <li>C 系统文件</li>
 <li>C++ 系统文件</li>
@@ -627,7 +632,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;foo/public/fooserver.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;base/port.h&quot;</span>  <span class="comment">// For LANG_CXX11.</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> LANG_CXX11</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;initializer_list&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>  <span class="comment">// LANG_CXX11</span></span></span><br></pre></td></tr></table></figure>
 </blockquote>
-<h3 id="译者-YuleFox-笔记"><a href="#译者-YuleFox-笔记" class="headerlink" title="译者 (YuleFox) 笔记"></a>译者 (YuleFox) 笔记</h3><ol>
+<h3 id="译者-yulefox-笔记">译者 (YuleFox) 笔记</h3>
+<ol type="1">
 <li>避免多重包含是学编程时最基本的要求;</li>
 <li>前置声明是为了降低编译依赖，防止修改一个头文件引发多米诺效应;</li>
 <li>内联函数的合理使用可提高代码执行效率;</li>
@@ -635,14 +641,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>标准化函数参数顺序可以提高可读性和易维护性 (对函数参数的堆栈空间有轻微影响, 我以前大多是相同类型放在一起);</li>
 <li>包含文件的名称使用 <code>.</code> 和 <code>..</code> 虽然方便却易混乱, 使用比较完整的项目路径看上去很清晰, 很条理, 包含文件的次序除了美观之外, 最重要的是可以减少隐藏依赖, 使每个头文件在 “最需要编译” (对应源文件处 :D) 的地方编译, 有人提出库文件放在最后, 这样出错先是项目内的文件, 头文件都放在对应源文件的最前面, 这一点足以保证内部错误的及时发现了.</li>
 </ol>
-<h3 id="译者（acgtyrant）笔记"><a href="#译者（acgtyrant）笔记" class="headerlink" title="译者（acgtyrant）笔记"></a>译者（acgtyrant）笔记</h3><ol>
+<h3 id="译者acgtyrant笔记">译者（acgtyrant）笔记</h3>
+<ol type="1">
 <li>原来还真有项目用 <code>##includes</code> 来插入文本，且其文件扩展名 <code>.inc</code> 看上去也很科学。</li>
 <li>Google 已经不再提倡 <code>-inl.h</code> 用法。</li>
 <li>注意，前置声明的类是不完全类型（incomplete type），我们只能定义指向该类型的指针或引用，或者声明（但不能定义）以不完全类型作为参数或者返回类型的函数。毕竟编译器不知道不完全类型的定义，我们不能创建其类的任何对象，也不能声明成类内部的数据成员。</li>
 <li>类内部的函数一般会自动内联。所以某函数一旦不需要内联，其定义就不要再放在头文件里，而是放到对应的 <code>.cc</code> 文件里。这样可以保持头文件的类相当精炼，也很好地贯彻了声明与定义分离的原则。</li>
 <li>在 <code>#include</code> 中插入空行以分割相关头文件, C 库, C++ 库, 其他库的 <code>.h</code> 和本项目内的 <code>.h</code> 是个好习惯。</li>
 </ol>
-<h2 id="2-作用域"><a href="#2-作用域" class="headerlink" title="2. 作用域"></a>2. 作用域</h2><h3 id="2-1-命名空间"><a href="#2-1-命名空间" class="headerlink" title="2.1. 命名空间"></a>2.1. 命名空间</h3><p>Tip</p>
+<h2 id="作用域">2. 作用域</h2>
+<h3 id="命名空间">2.1. 命名空间</h3>
+<p>Tip</p>
 <p>鼓励在 <code>.cc</code> 文件内使用匿名命名空间或 <code>static</code> 声明. 使用具名的命名空间时, 其名称可基于项目名或相对路径. 禁止使用 using 指示（using-directive）。禁止使用内联命名空间（inline namespace）。</p>
 <p><strong>定义:</strong></p>
 <blockquote>
@@ -667,36 +676,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>根据下文将要提到的策略合理使用命名空间.</p>
 <ul>
-<li><p>遵守 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/scoping/naming.html##namespace-names">命名空间命名</a> 中的规则。</p>
-</li>
-<li><p>像之前的几个例子中一样，在命名空间的最后注释出命名空间的名字。</p>
-</li>
+<li><p>遵守 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/scoping/naming.html##namespace-names">命名空间命名</a> 中的规则。</p></li>
+<li><p>像之前的几个例子中一样，在命名空间的最后注释出命名空间的名字。</p></li>
 <li><p>用命名空间把文件包含, <a target="_blank" rel="noopener" href="https://gflags.github.io/gflags/">gflags</a> 的声明/定义, 以及类的前置声明以外的整个源文件封装起来, 以区别于其它命名空间:</p>
 <blockquote>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// .h 文件</span></span><br><span class="line"><span class="keyword">namespace</span> mynamespace &#123;</span><br><span class="line"><span class="comment">// 所有声明都置于命名空间中</span></span><br><span class="line"><span class="comment">// 注意不要使用缩进</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    ...</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Foo</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace mynamespace</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// .cc 文件</span></span><br><span class="line"><span class="keyword">namespace</span> mynamespace &#123;</span><br><span class="line"><span class="comment">// 函数定义都置于命名空间中</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MyClass::Foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">&#125; <span class="comment">// namespace mynamespace</span></span><br></pre></td></tr></table></figure>
 <p>更复杂的 <code>.cc</code> 文件包含更多, 更复杂的细节, 比如 gflags 或 using 声明。</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;a.h&quot;</span></span></span><br><span class="line"><span class="built_in">DEFINE_FLAG</span>(<span class="keyword">bool</span>, someflag, <span class="literal">false</span>, <span class="string">&quot;dummy flag&quot;</span>);</span><br><span class="line"><span class="keyword">namespace</span> a &#123;</span><br><span class="line"></span><br><span class="line">...code <span class="keyword">for</span> a...                <span class="comment">// 左对齐</span></span><br><span class="line"></span><br><span class="line">&#125; <span class="comment">// namespace a</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>不要在命名空间 <code>std</code> 内声明任何东西, 包括标准库的类前置声明. 在 <code>std</code> 命名空间声明实体是未定义的行为, 会导致如不可移植. 声明标准库下的实体, 需要包含对应的头文件.</p>
-</li>
+</blockquote></li>
+<li><p>不要在命名空间 <code>std</code> 内声明任何东西, 包括标准库的类前置声明. 在 <code>std</code> 命名空间声明实体是未定义的行为, 会导致如不可移植. 声明标准库下的实体, 需要包含对应的头文件.</p></li>
 <li><p>不应该使用 <em>using 指示</em> 引入整个命名空间的标识符号。</p>
 <blockquote>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 禁止 —— 污染命名空间</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> foo;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+</blockquote></li>
 <li><p>不要在头文件中使用 <em>命名空间别名</em> 除非显式标记内部命名空间使用。因为任何在头文件中引入的命名空间都会成为公开API的一部分。</p>
 <blockquote>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在 .cc 中使用别名缩短常用的命名空间</span></span><br><span class="line"><span class="keyword">namespace</span> baz = ::foo::bar::baz;</span><br></pre></td></tr></table></figure>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在 .h 中使用别名缩短常用的命名空间</span></span><br><span class="line"><span class="keyword">namespace</span> librarian &#123;</span><br><span class="line"><span class="keyword">namespace</span> impl &#123;  <span class="comment">// 仅限内部使用</span></span><br><span class="line"><span class="keyword">namespace</span> sidetable = ::pipeline_diagnostics::sidetable;</span><br><span class="line">&#125;  <span class="comment">// namespace impl</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">my_inline_function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 限制在一个函数中的命名空间别名</span></span><br><span class="line">  <span class="keyword">namespace</span> baz = ::foo::bar::baz;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line">&#125;  <span class="comment">// namespace librarian</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>禁止用内联命名空间</p>
-</li>
+</blockquote></li>
+<li><p>禁止用内联命名空间</p></li>
 </ul>
 </blockquote>
-<h3 id="2-2-匿名命名空间和静态变量"><a href="#2-2-匿名命名空间和静态变量" class="headerlink" title="2.2. 匿名命名空间和静态变量"></a>2.2. 匿名命名空间和静态变量</h3><p>Tip</p>
+<h3 id="匿名命名空间和静态变量">2.2. 匿名命名空间和静态变量</h3>
+<p>Tip</p>
 <p>在 <code>.cc</code> 文件中定义一个不需要被外部引用的变量时，可以将它们放在匿名命名空间或声明为 <code>static</code> 。但是不要在 <code>.h</code> 文件中这么做。</p>
 <p><strong>定义:</strong></p>
 <blockquote>
@@ -708,7 +711,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>匿名命名空间的声明和具名的格式相同，在最后注释上 <code>namespace</code> :</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line">...</span><br><span class="line">&#125;  <span class="comment">// namespace</span></span><br></pre></td></tr></table></figure>
 </blockquote>
-<h3 id="2-3-非成员函数、静态成员函数和全局函数"><a href="#2-3-非成员函数、静态成员函数和全局函数" class="headerlink" title="2.3. 非成员函数、静态成员函数和全局函数"></a>2.3. 非成员函数、静态成员函数和全局函数</h3><p>Tip</p>
+<h3 id="非成员函数静态成员函数和全局函数">2.3. 非成员函数、静态成员函数和全局函数</h3>
+<p>Tip</p>
 <p>使用静态成员函数或命名空间内的非成员函数, 尽量不要用裸的全局函数. 将一系列函数直接置于命名空间中，不要用类的静态方法模拟出命名空间的效果，类的静态方法应当和类的实例或静态数据紧密相关.</p>
 <p><strong>优点:</strong></p>
 <blockquote>
@@ -727,7 +731,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>定义在同一编译单元的函数, 被其他编译单元直接调用可能会引入不必要的耦合和链接时依赖; 静态成员函数对此尤其敏感. 可以考虑提取到新类中, 或者将函数置于独立库的命名空间内.</p>
 <p>如果你必须定义非成员函数, 又只是在 <code>.cc</code> 文件中使用它, 可使用匿名 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/scoping/##namespaces">2.1. 命名空间</a> 或 <code>static</code> 链接关键字 (如 <code>static int Foo() &#123;...&#125;</code>) 限定其作用域.</p>
 </blockquote>
-<h3 id="2-4-局部变量"><a href="#2-4-局部变量" class="headerlink" title="2.4. 局部变量"></a>2.4. 局部变量</h3><p>Tip</p>
+<h3 id="局部变量">2.4. 局部变量</h3>
+<p>Tip</p>
 <p>将函数变量尽可能置于最小作用域内, 并在变量声明时进行初始化.</p>
 <p>C++ 允许在函数的任何位置声明变量. 我们提倡在尽可能小的作用域中声明变量, 离第一次使用越近越好. 这使得代码浏览者更容易定位变量声明的位置, 了解变量的类型和初始值. 特别是，应使用初始化的方式替代声明再赋值, 比如:</p>
 <blockquote>
@@ -742,7 +747,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 低效的实现</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">    Foo f;                  <span class="comment">// 构造函数和析构函数分别调用 1000000 次!</span></span><br><span class="line">    f.<span class="built_in">DoSomething</span>(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在循环作用域外面声明这类变量要高效的多:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Foo f;                      <span class="comment">// 构造函数和析构函数只调用 1 次</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">    f.<span class="built_in">DoSomething</span>(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-5-静态和全局变量"><a href="#2-5-静态和全局变量" class="headerlink" title="2.5. 静态和全局变量"></a>2.5. 静态和全局变量</h3><p>Tip</p>
+<h3 id="静态和全局变量">2.5. 静态和全局变量</h3>
+<p>Tip</p>
 <p>禁止定义静态储存周期非POD变量，禁止使用含有副作用的函数初始化POD全局变量，因为多编译单元中的静态变量执行时的构造和析构顺序是未明确的，这将导致代码的不可移植。</p>
 <p>禁止使用类的 <a target="_blank" rel="noopener" href="http://zh.cppreference.com/w/cpp/language/storage_duration##.E5.AD.98.E5.82.A8.E6.9C.9F">静态储存周期</a> 变量：由于构造和析构函数调用顺序的不确定性，它们会导致难以发现的 bug 。不过 <code>constexpr</code> 变量除外，毕竟它们又不涉及动态初始化或析构。</p>
 <p>静态生存周期的对象，即包括了全局变量，静态变量，静态类成员变量和函数静态变量，都必须是原生数据类型 (POD : Plain Old Data): 即 int, char 和 float, 以及 POD 类型的指针、数组和结构体。</p>
@@ -757,21 +763,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>Note</p>
 <p>Yang.Y 译注:</p>
 <p>上文提及的静态变量泛指静态生存周期的对象, 包括: 全局变量, 静态变量, 静态类成员变量, 以及函数静态变量.</p>
-<h3 id="译者-YuleFox-笔记-1"><a href="#译者-YuleFox-笔记-1" class="headerlink" title="译者 (YuleFox) 笔记"></a>译者 (YuleFox) 笔记</h3><ol>
+<h3 id="译者-yulefox-笔记-1">译者 (YuleFox) 笔记</h3>
+<ol type="1">
 <li><code>cc</code> 中的匿名命名空间可避免命名冲突, 限定作用域, 避免直接使用 <code>using</code> 关键字污染命名空间;</li>
 <li>嵌套类符合局部使用原则, 只是不能在其他头文件中前置声明, 尽量不要 <code>public</code>;</li>
 <li>尽量不用全局函数和全局变量, 考虑作用域和命名空间限制, 尽量单独形成编译单元;</li>
 <li>多线程中的全局变量 (含静态成员变量) 不要使用 <code>class</code> 类型 (含 STL 容器), 避免不明确行为导致的 bug.</li>
 <li>作用域的使用, 除了考虑名称污染, 可读性之外, 主要是为降低耦合, 提高编译/执行效率.</li>
 </ol>
-<h3 id="译者（acgtyrant）笔记-1"><a href="#译者（acgtyrant）笔记-1" class="headerlink" title="译者（acgtyrant）笔记"></a>译者（acgtyrant）笔记</h3><ol>
+<h3 id="译者acgtyrant笔记-1">译者（acgtyrant）笔记</h3>
+<ol type="1">
 <li>注意「using 指示（using-directive）」和「using 声明（using-declaration）」的区别。</li>
 <li>匿名命名空间说白了就是文件作用域，就像 C static 声明的作用域一样，后者已经被 C++ 标准提倡弃用。</li>
 <li>局部变量在声明的同时进行显式值初始化，比起隐式初始化再赋值的两步过程要高效，同时也贯彻了计算机体系结构重要的概念「局部性（locality）」。</li>
 <li>注意别在循环犯大量构造和析构的低级错误。</li>
 </ol>
-<h2 id="3-类"><a href="#3-类" class="headerlink" title="3. 类"></a>3. 类</h2><p>类是 C++ 中代码的基本单元. 显然, 它们被广泛使用. 本节列举了在写一个类时的主要注意事项.</p>
-<h3 id="3-1-构造函数的职责"><a href="#3-1-构造函数的职责" class="headerlink" title="3.1. 构造函数的职责"></a>3.1. 构造函数的职责</h3><p><strong>总述</strong></p>
+<h2 id="类">3. 类</h2>
+<p>类是 C++ 中代码的基本单元. 显然, 它们被广泛使用. 本节列举了在写一个类时的主要注意事项.</p>
+<h3 id="构造函数的职责">3.1. 构造函数的职责</h3>
+<p><strong>总述</strong></p>
 <p>不要在构造函数中调用虚函数, 也不要在无法报出错误时进行可能失败的初始化.</p>
 <p><strong>定义</strong></p>
 <p>在构造函数中可以进行各种初始化操作.</p>
@@ -790,7 +800,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>结论</strong></p>
 <p>构造函数不允许调用虚函数. 如果代码允许, 直接终止程序是一个合适的处理错误的方式. 否则, 考虑用 <code>Init()</code> 方法或工厂函数.</p>
 <p>构造函数不得调用虚函数, 或尝试报告一个非致命错误. 如果对象需要进行有意义的 (non-trivial) 初始化, 考虑使用明确的 Init() 方法或使用工厂模式. Avoid <code>Init()</code> methods on objects with no other states that affect which public methods may be called (此类形式的半构造对象有时无法正确工作).</p>
-<h3 id="3-2-隐式类型转换"><a href="#3-2-隐式类型转换" class="headerlink" title="3.2. 隐式类型转换"></a>3.2. 隐式类型转换</h3><p><strong>总述</strong></p>
+<h3 id="隐式类型转换">3.2. 隐式类型转换</h3>
+<p><strong>总述</strong></p>
 <p>不要定义隐式类型转换. 对于转换运算符和单参数构造函数, 请使用 <code>explicit</code> 关键字.</p>
 <p><strong>定义</strong></p>
 <p>隐式类型转换允许一个某种类型 (称作 <em>源类型</em>) 的对象被用于需要另一种类型 (称作 <em>目的类型</em>) 的位置, 例如, 将一个 <code>int</code> 类型的参数传递给需要 <code>double</code> 类型的函数.</p>
@@ -818,7 +829,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>结论</strong></p>
 <p>在类型定义中, 类型转换运算符和单参数构造函数都应当用 <code>explicit</code> 进行标记. 一个例外是, 拷贝和移动构造函数不应当被标记为 <code>explicit</code>, 因为它们并不执行类型转换. 对于设计目的就是用于对其他类型进行透明包装的类来说, 隐式类型转换有时是必要且合适的. 这时应当联系项目组长并说明特殊情况.</p>
 <p>不能以一个参数进行调用的构造函数不应当加上 <code>explicit</code>. 接受一个 <code>std::initializer_list</code> 作为参数的构造函数也应当省略 <code>explicit</code>, 以便支持拷贝初始化 (例如 <code>MyType m = &#123;1, 2&#125;;)</code> .</p>
-<h3 id="3-3-可拷贝类型和可移动类型"><a href="#3-3-可拷贝类型和可移动类型" class="headerlink" title="3.3. 可拷贝类型和可移动类型"></a>3.3. 可拷贝类型和可移动类型</h3><p><strong>总述</strong></p>
+<h3 id="可拷贝类型和可移动类型">3.3. 可拷贝类型和可移动类型</h3>
+<p><strong>总述</strong></p>
 <p>如果你的类型需要, 就让它们支持拷贝 / 移动. 否则, 就把隐式产生的拷贝和移动函数禁用.</p>
 <p><strong>定义</strong></p>
 <p>可拷贝类型允许对象在初始化时得到来自相同类型的另一对象的值, 或在赋值时被赋予相同类型的另一对象的值, 同时不改变源对象的值. 对于用户定义的类型, 拷贝操作一般通过拷贝构造函数与拷贝赋值操作符定义. <code>string</code> 类型就是一个可拷贝类型的例子.</p>
@@ -838,7 +850,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>由于存在对象切割的风险, 不要为任何有可能有派生类的对象提供赋值操作或者拷贝 / 移动构造函数 (当然也不要继承有这样的成员函数的类). 如果你的基类需要可复制属性, 请提供一个 <code>public virtual Clone()</code> 和一个 <code>protected</code> 的拷贝构造函数以供派生类实现.</p>
 <p>如果你的类不需要拷贝 / 移动操作, 请显式地通过在 <code>public</code> 域中使用 <code>= delete</code> 或其他手段禁用之.</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// MyClass is neither copyable nor movable.</span></span><br><span class="line"><span class="built_in">MyClass</span>(<span class="keyword">const</span> MyClass&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">MyClass&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> MyClass&amp;) = delee;</span><br></pre></td></tr></table></figure>
-<h3 id="3-4-结构体-VS-类"><a href="#3-4-结构体-VS-类" class="headerlink" title="3.4. 结构体 VS. 类"></a>3.4. 结构体 VS. 类</h3><p><strong>总述</strong></p>
+<h3 id="结构体-vs.-类">3.4. 结构体 VS. 类</h3>
+<p><strong>总述</strong></p>
 <p>仅当只有数据成员时使用 <code>struct</code>, 其它一概使用 <code>class</code>.</p>
 <p><strong>说明</strong></p>
 <p>在 C++ 中 <code>struct</code> 和 <code>class</code> 关键字几乎含义一样. 我们为这两个关键字添加我们自己的语义理解, 以便为定义的数据类型选择合适的关键字.</p>
@@ -846,7 +859,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>如果需要更多的函数功能, <code>class</code> 更适合. 如果拿不准, 就用 <code>class</code>.</p>
 <p>为了和 STL 保持一致, 对于仿函数等特性可以不用 <code>class</code> 而是使用 <code>struct</code>.</p>
 <p>注意: 类和结构体的成员变量使用不同的 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##variable-names">命名规则</a>.</p>
-<h3 id="3-5-继承"><a href="#3-5-继承" class="headerlink" title="3.5. 继承"></a>3.5. 继承</h3><p><strong>总述</strong></p>
+<h3 id="继承">3.5. 继承</h3>
+<p><strong>总述</strong></p>
 <p>使用组合 (YuleFox 注: 这一点也是 GoF 在 &lt;<Design patterns>&gt; 里反复强调的) 常常比使用继承更合理. 如果使用继承的话, 定义为 <code>public</code> 继承.</Design></p>
 <p><strong>定义</strong></p>
 <p>当子类继承基类时, 子类包含了父基类所有数据及操作的定义. C++ 实践中, 继承主要用于两种场合: 实现继承, 子类继承父类的实现代码; <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/##interface">接口继承</a>, 子类仅继承父类的方法名称.</p>
@@ -860,7 +874,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>必要的话, 析构函数声明为 <code>virtual</code>. 如果你的类有虚函数, 则析构函数也应该为虚函数.</p>
 <p>对于可能被子类访问的成员函数, 不要过度使用 <code>protected</code> 关键字. 注意, 数据成员都必须是 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/##access-control">私有的</a>.</p>
 <p>对于重载的虚函数或虚析构函数, 使用 <code>override</code>, 或 (较不常用的) <code>final</code> 关键字显式地进行标记. 较早 (早于 C++11) 的代码可能会使用 <code>virtual</code> 关键字作为不得已的选项. 因此, 在声明重载时, 请使用 <code>override</code>, <code>final</code> 或 <code>virtual</code> 的其中之一进行标记. 标记为 <code>override</code> 或 <code>final</code> 的析构函数如果不是对基类虚函数的重载的话, 编译会报错, 这有助于捕获常见的错误. 这些标记起到了文档的作用, 因为如果省略这些关键字, 代码阅读者不得不检查所有父类, 以判断该函数是否是虚函数.</p>
-<h3 id="3-6-多重继承"><a href="#3-6-多重继承" class="headerlink" title="3.6. 多重继承"></a>3.6. 多重继承</h3><p><strong>总述</strong></p>
+<h3 id="多重继承">3.6. 多重继承</h3>
+<p><strong>总述</strong></p>
 <p>真正需要用到多重实现继承的情况少之又少. 只在以下情况我们才允许多重继承: 最多只有一个基类是非抽象类; 其它基类都是以 <code>Interface</code> 为后缀的 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/##interface">纯接口类</a>.</p>
 <p><strong>定义</strong></p>
 <p>多重继承允许子类拥有多个基类. 要将作为 <em>纯接口</em> 的基类和具有 <em>实现</em> 的基类区别开来.</p>
@@ -872,7 +887,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>只有当所有父类除第一个外都是 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/##interface">纯接口类</a> 时, 才允许使用多重继承. 为确保它们是纯接口, 这些类必须以 <code>Interface</code> 为后缀.</p>
 <p><strong>注意</strong></p>
 <p>关于该规则, Windows 下有个 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/exceptions/##windows-code">特例</a>.</p>
-<h3 id="3-7-接口"><a href="#3-7-接口" class="headerlink" title="3.7. 接口"></a>3.7. 接口</h3><p><strong>总述</strong></p>
+<h3 id="接口">3.7. 接口</h3>
+<p><strong>总述</strong></p>
 <p>接口是指满足特定条件的类, 这些类以 <code>Interface</code> 为后缀 (不强制).</p>
 <p><strong>定义</strong></p>
 <p>当一个类满足以下要求时, 称之为纯接口:</p>
@@ -889,10 +905,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><code>Interface</code> 后缀增加了类名长度, 为阅读和理解带来不便. 同时, 接口属性作为实现细节不应暴露给用户.</p>
 <p><strong>结论</strong></p>
 <p>只有在满足上述条件时, 类才以 <code>Interface</code> 结尾, 但反过来, 满足上述需要的类未必一定以 <code>Interface</code> 结尾.</p>
-<h3 id="3-8-运算符重载"><a href="#3-8-运算符重载" class="headerlink" title="3.8. 运算符重载"></a>3.8. 运算符重载</h3><p><strong>总述</strong></p>
+<h3 id="运算符重载">3.8. 运算符重载</h3>
+<p><strong>总述</strong></p>
 <p>除少数特定环境外, 不要重载运算符. 也不要创建用户定义字面量.</p>
 <p><strong>定义</strong></p>
-<p>C++ 允许用户通过使用 <code>operator</code> 关键字 <a target="_blank" rel="noopener" href="http://en.cppreference.com/w/cpp/language/operators">对内建运算符进行重载定义</a> , 只要其中一个参数是用户定义的类型. <code>operator</code> 关键字还允许用户使用 <code>operator&quot;&quot;</code> 定义新的字面运算符, 并且定义类型转换函数, 例如 <code>operator bool()</code>.</p>
+<p>C++ 允许用户通过使用 <code>operator</code> 关键字 <a target="_blank" rel="noopener" href="http://en.cppreference.com/w/cpp/language/operators">对内建运算符进行重载定义</a> , 只要其中一个参数是用户定义的类型. <code>operator</code> 关键字还允许用户使用 <code>operator""</code> 定义新的字面运算符, 并且定义类型转换函数, 例如 <code>operator bool()</code>.</p>
 <p><strong>优点</strong></p>
 <p>重载运算符可以让代码更简洁易懂, 也使得用户定义的类型和内建类型拥有相似的行为. 重载运算符对于某些运算来说是符合符合语言习惯的名称 (例如 <code>==</code>, <code>&lt;</code>, <code>=</code>, <code>&lt;&lt;</code>), 遵循这些语言约定可以让用户定义的类型更易读, 也能更好地和需要这些重载运算符的函数库进行交互操作.</p>
 <p>对于创建用户定义的类型的对象来说, 用户定义字面量是一种非常简洁的标记.</p>
@@ -913,17 +930,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>只有对用户自己定义的类型重载运算符. 更准确地说, 将它们和它们所操作的类型定义在同一个头文件中, <code>.cc</code> 中和命名空间中. 这样做无论类型在哪里都能够使用定义的运算符, 并且最大程度上避免了多重定义的风险. 如果可能的话, 请避免将运算符定义为模板, 因为此时它们必须对任何模板参数都能够作用. 如果你定义了一个运算符, 请将其相关且有意义的运算符都进行定义, 并且保证这些定义的语义是一致的. 例如, 如果你重载了 <code>&lt;</code>, 那么请将所有的比较运算符都进行重载, 并且保证对于同一组参数, <code>&lt;</code> 和 <code>&gt;</code> 不会同时返回 <code>true</code>.</p>
 <p>建议不要将不进行修改的二元运算符定义为成员函数. 如果一个二元运算符被定义为类成员, 这时隐式转换会作用域右侧的参数却不会作用于左侧. 这时会出现 <code>a &lt; b</code> 能够通过编译而 <code>b &lt; a</code> 不能的情况, 这是很让人迷惑的.</p>
 <p>不要为了避免重载操作符而走极端. 比如说, 应当定义 <code>==</code>, <code>=</code>, 和 <code>&lt;&lt;</code> 而不是 <code>Equals()</code>, <code>CopyFrom()</code> 和 <code>PrintTo()</code>. 反过来说, 不要只是为了满足函数库需要而去定义运算符重载. 比如说, 如果你的类型没有自然顺序, 而你要将它们存入 <code>std::set</code> 中, 最好还是定义一个自定义的比较运算符而不是重载 <code>&lt;</code>.</p>
-<p>不要重载 <code>&amp;&amp;</code>, <code>||</code>, <code>,</code> 或一元运算符 <code>&amp;</code>. 不要重载 <code>operator&quot;&quot;</code>, 也就是说, 不要引入用户定义字面量.</p>
+<p>不要重载 <code>&amp;&amp;</code>, <code>||</code>, <code>,</code> 或一元运算符 <code>&amp;</code>. 不要重载 <code>operator""</code>, 也就是说, 不要引入用户定义字面量.</p>
 <p>类型转换运算符在 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/##implicit-conversions">隐式类型转换</a> 一节有提及. <code>=</code> 运算符在 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/##copyable-and-movable-types">可拷贝类型和可移动类型</a> 一节有提及. 运算符 <code>&lt;&lt;</code> 在 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/##streams">流</a> 一节有提及. 同时请参见 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/##function-overloading">函数重载</a> 一节, 其中提到的的规则对运算符重载同样适用.</p>
-<h3 id="3-9-存取控制"><a href="#3-9-存取控制" class="headerlink" title="3.9. 存取控制"></a>3.9. 存取控制</h3><p><strong>总述</strong></p>
+<h3 id="存取控制">3.9. 存取控制</h3>
+<p><strong>总述</strong></p>
 <p>将 <em>所有</em> 数据成员声明为 <code>private</code>, 除非是 <code>static const</code> 类型成员 (遵循 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##constant-names">常量命名规则</a>). 处于技术上的原因, 在使用 <a target="_blank" rel="noopener" href="https://github.com/google/googletest">Google Test</a> 时我们允许测试固件类中的数据成员为 <code>protected</code>.</p>
-<h3 id="3-10-声明顺序"><a href="#3-10-声明顺序" class="headerlink" title="3.10. 声明顺序"></a>3.10. 声明顺序</h3><p><strong>总述</strong></p>
+<h3 id="声明顺序">3.10. 声明顺序</h3>
+<p><strong>总述</strong></p>
 <p>将相似的声明放在一起, 将 <code>public</code> 部分放在最前.</p>
 <p><strong>说明</strong></p>
 <p>类定义一般应以 <code>public:</code> 开始, 后跟 <code>protected:</code>, 最后是 <code>private:</code>. 省略空部分.</p>
 <p>在各个部分中, 建议将类似的声明放在一起, 并且建议以如下的顺序: 类型 (包括 <code>typedef</code>, <code>using</code> 和嵌套的结构体与类), 常量, 工厂函数, 构造函数, 赋值运算符, 析构函数, 其它函数, 数据成员.</p>
 <p>不要将大段的函数定义内联在类定义中. 通常，只有那些普通的, 或性能关键且短小的函数可以内联在类定义中. 参见 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/headers/##inline-functions">内联函数</a> 一节.</p>
-<h3 id="译者-YuleFox-笔记-2"><a href="#译者-YuleFox-笔记-2" class="headerlink" title="译者 (YuleFox) 笔记"></a>译者 (YuleFox) 笔记</h3><ol>
+<h3 id="译者-yulefox-笔记-2">译者 (YuleFox) 笔记</h3>
+<ol type="1">
 <li>不在构造函数中做太多逻辑相关的初始化;</li>
 <li>编译器提供的默认构造函数不会对变量进行初始化, 如果定义了其他构造函数, 编译器不再提供, 需要编码者自行提供默认构造函数;</li>
 <li>为避免隐式转换, 需将单参数构造函数声明为 <code>explicit</code>;</li>
@@ -937,18 +957,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>声明次序: <code>public</code> -&gt; <code>protected</code> -&gt; <code>private</code>;</li>
 <li>函数体尽量短小, 紧凑, 功能单一;</li>
 </ol>
-<h2 id="4-函数"><a href="#4-函数" class="headerlink" title="4. 函数"></a>4. 函数</h2><h3 id="4-1-参数顺序"><a href="#4-1-参数顺序" class="headerlink" title="4.1. 参数顺序"></a>4.1. 参数顺序</h3><p><strong>总述</strong></p>
+<h2 id="函数">4. 函数</h2>
+<h3 id="参数顺序">4.1. 参数顺序</h3>
+<p><strong>总述</strong></p>
 <p>函数的参数顺序为: 输入参数在先, 后跟输出参数.</p>
 <p><strong>说明</strong></p>
 <p>C/C++ 中的函数参数或者是函数的输入, 或者是函数的输出, 或兼而有之. 输入参数通常是值参或 <code>const</code> 引用, 输出参数或输入/输出参数则一般为非 <code>const</code> 指针. 在排列参数顺序时, 将所有的输入参数置于输出参数之前. 特别要注意, 在加入新参数时不要因为它们是新参数就置于参数列表最后, 而是仍然要按照前述的规则, 即将新的输入参数也置于输出参数之前.</p>
 <p>这并非一个硬性规定. 输入/输出参数 (通常是类或结构体) 让这个问题变得复杂. 并且, 有时候为了其他函数保持一致, 你可能不得不有所变通.</p>
-<h3 id="4-2-编写简短函数"><a href="#4-2-编写简短函数" class="headerlink" title="4.2. 编写简短函数"></a>4.2. 编写简短函数</h3><p><strong>总述</strong></p>
+<h3 id="编写简短函数">4.2. 编写简短函数</h3>
+<p><strong>总述</strong></p>
 <p>我们倾向于编写简短, 凝练的函数.</p>
 <p><strong>说明</strong></p>
 <p>我们承认长函数有时是合理的, 因此并不硬性限制函数的长度. 如果函数超过 40 行, 可以思索一下能不能在不影响程序结构的前提下对其进行分割.</p>
 <p>即使一个长函数现在工作的非常好, 一旦有人对其修改, 有可能出现新的问题, 甚至导致难以发现的 bug. 使函数尽量简短, 以便于他人阅读和修改代码.</p>
 <p>在处理代码时, 你可能会发现复杂的长函数. 不要害怕修改现有代码: 如果证实这些代码使用 / 调试起来很困难, 或者你只需要使用其中的一小段代码, 考虑将其分割为更加简短并易于管理的若干函数.</p>
-<h3 id="4-3-引用参数"><a href="#4-3-引用参数" class="headerlink" title="4.3. 引用参数"></a>4.3. 引用参数</h3><p><strong>总述</strong></p>
+<h3 id="引用参数">4.3. 引用参数</h3>
+<p><strong>总述</strong></p>
 <p>所有按引用传递的参数必须加上 <code>const</code>.</p>
 <p><strong>定义</strong></p>
 <p>在 C 语言中, 如果函数需要修改变量的值, 参数必须为指针, 如 <code>int foo(int *pval)</code>. 在 C++ 中, 函数还可以声明为引用参数: <code>int foo(int &amp;val)</code>.</p>
@@ -966,7 +990,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>函数要把指针或对地址的引用赋值给输入形参.</li>
 </ul>
 <p>总而言之, 大多时候输入形参往往是 <code>const T&amp;</code>. 若用 <code>const T*</code> 则说明输入另有处理. 所以若要使用 <code>const T*</code>, 则应给出相应的理由, 否则会使得读者感到迷惑.</p>
-<h3 id="4-4-函数重载"><a href="#4-4-函数重载" class="headerlink" title="4.4. 函数重载"></a>4.4. 函数重载</h3><p><strong>总述</strong></p>
+<h3 id="函数重载">4.4. 函数重载</h3>
+<p><strong>总述</strong></p>
 <p>若要使用函数重载, 则必须能让读者一看调用点就胸有成竹, 而不用花心思猜测调用的重载函数到底是哪一种. 这一规则也适用于构造函数.</p>
 <p><strong>定义</strong></p>
 <p>你可以编写一个参数类型为 <code>const string&amp;</code> 的函数, 然后用另一个参数类型为 <code>const char*</code> 的函数对其进行重载:</p>
@@ -977,7 +1002,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>如果函数单靠不同的参数类型而重载 (acgtyrant 注：这意味着参数数量不变), 读者就得十分熟悉 C++ 五花八门的匹配规则, 以了解匹配过程具体到底如何. 另外, 如果派生类只重载了某个函数的部分变体, 继承语义就容易令人困惑.</p>
 <p><strong>结论</strong></p>
 <p>如果打算重载一个函数, 可以试试改在函数名里加上参数信息. 例如, 用 <code>AppendString()</code> 和 <code>AppendInt()</code> 等, 而不是一口气重载多个 <code>Append()</code>. 如果重载函数的目的是为了支持不同数量的同一类型参数, 则优先考虑使用 <code>std::vector</code> 以便使用者可以用 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/##braced-initializer-list">列表初始化</a> 指定参数.</p>
-<h3 id="4-5-缺省参数"><a href="#4-5-缺省参数" class="headerlink" title="4.5. 缺省参数"></a>4.5. 缺省参数</h3><p><strong>总述</strong></p>
+<h3 id="缺省参数">4.5. 缺省参数</h3>
+<p><strong>总述</strong></p>
 <p>只允许在非虚函数中使用缺省参数, 且必须保证缺省参数的值始终一致. 缺省参数与 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/##function-overloading">函数重载</a> 遵循同样的规则. 一般情况下建议使用函数重载, 尤其是在缺省函数带来的可读性提升不能弥补下文中所提到的缺点的情况下.</p>
 <p><strong>优点</strong></p>
 <p>有些函数一般情况下使用默认参数, 但有时需要又使用非默认的参数. 缺省参数为这样的情形提供了便利, 使程序员不需要为了极少的例外情况编写大量的函数. 和函数重载相比, 缺省参数的语法更简洁明了, 减少了大量的样板代码, 也更好地区别了 “必要参数” 和 “可选参数”.</p>
@@ -989,7 +1015,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>结论</strong></p>
 <p>对于虚函数, 不允许使用缺省参数, 因为在虚函数中缺省参数不一定能正常工作. 如果在每个调用点缺省参数的值都有可能不同, 在这种情况下缺省函数也不允许使用. (例如, 不要写像 <code>void f(int n = counter++);</code> 这样的代码.)</p>
 <p>在其他情况下, 如果缺省参数对可读性的提升远远超过了以上提及的缺点的话, 可以使用缺省参数. 如果仍有疑惑, 就使用函数重载.</p>
-<h3 id="4-6-函数返回类型后置语法"><a href="#4-6-函数返回类型后置语法" class="headerlink" title="4.6. 函数返回类型后置语法"></a>4.6. 函数返回类型后置语法</h3><p><strong>总述</strong></p>
+<h3 id="函数返回类型后置语法">4.6. 函数返回类型后置语法</h3>
+<p><strong>总述</strong></p>
 <p>只有在常规写法 (返回类型前置) 不便于书写或不便于阅读时使用返回类型后置语法.</p>
 <p><strong>定义</strong></p>
 <p>C++ 现在允许两种不同的函数声明方式. 以往的写法是将返回类型置于函数名之前. 例如:</p>
@@ -1008,8 +1035,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>在已有的代码中有大量的函数声明, 你不可能把它们都用新的语法重写一遍. 因此实际的做法只能是使用旧的语法或者新旧混用. 在这种情况下, 只使用一种版本是相对来说更规整的形式.</p>
 <p><strong>结论</strong></p>
 <p>在大部分情况下, 应当继续使用以往的函数声明写法, 即将返回类型置于函数名前. 只有在必需的时候 (如 Lambda 表达式) 或者使用后置语法能够简化书写并且提高易读性的时候才使用新的返回类型后置语法. 但是后一种情况一般来说是很少见的, 大部分时候都出现在相当复杂的模板代码中, 而多数情况下不鼓励写这样 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/##template-metaprogramming">复杂的模板代码</a>.</p>
-<h2 id="5-来自-Google-的奇技"><a href="#5-来自-Google-的奇技" class="headerlink" title="5. 来自 Google 的奇技"></a>5. 来自 Google 的奇技</h2><p>Google 用了很多自己实现的技巧 / 工具使 C++ 代码更加健壮, 我们使用 C++ 的方式可能和你在其它地方见到的有所不同.</p>
-<h3 id="5-1-所有权与智能指针"><a href="#5-1-所有权与智能指针" class="headerlink" title="5.1. 所有权与智能指针"></a>5.1. 所有权与智能指针</h3><p>==总述==</p>
+<h2 id="来自-google-的奇技">5. 来自 Google 的奇技</h2>
+<p>Google 用了很多自己实现的技巧 / 工具使 C++ 代码更加健壮, 我们使用 C++ 的方式可能和你在其它地方见到的有所不同.</p>
+<h3 id="所有权与智能指针">5.1. 所有权与智能指针</h3>
+<p>==总述==</p>
 <p>动态分配出的对象最好有单一且固定的所有主, 并通过智能指针传递所有权.</p>
 <p>==定义==</p>
 <p>所有权是一种登记／管理动态内存和其它资源的技术. 动态分配对象的所有主是一个对象或函数, 后者负责确保当前者无用时就自动销毁前者. 所有权有时可以共享, 此时就由最后一个所有主来负责销毁它. 甚至也可以不用共享, 在代码中直接把所有权传递给其它对象.</p>
@@ -1040,19 +1069,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">std::unique_ptr&lt;Foo&gt; <span class="title">FooFactory</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FooConsumer</span><span class="params">(std::unique_ptr&lt;Foo&gt; ptr)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>如果没有很好的理由, 则不要使用共享所有权. 这里的理由可以是为了避免开销昂贵的拷贝操作, 但是只有当性能提升非常明显, 并且操作的对象是不可变的（比如说 <code>std::shared_ptr</code> ）时候, 才能这么做. 如果确实要使用共享所有权, 建议于使用 <code>std::shared_ptr</code> .</p>
 <p>不要使用 <code>std::auto_ptr</code>, 使用 <code>std::unique_ptr</code> 代替它.</p>
-<h3 id="5-2-Cpplint"><a href="#5-2-Cpplint" class="headerlink" title="5.2. Cpplint"></a>5.2. Cpplint</h3><p><strong>&gt; 总述</strong></p>
+<h3 id="cpplint">5.2. Cpplint</h3>
+<p><strong>&gt; 总述</strong></p>
 <p>使用 <code>cpplint.py</code> 检查风格错误.</p>
 <p><strong>&gt; 说明</strong></p>
 <p><code>cpplint.py</code> 是一个用来分析源文件, 能检查出多种风格错误的工具. 它不并完美, 甚至还会漏报和误报, 但它仍然是一个非常有用的工具. 在行尾加 <code>// NOLINT</code>, 或在上一行加 <code>// NOLINTNEXTLINE</code>, 可以忽略报错.</p>
 <p>某些项目会指导你如何使用他们的项目工具运行 <code>cpplint.py</code>. 如果你参与的项目没有提供, 你可以单独下载 <a target="_blank" rel="noopener" href="http://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py">cpplint.py</a>.</p>
-<h3 id="译者（acgtyrant）笔记-2"><a href="#译者（acgtyrant）笔记-2" class="headerlink" title="译者（acgtyrant）笔记"></a>译者（acgtyrant）笔记</h3><ol>
+<h3 id="译者acgtyrant笔记-2">译者（acgtyrant）笔记</h3>
+<ol type="1">
 <li>把智能指针当成对象来看待的话, 就很好领会它与所指对象之间的关系了.</li>
 <li>原来 Rust 的 Ownership 思想是受到了 C++ 智能指针的很大启发啊.</li>
 <li><code>scoped_ptr</code> 和 <code>auto_ptr</code> 已过时. 现在是 <code>shared_ptr</code> 和 <code>uniqued_ptr</code> 的天下了.</li>
 <li>按本文来说, 似乎除了智能指针, 还有其它所有权机制, 值得留意.</li>
 <li>Arch Linux 用户注意了, AUR 有对 cpplint 打包.</li>
 </ol>
-<h2 id="6-其他-C-特性"><a href="#6-其他-C-特性" class="headerlink" title="6. 其他 C++ 特性"></a>6. 其他 C++ 特性</h2><h3 id="6-1-引用参数"><a href="#6-1-引用参数" class="headerlink" title="6.1. 引用参数"></a>6.1. 引用参数</h3><p>==Tip==</p>
+<h2 id="其他-c-特性">6. 其他 C++ 特性</h2>
+<h3 id="引用参数-1">6.1. 引用参数</h3>
+<p>==Tip==</p>
 <p>所有按引用传递的参数必须加上 <code>const</code>.</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1080,7 +1113,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>总之大多时候输入形参往往是 <code>const T&amp;</code>. 若用 <code>const T*</code> 说明输入另有处理。所以若您要用 <code>const T*</code>, 则应有理有据，否则会害得读者误解。</p>
 </blockquote>
-<h3 id="6-2-右值引用"><a href="#6-2-右值引用" class="headerlink" title="6.2. 右值引用"></a>6.2. 右值引用</h3><p>==Tip==</p>
+<h3 id="右值引用">6.2. 右值引用</h3>
+<p>==Tip==</p>
 <p>只在定义移动构造函数与移动赋值操作时使用右值引用. 不要使用 <code>std::forward</code>.</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1101,7 +1135,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>只在定义移动构造函数与移动赋值操作时使用右值引用, 不要使用 <code>std::forward</code> 功能函数. 你可能会使用 <code>std::move</code> 来表示将值从一个对象移动而不是复制到另一个对象.</p>
 </blockquote>
-<h3 id="6-3-函数重载"><a href="#6-3-函数重载" class="headerlink" title="6.3. 函数重载"></a>6.3. 函数重载</h3><p>==Tip==</p>
+<h3 id="函数重载-1">6.3. 函数重载</h3>
+<p>==Tip==</p>
 <p>若要用好函数重载，最好能让读者一看调用点（call site）就胸有成竹，不用花心思猜测调用的重载函数到底是哪一种。该规则适用于构造函数。</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1122,7 +1157,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>如果您打算重载一个函数, 可以试试改在函数名里加上参数信息。例如，用 <code>AppendString()</code> 和 <code>AppendInt()</code> 等， 而不是一口气重载多个 <code>Append()</code>.</p>
 </blockquote>
-<h3 id="6-4-缺省参数"><a href="#6-4-缺省参数" class="headerlink" title="6.4. 缺省参数"></a>6.4. 缺省参数</h3><p>==Tip==</p>
+<h3 id="缺省参数-1">6.4. 缺省参数</h3>
+<p>==Tip==</p>
 <p>我们不允许使用缺省函数参数，少数极端情况除外。尽可能改用函数重载。</p>
 <p>==优点:==</p>
 <blockquote>
@@ -1142,7 +1178,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过空 AlphaNum 以支持四个形参</span></span><br><span class="line"><span class="function">string <span class="title">StrCat</span><span class="params">(<span class="keyword">const</span> AlphaNum &amp;a,</span></span></span><br><span class="line"><span class="params"><span class="function">              <span class="keyword">const</span> AlphaNum &amp;b = gEmptyAlphaNum,</span></span></span><br><span class="line"><span class="params"><span class="function">              <span class="keyword">const</span> AlphaNum &amp;c = gEmptyAlphaNum,</span></span></span><br><span class="line"><span class="params"><span class="function">              <span class="keyword">const</span> AlphaNum &amp;d = gEmptyAlphaNum)</span></span>;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </blockquote>
-<h3 id="6-5-变长数组和-alloca"><a href="#6-5-变长数组和-alloca" class="headerlink" title="6.5. 变长数组和 alloca()"></a>6.5. 变长数组和 alloca()</h3><p>==Tip==</p>
+<h3 id="变长数组和-alloca">6.5. 变长数组和 alloca()</h3>
+<p>==Tip==</p>
 <p>我们不允许使用变长数组和 <code>alloca()</code>.</p>
 <p>==优点:==</p>
 <blockquote>
@@ -1156,11 +1193,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>改用更安全的分配器（allocator），就像 <code>std::vector</code> 或 <code>std::unique_ptr</code>.</p>
 </blockquote>
-<h3 id="6-6-友元"><a href="#6-6-友元" class="headerlink" title="6.6. 友元"></a>6.6. 友元</h3><p>==Tip==</p>
+<h3 id="友元">6.6. 友元</h3>
+<p>==Tip==</p>
 <p>我们允许合理的使用友元类及友元函数.</p>
 <p>通常友元应该定义在同一文件内, 避免代码读者跑到其它文件查找使用该私有成员的类. 经常用到友元的一个地方是将 <code>FooBuilder</code> 声明为 <code>Foo</code> 的友元, 以便 <code>FooBuilder</code> 正确构造 <code>Foo</code> 的内部状态, 而无需将该状态暴露出来. 某些情况下, 将一个单元测试类声明成待测类的友元会很方便.</p>
 <p>友元扩大了 (但没有打破) 类的封装边界. 某些情况下, 相对于将类成员声明为 <code>public</code>, 使用友元是更好的选择, 尤其是如果你只允许另一个类访问该类的私有成员时. 当然, 大多数类都只应该通过其提供的公有成员进行互操作.</p>
-<h3 id="6-7-异常"><a href="#6-7-异常" class="headerlink" title="6.7. 异常"></a>6.7. 异常</h3><p>==Tip==</p>
+<h3 id="异常">6.7. 异常</h3>
+<p>==Tip==</p>
 <p>我们不使用 C++ 异常.</p>
 <p>==优点:==</p>
 <blockquote>
@@ -1190,7 +1229,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>对于 Windows 代码来说, 有个 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/exceptions/##windows-code">特例</a>.</p>
 </blockquote>
 <p>(YuleFox 注: 对于异常处理, 显然不是短短几句话能够说清楚的, 以构造函数为例, 很多 C++ 书籍上都提到当构造失败时只有异常可以处理, Google 禁止使用异常这一点, 仅仅是为了自身的方便, 说大了, 无非是基于软件管理成本上, 实际使用中还是自己决定)</p>
-<h3 id="6-8-运行时类型识别"><a href="#6-8-运行时类型识别" class="headerlink" title="6.8. 运行时类型识别"></a>6.8. 运行时类型识别</h3><p>==Tip==</p>
+<h3 id="运行时类型识别">6.8. 运行时类型识别</h3>
+<p>==Tip==</p>
 <p>我们禁止使用 RTTI.</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1219,7 +1259,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>一旦在类层级中加入新的子类, 像这样的代码往往会崩溃. 而且, 一旦某个子类的属性改变了, 你很难找到并修改所有受影响的代码块.</p>
 <p>不要去手工实现一个类似 RTTI 的方案. 反对 RTTI 的理由同样适用于这些方案, 比如带类型标签的类继承体系. 而且, 这些方案会掩盖你的真实意图.</p>
 </blockquote>
-<h3 id="6-9-类型转换"><a href="#6-9-类型转换" class="headerlink" title="6.9. 类型转换"></a>6.9. 类型转换</h3><p>==Tip==</p>
+<h3 id="类型转换">6.9. 类型转换</h3>
+<p>==Tip==</p>
 <p>使用 C++ 的类型转换, 如 <code>static_cast&lt;&gt;()</code>. 不要使用 <code>int y = (int)x</code> 或 <code>int y = int(x)</code> 等转换方式;</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1227,7 +1268,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <p>==优点:==</p>
 <blockquote>
-<p>C 语言的类型转换问题在于模棱两可的操作; 有时是在做强制转换 (如 <code>(int)3.5</code>), 有时是在做类型转换 (如 <code>(int)&quot;hello&quot;</code>). 另外, C++ 的类型转换在查找时更醒目.</p>
+<p>C 语言的类型转换问题在于模棱两可的操作; 有时是在做强制转换 (如 <code>(int)3.5</code>), 有时是在做类型转换 (如 <code>(int)"hello"</code>). 另外, C++ 的类型转换在查找时更醒目.</p>
 </blockquote>
 <p>==缺点:==</p>
 <blockquote>
@@ -1245,7 +1286,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <p>至于 <code>dynamic_cast</code> 参见 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/##rtti">6.8. 运行时类型识别</a>.</p>
 </blockquote>
-<h3 id="6-10-流"><a href="#6-10-流" class="headerlink" title="6.10. 流"></a>6.10. 流</h3><p>==Tip==</p>
+<h3 id="流">6.10. 流</h3>
+<p>==Tip==</p>
 <p>只在记录日志时使用流.</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1279,7 +1321,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>你可能会说, “把流封装一下就会比较好了”, 这儿可以, 其他地方呢? 而且不要忘了, 我们的目标是使语言更紧凑, 而不是添加一些别人需要学习的新装备.</p>
 <p>每一种方式都是各有利弊, “没有最好, 只有更适合”. 简单性原则告诫我们必须从中选择其一, 最后大多数决定采用 <code>printf + read/write</code>.</p>
 </blockquote>
-<h3 id="6-11-前置自增和自减"><a href="#6-11-前置自增和自减" class="headerlink" title="6.11. 前置自增和自减"></a>6.11. 前置自增和自减</h3><p>==Tip==</p>
+<h3 id="前置自增和自减">6.11. 前置自增和自减</h3>
+<p>==Tip==</p>
 <p>对于迭代器和其他模板对象使用前缀形式 (<code>++i</code>) 的自增, 自减运算符.</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1297,7 +1340,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>对简单数值 (非对象), 两种都无所谓. 对迭代器和模板类型, 使用前置自增 (自减).</p>
 </blockquote>
-<h3 id="6-12-const-用法"><a href="#6-12-const-用法" class="headerlink" title="6.12. const 用法"></a>6.12. <code>const</code> 用法</h3><p>==Tip==</p>
+<h3 id="const-用法">6.12. <code>const</code> 用法</h3>
+<p>==Tip==</p>
 <p>我们强烈建议你在任何可能的情况下都要使用 <code>const</code>. 此外有时改用 C++11 推出的 constexpr 更好。</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1329,7 +1373,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>有人喜欢 <code>int const *foo</code> 形式, 不喜欢 <code>const int* foo</code>, 他们认为前者更一致因此可读性也更好: 遵循了 <code>const</code> 总位于其描述的对象之后的原则. 但是一致性原则不适用于此, “不要过度使用” 的声明可以取消大部分你原本想保持的一致性. 将 <code>const</code> 放在前面才更易读, 因为在自然语言中形容词 (<code>const</code>) 是在名词 (<code>int</code>) 之前.</p>
 <p>这是说, 我们提倡但不强制 <code>const</code> 在前. 但要保持代码的一致性! (Yang.Y 注: 也就是不要在一些地方把 <code>const</code> 写在类型前面, 在其他地方又写在后面, 确定一种写法, 然后保持一致.)</p>
 </blockquote>
-<h3 id="6-13-constexpr-用法"><a href="#6-13-constexpr-用法" class="headerlink" title="6.13. constexpr 用法"></a>6.13. <code>constexpr</code> 用法</h3><p>==Tip==</p>
+<h3 id="constexpr-用法">6.13. <code>constexpr</code> 用法</h3>
+<p>==Tip==</p>
 <p>在 C++11 里，用 constexpr 来定义真正的常量，或实现常量初始化。</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1347,8 +1392,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>靠 constexpr 特性，方才实现了 C++ 在接口上打造真正常量机制的可能。好好用 constexpr 来定义真・常量以及支持常量的函数。避免复杂的函数定义，以使其能够与constexpr一起使用。 千万别痴心妄想地想靠 constexpr 来强制代码「内联」。</p>
 </blockquote>
-<h3 id="6-14-整型"><a href="#6-14-整型" class="headerlink" title="6.14. 整型"></a>6.14. 整型</h3><p>==Tip==</p>
-<p>C++ 内建整型中, 仅使用 <code>int</code>. 如果程序中需要不同大小的变量, 可以使用 <code>` 中长度精确的整型, 如</code>int16_t<code>.如果您的变量可能不小于 2^31 (2GiB), 就用 64 位变量比如</code>int64_t`. 此外要留意，哪怕您的值并不会超出 int 所能够表示的范围，在计算过程中也可能会溢出。所以拿不准时，干脆用更大的类型。</p>
+<h3 id="整型">6.14. 整型</h3>
+<p>==Tip==</p>
+<p>C++ 内建整型中, 仅使用 <code>int</code>. 如果程序中需要不同大小的变量, 可以使用 `<code>中长度精确的整型, 如</code>int16_t<code>.如果您的变量可能不小于 2^31 (2GiB), 就用 64 位变量比如</code>int64_t`. 此外要留意，哪怕您的值并不会超出 int 所能够表示的范围，在计算过程中也可能会溢出。所以拿不准时，干脆用更大的类型。</p>
 <p>==定义:==</p>
 <blockquote>
 <p>C++ 没有指定整型的大小. 通常人们假定 <code>short</code> 是 16 位, <code>int</code> 是 32 位, <code>long</code> 是 32 位, <code>long long</code> 是 64 位.</p>
@@ -1363,7 +1409,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <p>==结论:==</p>
 <blockquote>
-<p><code>` 定义了</code>int16_t<code>,</code>uint32_t<code>,</code>int64_t<code>等整型, 在需要确保整型大小时可以使用它们代替</code>short<code>,</code>unsigned long long<code>等. 在 C 整型中, 只使用</code>int<code>. 在合适的情况下, 推荐使用标准类型如</code>size_t<code>和</code>ptrdiff_t`.</p>
+<p>`<code>定义了</code>int16_t<code>,</code>uint32_t<code>,</code>int64_t<code>等整型, 在需要确保整型大小时可以使用它们代替</code>short<code>,</code>unsigned long long<code>等. 在 C 整型中, 只使用</code>int<code>. 在合适的情况下, 推荐使用标准类型如</code>size_t<code>和</code>ptrdiff_t`.</p>
 <p>如果已知整数不会太大, 我们常常会使用 <code>int</code>, 如循环计数. 在类似的情况下使用原生类型 <code>int</code>. 你可以认为 <code>int</code> 至少为 32 位, 但不要认为它会多于 <code>32</code> 位. 如果需要 64 位整型, 用 <code>int64_t</code> 或 <code>uint64_t</code>.</p>
 <p>对于大整数, 使用 <code>int64_t</code>.</p>
 <p>不要使用 <code>uint32_t</code> 等无符号整型, 除非你是在表示一个位组而不是一个数值, 或是你需要定义二进制补码溢出. 尤其是不要为了指出数值永不会为负, 而使用无符号类型. 相反, 你应该使用断言来保护数据.</p>
@@ -1379,29 +1425,67 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>上述循环永远不会退出! 有时 gcc 会发现该 bug 并报警, 但大部分情况下都不会. 类似的 bug 还会出现在比较有符合变量和无符号变量时. 主要是 C 的类型提升机制会致使无符号类型的行为出乎你的意料.</p>
 <p>因此, 使用断言来指出变量为非负数, 而不是使用无符号型!</p>
 </blockquote>
-<h3 id="6-15-64-位下的可移植性"><a href="#6-15-64-位下的可移植性" class="headerlink" title="6.15. 64 位下的可移植性"></a>6.15. 64 位下的可移植性</h3><p>==Tip==</p>
+<h3 id="位下的可移植性">6.15. 64 位下的可移植性</h3>
+<p>==Tip==</p>
 <p>代码应该对 64 位和 32 位系统友好. 处理打印, 比较, 结构体对齐时应切记:</p>
 <ul>
 <li><p>对于某些类型, <code>printf()</code> 的指示符在 32 位和 64 位系统上可移植性不是很好. C99 标准定义了一些可移植的格式化指示符. 不幸的是, MSVC 7.1 并非全部支持, 而且标准中也有所遗漏, 所以有时我们不得不自己定义一个丑陋的版本 (头文件 <code>inttypes.h</code> 仿标准风格):</p>
 <blockquote>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// printf macros for size_t, in the style of inttypes.h</span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">ifdef</span> _LP64</span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">define</span> __PRIS_PREFIX <span class="meta-string">&quot;z&quot;</span></span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">define</span> __PRIS_PREFIX</span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Use these macros after a % in a printf format string</span></span><br><span class="line"><span class="comment">// to get correct 32/64 bit behavior, like this:</span></span><br><span class="line"><span class="comment">// size_t size = records.size();</span></span><br><span class="line"><span class="comment">// printf(&quot;%&quot;PRIuS&quot;\n&quot;, size);</span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">define</span> PRIdS __PRIS_PREFIX <span class="meta-string">&quot;d&quot;</span></span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">define</span> PRIxS __PRIS_PREFIX <span class="meta-string">&quot;x&quot;</span></span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">define</span> PRIuS __PRIS_PREFIX <span class="meta-string">&quot;u&quot;</span></span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">define</span> PRIXS __PRIS_PREFIX <span class="meta-string">&quot;X&quot;</span></span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">define</span> PRIoS __PRIS_PREFIX <span class="meta-string">&quot;o&quot;</span></span></span><br></pre></td></tr></table></figure>
-<p>| 类型                      | 不要使用          | 使用                   | 备注           |<br>| ————————————- | ————————- | ——————————— | ——————— |<br>| <code>void *</code> (或其他指针类型) | <code>%lx</code>             | <code>%p</code>                   |                |<br>| <code>int64_t</code>                 | <code>%qd, %lld</code>       | <code>%&quot;PRId64&quot;</code>            |                |<br>| <code>uint64_t</code>                | <code>%qu, %llu, %llx</code> | <code>%&quot;PRIu64&quot;, %&quot;PRIx64&quot;</code> |                |<br>| <code>size_t</code>                  | <code>%u</code>              | <code>%&quot;PRIuS&quot;, %&quot;PRIxS&quot;</code>   | C99 规定 <code>%zu</code> |<br>| <code>ptrdiff_t</code>               | <code>%d</code>              | <code>%&quot;PRIdS&quot;</code>             | C99 规定 <code>%zd</code> |</p>
-<p>注意 <code>PRI*</code> 宏会被编译器扩展为独立字符串. 因此如果使用非常量的格式化字符串, 需要将宏的值而不是宏名插入格式中. 使用 <code>PRI*</code> 宏同样可以在 <code>%</code> 后包含长度指示符. 例如, <code>printf(&quot;x = %30&quot;PRIuS&quot;\n&quot;, x)</code> 在 32 位 Linux 上将被展开为 <code>printf(&quot;x = %30&quot; &quot;u&quot; &quot;\n&quot;, x)</code>, 编译器当成 <code>printf(&quot;x = %30u\n&quot;, x)</code> 处理 (Yang.Y 注: 这在 MSVC 6.0 上行不通, VC 6 编译器不会自动把引号间隔的多个字符串连接一个长字符串).</p>
-</blockquote>
-</li>
-<li><p>记住 <code>sizeof(void *) != sizeof(int)</code>. 如果需要一个指针大小的整数要用 <code>intptr_t</code>.</p>
-</li>
-<li><p>你要非常小心的对待结构体对齐, 尤其是要持久化到磁盘上的结构体 (Yang.Y 注: 持久化 - 将数据按字节流顺序保存在磁盘文件或数据库中). 在 64 位系统中, 任何含有 <code>int64_t</code>/<code>uint64_t</code> 成员的类/结构体, 缺省都以 8 字节在结尾对齐. 如果 32 位和 64 位代码要共用持久化的结构体, 需要确保两种体系结构下的结构体对齐一致. 大多数编译器都允许调整结构体对齐. gcc 中可使用 <code>__attribute__((packed))</code>. MSVC 则提供了 <code>##pragma pack()</code> 和 <code>__declspec(align())</code> (YuleFox 注, 解决方案的项目属性里也可以直接设置).</p>
-</li>
+<table>
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>不要使用</th>
+<th>使用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>void *</code> (或其他指针类型)</td>
+<td><code>%lx</code></td>
+<td><code>%p</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>int64_t</code></td>
+<td><code>%qd, %lld</code></td>
+<td><code>%"PRId64"</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>uint64_t</code></td>
+<td><code>%qu, %llu, %llx</code></td>
+<td><code>%"PRIu64", %"PRIx64"</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>size_t</code></td>
+<td><code>%u</code></td>
+<td><code>%"PRIuS", %"PRIxS"</code></td>
+<td>C99 规定 <code>%zu</code></td>
+</tr>
+<tr class="odd">
+<td><code>ptrdiff_t</code></td>
+<td><code>%d</code></td>
+<td><code>%"PRIdS"</code></td>
+<td>C99 规定 <code>%zd</code></td>
+</tr>
+</tbody>
+</table>
+<p>注意 <code>PRI*</code> 宏会被编译器扩展为独立字符串. 因此如果使用非常量的格式化字符串, 需要将宏的值而不是宏名插入格式中. 使用 <code>PRI*</code> 宏同样可以在 <code>%</code> 后包含长度指示符. 例如, <code>printf("x = %30"PRIuS"\n", x)</code> 在 32 位 Linux 上将被展开为 <code>printf("x = %30" "u" "\n", x)</code>, 编译器当成 <code>printf("x = %30u\n", x)</code> 处理 (Yang.Y 注: 这在 MSVC 6.0 上行不通, VC 6 编译器不会自动把引号间隔的多个字符串连接一个长字符串).</p>
+</blockquote></li>
+<li><p>记住 <code>sizeof(void *) != sizeof(int)</code>. 如果需要一个指针大小的整数要用 <code>intptr_t</code>.</p></li>
+<li><p>你要非常小心的对待结构体对齐, 尤其是要持久化到磁盘上的结构体 (Yang.Y 注: 持久化 - 将数据按字节流顺序保存在磁盘文件或数据库中). 在 64 位系统中, 任何含有 <code>int64_t</code>/<code>uint64_t</code> 成员的类/结构体, 缺省都以 8 字节在结尾对齐. 如果 32 位和 64 位代码要共用持久化的结构体, 需要确保两种体系结构下的结构体对齐一致. 大多数编译器都允许调整结构体对齐. gcc 中可使用 <code>__attribute__((packed))</code>. MSVC 则提供了 <code>##pragma pack()</code> 和 <code>__declspec(align())</code> (YuleFox 注, 解决方案的项目属性里也可以直接设置).</p></li>
 <li><p>创建 64 位常量时使用 LL 或 ULL 作为后缀, 如:</p>
 <blockquote>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int64_t</span> my_value = <span class="number">0x123456789</span>LL;</span><br><span class="line"><span class="keyword">uint64_t</span> my_mask = <span class="number">3ULL</span> &lt;&lt; <span class="number">48</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>如果你确实需要 32 位和 64 位系统具有不同代码, 可以使用 <code>##ifdef _LP64</code> 指令来切分 32/64 位代码. (尽量不要这么做, 如果非用不可, 尽量使修改局部化)</p>
-</li>
+</blockquote></li>
+<li><p>如果你确实需要 32 位和 64 位系统具有不同代码, 可以使用 <code>##ifdef _LP64</code> 指令来切分 32/64 位代码. (尽量不要这么做, 如果非用不可, 尽量使修改局部化)</p></li>
 </ul>
-<h3 id="6-16-预处理宏"><a href="#6-16-预处理宏" class="headerlink" title="6.16. 预处理宏"></a>6.16. 预处理宏</h3><p>==Tip==</p>
+<h3 id="预处理宏">6.16. 预处理宏</h3>
+<p>==Tip==</p>
 <p>使用宏时要非常谨慎, 尽量以内联函数, 枚举和常量代替之.</p>
 <p>宏意味着你和编译器看到的代码是不同的. 这可能会导致异常行为, 尤其因为宏具有全局作用域.</p>
 <p>值得庆幸的是, C++ 中, 宏不像在 C 中那么必不可少. 以往用宏展开性能关键的代码, 现在可以用内联函数替代. 用宏表示常量可被 <code>const</code> 变量代替. 用宏 “缩写” 长变量名可被引用代替. 用宏进行条件编译… 这个, 千万别这么做, 会令测试更加痛苦 (<code>##define</code> 防止头文件重包含当然是个特例).</p>
@@ -1416,18 +1500,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>不要用 <code>###</code> 处理函数，类和变量的名字。</li>
 </ul>
 </blockquote>
-<h3 id="6-17-0-nullptr-和-NULL"><a href="#6-17-0-nullptr-和-NULL" class="headerlink" title="6.17. 0, nullptr 和 NULL"></a>6.17. 0, <code>nullptr</code> 和 <code>NULL</code></h3><p>==Tip==</p>
-<p>整数用 <code>0</code>, 实数用 <code>0.0</code>, 指针用 <code>nullptr</code> 或 <code>NULL</code>, 字符 (串) 用 <code>&#39;\0&#39;</code>.</p>
+<h3 id="nullptr-和-null">6.17. 0, <code>nullptr</code> 和 <code>NULL</code></h3>
+<p>==Tip==</p>
+<p>整数用 <code>0</code>, 实数用 <code>0.0</code>, 指针用 <code>nullptr</code> 或 <code>NULL</code>, 字符 (串) 用 <code>'\0'</code>.</p>
 <p>整数用 <code>0</code>, 实数用 <code>0.0</code>, 这一点是毫无争议的.</p>
 <p>对于指针 (地址值), 到底是用 <code>0</code>, <code>NULL</code> 还是 <code>nullptr</code>. C++11 项目用 <code>nullptr</code>; C++03 项目则用 <code>NULL</code>, 毕竟它看起来像指针。实际上，一些 C++ 编译器对 <code>NULL</code> 的定义比较特殊，可以输出有用的警告，特别是 <code>sizeof(NULL)</code> 就和 <code>sizeof(0)</code> 不一样。</p>
-<p>字符 (串) 用 <code>&#39;\0&#39;</code>, 不仅类型正确而且可读性好.</p>
-<h3 id="6-18-sizeof"><a href="#6-18-sizeof" class="headerlink" title="6.18. sizeof"></a>6.18. sizeof</h3><p>==Tip==</p>
+<p>字符 (串) 用 <code>'\0'</code>, 不仅类型正确而且可读性好.</p>
+<h3 id="sizeof">6.18. sizeof</h3>
+<p>==Tip==</p>
 <p>尽可能用 <code>sizeof(varname)</code> 代替 <code>sizeof(type)</code>.</p>
 <p>使用 <code>sizeof(varname)</code> 是因为当代码中变量类型改变时会自动更新. 您或许会用 <code>sizeof(type)</code> 处理不涉及任何变量的代码，比如处理来自外部或内部的数据格式，这时用变量就不合适了。</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Struct data;</span><br><span class="line">Struct data; <span class="built_in">memset</span>(&amp;data, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(data));</span><br></pre></td></tr></table></figure>
 <p>==Warning==</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">memset</span>(&amp;data, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(Struct));</span><br><span class="line"><span class="keyword">if</span> (raw_size &lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">int</span>)) &#123;</span><br><span class="line">    <span class="built_in">LOG</span>(ERROR) &lt;&lt; <span class="string">&quot;compressed record not big enough for count: &quot;</span> &lt;&lt; raw_size;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="6-19-auto"><a href="#6-19-auto" class="headerlink" title="6.19. auto"></a>6.19. auto</h3><p>==Tip==</p>
+<h3 id="auto">6.19. auto</h3>
+<p>==Tip==</p>
 <p>用 <code>auto</code> 绕过烦琐的类型名，只要可读性好就继续用，别用在局部变量之外的地方。</p>
 <p>==定义：==</p>
 <blockquote>
@@ -1461,7 +1548,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><code>auto</code> 只能用在局部变量里用。别用在文件作用域变量，命名空间作用域变量和类数据成员里。永远别列表初始化 <code>auto</code> 变量。</p>
 <p><code>auto</code> 还可以和 C++11 特性「尾置返回类型（trailing return type）」一起用，不过后者只能用在 lambda 表达式里。</p>
 </blockquote>
-<h3 id="6-20-列表初始化"><a href="#6-20-列表初始化" class="headerlink" title="6.20. 列表初始化"></a>6.20. 列表初始化</h3><p>==Tip==</p>
+<h3 id="列表初始化">6.20. 列表初始化</h3>
+<p>==Tip==</p>
 <p>你可以用列表初始化。</p>
 <p>早在 C++03 里，聚合类型（aggregate types）就已经可以被列表初始化了，比如数组和不自带构造函数的结构体：</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span> &#123;</span> <span class="keyword">int</span> x; <span class="keyword">int</span> y; &#125;;</span><br><span class="line">Point p = &#123;<span class="number">1</span>, <span class="number">2</span>&#125;;</span><br></pre></td></tr></table></figure>
@@ -1475,7 +1563,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>==Warning==</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">auto</span> d = &#123;<span class="number">1.23</span>&#125;;        <span class="comment">// d 即是 std::initializer_list&lt;double&gt;</span></span><br><span class="line"><span class="keyword">auto</span> d = <span class="keyword">double</span>&#123;<span class="number">1.23</span>&#125;;  <span class="comment">// 善哉 -- d 即为 double, 并非 std::initializer_list.</span></span><br></pre></td></tr></table></figure>
 <p>至于格式化，参见 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/formatting/##braced-initializer-list-format">9.7. 列表初始化格式</a>.</p>
-<h3 id="6-21-Lambda-表达式"><a href="#6-21-Lambda-表达式" class="headerlink" title="6.21. Lambda 表达式"></a>6.21. Lambda 表达式</h3><p>==Tip==</p>
+<h3 id="lambda-表达式">6.21. Lambda 表达式</h3>
+<p>==Tip==</p>
 <p>适当使用 lambda 表达式。别用默认 lambda 捕获，所有捕获都要显式写出来。</p>
 <p>==定义：==</p>
 <blockquote>
@@ -1506,7 +1595,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>如果可读性更好，就显式写出 lambd 的尾置返回类型，就像auto.</li>
 </ul>
 </blockquote>
-<h3 id="6-22-模板编程"><a href="#6-22-模板编程" class="headerlink" title="6.22. 模板编程"></a>6.22. 模板编程</h3><p>==Tip==</p>
+<h3 id="模板编程">6.22. 模板编程</h3>
+<p>==Tip==</p>
 <p>不要使用复杂的模板编程</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1532,7 +1622,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>如果你使用模板编程, 你必须考虑尽可能的把复杂度最小化, 并且尽量不要让模板对外暴漏. 你最好只在实现里面使用模板, 然后给用户暴露的接口里面并不使用模板, 这样能提高你的接口的可读性. 并且你应该在这些使用模板的代码上写尽可能详细的注释. 你的注释里面应该详细的包含这些代码是怎么用的, 这些模板生成出来的代码大概是什么样子的. 还需要额外注意在用户错误使用你的模板代码的时候需要输出更人性化的出错信息. 因为这些出错信息也是你的接口的一部分, 所以你的代码必须调整到这些错误信息在用户看起来应该是非常容易理解, 并且用户很容易知道如何修改这些错误</li>
 </ul>
 </blockquote>
-<h3 id="6-23-Boost-库"><a href="#6-23-Boost-库" class="headerlink" title="6.23. Boost 库"></a>6.23. Boost 库</h3><p>==Tip==</p>
+<h3 id="boost-库">6.23. Boost 库</h3>
+<p>==Tip==</p>
 <p>只使用 Boost 中被认可的库.</p>
 <p>==定义:==</p>
 <blockquote>
@@ -1573,7 +1664,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </blockquote>
 </blockquote>
-<h3 id="6-24-C-11"><a href="#6-24-C-11" class="headerlink" title="6.24. C++11"></a>6.24. C++11</h3><p>==Tip==</p>
+<h3 id="c11">6.24. C++11</h3>
+<p>==Tip==</p>
 <p>适当用 C++11（前身是 C++0x）的库和语言扩展，在贵项目用 C++11 特性前三思可移植性。</p>
 <p>==定义：==</p>
 <blockquote>
@@ -1598,7 +1690,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>默认 lambda 捕获。</li>
 </ul>
 </blockquote>
-<h3 id="译者（acgtyrant）笔记-3"><a href="#译者（acgtyrant）笔记-3" class="headerlink" title="译者（acgtyrant）笔记"></a>译者（acgtyrant）笔记</h3><ol>
+<h3 id="译者acgtyrant笔记-3">译者（acgtyrant）笔记</h3>
+<ol type="1">
 <li>实际上，<a target="_blank" rel="noopener" href="http://www.zhihu.com/question/24439516/answer/27858964">缺省参数会改变函数签名的前提是改变了它接收的参数数量</a>，比如把 <code>void a()</code> 改成 <code>void a(int b = 0)</code>, 开发者改变其代码的初衷也许是，在不改变「代码兼容性」的同时，又提供了可选 int 参数的余地，然而这终究会破坏函数指针上的兼容性，毕竟函数签名确实变了。</li>
 <li>此外把自带缺省参数的函数地址赋值给指针时，会丢失缺省参数信息。</li>
 <li>我还发现 <a target="_blank" rel="noopener" href="http://www.zhihu.com/question/24439516/answer/27896004">滥用缺省参数会害得读者光只看调用代码的话，会误以为其函数接受的参数数量比实际上还要少。</a></li>
@@ -1611,16 +1704,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>auto 在涉及迭代器的循环语句里挺常用。</li>
 <li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/11215227/should-the-trailing-return-type-syntax-style-become-the-default-for-new-c11-pr">Should the trailing return type syntax style become the default for new C++11 programs?</a> 讨论了 auto 与尾置返回类型一起用的全新编码风格，值得一看。</li>
 </ol>
-<h2 id="7-命名约定"><a href="#7-命名约定" class="headerlink" title="7. 命名约定"></a>7. 命名约定</h2><p>最重要的一致性规则是命名管理. 命名的风格能让我们在不需要去查找类型声明的条件下快速地了解某个名字代表的含义: 类型, 变量, 函数, 常量, 宏, 等等, 甚至. 我们大脑中的模式匹配引擎非常依赖这些命名规则.</p>
+<h2 id="命名约定">7. 命名约定</h2>
+<p>最重要的一致性规则是命名管理. 命名的风格能让我们在不需要去查找类型声明的条件下快速地了解某个名字代表的含义: 类型, 变量, 函数, 常量, 宏, 等等, 甚至. 我们大脑中的模式匹配引擎非常依赖这些命名规则.</p>
 <p>命名规则具有一定随意性, 但相比按个人喜好命名, 一致性更重要, 所以无论你认为它们是否重要, 规则总归是规则.</p>
-<h3 id="7-1-通用命名规则"><a href="#7-1-通用命名规则" class="headerlink" title="7.1. 通用命名规则"></a>7.1. 通用命名规则</h3><p><strong>总述</strong></p>
+<h3 id="通用命名规则">7.1. 通用命名规则</h3>
+<p><strong>总述</strong></p>
 <p>函数命名, 变量命名, 文件命名要有描述性; 少用缩写.</p>
 <p><strong>说明</strong></p>
 <p>尽可能使用描述性的命名, 别心疼空间, 毕竟相比之下让代码易于新读者理解更重要. 不要用只有项目开发者能理解的缩写, 也不要通过砍掉几个字母来缩写单词.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> price_count_reader;    <span class="comment">// 无缩写</span></span><br><span class="line"><span class="keyword">int</span> num_errors;            <span class="comment">// &quot;num&quot; 是一个常见的写法</span></span><br><span class="line"><span class="keyword">int</span> num_dns_connections;   <span class="comment">// 人人都知道 &quot;DNS&quot; 是什么</span></span><br><span class="line"><span class="keyword">int</span> n;                     <span class="comment">// 毫无意义.</span></span><br><span class="line"><span class="keyword">int</span> nerr;                  <span class="comment">// 含糊不清的缩写.</span></span><br><span class="line"><span class="keyword">int</span> n_comp_conns;          <span class="comment">// 含糊不清的缩写.</span></span><br><span class="line"><span class="keyword">int</span> wgc_connections;       <span class="comment">// 只有贵团队知道是什么意思.</span></span><br><span class="line"><span class="keyword">int</span> pc_reader;             <span class="comment">// &quot;pc&quot; 有太多可能的解释了.</span></span><br><span class="line"><span class="keyword">int</span> cstmr_id;              <span class="comment">// 删减了若干字母.</span></span><br></pre></td></tr></table></figure>
 <p>注意, 一些特定的广为人知的缩写是允许的, 例如用 <code>i</code> 表示迭代变量和用 <code>T</code> 表示模板参数.</p>
 <p>模板参数的命名应当遵循对应的分类: 类型模板参数应当遵循 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##type-names">类型命名</a> 的规则, 而非类型模板应当遵循 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##variable-names">变量命名</a> 的规则.</p>
-<h3 id="7-2-文件命名"><a href="#7-2-文件命名" class="headerlink" title="7.2. 文件命名"></a>7.2. 文件命名</h3><p><strong>总述</strong></p>
+<h3 id="文件命名">7.2. 文件命名</h3>
+<p><strong>总述</strong></p>
 <p>文件名要全部小写, 可以包含下划线 (<code>_</code>) 或连字符 (<code>-</code>), 依照项目的约定. 如果没有约定, 那么 “<code>_</code>” 更好.</p>
 <p><strong>说明</strong></p>
 <p>可接受的文件命名示例:</p>
@@ -1634,85 +1730,105 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>不要使用已经存在于 <code>/usr/include</code> 下的文件名 (Yang.Y 注: 即编译器搜索系统头文件的路径), 如 <code>db.h</code>.</p>
 <p>通常应尽量让文件名更加明确. <code>http_server_logs.h</code> 就比 <code>logs.h</code> 要好. 定义类时文件名一般成对出现, 如 <code>foo_bar.h</code> 和 <code>foo_bar.cc</code>, 对应于类 <code>FooBar</code>.</p>
 <p>内联函数必须放在 <code>.h</code> 文件中. 如果内联函数比较短, 就直接放在 <code>.h</code> 中.</p>
-<h3 id="7-3-类型命名"><a href="#7-3-类型命名" class="headerlink" title="7.3. 类型命名"></a>7.3. 类型命名</h3><p><strong>总述</strong></p>
+<h3 id="类型命名">7.3. 类型命名</h3>
+<p><strong>总述</strong></p>
 <p>类型名称的每个单词首字母均大写, 不包含下划线: <code>MyExcitingClass</code>, <code>MyExcitingEnum</code>.</p>
 <p><strong>说明</strong></p>
 <p>所有类型命名 —— 类, 结构体, 类型定义 (<code>typedef</code>), 枚举, 类型模板参数 —— 均使用相同约定, 即以大写字母开始, 每个单词首字母均大写, 不包含下划线. 例如:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 类和结构体</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UrlTable</span> &#123;</span> ...</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UrlTableTester</span> &#123;</span> ...</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">UrlTableProperties</span> &#123;</span> ...</span><br><span class="line"></span><br><span class="line"><span class="comment">// 类型定义</span></span><br><span class="line"><span class="keyword">typedef</span> hash_map&lt;UrlTableProperties *, string&gt; PropertiesMap;</span><br><span class="line"></span><br><span class="line"><span class="comment">// using 别名</span></span><br><span class="line"><span class="keyword">using</span> PropertiesMap = hash_map&lt;UrlTableProperties *, string&gt;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 枚举</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">UrlTableErrors</span> &#123;</span> ...</span><br></pre></td></tr></table></figure>
-<h3 id="7-4-变量命名"><a href="#7-4-变量命名" class="headerlink" title="7.4. 变量命名"></a>7.4. 变量命名</h3><p><strong>总述</strong></p>
+<h3 id="变量命名">7.4. 变量命名</h3>
+<p><strong>总述</strong></p>
 <p>变量 (包括函数参数) 和数据成员名一律小写, 单词之间用下划线连接. 类的成员变量以下划线结尾, 但结构体的就不用, 如: <code>a_local_variable</code>, <code>a_struct_data_member</code>, <code>a_class_data_member_</code>.</p>
 <p><strong>说明</strong></p>
-<h6 id="普通变量命名"><a href="#普通变量命名" class="headerlink" title="普通变量命名"></a>普通变量命名</h6><p>举例:</p>
+<h6 id="普通变量命名">普通变量命名</h6>
+<p>举例:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">string table_name;  <span class="comment">// 好 - 用下划线.</span></span><br><span class="line">string tablename;   <span class="comment">// 好 - 全小写.</span></span><br><span class="line"></span><br><span class="line">string tableName;  <span class="comment">// 差 - 混合大小写</span></span><br></pre></td></tr></table></figure>
-<h6 id="类数据成员"><a href="#类数据成员" class="headerlink" title="类数据成员"></a>类数据成员</h6><p>不管是静态的还是非静态的, 类数据成员都可以和普通变量一样, 但要接下划线.</p>
+<h6 id="类数据成员">类数据成员</h6>
+<p>不管是静态的还是非静态的, 类数据成员都可以和普通变量一样, 但要接下划线.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TableInfo</span> &#123;</span></span><br><span class="line">  ...</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  string table_name_;  <span class="comment">// 好 - 后加下划线.</span></span><br><span class="line">  string tablename_;   <span class="comment">// 好.</span></span><br><span class="line">  <span class="keyword">static</span> Pool&lt;TableInfo&gt;* pool_;  <span class="comment">// 好.</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h6 id="结构体变量"><a href="#结构体变量" class="headerlink" title="结构体变量"></a>结构体变量</h6><p>不管是静态的还是非静态的, 结构体数据成员都可以和普通变量一样, 不用像类那样接下划线:</p>
+<h6 id="结构体变量">结构体变量</h6>
+<p>不管是静态的还是非静态的, 结构体数据成员都可以和普通变量一样, 不用像类那样接下划线:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">UrlTableProperties</span> &#123;</span></span><br><span class="line">  string name;</span><br><span class="line">  <span class="keyword">int</span> num_entries;</span><br><span class="line">  <span class="keyword">static</span> Pool&lt;UrlTableProperties&gt;* pool;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>结构体与类的使用讨论, 参考 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/##structs-vs-classes">结构体 vs. 类</a>.</p>
-<h3 id="7-5-常量命名"><a href="#7-5-常量命名" class="headerlink" title="7.5. 常量命名"></a>7.5. 常量命名</h3><p><strong>总述</strong></p>
+<h3 id="常量命名">7.5. 常量命名</h3>
+<p><strong>总述</strong></p>
 <p>声明为 <code>constexpr</code> 或 <code>const</code> 的变量, 或在程序运行期间其值始终保持不变的, 命名时以 “k” 开头, 大小写混合. 例如:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> kDaysInAWeek = <span class="number">7</span>;</span><br></pre></td></tr></table></figure>
 <p><strong>说明</strong></p>
 <p>所有具有静态存储类型的变量 (例如静态变量或全局变量, 参见 <a target="_blank" rel="noopener" href="http://en.cppreference.com/w/cpp/language/storage_duration##Storage_duration">存储类型</a>) 都应当以此方式命名. 对于其他存储类型的变量, 如自动变量等, 这条规则是可选的. 如果不采用这条规则, 就按照一般的变量命名规则.</p>
-<h3 id="7-6-函数命名"><a href="#7-6-函数命名" class="headerlink" title="7.6. 函数命名"></a>7.6. 函数命名</h3><p><strong>总述</strong></p>
+<h3 id="函数命名">7.6. 函数命名</h3>
+<p><strong>总述</strong></p>
 <p>常规函数使用大小写混合, 取值和设值函数则要求与变量名匹配: <code>MyExcitingFunction()</code>, <code>MyExcitingMethod()</code>, <code>my_exciting_member_variable()</code>, <code>set_my_exciting_member_variable()</code>.</p>
 <p><strong>说明</strong></p>
 <p>一般来说, 函数名的每个单词首字母大写 (即 “驼峰变量名” 或 “帕斯卡变量名”), 没有下划线. 对于首字母缩写的单词, 更倾向于将它们视作一个单词进行首字母大写 (例如, 写作 <code>StartRpc()</code> 而非 <code>StartRPC()</code>).</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">AddTableEntry</span>()</span><br><span class="line"><span class="built_in">DeleteUrl</span>()</span><br><span class="line"><span class="built_in">OpenFileOrDie</span>()</span><br></pre></td></tr></table></figure>
 <p>(同样的命名规则同时适用于类作用域与命名空间作用域的常量, 因为它们是作为 API 的一部分暴露对外的, 因此应当让它们看起来像是一个函数, 因为在这时, 它们实际上是一个对象而非函数的这一事实对外不过是一个无关紧要的实现细节.)</p>
 <p>取值和设值函数的命名与变量一致. 一般来说它们的名称与实际的成员变量对应, 但并不强制要求. 例如 <code>int count()</code> 与 <code>void set_count(int count)</code>.</p>
-<h3 id="7-7-命名空间命名"><a href="#7-7-命名空间命名" class="headerlink" title="7.7. 命名空间命名"></a>7.7. 命名空间命名</h3><p><strong>总述</strong></p>
+<h3 id="命名空间命名">7.7. 命名空间命名</h3>
+<p><strong>总述</strong></p>
 <p>命名空间以小写字母命名. 最高级命名空间的名字取决于项目名称. 要注意避免嵌套命名空间的名字之间和常见的顶级命名空间的名字之间发生冲突.</p>
 <p>顶级命名空间的名称应当是项目名或者是该命名空间中的代码所属的团队的名字. 命名空间中的代码, 应当存放于和命名空间的名字匹配的文件夹或其子文件夹中.</p>
 <p>注意 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##general-naming-rules">不使用缩写作为名称</a> 的规则同样适用于命名空间. 命名空间中的代码极少需要涉及命名空间的名称, 因此没有必要在命名空间中使用缩写.</p>
 <p>要避免嵌套的命名空间与常见的顶级命名空间发生名称冲突. 由于名称查找规则的存在, 命名空间之间的冲突完全有可能导致编译失败. 尤其是, 不要创建嵌套的 <code>std</code> 命名空间. 建议使用更独特的项目标识符 (<code>websearch::index</code>, <code>websearch::index_util</code>) 而非常见的极易发生冲突的名称 (比如 <code>websearch::util</code>).</p>
 <p>对于 <code>internal</code> 命名空间, 要当心加入到同一 <code>internal</code> 命名空间的代码之间发生冲突 (由于内部维护人员通常来自同一团队, 因此常有可能导致冲突). 在这种情况下, 请使用文件名以使得内部名称独一无二 (例如对于 <code>frobber.h</code>, 使用 <code>websearch::index::frobber_internal</code>).</p>
-<h3 id="7-8-枚举命名"><a href="#7-8-枚举命名" class="headerlink" title="7.8. 枚举命名"></a>7.8. 枚举命名</h3><p><strong>总述</strong></p>
+<h3 id="枚举命名">7.8. 枚举命名</h3>
+<p><strong>总述</strong></p>
 <p>枚举的命名应当和 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##constant-names">常量</a> 或 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##macro-names">宏</a> 一致: <code>kEnumName</code> 或是 <code>ENUM_NAME</code>.</p>
 <p><strong>说明</strong></p>
 <p>单独的枚举值应该优先采用 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##constant-names">常量</a> 的命名方式. 但 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##macro-names">宏</a> 方式的命名也可以接受. 枚举名 <code>UrlTableErrors</code> (以及 <code>AlternateUrlTableErrors</code>) 是类型, 所以要用大小写混合的方式.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">UrlTableErrors</span> &#123;</span></span><br><span class="line">    kOK = <span class="number">0</span>,</span><br><span class="line">    kErrorOutOfMemory,</span><br><span class="line">    kErrorMalformedInput,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">AlternateUrlTableErrors</span> &#123;</span></span><br><span class="line">    OK = <span class="number">0</span>,</span><br><span class="line">    OUT_OF_MEMORY = <span class="number">1</span>,</span><br><span class="line">    MALFORMED_INPUT = <span class="number">2</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>2009 年 1 月之前, 我们一直建议采用 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/##macro-names">宏</a> 的方式命名枚举值. 由于枚举值和宏之间的命名冲突, 直接导致了很多问题. 由此, 这里改为优先选择常量风格的命名方式. 新代码应该尽可能优先使用常量风格. 但是老代码没必要切换到常量风格, 除非宏风格确实会产生编译期问题.</p>
-<h3 id="7-9-宏命名"><a href="#7-9-宏命名" class="headerlink" title="7.9. 宏命名"></a>7.9. 宏命名</h3><p><strong>总述</strong></p>
+<h3 id="宏命名">7.9. 宏命名</h3>
+<p><strong>总述</strong></p>
 <p>你并不打算 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/##preprocessor-macros">使用宏</a>, 对吧? 如果你一定要用, 像这样命名: <code>MY_MACRO_THAT_SCARES_SMALL_CHILDREN</code>.</p>
 <p><strong>说明</strong></p>
 <p>参考 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/##preprocessor-macros">预处理宏</a>; 通常 <em>不应该</em> 使用宏. 如果不得不用, 其命名像枚举命名一样全部大写, 使用下划线:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ROUND(x) ...</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI_ROUNDED 3.0</span></span><br></pre></td></tr></table></figure>
-<h3 id="7-10-命名规则的特例"><a href="#7-10-命名规则的特例" class="headerlink" title="7.10. 命名规则的特例"></a>7.10. 命名规则的特例</h3><p><strong>总述</strong></p>
+<h3 id="命名规则的特例">7.10. 命名规则的特例</h3>
+<p><strong>总述</strong></p>
 <p>如果你命名的实体与已有 C/C++ 实体相似, 可参考现有命名策略.</p>
 <p><code>bigopen()</code>: 函数名, 参照 <code>open()</code> 的形式</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">uint`: `<span class="keyword">typedef</span></span><br></pre></td></tr></table></figure>
 <p><code>bigpos</code>: <code>struct</code> 或 <code>class</code>, 参照 <code>pos</code> 的形式</p>
 <p><code>sparse_hash_map</code>: STL 型实体; 参照 STL 命名约定</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">LONGLONG_MAX`: 常量, 如同 `INT_MAX</span><br></pre></td></tr></table></figure>
-<h3 id="译者（acgtyrant）笔记-4"><a href="#译者（acgtyrant）笔记-4" class="headerlink" title="译者（acgtyrant）笔记"></a>译者（acgtyrant）笔记</h3><ol>
+<h3 id="译者acgtyrant笔记-4">译者（acgtyrant）笔记</h3>
+<ol type="1">
 <li>感觉 Google 的命名约定很高明, 比如写了简单的类 QueryResult, 接着又可以直接定义一个变量 query_result, 区分度很好; 再次, 类内变量以下划线结尾, 那么就可以直接传入同名的形参, 比如 <code>TextQuery::TextQuery(std::string word) : word_(word) &#123;&#125;</code> , 其中 <code>word_</code> 自然是类内私有成员.</li>
 </ol>
-<h2 id="8-注释"><a href="#8-注释" class="headerlink" title="8. 注释"></a>8. 注释</h2><p>注释虽然写起来很痛苦, 但对保证代码可读性至关重要. 下面的规则描述了如何注释以及在哪儿注释. 当然也要记住: 注释固然很重要, 但最好的代码应当本身就是文档. 有意义的类型名和变量名, 要远胜过要用注释解释的含糊不清的名字.</p>
+<h2 id="注释">8. 注释</h2>
+<p>注释虽然写起来很痛苦, 但对保证代码可读性至关重要. 下面的规则描述了如何注释以及在哪儿注释. 当然也要记住: 注释固然很重要, 但最好的代码应当本身就是文档. 有意义的类型名和变量名, 要远胜过要用注释解释的含糊不清的名字.</p>
 <p>你写的注释是给代码读者看的, 也就是下一个需要理解你的代码的人. 所以慷慨些吧, 下一个读者可能就是你!</p>
-<h3 id="8-1-注释风格"><a href="#8-1-注释风格" class="headerlink" title="8.1. 注释风格"></a>8.1. 注释风格</h3><p><strong>总述</strong></p>
+<h3 id="注释风格">8.1. 注释风格</h3>
+<p><strong>总述</strong></p>
 <p>使用 <code>//</code> 或 <code>/* */</code>, 统一就好.</p>
 <p><strong>说明</strong></p>
 <p><code>//</code> 或 <code>/* */</code> 都可以; 但 <code>//</code> <em>更</em> 常用. 要在如何注释及注释风格上确保统一.</p>
-<h3 id="8-2-文件注释"><a href="#8-2-文件注释" class="headerlink" title="8.2. 文件注释"></a>8.2. 文件注释</h3><p><strong>总述</strong></p>
+<h3 id="文件注释">8.2. 文件注释</h3>
+<p><strong>总述</strong></p>
 <p>在每一个文件开头加入版权公告.</p>
 <p>文件注释描述了该文件的内容. 如果一个文件只声明, 或实现, 或测试了一个对象, 并且这个对象已经在它的声明处进行了详细的注释, 那么就没必要再加上文件注释. 除此之外的其他文件都需要文件注释.</p>
 <p><strong>说明</strong></p>
-<h6 id="法律公告和作者信息"><a href="#法律公告和作者信息" class="headerlink" title="法律公告和作者信息"></a>法律公告和作者信息</h6><p>每个文件都应该包含许可证引用. 为项目选择合适的许可证版本.(比如, Apache 2.0, BSD, LGPL, GPL)</p>
+<h6 id="法律公告和作者信息">法律公告和作者信息</h6>
+<p>每个文件都应该包含许可证引用. 为项目选择合适的许可证版本.(比如, Apache 2.0, BSD, LGPL, GPL)</p>
 <p>如果你对原始作者的文件做了重大修改, 请考虑删除原作者信息.</p>
-<h6 id="文件内容"><a href="#文件内容" class="headerlink" title="文件内容"></a>文件内容</h6><p>如果一个 <code>.h</code> 文件声明了多个概念, 则文件注释应当对文件的内容做一个大致的说明, 同时说明各概念之间的联系. 一个一到两行的文件注释就足够了, 对于每个概念的详细文档应当放在各个概念中, 而不是文件注释中.</p>
+<h6 id="文件内容">文件内容</h6>
+<p>如果一个 <code>.h</code> 文件声明了多个概念, 则文件注释应当对文件的内容做一个大致的说明, 同时说明各概念之间的联系. 一个一到两行的文件注释就足够了, 对于每个概念的详细文档应当放在各个概念中, 而不是文件注释中.</p>
 <p>不要在 <code>.h</code> 和 <code>.cc</code> 之间复制注释, 这样的注释偏离了注释的实际意义.</p>
-<h3 id="8-3-类注释"><a href="#8-3-类注释" class="headerlink" title="8.3. 类注释"></a>8.3. 类注释</h3><p><strong>总述</strong></p>
+<h3 id="类注释">8.3. 类注释</h3>
+<p><strong>总述</strong></p>
 <p>每个类的定义都要附带一份注释, 描述类的功能和用法, 除非它的功能相当明显.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Iterates over the contents of a GargantuanTable.</span></span><br><span class="line"><span class="comment">// Example:</span></span><br><span class="line"><span class="comment">//    GargantuanTableIterator* iter = table-&gt;NewIterator();</span></span><br><span class="line"><span class="comment">//    for (iter-&gt;Seek(&quot;foo&quot;); !iter-&gt;done(); iter-&gt;Next()) &#123;</span></span><br><span class="line"><span class="comment">//      process(iter-&gt;key(), iter-&gt;value());</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//    delete iter;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GargantuanTableIterator</span> &#123;</span></span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><strong>说明</strong></p>
 <p>类注释应当为读者理解如何使用与何时使用类提供足够的信息, 同时应当提醒读者在正确使用此类时应当考虑的因素. 如果类有任何同步前提, 请用文档说明. 如果该类的实例可被多线程访问, 要特别注意文档说明多线程环境下相关的规则和常量使用.</p>
 <p>如果你想用一小段代码演示这个类的基本用法或通常用法, 放在类注释里也非常合适.</p>
 <p>如果类的声明和定义分开了(例如分别放在了 <code>.h</code> 和 <code>.cc</code> 文件中), 此时, 描述类用法的注释应当和接口定义放在一起, 描述类的操作和实现的注释应当和实现放在一起.</p>
-<h3 id="8-4-函数注释"><a href="#8-4-函数注释" class="headerlink" title="8.4. 函数注释"></a>8.4. 函数注释</h3><p><strong>总述</strong></p>
+<h3 id="函数注释">8.4. 函数注释</h3>
+<p><strong>总述</strong></p>
 <p>函数声明处的注释描述函数功能; 定义处的注释描述函数实现.</p>
 <p><strong>说明</strong></p>
-<h6 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h6><p>基本上每个函数声明处前都应当加上注释, 描述函数的功能和用途. 只有在函数的功能简单而明显时才能省略这些注释(例如, 简单的取值和设值函数). 注释使用叙述式 (“Opens the file”) 而非指令式 (“Open the file”); 注释只是为了描述函数, 而不是命令函数做什么. 通常, 注释不会描述函数如何工作. 那是函数定义部分的事情.</p>
+<h6 id="函数声明">函数声明</h6>
+<p>基本上每个函数声明处前都应当加上注释, 描述函数的功能和用途. 只有在函数的功能简单而明显时才能省略这些注释(例如, 简单的取值和设值函数). 注释使用叙述式 (“Opens the file”) 而非指令式 (“Open the file”); 注释只是为了描述函数, 而不是命令函数做什么. 通常, 注释不会描述函数如何工作. 那是函数定义部分的事情.</p>
 <p>函数声明处注释的内容:</p>
 <ul>
 <li>函数的输入输出.</li>
@@ -1728,27 +1844,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Returns true if the table cannot hold any more entries.</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">IsTableFull</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
 <p>注释函数重载时, 注释的重点应该是函数中被重载的部分, 而不是简单的重复被重载的函数的注释. 多数情况下, 函数重载不需要额外的文档, 因此也没有必要加上注释.</p>
 <p>注释构造/析构函数时, 切记读代码的人知道构造/析构函数的功能, 所以 “销毁这一对象” 这样的注释是没有意义的. 你应当注明的是注明构造函数对参数做了什么 (例如, 是否取得指针所有权) 以及析构函数清理了什么. 如果都是些无关紧要的内容, 直接省掉注释. 析构函数前没有注释是很正常的.</p>
-<h6 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h6><p>如果函数的实现过程中用到了很巧妙的方式, 那么在函数定义处应当加上解释性的注释. 例如, 你所使用的编程技巧, 实现的大致步骤, 或解释如此实现的理由. 举个例子, 你可以说明为什么函数的前半部分要加锁而后半部分不需要.</p>
+<h6 id="函数定义">函数定义</h6>
+<p>如果函数的实现过程中用到了很巧妙的方式, 那么在函数定义处应当加上解释性的注释. 例如, 你所使用的编程技巧, 实现的大致步骤, 或解释如此实现的理由. 举个例子, 你可以说明为什么函数的前半部分要加锁而后半部分不需要.</p>
 <p><em>不要</em> 从 <code>.h</code> 文件或其他地方的函数声明处直接复制注释. 简要重述函数功能是可以的, 但注释重点要放在如何实现上.</p>
-<h3 id="8-5-变量注释"><a href="#8-5-变量注释" class="headerlink" title="8.5. 变量注释"></a>8.5. 变量注释</h3><p><strong>总述</strong></p>
+<h3 id="变量注释">8.5. 变量注释</h3>
+<p><strong>总述</strong></p>
 <p>通常变量名本身足以很好说明变量用途. 某些情况下, 也需要额外的注释说明.</p>
 <p><strong>说明</strong></p>
-<h6 id="类数据成员-1"><a href="#类数据成员-1" class="headerlink" title="类数据成员"></a>类数据成员</h6><p>每个类数据成员 (也叫实例变量或成员变量) 都应该用注释说明用途. 如果有非变量的参数(例如特殊值, 数据成员之间的关系, 生命周期等)不能够用类型与变量名明确表达, 则应当加上注释. 然而, 如果变量类型与变量名已经足以描述一个变量, 那么就不再需要加上注释.</p>
+<h6 id="类数据成员-1">类数据成员</h6>
+<p>每个类数据成员 (也叫实例变量或成员变量) 都应该用注释说明用途. 如果有非变量的参数(例如特殊值, 数据成员之间的关系, 生命周期等)不能够用类型与变量名明确表达, 则应当加上注释. 然而, 如果变量类型与变量名已经足以描述一个变量, 那么就不再需要加上注释.</p>
 <p>特别地, 如果变量可以接受 <code>NULL</code> 或 <code>-1</code> 等警戒值, 须加以说明. 比如:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span>:</span><br><span class="line"> <span class="comment">// Used to bounds-check table accesses. -1 means</span></span><br><span class="line"> <span class="comment">// that we don&#x27;t yet know how many entries the table has.</span></span><br><span class="line"> <span class="keyword">int</span> num_total_entries_;</span><br></pre></td></tr></table></figure>
-<h6 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h6><p>和数据成员一样, 所有全局变量也要注释说明含义及用途, 以及作为全局变量的原因. 比如:</p>
+<h6 id="全局变量">全局变量</h6>
+<p>和数据成员一样, 所有全局变量也要注释说明含义及用途, 以及作为全局变量的原因. 比如:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// The total number of tests cases that we run through in this regression test.</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> kNumTestCases = <span class="number">6</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="8-6-实现注释"><a href="#8-6-实现注释" class="headerlink" title="8.6. 实现注释"></a>8.6. 实现注释</h3><p><strong>总述</strong></p>
+<h3 id="实现注释">8.6. 实现注释</h3>
+<p><strong>总述</strong></p>
 <p>对于代码中巧妙的, 晦涩的, 有趣的, 重要的地方加以注释.</p>
 <p><strong>说明</strong></p>
-<h6 id="代码前注释"><a href="#代码前注释" class="headerlink" title="代码前注释"></a>代码前注释</h6><p>巧妙或复杂的代码段前要加注释. 比如:</p>
+<h6 id="代码前注释">代码前注释</h6>
+<p>巧妙或复杂的代码段前要加注释. 比如:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Divide result by two, taking into account that x</span></span><br><span class="line"><span class="comment">// contains the carry from the add.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; result-&gt;<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">  x = (x &lt;&lt; <span class="number">8</span>) + (*result)[i];</span><br><span class="line">  (*result)[i] = x &gt;&gt; <span class="number">1</span>;</span><br><span class="line">  x &amp;= <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h6 id="行注释"><a href="#行注释" class="headerlink" title="行注释"></a>行注释</h6><p>比较隐晦的地方要在行尾加入注释. 在行尾空两格进行注释. 比如:</p>
+<h6 id="行注释">行注释</h6>
+<p>比较隐晦的地方要在行尾加入注释. 在行尾空两格进行注释. 比如:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// If we have enough memory, mmap the data portion too.</span></span><br><span class="line">mmap_budget = max&lt;int64&gt;(<span class="number">0</span>, mmap_budget - index_-&gt;<span class="built_in">length</span>());</span><br><span class="line"><span class="keyword">if</span> (mmap_budget &gt;= data_size_ &amp;&amp; !<span class="built_in">MmapData</span>(mmap_chunk_bytes, mlock))</span><br><span class="line">  <span class="keyword">return</span>;  <span class="comment">// Error already logged.</span></span><br></pre></td></tr></table></figure>
 <p>注意, 这里用了两段注释分别描述这段代码的作用, 和提示函数返回时错误已经被记入日志.</p>
 <p>如果你需要连续进行多行注释, 可以使之对齐获得更好的可读性:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">DoSomething</span>();                  <span class="comment">// Comment here so the comments line up.</span></span><br><span class="line"><span class="built_in">DoSomethingElseThatIsLonger</span>();  <span class="comment">// Two spaces between the code and the comment.</span></span><br><span class="line">&#123; <span class="comment">// One space before comment when opening a new scope is allowed,</span></span><br><span class="line">  <span class="comment">// thus the comment lines up with the following comments and code.</span></span><br><span class="line">  <span class="built_in">DoSomethingElse</span>();  <span class="comment">// Two spaces before line comments normally.</span></span><br><span class="line">&#125;</span><br><span class="line">std::vector&lt;string&gt; list&#123;</span><br><span class="line">                    <span class="comment">// Comments in braced lists describe the next element...</span></span><br><span class="line">                    <span class="string">&quot;First item&quot;</span>,</span><br><span class="line">                    <span class="comment">// .. and should be aligned appropriately.</span></span><br><span class="line"><span class="string">&quot;Second item&quot;</span>&#125;;</span><br><span class="line"><span class="built_in">DoSomething</span>(); <span class="comment">/* For trailing block comments, one space is fine. */</span></span><br></pre></td></tr></table></figure>
-<h6 id="函数参数注释"><a href="#函数参数注释" class="headerlink" title="函数参数注释"></a>函数参数注释</h6><p>如果函数参数的意义不明显, 考虑用下面的方式进行弥补:</p>
+<h6 id="函数参数注释">函数参数注释</h6>
+<p>如果函数参数的意义不明显, 考虑用下面的方式进行弥补:</p>
 <ul>
 <li>如果参数是一个字面常量, 并且这一常量在多处函数调用中被使用, 用以推断它们一致, 你应当用一个常量名让这一约定变得更明显, 并且保证这一约定不会被打破.</li>
 <li>考虑更改函数的签名, 让某个 <code>bool</code> 类型的参数变为 <code>enum</code> 类型, 这样可以让这个参数的值表达其意义.</li>
@@ -1761,7 +1885,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>和</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ProductOptions options;</span><br><span class="line">options.<span class="built_in">set_precision_decimals</span>(<span class="number">7</span>);</span><br><span class="line">options.<span class="built_in">set_use_cache</span>(ProductOptions::kDontUseCache);</span><br><span class="line"><span class="keyword">const</span> DecimalNumber product =</span><br><span class="line">    <span class="built_in">CalculateProduct</span>(values, options, <span class="comment">/*completion_callback=*/</span><span class="literal">nullptr</span>);</span><br></pre></td></tr></table></figure>
 <p>哪个更清晰一目了然.</p>
-<h6 id="不允许的行为"><a href="#不允许的行为" class="headerlink" title="不允许的行为"></a>不允许的行为</h6><p>不要描述显而易见的现象, <em>永远不要</em> 用自然语言翻译代码作为注释, 除非即使对深入理解 C++ 的读者来说代码的行为都是不明显的. 要假设读代码的人 C++ 水平比你高, 即便他/她可能不知道你的用意:</p>
+<h6 id="不允许的行为">不允许的行为</h6>
+<p>不要描述显而易见的现象, <em>永远不要</em> 用自然语言翻译代码作为注释, 除非即使对深入理解 C++ 的读者来说代码的行为都是不明显的. 要假设读代码的人 C++ 水平比你高, 即便他/她可能不知道你的用意:</p>
 <p>你所提供的注释应当解释代码 <em>为什么</em> 要这么做和代码的目的, 或者最好是让代码自文档化.</p>
 <p>比较这样的注释:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Find the element in the vector.  &lt;-- 差: 这太明显了!</span></span><br><span class="line"><span class="keyword">auto</span> iter = std::<span class="built_in">find</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>(), element);</span><br><span class="line"><span class="keyword">if</span> (iter != v.<span class="built_in">end</span>()) &#123;</span><br><span class="line">  <span class="built_in">Process</span>(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1769,24 +1894,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Process &quot;element&quot; unless it was already processed.</span></span><br><span class="line"><span class="keyword">auto</span> iter = std::<span class="built_in">find</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>(), element);</span><br><span class="line"><span class="keyword">if</span> (iter != v.<span class="built_in">end</span>()) &#123;</span><br><span class="line">  <span class="built_in">Process</span>(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>自文档化的代码根本就不需要注释. 上面例子中的注释对下面的代码来说就是毫无必要的:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (!<span class="built_in">IsAlreadyProcessed</span>(element)) &#123;</span><br><span class="line">  <span class="built_in">Process</span>(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="8-7-标点-拼写和语法"><a href="#8-7-标点-拼写和语法" class="headerlink" title="8.7. 标点, 拼写和语法"></a>8.7. 标点, 拼写和语法</h3><p><strong>总述</strong></p>
+<h3 id="标点-拼写和语法">8.7. 标点, 拼写和语法</h3>
+<p><strong>总述</strong></p>
 <p>注意标点, 拼写和语法; 写的好的注释比差的要易读的多.</p>
 <p><strong>说明</strong></p>
 <p>注释的通常写法是包含正确大小写和结尾句号的完整叙述性语句. 大多数情况下, 完整的句子比句子片段可读性更高. 短一点的注释, 比如代码行尾注释, 可以随意点, 但依然要注意风格的一致性.</p>
 <p>虽然被别人指出该用分号时却用了逗号多少有些尴尬, 但清晰易读的代码还是很重要的. 正确的标点, 拼写和语法对此会有很大帮助.</p>
-<h3 id="8-8-TODO-注释"><a href="#8-8-TODO-注释" class="headerlink" title="8.8. TODO 注释"></a>8.8. TODO 注释</h3><p><strong>总述</strong></p>
+<h3 id="todo-注释">8.8. TODO 注释</h3>
+<p><strong>总述</strong></p>
 <p>对那些临时的, 短期的解决方案, 或已经够好但仍不完美的代码使用 <code>TODO</code> 注释.</p>
 <p><code>TODO</code> 注释要使用全大写的字符串 <code>TODO</code>, 在随后的圆括号里写上你的名字, 邮件地址, bug ID, 或其它身份标识和与这一 <code>TODO</code> 相关的 issue. 主要目的是让添加注释的人 (也是可以请求提供更多细节的人) 可根据规范的 <code>TODO</code> 格式进行查找. 添加 <code>TODO</code> 注释并不意味着你要自己来修正, 因此当你加上带有姓名的 <code>TODO</code> 时, 一般都是写上自己的名字.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// TODO(kl@gmail.com): Use a &quot;*&quot; here for concatenation operator.</span></span><br><span class="line"><span class="comment">// TODO(Zeke) change this to use relations.</span></span><br><span class="line"><span class="comment">// TODO(bug 12345): remove the &quot;Last visitors&quot; feature</span></span><br></pre></td></tr></table></figure>
 <p>如果加 <code>TODO</code> 是为了在 “将来某一天做某事”, 可以附上一个非常明确的时间 “Fix by November 2005”), 或者一个明确的事项 (“Remove this code when all clients can handle XML responses.”).</p>
-<h3 id="8-9-弃用注释"><a href="#8-9-弃用注释" class="headerlink" title="8.9. 弃用注释"></a>8.9. 弃用注释</h3><p><strong>总述</strong></p>
+<h3 id="弃用注释">8.9. 弃用注释</h3>
+<p><strong>总述</strong></p>
 <p>通过弃用注释（<code>DEPRECATED</code> comments）以标记某接口点已弃用.</p>
 <p>您可以写上包含全大写的 <code>DEPRECATED</code> 的注释, 以标记某接口为弃用状态. 注释可以放在接口声明前, 或者同一行.</p>
 <p>在 <code>DEPRECATED</code> 一词后, 在括号中留下您的名字, 邮箱地址以及其他身份标识.</p>
 <p>弃用注释应当包涵简短而清晰的指引, 以帮助其他人修复其调用点. 在 C++ 中, 你可以将一个弃用函数改造成一个内联函数, 这一函数将调用新的接口.</p>
 <p>仅仅标记接口为 <code>DEPRECATED</code> 并不会让大家不约而同地弃用, 您还得亲自主动修正调用点（callsites）, 或是找个帮手.</p>
 <p>修正好的代码应该不会再涉及弃用接口点了, 着实改用新接口点. 如果您不知从何下手, 可以找标记弃用注释的当事人一起商量.</p>
-<h3 id="译者-YuleFox-笔记-3"><a href="#译者-YuleFox-笔记-3" class="headerlink" title="译者 (YuleFox) 笔记"></a>译者 (YuleFox) 笔记</h3><ol>
+<h3 id="译者-yulefox-笔记-3">译者 (YuleFox) 笔记</h3>
+<ol type="1">
 <li>关于注释风格, 很多 C++ 的 coders 更喜欢行注释, C coders 或许对块注释依然情有独钟, 或者在文件头大段大段的注释时使用块注释;</li>
 <li>文件注释可以炫耀你的成就, 也是为了捅了篓子别人可以找你;</li>
 <li>注释要言简意赅, 不要拖沓冗余, 复杂的东西简单化和简单的东西复杂化都是要被鄙视的;</li>
@@ -1794,9 +1923,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>注释不要太乱, 适当的缩进才会让人乐意看. 但也没有必要规定注释从第几列开始 (我自己写代码的时候总喜欢这样), UNIX/LINUX 下还可以约定是使用 tab 还是 space, 个人倾向于 space;</li>
 <li>TODO 很不错, 有时候, 注释确实是为了标记一些未完成的或完成的不尽如人意的地方, 这样一搜索, 就知道还有哪些活要干, 日志都省了.</li>
 </ol>
-<h2 id="9-格式"><a href="#9-格式" class="headerlink" title="9. 格式"></a>9. 格式</h2><p>每个人都可能有自己的代码风格和格式, 但如果一个项目中的所有人都遵循同一风格的话, 这个项目就能更顺利地进行. 每个人未必能同意下述的每一处格式规则, 而且其中的不少规则需要一定时间的适应, 但整个项目服从统一的编程风格是很重要的, 只有这样才能让所有人轻松地阅读和理解代码.</p>
+<h2 id="格式">9. 格式</h2>
+<p>每个人都可能有自己的代码风格和格式, 但如果一个项目中的所有人都遵循同一风格的话, 这个项目就能更顺利地进行. 每个人未必能同意下述的每一处格式规则, 而且其中的不少规则需要一定时间的适应, 但整个项目服从统一的编程风格是很重要的, 只有这样才能让所有人轻松地阅读和理解代码.</p>
 <p>为了帮助你正确的格式化代码, 我们写了一个 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/google/styleguide/gh-pages/google-c-style.el">emacs 配置文件</a>.</p>
-<h3 id="9-1-行长度"><a href="#9-1-行长度" class="headerlink" title="9.1. 行长度"></a>9.1. 行长度</h3><p><strong>总述</strong></p>
+<h3 id="行长度">9.1. 行长度</h3>
+<p><strong>总述</strong></p>
 <p>每一行代码字符数不超过 80.</p>
 <p>我们也认识到这条规则是有争议的, 但很多已有代码都遵照这一规则, 因此我们感觉一致性更重要.</p>
 <p><strong>优点</strong></p>
@@ -1808,19 +1939,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>如果无法在不伤害易读性的条件下进行断行, 那么注释行可以超过 80 个字符, 这样可以方便复制粘贴. 例如, 带有命令示例或 URL 的行可以超过 80 个字符.</p>
 <p>包含长路径的 <code>#include</code> 语句可以超出80列.</p>
 <p><a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/headers/##define-guard">头文件保护</a> 可以无视该原则.</p>
-<h3 id="9-2-非-ASCII-字符"><a href="#9-2-非-ASCII-字符" class="headerlink" title="9.2. 非 ASCII 字符"></a>9.2. 非 ASCII 字符</h3><p><strong>总述</strong></p>
+<h3 id="非-ascii-字符">9.2. 非 ASCII 字符</h3>
+<p><strong>总述</strong></p>
 <p>尽量不使用非 ASCII 字符, 使用时必须使用 UTF-8 编码.</p>
 <p><strong>说明</strong></p>
 <p>即使是英文, 也不应将用户界面的文本硬编码到源代码中, 因此非 ASCII 字符应当很少被用到. 特殊情况下可以适当包含此类字符. 例如, 代码分析外部数据文件时, 可以适当硬编码数据文件中作为分隔符的非 ASCII 字符串; 更常见的是 (不需要本地化的) 单元测试代码可能包含非 ASCII 字符串. 此类情况下, 应使用 UTF-8 编码, 因为很多工具都可以理解和处理 UTF-8 编码.</p>
-<p>十六进制编码也可以, 能增强可读性的情况下尤其鼓励 —— 比如 <code>&quot;\xEF\xBB\xBF&quot;</code>, 或者更简洁地写作 <code>u8&quot;\uFEFF&quot;</code>, 在 Unicode 中是 <em>零宽度 无间断</em> 的间隔符号, 如果不用十六进制直接放在 UTF-8 格式的源文件中, 是看不到的.</p>
-<p>(Yang.Y 注: <code>&quot;\xEF\xBB\xBF&quot;</code> 通常用作 UTF-8 with BOM 编码标记)</p>
+<p>十六进制编码也可以, 能增强可读性的情况下尤其鼓励 —— 比如 <code>"\xEF\xBB\xBF"</code>, 或者更简洁地写作 <code>u8"\uFEFF"</code>, 在 Unicode 中是 <em>零宽度 无间断</em> 的间隔符号, 如果不用十六进制直接放在 UTF-8 格式的源文件中, 是看不到的.</p>
+<p>(Yang.Y 注: <code>"\xEF\xBB\xBF"</code> 通常用作 UTF-8 with BOM 编码标记)</p>
 <p>使用 <code>u8</code> 前缀把带 <code>uXXXX</code> 转义序列的字符串字面值编码成 UTF-8. 不要用在本身就带 UTF-8 字符的字符串字面值上, 因为如果编译器不把源代码识别成 UTF-8, 输出就会出错.</p>
 <p>别用 C++11 的 <code>char16_t</code> 和 <code>char32_t</code>, 它们和 UTF-8 文本没有关系, <code>wchar_t</code> 同理, 除非你写的代码要调用 Windows API, 后者广泛使用了 <code>wchar_t</code>.</p>
-<h3 id="9-3-空格还是制表位"><a href="#9-3-空格还是制表位" class="headerlink" title="9.3. 空格还是制表位"></a>9.3. 空格还是制表位</h3><p><strong>总述</strong></p>
+<h3 id="空格还是制表位">9.3. 空格还是制表位</h3>
+<p><strong>总述</strong></p>
 <p>只使用空格, 每次缩进 2 个空格.</p>
 <p><strong>说明</strong></p>
 <p>我们使用空格缩进. 不要在代码中使用制表符. 你应该设置编辑器将制表符转为空格.</p>
-<h3 id="9-4-函数声明与定义"><a href="#9-4-函数声明与定义" class="headerlink" title="9.4. 函数声明与定义"></a>9.4. 函数声明与定义</h3><p><strong>总述</strong></p>
+<h3 id="函数声明与定义">9.4. 函数声明与定义</h3>
+<p><strong>总述</strong></p>
 <p>返回类型和函数名在同一行, 参数也尽量放在同一行, 如果放不下就对形参分行, 分行方式与 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/formatting/##function-calls">函数调用</a> 一致.</p>
 <p><strong>说明</strong></p>
 <p>函数看上去像这样:</p>
@@ -1851,14 +1985,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shape</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Rotate</span><span class="params">(<span class="keyword">double</span> radians)</span> </span>= <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span> :</span> <span class="keyword">public</span> Shape &#123;</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">Rotate</span><span class="params">(<span class="keyword">double</span> radians)</span> <span class="keyword">override</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Circle::Rotate</span><span class="params">(<span class="keyword">double</span> <span class="comment">/*radians*/</span>)</span> </span>&#123;&#125;</span><br><span class="line"><span class="comment">// 差 - 如果将来有人要实现, 很难猜出变量的作用.</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Circle::Rotate</span><span class="params">(<span class="keyword">double</span>)</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>属性, 和展开为属性的宏, 写在函数声明或定义的最前面, 即返回类型之前:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">MUST_USE_RESULT <span class="keyword">bool</span> <span class="title">IsOK</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
-<h3 id="9-5-Lambda-表达式"><a href="#9-5-Lambda-表达式" class="headerlink" title="9.5. Lambda 表达式"></a>9.5. Lambda 表达式</h3><p><strong>总述</strong></p>
+<h3 id="lambda-表达式-1">9.5. Lambda 表达式</h3>
+<p><strong>总述</strong></p>
 <p>Lambda 表达式对形参和函数体的格式化和其他函数一致; 捕获列表同理, 表项用逗号隔开.</p>
 <p><strong>说明</strong></p>
 <p>若用引用捕获, 在变量名和 <code>&amp;</code> 之间不留空格.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">auto</span> add_to_x = [&amp;x](<span class="keyword">int</span> n) &#123; x += n; &#125;;</span><br></pre></td></tr></table></figure>
 <p>短 lambda 就写得和内联函数一样.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">std::set&lt;<span class="keyword">int</span>&gt; blacklist = &#123;<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>&#125;;</span><br><span class="line">std::vector&lt;<span class="keyword">int</span>&gt; digits = &#123;<span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">1</span>&#125;;</span><br><span class="line">digits.<span class="built_in">erase</span>(std::<span class="built_in">remove_if</span>(digits.<span class="built_in">begin</span>(), digits.<span class="built_in">end</span>(), [&amp;blacklist](<span class="keyword">int</span> i) &#123;</span><br><span class="line">               <span class="keyword">return</span> blacklist.<span class="built_in">find</span>(i) != blacklist.<span class="built_in">end</span>();</span><br><span class="line">             &#125;),</span><br><span class="line">             digits.<span class="built_in">end</span>());</span><br></pre></td></tr></table></figure>
-<h3 id="9-6-函数调用"><a href="#9-6-函数调用" class="headerlink" title="9.6. 函数调用"></a>9.6. 函数调用</h3><p><strong>总述</strong></p>
+<h3 id="函数调用">9.6. 函数调用</h3>
+<p><strong>总述</strong></p>
 <p>要么一行写完函数调用, 要么在圆括号里对参数分行, 要么参数另起一行且缩进四格. 如果没有其它顾虑的话, 尽可能精简行数, 比如把多个参数适当地放在同一行里.</p>
 <p><strong>说明</strong></p>
 <p>函数调用遵循如下形式：</p>
@@ -1875,12 +2011,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>如果某参数独立成行, 对可读性更有帮助的话, 那也可以如此做. 参数的格式处理应当以可读性而非其他作为最重要的原则.</p>
 <p>此外, 如果一系列参数本身就有一定的结构, 可以酌情地按其结构来决定参数格式：</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过 3x3 矩阵转换 widget.</span></span><br><span class="line">my_widget.<span class="built_in">Transform</span>(x1, x2, x3,</span><br><span class="line">                    y1, y2, y3,</span><br><span class="line">                    z1, z2, z3);</span><br></pre></td></tr></table></figure>
-<h3 id="9-7-列表初始化格式"><a href="#9-7-列表初始化格式" class="headerlink" title="9.7. 列表初始化格式"></a>9.7. 列表初始化格式</h3><p><strong>总述</strong></p>
+<h3 id="列表初始化格式">9.7. 列表初始化格式</h3>
+<p><strong>总述</strong></p>
 <p>您平时怎么格式化函数调用, 就怎么格式化 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/##braced-initializer-list">列表初始化</a>.</p>
 <p><strong>说明</strong></p>
 <p>如果列表初始化伴随着名字, 比如类型或变量名, 格式化时将将名字视作函数调用名, {} 视作函数调用的括号. 如果没有名字, 就视作名字长度为零.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 一行列表初始化示范.</span></span><br><span class="line"><span class="keyword">return</span> &#123;foo, bar&#125;;</span><br><span class="line"><span class="built_in">functioncall</span>(&#123;foo, bar&#125;);</span><br><span class="line">pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; p&#123;foo, bar&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当不得不断行时.</span></span><br><span class="line"><span class="built_in">SomeFunction</span>(</span><br><span class="line">    &#123;<span class="string">&quot;assume a zero-length name before &#123;&quot;</span>&#125;,  <span class="comment">// 假设在 &#123; 前有长度为零的名字.</span></span><br><span class="line">    some_other_function_parameter);</span><br><span class="line">SomeType variable&#123;</span><br><span class="line">    some, other, values,</span><br><span class="line">    &#123;<span class="string">&quot;assume a zero-length name before &#123;&quot;</span>&#125;,  <span class="comment">// 假设在 &#123; 前有长度为零的名字.</span></span><br><span class="line">    SomeOtherType&#123;</span><br><span class="line">        <span class="string">&quot;Very long string requiring the surrounding breaks.&quot;</span>,  <span class="comment">// 非常长的字符串, 前后都需要断行.</span></span><br><span class="line">        some, other values&#125;,</span><br><span class="line">    SomeOtherType&#123;<span class="string">&quot;Slightly shorter string&quot;</span>,  <span class="comment">// 稍短的字符串.</span></span><br><span class="line">                  some, other, values&#125;&#125;;</span><br><span class="line">SomeType variable&#123;</span><br><span class="line">    <span class="string">&quot;This is too long to fit all in one line&quot;</span>&#125;;  <span class="comment">// 字符串过长, 因此无法放在同一行.</span></span><br><span class="line">MyType m = &#123;  <span class="comment">// 注意了, 您可以在 &#123; 前断行.</span></span><br><span class="line">    superlongvariablename1,</span><br><span class="line">    superlongvariablename2,</span><br><span class="line">    &#123;<span class="keyword">short</span>, interior, list&#125;,</span><br><span class="line">    &#123;interiorwrappinglist,</span><br><span class="line">     interiorwrappinglist2&#125;&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="9-8-条件语句"><a href="#9-8-条件语句" class="headerlink" title="9.8. 条件语句"></a>9.8. 条件语句</h3><p><strong>总述</strong></p>
+<h3 id="条件语句">9.8. 条件语句</h3>
+<p><strong>总述</strong></p>
 <p>倾向于不在圆括号内使用空格. 关键字 <code>if</code> 和 <code>else</code> 另起一行.</p>
 <p><strong>说明</strong></p>
 <p>对基本条件语句有两种可以接受的格式. 一种在圆括号和条件之间有空格, 另一种没有.</p>
@@ -1898,7 +2036,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition)</span><br><span class="line">  <span class="built_in">DoSomething</span>();  <span class="comment">// 2 空格缩进.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">  <span class="built_in">DoSomething</span>();  <span class="comment">// 2 空格缩进.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>但如果语句中某个 <code>if-else</code> 分支使用了大括号的话, 其它分支也必须使用:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 不可以这样子 - IF 有大括号 ELSE 却没有.</span></span><br><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">  foo;</span><br><span class="line">&#125; <span class="keyword">else</span></span><br><span class="line">  bar;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不可以这样子 - ELSE 有大括号 IF 却没有.</span></span><br><span class="line"><span class="keyword">if</span> (condition)</span><br><span class="line">  foo;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">  bar;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 只要其中一个分支用了大括号, 两个分支都要用上大括号.</span></span><br><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">  foo;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  bar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="9-9-循环和开关选择语句"><a href="#9-9-循环和开关选择语句" class="headerlink" title="9.9. 循环和开关选择语句"></a>9.9. 循环和开关选择语句</h3><p><strong>总述</strong></p>
+<h3 id="循环和开关选择语句">9.9. 循环和开关选择语句</h3>
+<p><strong>总述</strong></p>
 <p><code>switch</code> 语句可以使用大括号分段, 以表明 cases 之间不是连在一起的. 在单语句循环里, 括号可用可不用. 空循环体应使用 <code>&#123;&#125;</code> 或 <code>continue</code>.</p>
 <p><strong>说明</strong></p>
 <p><code>switch</code> 语句中的 <code>case</code> 块可以使用大括号也可以不用, 取决于你的个人喜好. 如果用的话, 要按照下文所述的方法.</p>
@@ -1908,7 +2047,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; kSomeNumber; ++i)</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;I love you\n&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; kSomeNumber; ++i) &#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;I take it back\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>空循环体应使用 <code>&#123;&#125;</code> 或 <code>continue</code>, 而不是一个简单的分号.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (condition) &#123;</span><br><span class="line">  <span class="comment">// 反复循环直到条件失效.</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; kSomeNumber; ++i) &#123;&#125;  <span class="comment">// 可 - 空循环体.</span></span><br><span class="line"><span class="keyword">while</span> (condition) <span class="keyword">continue</span>;  <span class="comment">// 可 - contunue 表明没有逻辑.</span></span><br><span class="line"><span class="keyword">while</span> (condition);  <span class="comment">// 差 - 看起来仅仅只是 while/loop 的部分之一.</span></span><br></pre></td></tr></table></figure>
-<h3 id="9-10-指针和引用表达式"><a href="#9-10-指针和引用表达式" class="headerlink" title="9.10. 指针和引用表达式"></a>9.10. 指针和引用表达式</h3><p><strong>总述</strong></p>
+<h3 id="指针和引用表达式">9.10. 指针和引用表达式</h3>
+<p><strong>总述</strong></p>
 <p>句点或箭头前后不要有空格. 指针/地址操作符 (<code>*, &amp;</code>) 之后不能有空格.</p>
 <p><strong>说明</strong></p>
 <p>下面是指针和引用表达式的正确使用范例:</p>
@@ -1921,18 +2061,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>在声明指针变量或参数时, 星号与类型或变量名紧挨都可以:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 好, 空格前置.</span></span><br><span class="line"><span class="keyword">char</span> *c;</span><br><span class="line"><span class="keyword">const</span> string &amp;str;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 好, 空格后置.</span></span><br><span class="line"><span class="keyword">char</span>* c;</span><br><span class="line"><span class="keyword">const</span> string&amp; str;</span><br><span class="line"><span class="keyword">int</span> x, *y;  <span class="comment">// 不允许 - 在多重声明中不能使用 &amp; 或 *</span></span><br><span class="line"><span class="keyword">char</span> * c;  <span class="comment">// 差 - * 两边都有空格</span></span><br><span class="line"><span class="keyword">const</span> string &amp; str;  <span class="comment">// 差 - &amp; 两边都有空格.</span></span><br></pre></td></tr></table></figure>
 <p>在单个文件内要保持风格一致, 所以, 如果是修改现有文件, 要遵照该文件的风格.</p>
-<h3 id="9-11-布尔表达式"><a href="#9-11-布尔表达式" class="headerlink" title="9.11. 布尔表达式"></a>9.11. 布尔表达式</h3><p><strong>总述</strong></p>
+<h3 id="布尔表达式">9.11. 布尔表达式</h3>
+<p><strong>总述</strong></p>
 <p>如果一个布尔表达式超过 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/formatting/##line-length">标准行宽</a>, 断行方式要统一一下.</p>
 <p><strong>说明</strong></p>
 <p>下例中, 逻辑与 (<code>&amp;&amp;</code>) 操作符总位于行尾:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (this_one_thing &gt; this_other_thing &amp;&amp;</span><br><span class="line">    a_third_thing == a_fourth_thing &amp;&amp;</span><br><span class="line">    yet_another &amp;&amp; last_one) &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意, 上例的逻辑与 (<code>&amp;&amp;</code>) 操作符均位于行尾. 这个格式在 Google 里很常见, 虽然把所有操作符放在开头也可以. 可以考虑额外插入圆括号, 合理使用的话对增强可读性是很有帮助的. 此外, 直接用符号形式的操作符, 比如 <code>&amp;&amp;</code> 和 <code>~</code>, 不要用词语形式的 <code>and</code> 和 <code>compl</code>.</p>
-<h3 id="9-12-函数返回值"><a href="#9-12-函数返回值" class="headerlink" title="9.12. 函数返回值"></a>9.12. 函数返回值</h3><p><strong>总述</strong></p>
+<h3 id="函数返回值">9.12. 函数返回值</h3>
+<p><strong>总述</strong></p>
 <p>不要在 <code>return</code> 表达式里加上非必须的圆括号.</p>
 <p><strong>说明</strong></p>
 <p>只有在写 <code>x = expr</code> 要加上括号的时候才在 <code>return expr;</code> 里使用括号.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> result;                  <span class="comment">// 返回值很简单, 没有圆括号.</span></span><br><span class="line"><span class="comment">// 可以用圆括号把复杂表达式圈起来, 改善可读性.</span></span><br><span class="line"><span class="keyword">return</span> (some_long_condition &amp;&amp;</span><br><span class="line">        another_condition);</span><br><span class="line"><span class="keyword">return</span> (value);                <span class="comment">// 毕竟您从来不会写 var = (value);</span></span><br><span class="line"><span class="keyword">return</span>(result);                <span class="comment">// return 可不是函数！</span></span><br></pre></td></tr></table></figure>
-<h3 id="9-13-变量及数组初始化"><a href="#9-13-变量及数组初始化" class="headerlink" title="9.13. 变量及数组初始化"></a>9.13. 变量及数组初始化</h3><p><strong>总述</strong></p>
+<h3 id="变量及数组初始化">9.13. 变量及数组初始化</h3>
+<p><strong>总述</strong></p>
 <p>用 <code>=</code>, <code>()</code> 和 <code>&#123;&#125;</code> 均可.</p>
 <p><strong>说明</strong></p>
 <p>您可以用 <code>=</code>, <code>()</code> 和 <code>&#123;&#125;</code>, 以下的例子都是正确的：</p>
@@ -1941,12 +2084,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(<span class="number">100</span>, <span class="number">1</span>)</span></span>;  <span class="comment">// 内容为 100 个 1 的向量.</span></span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt; v&#123;<span class="number">100</span>, <span class="number">1</span>&#125;;  <span class="comment">// 内容为 100 和 1 的向量.</span></span><br></pre></td></tr></table></figure>
 <p>此外, 列表初始化不允许整型类型的四舍五入, 这可以用来避免一些类型上的编程失误.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pi</span><span class="params">(<span class="number">3.14</span>)</span></span>;  <span class="comment">// 好 - pi == 3.</span></span><br><span class="line"><span class="keyword">int</span> pi&#123;<span class="number">3.14</span>&#125;;  <span class="comment">// 编译错误: 缩窄转换.</span></span><br></pre></td></tr></table></figure>
-<h3 id="9-14-预处理指令"><a href="#9-14-预处理指令" class="headerlink" title="9.14. 预处理指令"></a>9.14. 预处理指令</h3><p><strong>总述</strong></p>
+<h3 id="预处理指令">9.14. 预处理指令</h3>
+<p><strong>总述</strong></p>
 <p>预处理指令不要缩进, 从行首开始.</p>
 <p><strong>说明</strong></p>
 <p>即使预处理指令位于缩进代码块中, 指令也应从行首开始.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 好 - 指令从行首开始</span></span><br><span class="line">  <span class="keyword">if</span> (lopsided_score) &#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> DISASTER_PENDING      <span class="comment">// 正确 - 从行首开始</span></span></span><br><span class="line">    <span class="built_in">DropEverything</span>();</span><br><span class="line">#<span class="meta"># <span class="meta-keyword">if</span> NOTIFY               <span class="comment">// 非必要 - ## 后跟空格</span></span></span><br><span class="line">    <span class="built_in">NotifyClient</span>();</span><br><span class="line">#<span class="meta"># <span class="meta-keyword">endif</span></span></span><br><span class="line">#<span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="built_in">BackToNormal</span>();</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 差 - 指令缩进</span></span><br><span class="line">  <span class="keyword">if</span> (lopsided_score) &#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">if</span> DISASTER_PENDING  <span class="comment">// 差 - &quot;#if&quot; 应该放在行开头</span></span></span><br><span class="line">    <span class="built_in">DropEverything</span>();</span><br><span class="line">    #<span class="meta">#<span class="meta-keyword">endif</span>                <span class="comment">// 差 - &quot;##endif&quot; 不要缩进</span></span></span><br><span class="line">    <span class="built_in">BackToNormal</span>();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="9-15-类格式"><a href="#9-15-类格式" class="headerlink" title="9.15. 类格式"></a>9.15. 类格式</h3><p><strong>总述</strong></p>
+<h3 id="类格式">9.15. 类格式</h3>
+<p><strong>总述</strong></p>
 <p>访问控制块的声明依次序是 <code>public:</code>, <code>protected:</code>, <code>private:</code>, 每个都缩进 1 个空格.</p>
 <p><strong>说明</strong></p>
 <p>类声明 (下面的代码中缺少注释, 参考 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/comments/##class-comments">类注释</a>) 的基本格式如下:</p>
@@ -1960,12 +2105,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><code>public</code> 放在最前面, 然后是 <code>protected</code>, 最后是 <code>private</code>.</li>
 <li>关于声明顺序的规则请参考 <a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/##declaration-order">声明顺序</a> 一节.</li>
 </ul>
-<h3 id="9-16-构造函数初始值列表"><a href="#9-16-构造函数初始值列表" class="headerlink" title="9.16. 构造函数初始值列表"></a>9.16. 构造函数初始值列表</h3><p><strong>总述</strong></p>
+<h3 id="构造函数初始值列表">9.16. 构造函数初始值列表</h3>
+<p><strong>总述</strong></p>
 <p>构造函数初始化列表放在同一行或按四格缩进并排多行.</p>
 <p><strong>说明</strong></p>
 <p>下面两种初始值列表方式都可以接受:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 如果所有变量能放在同一行:</span></span><br><span class="line">MyClass::<span class="built_in">MyClass</span>(<span class="keyword">int</span> var) : <span class="built_in">some_var_</span>(var) &#123;</span><br><span class="line">  <span class="built_in">DoSomething</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果不能放在同一行,</span></span><br><span class="line"><span class="comment">// 必须置于冒号后, 并缩进 4 个空格</span></span><br><span class="line">MyClass::<span class="built_in">MyClass</span>(<span class="keyword">int</span> var)</span><br><span class="line">    : <span class="built_in">some_var_</span>(var), <span class="built_in">some_other_var_</span>(var + <span class="number">1</span>) &#123;</span><br><span class="line">  <span class="built_in">DoSomething</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果初始化列表需要置于多行, 将每一个成员放在单独的一行</span></span><br><span class="line"><span class="comment">// 并逐行对齐</span></span><br><span class="line">MyClass::<span class="built_in">MyClass</span>(<span class="keyword">int</span> var)</span><br><span class="line">    : <span class="built_in">some_var_</span>(var),             <span class="comment">// 4 space indent</span></span><br><span class="line">      <span class="built_in">some_other_var_</span>(var + <span class="number">1</span>) &#123;  <span class="comment">// lined up</span></span><br><span class="line">  <span class="built_in">DoSomething</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 右大括号 &#125; 可以和左大括号 &#123; 放在同一行</span></span><br><span class="line"><span class="comment">// 如果这样做合适的话</span></span><br><span class="line">MyClass::<span class="built_in">MyClass</span>(<span class="keyword">int</span> var)</span><br><span class="line">    : <span class="built_in">some_var_</span>(var) &#123;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="9-17-命名空间格式化"><a href="#9-17-命名空间格式化" class="headerlink" title="9.17. 命名空间格式化"></a>9.17. 命名空间格式化</h3><p><strong>总述</strong></p>
+<h3 id="命名空间格式化">9.17. 命名空间格式化</h3>
+<p><strong>总述</strong></p>
 <p>命名空间内容不缩进.</p>
 <p><strong>说明</strong></p>
 <p><a target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/scoping/##namespaces">命名空间</a> 不要增加额外的缩进层次, 例如:</p>
@@ -1974,15 +2121,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 错, 缩进多余了.</span></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;  <span class="comment">// namespace</span></span><br></pre></td></tr></table></figure>
 <p>声明嵌套命名空间时, 每个命名空间都独立成行.</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> foo &#123;</span><br><span class="line"><span class="keyword">namespace</span> bar &#123;</span><br></pre></td></tr></table></figure>
-<h3 id="9-19-水平留白"><a href="#9-19-水平留白" class="headerlink" title="9.19. 水平留白"></a>9.19. 水平留白</h3><p><strong>总述</strong></p>
+<h3 id="水平留白">9.19. 水平留白</h3>
+<p><strong>总述</strong></p>
 <p>水平留白的使用根据在代码中的位置决定. 永远不要在行尾添加没意义的留白.</p>
 <p><strong>说明</strong></p>
-<h6 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h6><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">bool</span> b)</span> </span>&#123;  <span class="comment">// 左大括号前总是有空格.</span></span><br><span class="line">  ...</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;  <span class="comment">// 分号前不加空格.</span></span><br><span class="line"><span class="comment">// 列表初始化中大括号内的空格是可选的.</span></span><br><span class="line"><span class="comment">// 如果加了空格, 那么两边都要加上.</span></span><br><span class="line"><span class="keyword">int</span> x[] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> x[] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 继承与初始化列表中的冒号前后恒有空格.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> :</span> <span class="keyword">public</span> Bar &#123;</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="comment">// 对于单行函数的实现, 在大括号内加上空格</span></span><br><span class="line">  <span class="comment">// 然后是函数实现</span></span><br><span class="line">  <span class="built_in">Foo</span>(<span class="keyword">int</span> b) : <span class="built_in">Bar</span>(), <span class="built_in">baz_</span>(b) &#123;&#125;  <span class="comment">// 大括号里面是空的话, 不加空格.</span></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">Reset</span><span class="params">()</span> </span>&#123; baz_ = <span class="number">0</span>; &#125;  <span class="comment">// 用括号把大括号与实现分开.</span></span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<h6 id="通用">通用</h6>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">bool</span> b)</span> </span>&#123;  <span class="comment">// 左大括号前总是有空格.</span></span><br><span class="line">  ...</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;  <span class="comment">// 分号前不加空格.</span></span><br><span class="line"><span class="comment">// 列表初始化中大括号内的空格是可选的.</span></span><br><span class="line"><span class="comment">// 如果加了空格, 那么两边都要加上.</span></span><br><span class="line"><span class="keyword">int</span> x[] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> x[] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 继承与初始化列表中的冒号前后恒有空格.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> :</span> <span class="keyword">public</span> Bar &#123;</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="comment">// 对于单行函数的实现, 在大括号内加上空格</span></span><br><span class="line">  <span class="comment">// 然后是函数实现</span></span><br><span class="line">  <span class="built_in">Foo</span>(<span class="keyword">int</span> b) : <span class="built_in">Bar</span>(), <span class="built_in">baz_</span>(b) &#123;&#125;  <span class="comment">// 大括号里面是空的话, 不加空格.</span></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">Reset</span><span class="params">()</span> </span>&#123; baz_ = <span class="number">0</span>; &#125;  <span class="comment">// 用括号把大括号与实现分开.</span></span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
 <p>添加冗余的留白会给其他人编辑时造成额外负担. 因此, 行尾不要留空格. 如果确定一行代码已经修改完毕, 将多余的空格去掉; 或者在专门清理空格时去掉（尤其是在没有其他人在处理这件事的时候). (Yang.Y 注: 现在大部分代码编辑器稍加设置后, 都支持自动删除行首/行尾空格, 如果不支持, 考虑换一款编辑器或 IDE)</p>
-<h6 id="循环和条件语句"><a href="#循环和条件语句" class="headerlink" title="循环和条件语句"></a>循环和条件语句</h6><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (b) &#123;          <span class="comment">// if 条件语句和循环语句关键字后均有空格.</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;          <span class="comment">// else 前后有空格.</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span> (test) &#123;&#125;   <span class="comment">// 圆括号内部不紧邻空格.</span></span><br><span class="line"><span class="built_in"><span class="keyword">switch</span></span> (i) &#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line"><span class="built_in"><span class="keyword">switch</span></span> ( i ) &#123;    <span class="comment">// 循环和条件语句的圆括号里可以与空格紧邻.</span></span><br><span class="line"><span class="keyword">if</span> ( test ) &#123;     <span class="comment">// 圆括号, 但这很少见. 总之要一致.</span></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i ) &#123;</span><br><span class="line"><span class="keyword">for</span> ( ; i &lt; <span class="number">5</span> ; ++i) &#123;  <span class="comment">// 循环里内 ; 后恒有空格, ;  前可以加个空格.</span></span><br><span class="line"><span class="built_in"><span class="keyword">switch</span></span> (i) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">1</span>:         <span class="comment">// switch case 的冒号前无空格.</span></span><br><span class="line">    ...</span><br><span class="line">  <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">break</span>;  <span class="comment">// 如果冒号有代码, 加个空格.</span></span><br></pre></td></tr></table></figure>
-<h6 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h6><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 赋值运算符前后总是有空格.</span></span><br><span class="line">x = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 其它二元操作符也前后恒有空格, 不过对于表达式的子式可以不加空格.</span></span><br><span class="line"><span class="comment">// 圆括号内部没有紧邻空格.</span></span><br><span class="line">v = w * x + y / z;</span><br><span class="line">v = w*x + y/z;</span><br><span class="line">v = w * (x + z);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在参数和一元操作符之间不加空格.</span></span><br><span class="line">x = <span class="number">-5</span>;</span><br><span class="line">++x;</span><br><span class="line"><span class="keyword">if</span> (x &amp;&amp; !y)</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
-<h6 id="模板和转换"><a href="#模板和转换" class="headerlink" title="模板和转换"></a>模板和转换</h6><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 尖括号(&lt; and &gt;) 不与空格紧邻, &lt; 前没有空格, &gt; 和 ( 之间也没有.</span></span><br><span class="line">vector&lt;string&gt; x;</span><br><span class="line">y = <span class="keyword">static_cast</span>&lt;<span class="keyword">char</span>*&gt;(x);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在类型与指针操作符之间留空格也可以, 但要保持一致.</span></span><br><span class="line">vector&lt;<span class="keyword">char</span> *&gt; x;</span><br></pre></td></tr></table></figure>
-<h3 id="9-19-垂直留白"><a href="#9-19-垂直留白" class="headerlink" title="9.19. 垂直留白"></a>9.19. 垂直留白</h3><p><strong>总述</strong></p>
+<h6 id="循环和条件语句">循环和条件语句</h6>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (b) &#123;          <span class="comment">// if 条件语句和循环语句关键字后均有空格.</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;          <span class="comment">// else 前后有空格.</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span> (test) &#123;&#125;   <span class="comment">// 圆括号内部不紧邻空格.</span></span><br><span class="line"><span class="built_in"><span class="keyword">switch</span></span> (i) &#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line"><span class="built_in"><span class="keyword">switch</span></span> ( i ) &#123;    <span class="comment">// 循环和条件语句的圆括号里可以与空格紧邻.</span></span><br><span class="line"><span class="keyword">if</span> ( test ) &#123;     <span class="comment">// 圆括号, 但这很少见. 总之要一致.</span></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i ) &#123;</span><br><span class="line"><span class="keyword">for</span> ( ; i &lt; <span class="number">5</span> ; ++i) &#123;  <span class="comment">// 循环里内 ; 后恒有空格, ;  前可以加个空格.</span></span><br><span class="line"><span class="built_in"><span class="keyword">switch</span></span> (i) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">1</span>:         <span class="comment">// switch case 的冒号前无空格.</span></span><br><span class="line">    ...</span><br><span class="line">  <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">break</span>;  <span class="comment">// 如果冒号有代码, 加个空格.</span></span><br></pre></td></tr></table></figure>
+<h6 id="操作符">操作符</h6>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 赋值运算符前后总是有空格.</span></span><br><span class="line">x = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 其它二元操作符也前后恒有空格, 不过对于表达式的子式可以不加空格.</span></span><br><span class="line"><span class="comment">// 圆括号内部没有紧邻空格.</span></span><br><span class="line">v = w * x + y / z;</span><br><span class="line">v = w*x + y/z;</span><br><span class="line">v = w * (x + z);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在参数和一元操作符之间不加空格.</span></span><br><span class="line">x = <span class="number">-5</span>;</span><br><span class="line">++x;</span><br><span class="line"><span class="keyword">if</span> (x &amp;&amp; !y)</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<h6 id="模板和转换">模板和转换</h6>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 尖括号(&lt; and &gt;) 不与空格紧邻, &lt; 前没有空格, &gt; 和 ( 之间也没有.</span></span><br><span class="line">vector&lt;string&gt; x;</span><br><span class="line">y = <span class="keyword">static_cast</span>&lt;<span class="keyword">char</span>*&gt;(x);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在类型与指针操作符之间留空格也可以, 但要保持一致.</span></span><br><span class="line">vector&lt;<span class="keyword">char</span> *&gt; x;</span><br></pre></td></tr></table></figure>
+<h3 id="垂直留白">9.19. 垂直留白</h3>
+<p><strong>总述</strong></p>
 <p>垂直留白越少越好.</p>
 <p><strong>说明</strong></p>
 <p>这不仅仅是规则而是原则问题了: 不在万不得已, 不要使用空行. 尤其是: 两个函数定义之间的空行不要超过 2 行, 函数体首尾不要留空行, 函数体中也不要随意添加空行.</p>
@@ -1992,7 +2145,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>函数体内开头或结尾的空行可读性微乎其微.</li>
 <li>在多重 if-else 块里加空行或许有点可读性.</li>
 </ul>
-<h3 id="译者-YuleFox-笔记-4"><a href="#译者-YuleFox-笔记-4" class="headerlink" title="译者 (YuleFox) 笔记"></a>译者 (YuleFox) 笔记</h3><ol>
+<h3 id="译者-yulefox-笔记-4">译者 (YuleFox) 笔记</h3>
+<ol type="1">
 <li>对于代码格式, 因人, 系统而异各有优缺点, 但同一个项目中遵循同一标准还是有必要的;</li>
 <li>行宽原则上不超过 80 列, 把 22 寸的显示屏都占完, 怎么也说不过去;</li>
 <li>尽量不使用非 ASCII 字符, 如果使用的话, 参考 UTF-8 格式 (尤其是 UNIX/Linux 下, Windows 下可以考虑宽字符), 尽量不将字符串常量耦合到代码中, 比如独立出资源文件, 这不仅仅是风格问题了;</li>
@@ -2006,7 +2160,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>水平/垂直留白不要滥用, 怎么易读怎么来.</li>
 <li>关于 UNIX/Linux 风格为什么要把左大括号置于行尾 (<code>.cc</code> 文件的函数实现处, 左大括号位于行首), 我的理解是代码看上去比较简约, 想想行首除了函数体被一对大括号封在一起之外, 只有右大括号的代码看上去确实也舒服; Windows 风格将左大括号置于行首的优点是匹配情况一目了然.</li>
 </ol>
-<h3 id="译者（acgtyrant）笔记-5"><a href="#译者（acgtyrant）笔记-5" class="headerlink" title="译者（acgtyrant）笔记"></a>译者（acgtyrant）笔记</h3><ol>
+<h3 id="译者acgtyrant笔记-5">译者（acgtyrant）笔记</h3>
+<ol type="1">
 <li>80 行限制事实上有助于避免代码可读性失控, 比如超多重嵌套块, 超多重函数调用等等.</li>
 <li>Linux 上设置好了 Locale 就几乎一劳永逸设置好所有开发环境的编码, 不像奇葩的 Windows.</li>
 <li>Google 强调有一对 if-else 时, 不论有没有嵌套, 都要有大括号. Apple 正好 <a target="_blank" rel="noopener" href="http://coolshell.cn/articles/11112.html">有栽过跟头</a> .</li>
@@ -2016,12 +2171,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>事实上, 如果您熟悉英语本身的书写规则, 就会发现该风格指南在格式上的规定与英语语法相当一脉相承. 比如普通标点符号和单词后面还有文本的话, 总会留一个空格; 特殊符号与单词之间就不用留了, 比如 <code>if (true)</code> 中的圆括号与 <code>true</code>.</li>
 <li>本风格指南没有明确规定 void 函数里要不要用 return 语句, 不过就 Google 开源项目 leveldb 并没有写; 此外从 <a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/9316717/is-a-blank-return-statement-at-the-end-of-a-function-whos-return-type-is-void-ne">Is a blank return statement at the end of a function whos return type is void necessary?</a> 来看, <code>return;</code> 比 <code>return ;</code> 更约定俗成（事实上 cpplint 会对后者报错, 指出分号前有多余的空格）, 且可用来提前跳出函数栈.</li>
 </ol>
-<h2 id="10-规则特例"><a href="#10-规则特例" class="headerlink" title="10. 规则特例"></a>10. 规则特例</h2><p>前面说明的编程习惯基本都是强制性的. 但所有优秀的规则都允许例外, 这里就是探讨这些特例.</p>
-<h3 id="10-1-现有不合规范的代码"><a href="#10-1-现有不合规范的代码" class="headerlink" title="10.1. 现有不合规范的代码"></a>10.1. 现有不合规范的代码</h3><p><strong>总述</strong></p>
+<h2 id="规则特例">10. 规则特例</h2>
+<p>前面说明的编程习惯基本都是强制性的. 但所有优秀的规则都允许例外, 这里就是探讨这些特例.</p>
+<h3 id="现有不合规范的代码">10.1. 现有不合规范的代码</h3>
+<p><strong>总述</strong></p>
 <p>对于现有不符合既定编程风格的代码可以网开一面.</p>
 <p><strong>说明</strong></p>
 <p>当你修改使用其他风格的代码时, 为了与代码原有风格保持一致可以不使用本指南约定. 如果不放心, 可以与代码原作者或现在的负责人员商讨. 记住, <em>一致性</em> 也包括原有的一致性.</p>
-<h3 id="10-2-Windows-代码"><a href="#10-2-Windows-代码" class="headerlink" title="10.2. Windows 代码"></a>10.2. Windows 代码</h3><p><strong>总述</strong></p>
+<h3 id="windows-代码">10.2. Windows 代码</h3>
+<p><strong>总述</strong></p>
 <p>Windows 程序员有自己的编程习惯, 主要源于 Windows 头文件和其它 Microsoft 代码. 我们希望任何人都可以顺利读懂你的代码, 所以针对所有平台的 C++ 编程只给出一个单独的指南.</p>
 <p><strong>说明</strong></p>
 <p>如果你习惯使用 Windows 编码风格, 这儿有必要重申一下某些你可能会忘记的指南:</p>
@@ -2039,11 +2197,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>通常为了利用头文件预编译, 每个每个源文件的开头都会包含一个名为 <code>StdAfx.h</code> 或 <code>precompile.h</code> 的文件. 为了使代码方便与其他项目共享, 请避免显式包含此文件 (除了在 <code>precompile.cc</code> 中), 使用 <code>/FI</code> 编译器选项以自动包含该文件.</li>
 <li>资源头文件通常命名为 <code>resource.h</code> 且只包含宏, 这一文件不需要遵守本风格指南.</li>
 </ul>
-<h2 id="11-结束语"><a href="#11-结束语" class="headerlink" title="11. 结束语"></a>11. 结束语</h2><p>运用常识和判断力, 并且 <em>保持一致</em>.</p>
+<h2 id="结束语">11. 结束语</h2>
+<p>运用常识和判断力, 并且 <em>保持一致</em>.</p>
 <p>编辑代码时, 花点时间看看项目中的其它代码, 并熟悉其风格. 如果其它代码中 <code>if</code> 语句使用空格, 那么你也要使用. 如果其中的注释用星号 (*) 围成一个盒子状, 那么你同样要这么做.</p>
 <p>风格指南的重点在于提供一个通用的编程规范, 这样大家可以把精力集中在实现内容而不是表现形式上. 我们展示的是一个总体的的风格规范, 但局部风格也很重要, 如果你在一个文件中新加的代码和原有代码风格相去甚远, 这就破坏了文件本身的整体美观, 也让打乱读者在阅读代码时的节奏, 所以要尽量避免.</p>
 <p>好了, 关于编码风格写的够多了; 代码本身才更有趣. 尽情享受吧!</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -2152,15 +2311,15 @@ TOC：
 常微分方程的数值解
 偏微分方程的数值解
 
-绪论主要内容：
-
-科学计算的内容：科学模拟的...</p>
+绪论
+主要内容：...</p>
         </a>
       
       
         <a class='next' href='/2021/02/18/study/Math/ComplexFunctions/index/'>
           <p class='title'><i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'></p>
+          <p class='content'>
+</p>
         </a>
       
     </div>
@@ -2203,7 +2362,7 @@ TOC：
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-%E6%89%89%E9%A1%B5"><span class="toc-text">0. 扉页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-1-%E8%AF%91%E8%80%85%E5%89%8D%E8%A8%80"><span class="toc-text">0.1 译者前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0-2-%E8%83%8C%E6%99%AF"><span class="toc-text">0.2 背景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-text">1. 头文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Self-contained-%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-text">1.1. Self-contained 头文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-define-%E4%BF%9D%E6%8A%A4"><span class="toc-text">1.2. ##define 保护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%89%8D%E7%BD%AE%E5%A3%B0%E6%98%8E"><span class="toc-text">1.3. 前置声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="toc-text">1.4. 内联函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-include-%E7%9A%84%E8%B7%AF%E5%BE%84%E5%8F%8A%E9%A1%BA%E5%BA%8F"><span class="toc-text">1.5. #include 的路径及顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-YuleFox-%E7%AC%94%E8%AE%B0"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85%EF%BC%88acgtyrant%EF%BC%89%E7%AC%94%E8%AE%B0"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">2. 作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="toc-text">2.1. 命名空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%92%8C%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F"><span class="toc-text">2.2. 匿名命名空间和静态变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%9D%9E%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E3%80%81%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E5%92%8C%E5%85%A8%E5%B1%80%E5%87%BD%E6%95%B0"><span class="toc-text">2.3. 非成员函数、静态成员函数和全局函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-text">2.4. 局部变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E9%9D%99%E6%80%81%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-text">2.5. 静态和全局变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-YuleFox-%E7%AC%94%E8%AE%B0-1"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85%EF%BC%88acgtyrant%EF%BC%89%E7%AC%94%E8%AE%B0-1"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%B1%BB"><span class="toc-text">3. 类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E8%81%8C%E8%B4%A3"><span class="toc-text">3.1. 构造函数的职责</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">3.2. 隐式类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%8F%AF%E6%8B%B7%E8%B4%9D%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%AF%E7%A7%BB%E5%8A%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">3.3. 可拷贝类型和可移动类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E7%BB%93%E6%9E%84%E4%BD%93-VS-%E7%B1%BB"><span class="toc-text">3.4. 结构体 VS. 类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E7%BB%A7%E6%89%BF"><span class="toc-text">3.5. 继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-%E5%A4%9A%E9%87%8D%E7%BB%A7%E6%89%BF"><span class="toc-text">3.6. 多重继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-%E6%8E%A5%E5%8F%A3"><span class="toc-text">3.7. 接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="toc-text">3.8. 运算符重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-9-%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6"><span class="toc-text">3.9. 存取控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-10-%E5%A3%B0%E6%98%8E%E9%A1%BA%E5%BA%8F"><span class="toc-text">3.10. 声明顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-YuleFox-%E7%AC%94%E8%AE%B0-2"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%87%BD%E6%95%B0"><span class="toc-text">4. 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%8F%82%E6%95%B0%E9%A1%BA%E5%BA%8F"><span class="toc-text">4.1. 参数顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E7%BC%96%E5%86%99%E7%AE%80%E7%9F%AD%E5%87%BD%E6%95%B0"><span class="toc-text">4.2. 编写简短函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%BC%95%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-text">4.3. 引用参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="toc-text">4.4. 函数重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E7%BC%BA%E7%9C%81%E5%8F%82%E6%95%B0"><span class="toc-text">4.5. 缺省参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E7%B1%BB%E5%9E%8B%E5%90%8E%E7%BD%AE%E8%AF%AD%E6%B3%95"><span class="toc-text">4.6. 函数返回类型后置语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%9D%A5%E8%87%AA-Google-%E7%9A%84%E5%A5%87%E6%8A%80"><span class="toc-text">5. 来自 Google 的奇技</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%89%80%E6%9C%89%E6%9D%83%E4%B8%8E%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-text">5.1. 所有权与智能指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-Cpplint"><span class="toc-text">5.2. Cpplint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85%EF%BC%88acgtyrant%EF%BC%89%E7%AC%94%E8%AE%B0-2"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%85%B6%E4%BB%96-C-%E7%89%B9%E6%80%A7"><span class="toc-text">6. 其他 C++ 特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%BC%95%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-text">6.1. 引用参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8"><span class="toc-text">6.2. 右值引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="toc-text">6.3. 函数重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E7%BC%BA%E7%9C%81%E5%8F%82%E6%95%B0"><span class="toc-text">6.4. 缺省参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-5-%E5%8F%98%E9%95%BF%E6%95%B0%E7%BB%84%E5%92%8C-alloca"><span class="toc-text">6.5. 变长数组和 alloca()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-6-%E5%8F%8B%E5%85%83"><span class="toc-text">6.6. 友元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-7-%E5%BC%82%E5%B8%B8"><span class="toc-text">6.7. 异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-8-%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B1%BB%E5%9E%8B%E8%AF%86%E5%88%AB"><span class="toc-text">6.8. 运行时类型识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-9-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">6.9. 类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-10-%E6%B5%81"><span class="toc-text">6.10. 流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-11-%E5%89%8D%E7%BD%AE%E8%87%AA%E5%A2%9E%E5%92%8C%E8%87%AA%E5%87%8F"><span class="toc-text">6.11. 前置自增和自减</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-12-const-%E7%94%A8%E6%B3%95"><span class="toc-text">6.12. const 用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-13-constexpr-%E7%94%A8%E6%B3%95"><span class="toc-text">6.13. constexpr 用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-14-%E6%95%B4%E5%9E%8B"><span class="toc-text">6.14. 整型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-15-64-%E4%BD%8D%E4%B8%8B%E7%9A%84%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7"><span class="toc-text">6.15. 64 位下的可移植性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-16-%E9%A2%84%E5%A4%84%E7%90%86%E5%AE%8F"><span class="toc-text">6.16. 预处理宏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-17-0-nullptr-%E5%92%8C-NULL"><span class="toc-text">6.17. 0, nullptr 和 NULL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-18-sizeof"><span class="toc-text">6.18. sizeof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-19-auto"><span class="toc-text">6.19. auto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-20-%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">6.20. 列表初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-21-Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">6.21. Lambda 表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-22-%E6%A8%A1%E6%9D%BF%E7%BC%96%E7%A8%8B"><span class="toc-text">6.22. 模板编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-23-Boost-%E5%BA%93"><span class="toc-text">6.23. Boost 库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-24-C-11"><span class="toc-text">6.24. C++11</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85%EF%BC%88acgtyrant%EF%BC%89%E7%AC%94%E8%AE%B0-3"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A"><span class="toc-text">7. 命名约定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%80%9A%E7%94%A8%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-text">7.1. 通用命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D"><span class="toc-text">7.2. 文件命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E7%B1%BB%E5%9E%8B%E5%91%BD%E5%90%8D"><span class="toc-text">7.3. 类型命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D"><span class="toc-text">7.4. 变量命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-%E5%B8%B8%E9%87%8F%E5%91%BD%E5%90%8D"><span class="toc-text">7.5. 常量命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-6-%E5%87%BD%E6%95%B0%E5%91%BD%E5%90%8D"><span class="toc-text">7.6. 函数命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-7-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%91%BD%E5%90%8D"><span class="toc-text">7.7. 命名空间命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-8-%E6%9E%9A%E4%B8%BE%E5%91%BD%E5%90%8D"><span class="toc-text">7.8. 枚举命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-9-%E5%AE%8F%E5%91%BD%E5%90%8D"><span class="toc-text">7.9. 宏命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-10-%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%E7%9A%84%E7%89%B9%E4%BE%8B"><span class="toc-text">7.10. 命名规则的特例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85%EF%BC%88acgtyrant%EF%BC%89%E7%AC%94%E8%AE%B0-4"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%B3%A8%E9%87%8A"><span class="toc-text">8. 注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E6%B3%A8%E9%87%8A%E9%A3%8E%E6%A0%BC"><span class="toc-text">8.1. 注释风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%96%87%E4%BB%B6%E6%B3%A8%E9%87%8A"><span class="toc-text">8.2. 文件注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E7%B1%BB%E6%B3%A8%E9%87%8A"><span class="toc-text">8.3. 类注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E5%87%BD%E6%95%B0%E6%B3%A8%E9%87%8A"><span class="toc-text">8.4. 函数注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E5%8F%98%E9%87%8F%E6%B3%A8%E9%87%8A"><span class="toc-text">8.5. 变量注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E5%AE%9E%E7%8E%B0%E6%B3%A8%E9%87%8A"><span class="toc-text">8.6. 实现注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-7-%E6%A0%87%E7%82%B9-%E6%8B%BC%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95"><span class="toc-text">8.7. 标点, 拼写和语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-8-TODO-%E6%B3%A8%E9%87%8A"><span class="toc-text">8.8. TODO 注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-9-%E5%BC%83%E7%94%A8%E6%B3%A8%E9%87%8A"><span class="toc-text">8.9. 弃用注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-YuleFox-%E7%AC%94%E8%AE%B0-3"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E6%A0%BC%E5%BC%8F"><span class="toc-text">9. 格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E8%A1%8C%E9%95%BF%E5%BA%A6"><span class="toc-text">9.1. 行长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E9%9D%9E-ASCII-%E5%AD%97%E7%AC%A6"><span class="toc-text">9.2. 非 ASCII 字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-%E7%A9%BA%E6%A0%BC%E8%BF%98%E6%98%AF%E5%88%B6%E8%A1%A8%E4%BD%8D"><span class="toc-text">9.3. 空格还是制表位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%AE%9A%E4%B9%89"><span class="toc-text">9.4. 函数声明与定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-5-Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">9.5. Lambda 表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-6-%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="toc-text">9.6. 函数调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-7-%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%BC%E5%BC%8F"><span class="toc-text">9.7. 列表初始化格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-8-%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">9.8. 条件语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-9-%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%BC%80%E5%85%B3%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5"><span class="toc-text">9.9. 循环和开关选择语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-10-%E6%8C%87%E9%92%88%E5%92%8C%E5%BC%95%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">9.10. 指针和引用表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-11-%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">9.11. 布尔表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-12-%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">9.12. 函数返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-13-%E5%8F%98%E9%87%8F%E5%8F%8A%E6%95%B0%E7%BB%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">9.13. 变量及数组初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-14-%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4"><span class="toc-text">9.14. 预处理指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-15-%E7%B1%BB%E6%A0%BC%E5%BC%8F"><span class="toc-text">9.15. 类格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-16-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9D%E5%A7%8B%E5%80%BC%E5%88%97%E8%A1%A8"><span class="toc-text">9.16. 构造函数初始值列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-17-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">9.17. 命名空间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-19-%E6%B0%B4%E5%B9%B3%E7%95%99%E7%99%BD"><span class="toc-text">9.19. 水平留白</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-19-%E5%9E%82%E7%9B%B4%E7%95%99%E7%99%BD"><span class="toc-text">9.19. 垂直留白</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-YuleFox-%E7%AC%94%E8%AE%B0-4"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85%EF%BC%88acgtyrant%EF%BC%89%E7%AC%94%E8%AE%B0-5"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E8%A7%84%E5%88%99%E7%89%B9%E4%BE%8B"><span class="toc-text">10. 规则特例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-%E7%8E%B0%E6%9C%89%E4%B8%8D%E5%90%88%E8%A7%84%E8%8C%83%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-text">10.1. 现有不合规范的代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-Windows-%E4%BB%A3%E7%A0%81"><span class="toc-text">10.2. Windows 代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="toc-text">11. 结束语</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%89%E9%A1%B5"><span class="toc-text">0. 扉页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85%E5%89%8D%E8%A8%80"><span class="toc-text">0.1 译者前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-text">0.2 背景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-text">1. 头文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#self-contained-%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-text">1.1. Self-contained 头文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#define-%E4%BF%9D%E6%8A%A4"><span class="toc-text">1.2. ##define 保护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%A3%B0%E6%98%8E"><span class="toc-text">1.3. 前置声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="toc-text">1.4. 内联函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#include-%E7%9A%84%E8%B7%AF%E5%BE%84%E5%8F%8A%E9%A1%BA%E5%BA%8F"><span class="toc-text">1.5. #include 的路径及顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-yulefox-%E7%AC%94%E8%AE%B0"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85acgtyrant%E7%AC%94%E8%AE%B0"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">2. 作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="toc-text">2.1. 命名空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%92%8C%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F"><span class="toc-text">2.2. 匿名命名空间和静态变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E5%92%8C%E5%85%A8%E5%B1%80%E5%87%BD%E6%95%B0"><span class="toc-text">2.3. 非成员函数、静态成员函数和全局函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-text">2.4. 局部变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-text">2.5. 静态和全局变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-yulefox-%E7%AC%94%E8%AE%B0-1"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85acgtyrant%E7%AC%94%E8%AE%B0-1"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-text">3. 类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E8%81%8C%E8%B4%A3"><span class="toc-text">3.1. 构造函数的职责</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">3.2. 隐式类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E6%8B%B7%E8%B4%9D%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%AF%E7%A7%BB%E5%8A%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">3.3. 可拷贝类型和可移动类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93-vs.-%E7%B1%BB"><span class="toc-text">3.4. 结构体 VS. 类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-text">3.5. 继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E7%BB%A7%E6%89%BF"><span class="toc-text">3.6. 多重继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-text">3.7. 接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="toc-text">3.8. 运算符重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6"><span class="toc-text">3.9. 存取控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E%E9%A1%BA%E5%BA%8F"><span class="toc-text">3.10. 声明顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-yulefox-%E7%AC%94%E8%AE%B0-2"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-text">4. 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E9%A1%BA%E5%BA%8F"><span class="toc-text">4.1. 参数顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E7%AE%80%E7%9F%AD%E5%87%BD%E6%95%B0"><span class="toc-text">4.2. 编写简短函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-text">4.3. 引用参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="toc-text">4.4. 函数重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%9C%81%E5%8F%82%E6%95%B0"><span class="toc-text">4.5. 缺省参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E7%B1%BB%E5%9E%8B%E5%90%8E%E7%BD%AE%E8%AF%AD%E6%B3%95"><span class="toc-text">4.6. 函数返回类型后置语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A5%E8%87%AA-google-%E7%9A%84%E5%A5%87%E6%8A%80"><span class="toc-text">5. 来自 Google 的奇技</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%80%E6%9C%89%E6%9D%83%E4%B8%8E%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-text">5.1. 所有权与智能指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cpplint"><span class="toc-text">5.2. Cpplint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85acgtyrant%E7%AC%94%E8%AE%B0-2"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96-c-%E7%89%B9%E6%80%A7"><span class="toc-text">6. 其他 C++ 特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E5%8F%82%E6%95%B0-1"><span class="toc-text">6.1. 引用参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8"><span class="toc-text">6.2. 右值引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD-1"><span class="toc-text">6.3. 函数重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%9C%81%E5%8F%82%E6%95%B0-1"><span class="toc-text">6.4. 缺省参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%95%BF%E6%95%B0%E7%BB%84%E5%92%8C-alloca"><span class="toc-text">6.5. 变长数组和 alloca()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8B%E5%85%83"><span class="toc-text">6.6. 友元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-text">6.7. 异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B1%BB%E5%9E%8B%E8%AF%86%E5%88%AB"><span class="toc-text">6.8. 运行时类型识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">6.9. 类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81"><span class="toc-text">6.10. 流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E8%87%AA%E5%A2%9E%E5%92%8C%E8%87%AA%E5%87%8F"><span class="toc-text">6.11. 前置自增和自减</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#const-%E7%94%A8%E6%B3%95"><span class="toc-text">6.12. const 用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#constexpr-%E7%94%A8%E6%B3%95"><span class="toc-text">6.13. constexpr 用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E5%9E%8B"><span class="toc-text">6.14. 整型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E4%B8%8B%E7%9A%84%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7"><span class="toc-text">6.15. 64 位下的可移植性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E5%AE%8F"><span class="toc-text">6.16. 预处理宏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nullptr-%E5%92%8C-null"><span class="toc-text">6.17. 0, nullptr 和 NULL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sizeof"><span class="toc-text">6.18. sizeof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#auto"><span class="toc-text">6.19. auto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">6.20. 列表初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">6.21. Lambda 表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E7%BC%96%E7%A8%8B"><span class="toc-text">6.22. 模板编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#boost-%E5%BA%93"><span class="toc-text">6.23. Boost 库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c11"><span class="toc-text">6.24. C++11</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85acgtyrant%E7%AC%94%E8%AE%B0-3"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A"><span class="toc-text">7. 命名约定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-text">7.1. 通用命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D"><span class="toc-text">7.2. 文件命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%91%BD%E5%90%8D"><span class="toc-text">7.3. 类型命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D"><span class="toc-text">7.4. 变量命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%91%BD%E5%90%8D"><span class="toc-text">7.5. 常量命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%91%BD%E5%90%8D"><span class="toc-text">7.6. 函数命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%91%BD%E5%90%8D"><span class="toc-text">7.7. 命名空间命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E5%91%BD%E5%90%8D"><span class="toc-text">7.8. 枚举命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8F%E5%91%BD%E5%90%8D"><span class="toc-text">7.9. 宏命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%E7%9A%84%E7%89%B9%E4%BE%8B"><span class="toc-text">7.10. 命名规则的特例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85acgtyrant%E7%AC%94%E8%AE%B0-4"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">8. 注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A%E9%A3%8E%E6%A0%BC"><span class="toc-text">8.1. 注释风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%B3%A8%E9%87%8A"><span class="toc-text">8.2. 文件注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E6%B3%A8%E9%87%8A"><span class="toc-text">8.3. 类注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%B3%A8%E9%87%8A"><span class="toc-text">8.4. 函数注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E6%B3%A8%E9%87%8A"><span class="toc-text">8.5. 变量注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%B3%A8%E9%87%8A"><span class="toc-text">8.6. 实现注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%82%B9-%E6%8B%BC%E5%86%99%E5%92%8C%E8%AF%AD%E6%B3%95"><span class="toc-text">8.7. 标点, 拼写和语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#todo-%E6%B3%A8%E9%87%8A"><span class="toc-text">8.8. TODO 注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%83%E7%94%A8%E6%B3%A8%E9%87%8A"><span class="toc-text">8.9. 弃用注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-yulefox-%E7%AC%94%E8%AE%B0-3"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F"><span class="toc-text">9. 格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E9%95%BF%E5%BA%A6"><span class="toc-text">9.1. 行长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E-ascii-%E5%AD%97%E7%AC%A6"><span class="toc-text">9.2. 非 ASCII 字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E6%A0%BC%E8%BF%98%E6%98%AF%E5%88%B6%E8%A1%A8%E4%BD%8D"><span class="toc-text">9.3. 空格还是制表位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%AE%9A%E4%B9%89"><span class="toc-text">9.4. 函数声明与定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F-1"><span class="toc-text">9.5. Lambda 表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="toc-text">9.6. 函数调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%BC%E5%BC%8F"><span class="toc-text">9.7. 列表初始化格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">9.8. 条件语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%BC%80%E5%85%B3%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5"><span class="toc-text">9.9. 循环和开关选择语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E5%BC%95%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">9.10. 指针和引用表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">9.11. 布尔表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">9.12. 函数返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%8F%8A%E6%95%B0%E7%BB%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">9.13. 变量及数组初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4"><span class="toc-text">9.14. 预处理指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E6%A0%BC%E5%BC%8F"><span class="toc-text">9.15. 类格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9D%E5%A7%8B%E5%80%BC%E5%88%97%E8%A1%A8"><span class="toc-text">9.16. 构造函数初始值列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">9.17. 命名空间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E7%95%99%E7%99%BD"><span class="toc-text">9.19. 水平留白</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E7%95%99%E7%99%BD"><span class="toc-text">9.19. 垂直留白</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85-yulefox-%E7%AC%94%E8%AE%B0-4"><span class="toc-text">译者 (YuleFox) 笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%91%E8%80%85acgtyrant%E7%AC%94%E8%AE%B0-5"><span class="toc-text">译者（acgtyrant）笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%84%E5%88%99%E7%89%B9%E4%BE%8B"><span class="toc-text">10. 规则特例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E6%9C%89%E4%B8%8D%E5%90%88%E8%A7%84%E8%8C%83%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-text">10.1. 现有不合规范的代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#windows-%E4%BB%A3%E7%A0%81"><span class="toc-text">10.2. Windows 代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="toc-text">11. 结束语</span></a></li></ol>
     </div>
   </section>
 
@@ -2850,14 +3009,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

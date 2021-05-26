@@ -470,121 +470,139 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>临近期末，来一波概念回顾。</p>
 <span id="more"></span>
-<h2 id="向量及其运算"><a href="#向量及其运算" class="headerlink" title="向量及其运算"></a>向量及其运算</h2><h3 id="向量的概念"><a href="#向量的概念" class="headerlink" title="向量的概念"></a>向量的概念</h3><ul>
+<h2 id="向量及其运算">向量及其运算</h2>
+<h3 id="向量的概念">向量的概念</h3>
+<ul>
 <li><strong>Def</strong>：（向量）一个既有大小又有方向的量</li>
-<li><strong>Def</strong>：向量的模（或长度），范数 $|a|$，零向量 $\mathbf 0$，单位向量</li>
+<li><strong>Def</strong>：向量的模（或长度），范数 <span class="math inline">\(|a|\)</span>，零向量 <span class="math inline">\(\mathbf 0\)</span>，单位向量</li>
 </ul>
-<h3 id="向量的线性运算"><a href="#向量的线性运算" class="headerlink" title="向量的线性运算"></a>向量的线性运算</h3><ul>
-<li>向量的加法和减法<ul>
+<h3 id="向量的线性运算">向量的线性运算</h3>
+<ul>
+<li>向量的加法和减法
+<ul>
 <li>交换律</li>
 <li>结合律</li>
-<li>存在幺元 $\mathbf 0$</li>
-<li>存在逆元 $- a$</li>
+<li>存在幺元 <span class="math inline">\(\mathbf 0\)</span></li>
+<li>存在逆元 <span class="math inline">\(- a\)</span></li>
 <li>（模的）三角不等式</li>
-</ul>
-</li>
+</ul></li>
 <li>向量的数乘</li>
 </ul>
-<h3 id="向量的数量积和数量积"><a href="#向量的数量积和数量积" class="headerlink" title="向量的数量积和数量积"></a>向量的数量积和数量积</h3><ul>
-<li>向量在轴上的投影<ul>
+<h3 id="向量的数量积和数量积">向量的数量积和数量积</h3>
+<ul>
+<li>向量在轴上的投影
+<ul>
 <li><strong>Def</strong>：向量夹角</li>
-<li><strong>Def</strong>：（向量在轴上的投影） $(\vec{AB})_l = |\vec{AB}| \cos (\vec {AB}, l)$</li>
-</ul>
-</li>
-<li>向量的数量积<ul>
+<li><strong>Def</strong>：（向量在轴上的投影） <span class="math inline">\((\vec{AB})_l = |\vec{AB}| \cos (\vec {AB}, l)\)</span></li>
+</ul></li>
+<li>向量的数量积
+<ul>
 <li><strong>Def</strong>：数量积</li>
-<li><strong>Thm</strong>：数量积的性质<ul>
-<li>$ a \cdot  a = | a|^2$</li>
-<li>$\cos ( a,  b) =\frac{ a \cdot  b}{| a|| b|}$</li>
-<li>$ a \perp  b \Leftrightarrow  a \cdot  b = 0$</li>
+<li><strong>Thm</strong>：数量积的性质
+<ul>
+<li>$ a a = | a|^2$</li>
+<li><span class="math inline">\(\cos ( a, b) =\frac{ a \cdot b}{| a|| b|}\)</span></li>
+<li>$ a b a b = 0$</li>
 <li>交换律、数乘的结合律、分配律</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>向量的向量积<ul>
+</ul></li>
+</ul></li>
+<li>向量的向量积
+<ul>
 <li><strong>Def</strong>：向量积</li>
-<li><strong>Thm</strong>：向量积的性质<ul>
-<li>$ a \times  b =  0\Leftrightarrow  a \parallel  b$</li>
+<li><strong>Thm</strong>：向量积的性质
+<ul>
+<li>$ a b = 0a b$</li>
 <li>反交换律</li>
 <li>分配律</li>
 <li>数乘的结合律</li>
+</ul></li>
+</ul></li>
+<li>向量的混合积
+<ul>
+<li><strong>Def</strong>：（混合积）<span class="math inline">\([{abc}] = a \cdot ( b \times c)\)</span></li>
+<li>几何意义：是以 <span class="math inline">\({a,b,c}\)</span> 为相邻棱构成的平行六面体的体积</li>
+<li><strong>Thm</strong>：混合积的性质
+<ul>
+<li>$ a, b, c 共面 $</li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-<li>向量的混合积<ul>
-<li><strong>Def</strong>：（混合积）$[{abc}] =  a \cdot ( b \times  c)$</li>
-<li>几何意义：是以 ${a,b,c}$ 为相邻棱构成的平行六面体的体积</li>
-<li><strong>Thm</strong>：混合积的性质<ul>
-<li>$ a, b, c 共面 \Leftrightarrow [{abc}]=0$</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="空间直角坐标系及向量运算的坐标表示"><a href="#空间直角坐标系及向量运算的坐标表示" class="headerlink" title="空间直角坐标系及向量运算的坐标表示"></a>空间直角坐标系及向量运算的坐标表示</h2><h3 id="空间直角坐标系"><a href="#空间直角坐标系" class="headerlink" title="空间直角坐标系"></a>空间直角坐标系</h3><ul>
-<li>空间直角坐标系的建立：<ul>
+<h2 id="空间直角坐标系及向量运算的坐标表示">空间直角坐标系及向量运算的坐标表示</h2>
+<h3 id="空间直角坐标系">空间直角坐标系</h3>
+<ul>
+<li>空间直角坐标系的建立：
+<ul>
 <li><strong>Def</strong>：<strong>坐标轴</strong>、<strong>坐标原点</strong>、<strong>坐标平面</strong>、<strong>卦限</strong></li>
-</ul>
-</li>
-<li>点的坐标：<ul>
+</ul></li>
+<li>点的坐标：
+<ul>
 <li><strong>Def</strong>：<strong>横坐标</strong>、<strong>纵坐标</strong>、<strong>竖坐标</strong></li>
-</ul>
-</li>
+</ul></li>
 <li>坐标轴的平移</li>
 </ul>
-<h3 id="向量的坐标表示"><a href="#向量的坐标表示" class="headerlink" title="向量的坐标表示"></a>向量的坐标表示</h3><ul>
-<li>向量的坐标<ul>
+<h3 id="向量的坐标表示">向量的坐标表示</h3>
+<ul>
+<li>向量的坐标
+<ul>
 <li><strong>Def</strong>：基向量</li>
 <li><strong>Def</strong>：坐标表示式</li>
+</ul></li>
+<li>向量的模和方向余弦
+<ul>
+<li><strong>Def</strong>：<span class="math inline">\(a\)</span> 的方向角</li>
+<li><strong>Def</strong>：（<span class="math inline">\(a\)</span> 的方向余弦）<span class="math inline">\(\cos \alpha = \frac x {| a|},\cos \beta = \frac y {| a|},\cos \gamma = \frac z {| a|}\)</span></li>
+</ul></li>
 </ul>
-</li>
-<li>向量的模和方向余弦<ul>
-<li><strong>Def</strong>：$a$ 的方向角</li>
-<li><strong>Def</strong>：（$a$ 的方向余弦）$\cos \alpha = \frac x {| a|},\cos \beta = \frac y {| a|},\cos \gamma = \frac z {| a|}$</li>
-</ul>
-</li>
-</ul>
-<h3 id="向量运算的坐标表示"><a href="#向量运算的坐标表示" class="headerlink" title="向量运算的坐标表示"></a>向量运算的坐标表示</h3><ul>
+<h3 id="向量运算的坐标表示">向量运算的坐标表示</h3>
+<ul>
 <li>向量加减法和数乘的坐标表示</li>
 <li>数量积的坐标表示</li>
 <li>向量积的坐标表示（行列式）</li>
 <li>混合积的坐标表示</li>
 </ul>
-<h2 id="平面与直线"><a href="#平面与直线" class="headerlink" title="平面与直线"></a>平面与直线</h2><h3 id="平面方程"><a href="#平面方程" class="headerlink" title="平面方程"></a>平面方程</h3><ol>
+<h2 id="平面与直线">平面与直线</h2>
+<h3 id="平面方程">平面方程</h3>
+<ol type="1">
 <li>点法式方程</li>
 <li>一般方程</li>
 <li>截距式方程</li>
 <li>三点式方程</li>
 </ol>
-<h3 id="直线方程"><a href="#直线方程" class="headerlink" title="直线方程"></a>直线方程</h3><ol>
+<h3 id="直线方程">直线方程</h3>
+<ol type="1">
 <li>一般方程（两平面的交）</li>
 <li>标准方程</li>
 <li>两点式方程</li>
 <li>参数方程</li>
 <li>向量式方程</li>
 </ol>
-<h3 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h3><div class="note quote"><p><strong>夹角</strong></p><ol><li>直线与直线</li><li>直线与平面</li><li>平面与平面</li></ol></div>
-<div class="note quote"><p><strong>距离</strong></p><ol><li>点到平面</li><li>点到直线 $\displaystyle d = \frac{|\vec{M_0M_1}\times a|}{|a|}$</li><li>异面直线的距离 $\displaystyle d = \frac{|[\vec{M_0M_1}a_1a_2]|}{|a_1\times a_2|}$</li></ol></div>
+<h3 id="相关问题">相关问题</h3>
+<div class="note quote"><p><strong>夹角</strong></p><ol type="1"><li>直线与直线</li><li>直线与平面</li><li>平面与平面</li></ol></div>
+<div class="note quote"><p><strong>距离</strong></p><ol type="1"><li>点到平面</li><li>点到直线 <span class="math inline">\(\displaystyle d = \frac{|\vec{M_0M_1}\times a|}{|a|}\)</span></li><li>异面直线的距离 <span class="math inline">\(\displaystyle d = \frac{|[\vec{M_0M_1}a_1a_2]|}{|a_1\times a_2|}\)</span></li></ol></div>
 <p><strong><kbd>直线与平面的交点</kbd></strong></p>
 <p><strong><kbd>过直线的平面束</kbd></strong></p>
-<h2 id="空间曲面和空间曲线"><a href="#空间曲面和空间曲线" class="headerlink" title="空间曲面和空间曲线"></a>空间曲面和空间曲线</h2><h3 id="球面和柱面"><a href="#球面和柱面" class="headerlink" title="球面和柱面"></a>球面和柱面</h3><ol>
+<h2 id="空间曲面和空间曲线">空间曲面和空间曲线</h2>
+<h3 id="球面和柱面">球面和柱面</h3>
+<ol type="1">
 <li>球面方程</li>
 <li>柱面方程</li>
 </ol>
-<h3 id="空间曲线"><a href="#空间曲线" class="headerlink" title="空间曲线"></a>空间曲线</h3><ol>
+<h3 id="空间曲线">空间曲线</h3>
+<ol type="1">
 <li>一般方程（两个平面的交线）</li>
 <li>参数方程</li>
 <li><strong>空间曲线在坐标面上的投影</strong></li>
 </ol>
-<h3 id="锥面"><a href="#锥面" class="headerlink" title="锥面"></a>锥面</h3><ol>
+<h3 id="锥面">锥面</h3>
+<ol type="1">
 <li>母线、准线、顶点</li>
 <li>如何通过母线、准线、顶点构造</li>
 </ol>
-<h3 id="旋转曲面"><a href="#旋转曲面" class="headerlink" title="旋转曲面"></a>旋转曲面</h3><p>如何构造？</p>
-<h3 id="几种常见的二次曲面"><a href="#几种常见的二次曲面" class="headerlink" title="几种常见的二次曲面"></a>几种常见的二次曲面</h3><div class="note quote"><p><img src="https://pic3.zhimg.com/80/v2-2f9167b3a6014ae1db97a646450038e7_720w.jpg" class="lazyload" data-srcset="https://pic3.zhimg.com/80/v2-2f9167b3a6014ae1db97a646450038e7_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="椭圆锥面"></p><p><img src="https://picb.zhimg.com/80/v2-7fdb424b614f185fd9f5d94d8108297d_720w.jpg" class="lazyload" data-srcset="https://picb.zhimg.com/80/v2-7fdb424b614f185fd9f5d94d8108297d_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="椭球面"></p><p><img src="https://pic2.zhimg.com/80/v2-1b4cebaa0cf266408ed391542339f705_720w.jpg" class="lazyload" data-srcset="https://pic2.zhimg.com/80/v2-1b4cebaa0cf266408ed391542339f705_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="单叶双曲面"></p><p><img src="https://pic3.zhimg.com/80/v2-61bc076dab1f7eed8316381a5c65c721_720w.jpg" class="lazyload" data-srcset="https://pic3.zhimg.com/80/v2-61bc076dab1f7eed8316381a5c65c721_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="双叶双曲面"></p><p><img src="https://pic2.zhimg.com/80/v2-70b021de8960867ee4b4e9c06dcac6cb_720w.jpg" class="lazyload" data-srcset="https://pic2.zhimg.com/80/v2-70b021de8960867ee4b4e9c06dcac6cb_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="椭圆抛物面"></p><p><img src="https://pic4.zhimg.com/80/v2-b7c91cce5f10d1ac258a45ae8a204c8e_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-b7c91cce5f10d1ac258a45ae8a204c8e_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="双曲抛物面"></p><p><img src="https://pic1.zhimg.com/80/v2-b84d818035a2a3654f9937a4d664080d_720w.jpg" class="lazyload" data-srcset="https://pic1.zhimg.com/80/v2-b84d818035a2a3654f9937a4d664080d_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="椭圆柱面"></p><p><img src="https://pic4.zhimg.com/80/v2-cd0e151a5ccf836a6e9f1edb683b40d5_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-cd0e151a5ccf836a6e9f1edb683b40d5_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="双曲柱面"></p><p><img src="https://pic1.zhimg.com/80/v2-8f6a7089275ec0d89c28fa6a611a2175_720w.jpg" class="lazyload" data-srcset="https://pic1.zhimg.com/80/v2-8f6a7089275ec0d89c28fa6a611a2175_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="抛物柱面"></p></div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<h3 id="旋转曲面">旋转曲面</h3>
+<p>如何构造？</p>
+<h3 id="几种常见的二次曲面">几种常见的二次曲面</h3>
+<div class="note quote"><figure><img src="https://pic3.zhimg.com/80/v2-2f9167b3a6014ae1db97a646450038e7_720w.jpg" class="lazyload" data-srcset="https://pic3.zhimg.com/80/v2-2f9167b3a6014ae1db97a646450038e7_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="椭圆锥面"><figcaption aria-hidden="true">椭圆锥面</figcaption></figure><figure><img src="https://picb.zhimg.com/80/v2-7fdb424b614f185fd9f5d94d8108297d_720w.jpg" class="lazyload" data-srcset="https://picb.zhimg.com/80/v2-7fdb424b614f185fd9f5d94d8108297d_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="椭球面"><figcaption aria-hidden="true">椭球面</figcaption></figure><figure><img src="https://pic2.zhimg.com/80/v2-1b4cebaa0cf266408ed391542339f705_720w.jpg" class="lazyload" data-srcset="https://pic2.zhimg.com/80/v2-1b4cebaa0cf266408ed391542339f705_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="单叶双曲面"><figcaption aria-hidden="true">单叶双曲面</figcaption></figure><figure><img src="https://pic3.zhimg.com/80/v2-61bc076dab1f7eed8316381a5c65c721_720w.jpg" class="lazyload" data-srcset="https://pic3.zhimg.com/80/v2-61bc076dab1f7eed8316381a5c65c721_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="双叶双曲面"><figcaption aria-hidden="true">双叶双曲面</figcaption></figure><figure><img src="https://pic2.zhimg.com/80/v2-70b021de8960867ee4b4e9c06dcac6cb_720w.jpg" class="lazyload" data-srcset="https://pic2.zhimg.com/80/v2-70b021de8960867ee4b4e9c06dcac6cb_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="椭圆抛物面"><figcaption aria-hidden="true">椭圆抛物面</figcaption></figure><figure><img src="https://pic4.zhimg.com/80/v2-b7c91cce5f10d1ac258a45ae8a204c8e_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-b7c91cce5f10d1ac258a45ae8a204c8e_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="双曲抛物面"><figcaption aria-hidden="true">双曲抛物面</figcaption></figure><figure><img src="https://pic1.zhimg.com/80/v2-b84d818035a2a3654f9937a4d664080d_720w.jpg" class="lazyload" data-srcset="https://pic1.zhimg.com/80/v2-b84d818035a2a3654f9937a4d664080d_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="椭圆柱面"><figcaption aria-hidden="true">椭圆柱面</figcaption></figure><figure><img src="https://pic4.zhimg.com/80/v2-cd0e151a5ccf836a6e9f1edb683b40d5_720w.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/80/v2-cd0e151a5ccf836a6e9f1edb683b40d5_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="双曲柱面"><figcaption aria-hidden="true">双曲柱面</figcaption></figure><figure><img src="https://pic1.zhimg.com/80/v2-8f6a7089275ec0d89c28fa6a611a2175_720w.jpg" class="lazyload" data-srcset="https://pic1.zhimg.com/80/v2-8f6a7089275ec0d89c28fa6a611a2175_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="抛物柱面"><figcaption aria-hidden="true">抛物柱面</figcaption></figure></div>
+
   
   
     
@@ -684,10 +702,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2020/05/23/study/Math/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>多元函数积分学及其应用</p>
-          <p class='content'>多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习…
+          <p class='content'>多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习...
 
-多元数量值函数积分的概念和性质质量的计算多元数量值函数积分的概念
-Def：多元数量...</p>
+多元数量值函数积分的概念和性质
+质量的计算
+多元数量值函数积分的概念...</p>
         </a>
       
       
@@ -1378,14 +1397,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

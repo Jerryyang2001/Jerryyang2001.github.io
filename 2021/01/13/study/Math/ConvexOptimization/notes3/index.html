@@ -470,7 +470,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>凸函数</p>
 <span id="more"></span>
-<h2 id="凸函数"><a href="#凸函数" class="headerlink" title="凸函数"></a>凸函数</h2><ol>
+<h2 id="凸函数">凸函数</h2>
+<ol type="1">
 <li><strong>基本性质和案例</strong></li>
 <li><strong>保凸运算</strong></li>
 <li><strong>共轭函数</strong></li>
@@ -478,109 +479,116 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><em>对数-凹函数和对数-凸函数</em></li>
 <li><em>关于广义不等式的凸性</em></li>
 </ol>
-<h3 id="基本性质和案例"><a href="#基本性质和案例" class="headerlink" title="基本性质和案例"></a>基本性质和案例</h3><h4 id="凸函数-1"><a href="#凸函数-1" class="headerlink" title="凸函数"></a>凸函数</h4><ul>
-<li>$f:\R^n\rightarrow \R$ 为凸函数，则其满足定义域为凸集，且<br>$f(\theta x+(1-\theta) y)\le \theta f(x) + (1-\theta)f(y), \forall x, y \in \mathrm{dom}~f, 0\le \theta \le 1$</li>
-<li>若$f$为凹函数，则$-f$为凸函数</li>
+<h3 id="基本性质和案例">基本性质和案例</h3>
+<h4 id="凸函数-1">凸函数</h4>
+<ul>
+<li><span class="math inline">\(f:\R^n\rightarrow \R\)</span> 为凸函数，则其满足定义域为凸集，且 <span class="math inline">\(f(\theta x+(1-\theta) y)\le \theta f(x) + (1-\theta)f(y), \forall x, y \in \mathrm{dom}~f, 0\le \theta \le 1\)</span></li>
+<li>若<span class="math inline">\(f\)</span>为凹函数，则<span class="math inline">\(-f\)</span>为凸函数</li>
 <li>仿射函数</li>
 </ul>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112203149510.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112203149510.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112203149510"></p>
+<figure>
+<img src="/.io//image-20210112203149510.png" class="lazyload" data-srcset="/.io//image-20210112203149510.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112203149510"><figcaption aria-hidden="true">image-20210112203149510</figcaption>
+</figure>
 <p><strong>严格凸函数</strong></p>
 <ul>
-<li>$f:\R^n\rightarrow \R$ 为凸函数，则其满足定义域为凸集，且<br>$f(\theta x+(1-\theta) y) &lt; \theta f(x) + (1-\theta)f(y), \forall x, y \in \mathrm{dom}~f, 0\le \theta \le 1$</li>
+<li><span class="math inline">\(f:\R^n\rightarrow \R\)</span> 为凸函数，则其满足定义域为凸集，且 <span class="math inline">\(f(\theta x+(1-\theta) y) &lt; \theta f(x) + (1-\theta)f(y), \forall x, y \in \mathrm{dom}~f, 0\le \theta \le 1\)</span></li>
 </ul>
-<h5 id="约束凸函数到直线"><a href="#约束凸函数到直线" class="headerlink" title="约束凸函数到直线"></a>约束凸函数到直线</h5><p><strong>Thm</strong>：$f:\R^n\rightarrow\R$ 为凸函数$\iff g(t)=f(x+tv)$ 为凸函数，$\forall x\in\mathrm{dom}f,v\in \R^n$</p>
+<h5 id="约束凸函数到直线">约束凸函数到直线</h5>
+<p><strong>Thm</strong>：<span class="math inline">\(f:\R^n\rightarrow\R\)</span> 为凸函数<span class="math inline">\(\iff g(t)=f(x+tv)\)</span> 为凸函数，<span class="math inline">\(\forall x\in\mathrm{dom}f,v\in \R^n\)</span></p>
 <blockquote>
-<p>例如：$f:S^n\rightarrow \R,~where~f(X) = \log\det X,\mathrm{dom} f = S^n_{++}$ 为凹函数</p>
+<p>例如：<span class="math inline">\(f:S^n\rightarrow \R,~where~f(X) = \log\det X,\mathrm{dom} f = S^n_{++}\)</span> 为凹函数</p>
 </blockquote>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112203810426.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112203810426.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112203810426"></p>
-<h5 id="扩展值延伸"><a href="#扩展值延伸" class="headerlink" title="扩展值延伸"></a>扩展值延伸</h5><ul>
-<li>用$\tilde f(x) = f(x), x\in \mathrm{dom} , \tilde f(x) = \infty , x\in \mathrm{dom} f$</li>
-<li>简化表示$0\le\theta\le 1\Rightarrow \tilde f(\theta x+(1-\theta)y)\le \theta \tilde f(x) + (1-\theta)\tilde sf(y)$</li>
+<figure>
+<img src="/.io//image-20210112203810426.png" class="lazyload" data-srcset="/.io//image-20210112203810426.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112203810426"><figcaption aria-hidden="true">image-20210112203810426</figcaption>
+</figure>
+<h5 id="扩展值延伸">扩展值延伸</h5>
+<ul>
+<li>用<span class="math inline">\(\tilde f(x) = f(x), x\in \mathrm{dom} , \tilde f(x) = \infty , x\in \mathrm{dom} f\)</span></li>
+<li>简化表示<span class="math inline">\(0\le\theta\le 1\Rightarrow \tilde f(\theta x+(1-\theta)y)\le \theta \tilde f(x) + (1-\theta)\tilde sf(y)\)</span></li>
 </ul>
 <blockquote>
 <p>例：凸集的示性函数是凸函数</p>
 <ul>
-<li>$I_c(x)=0~if~x\in C~else~undefined.$</li>
-<li>$\tilde I_c(x)=0~if~x\in C~else~+\infty.$</li>
+<li><span class="math inline">\(I_c(x)=0~if~x\in C~else~undefined.\)</span></li>
+<li><span class="math inline">\(\tilde I_c(x)=0~if~x\in C~else~+\infty.\)</span></li>
 </ul>
 </blockquote>
-<h5 id="一阶条件"><a href="#一阶条件" class="headerlink" title="一阶条件"></a>一阶条件</h5><ul>
-<li>函数 $f$ 可微，且满足$f$的定义域是开集，且梯度：$\nabla f(x)$ 处处存在</li>
-</ul>
-<p><strong>Thm</strong>（一阶条件）（<strong>定义域为凸集的可微函数</strong>）$f(y) \ge f(x) +\nabla f(x)^T(y-x),~\forall x, y \in \mathrm{dom}~f$ 是 f 为凸函数的充要条件。</p>
+<h5 id="一阶条件">一阶条件</h5>
 <ul>
-<li><p>函数 f 的一阶近似表示全局下估计</p>
-</li>
-<li><p>一阶条件的证明：$f为凸函数\iff g(t) = f(x+tv)为凸函数\iff g(t)\ge g(\tilde{t})+g(\dot t)(\tilde{t}-t)\iff f(y)\ge f(x) +\nabla f^T(x) (y-x)$</p>
-</li>
+<li>函数 <span class="math inline">\(f\)</span> 可微，且满足<span class="math inline">\(f\)</span>的定义域是开集，且梯度：<span class="math inline">\(\nabla f(x)\)</span> 处处存在</li>
 </ul>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112204104951.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112204104951.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112204104951"></p>
-<h5 id="二阶条件"><a href="#二阶条件" class="headerlink" title="二阶条件"></a>二阶条件</h5><p><strong>Thm</strong>（二阶条件）f 二阶可微，即对于 $\mathrm {dom}~f$ 内的任意一点，Hessian 矩阵存在或 $\nabla^2f$ 存在，且函数定义域是<strong>开集</strong>，则：$f$是凸函数$\iff$Hessian矩阵半正定，即 $\forall x \in \mathrm{dom}~f,~\nabla^2f(x)\succeq 0$</p>
+<p><strong>Thm</strong>（一阶条件）（<strong>定义域为凸集的可微函数</strong>）<span class="math inline">\(f(y) \ge f(x) +\nabla f(x)^T(y-x),~\forall x, y \in \mathrm{dom}~f\)</span> 是 f 为凸函数的充要条件。</p>
+<ul>
+<li><p>函数 f 的一阶近似表示全局下估计</p></li>
+<li><p>一阶条件的证明：<span class="math inline">\(f为凸函数\iff g(t) = f(x+tv)为凸函数\iff g(t)\ge g(\tilde{t})+g(\dot t)(\tilde{t}-t)\iff f(y)\ge f(x) +\nabla f^T(x) (y-x)\)</span></p></li>
+</ul>
+<figure>
+<img src="/.io//image-20210112204104951.png" class="lazyload" data-srcset="/.io//image-20210112204104951.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112204104951"><figcaption aria-hidden="true">image-20210112204104951</figcaption>
+</figure>
+<h5 id="二阶条件">二阶条件</h5>
+<p><strong>Thm</strong>（二阶条件）f 二阶可微，即对于 <span class="math inline">\(\mathrm {dom}~f\)</span> 内的任意一点，Hessian 矩阵存在或 <span class="math inline">\(\nabla^2f\)</span> 存在，且函数定义域是<strong>开集</strong>，则：<span class="math inline">\(f\)</span>是凸函数<span class="math inline">\(\iff\)</span>Hessian矩阵半正定，即 <span class="math inline">\(\forall x \in \mathrm{dom}~f,~\nabla^2f(x)\succeq 0\)</span></p>
 <ul>
 <li>正定 ==&gt; 严格凸函数（反之不成立）</li>
 </ul>
-<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><p>二次函数：$\displaystyle f(x) = \frac 1 2 x^TPx + q^Tx+r~(with P\in S^n)$</p>
-<script type="math/tex; mode=display">
+<h5 id="例子">例子</h5>
+<p>二次函数：<span class="math inline">\(\displaystyle f(x) = \frac 1 2 x^TPx + q^Tx+r~(with P\in S^n)\)</span> <span class="math display">\[
 \begin{aligned}
-&\frac{\partial x^TAx}{\partial x} = Ax+A^Tx,\\
-&\frac{\partial a^Tx}{\partial x} = a  
-\end{aligned}</script><ul>
-<li><p>$f(x)=1/x^2$：注意定义域不是凸集</p>
-</li>
-<li><p>仿射函数：$ax+b$</p>
-</li>
-<li><p>（指数函数）$e^{ax}$</p>
-</li>
-<li><p>（幂函数）$x^a,x\ge 0$ </p>
-</li>
-<li><p>（绝对值的幂函数）$|x|^p,p\ge1$</p>
-</li>
-<li><p>（对数函数「凹函数」）$\log x$（$\ln x$）</p>
-</li>
-<li><p>（负熵）$x\log x$</p>
-</li>
-<li><p>（范数）$R^n$ 中的范数 $P(x)$</p>
+&amp;\frac{\partial x^TAx}{\partial x} = Ax+A^Tx,\\
+&amp;\frac{\partial a^Tx}{\partial x} = a  
+\end{aligned}
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(f(x)=1/x^2\)</span>：注意定义域不是凸集</p></li>
+<li><p>仿射函数：<span class="math inline">\(ax+b\)</span></p></li>
+<li><p>（指数函数）<span class="math inline">\(e^{ax}\)</span></p></li>
+<li><p>（幂函数）<span class="math inline">\(x^a,x\ge 0\)</span></p></li>
+<li><p>（绝对值的幂函数）<span class="math inline">\(|x|^p,p\ge1\)</span></p></li>
+<li><p>（对数函数「凹函数」）<span class="math inline">\(\log x\)</span>（<span class="math inline">\(\ln x\)</span>）</p></li>
+<li><p>（负熵）<span class="math inline">\(x\log x\)</span></p></li>
+<li><p>（范数）<span class="math inline">\(R^n\)</span> 中的范数 <span class="math inline">\(P(x)\)</span></p>
 <blockquote>
 <p>注意：零范数（计算非零元素的数目）——不是范数</p>
-</blockquote>
-</li>
-<li><p>（极大值函数）$f(x)=\max\{x_1,…,x_n\}$</p>
-</li>
-<li><p>（指数和的对数）$f(x)=\log(e^{x_1}+\cdots+e^{x_n})$（Softmax)</p>
+</blockquote></li>
+<li><p>（极大值函数）<span class="math inline">\(f(x)=\max\{x_1,...,x_n\}\)</span></p></li>
+<li><p>（指数和的对数）<span class="math inline">\(f(x)=\log(e^{x_1}+\cdots+e^{x_n})\)</span>（Softmax)</p>
 <ul>
-<li>$\max\{x_1,\dots,x_n\}\le f(x)\le \max\{x_1,\dots,x_n\}\log n$</li>
-<li>利用柯西施瓦兹不等式证明：$(a^Ta)(b^Tb)\ge (a^Tb)^2$</li>
+<li><span class="math inline">\(\max\{x_1,\dots,x_n\}\le f(x)\le \max\{x_1,\dots,x_n\}\log n\)</span></li>
+<li>利用柯西施瓦兹不等式证明：<span class="math inline">\((a^Ta)(b^Tb)\ge (a^Tb)^2\)</span></li>
+</ul></li>
+<li><p>几何平均函数：<span class="math inline">\(f(x) = (\Pi^{n}_{i=1}x_i)^{(1/n)}\)</span></p></li>
+<li><p><span class="math inline">\(f=\log \det X\)</span> 凹函数</p></li>
 </ul>
-</li>
-<li>几何平均函数：$f(x) = (\Pi^{n}_{i=1}x_i)^{(1/n)}$</li>
-<li>$f=\log \det X$ 凹函数</li>
-</ul>
-<h3 id="保凸运算"><a href="#保凸运算" class="headerlink" title="保凸运算"></a>保凸运算</h3><h4 id="非负加权求和"><a href="#非负加权求和" class="headerlink" title="非负加权求和"></a>非负加权求和</h4><p><strong>Def</strong>（非负乘积）$\alpha f$ 不改变凸性</p>
-<p><strong>Def</strong>（求和）$+$ 不改变凸性</p>
+<h3 id="保凸运算">保凸运算</h3>
+<h4 id="非负加权求和">非负加权求和</h4>
+<p><strong>Def</strong>（非负乘积）<span class="math inline">\(\alpha f\)</span> 不改变凸性</p>
+<p><strong>Def</strong>（求和）<span class="math inline">\(+\)</span> 不改变凸性</p>
 <p><strong>Def</strong>（非负加权求和）</p>
 <ul>
-<li><p>可拓展到无限项：$g(x)=\int_A\omega(y)f(x,y)\mathrm dy$</p>
-<p>其中，$f(x,y)$ 对集合 A 中的每一个 y，为凸函数</p>
-</li>
+<li><p>可拓展到无限项：<span class="math inline">\(g(x)=\int_A\omega(y)f(x,y)\mathrm dy\)</span></p>
+<p>其中，<span class="math inline">\(f(x,y)\)</span> 对集合 A 中的每一个 y，为凸函数</p></li>
 </ul>
-<h4 id="复合仿射映射"><a href="#复合仿射映射" class="headerlink" title="复合仿射映射"></a>复合仿射映射</h4><p><strong>Def</strong>（复合仿射映射）$f$是凸函数，则$f(Ax+b)$ 是凸函数</p>
+<h4 id="复合仿射映射">复合仿射映射</h4>
+<p><strong>Def</strong>（复合仿射映射）<span class="math inline">\(f\)</span>是凸函数，则<span class="math inline">\(f(Ax+b)\)</span> 是凸函数</p>
 <p>例如：</p>
-<ol>
-<li>线性不等式的对数惩罚函数 $\displaystyle f(x)=-\sum_{i=1}^m\log(b_i-a_i^Tx)$</li>
+<ol type="1">
+<li>线性不等式的对数惩罚函数 <span class="math inline">\(\displaystyle f(x)=-\sum_{i=1}^m\log(b_i-a_i^Tx)\)</span></li>
 <li>仿射函数的任意范数</li>
 </ol>
-<h4 id="逐点最大函数"><a href="#逐点最大函数" class="headerlink" title="逐点最大函数"></a>逐点最大函数</h4><p><strong>Def</strong>（逐点最大）$f_i$ 为凸函数，则$f(x) = \max\{ f_1, f_2,…,f_m\}$ 为凸函数</p>
+<h4 id="逐点最大函数">逐点最大函数</h4>
+<p><strong>Def</strong>（逐点最大）<span class="math inline">\(f_i\)</span> 为凸函数，则<span class="math inline">\(f(x) = \max\{ f_1, f_2,...,f_m\}\)</span> 为凸函数</p>
 <ul>
-<li>分段的线性函数 $f(x)=\max(a_i^Tx+b_i)$为凸函数</li>
-<li>最大 r 个分量之和：$f=\sum_{i=1}^r x_{[i]}$</li>
+<li>分段的线性函数 <span class="math inline">\(f(x)=\max(a_i^Tx+b_i)\)</span>为凸函数</li>
+<li>最大 r 个分量之和：<span class="math inline">\(f=\sum_{i=1}^r x_{[i]}\)</span></li>
 </ul>
-<h4 id="逐点上确界"><a href="#逐点上确界" class="headerlink" title="逐点上确界"></a>逐点上确界</h4><p><strong>Def</strong>（逐点上确界）若 $f$ 为凸函数，$g(x)=\sup_{y\in A}f(x,y)$ 为凸函数</p>
+<h4 id="逐点上确界">逐点上确界</h4>
+<p><strong>Def</strong>（逐点上确界）若 <span class="math inline">\(f\)</span> 为凸函数，<span class="math inline">\(g(x)=\sup_{y\in A}f(x,y)\)</span> 为凸函数</p>
 <p>例如：</p>
-<ol>
-<li>在集合 C 中距离 $x$ 最远点的距离函数 $f(x)=\sup_{y\in C}|x-y|$</li>
-<li>对称矩阵的最大特征值 $\lambda_{\max}(X)=\sup_{|y|_2=1}y^TXy$</li>
+<ol type="1">
+<li>在集合 C 中距离 <span class="math inline">\(x\)</span> 最远点的距离函数 <span class="math inline">\(f(x)=\sup_{y\in C}\|x-y\|\)</span></li>
+<li>对称矩阵的最大特征值 <span class="math inline">\(\lambda_{\max}(X)=\sup_{\|y\|_2=1}y^TXy\)</span></li>
 </ol>
-<h4 id="函数复合"><a href="#函数复合" class="headerlink" title="函数复合"></a>函数复合</h4><p><strong>Thm</strong>：$g:R^n\rightarrow R^k, h:R^k\rightarrow R, f(x) = h(g(x))$</p>
+<h4 id="函数复合">函数复合</h4>
+<p><strong>Thm</strong>：<span class="math inline">\(g:R^n\rightarrow R^k, h:R^k\rightarrow R, f(x) = h(g(x))\)</span></p>
 <ul>
 <li>h 凸，不减 &amp; g 凸 → f 凸函数</li>
 <li>h 凸，不增 &amp; g 凹 → f 凸函数</li>
@@ -588,74 +596,99 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>例如：</p>
 <ul>
-<li>g 凸函数，则 $\exp g(x)$ 为凸函数</li>
-<li>g 为凹函数，且为正，则$\log g(x)$ 为凹函数，$1/g(x)$ 是凸函数</li>
+<li>g 凸函数，则 <span class="math inline">\(\exp g(x)\)</span> 为凸函数</li>
+<li>g 为凹函数，且为正，则<span class="math inline">\(\log g(x)\)</span> 为凹函数，<span class="math inline">\(1/g(x)\)</span> 是凸函数</li>
 </ul>
-<h4 id="最小化"><a href="#最小化" class="headerlink" title="最小化"></a>最小化</h4><p><strong>Thm</strong>：若 $f(x,y)$ 是关于 $(x,y)$ 的凸函数，且集合 $C$ 为凸集。则$g(x)=\inf_{y\in C}f(x,y)$ 是凸函数</p>
+<h4 id="最小化">最小化</h4>
+<p><strong>Thm</strong>：若 <span class="math inline">\(f(x,y)\)</span> 是关于 <span class="math inline">\((x,y)\)</span> 的凸函数，且集合 <span class="math inline">\(C\)</span> 为凸集。则<span class="math inline">\(g(x)=\inf_{y\in C}f(x,y)\)</span> 是凸函数</p>
 <p>例如：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-&f(x,y)=x^TAx+2x^TBy+y^TCy\\
-&其中\left[\begin{matrix}
-A&B\\
-B^T&C
-\end{matrix}\right]\ge 0,C>0
-\end{aligned}</script><p>则 $g(x)=\inf_{y}f(x,y)=x^T(A-BC^{-1}B^T)x$ 为凸函数</p>
-<h4 id="透视函数"><a href="#透视函数" class="headerlink" title="透视函数"></a>透视函数</h4><p><strong>Def</strong>（透视函数）函数$f:R^n\rightarrow R$的透视函数，形如 $g(x,t) = tf(x/t)$ 且 $f$ 为凸函数</p>
+&amp;f(x,y)=x^TAx+2x^TBy+y^TCy\\
+&amp;其中\left[\begin{matrix}
+A&amp;B\\
+B^T&amp;C
+\end{matrix}\right]\ge 0,C&gt;0
+\end{aligned}
+\]</span></p>
+<p>则 <span class="math inline">\(g(x)=\inf_{y}f(x,y)=x^T(A-BC^{-1}B^T)x\)</span> 为凸函数</p>
+<h4 id="透视函数">透视函数</h4>
+<p><strong>Def</strong>（透视函数）函数<span class="math inline">\(f:R^n\rightarrow R\)</span>的透视函数，形如 <span class="math inline">\(g(x,t) = tf(x/t)\)</span> 且 <span class="math inline">\(f\)</span> 为凸函数</p>
 <p>例如：</p>
-<ol>
-<li><p>$f(x)=x^Tx,g(x,t)=tf(x/t)$</p>
-</li>
-<li><p>相对熵：$\sum u_i\log (u_i/v_i)$</p>
-</li>
-<li><p>KL散度：$D_{kl}=\sum(u_i\log(u_i/v_i)-u_i+v_i)$（比较概率分布差异）</p>
-</li>
+<ol type="1">
+<li><p><span class="math inline">\(f(x)=x^Tx,g(x,t)=tf(x/t)\)</span></p></li>
+<li><p>相对熵：<span class="math inline">\(\sum u_i\log (u_i/v_i)\)</span></p></li>
+<li><p>KL散度：<span class="math inline">\(D_{kl}=\sum(u_i\log(u_i/v_i)-u_i+v_i)\)</span>（比较概率分布差异）</p></li>
 </ol>
-<h3 id="More"><a href="#More" class="headerlink" title="More"></a>More</h3><p>下水平集：</p>
+<h3 id="more">More</h3>
+<p>下水平集：</p>
 <ul>
-<li>$f$ 的 $\alpha$-下水平集 $C_\alpha=\{x\in \mathrm {dom}~f|f(x)\le \alpha\}$</li>
+<li><span class="math inline">\(f\)</span> 的 <span class="math inline">\(\alpha\)</span>-下水平集 <span class="math inline">\(C_\alpha=\{x\in \mathrm {dom}~f|f(x)\le \alpha\}\)</span></li>
 <li>凸函数的所有下水平集都是凸集</li>
 </ul>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112212004137.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112212004137.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112212004137"></p>
+<figure>
+<img src="/.io//image-20210112212004137.png" class="lazyload" data-srcset="/.io//image-20210112212004137.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112212004137"><figcaption aria-hidden="true">image-20210112212004137</figcaption>
+</figure>
 <p>上境图：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112211354752.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112211354752.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112211354752"></p>
-<p>共轭函数 $\displaystyle f^<em>(y)=\sup_{x\in \mathbf{dom}f}</em>(y^Tx-f(x))$：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112212840193.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112212840193.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112212840193"></p>
+<figure>
+<img src="/.io//image-20210112211354752.png" class="lazyload" data-srcset="/.io//image-20210112211354752.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112211354752"><figcaption aria-hidden="true">image-20210112211354752</figcaption>
+</figure>
+<p>共轭函数 <span class="math inline">\(\displaystyle f^*(y)=\sup_{x\in \mathbf{dom}f}*(y^Tx-f(x))\)</span>：</p>
+<figure>
+<img src="/.io//image-20210112212840193.png" class="lazyload" data-srcset="/.io//image-20210112212840193.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112212840193"><figcaption aria-hidden="true">image-20210112212840193</figcaption>
+</figure>
 <ul>
-<li>可微$f$的共轭函数$f^*(y)=\sup_{x\in\mathbf{dom}f}(y^Tx-f(x))$ 为凸函数</li>
-<li>凸函数$f$且为闭函数：$(f^<em>)^</em>=f$</li>
+<li>可微<span class="math inline">\(f\)</span>的共轭函数<span class="math inline">\(f^*(y)=\sup_{x\in\mathbf{dom}f}(y^Tx-f(x))\)</span> 为凸函数</li>
+<li>凸函数<span class="math inline">\(f\)</span>且为闭函数：<span class="math inline">\((f^*)^*=f\)</span></li>
 </ul>
 <p>例如：</p>
-<ol>
-<li>负对数 $f(x)=-\log x$</li>
+<ol type="1">
+<li>负对数 <span class="math inline">\(f(x)=-\log x\)</span></li>
 </ol>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-f^*(y)&=\sup_{x>0}(xy+\log x)\\
-&=\begin{cases}
--1-\log(-y)&y<0\\
-\infty&otherwise
+f^*(y)&amp;=\sup_{x&gt;0}(xy+\log x)\\
+&amp;=\begin{cases}
+-1-\log(-y)&amp;y&lt;0\\
+\infty&amp;otherwise
 \end{cases}
-\end{aligned}</script><h3 id="拟凸函数"><a href="#拟凸函数" class="headerlink" title="拟凸函数"></a>拟凸函数</h3><p><strong>Def</strong>（拟凸函数）$f$ 为拟凸函数，当其定义域为凸集，且其下水平集对于所有$\alpha$为凸集。</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213224293.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213224293.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213224293"></p>
-<p>也就是说：$f(\theta x+(1-\theta)y)\le \max\{f(x),f(y)\}$</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213332290.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213332290.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213332290"></p>
+\end{aligned}
+\]</span></p>
+<h3 id="拟凸函数">拟凸函数</h3>
+<p><strong>Def</strong>（拟凸函数）<span class="math inline">\(f\)</span> 为拟凸函数，当其定义域为凸集，且其下水平集对于所有<span class="math inline">\(\alpha\)</span>为凸集。</p>
+<figure>
+<img src="/.io//image-20210112213224293.png" class="lazyload" data-srcset="/.io//image-20210112213224293.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213224293"><figcaption aria-hidden="true">image-20210112213224293</figcaption>
+</figure>
+<p>也就是说：<span class="math inline">\(f(\theta x+(1-\theta)y)\le \max\{f(x),f(y)\}\)</span></p>
+<figure>
+<img src="/.io//image-20210112213332290.png" class="lazyload" data-srcset="/.io//image-20210112213332290.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213332290"><figcaption aria-hidden="true">image-20210112213332290</figcaption>
+</figure>
 <p>例如：</p>
-<ol>
+<ol type="1">
 <li>向量的长度（最后一个⾮零元素的位置）</li>
 <li>线性分数函数</li>
 </ol>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213408052.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213408052.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213408052"></p>
-<ol>
+<figure>
+<img src="/.io//image-20210112213408052.png" class="lazyload" data-srcset="/.io//image-20210112213408052.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213408052"><figcaption aria-hidden="true">image-20210112213408052</figcaption>
+</figure>
+<ol start="3" type="1">
 <li>向量的零范数（非零元素的个数）</li>
 </ol>
 <p>拟凸函数的二阶条件：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213609724.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213609724.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213609724"></p>
-<h3 id="对数凸函数、对数凹函数"><a href="#对数凸函数、对数凹函数" class="headerlink" title="对数凸函数、对数凹函数"></a>对数凸函数、对数凹函数</h3><p>例如：</p>
+<figure>
+<img src="/.io//image-20210112213609724.png" class="lazyload" data-srcset="/.io//image-20210112213609724.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213609724"><figcaption aria-hidden="true">image-20210112213609724</figcaption>
+</figure>
+<h3 id="对数凸函数对数凹函数">对数凸函数、对数凹函数</h3>
+<p>例如：</p>
 <p>对数凹函数：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213640429.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213640429.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213640429"></p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213701936.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes3/image-20210112213701936.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213701936"></p>
-<h3 id="基于广义不等式的凸函数"><a href="#基于广义不等式的凸函数" class="headerlink" title="基于广义不等式的凸函数"></a>基于广义不等式的凸函数</h3><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<figure>
+<img src="/.io//image-20210112213640429.png" class="lazyload" data-srcset="/.io//image-20210112213640429.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213640429"><figcaption aria-hidden="true">image-20210112213640429</figcaption>
+</figure>
+<figure>
+<img src="/.io//image-20210112213701936.png" class="lazyload" data-srcset="/.io//image-20210112213701936.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112213701936"><figcaption aria-hidden="true">image-20210112213701936</figcaption>
+</figure>
+<h3 id="基于广义不等式的凸函数">基于广义不等式的凸函数</h3>
+
   
   
     
@@ -753,18 +786,23 @@ f^*(y)&=\sup_{x>0}(xy+\log x)\\
   
     <div class="prev-next">
       
-        <a class='prev' href='/2021/01/13/study/Math/ConvexOptimization/notes1/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「凸优化」 引言</p>
-          <p class='content'>2020-2021-1 最优化方法
+        <a class='prev' href='/2021/01/13/study/Math/ConvexOptimization/notes2/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「凸优化」 凸集</p>
+          <p class='content'>凸集合
 
-引言数学优化数学优化问题：（数学规划）
+凸集
 
-从一个可行解集合中,寻找出最优元素。
+仿射集合
+凸集
+重要案例
+保凸运算
+⼴义不等式
+分离与⽀撑超平⾯
+对偶锥与⼴义不等式
 
-数学形式：
-
-\begin{aligned}
-    &\min . &f...</p>
+仿射集合
+直线方程
+Def（直线方程）\(x = \thet...</p>
         </a>
       
       
@@ -772,10 +810,12 @@ f^*(y)&=\sup_{x>0}(xy+\log x)\\
           <p class='title'>「凸优化」 凸优化问题<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>凸优化-凸优化问题
 
-凸优化问题优化问题的标准形式
+凸优化问题
+优化问题的标准形式
+\[
 \begin{aligned}
-&\min.&f_0(x)\\
-&\mathrm{s.t.}&f_i(x)\le 0, i = 1,...,m...</p>
+&amp;\min.&amp;f_0(x)\\
+&amp;\mathrm{s.t.}&a...</p>
         </a>
       
     </div>
@@ -818,7 +858,7 @@ f^*(y)&=\sup_{x>0}(xy+\log x)\\
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%B8%E5%87%BD%E6%95%B0"><span class="toc-text">凸函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8%E5%92%8C%E6%A1%88%E4%BE%8B"><span class="toc-text">基本性质和案例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%B8%E5%87%BD%E6%95%B0-1"><span class="toc-text">凸函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%A6%E6%9D%9F%E5%87%B8%E5%87%BD%E6%95%B0%E5%88%B0%E7%9B%B4%E7%BA%BF"><span class="toc-text">约束凸函数到直线</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E5%80%BC%E5%BB%B6%E4%BC%B8"><span class="toc-text">扩展值延伸</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="toc-text">一阶条件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="toc-text">二阶条件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E5%87%B8%E8%BF%90%E7%AE%97"><span class="toc-text">保凸运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E8%B4%9F%E5%8A%A0%E6%9D%83%E6%B1%82%E5%92%8C"><span class="toc-text">非负加权求和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E4%BB%BF%E5%B0%84%E6%98%A0%E5%B0%84"><span class="toc-text">复合仿射映射</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%90%E7%82%B9%E6%9C%80%E5%A4%A7%E5%87%BD%E6%95%B0"><span class="toc-text">逐点最大函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%90%E7%82%B9%E4%B8%8A%E7%A1%AE%E7%95%8C"><span class="toc-text">逐点上确界</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%A4%8D%E5%90%88"><span class="toc-text">函数复合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E5%8C%96"><span class="toc-text">最小化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%8F%E8%A7%86%E5%87%BD%E6%95%B0"><span class="toc-text">透视函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#More"><span class="toc-text">More</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%9F%E5%87%B8%E5%87%BD%E6%95%B0"><span class="toc-text">拟凸函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E5%87%B8%E5%87%BD%E6%95%B0%E3%80%81%E5%AF%B9%E6%95%B0%E5%87%B9%E5%87%BD%E6%95%B0"><span class="toc-text">对数凸函数、对数凹函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%B9%BF%E4%B9%89%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E5%87%B8%E5%87%BD%E6%95%B0"><span class="toc-text">基于广义不等式的凸函数</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%B8%E5%87%BD%E6%95%B0"><span class="toc-text">凸函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8%E5%92%8C%E6%A1%88%E4%BE%8B"><span class="toc-text">基本性质和案例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%B8%E5%87%BD%E6%95%B0-1"><span class="toc-text">凸函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%A6%E6%9D%9F%E5%87%B8%E5%87%BD%E6%95%B0%E5%88%B0%E7%9B%B4%E7%BA%BF"><span class="toc-text">约束凸函数到直线</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E5%80%BC%E5%BB%B6%E4%BC%B8"><span class="toc-text">扩展值延伸</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="toc-text">一阶条件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="toc-text">二阶条件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E5%87%B8%E8%BF%90%E7%AE%97"><span class="toc-text">保凸运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E8%B4%9F%E5%8A%A0%E6%9D%83%E6%B1%82%E5%92%8C"><span class="toc-text">非负加权求和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E4%BB%BF%E5%B0%84%E6%98%A0%E5%B0%84"><span class="toc-text">复合仿射映射</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%90%E7%82%B9%E6%9C%80%E5%A4%A7%E5%87%BD%E6%95%B0"><span class="toc-text">逐点最大函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%90%E7%82%B9%E4%B8%8A%E7%A1%AE%E7%95%8C"><span class="toc-text">逐点上确界</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%A4%8D%E5%90%88"><span class="toc-text">函数复合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E5%8C%96"><span class="toc-text">最小化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%8F%E8%A7%86%E5%87%BD%E6%95%B0"><span class="toc-text">透视函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#more"><span class="toc-text">More</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%9F%E5%87%B8%E5%87%BD%E6%95%B0"><span class="toc-text">拟凸函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E5%87%B8%E5%87%BD%E6%95%B0%E5%AF%B9%E6%95%B0%E5%87%B9%E5%87%BD%E6%95%B0"><span class="toc-text">对数凸函数、对数凹函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%B9%BF%E4%B9%89%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E5%87%B8%E5%87%BD%E6%95%B0"><span class="toc-text">基于广义不等式的凸函数</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1465,14 +1505,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

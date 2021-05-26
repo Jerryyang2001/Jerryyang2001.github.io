@@ -468,7 +468,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <!-- TODO: -->
 <span id="more"></span>
-<h2 id="欧拉图"><a href="#欧拉图" class="headerlink" title="欧拉图"></a>欧拉图</h2><p><strong>Def</strong>：</p>
+<h2 id="欧拉图">欧拉图</h2>
+<p><strong>Def</strong>：</p>
 <ul>
 <li>（欧拉通路）经过图中所有边一次且仅一次的通路</li>
 <li>（欧拉回路）经过图中所有边一次且仅一次的回路</li>
@@ -480,21 +481,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>Thm</strong>：有向图 D 是欧拉图，当且仅当其是<strong>强连通</strong>的且每个顶点的<strong>出度等于入度</strong>。</p>
 <p><strong>Thm</strong>：有向图 D 是半欧拉图，当且仅当其是<strong>单向连通</strong>的且有两个奇度顶点，一个入度比出度大 1，一个入度比出度小 1，其余每个顶点的<strong>出度等于入度</strong>。</p>
 <p><strong>Thm</strong>：G 是非平凡的欧拉图，当且仅当 G 是连通的且为几个不重合的圈的并</p>
-<div class="note quote"><p><strong>Fleury Alg （求欧拉回路）</strong></p><ol><li>任取 $v_0\in V(G)$，令 $P_0=v_0$</li><li>设 $P_i = v_0e_1\dots e_i v_i$，若 $E(G) - \{e_1,e_2,\dots,e_i\}$中没有与 $v_i$ 关联的边，则停止，否则按以下条件选下一条边：<ol><li>$e_{i+1}$ 与 $v_i$ 关联</li><li>优先选：$e_{i+1}$ 不是 $G-\{e_1,\dots,e_i\}$ 中的桥</li></ol></li></ol></div>
-<h2 id="哈密顿图"><a href="#哈密顿图" class="headerlink" title="哈密顿图"></a>哈密顿图</h2><p><strong>Def</strong>：</p>
+<div class="note quote"><p><strong>Fleury Alg （求欧拉回路）</strong></p><ol type="1"><li>任取 <span class="math inline">\(v_0\in V(G)\)</span>，令 <span class="math inline">\(P_0=v_0\)</span></li><li>设 <span class="math inline">\(P_i = v_0e_1\dots e_i v_i\)</span>，若 <span class="math inline">\(E(G) - \{e_1,e_2,\dots,e_i\}\)</span>中没有与 <span class="math inline">\(v_i\)</span> 关联的边，则停止，否则按以下条件选下一条边：<ol type="1"><li><span class="math inline">\(e_{i+1}\)</span> 与 <span class="math inline">\(v_i\)</span> 关联</li><li>优先选：<span class="math inline">\(e_{i+1}\)</span> 不是 <span class="math inline">\(G-\{e_1,\dots,e_i\}\)</span> 中的桥</li></ol></li></ol></div>
+<h2 id="哈密顿图">哈密顿图</h2>
+<p><strong>Def</strong>：</p>
 <ul>
 <li>（哈密顿通路）经过图中所有点一次且仅一次的通路</li>
 <li>（哈密顿回路）经过图中所有点一次且仅一次的回路</li>
 <li>（哈密顿图）有哈密顿回路</li>
 <li>（半哈密顿图）有哈密顿通路</li>
 </ul>
-<p><strong>Thm</strong>：G 是哈密顿图，则$\forall (V_1 \in V\wedge v_1\neq\emptyset)\quad p(G-V_1) \le |V_1|$</p>
-<p><strong>Thm</strong>：G 是半哈密顿图，则$\forall (V_1 \in V\wedge v_1\neq\emptyset)\quad p(G-V_1) \le |V_1|+1$</p>
-<p><strong>Thm</strong>：$\forall v_i,v_j$ 不相邻，则 $d(v_i)+d(v_j)\ge n-1$，则有哈密顿通路</p>
-<p><strong>Thm</strong>：$\forall v_i,v_j$ 不相邻，则 $d(v_i)+d(v_j)\ge n$，则有哈密顿回路</p>
-<p><strong>Thm</strong>：若 $u,v$ 是 n 阶无向简单图的两个不相邻的顶点，且 $d(u)+d(v)\ge n$ 则 $G$ 是哈密顿图当且仅当 $G\cup (u,v)$ 时哈密顿图。</p>
-<p><strong>Thm</strong>：若 $D$ 是竞赛图，则其中有哈密顿通路</p>
-<h2 id="最短路问题"><a href="#最短路问题" class="headerlink" title="最短路问题"></a>最短路问题</h2><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<p><strong>Thm</strong>：G 是哈密顿图，则<span class="math inline">\(\forall (V_1 \in V\wedge v_1\neq\emptyset)\quad p(G-V_1) \le |V_1|\)</span></p>
+<p><strong>Thm</strong>：G 是半哈密顿图，则<span class="math inline">\(\forall (V_1 \in V\wedge v_1\neq\emptyset)\quad p(G-V_1) \le |V_1|+1\)</span></p>
+<p><strong>Thm</strong>：<span class="math inline">\(\forall v_i,v_j\)</span> 不相邻，则 <span class="math inline">\(d(v_i)+d(v_j)\ge n-1\)</span>，则有哈密顿通路</p>
+<p><strong>Thm</strong>：<span class="math inline">\(\forall v_i,v_j\)</span> 不相邻，则 <span class="math inline">\(d(v_i)+d(v_j)\ge n\)</span>，则有哈密顿回路</p>
+<p><strong>Thm</strong>：若 <span class="math inline">\(u,v\)</span> 是 n 阶无向简单图的两个不相邻的顶点，且 <span class="math inline">\(d(u)+d(v)\ge n\)</span> 则 <span class="math inline">\(G\)</span> 是哈密顿图当且仅当 <span class="math inline">\(G\cup (u,v)\)</span> 时哈密顿图。</p>
+<p><strong>Thm</strong>：若 <span class="math inline">\(D\)</span> 是竞赛图，则其中有哈密顿通路</p>
+<h2 id="最短路问题">最短路问题</h2>
+
   
   
     
@@ -596,7 +599,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>集合论</p>
           <p class='content'>
 
-集合代数集合的基本概念
+集合代数
+集合的基本概念
+
 Def：子集、包含
 Def：（集合）相等
 Def：真子集
@@ -605,12 +610,7 @@ Thm：空集是一切集合的子集
 
 Thm：空集是唯一的
 
-
-Def：幂集
-
-Def：全集
-
-集合...</p>
+Def：...</p>
         </a>
       
       
@@ -618,7 +618,7 @@ Def：全集
           <p class='title'>谈谈编程<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>编程十载。
 
-笔者江苏南京人，小学听人说编程有点意思随便学了点 Basic，觉着程序设计挺有趣，便一直没有放下编程的学习。当时挺自信，用 Basic 也能写点东西，虽然看上去不怎样，却能解决点实...</p>
+笔者江苏南京人，小学听人说编程有点意思随便学了点 Basic，觉着程序设计挺有趣，便一直没有放下编程的学习。当时挺自信，用 Basic 也能写点东西，虽然看上去不怎样，却能解决...</p>
         </a>
       
     </div>
@@ -1308,14 +1308,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

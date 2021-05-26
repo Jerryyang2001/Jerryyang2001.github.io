@@ -470,41 +470,47 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>基础物理学Ch4 角动量守恒</p>
 <span id="more"></span>
-<h2 id="角动量、角动量守恒定律"><a href="#角动量、角动量守恒定律" class="headerlink" title="角动量、角动量守恒定律"></a>角动量、角动量守恒定律</h2><p><strong><kbd>「角动量」</kbd></strong>：$\vec L = \vec r \times \vec p = \vec r \times m \vec v$（角动量、动量矩）</p>
-<p>在圆周运动中：$L = mr^2 w$</p>
-<div class="note quote"><p><strong>角动量守恒定律</strong>：$L_1+L_2 = const$</p><blockquote><p>一个系统由两个质点组成，若两个质点只受到它们之间的相互作用，则这个系统的总角动量保持恒定。</p></blockquote></div>
-<h2 id="力矩-、角动量定理"><a href="#力矩-、角动量定理" class="headerlink" title="力矩 、角动量定理"></a>力矩 、角动量定理</h2><h4 id="力矩、质点的角动量定理"><a href="#力矩、质点的角动量定理" class="headerlink" title="力矩、质点的角动量定理"></a>力矩、质点的角动量定理</h4><ul>
-<li>$L = r\times p\Rightarrow$ (对t微分) $\displaystyle\frac{\mathrm d L}{\mathrm d t} = r\times F$ 定义为$M$（力矩）</li>
-<li>反之，对上式积分，$\int \vec M \mathrm d t = \vec L _ 2 - \vec L _ 1$（角冲量）（或者写成 $\mathrm d \vec L = \vec M \mathrm d t$ ）地方</li>
+<h2 id="角动量角动量守恒定律">角动量、角动量守恒定律</h2>
+<p><strong><kbd>「角动量」</kbd></strong>：<span class="math inline">\(\vec L = \vec r \times \vec p = \vec r \times m \vec v\)</span>（角动量、动量矩）</p>
+<p>在圆周运动中：<span class="math inline">\(L = mr^2 w\)</span></p>
+<div class="note quote"><p><strong>角动量守恒定律</strong>：<span class="math inline">\(L_1+L_2 = const\)</span></p><blockquote><p>一个系统由两个质点组成，若两个质点只受到它们之间的相互作用，则这个系统的总角动量保持恒定。</p></blockquote></div>
+<h2 id="力矩-角动量定理">力矩 、角动量定理</h2>
+<h4 id="力矩质点的角动量定理">力矩、质点的角动量定理</h4>
+<ul>
+<li><span class="math inline">\(L = r\times p\Rightarrow\)</span> (对t微分) <span class="math inline">\(\displaystyle\frac{\mathrm d L}{\mathrm d t} = r\times F\)</span> 定义为<span class="math inline">\(M\)</span>（力矩）</li>
+<li>反之，对上式积分，<span class="math inline">\(\int \vec M \mathrm d t = \vec L _ 2 - \vec L _ 1\)</span>（角冲量）（或者写成 <span class="math inline">\(\mathrm d \vec L = \vec M \mathrm d t\)</span> ）地方</li>
 </ul>
 <p><strong><kbd>「角动量定理」</kbd></strong>：质点对任一固定点的角动量的时间变化率，等于外力对该点的力矩。</p>
-<h4 id="质点系的角动量定理"><a href="#质点系的角动量定理" class="headerlink" title="质点系的角动量定理"></a>质点系的角动量定理</h4><blockquote>
-<p>$L = \sum L = \sum r \times p=\sum r\times mv$</p>
-<p>对 $t$ 求导：$\frac{\mathrm d L}{\mathrm d t} = M^{ex}+M^{in}$</p>
-<p>而在质点系中，由牛顿第三定律：$M^{in}=0$</p>
+<h4 id="质点系的角动量定理">质点系的角动量定理</h4>
+<blockquote>
+<p><span class="math inline">\(L = \sum L = \sum r \times p=\sum r\times mv\)</span></p>
+<p>对 <span class="math inline">\(t\)</span> 求导：<span class="math inline">\(\frac{\mathrm d L}{\mathrm d t} = M^{ex}+M^{in}\)</span></p>
+<p>而在质点系中，由牛顿第三定律：<span class="math inline">\(M^{in}=0\)</span></p>
 </blockquote>
-<p><strong><kbd>「质点系的角动量定理」</kbd></strong>：</p>
+<p><strong><kbd>「质点系的角动量定理」</kbd></strong>： - 质点系对惯性系中某个参考点的角动量的时间变化率，等与作用在该质点系上的所有外力对该给定参考点的总力矩。 - <span class="math inline">\(\frac {\mathrm d L}{\mathrm d t} = M^{ex}\)</span></p>
+<p><strong><kbd>「质点系的角动量守恒定律」</kbd></strong>：（总外力矩为零时）<span class="math inline">\(L = const , \mathrm dL =0\)</span></p>
+<h4 id="质心系的角动量定理">质心系的角动量定理</h4>
+<p><strong><kbd>「质点组相对于质心的角动量」</kbd></strong>：</p>
 <ul>
-<li>质点系对惯性系中某个参考点的角动量的时间变化率，等与作用在该质点系上的所有外力对该给定参考点的总力矩。</li>
-<li>$\frac {\mathrm d L}{\mathrm d t} = M^{ex}$</li>
-</ul>
-<p><strong><kbd>「质点系的角动量守恒定律」</kbd></strong>：（总外力矩为零时）$L = const , \mathrm dL =0$</p>
-<h4 id="质心系的角动量定理"><a href="#质心系的角动量定理" class="headerlink" title="质心系的角动量定理"></a>质心系的角动量定理</h4><p><strong><kbd>「质点组相对于质心的角动量」</kbd></strong>：</p>
-<ul>
-<li>$L = \vec r_c \times m\vec v_c+\sum \vec r_i \times m_i \vec v_i’ = L_c+m\boldsymbol r_c\times\boldsymbol a_c$</li>
-<li>质点系对固定点 O 的角动量 L，等于质点系对其质心 C 的角动量 $L_c$ 加上质量集中在质心上随之运动时对 O 点的角动量 $m\boldsymbol r_c\times\boldsymbol a_c$</li>
+<li><span class="math inline">\(L = \vec r_c \times m\vec v_c+\sum \vec r_i \times m_i \vec v_i&#39; = L_c+m\boldsymbol r_c\times\boldsymbol a_c\)</span></li>
+<li>质点系对固定点 O 的角动量 L，等于质点系对其质心 C 的角动量 <span class="math inline">\(L_c\)</span> 加上质量集中在质心上随之运动时对 O 点的角动量 <span class="math inline">\(m\boldsymbol r_c\times\boldsymbol a_c\)</span></li>
 </ul>
 <p><strong><kbd>「质心系角动量定理」</kbd></strong></p>
 <ul>
-<li>$M_c^{ex} = \frac{\mathrm dL_c}{\mathrm dt}$</li>
+<li><span class="math inline">\(M_c^{ex} = \frac{\mathrm dL_c}{\mathrm dt}\)</span></li>
 <li>质点系对质心的角动量的时间变化率，等与作用在该质点系上的所有外力对质心的总力矩。</li>
 </ul>
 <p><strong><kbd>「质点组对质心的角动量守恒」</kbd></strong></p>
-<h2 id="质点在有心力场中的运动"><a href="#质点在有心力场中的运动" class="headerlink" title="质点在有心力场中的运动"></a>质点在有心力场中的运动</h2><h4 id="质心在有心力场中运动的一般描述"><a href="#质心在有心力场中运动的一般描述" class="headerlink" title="质心在有心力场中运动的一般描述"></a>质心在有心力场中运动的一般描述</h4><script type="math/tex; mode=display">
+<h2 id="质点在有心力场中的运动">质点在有心力场中的运动</h2>
+<h4 id="质心在有心力场中运动的一般描述">质心在有心力场中运动的一般描述</h4>
+<p><span class="math display">\[
 \begin{cases}
   e_r方向\qquad m(\ddot{r} - r\dot\theta^2)=F(r)\\
   e_\theta 方向\qquad m(2\dot r\dot\theta + r\ddot\theta)=0
-\end{cases}</script><h4 id="机械能守恒和角动量守恒-离心势能和有效势"><a href="#机械能守恒和角动量守恒-离心势能和有效势" class="headerlink" title="机械能守恒和角动量守恒 离心势能和有效势"></a>机械能守恒和角动量守恒 离心势能和有效势</h4><p>机械能守恒定律可以改写为：$\displaystyle\tilde{E}_p(r)=E_p(r)+\frac{L^2}{2mr^2}$</p>
+\end{cases}
+\]</span></p>
+<h4 id="机械能守恒和角动量守恒-离心势能和有效势">机械能守恒和角动量守恒 离心势能和有效势</h4>
+<p>机械能守恒定律可以改写为：<span class="math inline">\(\displaystyle\tilde{E}_p(r)=E_p(r)+\frac{L^2}{2mr^2}\)</span></p>
 <ul>
 <li>有效势能</li>
 <li>离心势能</li>
@@ -512,8 +518,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>将二维问题，化为一维问题。</p>
 </blockquote>
-<div class="note quote"><p><strong><kbd>「守恒定律」</kbd></strong></p><ol><li>动量</li><li>能量</li><li>角动量</li><li>质量</li><li>电荷</li><li>宇称守恒定律</li></ol></div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<div class="note quote"><p><strong><kbd>「守恒定律」</kbd></strong></p><ol type="1"><li>动量</li><li>能量</li><li>角动量</li><li>质量</li><li>电荷</li><li>宇称守恒定律</li></ol></div>
+
   
   
     
@@ -615,11 +621,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>机械能守恒</p>
           <p class='content'>基础物理学Ch3 机械能守恒 这部分就简单提一句
 
-功 动能定理功（Work）
+功 动能定理
+功（Work）
+
 力对质点所作的功为力在质点位移方向的分量（大小）与位移大小的乘积。（功是标量，过程量）
 
 
-一段位移的功$\mat...</p>
+一...</p>
         </a>
       
       
@@ -633,10 +641,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 动力学
 能量
 
-刚体运动学「刚体」：在外力作用下，形状大小不变的物体（任意两个质点之间的距离保持不变）这是一个理想模型！
-「运动形式」：
-
-平...</p>
+刚体运动学
+「刚体」：在外力作用下，形状大小不变的物体（任意两个质点之间的距离保持不变）这是一个理想模型！...</p>
         </a>
       
     </div>
@@ -679,7 +685,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%92%E5%8A%A8%E9%87%8F%E3%80%81%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%88%E6%81%92%E5%AE%9A%E5%BE%8B"><span class="toc-text">角动量、角动量守恒定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9B%E7%9F%A9-%E3%80%81%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%9A%E7%90%86"><span class="toc-text">力矩 、角动量定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%9B%E7%9F%A9%E3%80%81%E8%B4%A8%E7%82%B9%E7%9A%84%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%9A%E7%90%86"><span class="toc-text">力矩、质点的角动量定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E7%B3%BB%E7%9A%84%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%9A%E7%90%86"><span class="toc-text">质点系的角动量定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%A8%E5%BF%83%E7%B3%BB%E7%9A%84%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%9A%E7%90%86"><span class="toc-text">质心系的角动量定理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E5%9C%A8%E6%9C%89%E5%BF%83%E5%8A%9B%E5%9C%BA%E4%B8%AD%E7%9A%84%E8%BF%90%E5%8A%A8"><span class="toc-text">质点在有心力场中的运动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%A8%E5%BF%83%E5%9C%A8%E6%9C%89%E5%BF%83%E5%8A%9B%E5%9C%BA%E4%B8%AD%E8%BF%90%E5%8A%A8%E7%9A%84%E4%B8%80%E8%88%AC%E6%8F%8F%E8%BF%B0"><span class="toc-text">质心在有心力场中运动的一般描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E8%83%BD%E5%AE%88%E6%81%92%E5%92%8C%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%88%E6%81%92-%E7%A6%BB%E5%BF%83%E5%8A%BF%E8%83%BD%E5%92%8C%E6%9C%89%E6%95%88%E5%8A%BF"><span class="toc-text">机械能守恒和角动量守恒 离心势能和有效势</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%92%E5%8A%A8%E9%87%8F%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%88%E6%81%92%E5%AE%9A%E5%BE%8B"><span class="toc-text">角动量、角动量守恒定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9B%E7%9F%A9-%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%9A%E7%90%86"><span class="toc-text">力矩 、角动量定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%9B%E7%9F%A9%E8%B4%A8%E7%82%B9%E7%9A%84%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%9A%E7%90%86"><span class="toc-text">力矩、质点的角动量定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E7%B3%BB%E7%9A%84%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%9A%E7%90%86"><span class="toc-text">质点系的角动量定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%A8%E5%BF%83%E7%B3%BB%E7%9A%84%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%9A%E7%90%86"><span class="toc-text">质心系的角动量定理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A8%E7%82%B9%E5%9C%A8%E6%9C%89%E5%BF%83%E5%8A%9B%E5%9C%BA%E4%B8%AD%E7%9A%84%E8%BF%90%E5%8A%A8"><span class="toc-text">质点在有心力场中的运动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%A8%E5%BF%83%E5%9C%A8%E6%9C%89%E5%BF%83%E5%8A%9B%E5%9C%BA%E4%B8%AD%E8%BF%90%E5%8A%A8%E7%9A%84%E4%B8%80%E8%88%AC%E6%8F%8F%E8%BF%B0"><span class="toc-text">质心在有心力场中运动的一般描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E8%83%BD%E5%AE%88%E6%81%92%E5%92%8C%E8%A7%92%E5%8A%A8%E9%87%8F%E5%AE%88%E6%81%92-%E7%A6%BB%E5%BF%83%E5%8A%BF%E8%83%BD%E5%92%8C%E6%9C%89%E6%95%88%E5%8A%BF"><span class="toc-text">机械能守恒和角动量守恒 离心势能和有效势</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1326,14 +1332,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

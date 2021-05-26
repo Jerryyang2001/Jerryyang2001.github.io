@@ -470,163 +470,238 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>凸优化-凸优化问题</p>
 <span id="more"></span>
-<h2 id="凸优化问题"><a href="#凸优化问题" class="headerlink" title="凸优化问题"></a>凸优化问题</h2><h3 id="优化问题的标准形式"><a href="#优化问题的标准形式" class="headerlink" title="优化问题的标准形式"></a>优化问题的标准形式</h3><script type="math/tex; mode=display">
+<h2 id="凸优化问题">凸优化问题</h2>
+<h3 id="优化问题的标准形式">优化问题的标准形式</h3>
+<p><span class="math display">\[
 \begin{aligned}
-&\min.&f_0(x)\\
-&\mathrm{s.t.}&f_i(x)\le 0, i = 1,...,m\\
-&&h_i(x) =0
-\end{aligned}</script><p><strong>一些概念</strong>：</p>
+&amp;\min.&amp;f_0(x)\\
+&amp;\mathrm{s.t.}&amp;f_i(x)\le 0, i = 1,...,m\\
+&amp;&amp;h_i(x) =0
+\end{aligned}
+\]</span></p>
+<p><strong>一些概念</strong>：</p>
 <ul>
-<li>$x\in R^n$ 优化变量</li>
-<li>$f_0$ 目标函数（代价函数）</li>
-<li>$f_i:R^n\rightarrow R$ 不等式约束函数</li>
-<li><p>$h$ 等式约束函数</p>
-</li>
-<li><p>优化问题的域：$D=\bigcap \mathbf{dom}~f_i\cap \bigcap \mathbf{dom}h_i$</p>
-</li>
-<li>可行解集：$x\in D$ 为可行解，且满足所有的不等式约束、等式约束</li>
-<li>最优值：<ul>
-<li>$p^*=\inf\{f_0(x)|f_i(x)\le 0, i = 1, …, m,h_i(x) = 0, i = 1, … ,p\}$</li>
-<li>没有可行解：$p^*=\infin$</li>
-<li>若问题没有下界，则：$p^*=\infty$</li>
-</ul>
-</li>
-<li>最优解 $x^<em>$：若 $x^</em>$ 可行，且 $f_0(x^<em>)=p^</em>$</li>
-<li>最优解集：$X_{opt}=\{x|f_i(x)\le 0, i = 1,…,m, h_i(x) = 0, i = 1, …, p, f_0(x)=p^*\}$</li>
-<li>$\epsilon-$次优解集：$\epsilon&gt;0,f_0(x)\le p^*+\epsilon$</li>
-</ul>
-<h4 id="局部最优点"><a href="#局部最优点" class="headerlink" title="局部最优点"></a><strong>局部最优点</strong></h4><ul>
-<li>$x$ 为局部最优点，若存在一个正实数 $R$ 使得</li>
-</ul>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&\min.&f_0(z)\\
-&\mathrm{s.t.}&f_i(z)\le 0, i = 1,...,m\\
-&&h_i(z) =0
-&&||z-x||_2\le R
-\end{aligned}</script><p>例如：</p>
+<li><p><span class="math inline">\(x\in R^n\)</span> 优化变量</p></li>
+<li><p><span class="math inline">\(f_0\)</span> 目标函数（代价函数）</p></li>
+<li><p><span class="math inline">\(f_i:R^n\rightarrow R\)</span> 不等式约束函数</p></li>
+<li><p><span class="math inline">\(h\)</span> 等式约束函数</p></li>
+<li><p>优化问题的域：<span class="math inline">\(D=\bigcap \mathbf{dom}~f_i\cap \bigcap \mathbf{dom}h_i\)</span></p></li>
+<li><p>可行解集：<span class="math inline">\(x\in D\)</span> 为可行解，且满足所有的不等式约束、等式约束</p></li>
+<li><p>最优值：</p>
 <ul>
-<li>$f(x) = 1/ x, p^* = 0$ 无最优点</li>
-<li>$f(x) = -\log x, p^*=-\infin$</li>
-<li>$f(x) = x\log x,p^*=-1/e,x=1/e$</li>
+<li><span class="math inline">\(p^*=\inf\{f_0(x)|f_i(x)\le 0, i = 1, ..., m,h_i(x) = 0, i = 1, ... ,p\}\)</span></li>
+<li>没有可行解：<span class="math inline">\(p^*=\infin\)</span></li>
+<li>若问题没有下界，则：<span class="math inline">\(p^*=\infty\)</span></li>
+</ul></li>
+<li><p>最优解 <span class="math inline">\(x^*\)</span>：若 <span class="math inline">\(x^*\)</span> 可行，且 <span class="math inline">\(f_0(x^*)=p^*\)</span></p></li>
+<li><p>最优解集：<span class="math inline">\(X_{opt}=\{x|f_i(x)\le 0, i = 1,...,m, h_i(x) = 0, i = 1, ..., p, f_0(x)=p^*\}\)</span></p></li>
+<li><p><span class="math inline">\(\epsilon-\)</span>次优解集：<span class="math inline">\(\epsilon&gt;0,f_0(x)\le p^*+\epsilon\)</span></p></li>
 </ul>
-<h4 id="不等式约束"><a href="#不等式约束" class="headerlink" title="不等式约束"></a>不等式约束</h4><ul>
-<li>活动约束：$f\le 0$</li>
-<li>非活动约束：$f&lt;0$</li>
+<h4 id="局部最优点"><strong>局部最优点</strong></h4>
+<ul>
+<li><span class="math inline">\(x\)</span> 为局部最优点，若存在一个正实数 <span class="math inline">\(R\)</span> 使得</li>
 </ul>
-<h4 id="等价问题"><a href="#等价问题" class="headerlink" title="等价问题"></a>等价问题</h4><p><strong>可行性优化问题的例子</strong>：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214455920.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214455920.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214455920"></p>
-<h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><h6 id="盒子约束"><a href="#盒子约束" class="headerlink" title="盒子约束"></a>盒子约束</h6><blockquote>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214557325.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214557325.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214557325"></p>
-<p>转化为</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214603008.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214603008.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214603008"></p>
-</blockquote>
-<h6 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h6><blockquote>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214818420.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214818420.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214818420"></p>
-<p>转化为</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214824405.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112214824405.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214824405"></p>
-</blockquote>
-<h5 id="等价问题的解决方法"><a href="#等价问题的解决方法" class="headerlink" title="等价问题的解决方法"></a>等价问题的解决方法</h5><p>若有：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-&\psi_0:R\rightarrow R &单调增\\
-&\psi_1,...,\psi_m:R\rightarrow R&\psi_i\le 0\leftrightarrow u\le 0\\
-&\psi_{m+1},...,\psi_{m+p}:R\rightarrow R&\psi_{i}(u)=0\leftrightarrow u=0\\
-&\tilde f_i(x)=\psi_i(f_i(x)),~\tilde h_i(x)=\psi_{m+i}(h_i(x))
-\end{aligned}</script><p>则，将：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220743182.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220743182.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112220743182"></p>
-<p>转化为：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220750007.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220750007.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112220750007"></p>
+&amp;\min.&amp;f_0(z)\\
+&amp;\mathrm{s.t.}&amp;f_i(z)\le 0, i = 1,...,m\\
+&amp;&amp;h_i(z) =0
+&amp;&amp;||z-x||_2\le R
+\end{aligned}
+\]</span></p>
 <p>例如：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220825093.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220825093.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112220825093"></p>
+<ul>
+<li><span class="math inline">\(f(x) = 1/ x, p^* = 0\)</span> 无最优点</li>
+<li><span class="math inline">\(f(x) = -\log x, p^*=-\infin\)</span></li>
+<li><span class="math inline">\(f(x) = x\log x,p^*=-1/e,x=1/e\)</span></li>
+</ul>
+<h4 id="不等式约束">不等式约束</h4>
+<ul>
+<li>活动约束：<span class="math inline">\(f\le 0\)</span></li>
+<li>非活动约束：<span class="math inline">\(f&lt;0\)</span></li>
+</ul>
+<h4 id="等价问题">等价问题</h4>
+<p><strong>可行性优化问题的例子</strong>：</p>
+<figure>
+<img src="/.io//image-20210112214455920.png" class="lazyload" data-srcset="/.io//image-20210112214455920.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214455920"><figcaption aria-hidden="true">image-20210112214455920</figcaption>
+</figure>
+<h5 id="例">例</h5>
+<h6 id="盒子约束">盒子约束</h6>
+<blockquote>
+<figure>
+<img src="/.io//image-20210112214557325.png" class="lazyload" data-srcset="/.io//image-20210112214557325.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214557325"><figcaption aria-hidden="true">image-20210112214557325</figcaption>
+</figure>
+<p>转化为</p>
+<figure>
+<img src="/.io//image-20210112214603008.png" class="lazyload" data-srcset="/.io//image-20210112214603008.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214603008"><figcaption aria-hidden="true">image-20210112214603008</figcaption>
+</figure>
+</blockquote>
+<h6 id="缩放">缩放</h6>
+<blockquote>
+<figure>
+<img src="/.io//image-20210112214818420.png" class="lazyload" data-srcset="/.io//image-20210112214818420.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214818420"><figcaption aria-hidden="true">image-20210112214818420</figcaption>
+</figure>
+<p>转化为</p>
+<figure>
+<img src="/.io//image-20210112214824405.png" class="lazyload" data-srcset="/.io//image-20210112214824405.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112214824405"><figcaption aria-hidden="true">image-20210112214824405</figcaption>
+</figure>
+</blockquote>
+<h5 id="等价问题的解决方法">等价问题的解决方法</h5>
+<p>若有： <span class="math display">\[
+\begin{aligned}
+&amp;\psi_0:R\rightarrow R &amp;单调增\\
+&amp;\psi_1,...,\psi_m:R\rightarrow R&amp;\psi_i\le 0\leftrightarrow u\le 0\\
+&amp;\psi_{m+1},...,\psi_{m+p}:R\rightarrow R&amp;\psi_{i}(u)=0\leftrightarrow u=0\\
+&amp;\tilde f_i(x)=\psi_i(f_i(x)),~\tilde h_i(x)=\psi_{m+i}(h_i(x))
+\end{aligned}
+\]</span> 则，将：</p>
+<figure>
+<img src="/.io//image-20210112220743182.png" class="lazyload" data-srcset="/.io//image-20210112220743182.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112220743182"><figcaption aria-hidden="true">image-20210112220743182</figcaption>
+</figure>
 <p>转化为：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220834394.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112220834394.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112220834394"></p>
+<figure>
+<img src="/.io//image-20210112220750007.png" class="lazyload" data-srcset="/.io//image-20210112220750007.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112220750007"><figcaption aria-hidden="true">image-20210112220750007</figcaption>
+</figure>
+<p>例如：</p>
+<figure>
+<img src="/.io//image-20210112220825093.png" class="lazyload" data-srcset="/.io//image-20210112220825093.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112220825093"><figcaption aria-hidden="true">image-20210112220825093</figcaption>
+</figure>
+<p>转化为：</p>
+<figure>
+<img src="/.io//image-20210112220834394.png" class="lazyload" data-srcset="/.io//image-20210112220834394.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112220834394"><figcaption aria-hidden="true">image-20210112220834394</figcaption>
+</figure>
 <p>又如：</p>
 <ul>
-<li><p>$\min.||Ax-b||_2\iff\min.||Ax+b||_2^2$</p>
-</li>
-<li><p>变量变换：$\tilde{f}_i(z)=f_i(\phi(z)),\tilde{g}_i(z)=h_i(\phi(z))$</p>
-</li>
-<li><p>目标函数和约束函数的变换：$\tilde{f}_i(z)=\varPhi_i(f_i(z)),\tilde{g}_i(z)=\varPhi_i(h_i(z))$</p>
-</li>
-<li><p>消除线性等式约束：$R(F)=N(A)$</p>
-</li>
+<li><p><span class="math inline">\(\min.||Ax-b||_2\iff\min.||Ax+b||_2^2\)</span></p></li>
+<li><p>变量变换：<span class="math inline">\(\tilde{f}_i(z)=f_i(\phi(z)),\tilde{g}_i(z)=h_i(\phi(z))\)</span></p></li>
+<li><p>目标函数和约束函数的变换：<span class="math inline">\(\tilde{f}_i(z)=\varPhi_i(f_i(z)),\tilde{g}_i(z)=\varPhi_i(h_i(z))\)</span></p></li>
+<li><p>消除线性等式约束：<span class="math inline">\(R(F)=N(A)\)</span></p></li>
 </ul>
-<h3 id="凸优化问题-1"><a href="#凸优化问题-1" class="headerlink" title="凸优化问题"></a>凸优化问题</h3><script type="math/tex; mode=display">
+<h3 id="凸优化问题-1">凸优化问题</h3>
+<p><span class="math display">\[
 \begin{aligned}
-&\min.&f_0(x)\\
-&\mathrm{s.t.}&f_i(x)\le 0, i = 1,...,m\\
-&&a_i^Tx=b_i
-\end{aligned}</script><ul>
-<li>$f_i$ 为凸函数 $(i=1…m)$</li>
+&amp;\min.&amp;f_0(x)\\
+&amp;\mathrm{s.t.}&amp;f_i(x)\le 0, i = 1,...,m\\
+&amp;&amp;a_i^Tx=b_i
+\end{aligned}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(f_i\)</span> 为凸函数 <span class="math inline">\((i=1...m)\)</span></li>
 </ul>
-<h4 id="松弛变量"><a href="#松弛变量" class="headerlink" title="松弛变量"></a>松弛变量</h4><p>例如：</p>
+<h4 id="松弛变量">松弛变量</h4>
+<p>例如：</p>
 <blockquote>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112221125011.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112221125011.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112221125011"></p>
+<figure>
+<img src="/.io//image-20210112221125011.png" class="lazyload" data-srcset="/.io//image-20210112221125011.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112221125011"><figcaption aria-hidden="true">image-20210112221125011</figcaption>
+</figure>
 <p>转化为：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112221134254.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112221134254.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112221134254"></p>
+<figure>
+<img src="/.io//image-20210112221134254.png" class="lazyload" data-srcset="/.io//image-20210112221134254.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112221134254"><figcaption aria-hidden="true">image-20210112221134254</figcaption>
+</figure>
 </blockquote>
-<h4 id="局部和全局最优解"><a href="#局部和全局最优解" class="headerlink" title="局部和全局最优解"></a>局部和全局最优解</h4><ul>
+<h4 id="局部和全局最优解">局部和全局最优解</h4>
+<ul>
 <li>凸优化问题的任意局部最优解也是全局最优解</li>
 </ul>
-<p><strong>Thm</strong>（可微函数的最优性准则）$x$为最优解，iff $x$ 是可行的，且 $\nabla f_0(x)^T(y-x)\ge 0,~\forall y\in D$</p>
+<p><strong>Thm</strong>（可微函数的最优性准则）<span class="math inline">\(x\)</span>为最优解，iff <span class="math inline">\(x\)</span> 是可行的，且 <span class="math inline">\(\nabla f_0(x)^T(y-x)\ge 0,~\forall y\in D\)</span></p>
 <ul>
 <li>考虑凸函数的一阶条件</li>
 </ul>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112221452875.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112221452875.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112221452875"></p>
-<h4 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h4><h5 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h5><script type="math/tex; mode=display">
+<figure>
+<img src="/.io//image-20210112221452875.png" class="lazyload" data-srcset="/.io//image-20210112221452875.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112221452875"><figcaption aria-hidden="true">image-20210112221452875</figcaption>
+</figure>
+<h4 id="线性规划">线性规划</h4>
+<h5 id="线性规划问题">线性规划问题</h5>
+<p><span class="math display">\[
 \begin{aligned}
 \min.~c^Tx+d\\
 s.t.~Gx\preceq h\\
 \qquad Ax=b
-\end{aligned}</script><h5 id="线性分式规划"><a href="#线性分式规划" class="headerlink" title="线性分式规划"></a>线性分式规划</h5><script type="math/tex; mode=display">
+\end{aligned}
+\]</span></p>
+<h5 id="线性分式规划">线性分式规划</h5>
+<p><span class="math display">\[
 \begin{aligned}
-  \min.& f_0(x)&\\
-  s.t.& Gx\preceq h\\
-  &Ax=b&
-\end{aligned}</script><p>其中</p>
-<script type="math/tex; mode=display">
-f_0(x)=\frac{c^Tx+d}{e^Tx+f}</script><p>为拟凸优化问题，等价于线性规划</p>
-<h5 id="二次规划问题"><a href="#二次规划问题" class="headerlink" title="二次规划问题"></a>二次规划问题</h5><script type="math/tex; mode=display">
+  \min.&amp; f_0(x)&amp;\\
+  s.t.&amp; Gx\preceq h\\
+  &amp;Ax=b&amp;
+\end{aligned}
+\]</span></p>
+<p>其中 <span class="math display">\[
+f_0(x)=\frac{c^Tx+d}{e^Tx+f}
+\]</span> 为拟凸优化问题，等价于线性规划</p>
+<h5 id="二次规划问题">二次规划问题</h5>
+<p><span class="math display">\[
 \begin{aligned}
-  \min.& \frac{1}{2}x^TPx+q^Tx+r&\\
-  s.t.& Gx\preceq h\\
-  &Ax=b&
-\end{aligned}</script><h5 id="二次约束二次规划问题"><a href="#二次约束二次规划问题" class="headerlink" title="二次约束二次规划问题"></a>二次约束二次规划问题</h5><script type="math/tex; mode=display">
+  \min.&amp; \frac{1}{2}x^TPx+q^Tx+r&amp;\\
+  s.t.&amp; Gx\preceq h\\
+  &amp;Ax=b&amp;
+\end{aligned}
+\]</span></p>
+<h5 id="二次约束二次规划问题">二次约束二次规划问题</h5>
+<p><span class="math display">\[
 \begin{aligned}
-  \min.& \frac{1}{2}x^TPx+q^Tx+r&\\
-  s.t.& \frac{1}{2}x^TP_ix+q_i^T+r_i\le 0\\
-  &Ax=b&
-\end{aligned}</script><h4 id="广义不等式约束"><a href="#广义不等式约束" class="headerlink" title="广义不等式约束"></a>广义不等式约束</h4><p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112225317172.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112225317172.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112225317172"></p>
-<p>函数 $f_0:R^n\rightarrow R$ 为凸函数，$f_i:R^n\rightarrow R^{k_i}$ 为 $K_i$ 凸函数。</p>
+  \min.&amp; \frac{1}{2}x^TPx+q^Tx+r&amp;\\
+  s.t.&amp; \frac{1}{2}x^TP_ix+q_i^T+r_i\le 0\\
+  &amp;Ax=b&amp;
+\end{aligned}
+\]</span></p>
+<h4 id="广义不等式约束">广义不等式约束</h4>
+<figure>
+<img src="/.io//image-20210112225317172.png" class="lazyload" data-srcset="/.io//image-20210112225317172.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112225317172"><figcaption aria-hidden="true">image-20210112225317172</figcaption>
+</figure>
+<p>函数 <span class="math inline">\(f_0:R^n\rightarrow R\)</span> 为凸函数，<span class="math inline">\(f_i:R^n\rightarrow R^{k_i}\)</span> 为 <span class="math inline">\(K_i\)</span> 凸函数。</p>
 <p><strong>锥形式问题</strong>：目标函数、约束函数为仿射函数的形式：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233351326.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233351326.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233351326"></p>
-<h5 id="半定规划"><a href="#半定规划" class="headerlink" title="半定规划"></a>半定规划</h5><p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233426547.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233426547.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233426547"></p>
+<figure>
+<img src="/.io//image-20210112233351326.png" class="lazyload" data-srcset="/.io//image-20210112233351326.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233351326"><figcaption aria-hidden="true">image-20210112233351326</figcaption>
+</figure>
+<h5 id="半定规划">半定规划</h5>
+<figure>
+<img src="/.io//image-20210112233426547.png" class="lazyload" data-srcset="/.io//image-20210112233426547.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233426547"><figcaption aria-hidden="true">image-20210112233426547</figcaption>
+</figure>
 <p>其中不等式约束称为<strong>线性矩阵不等式 (LMI)</strong></p>
 <p>带有多个 LMI 约束的问题，等价于单个 LMI</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233546333.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233546333.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233546333"></p>
+<figure>
+<img src="/.io//image-20210112233546333.png" class="lazyload" data-srcset="/.io//image-20210112233546333.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233546333"><figcaption aria-hidden="true">image-20210112233546333</figcaption>
+</figure>
 <p>例如：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233619761.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233619761.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233619761"></p>
-<h5 id="向量优化"><a href="#向量优化" class="headerlink" title="向量优化"></a>向量优化</h5><p>通用的向量优化问题：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233724371.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233724371.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233724371"></p>
-<p>目标函数 $f_0$ 指在正常锥下最小化</p>
+<figure>
+<img src="/.io//image-20210112233619761.png" class="lazyload" data-srcset="/.io//image-20210112233619761.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233619761"><figcaption aria-hidden="true">image-20210112233619761</figcaption>
+</figure>
+<h5 id="向量优化">向量优化</h5>
+<p>通用的向量优化问题：</p>
+<figure>
+<img src="/.io//image-20210112233724371.png" class="lazyload" data-srcset="/.io//image-20210112233724371.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233724371"><figcaption aria-hidden="true">image-20210112233724371</figcaption>
+</figure>
+<p>目标函数 <span class="math inline">\(f_0\)</span> 指在正常锥下最小化</p>
 <p>凸向量优化问题：</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233823612.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112233823612.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233823612"></p>
-<p>其中，$f_0$ 为 K-凸函数，其余为凸函数</p>
-<h4 id="最优解和Pareto最优解"><a href="#最优解和Pareto最优解" class="headerlink" title="最优解和Pareto最优解"></a>最优解和Pareto最优解</h4><p><strong>Def</strong>（可达目标值集合）$\mathcal O=\{f_0(x)|x~\mathrm{feasible}\}$</p>
-<p><strong>Def</strong>（最优解）$x$ 若 $f_0(x)$ 为 $\mathcal O$ 的最小元</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234101894.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234101894.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234101894"></p>
-<p><strong>Def</strong>（Pareto 最优解） $x$ 若 $f_0(x)$ 为 $\mathcal O$ 的极小元</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234110993.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234110993.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234110993"></p>
-<p><strong>Def</strong>（标量化）为了求得 Pareto 最优解，选择 $\lambda \succ_{K^*}0$ 来求解标量问题</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234219344.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234219344.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234219344"></p>
-<p>通过变化 $\lambda\succ_{K^*}0$ 来找到所有的Pareto 最优点</p>
-<p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234255872.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234255872.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234255872"></p>
-<p>例如：正则化最小二乘问题</p>
-<script type="math/tex; mode=display">
-\min (w.r.t~R^2_+)\quad(\|Ax-b\|^2_2,\|x\|^2_2)</script><p><img src="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234359284.png" class="lazyload" data-srcset="/2021/01/13/study/Math/ConvexOptimization/notes4/image-20210112234359284.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234359284"></p>
+<figure>
+<img src="/.io//image-20210112233823612.png" class="lazyload" data-srcset="/.io//image-20210112233823612.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112233823612"><figcaption aria-hidden="true">image-20210112233823612</figcaption>
+</figure>
+<p>其中，<span class="math inline">\(f_0\)</span> 为 K-凸函数，其余为凸函数</p>
+<h4 id="最优解和pareto最优解">最优解和Pareto最优解</h4>
+<p><strong>Def</strong>（可达目标值集合）<span class="math inline">\(\mathcal O=\{f_0(x)|x~\mathrm{feasible}\}\)</span></p>
+<p><strong>Def</strong>（最优解）<span class="math inline">\(x\)</span> 若 <span class="math inline">\(f_0(x)\)</span> 为 <span class="math inline">\(\mathcal O\)</span> 的最小元</p>
+<figure>
+<img src="/.io//image-20210112234101894.png" class="lazyload" data-srcset="/.io//image-20210112234101894.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234101894"><figcaption aria-hidden="true">image-20210112234101894</figcaption>
+</figure>
+<p><strong>Def</strong>（Pareto 最优解） <span class="math inline">\(x\)</span> 若 <span class="math inline">\(f_0(x)\)</span> 为 <span class="math inline">\(\mathcal O\)</span> 的极小元</p>
+<figure>
+<img src="/.io//image-20210112234110993.png" class="lazyload" data-srcset="/.io//image-20210112234110993.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234110993"><figcaption aria-hidden="true">image-20210112234110993</figcaption>
+</figure>
+<p><strong>Def</strong>（标量化）为了求得 Pareto 最优解，选择 <span class="math inline">\(\lambda \succ_{K^*}0\)</span> 来求解标量问题</p>
+<figure>
+<img src="/.io//image-20210112234219344.png" class="lazyload" data-srcset="/.io//image-20210112234219344.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234219344"><figcaption aria-hidden="true">image-20210112234219344</figcaption>
+</figure>
+<p>通过变化 <span class="math inline">\(\lambda\succ_{K^*}0\)</span> 来找到所有的Pareto 最优点</p>
+<figure>
+<img src="/.io//image-20210112234255872.png" class="lazyload" data-srcset="/.io//image-20210112234255872.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234255872"><figcaption aria-hidden="true">image-20210112234255872</figcaption>
+</figure>
+<p>例如：正则化最小二乘问题 <span class="math display">\[
+\min (w.r.t~R^2_+)\quad(\|Ax-b\|^2_2,\|x\|^2_2)
+\]</span> <img src="/.io//image-20210112234359284.png" class="lazyload" data-srcset="/.io//image-20210112234359284.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112234359284"></p>
 <p>粗线表示 Pareto 最优点</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -729,6 +804,7 @@ f_0(x)=\frac{c^Tx+d}{e^Tx+f}</script><p>为拟凸优化问题，等价于线性�
           <p class='content'>凸函数
 
 凸函数
+
 基本性质和案例
 保凸运算
 共轭函数
@@ -736,15 +812,19 @@ f_0(x)=\frac{c^Tx+d}{e^Tx+f}</script><p>为拟凸优化问题，等价于线性�
 对数-凹函数和对数-凸函数
 关于广义不等式的凸性
 
-基本性质和案例凸函数
-$f:\R^n\rightarrow \R$ 为凸函数，...</p>
+基本性质和案例
+凸函数
+
+\(f:\R^n\ri...</p>
         </a>
       
       
         <a class='next' href='/2021/01/11/study/Math/ComplexFunctions/ch4/'>
           <p class='title'>「复变函数」复数项级数的概念和性质<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>复数项级数的概念和性质
-复数项级数的概念和性质复数项级数Def：无穷复数列 $\{c_n\}\rightarrow_{n\rightarrow \infty} A \iff \forall \v...</p>
+          <p class='content'>复数项级数的概念和性质 
+复数项级数的概念和性质
+复数项级数
+Def：无穷复数列 \(\{c_n\}\rightarrow_{n\rightarrow \infty} A \iff \fo...</p>
         </a>
       
     </div>
@@ -787,7 +867,7 @@ $f:\R^n\rightarrow \R$ 为凸函数，...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="toc-text">凸优化问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="toc-text">优化问题的标准形式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E7%82%B9"><span class="toc-text">局部最优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F"><span class="toc-text">不等式约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98"><span class="toc-text">等价问题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BE%8B"><span class="toc-text">例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">等价问题的解决方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98-1"><span class="toc-text">凸优化问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%BE%E5%BC%9B%E5%8F%98%E9%87%8F"><span class="toc-text">松弛变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3"><span class="toc-text">局部和全局最优解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92"><span class="toc-text">线性规划</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98"><span class="toc-text">线性规划问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%88%86%E5%BC%8F%E8%A7%84%E5%88%92"><span class="toc-text">线性分式规划</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98"><span class="toc-text">二次规划问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E7%BA%A6%E6%9D%9F%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98"><span class="toc-text">二次约束二次规划问题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%BF%E4%B9%89%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F"><span class="toc-text">广义不等式约束</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%8A%E5%AE%9A%E8%A7%84%E5%88%92"><span class="toc-text">半定规划</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E4%BC%98%E5%8C%96"><span class="toc-text">向量优化</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E8%A7%A3%E5%92%8CPareto%E6%9C%80%E4%BC%98%E8%A7%A3"><span class="toc-text">最优解和Pareto最优解</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="toc-text">凸优化问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="toc-text">优化问题的标准形式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E7%82%B9"><span class="toc-text">局部最优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F"><span class="toc-text">不等式约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98"><span class="toc-text">等价问题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BE%8B"><span class="toc-text">例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">等价问题的解决方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98-1"><span class="toc-text">凸优化问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%BE%E5%BC%9B%E5%8F%98%E9%87%8F"><span class="toc-text">松弛变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3"><span class="toc-text">局部和全局最优解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92"><span class="toc-text">线性规划</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98"><span class="toc-text">线性规划问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%88%86%E5%BC%8F%E8%A7%84%E5%88%92"><span class="toc-text">线性分式规划</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98"><span class="toc-text">二次规划问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E7%BA%A6%E6%9D%9F%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98"><span class="toc-text">二次约束二次规划问题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%BF%E4%B9%89%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F"><span class="toc-text">广义不等式约束</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%8A%E5%AE%9A%E8%A7%84%E5%88%92"><span class="toc-text">半定规划</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E4%BC%98%E5%8C%96"><span class="toc-text">向量优化</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E8%A7%A3%E5%92%8Cpareto%E6%9C%80%E4%BC%98%E8%A7%A3"><span class="toc-text">最优解和Pareto最优解</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1434,14 +1514,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

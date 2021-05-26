@@ -470,39 +470,42 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>幂级数</p>
 <span id="more"></span>
-<h2 id="幂级数的收敛半径与收敛区间"><a href="#幂级数的收敛半径与收敛区间" class="headerlink" title="幂级数的收敛半径与收敛区间"></a>幂级数的收敛半径与收敛区间</h2><p><strong>Thm</strong>：（幂级数的收敛情况）幂级数的收敛情况有且仅有以下三种：</p>
-<ol>
+<h2 id="幂级数的收敛半径与收敛区间">幂级数的收敛半径与收敛区间</h2>
+<p><strong>Thm</strong>：（幂级数的收敛情况）幂级数的收敛情况有且仅有以下三种：</p>
+<ol type="1">
 <li>收敛范围是整个实轴</li>
 <li>收敛范围是一个对称区间</li>
-<li>仅在 $x=0$ 收敛</li>
+<li>仅在 <span class="math inline">\(x=0\)</span> 收敛</li>
 </ol>
-<p><strong>Thm</strong>：（幂级数的收敛半径）对于幂级数的系数 $a_n$，若 $\rho =\overline{\lim\limits_{n\rightarrow \infty}}\sqrt[n]{|a_n|}$ 则</p>
-<ol>
-<li>当 $0\le \rho&lt;+\infty,|x|&lt;\frac 1 \rho$ 幂级数绝对收敛</li>
-<li>当 $0&lt;\rho&lt;\infty, |x|&gt;\frac 1 \rho$ 幂级数发散</li>
+<p><strong>Thm</strong>：（幂级数的收敛半径）对于幂级数的系数 <span class="math inline">\(a_n\)</span>，若 <span class="math inline">\(\rho =\overline{\lim\limits_{n\rightarrow \infty}}\sqrt[n]{|a_n|}\)</span> 则</p>
+<ol type="1">
+<li>当 <span class="math inline">\(0\le \rho&lt;+\infty,|x|&lt;\frac 1 \rho\)</span> 幂级数绝对收敛</li>
+<li>当 <span class="math inline">\(0&lt;\rho&lt;\infty, |x|&gt;\frac 1 \rho\)</span> 幂级数发散</li>
 </ol>
-<p>其中 $R=\frac 1 \rho$ 称作<strong>收敛半径</strong>，称 $(-R,R)$ 为<strong>收敛区间</strong></p>
-<div class="note done"><p><strong>Tips</strong></p><p>收敛区间和收敛域是不同的，区别在于端点处可能条件收敛</p></div>
-<p><strong>Thm</strong>：幂级数在 $x =x_1$ 处收敛，则在 $(-|x_1|,|x_1|)$ 上绝对收敛。若 $x=x_2$ 发散，则它在 $|x|&gt;|x_2|$ 处也发散</p>
+<p>其中 <span class="math inline">\(R=\frac 1 \rho\)</span> 称作<strong>收敛半径</strong>，称 <span class="math inline">\((-R,R)\)</span> 为<strong>收敛区间</strong></p>
+<div class="note done"><p><strong>Tips</strong></p><p>收敛区间和收敛域是不同的，区别在于端点处可能条件收敛</p></div>
+<p><strong>Thm</strong>：幂级数在 <span class="math inline">\(x =x_1\)</span> 处收敛，则在 <span class="math inline">\((-|x_1|,|x_1|)\)</span> 上绝对收敛。若 <span class="math inline">\(x=x_2\)</span> 发散，则它在 <span class="math inline">\(|x|&gt;|x_2|\)</span> 处也发散</p>
 <blockquote>
 <p>这个定理很好证明，用 M 判别法即可</p>
 </blockquote>
-<p><strong>Thm</strong>：对于幂级数的系数 $a_n$ 满足 $\lim\limits_{n\rightarrow\infty}|\frac{a_{n+1}}{a_n}|=l$ 则 $R=\frac 1 l$（包含 0 和无穷的情况）</p>
-<h2 id="幂级数的性质"><a href="#幂级数的性质" class="headerlink" title="幂级数的性质"></a>幂级数的性质</h2><p><strong>Thm</strong>：（内闭一致收敛）设一个幂级数的收敛半径为 $R&gt;0$，在收敛区间内，幂级数内闭一致收敛</p>
+<p><strong>Thm</strong>：对于幂级数的系数 <span class="math inline">\(a_n\)</span> 满足 <span class="math inline">\(\lim\limits_{n\rightarrow\infty}|\frac{a_{n+1}}{a_n}|=l\)</span> 则 <span class="math inline">\(R=\frac 1 l\)</span>（包含 0 和无穷的情况）</p>
+<h2 id="幂级数的性质">幂级数的性质</h2>
+<p><strong>Thm</strong>：（内闭一致收敛）设一个幂级数的收敛半径为 <span class="math inline">\(R&gt;0\)</span>，在收敛区间内，幂级数内闭一致收敛</p>
 <blockquote>
-<p>如果在 R 处也收敛，则可以补全一致收敛到 R 处，也就是说 $在R处收敛\rightarrow 在[0,R]一致收敛$</p>
+<p>如果在 R 处也收敛，则可以补全一致收敛到 R 处，也就是说 <span class="math inline">\(在R处收敛\rightarrow 在[0,R]一致收敛\)</span></p>
 </blockquote>
 <p><strong>Thm</strong>：幂级数的和函数是在收敛区间内是一个连续函数</p>
 <p><strong>Thm</strong>：幂级数的和函数是在收敛区间内的可微函数，且可以逐项求微，收敛区间不变</p>
 <p><strong>Thm</strong>：幂级数在积分后，收敛区间不变</p>
 <p><strong>Thm</strong>：在可导的情况下，幂级数可以逐项求导任意多次。</p>
-<p><strong>Thm</strong>：在 $x=R$ 处收敛，则和函数在 $[0,R]$ 连续</p>
+<p><strong>Thm</strong>：在 <span class="math inline">\(x=R\)</span> 处收敛，则和函数在 <span class="math inline">\([0,R]\)</span> 连续</p>
 <blockquote>
 <p>通过函数项级数的判定即可得到这些定理</p>
 </blockquote>
-<h2 id="斯特林公式"><a href="#斯特林公式" class="headerlink" title="斯特林公式"></a>斯特林公式</h2><p>公式：$\displaystyle n!=\sqrt{2\pi n} (\frac n e)^ne^{\frac{\theta}{12n}}\approx\sqrt{2\pi n} (\frac n e)^n,\theta\in(0,1)$</p>
-<p>沃利斯公式：$\displaystyle \frac \pi 2=\lim\limits_{n \to \infty}\frac{[(2n)!!]^2}{[(2n-1)!!]^2(2n+1)}$</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<h2 id="斯特林公式">斯特林公式</h2>
+<p>公式：<span class="math inline">\(\displaystyle n!=\sqrt{2\pi n} (\frac n e)^ne^{\frac{\theta}{12n}}\approx\sqrt{2\pi n} (\frac n e)^n,\theta\in(0,1)\)</span></p>
+<p>沃利斯公式：<span class="math inline">\(\displaystyle \frac \pi 2=\lim\limits_{n \to \infty}\frac{[(2n)!!]^2}{[(2n-1)!!]^2(2n+1)}\)</span></p>
+
   
   
     
@@ -604,10 +607,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>多元数量值函数微分学及其应用</p>
           <p class='content'>到这里，这个学期的内容就大致整理完整了。
 
-n 维 Euclid 空间 R^n 中点集知识n 维 Euclid 空间 R^n
+n 维 Euclid 空间 R^n 中点集知识
+n 维 Euclid 空间 R^n
+
 Def：n 维实向量
-Def：n 维实向量空间（n 维实线性空间）
-...</p>
+Def：n 维实向量空间（n ...</p>
         </a>
       
       
@@ -615,8 +619,8 @@ Def：n 维实向量空间（n 维实线性空间）
           <p class='title'>函数项级数<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>函数项级数
 
-Def：将无穷多项的一列函数依次用加号得到的表达式称为函数项级数$\displaystyle\sum\limits_{n=1}^{\infty}u_n(x_0)$
-函数项级数的处处...</p>
+Def：将无穷多项的一列函数依次用加号得到的表达式称为函数项级数\(\displaystyle\sum\limits_{n=1}^{\infty}u_n(x_0)\)
+函数项...</p>
         </a>
       
     </div>
@@ -1306,14 +1310,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

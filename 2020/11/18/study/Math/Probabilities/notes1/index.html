@@ -470,63 +470,75 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>随机事件及其概率</p>
 <span id="more"></span>
-<h2 id="随机事件及其概率"><a href="#随机事件及其概率" class="headerlink" title="随机事件及其概率"></a>随机事件及其概率</h2><h3 id="随机事件"><a href="#随机事件" class="headerlink" title="随机事件"></a>随机事件</h3><p><strong>Def</strong>：样本空间</p>
+<h2 id="随机事件及其概率">随机事件及其概率</h2>
+<h3 id="随机事件">随机事件</h3>
+<p><strong>Def</strong>：样本空间</p>
 <p><strong>Def</strong>：随机事件</p>
-<h3 id="随机事件的概率"><a href="#随机事件的概率" class="headerlink" title="随机事件的概率"></a>随机事件的概率</h3><h4 id="事件的概率"><a href="#事件的概率" class="headerlink" title="事件的概率"></a>事件的概率</h4><p><strong>Def</strong>：频率</p>
+<h3 id="随机事件的概率">随机事件的概率</h3>
+<h4 id="事件的概率">事件的概率</h4>
+<p><strong>Def</strong>：频率</p>
 <p><strong>Thm</strong>：频率满足</p>
 <ul>
-<li>$0\le f_n(A)\le 1$</li>
-<li>$f_n(\varOmega)=1$</li>
-<li>互不相容的随机事件，$f_n(\cup A_i)=\sum f_n(A_i)$</li>
+<li><span class="math inline">\(0\le f_n(A)\le 1\)</span></li>
+<li><span class="math inline">\(f_n(\varOmega)=1\)</span></li>
+<li>互不相容的随机事件，<span class="math inline">\(f_n(\cup A_i)=\sum f_n(A_i)\)</span></li>
 </ul>
-<h4 id="概率的公理化定义"><a href="#概率的公理化定义" class="headerlink" title="概率的公理化定义"></a>概率的公理化定义</h4><p><strong>Def</strong>：设$E$是随机试验，$\varOmega$ 是 $E$ 的样本空间，对于每一个随机事件，赋予唯一的实数$P(A)$，满足：非负性、规范性、可列可加性，则称集合函数$P(\cdot)$为概率测度。</p>
+<h4 id="概率的公理化定义">概率的公理化定义</h4>
+<p><strong>Def</strong>：设<span class="math inline">\(E\)</span>是随机试验，<span class="math inline">\(\varOmega\)</span> 是 <span class="math inline">\(E\)</span> 的样本空间，对于每一个随机事件，赋予唯一的实数<span class="math inline">\(P(A)\)</span>，满足：非负性、规范性、可列可加性，则称集合函数<span class="math inline">\(P(\cdot)\)</span>为概率测度。</p>
 <p><strong>Thms</strong></p>
 <ul>
 <li>不可能事件的概率为 0</li>
 <li>有限可加性：不相容的随机事件，和的概率等于概率的和</li>
-<li>对立事件的概率：$P(\bar A)=1-P(A)$</li>
-<li>概率的加法公式：$P(A+B)=P(A)+P(B)-P(AB)$</li>
-<li>概率的减法公式：若 A 包含 B，$P(A-B)=P(A)-P(B)$</li>
-<li>概率的单调性：若 A 包含于 B，$P(A)\le P(B)$</li>
+<li>对立事件的概率：<span class="math inline">\(P(\bar A)=1-P(A)\)</span></li>
+<li>概率的加法公式：<span class="math inline">\(P(A+B)=P(A)+P(B)-P(AB)\)</span></li>
+<li>概率的减法公式：若 A 包含 B，<span class="math inline">\(P(A-B)=P(A)-P(B)\)</span></li>
+<li>概率的单调性：若 A 包含于 B，<span class="math inline">\(P(A)\le P(B)\)</span></li>
 </ul>
-<h3 id="古典概型"><a href="#古典概型" class="headerlink" title="古典概型"></a>古典概型</h3><p><strong>Def</strong>：一个古典概型 $E$ 满足：</p>
-<ol>
+<h3 id="古典概型">古典概型</h3>
+<p><strong>Def</strong>：一个古典概型 <span class="math inline">\(E\)</span> 满足：</p>
+<ol type="1">
 <li>样本空间只有有限个基本事件</li>
 <li>每个基本事件出现可能性相同</li>
 </ol>
-<h3 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h3><h4 id="条件概率的定义"><a href="#条件概率的定义" class="headerlink" title="条件概率的定义"></a>条件概率的定义</h4><p><strong>Def</strong>：（有穷划分）设 $\varOmega$ 是随机试验 $E$ 的样本空间，$A_1,A_2,\dots, A_n$ 是随机事件，若满足：</p>
-<ol>
-<li>$A_iA_j = \emptyset,~\forall i\ne j$</li>
-<li>$\cup A_j = \varOmega$<br>则称$A_1,A_2,\dots, A_n$ 是$\varOmega$ 的一个有穷划分。</li>
-</ol>
+<h3 id="条件概率">条件概率</h3>
+<h4 id="条件概率的定义">条件概率的定义</h4>
+<p><strong>Def</strong>：（有穷划分）设 <span class="math inline">\(\varOmega\)</span> 是随机试验 <span class="math inline">\(E\)</span> 的样本空间，<span class="math inline">\(A_1,A_2,\dots, A_n\)</span> 是随机事件，若满足： 1. <span class="math inline">\(A_iA_j = \emptyset,~\forall i\ne j\)</span> 2. <span class="math inline">\(\cup A_j = \varOmega\)</span> 则称<span class="math inline">\(A_1,A_2,\dots, A_n\)</span> 是<span class="math inline">\(\varOmega\)</span> 的一个有穷划分。</p>
 <blockquote>
 <p>相同定义 <kbd>可列无穷划分</kbd></p>
 </blockquote>
-<p><strong>Def</strong>（条件概率）设 $A,B$ 是两个随机事件，$P(B)&gt;0$ 则称 $P(A|B)=P(AB)/P(B)$ 为事件 $B$ 发生条件下，事件 $A$ 发生的概率</p>
-<h4 id="概率的乘法公式"><a href="#概率的乘法公式" class="headerlink" title="概率的乘法公式"></a>概率的乘法公式</h4><p><strong>Thm</strong>：设 $A_1, …,A_n$ 为 n 个随机事件，且 $P(\bigcap A_i)&gt;0$，则 $P(\bigcap A_i)=P(A_1)P(A_2|A_1)…P(A_n|\bigcap_{i=1}^{n-1}A_i)$</p>
-<h4 id="全概率公式和贝叶斯公式"><a href="#全概率公式和贝叶斯公式" class="headerlink" title="全概率公式和贝叶斯公式"></a>全概率公式和贝叶斯公式</h4><p><strong>Thm</strong>（全概率公式）设随机事件组是 $\varOmega$ 的一组<strong>可列无穷划分</strong> $P(A_i) &gt; 0,\forall i$，则对于任意随机事件 $B$，有：$P(B) = \sum P(A_i)P(B|A_i)$</p>
-<p><strong>Thm</strong>（Bayes 公式）设$A_1, A_2,\dots$ 是样本空间$\varOmega$ 的一组可列无穷划分，$P&gt;0,B\subset \varOmega$ 则：</p>
-<script type="math/tex; mode=display">
-  P(A_i|B) = \frac{P(A_i)P(B|A_i)}{\sum P(A_i)P(B|A_i)}, i = 1, 2,\dots</script><h3 id="随机事件的独立性"><a href="#随机事件的独立性" class="headerlink" title="随机事件的独立性"></a>随机事件的独立性</h3><h4 id="两个随机事件的独立性"><a href="#两个随机事件的独立性" class="headerlink" title="两个随机事件的独立性"></a>两个随机事件的独立性</h4><p><strong>Def</strong>（独立性）设$A,B$是两个随机事件，若：$P(AB) = P(A)P(B)$则称 $A, B$ 是两个相互独立的随机事件</p>
+<p><strong>Def</strong>（条件概率）设 <span class="math inline">\(A,B\)</span> 是两个随机事件，<span class="math inline">\(P(B)&gt;0\)</span> 则称 <span class="math inline">\(P(A|B)=P(AB)/P(B)\)</span> 为事件 <span class="math inline">\(B\)</span> 发生条件下，事件 <span class="math inline">\(A\)</span> 发生的概率</p>
+<h4 id="概率的乘法公式">概率的乘法公式</h4>
+<p><strong>Thm</strong>：设 <span class="math inline">\(A_1, ...,A_n\)</span> 为 n 个随机事件，且 <span class="math inline">\(P(\bigcap A_i)&gt;0\)</span>，则 <span class="math inline">\(P(\bigcap A_i)=P(A_1)P(A_2|A_1)...P(A_n|\bigcap_{i=1}^{n-1}A_i)\)</span></p>
+<h4 id="全概率公式和贝叶斯公式">全概率公式和贝叶斯公式</h4>
+<p><strong>Thm</strong>（全概率公式）设随机事件组是 <span class="math inline">\(\varOmega\)</span> 的一组<strong>可列无穷划分</strong> <span class="math inline">\(P(A_i) &gt; 0,\forall i\)</span>，则对于任意随机事件 <span class="math inline">\(B\)</span>，有：<span class="math inline">\(P(B) = \sum P(A_i)P(B|A_i)\)</span></p>
+<p><strong>Thm</strong>（Bayes 公式）设<span class="math inline">\(A_1, A_2,\dots\)</span> 是样本空间<span class="math inline">\(\varOmega\)</span> 的一组可列无穷划分，<span class="math inline">\(P&gt;0,B\subset \varOmega\)</span> 则：</p>
+<p><span class="math display">\[
+  P(A_i|B) = \frac{P(A_i)P(B|A_i)}{\sum P(A_i)P(B|A_i)}, i = 1, 2,\dots
+\]</span></p>
+<h3 id="随机事件的独立性">随机事件的独立性</h3>
+<h4 id="两个随机事件的独立性">两个随机事件的独立性</h4>
+<p><strong>Def</strong>（独立性）设<span class="math inline">\(A,B\)</span>是两个随机事件，若：<span class="math inline">\(P(AB) = P(A)P(B)\)</span>则称 <span class="math inline">\(A, B\)</span> 是两个相互独立的随机事件</p>
 <blockquote>
-<p>$\varOmega,~\emptyset$ 与任一事件相互独立</p>
+<p><span class="math inline">\(\varOmega,~\emptyset\)</span> 与任一事件相互独立</p>
 </blockquote>
-<p><strong>Thm</strong>：$P(A),P(B)&gt;0$ 时 $A,B独立\iff P(A|B)=P(A), P(B|A)=P(B)$</p>
-<p><strong>Thm</strong>（独立扩张定理）$A,B独立\iff \bar A,B~A,\bar B~ \bar A,\bar B 独立$</p>
-<h4 id="多个随机事件的独立性"><a href="#多个随机事件的独立性" class="headerlink" title="多个随机事件的独立性"></a>多个随机事件的独立性</h4><p><strong>Def</strong>：三个独立的随机事件，满足：</p>
-<script type="math/tex; mode=display">
+<p><strong>Thm</strong>：<span class="math inline">\(P(A),P(B)&gt;0\)</span> 时 <span class="math inline">\(A,B独立\iff P(A|B)=P(A), P(B|A)=P(B)\)</span></p>
+<p><strong>Thm</strong>（独立扩张定理）<span class="math inline">\(A,B独立\iff \bar A,B~A,\bar B~ \bar A,\bar B 独立\)</span></p>
+<h4 id="多个随机事件的独立性">多个随机事件的独立性</h4>
+<p><strong>Def</strong>：三个独立的随机事件，满足： <span class="math display">\[
   \begin{cases}
       两两独立\\
       P(ABC) = P(A)P(B)P(C)
-  \end{cases}</script><p><strong>Def</strong>（n 个事件的独立性）</p>
+  \end{cases}
+\]</span></p>
+<p><strong>Def</strong>（n 个事件的独立性）</p>
 <blockquote>
 <p>独立的多个随机事件满足：</p>
-<ol>
-<li>$P(\cap A_i) = \prod P(A_i)$</li>
-<li>$P(\cup A_i) = 1 - \prod[1-P(A_i)]$</li>
+<ol type="1">
+<li><span class="math inline">\(P(\cap A_i) = \prod P(A_i)\)</span></li>
+<li><span class="math inline">\(P(\cup A_i) = 1 - \prod[1-P(A_i)]\)</span></li>
 </ol>
 </blockquote>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -628,7 +640,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「复变函数」复变函数积分</p>
           <p class='content'>复变函数的积分
 
-复变函数的积分复变函数积分的概念及其计算Def（复变函数的积分）同实函数定义：分割求和 $\displaystyle\int_C f(z)\mathrm dz = \lim \...</p>
+复变函数的积分
+复变函数积分的概念及其计算
+Def（复变函数的积分）同实函数定义：分割求和 \(\displaystyle\int_C f(z)\mathrm dz =...</p>
         </a>
       
       
@@ -636,7 +650,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'>「概率统计与随机过程」 2 - 随机变量及其概率分布<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>随机变量及其概率分布
 
-随机变量及其概率分布随机变量Def：设 $E$ 时一个随机试验，$\varOmega$ 是其样本空间，如果对于每一个试验的结果 $\omega\in \varOmega$...</p>
+随机变量及其概率分布
+随机变量
+Def：设 \(E\) 时一个随机试验，\(\varOmega\) 是其样本空间，如果对于每一个试验的结果 \(\omega\in...</p>
         </a>
       
     </div>
@@ -1326,14 +1342,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

@@ -470,121 +470,142 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>复数与复变函数</p>
 <span id="more"></span>
-<h2 id="Ch1-复数与复变函数"><a href="#Ch1-复数与复变函数" class="headerlink" title="Ch1 复数与复变函数"></a>Ch1 复数与复变函数</h2><h3 id="复数的概念与运算"><a href="#复数的概念与运算" class="headerlink" title="复数的概念与运算"></a>复数的概念与运算</h3><h4 id="复数的概念"><a href="#复数的概念" class="headerlink" title="复数的概念"></a>复数的概念</h4><p><strong>Def</strong>（复数）$(x,y)$ -&gt; $z=x+iy,i^2=-1$</p>
-<ol>
-<li>$\mathrm{Re}(z)$</li>
-<li>$\mathrm{Im}(z)$</li>
+<h2 id="ch1-复数与复变函数">Ch1 复数与复变函数</h2>
+<h3 id="复数的概念与运算">复数的概念与运算</h3>
+<h4 id="复数的概念">复数的概念</h4>
+<p><strong>Def</strong>（复数）<span class="math inline">\((x,y)\)</span> -&gt; <span class="math inline">\(z=x+iy,i^2=-1\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(\mathrm{Re}(z)\)</span></li>
+<li><span class="math inline">\(\mathrm{Im}(z)\)</span></li>
 <li>相等：实部虚部对应相等</li>
 </ol>
-<h5 id="复数的代数运算"><a href="#复数的代数运算" class="headerlink" title="复数的代数运算"></a>复数的代数运算</h5><ol>
+<h5 id="复数的代数运算">复数的代数运算</h5>
+<ol type="1">
 <li>加减</li>
 <li>乘除</li>
 </ol>
 <p>满足的运算规律：</p>
-<ol>
+<ol type="1">
 <li>交换</li>
 <li>结合</li>
 <li>分配</li>
 </ol>
-<h5 id="共轭复数"><a href="#共轭复数" class="headerlink" title="共轭复数"></a>共轭复数</h5><p>$\bar z = x - iy$</p>
+<h5 id="共轭复数">共轭复数</h5>
+<p><span class="math inline">\(\bar z = x - iy\)</span></p>
 <p><strong>共轭复数的性质</strong>：</p>
-<ol>
-<li>$z \bar z = |z|$</li>
-<li>$\overline{z_1\pm z_2} = \bar{z_1}\pm\bar{z_2}$</li>
-<li>$\overline{z_1z_2} = \bar{z_1}\bar{z_2}$</li>
-<li>$z+\bar z = \mathrm{Re}(z)$</li>
-<li>$(z-\bar z)/i = \mathrm{Im}(z)$</li>
+<ol type="1">
+<li><span class="math inline">\(z \bar z = |z|\)</span></li>
+<li><span class="math inline">\(\overline{z_1\pm z_2} = \bar{z_1}\pm\bar{z_2}\)</span></li>
+<li><span class="math inline">\(\overline{z_1z_2} = \bar{z_1}\bar{z_2}\)</span></li>
+<li><span class="math inline">\(z+\bar z = \mathrm{Re}(z)\)</span></li>
+<li><span class="math inline">\((z-\bar z)/i = \mathrm{Im}(z)\)</span></li>
 </ol>
-<h4 id="复数的几何表示"><a href="#复数的几何表示" class="headerlink" title="复数的几何表示"></a>复数的几何表示</h4><ol>
-<li><p>点表示：$z=x+iy\leftrightarrow (x,y)$<br>复平面、实轴、虚轴</p>
-</li>
-<li><p>向量表示</p>
-</li>
-<li><p>三角表达：$z=r(\cos\theta+i\sin \theta)$</p>
-</li>
+<h4 id="复数的几何表示">复数的几何表示</h4>
+<ol type="1">
+<li><p>点表示：<span class="math inline">\(z=x+iy\leftrightarrow (x,y)\)</span> 复平面、实轴、虚轴</p></li>
+<li><p>向量表示</p></li>
+<li><p>三角表达：<span class="math inline">\(z=r(\cos\theta+i\sin \theta)\)</span></p></li>
 </ol>
-<h5 id="复数的模和辐角"><a href="#复数的模和辐角" class="headerlink" title="复数的模和辐角"></a>复数的模和辐角</h5><ol>
-<li>模 $|z| = r = \sqrt{x^2+y^2}$</li>
-<li>辐角 $\mathrm{Arg}~z = \theta$</li>
+<h5 id="复数的模和辐角">复数的模和辐角</h5>
+<ol type="1">
+<li>模 <span class="math inline">\(|z| = r = \sqrt{x^2+y^2}\)</span></li>
+<li>辐角 <span class="math inline">\(\mathrm{Arg}~z = \theta\)</span></li>
 </ol>
 <blockquote>
 <p>利用欧拉公式：</p>
 <ul>
-<li>$z = re^{i\theta}$</li>
+<li><span class="math inline">\(z = re^{i\theta}\)</span></li>
 </ul>
-<p>$z = 0$ 辐角不确定</p>
-<p>辐角的主值 $-\pi&lt;\theta_0\le\pi$</p>
+<p><span class="math inline">\(z = 0\)</span> 辐角不确定</p>
+<p>辐角的主值 <span class="math inline">\(-\pi&lt;\theta_0\le\pi\)</span></p>
 </blockquote>
 <p>辐角主值计算：</p>
-<ol>
-<li>求 $\arctan \frac y x$</li>
-<li>求 $\theta_0$，注意：$\theta_0\in(-\pi,\pi]$</li>
+<ol type="1">
+<li>求 <span class="math inline">\(\arctan \frac y x\)</span></li>
+<li>求 <span class="math inline">\(\theta_0\)</span>，注意：<span class="math inline">\(\theta_0\in(-\pi,\pi]\)</span></li>
 </ol>
-<div class="note quote"><ul><li>$\mathrm{Arg}(z_1z_2)=\mathrm{Arg}z_1+\mathrm{Arg}z_2$</li><li>$\mathrm{Arg}(z_1/z_2)=\mathrm{Arg}z_1-\mathrm{Arg}z_2$</li></ul><p>注意这里指的是集合相等</p><ul><li>$|z_1z_2|=|z_1||z_2|$</li><li>$|z_1/z_2|=|z_1|/|z_2|$</li></ul></div>
-<h4 id="复数的乘幂和方根"><a href="#复数的乘幂和方根" class="headerlink" title="复数的乘幂和方根"></a>复数的乘幂和方根</h4><h5 id="复数的乘幂"><a href="#复数的乘幂" class="headerlink" title="复数的乘幂"></a>复数的乘幂</h5><script type="math/tex; mode=display">
+<div class="note quote"><ul><li><span class="math inline">\(\mathrm{Arg}(z_1z_2)=\mathrm{Arg}z_1+\mathrm{Arg}z_2\)</span></li><li><span class="math inline">\(\mathrm{Arg}(z_1/z_2)=\mathrm{Arg}z_1-\mathrm{Arg}z_2\)</span></li></ul><p>注意这里指的是集合相等</p><ul><li><span class="math inline">\(|z_1z_2|=|z_1||z_2|\)</span></li><li><span class="math inline">\(|z_1/z_2|=|z_1|/|z_2|\)</span></li></ul></div>
+<h4 id="复数的乘幂和方根">复数的乘幂和方根</h4>
+<h5 id="复数的乘幂">复数的乘幂</h5>
+<p><span class="math display">\[
 \begin{aligned}
-&z=re^{i\theta} = r(\cos\theta+i\sin\theta)\\
-&z^n = z\cdot z\cdot z\cdot\dots\cdot z\\
-&z^n=re^{in\theta}=r(\cos n\theta+i\sin n\theta)
-\end{aligned}</script><p><strong>Thm</strong>（棣莫弗公式）$|z|=r=1$ 时：$(\cos \theta+i\sin \theta)^n=\cos n\theta + i \sin n\theta$</p>
-<h5 id="复数的方根"><a href="#复数的方根" class="headerlink" title="复数的方根"></a>复数的方根</h5><script type="math/tex; mode=display">
+&amp;z=re^{i\theta} = r(\cos\theta+i\sin\theta)\\
+&amp;z^n = z\cdot z\cdot z\cdot\dots\cdot z\\
+&amp;z^n=re^{in\theta}=r(\cos n\theta+i\sin n\theta)
+\end{aligned}
+\]</span></p>
+<p><strong>Thm</strong>（棣莫弗公式）<span class="math inline">\(|z|=r=1\)</span> 时：<span class="math inline">\((\cos \theta+i\sin \theta)^n=\cos n\theta + i \sin n\theta\)</span></p>
+<h5 id="复数的方根">复数的方根</h5>
+<p><span class="math display">\[
 \begin{aligned}
-&z=re^{i\theta} = r(\cos\theta+i\sin\theta)\\
-&\sqrt[n]z= \sqrt[n]r(\cos\frac{\theta + 2k\pi}n+i\sin\frac{\theta + 2k\pi}n)\\
-\end{aligned}</script><h4 id="复数在几何上的应用举例"><a href="#复数在几何上的应用举例" class="headerlink" title="复数在几何上的应用举例"></a>复数在几何上的应用举例</h4><div class="note quote"><p>求解：$z^n=1$</p></div>
-<div class="note quote"><p>复数表示复平面上的过$z_1,~z_2$的直线方程：$z-z_1=t(z_2-z_1)$</p></div>
-<div class="note quote"><p>复数表示圆方程：$|z-z_0| = R$</p></div>
-<div class="note quote"><ol><li>中垂线：$|z-z_1|=|z-z_2|$</li><li>特殊直线：$\mathrm{Im}(i+z)=4$</li></ol></div>
-<h4 id="复球面与无穷远点"><a href="#复球面与无穷远点" class="headerlink" title="复球面与无穷远点"></a>复球面与无穷远点</h4><ul>
+&amp;z=re^{i\theta} = r(\cos\theta+i\sin\theta)\\
+&amp;\sqrt[n]z= \sqrt[n]r(\cos\frac{\theta + 2k\pi}n+i\sin\frac{\theta + 2k\pi}n)\\
+\end{aligned}
+\]</span></p>
+<h4 id="复数在几何上的应用举例">复数在几何上的应用举例</h4>
+<div class="note quote"><p>求解：<span class="math inline">\(z^n=1\)</span></p></div>
+<div class="note quote"><p>复数表示复平面上的过<span class="math inline">\(z_1,~z_2\)</span>的直线方程：<span class="math inline">\(z-z_1=t(z_2-z_1)\)</span></p></div>
+<div class="note quote"><p>复数表示圆方程：<span class="math inline">\(|z-z_0| = R\)</span></p></div>
+<div class="note quote"><ol type="1"><li>中垂线：<span class="math inline">\(|z-z_1|=|z-z_2|\)</span></li><li>特殊直线：<span class="math inline">\(\mathrm{Im}(i+z)=4\)</span></li></ol></div>
+<h4 id="复球面与无穷远点">复球面与无穷远点</h4>
+<ul>
 <li>引入无穷远点，表达复数：扩充复平面</li>
 </ul>
-<h2 id="复变函数的极限与连续性"><a href="#复变函数的极限与连续性" class="headerlink" title="复变函数的极限与连续性"></a>复变函数的极限与连续性</h2><h3 id="复平面上的区域"><a href="#复平面上的区域" class="headerlink" title="复平面上的区域"></a>复平面上的区域</h3><h4 id="区域的概念"><a href="#区域的概念" class="headerlink" title="区域的概念"></a>区域的概念</h4><p><strong>Def</strong>（开集）所有点都是集合的内点</p>
+<h2 id="复变函数的极限与连续性">复变函数的极限与连续性</h2>
+<h3 id="复平面上的区域">复平面上的区域</h3>
+<h4 id="区域的概念">区域的概念</h4>
+<p><strong>Def</strong>（开集）所有点都是集合的内点</p>
 <p><strong>Def</strong>（区域）连通的开集</p>
 <blockquote>
-<p>开集：$\forall z\in A,\exists U(z)\subset A$，即$\mathrm{int}A = A$</p>
+<p>开集：<span class="math inline">\(\forall z\in A,\exists U(z)\subset A\)</span>，即<span class="math inline">\(\mathrm{int}A = A\)</span></p>
 <ul>
-<li>内点、外点、边界点<br>连通：折线连接</li>
+<li>内点、外点、边界点 连通：折线连接</li>
 <li>单连通、复连通（用闭曲线包围部分是否都在原集合内定义）</li>
 </ul>
-<p>$z_0$ 的 $\delta$ 邻域</p>
+<p><span class="math inline">\(z_0\)</span> 的 <span class="math inline">\(\delta\)</span> 邻域</p>
 <p>去心邻域</p>
-<p>同理定义 $\infin$的邻域和去心邻域</p>
+<p>同理定义 <span class="math inline">\(\infin\)</span>的邻域和去心邻域</p>
 </blockquote>
-<h5 id="简单曲线、单连通、多连通"><a href="#简单曲线、单连通、多连通" class="headerlink" title="简单曲线、单连通、多连通"></a>简单曲线、单连通、多连通</h5><p><strong>简单曲线</strong>：</p>
+<h5 id="简单曲线单连通多连通">简单曲线、单连通、多连通</h5>
+<p><strong>简单曲线</strong>：</p>
 <ul>
 <li>连续</li>
-<li>导函数连续，且 $(x’)^2+(y’)^2 \ne 0$</li>
-<li>不相交（没有重点）：$t_1=t_2\Leftrightarrow z(t_1)=z(t_2)$</li>
+<li>导函数连续，且 <span class="math inline">\((x&#39;)^2+(y&#39;)^2 \ne 0\)</span></li>
+<li>不相交（没有重点）：<span class="math inline">\(t_1=t_2\Leftrightarrow z(t_1)=z(t_2)\)</span></li>
 </ul>
 <p><strong>连通区域</strong>：</p>
 <ul>
 <li>单连通</li>
 <li>多连通</li>
 </ul>
-<h4 id="复变函数的概念"><a href="#复变函数的概念" class="headerlink" title="复变函数的概念"></a>复变函数的概念</h4><p><strong>Def</strong>（复变函数）<em>可以是多值的</em></p>
+<h4 id="复变函数的概念">复变函数的概念</h4>
+<p><strong>Def</strong>（复变函数）<em>可以是多值的</em></p>
 <ul>
 <li>映射下的象和原象</li>
 <li>复变函数的集合表示</li>
 </ul>
-<h3 id="复变函数的极限和连续性"><a href="#复变函数的极限和连续性" class="headerlink" title="复变函数的极限和连续性"></a>复变函数的极限和连续性</h3><p><strong>Def</strong>（极限）</p>
-<p><strong>Thm</strong>：设$f$在$z_0$的某个去心领域有定义，则：</p>
-<script type="math/tex; mode=display">
+<h3 id="复变函数的极限和连续性">复变函数的极限和连续性</h3>
+<p><strong>Def</strong>（极限）</p>
+<p><strong>Thm</strong>：设<span class="math inline">\(f\)</span>在<span class="math inline">\(z_0\)</span>的某个去心领域有定义，则：</p>
+<p><span class="math display">\[
 \lim f(z) = A\iff \begin{cases}
    \lim u = \mathrm{Re}(A)\\
    \lim v = \mathrm{Im}(A)
-\end{cases}</script><p>极限的性质：</p>
+\end{cases}
+\]</span></p>
+<p>极限的性质：</p>
 <ul>
 <li>唯一性</li>
 <li>局部有界性</li>
 <li>有理运算法则</li>
 </ul>
 <p><strong>Def</strong>（连续、在区域内连续）</p>
-<p><strong>Thm</strong>：$f$ 在 $z_0$ 连续. $\iff$ $u$，$v$ 在 $(x_0,y_0)$ 同时连续</p>
+<p><strong>Thm</strong>：<span class="math inline">\(f\)</span> 在 <span class="math inline">\(z_0\)</span> 连续. <span class="math inline">\(\iff\)</span> <span class="math inline">\(u\)</span>，<span class="math inline">\(v\)</span> 在 <span class="math inline">\((x_0,y_0)\)</span> 同时连续</p>
 <ul>
 <li>有理运算不改变连续性</li>
 <li>函数复合不改变连续性</li>
 </ul>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -682,20 +703,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/11/20/study/Math/ComplexFunctions/ch2/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「复变函数」复变函数的导数和解析函数</p>
-          <p class='content'>复变函数的导数和解析函数
-Ch2 复变函数的导数和解析函数解析函数的概念及其判定复变函数的导数、微分Def：复变函数的导数、可导、在 D 内可导
-求导公式：有理运算求导、反函数求导
-复变函数的可...</p>
+        <a class='prev' href='/2020/12/02/study/Math/Probabilities/notes4/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「概率统计与随机过程」 4 - 随机向量的数字特征</p>
+          <p class='content'>随机向量的数字特征
+
+随机向量的数字特征
+随机变量的数学期望
+数学期望的定义
+Def（离散型随机变量期望的定义）设离散随机变量的分布列为：\(P(X=x_i)=p_i\) 若级数 \(...</p>
         </a>
       
       
-        <a class='next' href='/2020/11/20/study/Math/ComplexFunctions/ch3/'>
-          <p class='title'>「复变函数」复变函数积分<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>复变函数的积分
-
-复变函数的积分复变函数积分的概念及其计算Def（复变函数的积分）同实函数定义：分割求和 $\displaystyle\int_C f(z)\mathrm dz = \lim \...</p>
+        <a class='next' href='/2020/11/20/study/Math/ComplexFunctions/ch2/'>
+          <p class='title'>「复变函数」复变函数的导数和解析函数<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>复变函数的导数和解析函数 
+Ch2 复变函数的导数和解析函数
+解析函数的概念及其判定
+复变函数的导数、微分
+Def：复变函数的导数、可导、在 D 内可导
+求导公式：有理运算求导、反函数...</p>
         </a>
       
     </div>
@@ -738,7 +764,7 @@ Ch2 复变函数的导数和解析函数解析函数的概念及其判定复变�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch1-%E5%A4%8D%E6%95%B0%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="toc-text">Ch1 复数与复变函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%BF%90%E7%AE%97"><span class="toc-text">复数的概念与运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">复数的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E4%BB%A3%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-text">复数的代数运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B1%E8%BD%AD%E5%A4%8D%E6%95%B0"><span class="toc-text">共轭复数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E5%87%A0%E4%BD%95%E8%A1%A8%E7%A4%BA"><span class="toc-text">复数的几何表示</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E6%A8%A1%E5%92%8C%E8%BE%90%E8%A7%92"><span class="toc-text">复数的模和辐角</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B9%98%E5%B9%82%E5%92%8C%E6%96%B9%E6%A0%B9"><span class="toc-text">复数的乘幂和方根</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B9%98%E5%B9%82"><span class="toc-text">复数的乘幂</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E6%96%B9%E6%A0%B9"><span class="toc-text">复数的方根</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E5%9C%A8%E5%87%A0%E4%BD%95%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B"><span class="toc-text">复数在几何上的应用举例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E7%90%83%E9%9D%A2%E4%B8%8E%E6%97%A0%E7%A9%B7%E8%BF%9C%E7%82%B9"><span class="toc-text">复球面与无穷远点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E9%99%90%E4%B8%8E%E8%BF%9E%E7%BB%AD%E6%80%A7"><span class="toc-text">复变函数的极限与连续性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%B9%B3%E9%9D%A2%E4%B8%8A%E7%9A%84%E5%8C%BA%E5%9F%9F"><span class="toc-text">复平面上的区域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%BA%E5%9F%9F%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">区域的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%9B%B2%E7%BA%BF%E3%80%81%E5%8D%95%E8%BF%9E%E9%80%9A%E3%80%81%E5%A4%9A%E8%BF%9E%E9%80%9A"><span class="toc-text">简单曲线、单连通、多连通</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">复变函数的概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E9%99%90%E5%92%8C%E8%BF%9E%E7%BB%AD%E6%80%A7"><span class="toc-text">复变函数的极限和连续性</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ch1-%E5%A4%8D%E6%95%B0%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="toc-text">Ch1 复数与复变函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%BF%90%E7%AE%97"><span class="toc-text">复数的概念与运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">复数的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E4%BB%A3%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-text">复数的代数运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B1%E8%BD%AD%E5%A4%8D%E6%95%B0"><span class="toc-text">共轭复数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E5%87%A0%E4%BD%95%E8%A1%A8%E7%A4%BA"><span class="toc-text">复数的几何表示</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E6%A8%A1%E5%92%8C%E8%BE%90%E8%A7%92"><span class="toc-text">复数的模和辐角</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B9%98%E5%B9%82%E5%92%8C%E6%96%B9%E6%A0%B9"><span class="toc-text">复数的乘幂和方根</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B9%98%E5%B9%82"><span class="toc-text">复数的乘幂</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E6%96%B9%E6%A0%B9"><span class="toc-text">复数的方根</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E5%9C%A8%E5%87%A0%E4%BD%95%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B"><span class="toc-text">复数在几何上的应用举例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E7%90%83%E9%9D%A2%E4%B8%8E%E6%97%A0%E7%A9%B7%E8%BF%9C%E7%82%B9"><span class="toc-text">复球面与无穷远点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E9%99%90%E4%B8%8E%E8%BF%9E%E7%BB%AD%E6%80%A7"><span class="toc-text">复变函数的极限与连续性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%B9%B3%E9%9D%A2%E4%B8%8A%E7%9A%84%E5%8C%BA%E5%9F%9F"><span class="toc-text">复平面上的区域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%BA%E5%9F%9F%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">区域的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%9B%B2%E7%BA%BF%E5%8D%95%E8%BF%9E%E9%80%9A%E5%A4%9A%E8%BF%9E%E9%80%9A"><span class="toc-text">简单曲线、单连通、多连通</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">复变函数的概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E9%99%90%E5%92%8C%E8%BF%9E%E7%BB%AD%E6%80%A7"><span class="toc-text">复变函数的极限和连续性</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1385,14 +1411,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

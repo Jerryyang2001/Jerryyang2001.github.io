@@ -468,72 +468,85 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <p>复数项级数的概念和性质<br><span id="more"></span></p>
-<h2 id="复数项级数的概念和性质"><a href="#复数项级数的概念和性质" class="headerlink" title="复数项级数的概念和性质"></a>复数项级数的概念和性质</h2><h3 id="复数项级数"><a href="#复数项级数" class="headerlink" title="复数项级数"></a>复数项级数</h3><p><strong>Def</strong>：无穷复数列 $\{c_n\}\rightarrow_{n\rightarrow \infty} A \iff \forall \varepsilon&gt;0,\exist N,n&gt;N\rightarrow |c_n-A|&lt;\varepsilon$</p>
-<p><strong>Thm</strong>（判别法则）$c_n=a_n+ib_n$ 收敛于 $a+bi~\iff~a_n\rightarrow a, b_n\rightarrow b$</p>
-<p><strong>Def</strong>（复数项级数）$\sum_{n=1}^\infty c_n$，通项 $c_n$。</p>
-<p><strong>Def</strong>（前 n 项之和）$\sum_{k=1}^n c_k$</p>
-<p><strong>Thm</strong>：（必要条件）级数 $\sum c_n$ 收敛，则 $\lim_{n\rightarrow \infty} c_n=0$</p>
-<p><strong>Thm</strong>：（柯西收敛准则）$\sum c_n$ 收敛 $\iff \forall \varepsilon&gt;0,\exist N,\forall p\in N_+, n&gt;N\rightarrow|S_{n+p} - S_n|\le \varepsilon$</p>
-<h4 id="按模收敛"><a href="#按模收敛" class="headerlink" title="按模收敛"></a>按模收敛</h4><p><strong>Def</strong>（按模收敛）$\sum |c_n|$</p>
-<p><strong>Thm</strong>（绝对收敛准则）当 $\sum |c_n|$ 收敛时，$\sum c_n$ 收敛</p>
-<p><strong>Def</strong>（条件收敛）$\sum |c_n|$ 不收敛，$\sum c_n$ 收敛</p>
+  <p>复数项级数的概念和性质 <span id="more"></span></p>
+<h2 id="复数项级数的概念和性质">复数项级数的概念和性质</h2>
+<h3 id="复数项级数">复数项级数</h3>
+<p><strong>Def</strong>：无穷复数列 <span class="math inline">\(\{c_n\}\rightarrow_{n\rightarrow \infty} A \iff \forall \varepsilon&gt;0,\exist N,n&gt;N\rightarrow |c_n-A|&lt;\varepsilon\)</span></p>
+<p><strong>Thm</strong>（判别法则）<span class="math inline">\(c_n=a_n+ib_n\)</span> 收敛于 <span class="math inline">\(a+bi~\iff~a_n\rightarrow a, b_n\rightarrow b\)</span></p>
+<p><strong>Def</strong>（复数项级数）<span class="math inline">\(\sum_{n=1}^\infty c_n\)</span>，通项 <span class="math inline">\(c_n\)</span>。</p>
+<p><strong>Def</strong>（前 n 项之和）<span class="math inline">\(\sum_{k=1}^n c_k\)</span></p>
+<p><strong>Thm</strong>：（必要条件）级数 <span class="math inline">\(\sum c_n\)</span> 收敛，则 <span class="math inline">\(\lim_{n\rightarrow \infty} c_n=0\)</span></p>
+<p><strong>Thm</strong>：（柯西收敛准则）<span class="math inline">\(\sum c_n\)</span> 收敛 <span class="math inline">\(\iff \forall \varepsilon&gt;0,\exist N,\forall p\in N_+, n&gt;N\rightarrow|S_{n+p} - S_n|\le \varepsilon\)</span></p>
+<h4 id="按模收敛">按模收敛</h4>
+<p><strong>Def</strong>（按模收敛）<span class="math inline">\(\sum |c_n|\)</span></p>
+<p><strong>Thm</strong>（绝对收敛准则）当 <span class="math inline">\(\sum |c_n|\)</span> 收敛时，<span class="math inline">\(\sum c_n\)</span> 收敛</p>
+<p><strong>Def</strong>（条件收敛）<span class="math inline">\(\sum |c_n|\)</span> 不收敛，<span class="math inline">\(\sum c_n\)</span> 收敛</p>
 <p><strong>性质</strong>：</p>
 <ul>
-<li>$\sum c_n=s$，$k$为任意常数，则$\sum kc_n=k\sum c_n$</li>
+<li><span class="math inline">\(\sum c_n=s\)</span>，<span class="math inline">\(k\)</span>为任意常数，则<span class="math inline">\(\sum kc_n=k\sum c_n\)</span></li>
 <li>线性性质</li>
 <li>去掉或加上有限项不改变级数的敛散性。</li>
-<li>收敛级数添加括号或改变次序不改变敛散性<ul>
+<li>收敛级数添加括号或改变次序不改变敛散性
+<ul>
 <li>逆命题不成立</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="幂级数"><a href="#幂级数" class="headerlink" title="幂级数"></a>幂级数</h3><h4 id="函数项级数"><a href="#函数项级数" class="headerlink" title="函数项级数"></a>函数项级数</h4><p>若存在$\sum u_n(z_0)$ 收敛，则称$z_0$ 为收敛点；收敛点的全体为收敛域 $D$。</p>
-<p>对于任一 $z\in D$，有一个确定的和 $S(z)$ 称为和函数。</p>
-<p>如等比级数：$\sum z_n$ 当 $|z|&lt;1$ 时，$|z|=1,~\theta = 2k\pi$ 时收敛，其他情况下发散。</p>
-<h4 id="幂级数的收敛性"><a href="#幂级数的收敛性" class="headerlink" title="幂级数的收敛性"></a>幂级数的收敛性</h4><p><strong>Def</strong>（$(z-z_0)$ 的幂级数）$\sum c_i(z-z_0)^i$</p>
+<h3 id="幂级数">幂级数</h3>
+<h4 id="函数项级数">函数项级数</h4>
+<p>若存在<span class="math inline">\(\sum u_n(z_0)\)</span> 收敛，则称<span class="math inline">\(z_0\)</span> 为收敛点；收敛点的全体为收敛域 <span class="math inline">\(D\)</span>。</p>
+<p>对于任一 <span class="math inline">\(z\in D\)</span>，有一个确定的和 <span class="math inline">\(S(z)\)</span> 称为和函数。</p>
+<p>如等比级数：<span class="math inline">\(\sum z_n\)</span> 当 <span class="math inline">\(|z|&lt;1\)</span> 时，<span class="math inline">\(|z|=1,~\theta = 2k\pi\)</span> 时收敛，其他情况下发散。</p>
+<h4 id="幂级数的收敛性">幂级数的收敛性</h4>
+<p><strong>Def</strong>（<span class="math inline">\((z-z_0)\)</span> 的幂级数）<span class="math inline">\(\sum c_i(z-z_0)^i\)</span></p>
 <p><strong>Thm</strong>（Abel 定理）</p>
 <ul>
-<li>若$\sum c_i(z-z_0)^i$ 在 $z=z_0\ne 0$ 收敛，则对$\forall |z|&lt; |z_0|$ 绝对收敛</li>
-<li>若$\sum c_i(z-z_0)^i$ 在 $z=z_0\ne 0$ 发散，则对$\forall |z|&gt; |z_0|$ 发散</li>
+<li>若<span class="math inline">\(\sum c_i(z-z_0)^i\)</span> 在 <span class="math inline">\(z=z_0\ne 0\)</span> 收敛，则对<span class="math inline">\(\forall |z|&lt; |z_0|\)</span> 绝对收敛</li>
+<li>若<span class="math inline">\(\sum c_i(z-z_0)^i\)</span> 在 <span class="math inline">\(z=z_0\ne 0\)</span> 发散，则对<span class="math inline">\(\forall |z|&gt; |z_0|\)</span> 发散</li>
 </ul>
-<p><strong>Thm</strong>：若$\lim |c_{n+1}/c_n|=\lambda \ne 0$ or $\lim |c_n|^{1/n}=\lambda \ne 0$ 则 $R=1/\lambda$</p>
+<p><strong>Thm</strong>：若<span class="math inline">\(\lim |c_{n+1}/c_n|=\lambda \ne 0\)</span> or <span class="math inline">\(\lim |c_n|^{1/n}=\lambda \ne 0\)</span> 则 <span class="math inline">\(R=1/\lambda\)</span></p>
 <p><strong>性质</strong>：</p>
-<ol>
+<ol type="1">
 <li>代数运算（线性性质）</li>
 <li>柯西乘积</li>
 </ol>
-<h4 id="幂级数的收敛圆和收敛半径"><a href="#幂级数的收敛圆和收敛半径" class="headerlink" title="幂级数的收敛圆和收敛半径"></a>幂级数的收敛圆和收敛半径</h4><p>仅有三种情况：</p>
-<ol>
-<li>在 $z=0$ 收敛</li>
+<h4 id="幂级数的收敛圆和收敛半径">幂级数的收敛圆和收敛半径</h4>
+<p>仅有三种情况：</p>
+<ol type="1">
+<li>在 <span class="math inline">\(z=0\)</span> 收敛</li>
 <li>在圆域内收敛</li>
 <li>在复平面内收敛</li>
 </ol>
-<h5 id="求法"><a href="#求法" class="headerlink" title="求法"></a>求法</h5><p><strong>Thm</strong>：若：</p>
-<script type="math/tex; mode=display">
+<h5 id="求法">求法</h5>
+<p><strong>Thm</strong>：若：</p>
+<p><span class="math display">\[
 \begin{aligned}
-&\lim_{n\rightarrow \infty}\left|\frac{c_{n+1}}{c_n}\right|=\lambda\ne 0\\
-&\quad or\\
-&\lim_{n\rightarrow \infty}\sqrt[n]{|c_n|}=\lambda\ne 0
-\end{aligned}</script><p>则其收敛半径为$\displaystyle R=\frac{1}{\lambda}$</p>
-<p><strong>Thm</strong>：设$\sum c_nz^n$的收敛半径为 $R&gt;0$ 和函数为 $S(z)$ 则：</p>
-<ol>
-<li>和函数在 $|z|&lt;R$ 解析</li>
-<li>$S(z)$ 可以逐项求导、逐项积分</li>
+&amp;\lim_{n\rightarrow \infty}\left|\frac{c_{n+1}}{c_n}\right|=\lambda\ne 0\\
+&amp;\quad or\\
+&amp;\lim_{n\rightarrow \infty}\sqrt[n]{|c_n|}=\lambda\ne 0
+\end{aligned}
+\]</span></p>
+<p>则其收敛半径为<span class="math inline">\(\displaystyle R=\frac{1}{\lambda}\)</span></p>
+<p><strong>Thm</strong>：设<span class="math inline">\(\sum c_nz^n\)</span>的收敛半径为 <span class="math inline">\(R&gt;0\)</span> 和函数为 <span class="math inline">\(S(z)\)</span> 则：</p>
+<ol type="1">
+<li>和函数在 <span class="math inline">\(|z|&lt;R\)</span> 解析</li>
+<li><span class="math inline">\(S(z)\)</span> 可以逐项求导、逐项积分</li>
 </ol>
-<h3 id="Taylor-级数"><a href="#Taylor-级数" class="headerlink" title="Taylor 级数"></a>Taylor 级数</h3><p><strong>Def</strong>（展开为幂级数）若 $f$ 在 $z_0$ 邻域内有任意阶导数，则$\sum \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n$ 为 $f$ 在 $z_0$ 的 Taylor 级数，当 $z_0=0$ 时，为麦克劳林级数。</p>
-<p><strong>Thm</strong>：$f$ 在 $D$ 内解析，$z_0\in D$ 则当 $|z-z_0|&lt;R$ 时，$f(z)$ 都可以唯一的展开为 $z-z_0$ 的幂级数。（$R$ 为 $x_0$ 到边界的最小距离）</p>
-<p><strong>Thm</strong>：$f$ 在 $D$ 内解析，$z_0\in D$，$d$为到边界上各个点的最短距离，当 $|z-z_0|&lt;d$ 时，$f(z)$ 可以唯一的展开为幂级数</p>
-<p><em>Inference</em>：$f$ 在 $D$ 内解析，$z_0\in D$，$\alpha$ 为距离 $z _ 0$ 最近的一个奇点，则使得展开成立的 $R=|\alpha-z_0|$</p>
-<h3 id="洛朗级数"><a href="#洛朗级数" class="headerlink" title="洛朗级数"></a>洛朗级数</h3><h4 id="解析函数的洛朗展开定理"><a href="#解析函数的洛朗展开定理" class="headerlink" title="解析函数的洛朗展开定理"></a>解析函数的洛朗展开定理</h4><p><strong>Def</strong>（双边幂级数）$\sum_{-\infty}^{\infty}c_n(z-z_0)^n$ （其在收敛圆环域$R_1&lt;|z-z_0|&lt;R_2$ 内解析）</p>
-<p><strong>Thm</strong>：$f(z)$ 在圆环域内解析，则在圆域内 $f(z)$ 可以唯一的表示为双边幂级数 $f(z)=\sum_{-\infty}^{\infty}c_n(z-z_0)^n$</p>
-<p>其中：$\displaystyle c_n=\frac{1}{2\pi i}\int\frac{f(z)}{(z-z_0)^{n+1}}\mathrm dz \quad(n=0,\pm 1, \pm 2,…)$</p>
+<h3 id="taylor-级数">Taylor 级数</h3>
+<p><strong>Def</strong>（展开为幂级数）若 <span class="math inline">\(f\)</span> 在 <span class="math inline">\(z_0\)</span> 邻域内有任意阶导数，则<span class="math inline">\(\sum \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n\)</span> 为 <span class="math inline">\(f\)</span> 在 <span class="math inline">\(z_0\)</span> 的 Taylor 级数，当 <span class="math inline">\(z_0=0\)</span> 时，为麦克劳林级数。</p>
+<p><strong>Thm</strong>：<span class="math inline">\(f\)</span> 在 <span class="math inline">\(D\)</span> 内解析，<span class="math inline">\(z_0\in D\)</span> 则当 <span class="math inline">\(|z-z_0|&lt;R\)</span> 时，<span class="math inline">\(f(z)\)</span> 都可以唯一的展开为 <span class="math inline">\(z-z_0\)</span> 的幂级数。（<span class="math inline">\(R\)</span> 为 <span class="math inline">\(x_0\)</span> 到边界的最小距离）</p>
+<p><strong>Thm</strong>：<span class="math inline">\(f\)</span> 在 <span class="math inline">\(D\)</span> 内解析，<span class="math inline">\(z_0\in D\)</span>，<span class="math inline">\(d\)</span>为到边界上各个点的最短距离，当 <span class="math inline">\(|z-z_0|&lt;d\)</span> 时，<span class="math inline">\(f(z)\)</span> 可以唯一的展开为幂级数</p>
+<p><em>Inference</em>：<span class="math inline">\(f\)</span> 在 <span class="math inline">\(D\)</span> 内解析，<span class="math inline">\(z_0\in D\)</span>，<span class="math inline">\(\alpha\)</span> 为距离 <span class="math inline">\(z _ 0\)</span> 最近的一个奇点，则使得展开成立的 <span class="math inline">\(R=|\alpha-z_0|\)</span></p>
+<h3 id="洛朗级数">洛朗级数</h3>
+<h4 id="解析函数的洛朗展开定理">解析函数的洛朗展开定理</h4>
+<p><strong>Def</strong>（双边幂级数）<span class="math inline">\(\sum_{-\infty}^{\infty}c_n(z-z_0)^n\)</span> （其在收敛圆环域<span class="math inline">\(R_1&lt;|z-z_0|&lt;R_2\)</span> 内解析）</p>
+<p><strong>Thm</strong>：<span class="math inline">\(f(z)\)</span> 在圆环域内解析，则在圆域内 <span class="math inline">\(f(z)\)</span> 可以唯一的表示为双边幂级数 <span class="math inline">\(f(z)=\sum_{-\infty}^{\infty}c_n(z-z_0)^n\)</span></p>
+<p>其中：<span class="math inline">\(\displaystyle c_n=\frac{1}{2\pi i}\int\frac{f(z)}{(z-z_0)^{n+1}}\mathrm dz \quad(n=0,\pm 1, \pm 2,...)\)</span></p>
 <p><strong>求展开的方法</strong>：</p>
-<ol>
+<ol type="1">
 <li>直接展开法</li>
 <li>简介展开法</li>
 </ol>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -635,10 +648,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「凸优化」 凸优化问题</p>
           <p class='content'>凸优化-凸优化问题
 
-凸优化问题优化问题的标准形式
+凸优化问题
+优化问题的标准形式
+\[
 \begin{aligned}
-&\min.&f_0(x)\\
-&\mathrm{s.t.}&f_i(x)\le 0, i = 1,...,m...</p>
+&amp;\min.&amp;f_0(x)\\
+&amp;\mathrm{s.t.}&a...</p>
         </a>
       
       
@@ -646,8 +661,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'>「复变函数」留数及其应用<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>留数及其应用
 
-留数及其应用孤立奇点Def（孤立奇点）$f(z)$ 在 $z_0$ 不解析，在其某个去心邻域内解析，则称$z_0$为 $f(z)$ 的孤立奇点
-可去奇点：Laurent 级数不含...</p>
+留数及其应用
+孤立奇点
+Def（孤立奇点）\(f(z)\) 在 \(z_0\) 不解析，在其某个去心邻域内解析，则称\(z_0\)为 \(f(z)\) 的孤立奇点
+可去...</p>
         </a>
       
     </div>
@@ -690,7 +707,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">复数项级数的概念和性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0"><span class="toc-text">复数项级数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%89%E6%A8%A1%E6%94%B6%E6%95%9B"><span class="toc-text">按模收敛</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%82%E7%BA%A7%E6%95%B0"><span class="toc-text">幂级数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0"><span class="toc-text">函数项级数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%82%E7%BA%A7%E6%95%B0%E7%9A%84%E6%94%B6%E6%95%9B%E6%80%A7"><span class="toc-text">幂级数的收敛性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%82%E7%BA%A7%E6%95%B0%E7%9A%84%E6%94%B6%E6%95%9B%E5%9C%86%E5%92%8C%E6%94%B6%E6%95%9B%E5%8D%8A%E5%BE%84"><span class="toc-text">幂级数的收敛圆和收敛半径</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%82%E6%B3%95"><span class="toc-text">求法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Taylor-%E7%BA%A7%E6%95%B0"><span class="toc-text">Taylor 级数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B4%9B%E6%9C%97%E7%BA%A7%E6%95%B0"><span class="toc-text">洛朗级数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%B4%9B%E6%9C%97%E5%B1%95%E5%BC%80%E5%AE%9A%E7%90%86"><span class="toc-text">解析函数的洛朗展开定理</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">复数项级数的概念和性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0"><span class="toc-text">复数项级数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%89%E6%A8%A1%E6%94%B6%E6%95%9B"><span class="toc-text">按模收敛</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%82%E7%BA%A7%E6%95%B0"><span class="toc-text">幂级数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0"><span class="toc-text">函数项级数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%82%E7%BA%A7%E6%95%B0%E7%9A%84%E6%94%B6%E6%95%9B%E6%80%A7"><span class="toc-text">幂级数的收敛性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%82%E7%BA%A7%E6%95%B0%E7%9A%84%E6%94%B6%E6%95%9B%E5%9C%86%E5%92%8C%E6%94%B6%E6%95%9B%E5%8D%8A%E5%BE%84"><span class="toc-text">幂级数的收敛圆和收敛半径</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%82%E6%B3%95"><span class="toc-text">求法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#taylor-%E7%BA%A7%E6%95%B0"><span class="toc-text">Taylor 级数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B4%9B%E6%9C%97%E7%BA%A7%E6%95%B0"><span class="toc-text">洛朗级数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%B4%9B%E6%9C%97%E5%B1%95%E5%BC%80%E5%AE%9A%E7%90%86"><span class="toc-text">解析函数的洛朗展开定理</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1337,14 +1354,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

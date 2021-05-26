@@ -472,48 +472,52 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <p>半个上午的时间，回顾一下上章的内容，呼</p>
 <p>在现实中的许多的问题都可以抽象为代数问题，还是要好好学吖~</p>
 <span id="more"></span>
-<h2 id="格的定义和性质"><a href="#格的定义和性质" class="headerlink" title="格的定义和性质"></a>格的定义和性质</h2><p><strong>Def</strong>：（格）设$&lt; S,\preccurlyeq &gt;$ 是偏序集，若 $\forall x,y\in S,\{x,y\}$ 都有最小上界和最大下界，则称 $S$ 关于偏序 $\preccurlyeq$ 成一个格</p>
-<div class="note quote"><p>由于最小上界和最大下界的唯一性，可以把求 $\{x,y\}$ 的最小上界和最大下界看成二元运算，$\wedge$ 为最大下界，$\vee$ 为最小上界</p></div>
-<p><strong>Thm</strong>：（格的对偶原理）设 $f$ 是含有格中元素以及符号 $=,\preccurlyeq,\succcurlyeq,\vee,\wedge$ 的命题，若 $f$ 对于一切格为真，则 $f$ 的对偶命题 $f’$ 也对一切格为真</p>
-<p><strong>Thm</strong>：格中的 $\wedge,\vee$运算满足交换律，结合律，幂等律，吸收律</p>
-<p><strong>Thm</strong>：设 $&lt; S,*,\circ &gt;$是一个具有两个二元运算的代数系统，且对于两个运算满足交换律，结合律，吸收律，则可以适当的定义 $S$ 中的偏序 $\preccurlyeq$ 使之成为一个格。</p>
-<p><strong>Def</strong>：设 $&lt; S,<em>,\circ &gt;$ 是代数系统，如果 $</em>$ 和 $\circ$ 满足结合律，交换律，吸收律，则该代数系统构成一个格</p>
-<div class="note quote"><p>注意：这里的幂等律在上面三个运算律满足时自然满足</p></div>
-<p><strong>Thm</strong>：设 $L$ 是格，则 $\forall a,b\in L$ 有 $a\preccurlyeq b\iff a\wedge b =a\iff a\vee b=b$</p>
-<p><strong>Thm</strong>：设 $L$ 是格，$\forall a,b,c,d\in L,(a\preccurlyeq b 且 c\preccurlyeq d)\rightarrow(a\wedge c\preccurlyeq b\wedge d,a\vee c\preccurlyeq b\vee d)$</p>
+<h2 id="格的定义和性质">格的定义和性质</h2>
+<p><strong>Def</strong>：（格）设<span class="math inline">\(&lt; S,\preccurlyeq &gt;\)</span> 是偏序集，若 <span class="math inline">\(\forall x,y\in S,\{x,y\}\)</span> 都有最小上界和最大下界，则称 <span class="math inline">\(S\)</span> 关于偏序 <span class="math inline">\(\preccurlyeq\)</span> 成一个格</p>
+<div class="note quote"><p>由于最小上界和最大下界的唯一性，可以把求 <span class="math inline">\(\{x,y\}\)</span> 的最小上界和最大下界看成二元运算，<span class="math inline">\(\wedge\)</span> 为最大下界，<span class="math inline">\(\vee\)</span> 为最小上界</p></div>
+<p><strong>Thm</strong>：（格的对偶原理）设 <span class="math inline">\(f\)</span> 是含有格中元素以及符号 <span class="math inline">\(=,\preccurlyeq,\succcurlyeq,\vee,\wedge\)</span> 的命题，若 <span class="math inline">\(f\)</span> 对于一切格为真，则 <span class="math inline">\(f\)</span> 的对偶命题 <span class="math inline">\(f&#39;\)</span> 也对一切格为真</p>
+<p><strong>Thm</strong>：格中的 <span class="math inline">\(\wedge,\vee\)</span>运算满足交换律，结合律，幂等律，吸收律</p>
+<p><strong>Thm</strong>：设 <span class="math inline">\(&lt; S,*,\circ &gt;\)</span>是一个具有两个二元运算的代数系统，且对于两个运算满足交换律，结合律，吸收律，则可以适当的定义 <span class="math inline">\(S\)</span> 中的偏序 <span class="math inline">\(\preccurlyeq\)</span> 使之成为一个格。</p>
+<p><strong>Def</strong>：设 <span class="math inline">\(&lt; S,*,\circ &gt;\)</span> 是代数系统，如果 <span class="math inline">\(*\)</span> 和 <span class="math inline">\(\circ\)</span> 满足结合律，交换律，吸收律，则该代数系统构成一个格</p>
+<div class="note quote"><p>注意：这里的幂等律在上面三个运算律满足时自然满足</p></div>
+<p><strong>Thm</strong>：设 <span class="math inline">\(L\)</span> 是格，则 <span class="math inline">\(\forall a,b\in L\)</span> 有 <span class="math inline">\(a\preccurlyeq b\iff a\wedge b =a\iff a\vee b=b\)</span></p>
+<p><strong>Thm</strong>：设 <span class="math inline">\(L\)</span> 是格，<span class="math inline">\(\forall a,b,c,d\in L,(a\preccurlyeq b 且 c\preccurlyeq d)\rightarrow(a\wedge c\preccurlyeq b\wedge d,a\vee c\preccurlyeq b\vee d)\)</span></p>
 <p><strong>Def</strong>：子格</p>
-<h2 id="分配格、有补格、布尔代数"><a href="#分配格、有补格、布尔代数" class="headerlink" title="分配格、有补格、布尔代数"></a>分配格、有补格、布尔代数</h2><p><strong>Def</strong>：（分配格）设 $&lt; L,\wedge,\vee &gt;$ 是格，若 $\forall a,b,c\in L$ 有</p>
-<script type="math/tex; mode=display">
+<h2 id="分配格有补格布尔代数">分配格、有补格、布尔代数</h2>
+<p><strong>Def</strong>：（分配格）设 <span class="math inline">\(&lt; L,\wedge,\vee &gt;\)</span> 是格，若 <span class="math inline">\(\forall a,b,c\in L\)</span> 有</p>
+<p><span class="math display">\[
 a\wedge(b\vee c) =(a\wedge b)\vee (a\wedge c)\\
-a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格。</p>
-<div class="note quote"><p>两类特殊的格结构：钻石格和五角格<br><img src="/2020/05/28/study/Math/DiscreteMath/LatticeandBoolAlgebra/TwoSpecialLattice.png" class="lazyload" data-srcset="/2020/05/28/study/Math/DiscreteMath/LatticeandBoolAlgebra/TwoSpecialLattice.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" class title="钻石格和五角格"></p></div>
-<p><strong>Thm</strong>：若 $L$ 是格，则 $L$ 是分配格，iff $L$ 中不含有与钻石格或五角格同构的子格</p>
+a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)
+\]</span></p>
+<p>则称 <span class="math inline">\(L\)</span> 为分配格。</p>
+<div class="note quote"><p>两类特殊的格结构：钻石格和五角格 <img src="/.io//05/28/study/Math/DiscreteMath/LatticeandBoolAlgebra/TwoSpecialLattice.png" class="lazyload" data-srcset="/.io//05/28/study/Math/DiscreteMath/LatticeandBoolAlgebra/TwoSpecialLattice.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" class title="钻石格和五角格"></p></div>
+<p><strong>Thm</strong>：若 <span class="math inline">\(L\)</span> 是格，则 <span class="math inline">\(L\)</span> 是分配格，iff <span class="math inline">\(L\)</span> 中不含有与钻石格或五角格同构的子格</p>
 <p><strong>Inf</strong>：小于 5 元的格都是分配格</p>
 <p><strong>Inf</strong>：任何一条链都是分配格</p>
-<p><strong>Def</strong>：（全下界，全上界）设 $L$ 是格，若存在 $a\in L$ 使得 $\forall x\in L,a\preccurlyeq x$ 则称为 $L$ 的全下界；对称的定义 $L$ 的全上界</p>
-<p><strong>Def</strong>：设 $L$ 是格，若 $L$ 存在全下界和全上界，则称 $L$ 为有界格，记作 $&lt; L,\wedge,\vee,0,1 &gt;$</p>
-<p><strong>Def</strong>：（补元）在有界格中，$a\in L$，若存在 $b\in L$ 使得 $a\wedge b =0$ 且 $a\vee b =1$，则称 $b$ 为 $a$ 的补元</p>
-<p><strong>Thm</strong>：在有界分配格中，若 $a\in L$ 且对于 $a$ 存在补元 $b$ 则 $b$ 是 $a$ 唯一的补元 记作 $b = a’$</p>
+<p><strong>Def</strong>：（全下界，全上界）设 <span class="math inline">\(L\)</span> 是格，若存在 <span class="math inline">\(a\in L\)</span> 使得 <span class="math inline">\(\forall x\in L,a\preccurlyeq x\)</span> 则称为 <span class="math inline">\(L\)</span> 的全下界；对称的定义 <span class="math inline">\(L\)</span> 的全上界</p>
+<p><strong>Def</strong>：设 <span class="math inline">\(L\)</span> 是格，若 <span class="math inline">\(L\)</span> 存在全下界和全上界，则称 <span class="math inline">\(L\)</span> 为有界格，记作 <span class="math inline">\(&lt; L,\wedge,\vee,0,1 &gt;\)</span></p>
+<p><strong>Def</strong>：（补元）在有界格中，<span class="math inline">\(a\in L\)</span>，若存在 <span class="math inline">\(b\in L\)</span> 使得 <span class="math inline">\(a\wedge b =0\)</span> 且 <span class="math inline">\(a\vee b =1\)</span>，则称 <span class="math inline">\(b\)</span> 为 <span class="math inline">\(a\)</span> 的补元</p>
+<p><strong>Thm</strong>：在有界分配格中，若 <span class="math inline">\(a\in L\)</span> 且对于 <span class="math inline">\(a\)</span> 存在补元 <span class="math inline">\(b\)</span> 则 <span class="math inline">\(b\)</span> 是 <span class="math inline">\(a\)</span> 唯一的补元 记作 <span class="math inline">\(b = a&#39;\)</span></p>
 <p><strong>Def</strong>：（布尔格、布尔代数）如果一个格是有补分配格，则称之为布尔格或布尔代数</p>
 <p><strong>Thm</strong>：在布尔代数中</p>
-<ol>
-<li>$\forall a\in B,(a’)’ = a$</li>
-<li>$\forall a,b\in B,(a\wedge b)’ =(a’\vee b’),(a\vee b)’ = (a’\wedge b’)$</li>
+<ol type="1">
+<li><span class="math inline">\(\forall a\in B,(a&#39;)&#39; = a\)</span></li>
+<li><span class="math inline">\(\forall a,b\in B,(a\wedge b)&#39; =(a&#39;\vee b&#39;),(a\vee b)&#39; = (a&#39;\wedge b&#39;)\)</span></li>
 </ol>
-<div class="note quote"><p>在这个定理中，第一条称作 <strong>双重否定律</strong>，第二条称作<strong>德摩根律</strong>，在命题代数和集合代数中的双重否定律，实则是该定理的特例</p></div>
-<p><strong>Def</strong>：设$<B,*,\circ>$是代数系统，若运算满足：</B,*,\circ></p>
-<ol>
+<div class="note quote"><p>在这个定理中，第一条称作 <strong>双重否定律</strong>，第二条称作<strong>德摩根律</strong>，在命题代数和集合代数中的双重否定律，实则是该定理的特例</p></div>
+<p><strong>Def</strong>：设<span class="math inline">\(&lt;B,*,\circ&gt;\)</span>是代数系统，若运算满足：</p>
+<ol type="1">
 <li>交换律</li>
-<li>分配律（$<em>$ 对 $\circ$ $\circ$ 对 $</em>$ 都有分配律）</li>
-<li>同一律 $a*1=a,a\circ 0=a$</li>
+<li>分配律（<span class="math inline">\(*\)</span> 对 <span class="math inline">\(\circ\)</span> <span class="math inline">\(\circ\)</span> 对 <span class="math inline">\(*\)</span> 都有分配律）</li>
+<li>同一律 <span class="math inline">\(a*1=a,a\circ 0=a\)</span></li>
 <li>补元律（所有元素的补元存在且唯一）</li>
 </ol>
 <p>则称之为一个布尔代数</p>
-<p><strong>Def</strong>：（原子）在格中，若 $0\prec b\preccurlyeq a\iff b=a$ 则称 $a$ 是 L 中的原子</p>
-<p><strong>Thm</strong>：（有限布尔代数的表示定理）设 $B$ 是有限布尔代数，$A$ 是由 $B$ 的全体原子构成的集合，则 $B$ 同构于 $A$ 的幂集代数 $P(A)$</p>
-<p><strong>Inf</strong>：任何有限布尔代数的基数为 $2^n$</p>
+<p><strong>Def</strong>：（原子）在格中，若 <span class="math inline">\(0\prec b\preccurlyeq a\iff b=a\)</span> 则称 <span class="math inline">\(a\)</span> 是 L 中的原子</p>
+<p><strong>Thm</strong>：（有限布尔代数的表示定理）设 <span class="math inline">\(B\)</span> 是有限布尔代数，<span class="math inline">\(A\)</span> 是由 <span class="math inline">\(B\)</span> 的全体原子构成的集合，则 <span class="math inline">\(B\)</span> 同构于 <span class="math inline">\(A\)</span> 的幂集代数 <span class="math inline">\(P(A)\)</span></p>
+<p><strong>Inf</strong>：任何有限布尔代数的基数为 <span class="math inline">\(2^n\)</span></p>
 <p><strong>Inf</strong>：任何等势的有限布尔代数都是同构的</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -617,10 +621,10 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
         <a class='prev' href='/2020/05/28/study/Math/DiscreteMath/GraphTheory/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>图的基本概念</p>
           <p class='content'>图论的基本概念和定理，真的炒鸡多呀。
-（没错，组合数学部分咕了！~超小声~）
+（没错，组合数学部分咕了！超小声）
 
-图的基本概念Def：（无向图）一个无向图 $G$ 是一个有序的二元组 $&lt;  V,E  &gt;$ 其中：
-...</p>
+图的基本概念
+Def：（无向图）一个无向图 \(G\) 是一个有序的二元组 \(&lt; V,E &gt;\)...</p>
         </a>
       
       
@@ -628,10 +632,10 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
           <p class='title'>群与环<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>期末复习了 qwwww
 
-群的定义和性质Def：群
+群的定义和性质
+Def：群
 
-设 $V = $ 是代数系统，$\circ$ 是二元运算，且是可结合的，则称 $V$ 是半群
-设 $V$ 是一个半群，存在关于 $\circ...</p>
+设 \(V = &lt;S,\circ&gt;\) 是代数系统，\(\circ\) 是二元运算，且是可结合的，则称 \(V\) ...</p>
         </a>
       
     </div>
@@ -674,7 +678,7 @@ a\vee(b\wedge c) = (a\vee b)\wedge (a\vee c)</script><p>则称 $L$ 为分配格�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">格的定义和性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E9%85%8D%E6%A0%BC%E3%80%81%E6%9C%89%E8%A1%A5%E6%A0%BC%E3%80%81%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0"><span class="toc-text">分配格、有补格、布尔代数</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">格的定义和性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E9%85%8D%E6%A0%BC%E6%9C%89%E8%A1%A5%E6%A0%BC%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0"><span class="toc-text">分配格、有补格、布尔代数</span></a></li></ol>
     </div>
   </section>
 
@@ -1321,14 +1325,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

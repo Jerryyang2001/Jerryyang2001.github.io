@@ -470,7 +470,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>2019 - 2020 - 3 <strong>离散数学</strong>目录</p>
 <span id="more"></span>
-<ol>
+<ol type="1">
 <li><a href="/2020/06/06/study/Math/DiscreteMath/PropositionalLogic/">数理逻辑</a></li>
 <li><a href="/2020/06/27/study/Math/DiscreteMath/集合论/">集合论</a></li>
 <li><a href="/2020/05/27/study/Math/DiscreteMath/GroupTheory/">群&amp;环</a></li>
@@ -478,7 +478,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><a href="/2020/05/28/study/Math/DiscreteMath/GraphTheory/">图的基本概念</a></li>
 <li><a href="/2020/06/25/study/Math/DiscreteMath/EulerHarmiltonGraph/">欧拉图&amp;哈密顿图</a></li>
 </ol>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -576,22 +576,34 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/09/26/study/Math/ConvexOptimization/index/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>最（凸）优化方法 [Overview and Intro]</p>
-          <p class='content'>2020-2021-1 最优化方法
+        <a class='prev' href='/2020/11/01/KGCode/kginteraction/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>知识融合简述</p>
+          <p class='content'>知识融合方法概述
 
-引言数学优化数学优化问题：（数学规划）
-从一个可行解集合中,寻找出最优元素。
-数学形式：
+知识融合
+问题分析
+知识图谱的异构
+从KG的构建看：
 
-\begin{aligned}
-    &\min . &f_0...</p>
+早期知识工程的理想是构建一个统一的知识库
+人类知识体系复杂
+不同人对某些知识由主观看法
+知识会随时...</p>
         </a>
       
       
-        <a class='next' href='/2020/09/26/study/Math/LinearAlgebra&MatriceComputation/index/'>
-          <p class='title'>线性代数 [Review] 目录<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'></p>
+        <a class='next' href='/2020/09/26/study/Math/ConvexOptimization/index/'>
+          <p class='title'>最（凸）优化方法 [Overview and Intro]<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>2020-2021-1 最优化方法
+
+引言
+数学优化
+数学优化问题：（数学规划）
+从一个可行解集合中,寻找出最优元素。
+数学形式：
+\[
+\begin{aligned}
+  ...</p>
         </a>
       
     </div>
@@ -1267,14 +1279,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

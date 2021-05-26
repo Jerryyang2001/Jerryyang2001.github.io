@@ -470,206 +470,253 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>假设检验</p>
 <span id="more"></span>
-<h2 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a>假设检验</h2><h3 id="假设检验的基本概念"><a href="#假设检验的基本概念" class="headerlink" title="假设检验的基本概念"></a>假设检验的基本概念</h3><p><em>假设检验的基本步骤</em>：</p>
-<ol>
-<li>建立假设：<ul>
-<li>在假设检验中，通常把一个被检验的假设称为原假设 $H_0$，将不应轻易加以否定的假设作为原假设。当 $H_0$ 被拒绝时而接受的假设称为备择假设 $H_1$，它们常常成对出现。</li>
-<li>例如：$H_0:\theta \ge 10,H_1:\theta &lt; 10$</li>
-</ul>
-</li>
-<li>选择检验统计量，给出拒绝域形式<ul>
-<li>由样本对原假设进行判断总是通过一个统计量完成的，该统计量被称为检验统计量。使得原假设被拒绝的样本观测值所在的区域称为拒绝域 $W$。例如：$W=\{(x_1,x_2,…,x_n):\bar x \le c\}$</li>
-</ul>
-</li>
-<li>选择显著性水平 $\alpha$<ul>
-<li>预先给定数 $\alpha$（显著性水平），根据：$P(reject~H_0|H_0~right)\le\alpha$</li>
-</ul>
-</li>
-<li>给出拒绝域，确定显著性水平后，可以给出检验的拒绝域 $W$</li>
-<li>做出判断<ul>
-<li>给出了观察值 $x_1,…,x_n$ 若 $(x_1,…,x_n)\in W$ 则拒绝 $H_0$；反之接受 $H_0$</li>
-</ul>
-</li>
+<h2 id="假设检验">假设检验</h2>
+<h3 id="假设检验的基本概念">假设检验的基本概念</h3>
+<p><em>假设检验的基本步骤</em>：</p>
+<ol type="1">
+<li>建立假设：
+<ul>
+<li>在假设检验中，通常把一个被检验的假设称为原假设 <span class="math inline">\(H_0\)</span>，将不应轻易加以否定的假设作为原假设。当 <span class="math inline">\(H_0\)</span> 被拒绝时而接受的假设称为备择假设 <span class="math inline">\(H_1\)</span>，它们常常成对出现。</li>
+<li>例如：<span class="math inline">\(H_0:\theta \ge 10,H_1:\theta &lt; 10\)</span></li>
+</ul></li>
+<li>选择检验统计量，给出拒绝域形式
+<ul>
+<li>由样本对原假设进行判断总是通过一个统计量完成的，该统计量被称为检验统计量。使得原假设被拒绝的样本观测值所在的区域称为拒绝域 <span class="math inline">\(W\)</span>。例如：<span class="math inline">\(W=\{(x_1,x_2,...,x_n):\bar x \le c\}\)</span></li>
+</ul></li>
+<li>选择显著性水平 <span class="math inline">\(\alpha\)</span>
+<ul>
+<li>预先给定数 <span class="math inline">\(\alpha\)</span>（显著性水平），根据：<span class="math inline">\(P(reject~H_0|H_0~right)\le\alpha\)</span></li>
+</ul></li>
+<li>给出拒绝域，确定显著性水平后，可以给出检验的拒绝域 <span class="math inline">\(W\)</span></li>
+<li>做出判断
+<ul>
+<li>给出了观察值 <span class="math inline">\(x_1,...,x_n\)</span> 若 <span class="math inline">\((x_1,...,x_n)\in W\)</span> 则拒绝 <span class="math inline">\(H_0\)</span>；反之接受 <span class="math inline">\(H_0\)</span></li>
+</ul></li>
 </ol>
 <p><em>两类错误</em>：</p>
-<ol>
-<li>第一类错误（$H_0$ 成立，而样本满足拒绝域）的概率 $\alpha$</li>
-<li>第二类错误（$H_0$ 不成立，而样本不满足拒绝域）的概率 $\beta$</li>
+<ol type="1">
+<li>第一类错误（<span class="math inline">\(H_0\)</span> 成立，而样本满足拒绝域）的概率 <span class="math inline">\(\alpha\)</span></li>
+<li>第二类错误（<span class="math inline">\(H_0\)</span> 不成立，而样本不满足拒绝域）的概率 <span class="math inline">\(\beta\)</span></li>
 </ol>
-<h3 id="单个正态总体参数的假设检验"><a href="#单个正态总体参数的假设检验" class="headerlink" title="单个正态总体参数的假设检验"></a>单个正态总体参数的假设检验</h3><h4 id="均值-μ-的检验-（σ-已知）"><a href="#均值-μ-的检验-（σ-已知）" class="headerlink" title="均值 μ 的检验 （σ 已知）"></a>均值 μ 的检验 （σ 已知）</h4><p>检验统计量：$\displaystyle U=\frac{\bar x-\mu_0}{\sigma/\sqrt n}$</p>
-<p><em>双边检验</em>：$H_0:\mu=\mu_0\leftrightarrow H_1:\mu\ne\mu_0$</p>
-<script type="math/tex; mode=display">
+<h3 id="单个正态总体参数的假设检验">单个正态总体参数的假设检验</h3>
+<h4 id="均值-μ-的检验-σ-已知">均值 μ 的检验 （σ 已知）</h4>
+<p>检验统计量：<span class="math inline">\(\displaystyle U=\frac{\bar x-\mu_0}{\sigma/\sqrt n}\)</span></p>
+<p><em>双边检验</em>：<span class="math inline">\(H_0:\mu=\mu_0\leftrightarrow H_1:\mu\ne\mu_0\)</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-    &U=\frac{\bar{X}-\mu_0}{\sigma/\sqrt n}\sim N(0,1)\\
-    &P(reject~H_0|H_0~right)\le \alpha
-\end{aligned}</script><p>$\bar X$ 为 $\mu$ 的无偏估计则：$\displaystyle P(reject~H_0|H_0~right)=P(\frac{|\bar{X}-\mu_0|}{\sigma/\sqrt n}\ge \frac{k}{\sigma/\sqrt n})$</p>
+    &amp;U=\frac{\bar{X}-\mu_0}{\sigma/\sqrt n}\sim N(0,1)\\
+    &amp;P(reject~H_0|H_0~right)\le \alpha
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\bar X\)</span> 为 <span class="math inline">\(\mu\)</span> 的无偏估计则：<span class="math inline">\(\displaystyle P(reject~H_0|H_0~right)=P(\frac{|\bar{X}-\mu_0|}{\sigma/\sqrt n}\ge \frac{k}{\sigma/\sqrt n})\)</span></p>
 <p>拒绝域为：</p>
-<script type="math/tex; mode=display">
-W=\left\{ (x_1,...,x_n)||\bar x-\mu_0|\ge \frac{\sigma}{\sqrt n}u_{\alpha/2} \right\}</script><p><em>单边右检验</em>：$H_0:\mu\le \mu_0$</p>
-<script type="math/tex; mode=display">
-P(\frac{\bar X-\mu_0}{\sigma /\sqrt n}\ge \frac{k}{\sigma /\sqrt n})\le \alpha</script><p>拒绝域为：</p>
-<script type="math/tex; mode=display">
-S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \ge \frac{\sigma}{\sqrt n}u_\alpha \right\}</script><p><em>单边左检验</em>：$H_0:\mu\ge \mu_0$ 拒绝域为 $\displaystyle S=\left\{  (x_1,…,x_n)|\bar x-\mu_0 \le -\frac{\sigma}{\sqrt n}u_\alpha\right\}$</p>
-<h4 id="均值-μ-的检验-（σ-未知）"><a href="#均值-μ-的检验-（σ-未知）" class="headerlink" title="均值 μ 的检验 （σ 未知）"></a>均值 μ 的检验 （σ 未知）</h4><p>使用 t 检验法，将上述的 $\sigma$ 替换为 $S_n=\sqrt{\frac{1}{n-1}\sum(x_i-\bar x)^2}$，正态分布替换为自由度为 n-1 的 t - 分布，检验统计量为：$\displaystyle T=\frac{\bar x-\mu_0}{s_n/\sqrt n}$</p>
+<p><span class="math display">\[
+W=\left\{ (x_1,...,x_n)||\bar x-\mu_0|\ge \frac{\sigma}{\sqrt n}u_{\alpha/2} \right\}
+\]</span></p>
+<p><em>单边右检验</em>：<span class="math inline">\(H_0:\mu\le \mu_0\)</span></p>
+<p><span class="math display">\[
+P(\frac{\bar X-\mu_0}{\sigma /\sqrt n}\ge \frac{k}{\sigma /\sqrt n})\le \alpha
+\]</span></p>
+<p>拒绝域为：</p>
+<p><span class="math display">\[
+S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \ge \frac{\sigma}{\sqrt n}u_\alpha \right\}
+\]</span></p>
+<p><em>单边左检验</em>：<span class="math inline">\(H_0:\mu\ge \mu_0\)</span> 拒绝域为 <span class="math inline">\(\displaystyle S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \le -\frac{\sigma}{\sqrt n}u_\alpha\right\}\)</span></p>
+<h4 id="均值-μ-的检验-σ-未知">均值 μ 的检验 （σ 未知）</h4>
+<p>使用 t 检验法，将上述的 <span class="math inline">\(\sigma\)</span> 替换为 <span class="math inline">\(S_n=\sqrt{\frac{1}{n-1}\sum(x_i-\bar x)^2}\)</span>，正态分布替换为自由度为 n-1 的 t - 分布，检验统计量为：<span class="math inline">\(\displaystyle T=\frac{\bar x-\mu_0}{s_n/\sqrt n}\)</span></p>
 <p>双侧检验，拒绝域为：</p>
-<script type="math/tex; mode=display">
-W=\left\{ (x_1,...,x_n)||\bar x-\mu_0|\ge \frac{s_n}{\sqrt n}t_{\alpha/2}(n-1) \right\}</script><p>单侧右检验，拒绝域为：</p>
-<script type="math/tex; mode=display">
-S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \ge \frac{s_n}{\sqrt n}t_\alpha(n-1) \right\}</script><p>单侧左检验，拒绝域为：</p>
-<script type="math/tex; mode=display">
-S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \le -\frac{s_n}{\sqrt n}t_\alpha(n-1) \right\}</script><h4 id="方差-σ2-的检验"><a href="#方差-σ2-的检验" class="headerlink" title="方差 σ2 的检验"></a>方差 σ2 的检验</h4><h5 id="μ未知"><a href="#μ未知" class="headerlink" title="μ未知"></a>μ未知</h5><p>利用：</p>
-<script type="math/tex; mode=display">
-\frac{(n-1)S_n^2}{\sigma_0^2}\sim \chi^2(n-1)</script><h5 id="μ已知"><a href="#μ已知" class="headerlink" title="μ已知"></a>μ已知</h5><script type="math/tex; mode=display">
-\frac{\sum(X_i-\mu)^2}{\sigma_0^2}\sim\chi^2(n)</script><h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><div class="table-container">
+<p><span class="math display">\[
+W=\left\{ (x_1,...,x_n)||\bar x-\mu_0|\ge \frac{s_n}{\sqrt n}t_{\alpha/2}(n-1) \right\}
+\]</span></p>
+<p>单侧右检验，拒绝域为：</p>
+<p><span class="math display">\[
+S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \ge \frac{s_n}{\sqrt n}t_\alpha(n-1) \right\}
+\]</span></p>
+<p>单侧左检验，拒绝域为：</p>
+<p><span class="math display">\[
+S=\left\{ (x_1,...,x_n)|\bar x-\mu_0 \le -\frac{s_n}{\sqrt n}t_\alpha(n-1) \right\}
+\]</span></p>
+<h4 id="方差-σ2-的检验">方差 σ2 的检验</h4>
+<h5 id="μ未知">μ未知</h5>
+<p>利用：</p>
+<p><span class="math display">\[
+\frac{(n-1)S_n^2}{\sigma_0^2}\sim \chi^2(n-1)
+\]</span></p>
+<h5 id="μ已知">μ已知</h5>
+<p><span class="math display">\[
+\frac{\sum(X_i-\mu)^2}{\sigma_0^2}\sim\chi^2(n)
+\]</span></p>
+<h4 id="summary">Summary</h4>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>情况</th>
 <th>分布</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>σ已知</td>
 <td>U~N(0,1)</td>
 </tr>
-<tr>
+<tr class="even">
 <td>σ未知</td>
 <td>T~t(n-1)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>μ已知</td>
 <td>χ2~χ2(n)</td>
 </tr>
-<tr>
+<tr class="even">
 <td>μ未知</td>
 <td>χ2~χ2(n-1)</td>
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="两个正态总体参数的假设检验"><a href="#两个正态总体参数的假设检验" class="headerlink" title="两个正态总体参数的假设检验"></a>两个正态总体参数的假设检验</h3><h4 id="均值μ1，μ2的检验（σ12-σ22已知）"><a href="#均值μ1，μ2的检验（σ12-σ22已知）" class="headerlink" title="均值μ1，μ2的检验（σ12 σ22已知）"></a>均值μ1，μ2的检验（σ12 σ22已知）</h4><blockquote>
-<p>检验 $μ_1~\underline{~~}~μ_2$</p>
+<h3 id="两个正态总体参数的假设检验">两个正态总体参数的假设检验</h3>
+<h4 id="均值μ1μ2的检验σ12-σ22已知">均值μ1，μ2的检验（σ12 σ22已知）</h4>
+<blockquote>
+<p>检验 <span class="math inline">\(μ_1~\underline{~~}~μ_2\)</span></p>
 </blockquote>
-<script type="math/tex; mode=display">
-U=\frac{\bar X-\bar Y}{\sqrt{\sigma_1^2/m+\sigma_2^2/n}}\sim N(0,1)</script><h4 id="均值μ1，μ2的检验（σ12-σ22未知）"><a href="#均值μ1，μ2的检验（σ12-σ22未知）" class="headerlink" title="均值μ1，μ2的检验（σ12 σ22未知）"></a>均值μ1，μ2的检验（σ12 σ22未知）</h4><script type="math/tex; mode=display">
+<p><span class="math display">\[
+U=\frac{\bar X-\bar Y}{\sqrt{\sigma_1^2/m+\sigma_2^2/n}}\sim N(0,1)
+\]</span></p>
+<h4 id="均值μ1μ2的检验σ12-σ22未知">均值μ1，μ2的检验（σ12 σ22未知）</h4>
+<p><span class="math display">\[
 T=\frac{\bar X-\bar Y}{S_w\sqrt{1/m+1/n}}\sim t(m+n-2),\\
-S_w=\sqrt{\frac{(m-1)S_{1m}^2+(n-1)S_{2n}^2}{m+n-2}}</script><div class="table-container">
+S_w=\sqrt{\frac{(m-1)S_{1m}^2+(n-1)S_{2n}^2}{m+n-2}}
+\]</span></p>
 <table>
 <thead>
-<tr>
-<th>$H_0$</th>
+<tr class="header">
+<th><span class="math inline">\(H_0\)</span></th>
 <th>拒绝域</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>$\sigma_1, \sigma_2$ 已知</td>
+<tr class="odd">
+<td><span class="math inline">\(\sigma_1, \sigma_2\)</span> 已知</td>
+<td></td>
 </tr>
-<tr>
-<td>$\mu_1 =\mu_2$</td>
-<td>$abs(u)\ge u_{\alpha/2}$</td>
+<tr class="even">
+<td><span class="math inline">\(\mu_1 =\mu_2\)</span></td>
+<td><span class="math inline">\(abs(u)\ge u_{\alpha/2}\)</span></td>
 </tr>
-<tr>
-<td>$\mu_1 =\mu_2$</td>
-<td>$u\ge u_{\alpha}$</td>
+<tr class="odd">
+<td><span class="math inline">\(\mu_1 =\mu_2\)</span></td>
+<td><span class="math inline">\(u\ge u_{\alpha}\)</span></td>
 </tr>
-<tr>
-<td>$\mu_1 \ge\mu_2$</td>
-<td>$u\le u_{1-\alpha}=u_{-\alpha}$</td>
+<tr class="even">
+<td><span class="math inline">\(\mu_1 \ge\mu_2\)</span></td>
+<td><span class="math inline">\(u\le u_{1-\alpha}=u_{-\alpha}\)</span></td>
 </tr>
-<tr>
-<td>$\sigma_1, \sigma_2$ 未知</td>
+<tr class="odd">
+<td><span class="math inline">\(\sigma_1, \sigma_2\)</span> 未知</td>
+<td></td>
 </tr>
-<tr>
-<td>$\mu_1=\mu_2$</td>
-<td>$abs(t) \ge t_{\alpha/2}(m+n-2)$</td>
+<tr class="even">
+<td><span class="math inline">\(\mu_1=\mu_2\)</span></td>
+<td><span class="math inline">\(abs(t) \ge t_{\alpha/2}(m+n-2)\)</span></td>
 </tr>
-<tr>
-<td>$\mu_1\le \mu_2$</td>
-<td>$t\ge t_\alpha(m+n-2)$</td>
+<tr class="odd">
+<td><span class="math inline">\(\mu_1\le \mu_2\)</span></td>
+<td><span class="math inline">\(t\ge t_\alpha(m+n-2)\)</span></td>
 </tr>
-<tr>
-<td>$\mu_1\ge \mu_2$</td>
-<td>$t\le -t_\alpha(m+n-2)$</td>
+<tr class="even">
+<td><span class="math inline">\(\mu_1\ge \mu_2\)</span></td>
+<td><span class="math inline">\(t\le -t_\alpha(m+n-2)\)</span></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="方差-σ12，σ22-的检验（μ1，μ2未知）"><a href="#方差-σ12，σ22-的检验（μ1，μ2未知）" class="headerlink" title="方差 σ12，σ22 的检验（μ1，μ2未知）"></a>方差 σ12，σ22 的检验（μ1，μ2未知）</h4><blockquote>
-<p>检验 $\sigma_1^2 ~ \mathrm{\underline{~~~}} ~\sigma_2^2$</p>
+<h4 id="方差-σ12σ22-的检验μ1μ2未知">方差 σ12，σ22 的检验（μ1，μ2未知）</h4>
+<blockquote>
+<p>检验 <span class="math inline">\(\sigma_1^2 ~ \mathrm{\underline{~~~}} ~\sigma_2^2\)</span></p>
 </blockquote>
-<script type="math/tex; mode=display">
-F=\frac{S_{1m}^2}{S_{2n}^2}\sim F(m-1, n-1)</script><h4 id="方差-σ12，σ22-的检验（μ1，μ2已知）"><a href="#方差-σ12，σ22-的检验（μ1，μ2已知）" class="headerlink" title="方差 σ12，σ22 的检验（μ1，μ2已知）"></a>方差 σ12，σ22 的检验（μ1，μ2已知）</h4><script type="math/tex; mode=display">
-F=\frac{\sum_{i=1}^m (x_i-\mu_1)^2/m}{\sum_{i=1}^n (y_i-\mu_1)^2/n}\sim F(m, n)</script><p><strong>Summary:</strong></p>
-<div class="table-container">
+<p><span class="math display">\[
+F=\frac{S_{1m}^2}{S_{2n}^2}\sim F(m-1, n-1)
+\]</span></p>
+<h4 id="方差-σ12σ22-的检验μ1μ2已知">方差 σ12，σ22 的检验（μ1，μ2已知）</h4>
+<p><span class="math display">\[
+F=\frac{\sum_{i=1}^m (x_i-\mu_1)^2/m}{\sum_{i=1}^n (y_i-\mu_1)^2/n}\sim F(m, n)
+\]</span></p>
+<p><strong>Summary:</strong></p>
 <table>
 <thead>
-<tr>
-<th>$H_0$</th>
+<tr class="header">
+<th><span class="math inline">\(H_0\)</span></th>
 <th>拒绝域</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>$\mu_1,\mu_2$ 已知</td>
+<tr class="odd">
+<td><span class="math inline">\(\mu_1,\mu_2\)</span> 已知</td>
+<td></td>
 </tr>
-<tr>
-<td>$\sigma_1^2=\sigma_2^2$</td>
-<td>$f\le F_{1-\alpha/2}(m,n)$ 或 $f\ge F_{\alpha/2}(m,n)$</td>
+<tr class="even">
+<td><span class="math inline">\(\sigma_1^2=\sigma_2^2\)</span></td>
+<td><span class="math inline">\(f\le F_{1-\alpha/2}(m,n)\)</span> 或 <span class="math inline">\(f\ge F_{\alpha/2}(m,n)\)</span></td>
 </tr>
-<tr>
-<td>$\sigma_1^2\le \sigma_2^2$</td>
-<td>$f\ge F_\alpha(m,n)$</td>
+<tr class="odd">
+<td><span class="math inline">\(\sigma_1^2\le \sigma_2^2\)</span></td>
+<td><span class="math inline">\(f\ge F_\alpha(m,n)\)</span></td>
 </tr>
-<tr>
-<td>$\sigma_1^2\ge \sigma_2^2$</td>
-<td>$f\le F_{1-\alpha}(m,n)$</td>
+<tr class="even">
+<td><span class="math inline">\(\sigma_1^2\ge \sigma_2^2\)</span></td>
+<td><span class="math inline">\(f\le F_{1-\alpha}(m,n)\)</span></td>
 </tr>
-<tr>
-<td>$\mu_1,\mu_2$ 未知</td>
+<tr class="odd">
+<td><span class="math inline">\(\mu_1,\mu_2\)</span> 未知</td>
+<td></td>
 </tr>
-<tr>
-<td>$\sigma_1^2=\sigma_2^2$</td>
-<td>$f\le F_{1-\alpha/2}(m,n)$ 或 $f\ge F_{\alpha/2}(m,n)$</td>
+<tr class="even">
+<td><span class="math inline">\(\sigma_1^2=\sigma_2^2\)</span></td>
+<td><span class="math inline">\(f\le F_{1-\alpha/2}(m,n)\)</span> 或 <span class="math inline">\(f\ge F_{\alpha/2}(m,n)\)</span></td>
 </tr>
-<tr>
-<td>$\sigma_1^2\le \sigma_2^2$</td>
-<td>$f\ge F_\alpha(m,n)$</td>
+<tr class="odd">
+<td><span class="math inline">\(\sigma_1^2\le \sigma_2^2\)</span></td>
+<td><span class="math inline">\(f\ge F_\alpha(m,n)\)</span></td>
 </tr>
-<tr>
-<td>$\sigma_1^2\ge \sigma_2^2$</td>
-<td>$f\le F_{1-\alpha}(m,n)$</td>
+<tr class="even">
+<td><span class="math inline">\(\sigma_1^2\ge \sigma_2^2\)</span></td>
+<td><span class="math inline">\(f\le F_{1-\alpha}(m,n)\)</span></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="总体分布的-χ2-拟合优度检验"><a href="#总体分布的-χ2-拟合优度检验" class="headerlink" title="总体分布的 χ2-拟合优度检验"></a>总体分布的 χ2-拟合优度检验</h3><h4 id="理论分布完全已知"><a href="#理论分布完全已知" class="headerlink" title="理论分布完全已知"></a>理论分布完全已知</h4><h5 id="理论分布-F0-是取有限个值的离散分布"><a href="#理论分布-F0-是取有限个值的离散分布" class="headerlink" title="理论分布 F0 是取有限个值的离散分布"></a>理论分布 F0 是取有限个值的离散分布</h5><p><strong>Thm</strong>（K · 皮尔逊）若假设 $H_0$ 成立，则当样本容量 $n\rightarrow \infty$ 时，则 $\chi^2=\sum_{i=1}^2\frac{(\gamma_i-np_i)^2}{np_i}<br>$ 渐进分布为 $\chi^2(r-1)$。</p>
-<p>若理论分布律为：$P(X=a_i)=p_i$，原假设可以写为：$H_0:P(X=a_i)=p_i$，$r$ 为x取值的个数</p>
+<h3 id="总体分布的-χ2-拟合优度检验">总体分布的 χ2-拟合优度检验</h3>
+<h4 id="理论分布完全已知">理论分布完全已知</h4>
+<h5 id="理论分布-f0-是取有限个值的离散分布">理论分布 F0 是取有限个值的离散分布</h5>
+<p><strong>Thm</strong>（K · 皮尔逊）若假设 <span class="math inline">\(H_0\)</span> 成立，则当样本容量 <span class="math inline">\(n\rightarrow \infty\)</span> 时，则 $^2=_{i=1}^2 $ 渐进分布为 <span class="math inline">\(\chi^2(r-1)\)</span>。</p>
+<p>若理论分布律为：<span class="math inline">\(P(X=a_i)=p_i\)</span>，原假设可以写为：<span class="math inline">\(H_0:P(X=a_i)=p_i\)</span>，<span class="math inline">\(r\)</span> 为x取值的个数</p>
 <p>使用：</p>
-<script type="math/tex; mode=display">
-\chi^2=\sum_{i=1}^2\frac{(\gamma_i-np_i)^2}{np_i}</script><p>拟合优度：$p(\chi^2_0)=P(\chi^2\ge \chi^2_0)$</p>
-<p>利用：$\chi^2=\sum\frac{(\gamma_i-np_i)^2}{np_i}$ 在 $n\rightarrow \infin$ 时，其渐进分布为 $\chi^2(r-1)$</p>
-<p>当 $\chi^2\ge\chi^2_\alpha(r-1)$ 则拒绝假设。</p>
-<h5 id="理想分布为一般情况"><a href="#理想分布为一般情况" class="headerlink" title="理想分布为一般情况"></a>理想分布为一般情况</h5><p>假设可以写为：$H_0:F(x)=F_0(x)$</p>
-<ol>
-<li>选择常数，将区间分割成：$(-\infty, a_1],…,(a_{i-1},a_i],…,…(a_r-1,\infty]$</li>
-<li>计算 $p_i=F_0(a_i)-F_0(a_{i-1})$</li>
-<li>计算统计量 $\chi^2=\sum\frac{(\gamma_i-np_i)^2}{np_i}$</li>
-<li>计算出观察值 $\chi^2$<ul>
-<li>若 $\chi^2\ge\chi^2_\alpha(r-1)$ 则拒绝假设。</li>
-</ul>
-</li>
+<p><span class="math display">\[
+\chi^2=\sum_{i=1}^2\frac{(\gamma_i-np_i)^2}{np_i}
+\]</span></p>
+<p>拟合优度：<span class="math inline">\(p(\chi^2_0)=P(\chi^2\ge \chi^2_0)\)</span></p>
+<p>利用：<span class="math inline">\(\chi^2=\sum\frac{(\gamma_i-np_i)^2}{np_i}\)</span> 在 <span class="math inline">\(n\rightarrow \infin\)</span> 时，其渐进分布为 <span class="math inline">\(\chi^2(r-1)\)</span></p>
+<p>当 <span class="math inline">\(\chi^2\ge\chi^2_\alpha(r-1)\)</span> 则拒绝假设。</p>
+<h5 id="理想分布为一般情况">理想分布为一般情况</h5>
+<p>假设可以写为：<span class="math inline">\(H_0:F(x)=F_0(x)\)</span></p>
+<ol type="1">
+<li>选择常数，将区间分割成：<span class="math inline">\((-\infty, a_1],...,(a_{i-1},a_i],...,...(a_r-1,\infty]\)</span></li>
+<li>计算 <span class="math inline">\(p_i=F_0(a_i)-F_0(a_{i-1})\)</span></li>
+<li>计算统计量 <span class="math inline">\(\chi^2=\sum\frac{(\gamma_i-np_i)^2}{np_i}\)</span></li>
+<li>计算出观察值 <span class="math inline">\(\chi^2\)</span>
+<ul>
+<li>若 <span class="math inline">\(\chi^2\ge\chi^2_\alpha(r-1)\)</span> 则拒绝假设。</li>
+</ul></li>
 </ol>
-<h4 id="理论分布-F0-含有未知参数的情况"><a href="#理论分布-F0-含有未知参数的情况" class="headerlink" title="理论分布 F0 含有未知参数的情况"></a>理论分布 F0 含有未知参数的情况</h4><p>我们的假设为：</p>
-<script type="math/tex; mode=display">
+<h4 id="理论分布-f0-含有未知参数的情况">理论分布 F0 含有未知参数的情况</h4>
+<p>我们的假设为：</p>
+<p><span class="math display">\[
 H_0:F(x)=F_0(x:\theta_1,...,\theta_k)\leftrightarrow
-H_0:F(x)\ne F_0(x:\theta_1,...,\theta_k)</script><ol>
+H_0:F(x)\ne F_0(x:\theta_1,...,\theta_k)
+\]</span></p>
+<ol type="1">
 <li>使用最大似然估计确定参数</li>
-<li>统计量 $\chi^2=\sum\frac{(\gamma_i-np_i)^2}{np_i}\sim \chi^2(r-k-1)$ k 为未知参数个数</li>
-<li>当 $\chi^2\ge\chi^2_\alpha(r-1)$ 则拒绝假设。</li>
+<li>统计量 <span class="math inline">\(\chi^2=\sum\frac{(\gamma_i-np_i)^2}{np_i}\sim \chi^2(r-k-1)\)</span> k 为未知参数个数</li>
+<li>当 <span class="math inline">\(\chi^2\ge\chi^2_\alpha(r-1)\)</span> 则拒绝假设。</li>
 </ol>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -775,9 +822,12 @@ H_0:F(x)\ne F_0(x:\theta_1,...,\theta_k)</script><ol>
 评判估计量的方法
 
 
-参数估计两种常用的参数估计方法矩估计法
+参数估计
+两种常用的参数估计方法
+矩估计法
 
-辛钦大数定律：样本较大时，$A_r=\frac{1}{n}\sum_{i=1}^nX_i^r\righta...</p>
+
+辛钦大数定律：样本较大时，\(A_r=\frac{1}{n}\sum_{i=1...</p>
         </a>
       
       
@@ -785,12 +835,10 @@ H_0:F(x)\ne F_0(x:\theta_1,...,\theta_k)</script><ol>
           <p class='title'>「概率统计与随机过程」 6 - 抽样分布<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>Chapter 6 抽样分布
 
-抽样分布基本概念
-总体：在一个统计问题中，研究对象的全体。（所研究对象的某个（某些）数量指标的全体，一个随机变量（多维随机变量）记为 $X$）
+抽样分布
+基本概念
 
-样本：
-
-分组样...</p>
+总体：在一个统计问题中，研究对象的全体。（所研究对象的某个（某些）数量指标的全体，一个随机变量（多维随机变量）记为 \(X\)）...</p>
         </a>
       
     </div>
@@ -833,7 +881,7 @@ H_0:F(x)\ne F_0(x:\theta_1,...,\theta_k)</script><ol>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-text">假设检验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">假设检验的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E5%8F%82%E6%95%B0%E7%9A%84%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-text">单个正态总体参数的假设检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%80%BC-%CE%BC-%E7%9A%84%E6%A3%80%E9%AA%8C-%EF%BC%88%CF%83-%E5%B7%B2%E7%9F%A5%EF%BC%89"><span class="toc-text">均值 μ 的检验 （σ 已知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%80%BC-%CE%BC-%E7%9A%84%E6%A3%80%E9%AA%8C-%EF%BC%88%CF%83-%E6%9C%AA%E7%9F%A5%EF%BC%89"><span class="toc-text">均值 μ 的检验 （σ 未知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE-%CF%832-%E7%9A%84%E6%A3%80%E9%AA%8C"><span class="toc-text">方差 σ2 的检验</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%CE%BC%E6%9C%AA%E7%9F%A5"><span class="toc-text">μ未知</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%CE%BC%E5%B7%B2%E7%9F%A5"><span class="toc-text">μ已知</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Summary"><span class="toc-text">Summary</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E5%8F%82%E6%95%B0%E7%9A%84%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-text">两个正态总体参数的假设检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%80%BC%CE%BC1%EF%BC%8C%CE%BC2%E7%9A%84%E6%A3%80%E9%AA%8C%EF%BC%88%CF%8312-%CF%8322%E5%B7%B2%E7%9F%A5%EF%BC%89"><span class="toc-text">均值μ1，μ2的检验（σ12 σ22已知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%80%BC%CE%BC1%EF%BC%8C%CE%BC2%E7%9A%84%E6%A3%80%E9%AA%8C%EF%BC%88%CF%8312-%CF%8322%E6%9C%AA%E7%9F%A5%EF%BC%89"><span class="toc-text">均值μ1，μ2的检验（σ12 σ22未知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE-%CF%8312%EF%BC%8C%CF%8322-%E7%9A%84%E6%A3%80%E9%AA%8C%EF%BC%88%CE%BC1%EF%BC%8C%CE%BC2%E6%9C%AA%E7%9F%A5%EF%BC%89"><span class="toc-text">方差 σ12，σ22 的检验（μ1，μ2未知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE-%CF%8312%EF%BC%8C%CF%8322-%E7%9A%84%E6%A3%80%E9%AA%8C%EF%BC%88%CE%BC1%EF%BC%8C%CE%BC2%E5%B7%B2%E7%9F%A5%EF%BC%89"><span class="toc-text">方差 σ12，σ22 的检验（μ1，μ2已知）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E4%BD%93%E5%88%86%E5%B8%83%E7%9A%84-%CF%872-%E6%8B%9F%E5%90%88%E4%BC%98%E5%BA%A6%E6%A3%80%E9%AA%8C"><span class="toc-text">总体分布的 χ2-拟合优度检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E5%88%86%E5%B8%83%E5%AE%8C%E5%85%A8%E5%B7%B2%E7%9F%A5"><span class="toc-text">理论分布完全已知</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E5%88%86%E5%B8%83-F0-%E6%98%AF%E5%8F%96%E6%9C%89%E9%99%90%E4%B8%AA%E5%80%BC%E7%9A%84%E7%A6%BB%E6%95%A3%E5%88%86%E5%B8%83"><span class="toc-text">理论分布 F0 是取有限个值的离散分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%90%86%E6%83%B3%E5%88%86%E5%B8%83%E4%B8%BA%E4%B8%80%E8%88%AC%E6%83%85%E5%86%B5"><span class="toc-text">理想分布为一般情况</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E5%88%86%E5%B8%83-F0-%E5%90%AB%E6%9C%89%E6%9C%AA%E7%9F%A5%E5%8F%82%E6%95%B0%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">理论分布 F0 含有未知参数的情况</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-text">假设检验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">假设检验的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E5%8F%82%E6%95%B0%E7%9A%84%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-text">单个正态总体参数的假设检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%80%BC-%CE%BC-%E7%9A%84%E6%A3%80%E9%AA%8C-%CF%83-%E5%B7%B2%E7%9F%A5"><span class="toc-text">均值 μ 的检验 （σ 已知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%80%BC-%CE%BC-%E7%9A%84%E6%A3%80%E9%AA%8C-%CF%83-%E6%9C%AA%E7%9F%A5"><span class="toc-text">均值 μ 的检验 （σ 未知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE-%CF%832-%E7%9A%84%E6%A3%80%E9%AA%8C"><span class="toc-text">方差 σ2 的检验</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%CE%BC%E6%9C%AA%E7%9F%A5"><span class="toc-text">μ未知</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%CE%BC%E5%B7%B2%E7%9F%A5"><span class="toc-text">μ已知</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#summary"><span class="toc-text">Summary</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E5%8F%82%E6%95%B0%E7%9A%84%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-text">两个正态总体参数的假设检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%80%BC%CE%BC1%CE%BC2%E7%9A%84%E6%A3%80%E9%AA%8C%CF%8312-%CF%8322%E5%B7%B2%E7%9F%A5"><span class="toc-text">均值μ1，μ2的检验（σ12 σ22已知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%80%BC%CE%BC1%CE%BC2%E7%9A%84%E6%A3%80%E9%AA%8C%CF%8312-%CF%8322%E6%9C%AA%E7%9F%A5"><span class="toc-text">均值μ1，μ2的检验（σ12 σ22未知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE-%CF%8312%CF%8322-%E7%9A%84%E6%A3%80%E9%AA%8C%CE%BC1%CE%BC2%E6%9C%AA%E7%9F%A5"><span class="toc-text">方差 σ12，σ22 的检验（μ1，μ2未知）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE-%CF%8312%CF%8322-%E7%9A%84%E6%A3%80%E9%AA%8C%CE%BC1%CE%BC2%E5%B7%B2%E7%9F%A5"><span class="toc-text">方差 σ12，σ22 的检验（μ1，μ2已知）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E4%BD%93%E5%88%86%E5%B8%83%E7%9A%84-%CF%872-%E6%8B%9F%E5%90%88%E4%BC%98%E5%BA%A6%E6%A3%80%E9%AA%8C"><span class="toc-text">总体分布的 χ2-拟合优度检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E5%88%86%E5%B8%83%E5%AE%8C%E5%85%A8%E5%B7%B2%E7%9F%A5"><span class="toc-text">理论分布完全已知</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E5%88%86%E5%B8%83-f0-%E6%98%AF%E5%8F%96%E6%9C%89%E9%99%90%E4%B8%AA%E5%80%BC%E7%9A%84%E7%A6%BB%E6%95%A3%E5%88%86%E5%B8%83"><span class="toc-text">理论分布 F0 是取有限个值的离散分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%90%86%E6%83%B3%E5%88%86%E5%B8%83%E4%B8%BA%E4%B8%80%E8%88%AC%E6%83%85%E5%86%B5"><span class="toc-text">理想分布为一般情况</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E5%88%86%E5%B8%83-f0-%E5%90%AB%E6%9C%89%E6%9C%AA%E7%9F%A5%E5%8F%82%E6%95%B0%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">理论分布 F0 含有未知参数的情况</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1480,14 +1528,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

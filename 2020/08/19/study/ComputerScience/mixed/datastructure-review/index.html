@@ -470,8 +470,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>数据结构复习</p>
 <span id="more"></span>
-<h3 id="0、绪论"><a href="#0、绪论" class="headerlink" title="0、绪论"></a>0、绪论</h3><h4 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h4><p>四种基本的逻辑结构：</p>
-<ol>
+<h3 id="绪论">0、绪论</h3>
+<h4 id="碎碎念">碎碎念</h4>
+<p>四种基本的逻辑结构：</p>
+<ol type="1">
 <li>集合结构</li>
 <li>线性结构</li>
 <li>树结构</li>
@@ -480,7 +482,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><code>ADT</code>的概念：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ADT 数据类型 &#123;</span><br><span class="line">  数据对象：&lt;Definition&gt;</span><br><span class="line">  数据关系：&lt;Definition&gt;</span><br><span class="line">    基本操作：&lt;Definition&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意C和C++的区别，以及常用的语句</p>
-<ol>
+<ol type="1">
 <li>没有 template，没有 class</li>
 <li><code>#define</code> 的使用</li>
 <li><code>typedef</code>、<code>union</code> 的使用</li>
@@ -488,14 +490,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <p>简单提一下 <code>#define</code> 和 <code>typedef</code>：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IDENTIFIER expr</span></span><br><span class="line"><span class="comment">// 在编译时会被直接替换成 expr</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IDENTIFIER(x,y,z) expr</span></span><br><span class="line"><span class="comment">// 在编译时会被直接替换成expr，并且将expr中的 x y z 替换</span></span><br><span class="line"><span class="comment">// 例如</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI 1.57 + 1.57</span></span><br><span class="line">cout &lt;&lt; PI; <span class="comment">// 编译时替换成 cout &lt;&lt; 1.57 + 1.57;</span></span><br><span class="line"><span class="comment">// 想一想 PI*PI 是什么</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ISROOT(node) (node-&gt;father == nullptr)</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">ISROOT</span>(tree._root_ptr);</span><br><span class="line"><span class="comment">// 编译时替换成 cout &lt;&lt; (tree._root_ptr -&gt; father == nullptr);</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line">Status x; <span class="comment">// 等价于 int x;</span></span><br><span class="line"><span class="comment">// 注意：不能有 template&lt;</span></span><br></pre></td></tr></table></figure>
-<div class="note quote"><p><em><kbd>「再碎碎念一下」</kbd></em></p><p><code>template</code> 还记得多少。</p><p><code>new</code> <code>delete</code> 填程序可能考的（释放空间，析构函数）</p><p>万一出卷老师一时兴起，和我一样作死用 <code>virtual</code> 写 <code>avl::bst</code> 咋办</p><p><code>typedef</code> 和 <code>#define</code> 定义的顺序不一样</p><p>我慌了。</p></div>
-<h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p><strong><kbd>「全场暴毙」</kbd></strong>：写出下面这个算法的时间复杂度</p>
+<div class="note quote"><p><em><kbd>「再碎碎念一下」</kbd></em></p><p><code>template</code> 还记得多少。</p><p><code>new</code> <code>delete</code> 填程序可能考的（释放空间，析构函数）</p><p>万一出卷老师一时兴起，和我一样作死用 <code>virtual</code> 写 <code>avl::bst</code> 咋办</p><p><code>typedef</code> 和 <code>#define</code> 定义的顺序不一样</p><p>我慌了。</p></div>
+<h4 id="时间复杂度">时间复杂度</h4>
+<p><strong><kbd>「全场暴毙」</kbd></strong>：写出下面这个算法的时间复杂度</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// n 为 str 长度</span></span><br><span class="line"><span class="comment">// 则 func 是 o(?)</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func</span><span class="params">(<span class="keyword">char</span> *str, <span class="keyword">char</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(str); ++i)</span><br><span class="line">    <span class="keyword">if</span> (str[i] == c) cnt ++;</span><br><span class="line">  <span class="keyword">return</span> cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>Ans：$O(n^2)$</p>
+<p>Ans：<span class="math inline">\(O(n^2)\)</span></p>
 </blockquote>
-<h4 id="评估算法"><a href="#评估算法" class="headerlink" title="评估算法"></a>评估算法</h4><p><strong><kbd>「算法的特性」</kbd></strong>：</p>
-<ol>
+<h4 id="评估算法">评估算法</h4>
+<p><strong><kbd>「算法的特性」</kbd></strong>：</p>
+<ol type="1">
 <li>有穷性</li>
 <li>确定性</li>
 <li>可行性</li>
@@ -503,229 +507,213 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>输出</li>
 </ol>
 <p><strong><kbd>「算法的评估」</kbd></strong>：</p>
-<ol>
+<ol type="1">
 <li>高效性</li>
 <li>正确性</li>
 <li>健壮性</li>
 <li>可读性</li>
 </ol>
-<div class="note quote"><p><strong><kbd>「要点：」</kbd></strong></p><blockquote><ol><li>时间复杂度如何？</li><li>空间复杂度如何？</li><li>相比其他算法的优缺点？</li><li>如何实现？（注意细节）</li><li>能手算吗？</li></ol></blockquote></div>
-<h3 id="1、线性表"><a href="#1、线性表" class="headerlink" title="1、线性表"></a>1、线性表</h3><p><strong><kbd>「顺序表」</kbd></strong></p>
-<ol>
+<div class="note quote"><p><strong><kbd>「要点：」</kbd></strong></p><blockquote><ol type="1"><li>时间复杂度如何？</li><li>空间复杂度如何？</li><li>相比其他算法的优缺点？</li><li>如何实现？（注意细节）</li><li>能手算吗？</li></ol></blockquote></div>
+<h3 id="线性表">1、线性表</h3>
+<p><strong><kbd>「顺序表」</kbd></strong></p>
+<ol type="1">
 <li>静态 <code>#define MAXSIZE 100</code></li>
 <li>动态 <code>new</code> or <code>malloc</code></li>
 </ol>
 <p>内存中的特点如何？</p>
 <ul>
-<li>插入o(n)：<ul>
+<li>插入o(n)：
+<ul>
 <li>思考：能不能用 <code>memcpy</code> 函数？</li>
-</ul>
-</li>
-<li>删除o(n)：<ul>
+</ul></li>
+<li>删除o(n)：
+<ul>
 <li>这两个都要注意：表的长度要减少1</li>
-</ul>
-</li>
-<li>搜索o(n)：<ul>
+</ul></li>
+<li>搜索o(n)：
+<ul>
 <li>成功的平均比较次数 ASL = ？</li>
 <li>失败的比较次数？</li>
-</ul>
-</li>
-<li>合并<ul>
-<li>无序：$O(na*nb)$</li>
-<li>有序：$O(na+nb)$</li>
-</ul>
-</li>
+</ul></li>
+<li>合并
+<ul>
+<li>无序：<span class="math inline">\(O(na*nb)\)</span></li>
+<li>有序：<span class="math inline">\(O(na+nb)\)</span></li>
+</ul></li>
 </ul>
 <p><strong><kbd>「链表」</kbd></strong></p>
-<ol>
+<ol type="1">
 <li>单链表存储、插入、删除、合并</li>
 <li>循环链表</li>
 <li>双向链表</li>
 </ol>
 <blockquote>
 <p>应用</p>
-<ol>
+<ol type="1">
 <li>多项式的表示</li>
 </ol>
 </blockquote>
-<h3 id="2、栈与队列"><a href="#2、栈与队列" class="headerlink" title="2、栈与队列"></a>2、栈与队列</h3><p>链式存储！</p>
-<ol>
-<li><strong><kbd>「栈」</kbd></strong>：LIFO<ol>
+<h3 id="栈与队列">2、栈与队列</h3>
+<p>链式存储！</p>
+<ol type="1">
+<li><strong><kbd>「栈」</kbd></strong>：LIFO</li>
 <li>定义</li>
 <li>初始化</li>
 <li>压栈</li>
-<li>出栈<br>Q：一个 n 元素序列依次进栈，则其不同的出栈队列有多少种<br>A：卡特兰数</li>
-</ol>
-</li>
-<li><strong><kbd>「队列」</kbd></strong>：FIFO<ol>
+<li>出栈 Q：一个 n 元素序列依次进栈，则其不同的出栈队列有多少种 A：卡特兰数</li>
+<li><strong><kbd>「队列」</kbd></strong>：FIFO</li>
 <li>链式表示</li>
-<li>循环队列（这个定义是啥？）<ol>
-<li>重点是如何判断 overflow</li>
-<li>入队？出队？</li>
+<li>循环队列（这个定义是啥？） 1. 重点是如何判断 overflow 2. 入队？出队？</li>
 </ol>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="3、串"><a href="#3、串" class="headerlink" title="3、串"></a>3、串</h3><p>如何定义？</p>
-<ol>
+<h3 id="串">3、串</h3>
+<p>如何定义？</p>
+<ol type="1">
 <li>截止符 <code>\0</code></li>
 <li>编码方式：Unicode or ASCII ？「这个考到就离谱」</li>
 <li>子串</li>
 <li>定长存储表示（堆分配）</li>
 </ol>
 <p>操作：</p>
-<ol>
+<ol type="1">
 <li>连接</li>
 <li>求子串</li>
 <li>插入（类似顺序表）</li>
 <li>链式存储（块链）</li>
 </ol>
 <p>模式匹配算法</p>
-<ol>
+<ol type="1">
 <li>BF算法（一个个找）</li>
-<li>KMP算法（跳转表）「如何求 <code>next</code> 表」<ul>
+<li>KMP算法（跳转表）「如何求 <code>next</code> 表」</li>
+</ol>
+<ul>
 <li>类似于有限状态自动机状态转移</li>
 <li>KMP的时间复杂度（求 <code>next</code> 表）</li>
 </ul>
-</li>
-</ol>
-<h3 id="4、数组和广义表"><a href="#4、数组和广义表" class="headerlink" title="4、数组和广义表"></a>4、数组和广义表</h3><ul>
+<h3 id="数组和广义表">4、数组和广义表</h3>
+<ul>
 <li>一维数组</li>
-<li>多维数组<ul>
+<li>多维数组
+<ul>
 <li>【写给自己】记得别再傻傻的用 <code>new int **</code> 了！</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <p>特殊矩阵压缩：</p>
-<ol>
-<li>对称：只存储对角线及以上（下）<ul>
+<ol type="1">
+<li>对称：只存储对角线及以上（下）</li>
+</ol>
+<ul>
 <li>行号、列号的计算？</li>
 </ul>
-</li>
+<ol start="2" type="1">
 <li>三对角矩阵： <code>k = 2 * i + j</code></li>
-<li>稀疏矩阵：<ol>
+<li>稀疏矩阵：</li>
 <li>存放方式（三元组法）</li>
 <li>快速转置算法</li>
 <li>矩阵乘法</li>
 <li>十字链表存储</li>
 </ol>
-</li>
-</ol>
 <p>广义表：</p>
-<ol>
+<ol type="1">
 <li>都是指针、链式！</li>
-<li>表头表尾如何定义（链表结点）<ol>
+<li>表头表尾如何定义（链表结点）
+<ol type="1">
 <li>原子节点：tag=0+原子的值</li>
 <li>表节点：tag = 1 + <code>表头指针 hp</code> + <code>表尾指针 tp</code></li>
-</ol>
-</li>
-<li>第二种定义：<ol>
+</ol></li>
+<li>第二种定义：
+<ol type="1">
 <li>分三个：<code>utype</code>，<code>info</code>，<code>tp</code></li>
+</ol></li>
 </ol>
-</li>
-</ol>
-<div class="table-container">
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>utype</th>
 <th>info</th>
 <th>tp</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>0</td>
 <td>被引用次数</td>
 <td>表头</td>
 </tr>
-<tr>
+<tr class="even">
 <td>1</td>
 <td>数据值（atom）</td>
 <td>下一个节点</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>2</td>
 <td>（子）表</td>
 <td>下一个节点</td>
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="5、树"><a href="#5、树" class="headerlink" title="5、树"></a>5、树</h3><ol>
-<li><p>定义（高度、兄弟、……）</p>
-<ol>
+<h3 id="树">5、树</h3>
+<ol type="1">
+<li>定义（高度、兄弟、……）
+<ol type="1">
 <li>性质</li>
 <li>完全二叉树、满二叉树</li>
-</ol>
-</li>
-<li><p>存储方式</p>
-<ol>
+</ol></li>
+<li>存储方式
+<ol type="1">
 <li>（完全）二叉树的顺序存储：有可能编号从 1 开始</li>
-<li>链表存储：<ol>
+<li>链表存储：
+<ol type="1">
 <li>二叉链表：<code>lc</code> + <code>data</code> + <code>rc</code></li>
 <li>三叉链表：<code>lc</code> + <code>data</code> + <code>father</code> + <code>rc</code></li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>二叉树深度优先遍历（先中后）</p>
-<ol>
+</ol></li>
+</ol></li>
+<li>二叉树深度优先遍历（先中后）
+<ol type="1">
 <li>表达式求值 【危】</li>
-</ol>
-</li>
-<li>二叉树层次遍历<ol>
+</ol></li>
+<li>二叉树层次遍历
+<ol type="1">
 <li>其中使用了____（线性数据结构）？</li>
-</ol>
-</li>
-<li>线索化<ol>
+</ol></li>
+<li>线索化
+<ol type="1">
 <li><code>prec</code> + <code>lc</code> + <code>data</code> + <code>rc</code> + <code>suss</code></li>
 <li>中序遍历建立</li>
-</ol>
-</li>
-<li>树的存储方式<ol>
+</ol></li>
+<li>树的存储方式
+<ol type="1">
 <li>双亲法、</li>
 <li>指针法、</li>
 <li>链表法、</li>
 <li>孩子兄弟法</li>
-</ol>
-</li>
+</ol></li>
 <li>树和二叉树的转换</li>
 <li>树的各种遍历法</li>
 <li>森林化为二叉树</li>
 </ol>
-<div class="note quote"><p><strong>应用</strong></p><ol><li><strong><kbd>「堆」</kbd></strong>：上浮下沉<ol><li>用的是完全二叉树的顺序存储</li></ol></li><li><strong><kbd>「Huffman编码树」</kbd></strong></li></ol></div>
-<h3 id="6、查找"><a href="#6、查找" class="headerlink" title="6、查找"></a>6、查找</h3><ol>
-<li><strong>查找表</strong><ol>
+<div class="note quote"><p><strong>应用</strong></p><ol type="1"><li><strong><kbd>「堆」</kbd></strong>：上浮下沉<ol type="1"><li>用的是完全二叉树的顺序存储</li></ol></li><li><strong><kbd>「Huffman编码树」</kbd></strong></li></ol></div>
+<h3 id="查找">6、查找</h3>
+<ol type="1">
+<li><strong>查找表</strong></li>
 <li>关键字</li>
 <li>属性</li>
-</ol>
-</li>
-<li>（无序）顺序表查找<ol>
+<li>（无序）顺序表查找</li>
 <li>检查哨？（这玩意的意义到现在也没懂）</li>
 <li><code>ASL = (n + 1) / 2</code></li>
 <li><code>ASL = n + 1 (fail)</code></li>
 </ol>
-</li>
-</ol>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(SeqTable st, KeyTp key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">  st.elem[<span class="number">0</span>].key = key;</span><br><span class="line">  <span class="keyword">for</span> (i = st.length; st.elem[i].key != key; --i);</span><br><span class="line">  <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>（有序）顺序表查找「二分查找法」<ol>
+<ol start="3" type="1">
+<li>（有序）顺序表查找「二分查找法」</li>
 <li>可以得到「判定树<code>Decision Tree</code>」</li>
-</ol>
-</li>
-<li>索引顺序表（分块查找）<ol>
+<li>索引顺序表（分块查找）</li>
 <li>特点：块间有序，块内无序</li>
 <li>附加索引表（关键字有序）</li>
 </ol>
-</li>
-</ol>
 <p>【顺序表查找方法比较】</p>
-<div class="table-container">
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th></th>
 <th>顺序查找</th>
 <th>折半查找</th>
@@ -733,19 +721,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>ASL</td>
 <td>最大</td>
 <td>最小</td>
 <td>折中</td>
 </tr>
-<tr>
+<tr class="even">
 <td>表结构</td>
 <td>有序、无序</td>
 <td>有序</td>
 <td>分块有序</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>存储结构</td>
 <td>顺序存储结构、线性链表</td>
 <td>顺序存储</td>
@@ -753,225 +741,205 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="二叉搜索树（BST）"><a href="#二叉搜索树（BST）" class="headerlink" title="二叉搜索树（BST）"></a>二叉搜索树（BST）</h4><p>定义：<code>lc.key &lt;= self.key &lt;= rc.key (lc, rc exists)</code></p>
-<ol>
-<li>如何搜索？<ol>
+<h4 id="二叉搜索树bst">二叉搜索树（BST）</h4>
+<p>定义：<code>lc.key &lt;= self.key &lt;= rc.key (lc, rc exists)</code></p>
+<ol type="1">
+<li>如何搜索？
+<ol type="1">
 <li>递归</li>
-<li><strong>注意宏定义！！！</strong>（不清楚看：§1.碎碎念）<ol>
+<li><strong>注意宏定义！！！</strong>（不清楚看：§1.碎碎念）
+<ol type="1">
 <li><code>#define EQ(a, b) ((a) == (b))</code> <em>（没必要）</em></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>插入<ol>
-<li><strong>先搜索，看这个元素存不存在！</strong><ol>
+</ol></li>
+</ol></li>
+<li>插入
+<ol type="1">
+<li><strong>先搜索，看这个元素存不存在！</strong>
+<ol type="1">
 <li>搜索成功，已经有这个元素（不插入？替换？看题目）</li>
 <li>不成功，插入这个元素（作为叶子）</li>
-</ol>
-</li>
-</ol>
-</li>
+</ol></li>
+</ol></li>
 <li>通过无序表构造二叉搜索树</li>
-<li>删除结点<ol>
+<li>删除结点
+<ol type="1">
 <li>叶子？</li>
 <li>左右子女有一个为空？</li>
 <li>都非空？（直接后继：右子树“最左侧”的结点）</li>
-</ol>
+</ol></li>
+<li>这边莫名q了一下「卡特兰数」：对于有 n 个关键字的集合，其关键字有 n! 种不同排列，可构成的不同的二叉搜索树有 <span class="math inline">\(\frac{1}{n-1}C^n_{2n}\)</span> 颗。<br>
 </li>
-<li>这边莫名q了一下「卡特兰数」：对于有 n 个关键字的集合，其关键字有 n! 种不同排列，可构成的不同的二叉搜索树有 $\frac{1}{n-1}C^n_{2n}$ 颗。  </li>
-<li>“匀称”？AVL<ol>
+<li>“匀称”？AVL
+<ol type="1">
 <li>平衡条件：<code>-1 &lt;= lc.height - rc.height &lt;= 1</code> 其中：<code>lc.height - rc.height</code> 被称为「平衡因子」。</li>
-<li>维持平衡方法：旋转<ol>
-<li>单旋：<ol>
+<li>维持平衡方法：旋转
+<ol type="1">
+<li>单旋：
+<ol type="1">
 <li><code>right(node)</code></li>
 <li><code>left(node)</code></li>
-</ol>
-</li>
-<li>双旋：<ol>
+</ol></li>
+<li>双旋：
+<ol type="1">
 <li>左右 <code>leftright(node) = left(node-&gt;lc) + right(node)</code></li>
 <li>右左 <code>rightleft(node) = right(node -&gt; rc) + left(node)</code></li>
-</ol>
-</li>
-<li>什么时候用？<ol>
+</ol></li>
+</ol></li>
+<li>什么时候用？
+<ol type="1">
 <li><code>left</code> ：<code>node-&gt;lc-&gt;lc</code> 高</li>
 <li><code>right</code>：<code>node-&gt;rc-&gt;rc</code> 高</li>
 <li><code>leftright</code>：<code>node-&gt;lc-&gt;rc</code> 高</li>
 <li><code>rightleft</code>：<code>node-&gt;rc-&gt;lc</code> 高</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>插入：<ol>
+</ol></li>
+<li>插入：
+<ol type="1">
 <li>先按BST插入</li>
 <li>检查、维持平衡</li>
-</ol>
-</li>
-</ol>
-</li>
+</ol></li>
+</ol></li>
 </ol>
 <p><strong><kbd>「B 树」</kbd></strong></p>
 <blockquote>
-<p>盲猜会考【迷之自信】  </p>
+<p>盲猜会考【迷之自信】</p>
 </blockquote>
-<ol>
-<li>定义<ol>
+<ol type="1">
+<li>定义
+<ol type="1">
 <li>实际上和BST(AVL)很像（算是BST(AVL)的推广？）</li>
 <li>BST(AVL)在每个结点上都是用一个 <code>key</code> 把原来的有序表分成了两块，例如：<code>(key=1, lc = &#123;key &lt; 1&#125;, rc = &#123;key &gt; 1&#125;)</code> 【意会一下】</li>
 <li>B树（思想上）就是分成了k块（<code>m/2 &lt;= k &lt;= m</code>）：<code>(ptr[0] = &#123;key &lt; key[1]&#125;, key[1], ptr[1] = &#123;key[1] &lt; key &lt; key[2]&#125;, key[2], ... , ptr[k] = &#123;key[k] &lt; key &lt; key[k+1]&#125;, key[k+1], ptr[k+1] = &#123;key[k+1] &lt; key])</code>（还是提一下：分成k块只要切k-1刀，所以key从1开始索引）</li>
 <li>细节看ppt。（平衡因子 = 0、叶子结点为 F 的作用）</li>
-</ol>
-</li>
-<li>查找<code>targ_key</code>：<ol>
+</ol></li>
+<li>查找<code>targ_key</code>：
+<ol type="1">
 <li>从根结点开始 <code>current_node = root</code></li>
-<li>如果<code>current_node</code> 是 F（叶子），返回<code>not found</code>，否则在这个结点上找<code>targ_key</code>（顺序查找！就那么几个点，二分很可能效率更低！）<ol>
+<li>如果<code>current_node</code> 是 F（叶子），返回<code>not found</code>，否则在这个结点上找<code>targ_key</code>（顺序查找！就那么几个点，二分很可能效率更低！）
+<ol type="1">
 <li>找到：返回</li>
-<li>没找到，在 <code>ptr[next]</code> 中继续找，其中 ：<ol>
+<li>没找到，在 <code>ptr[next]</code> 中继续找，其中 ：
+<ol type="1">
 <li>next = x <code>(key[x] &lt; targ_key &lt; key[x+1])</code></li>
 <li>next = k <code>(key[k] &lt; targ_key &amp;&amp; 该结点只有 k+1 个key)</code></li>
-<li>next = 0 <code>(targ_key &lt; key[0])</code> </li>
-</ol>
-</li>
-</ol>
-</li>
+<li>next = 0 <code>(targ_key &lt; key[0])</code></li>
+</ol></li>
+</ol></li>
 <li>转 2</li>
 <li>【类比二叉搜索树的查找】</li>
-</ol>
-</li>
-<li>插入：<ol>
+</ol></li>
+<li>插入：
+<ol type="1">
 <li>平衡维持：分裂</li>
-<li>看ppt吧，我也写不清楚，画图比较好，也就几种情况：<ol>
+<li>看ppt吧，我也写不清楚，画图比较好，也就几种情况：</li>
 <li>father 的 ptr 数目（度）&lt; m？</li>
 <li>father 的 ptr 数目（度）= m？</li>
 <li>这个分裂的结点是root？</li>
-</ol>
-</li>
-</ol>
-</li>
+</ol></li>
 <li>构造：不断插入</li>
 </ol>
-<p><strong><kbd>「B+」</kbd></strong></p>
-<ol>
-<li>注意和B树的区别：<ol>
-<li>m 还是 m + 1？</li>
-<li>看清楚上一层的key实则是子树的key的最大值</li>
-<li>最底层从左到右排列就是原表（有序）</li>
-</ol>
-</li>
-<li>插入：<ol>
-<li>平衡维持：分裂</li>
-<li>看ppt吧，我也写不清楚，画图比较好，也就几种情况：<ol>
-<li>father 的 ptr 数目（度）&lt; m？</li>
-<li>father 的 ptr 数目（度）= m？</li>
-<li>这个分裂的结点是root？</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
+<p><strong><kbd>「B+」</kbd></strong> 1. 注意和B树的区别： 1. m 还是 m + 1？ 2. 看清楚上一层的key实则是子树的key的最大值 3. 最底层从左到右排列就是原表（有序） 2. 插入： 1. 平衡维持：分裂 2. 看ppt吧，我也写不清楚，画图比较好，也就几种情况： 1. father 的 ptr 数目（度）&lt; m？ 2. father 的 ptr 数目（度）= m？ 3. 这个分裂的结点是root？</p>
 <p><strong><kbd>「Hash」</kbd></strong></p>
-<ol>
-<li>两个问题：<ol>
+<ol type="1">
+<li>两个问题：
+<ol type="1">
 <li>均匀的散列函数（简单快速）</li>
 <li>解决冲突的方案</li>
-</ol>
-</li>
-<li>Hash函数：<ol>
+</ol></li>
+<li>Hash函数：
+<ol type="1">
 <li>「直接定址法」：<code>Hash(key) = a * key + b</code>（适合相对连续的数字）</li>
 <li>「数字分析法」：选择近乎随机的某几位（书上讲的好点）</li>
 <li>「除留余数法」：<code>Hash(key) = key % p</code></li>
 <li>「平方取中法」：一般取散列地址总数为 8 的 r 次幂，则取平方数中间的 r 位</li>
 <li>「折叠法」：<code>123456789</code> -&gt; <code>123+456+789</code></li>
-</ol>
-</li>
-<li>冲突解决：<ol>
+</ol></li>
+<li>冲突解决：
+<ol type="1">
 <li>「开放地址法」：线性探测法、二次探测法、伪随机探测法（书上例子挺好的，摘在下面）</li>
 <li>「再哈希法」</li>
 <li>「链地址法」：每一个 key 都对应一个链表</li>
 <li>「公共区溢出法」（书上没有）</li>
-</ol>
-</li>
+</ol></li>
 </ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Hash(key) = key % <span class="number">11</span>;</span><br><span class="line">[\ \ \ \ \ <span class="number">60</span> <span class="number">17</span> <span class="number">29</span> \ \ \]</span><br><span class="line"><span class="comment"># 插入 38， 且产生随机数 9</span></span><br><span class="line"><span class="comment"># 线性探测：(d = 3)</span></span><br><span class="line">[\ \ \ \ \ <span class="number">60</span> <span class="number">17</span> <span class="number">29</span> <span class="number">38</span> \ \]</span><br><span class="line"><span class="comment"># 二次：（d = -1)</span></span><br><span class="line">[\ \ \ \ <span class="number">38</span> <span class="number">60</span> <span class="number">17</span> <span class="number">29</span> \ \ \]</span><br><span class="line"><span class="comment"># 伪随机：(d = 9)</span></span><br><span class="line">[\ \ \ <span class="number">38</span> \ <span class="number">60</span> <span class="number">17</span> <span class="number">29</span> \ \ \]</span><br></pre></td></tr></table></figure>
-<div class="table-container">
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>方法</th>
 <th>ASL(success)</th>
 <th>ASL(fail)</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>线性探测</td>
-<td>$\frac 1 2(1+\frac 1{1-\alpha})$</td>
-<td>$\frac 1 2(1+\frac 1{(1-\alpha})^2)$</td>
+<td><span class="math inline">\(\frac 1 2(1+\frac 1{1-\alpha})\)</span></td>
+<td><span class="math inline">\(\frac 1 2(1+\frac 1{(1-\alpha})^2)\)</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>二次/伪随机</td>
-<td>$-\frac 1 \alpha \ln(1-\alpha)$</td>
-<td>$\frac 1 {1-\alpha}$</td>
+<td><span class="math inline">\(-\frac 1 \alpha \ln(1-\alpha)\)</span></td>
+<td><span class="math inline">\(\frac 1 {1-\alpha}\)</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>链地址法</td>
-<td>$1 + \frac \alpha 2$</td>
-<td>$\alpha + e^{-\alpha}$</td>
+<td><span class="math inline">\(1 + \frac \alpha 2\)</span></td>
+<td><span class="math inline">\(\alpha + e^{-\alpha}\)</span></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="7、图"><a href="#7、图" class="headerlink" title="7、图"></a>7、图</h3><p>基础概念：自己看离散「超凶」：<span class="btn 2020/05/28/study/ComputerScience/DiscreteMath/GraphTheory/"><a class="button" href="图的基本概念" title="图的基本概念">图的基本概念</a></span></p>
-<ol>
-<li>存储方式<ol>
-<li>「邻接矩阵」：<code>A[i, j] = ( &lt; i, j &gt; in E) ? weight(i, j) : ((i == j) ? 0 : UNDEFINED)</code><ol>
+<h3 id="图">7、图</h3>
+<p>基础概念：自己看离散「超凶」：<span class="btn 2020/05/28/study/ComputerScience/DiscreteMath/GraphTheory/"><a class="button" href="图的基本概念" title="图的基本概念">图的基本概念</a></span></p>
+<ol type="1">
+<li>存储方式
+<ol type="1">
+<li>「邻接矩阵」：<code>A[i, j] = ( &lt; i, j &gt; in E) ? weight(i, j) : ((i == j) ? 0 : UNDEFINED)</code>
+<ol type="1">
 <li>稀疏时严重的空间浪费！</li>
-</ol>
-</li>
-<li>「邻接表」：<code>adj[i]</code> 为 i 的出边（无向图：相临边）<ol>
+</ol></li>
+<li>「邻接表」：<code>adj[i]</code> 为 i 的出边（无向图：相临边）
+<ol type="1">
 <li>逆临接表</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>遍历（<del>不会吧不会吧，不会真的有人不会吧</del>）<ol>
+</ol></li>
+</ol></li>
+<li>遍历（<del>不会吧不会吧，不会真的有人不会吧</del>）
+<ol type="1">
 <li>「DFS」</li>
 <li>「BFS」</li>
-</ol>
-</li>
-<li>「MST」<ol>
+</ol></li>
+<li>「MST」
+<ol type="1">
 <li>「Prim」：增加点</li>
 <li>「Kruskal」：不断连接连通分支</li>
-</ol>
-</li>
-<li>AOV<ol>
+</ol></li>
+<li>AOV
+<ol type="1">
 <li>「拓扑排序」：O(n+e)</li>
-</ol>
-</li>
-<li>AOE<ol>
-<li>关键路径：<ol>
-<li>路径上的点都是关键活动点 是 该路径为关键路径的 <strong>_</strong> 条件？</li>
-<li>最早可能开始时间 <code>e[k]</code> = 最迟允许开始时间 <code>l[k]</code> </li>
+</ol></li>
+<li>AOE
+<ol type="1">
+<li>关键路径：
+<ol type="1">
+<li>路径上的点都是关键活动点 是 该路径为关键路径的 _____ 条件？</li>
+<li>最早可能开始时间 <code>e[k]</code> = 最迟允许开始时间 <code>l[k]</code></li>
 <li>有点像DP（拓扑）？怎么手算？</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>最短路径<ol>
-<li><strong>「Dijkstra算法」</strong><ol>
+</ol></li>
+</ol></li>
+<li>最短路径
+<ol type="1">
+<li><strong>「Dijkstra算法」</strong>
+<ol type="1">
 <li>念叨一句使用条件：『无负权边』</li>
-</ol>
-</li>
+</ol></li>
 <li><strong>「Floyd算法」</strong>（ppt 里面没有）</li>
 <li>「SPFA」！！（书上 ppt 都没有）：无负边的时候，绝对是最快的</li>
+</ol></li>
 </ol>
-</li>
-</ol>
-<h3 id="8、排序"><a href="#8、排序" class="headerlink" title="8、排序"></a>8、排序</h3><p>简单提几句就行了、叭、、</p>
-<div class="table-container">
+<h3 id="排序">8、排序</h3>
+<p>简单提几句就行了、叭、、</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>alg</th>
 <th>时间复杂度</th>
 <th>稳定？</th>
@@ -979,62 +947,61 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>插入</td>
-<td>$O(n^2)$</td>
+<td><span class="math inline">\(O(n^2)\)</span></td>
 <td>y</td>
 <td>想想打牌的时候理牌的过程</td>
 </tr>
-<tr>
+<tr class="even">
 <td>选择</td>
-<td>$O(n^2)$</td>
+<td><span class="math inline">\(O(n^2)\)</span></td>
 <td>n</td>
 <td>选剩下的最大的扔到最后</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>希尔</td>
-<td>$O(n log n)$</td>
+<td><span class="math inline">\(O(n log n)\)</span></td>
 <td>n</td>
 <td>玄学算法复杂度（缩小增量）</td>
 </tr>
-<tr>
+<tr class="even">
 <td>冒泡</td>
-<td>$O(n^2)$</td>
+<td><span class="math inline">\(O(n^2)\)</span></td>
 <td>y</td>
 <td>冒泡赛</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>「快排」</td>
-<td>$O(n log n)$</td>
+<td><span class="math inline">\(O(n log n)\)</span></td>
 <td>n</td>
 <td>重点</td>
 </tr>
-<tr>
+<tr class="even">
 <td>堆排</td>
-<td>$O(n log n)$</td>
+<td><span class="math inline">\(O(n log n)\)</span></td>
 <td>n</td>
 <td>建立（升序建立大根堆）堆，抽堆顶，维护堆</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>归并</td>
-<td>$O(n log n)$</td>
+<td><span class="math inline">\(O(n log n)\)</span></td>
 <td>y</td>
 <td>常见（C++ STL）</td>
 </tr>
-<tr>
+<tr class="even">
 <td>基数</td>
-<td>$O(n log n)$</td>
+<td><span class="math inline">\(O(n log n)\)</span></td>
 <td>n</td>
 <td>分配、收集</td>
 </tr>
 </tbody>
 </table>
-</div>
 <p><strong><kbd>「快速排序」</kbd></strong>：主要思想是选一个数，做交换，让序列中左边的数都比这个数小，右边的数都比这个数大。</p>
 <p>q一下以前见过的一个讲的很好的解释【找不到链接了，如果找到了请评论区发一下】：</p>
 <blockquote>
 <p>快排可以用挖坑 + 填坑来理解（这个看ppt上有一个图）</p>
-<ol>
+<ol type="1">
 <li>记住pivot，然后把pivot的位置上挖个坑，并且设置 <code>i, j = l, r</code></li>
 <li>在右侧（j 从右向左）找一个比pivot大的，填到坑里，并且把 j 这里挖个坑【此时若出现 i &gt;= j 转 4 】</li>
 <li>在左侧（i 从左向右）找一个比pivot小的，填到坑里，并且把 i 这里挖个坑【此时若出现 i &gt;= j 转 4 】</li>
@@ -1047,23 +1014,41 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>不保证正确。嘿嘿😶</p>
 </blockquote>
 <p>插入排序</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/insertionSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/insertionSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="插入排序"></p>
+<figure>
+<img src="https://www.runoob.com/wp-content/uploads/2019/03/insertionSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/insertionSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="插入排序"><figcaption aria-hidden="true">插入排序</figcaption>
+</figure>
 <p>希尔排序</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_shellsort_anim.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_shellsort_anim.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="希尔排序"></p>
+<figure>
+<img src="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_shellsort_anim.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_shellsort_anim.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="希尔排序"><figcaption aria-hidden="true">希尔排序</figcaption>
+</figure>
 <p>冒泡排序</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/bubbleSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/bubbleSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="冒泡排序"></p>
+<figure>
+<img src="https://www.runoob.com/wp-content/uploads/2019/03/bubbleSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/bubbleSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="冒泡排序"><figcaption aria-hidden="true">冒泡排序</figcaption>
+</figure>
 <p>快速排序</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/quickSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/quickSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="快速排序"></p>
+<figure>
+<img src="https://www.runoob.com/wp-content/uploads/2019/03/quickSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/quickSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="快速排序"><figcaption aria-hidden="true">快速排序</figcaption>
+</figure>
 <p>选择排序</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/selectionSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/selectionSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="选择排序"></p>
+<figure>
+<img src="https://www.runoob.com/wp-content/uploads/2019/03/selectionSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/selectionSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="选择排序"><figcaption aria-hidden="true">选择排序</figcaption>
+</figure>
 <p>堆排序</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/heapSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/heapSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="堆排序1"></p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_heapsort_anim.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_heapsort_anim.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="堆排序2"></p>
+<figure>
+<img src="https://www.runoob.com/wp-content/uploads/2019/03/heapSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/heapSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="堆排序1"><figcaption aria-hidden="true">堆排序1</figcaption>
+</figure>
+<figure>
+<img src="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_heapsort_anim.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/Sorting_heapsort_anim.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="堆排序2"><figcaption aria-hidden="true">堆排序2</figcaption>
+</figure>
 <p>归并排序</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/mergeSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/mergeSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="归并排序"></p>
+<figure>
+<img src="https://www.runoob.com/wp-content/uploads/2019/03/mergeSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/mergeSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="归并排序"><figcaption aria-hidden="true">归并排序</figcaption>
+</figure>
 <p>基数排序</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/radixSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/radixSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="基数排序"></p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<figure>
+<img src="https://www.runoob.com/wp-content/uploads/2019/03/radixSort.gif" class="lazyload" data-srcset="https://www.runoob.com/wp-content/uploads/2019/03/radixSort.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="基数排序"><figcaption aria-hidden="true">基数排序</figcaption>
+</figure>
+
   
   
     
@@ -1165,7 +1150,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>KGCode Intro</p>
           <p class='content'>For KGCode
 
-KGCode</p>
+KGCode
+</p>
         </a>
       
       
@@ -1174,13 +1160,13 @@ KGCode</p>
           <p class='content'>19-20-3复习
 
 考试时间
+
             数学分析
             
-爆炸【危】 08-17 09:00-11:30(星期一)
+爆炸【危】
+08-17 09:00-11:30(星期一)
 
-
-            近代史
-    ...</p>
+            近...</p>
         </a>
       
     </div>
@@ -1223,7 +1209,7 @@ KGCode</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0%E3%80%81%E7%BB%AA%E8%AE%BA"><span class="toc-text">0、绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="toc-text">碎碎念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0%E7%AE%97%E6%B3%95"><span class="toc-text">评估算法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%BA%BF%E6%80%A7%E8%A1%A8"><span class="toc-text">1、线性表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97"><span class="toc-text">2、栈与队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%B8%B2"><span class="toc-text">3、串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%95%B0%E7%BB%84%E5%92%8C%E5%B9%BF%E4%B9%89%E8%A1%A8"><span class="toc-text">4、数组和广义表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%A0%91"><span class="toc-text">5、树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E6%9F%A5%E6%89%BE"><span class="toc-text">6、查找</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%EF%BC%88BST%EF%BC%89"><span class="toc-text">二叉搜索树（BST）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E5%9B%BE"><span class="toc-text">7、图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E6%8E%92%E5%BA%8F"><span class="toc-text">8、排序</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%AA%E8%AE%BA"><span class="toc-text">0、绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="toc-text">碎碎念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0%E7%AE%97%E6%B3%95"><span class="toc-text">评估算法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A1%A8"><span class="toc-text">1、线性表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97"><span class="toc-text">2、栈与队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B2"><span class="toc-text">3、串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%92%8C%E5%B9%BF%E4%B9%89%E8%A1%A8"><span class="toc-text">4、数组和广义表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%91"><span class="toc-text">5、树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE"><span class="toc-text">6、查找</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91bst"><span class="toc-text">二叉搜索树（BST）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE"><span class="toc-text">7、图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-text">8、排序</span></a></li></ol>
     </div>
   </section>
 
@@ -1870,14 +1856,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

@@ -472,128 +472,171 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <ol>
+  <ol type="1">
 <li>矩估计</li>
 <li>极大似然估计</li>
 <li>评判估计量的方法</li>
 </ol>
 <span id="more"></span>
-<h2 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h2><h3 id="两种常用的参数估计方法"><a href="#两种常用的参数估计方法" class="headerlink" title="两种常用的参数估计方法"></a>两种常用的参数估计方法</h3><h4 id="矩估计法"><a href="#矩估计法" class="headerlink" title="矩估计法"></a>矩估计法</h4><blockquote>
+<h2 id="参数估计">参数估计</h2>
+<h3 id="两种常用的参数估计方法">两种常用的参数估计方法</h3>
+<h4 id="矩估计法">矩估计法</h4>
+<blockquote>
 <ul>
-<li>辛钦大数定律：样本较大时，$A_r=\frac{1}{n}\sum_{i=1}^nX_i^r\rightarrow EX_r$</li>
+<li>辛钦大数定律：样本较大时，<span class="math inline">\(A_r=\frac{1}{n}\sum_{i=1}^nX_i^r\rightarrow EX_r\)</span></li>
 <li>格里汶科定理：格里汶科定理是指当样本容量n→∞时，经验分布函数以概率1一致收敛于总体的分布函数。</li>
 </ul>
 </blockquote>
-<p><strong>Def</strong>（矩估计）设总体 $X$ 的分布 $f(x;\theta_1,…,\theta_k)$ 中有 $k$ 个位置的参数 $\theta_{1..k}$，$(X_1,…,X_n)$ 时总体 $X$ 的样本。若总体 $X$ 的$k$ 阶原点矩 $EX_k$ 存在，并且 $\alpha_r(\theta_1,…\theta_k)=EX^r$ 时总体 $X$ 的 $r$ 阶原点矩，记 $A_r$ 为样本的 $r$ 阶原点矩，由：</p>
-<script type="math/tex; mode=display">
-\alpha_r(\theta_1,\dots, \theta_k)=A_r(\theta_1,\dots,\theta_r)\qquad r=1,...,k</script><p>解得的 $\hat\theta_r=\hat\theta_r(X_1,…,X_k)$，并以 $\hat\theta_r$ 作为参数的估计量，称 $\hat\theta_r$ 为参数 $\theta_r$ 的估计量。</p>
+<p><strong>Def</strong>（矩估计）设总体 <span class="math inline">\(X\)</span> 的分布 <span class="math inline">\(f(x;\theta_1,...,\theta_k)\)</span> 中有 <span class="math inline">\(k\)</span> 个位置的参数 <span class="math inline">\(\theta_{1..k}\)</span>，<span class="math inline">\((X_1,...,X_n)\)</span> 时总体 <span class="math inline">\(X\)</span> 的样本。若总体 <span class="math inline">\(X\)</span> 的<span class="math inline">\(k\)</span> 阶原点矩 <span class="math inline">\(EX_k\)</span> 存在，并且 <span class="math inline">\(\alpha_r(\theta_1,...\theta_k)=EX^r\)</span> 时总体 <span class="math inline">\(X\)</span> 的 <span class="math inline">\(r\)</span> 阶原点矩，记 <span class="math inline">\(A_r\)</span> 为样本的 <span class="math inline">\(r\)</span> 阶原点矩，由：</p>
+<p><span class="math display">\[
+\alpha_r(\theta_1,\dots, \theta_k)=A_r(\theta_1,\dots,\theta_r)\qquad r=1,...,k
+\]</span></p>
+<p>解得的 <span class="math inline">\(\hat\theta_r=\hat\theta_r(X_1,...,X_k)\)</span>，并以 <span class="math inline">\(\hat\theta_r\)</span> 作为参数的估计量，称 <span class="math inline">\(\hat\theta_r\)</span> 为参数 <span class="math inline">\(\theta_r\)</span> 的估计量。</p>
 <blockquote>
-<ol>
+<ol type="1">
 <li>不唯一（依赖于 r）</li>
-<li>$EX^k$ 有限</li>
-<li>要求 $n$ 比较大</li>
+<li><span class="math inline">\(EX^k\)</span> 有限</li>
+<li>要求 <span class="math inline">\(n\)</span> 比较大</li>
 </ol>
 </blockquote>
-<h4 id="极大似然估计"><a href="#极大似然估计" class="headerlink" title="极大似然估计"></a>极大似然估计</h4><blockquote>
-<p>基本思想：$X\sim P(X;\theta)\rightarrow P(X=x)$<br>使得：$\hat\theta$ 能使得出现样本 $X_{1..k}$ 的概率最大</p>
-</blockquote>
-<p><strong>Def</strong>（似然函数）设总体 $X$ 的分布为 $f(x;\theta_1,\dots,\theta_k)$，其中 $\theta_{1\dots k}$ 为未知参数，$(X_1,\dots,X_n)$ 为简单随机样本，称</p>
-<script type="math/tex; mode=display">
-L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)</script><p><strong>Def</strong>（MLE-极大似然估计）称 $\hat\theta =\mathrm{argmax} L(\theta)$ 为 $\theta$ 最大似然估计量</p>
+<h4 id="极大似然估计">极大似然估计</h4>
 <blockquote>
-<p>求法：</p>
-<ol>
-<li>写似然函数</li>
-<li>优化似然函数</li>
-</ol>
-<p>例如：假设总体服从参数为 $p$ 的 0-1 分布，$(X_1,…,X_n)$ 为样本，求 $p$ 的最大似然估计</p>
-<ol>
-<li>似然函数为：$L(x_1,…,x_n;p)=p^{n\bar X}(1-p)^{n-n\bar X}$</li>
-<li>取对数：$\ln L=n\bar X\ln p+n(1-\bar X)\ln (1-p)$</li>
-<li>对 $p$ 求偏导，取得极值 $\hat p=\bar X$</li>
+<p>基本思想：<span class="math inline">\(X\sim P(X;\theta)\rightarrow P(X=x)\)</span> 使得：<span class="math inline">\(\hat\theta\)</span> 能使得出现样本 <span class="math inline">\(X_{1..k}\)</span> 的概率最大</p>
+</blockquote>
+<p><strong>Def</strong>（似然函数）设总体 <span class="math inline">\(X\)</span> 的分布为 <span class="math inline">\(f(x;\theta_1,\dots,\theta_k)\)</span>，其中 <span class="math inline">\(\theta_{1\dots k}\)</span> 为未知参数，<span class="math inline">\((X_1,\dots,X_n)\)</span> 为简单随机样本，称</p>
+<p><span class="math display">\[
+L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)
+\]</span></p>
+<p><strong>Def</strong>（MLE-极大似然估计）称 <span class="math inline">\(\hat\theta =\mathrm{argmax} L(\theta)\)</span> 为 <span class="math inline">\(\theta\)</span> 最大似然估计量</p>
+<blockquote>
+<p>求法： 1. 写似然函数 2. 优化似然函数</p>
+<p>例如：假设总体服从参数为 <span class="math inline">\(p\)</span> 的 0-1 分布，<span class="math inline">\((X_1,...,X_n)\)</span> 为样本，求 <span class="math inline">\(p\)</span> 的最大似然估计</p>
+<ol type="1">
+<li>似然函数为：<span class="math inline">\(L(x_1,...,x_n;p)=p^{n\bar X}(1-p)^{n-n\bar X}\)</span></li>
+<li>取对数：<span class="math inline">\(\ln L=n\bar X\ln p+n(1-\bar X)\ln (1-p)\)</span></li>
+<li>对 <span class="math inline">\(p\)</span> 求偏导，取得极值 <span class="math inline">\(\hat p=\bar X\)</span></li>
 </ol>
 </blockquote>
 <p><em>常见的有</em>：</p>
-<ol>
-<li>$\displaystyle X\sim P(\lambda)\Rightarrow \hat \lambda=\bar X$</li>
-<li>$\displaystyle X\sim e(\lambda)\Rightarrow \hat \lambda=\frac{1}{\bar{X}}$</li>
-<li>0-1 分布：$\hat p = \bar X$</li>
-<li>$X\sim U(a,b)\Rightarrow,a=\min x_i,b=\max x_i,\quad i = 1,…,n$</li>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle X\sim P(\lambda)\Rightarrow \hat \lambda=\bar X\)</span></li>
+<li><span class="math inline">\(\displaystyle X\sim e(\lambda)\Rightarrow \hat \lambda=\frac{1}{\bar{X}}\)</span></li>
+<li>0-1 分布：<span class="math inline">\(\hat p = \bar X\)</span></li>
+<li><span class="math inline">\(X\sim U(a,b)\Rightarrow,a=\min x_i,b=\max x_i,\quad i = 1,...,n\)</span></li>
 </ol>
-<p><em>对于正态分布</em> $\displaystyle X\sim N(\mu, \sigma^2)$，注意对于 $\sigma^2$ 整体求导，得到：</p>
-<script type="math/tex; mode=display">
+<p><em>对于正态分布</em> <span class="math inline">\(\displaystyle X\sim N(\mu, \sigma^2)\)</span>，注意对于 <span class="math inline">\(\sigma^2\)</span> 整体求导，得到：</p>
+<p><span class="math display">\[
 \begin{cases}
 \hat \mu=\bar X\\
 \hat{\sigma^2} = \frac{1}{n}\sum_{i=1}^n(X_i-\bar X)^2=B_2
-\end{cases}</script><p><strong>Thm</strong>（最大似然估计的不变性）</p>
-<h3 id="评选估计量的标准"><a href="#评选估计量的标准" class="headerlink" title="评选估计量的标准"></a>评选估计量的标准</h3><ol>
+\end{cases}
+\]</span></p>
+<p><strong>Thm</strong>（最大似然估计的不变性）</p>
+<h3 id="评选估计量的标准">评选估计量的标准</h3>
+<ol type="1">
 <li>无偏性</li>
 <li>有效性</li>
 <li>相合性</li>
 </ol>
-<h4 id="无偏性"><a href="#无偏性" class="headerlink" title="无偏性"></a>无偏性</h4><p><strong>Def</strong>（无偏性）若 $\hat\theta(X_1,…,X_n)$ 为 $\theta$ 的估计量，若$\hat \theta(X_1,..,X_n)$ 的数学期望 $E\hat\theta$ 存在，且对于任一的 $\theta \in \Theta$，$E\hat\theta=\theta$ 则称 $\hat\theta$ 为 $\theta$ 的一个无偏估计量</p>
+<h4 id="无偏性">无偏性</h4>
+<p><strong>Def</strong>（无偏性）若 <span class="math inline">\(\hat\theta(X_1,...,X_n)\)</span> 为 <span class="math inline">\(\theta\)</span> 的估计量，若<span class="math inline">\(\hat \theta(X_1,..,X_n)\)</span> 的数学期望 <span class="math inline">\(E\hat\theta\)</span> 存在，且对于任一的 <span class="math inline">\(\theta \in \Theta\)</span>，<span class="math inline">\(E\hat\theta=\theta\)</span> 则称 <span class="math inline">\(\hat\theta\)</span> 为 <span class="math inline">\(\theta\)</span> 的一个无偏估计量</p>
 <ul>
-<li>$EX$ 为$\mu$ 的无偏估计</li>
-<li>$A_k$ 为 $EX^k$ 的无偏估计</li>
-<li>$ET^2$ 为 $\sigma^2$ 的<strong>渐进</strong>无偏估计</li>
-<li>$ES^2$ 为 $\sigma^2$ 的无偏估计</li>
+<li><span class="math inline">\(EX\)</span> 为<span class="math inline">\(\mu\)</span> 的无偏估计</li>
+<li><span class="math inline">\(A_k\)</span> 为 <span class="math inline">\(EX^k\)</span> 的无偏估计</li>
+<li><span class="math inline">\(ET^2\)</span> 为 <span class="math inline">\(\sigma^2\)</span> 的<strong>渐进</strong>无偏估计</li>
+<li><span class="math inline">\(ES^2\)</span> 为 <span class="math inline">\(\sigma^2\)</span> 的无偏估计</li>
 </ul>
 <p><em>注意</em>：</p>
-<ol>
-<li>若 $\hat\theta$ 是 $\theta$ 的无偏估计，$\hat{g(\theta)}$ 不一定是 $g(\theta)$ 的无偏估计。（除非 $g(\theta)$ 是线性的）</li>
+<ol type="1">
+<li>若 <span class="math inline">\(\hat\theta\)</span> 是 <span class="math inline">\(\theta\)</span> 的无偏估计，<span class="math inline">\(\hat{g(\theta)}\)</span> 不一定是 <span class="math inline">\(g(\theta)\)</span> 的无偏估计。（除非 <span class="math inline">\(g(\theta)\)</span> 是线性的）</li>
 <li>同一个参数的无偏估计不一定唯一</li>
 </ol>
-<h4 id="有效性"><a href="#有效性" class="headerlink" title="有效性"></a>有效性</h4><p><strong>Def</strong>（有效性）若 $\hat\theta_1,\hat\theta_2$ 都是 $\theta$ 的无偏估计，若$D\hat\theta_1\le D\hat\theta_2$ 则称 $\hat\theta_1$ 比 $\hat\theta_2$ 有效。</p>
-<h4 id="相合性"><a href="#相合性" class="headerlink" title="相合性"></a>相合性</h4><p><strong>Def</strong>（相合性）若$\hat\theta(X_1,…,X_n)$ 是 $\theta$ 的一个估计量，若对于任一 $\varepsilon&gt;0$ 有：</p>
-<script type="math/tex; mode=display">
-\lim_{n\rightarrow\infty}P(|\hat\theta-\theta|\ge \varepsilon)=0</script><p>则称 $\hat\theta$ 为 $\theta$ 的相合估计量</p>
-<p><strong>Def</strong>（均方误差）设 $\hat\theta$ 为 $\theta$ 的一个估计量，</p>
+<h4 id="有效性">有效性</h4>
+<p><strong>Def</strong>（有效性）若 <span class="math inline">\(\hat\theta_1,\hat\theta_2\)</span> 都是 <span class="math inline">\(\theta\)</span> 的无偏估计，若<span class="math inline">\(D\hat\theta_1\le D\hat\theta_2\)</span> 则称 <span class="math inline">\(\hat\theta_1\)</span> 比 <span class="math inline">\(\hat\theta_2\)</span> 有效。</p>
+<h4 id="相合性">相合性</h4>
+<p><strong>Def</strong>（相合性）若<span class="math inline">\(\hat\theta(X_1,...,X_n)\)</span> 是 <span class="math inline">\(\theta\)</span> 的一个估计量，若对于任一 <span class="math inline">\(\varepsilon&gt;0\)</span> 有：</p>
+<p><span class="math display">\[
+\lim_{n\rightarrow\infty}P(|\hat\theta-\theta|\ge \varepsilon)=0
+\]</span></p>
+<p>则称 <span class="math inline">\(\hat\theta\)</span> 为 <span class="math inline">\(\theta\)</span> 的相合估计量</p>
+<p><strong>Def</strong>（均方误差）设 <span class="math inline">\(\hat\theta\)</span> 为 <span class="math inline">\(\theta\)</span> 的一个估计量，</p>
 <ul>
-<li>称 $E(\hat\theta - \theta)^2$ 为 $\hat \theta$ 估计 $\theta$ 时的均方误差</li>
-<li>称 $b=E(\hat\theta - \theta)$ 为 $\hat \theta$ 估计 $\theta$ 时的偏差</li>
+<li>称 <span class="math inline">\(E(\hat\theta - \theta)^2\)</span> 为 <span class="math inline">\(\hat \theta\)</span> 估计 <span class="math inline">\(\theta\)</span> 时的均方误差</li>
+<li>称 <span class="math inline">\(b=E(\hat\theta - \theta)\)</span> 为 <span class="math inline">\(\hat \theta\)</span> 估计 <span class="math inline">\(\theta\)</span> 时的偏差</li>
 </ul>
-<p><strong>Thm</strong>：若 $D\hat\theta$ 存在，则 $E(\hat\theta-\theta)^2=D\hat\theta +b(\theta)^2$</p>
-<p><strong>Thm</strong>（Markov 不等式）$E|X|^k$ 则对与任意的 $\varepsilon&gt;0$，有$\displaystyle P(|X|&gt;\varepsilon)\le \frac{E|X|^k}{\varepsilon^k}$</p>
-<p><strong>Thm</strong>（相合性判定定理）若$\lim D\hat\theta=\lim b(\theta)=\lim E(\hat\theta-\theta)=0$ 则称 $\hat\theta$ 是 $\theta$ 的相合估计量</p>
-<p>例如：证明 $X_1,…$ 是来自总体$N(\mu,\sigma^2)$ 的容量为 n 的简单随机样本，则$S^2=\frac1{n-1}\sum(X_i-\bar X)^2$ 和 $B_2=\frac1{n}\sum(X_i-\bar X)^2$ 都是 $\sigma$ 的相合估计</p>
+<p><strong>Thm</strong>：若 <span class="math inline">\(D\hat\theta\)</span> 存在，则 <span class="math inline">\(E(\hat\theta-\theta)^2=D\hat\theta +b(\theta)^2\)</span></p>
+<p><strong>Thm</strong>（Markov 不等式）<span class="math inline">\(E|X|^k\)</span> 则对与任意的 <span class="math inline">\(\varepsilon&gt;0\)</span>，有<span class="math inline">\(\displaystyle P(|X|&gt;\varepsilon)\le \frac{E|X|^k}{\varepsilon^k}\)</span></p>
+<p><strong>Thm</strong>（相合性判定定理）若<span class="math inline">\(\lim D\hat\theta=\lim b(\theta)=\lim E(\hat\theta-\theta)=0\)</span> 则称 <span class="math inline">\(\hat\theta\)</span> 是 <span class="math inline">\(\theta\)</span> 的相合估计量</p>
+<p>例如：证明 <span class="math inline">\(X_1,...\)</span> 是来自总体<span class="math inline">\(N(\mu,\sigma^2)\)</span> 的容量为 n 的简单随机样本，则<span class="math inline">\(S^2=\frac1{n-1}\sum(X_i-\bar X)^2\)</span> 和 <span class="math inline">\(B_2=\frac1{n}\sum(X_i-\bar X)^2\)</span> 都是 <span class="math inline">\(\sigma\)</span> 的相合估计</p>
 <p><strong>Thm</strong>：用矩估计得到的估计量都具有相合性</p>
-<h3 id="区间估计"><a href="#区间估计" class="headerlink" title="区间估计"></a>区间估计</h3><p><strong>Def</strong>（置信区间）设 $X_1,…$ 是来自总体$X$ 容量为 n 的简单随机样本，$\theta$ 是一个参数，$\hat\theta_1,\hat\theta_2$ 是两个统计量，若给定$\alpha$ 满足：$P(\hat\theta_1&lt;\theta &lt; \hat\theta_2)=1-\alpha$ 则称区间 $(\hat\theta_1,\hat\theta_2)$ 是参数 $\theta$ 的置信度为 $1-\alpha$ 的区间估计，$\hat\theta_1,\hat\theta_2$ 为置信区间的下限、上限。</p>
+<h3 id="区间估计">区间估计</h3>
+<p><strong>Def</strong>（置信区间）设 <span class="math inline">\(X_1,...\)</span> 是来自总体<span class="math inline">\(X\)</span> 容量为 n 的简单随机样本，<span class="math inline">\(\theta\)</span> 是一个参数，<span class="math inline">\(\hat\theta_1,\hat\theta_2\)</span> 是两个统计量，若给定<span class="math inline">\(\alpha\)</span> 满足：<span class="math inline">\(P(\hat\theta_1&lt;\theta &lt; \hat\theta_2)=1-\alpha\)</span> 则称区间 <span class="math inline">\((\hat\theta_1,\hat\theta_2)\)</span> 是参数 <span class="math inline">\(\theta\)</span> 的置信度为 <span class="math inline">\(1-\alpha\)</span> 的区间估计，<span class="math inline">\(\hat\theta_1,\hat\theta_2\)</span> 为置信区间的下限、上限。</p>
 <ul>
-<li>对于离散型随机变量，若无法达到 $P=1-\alpha$ 则我们找到尽量接近的值使得$P\ge 1-\alpha$</li>
+<li>对于离散型随机变量，若无法达到 <span class="math inline">\(P=1-\alpha\)</span> 则我们找到尽量接近的值使得<span class="math inline">\(P\ge 1-\alpha\)</span></li>
 </ul>
-<div class="note quote"><h4 id="（已知-σ）-如何求参数-theta-的置信区间？"><a href="#（已知-σ）-如何求参数-theta-的置信区间？" class="headerlink" title="（已知 σ） 如何求参数 $\theta$ 的置信区间？"></a>（已知 σ） 如何求参数 $\theta$ 的置信区间？</h4><blockquote><p>若 $X\sim N(\mu,\sigma^2)$ $\sigma^2$ 已知，$\mu$ 未知，求 $\mu$ 置信水平为 1-α 的置信区间</p></blockquote><p>注意到：$\displaystyle\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1)$</p><p>则：$P(\displaystyle|\frac{\bar X-\mu}{\sigma/\sqrt n}|&lt;z_{\alpha/2})=1-\alpha$</p><p>即：$P(\bar X-\frac{\sigma}{\sqrt n}z_{\alpha/2}&lt;\mu&lt;\bar X+\frac{\sigma}{\sqrt n}z_{\alpha/2})=1-\alpha$，其中$z_{\alpha}$ 为上侧 α 分位点</p></div>
+<div class="note quote"><h4 id="已知-σ-如何求参数-theta-的置信区间">（已知 σ） 如何求参数 <span class="math inline">\(\theta\)</span> 的置信区间？</h4><blockquote><p>若 <span class="math inline">\(X\sim N(\mu,\sigma^2)\)</span> <span class="math inline">\(\sigma^2\)</span> 已知，<span class="math inline">\(\mu\)</span> 未知，求 <span class="math inline">\(\mu\)</span> 置信水平为 1-α 的置信区间</p></blockquote><p>注意到：<span class="math inline">\(\displaystyle\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1)\)</span></p><p>则：<span class="math inline">\(P(\displaystyle|\frac{\bar X-\mu}{\sigma/\sqrt n}|&lt;z_{\alpha/2})=1-\alpha\)</span></p><p>即：<span class="math inline">\(P(\bar X-\frac{\sigma}{\sqrt n}z_{\alpha/2}&lt;\mu&lt;\bar X+\frac{\sigma}{\sqrt n}z_{\alpha/2})=1-\alpha\)</span>，其中<span class="math inline">\(z_{\alpha}\)</span> 为上侧 α 分位点</p></div>
 <blockquote>
 <p>置信区间越短 → 精度高</p>
 </blockquote>
-<div class="note quote"><ol><li>寻求样本和 $\theta$ 的函数 $W(X_1,…,X_n;\theta)$ 其分布不依赖于 $\alpha$ 和其他位置参数。（<em>枢轴量</em>）</li><li>构造常数 $a,b$ 使得 $P(a&lt;W&lt;b)=1-\alpha$</li><li>从中解出 $\hat\theta_1(X_1,…,X_n),\hat\theta_2(X_1,…,X_n)$ 得到置信区间</li></ol></div>
-<h4 id="单个正态总体的置信区间"><a href="#单个正态总体的置信区间" class="headerlink" title="单个正态总体的置信区间"></a>单个正态总体的置信区间</h4><h5 id="μ-的置信区间"><a href="#μ-的置信区间" class="headerlink" title="μ 的置信区间"></a>μ 的置信区间</h5><p><em>$\sigma^2$ 已知</em>，利用 $W=\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1)$ 置信区间为：</p>
-<script type="math/tex; mode=display">
-\left(\bar X-\frac{\sigma}{\sqrt n}z_{\alpha/2},\bar X+\frac{\sigma}{\sqrt n}z_{\alpha/2}\right)</script><p><em>$\sigma^2$ 未知</em>，利用 $W=\frac{\bar X-\mu}{S/\sqrt n}\sim t(n-1)$</p>
-<script type="math/tex; mode=display">
-\left(\bar{X}-\frac{S}{\sqrt{n}}t_{\alpha/2} (n-1),\bar{X}+\frac{S}{\sqrt{n}}t_{\alpha/2} (n-1)\right)</script><h5 id="σ2-的置信区间"><a href="#σ2-的置信区间" class="headerlink" title="σ2 的置信区间"></a>σ2 的置信区间</h5><p><em>μ未知</em>，利用 $\frac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)$，置信区间为：</p>
-<script type="math/tex; mode=display">
-\left(\frac{(n-1)S^2}{\chi^2_{\alpha/2}(n-1)},\frac{(n-1)S^2}{\chi^2_{1-\alpha/2}(n-1)}\right)</script><p><em>μ已知</em>，在上式 $S^2$ 中用 $\mu$ 代替 $\bar X$</p>
-<script type="math/tex; mode=display">
-\left(\frac{\sum (X_i-\mu)^2}{\chi^2_{\alpha/2}(n-1)},\frac{\sum (X_i-\mu)^2}{\chi^2_{1-\alpha/2}(n-1)}\right)</script><h4 id="两个正态总体的均值差和方差比的置信区间"><a href="#两个正态总体的均值差和方差比的置信区间" class="headerlink" title="两个正态总体的均值差和方差比的置信区间"></a>两个正态总体的均值差和方差比的置信区间</h4><h5 id="μ1-μ2-的置信区间"><a href="#μ1-μ2-的置信区间" class="headerlink" title="μ1-μ2 的置信区间"></a>μ1-μ2 的置信区间</h5><p><em>σ1, σ2 已知</em>，利用：</p>
-<script type="math/tex; mode=display">
-\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1^2}{m}+\frac{\sigma_2^2}{n}}}\sim N(0,1)</script><p>则：</p>
-<script type="math/tex; mode=display">
+<div class="note quote"><ol type="1"><li>寻求样本和 <span class="math inline">\(\theta\)</span> 的函数 <span class="math inline">\(W(X_1,...,X_n;\theta)\)</span> 其分布不依赖于 <span class="math inline">\(\alpha\)</span> 和其他位置参数。（<em>枢轴量</em>）</li><li>构造常数 <span class="math inline">\(a,b\)</span> 使得 <span class="math inline">\(P(a&lt;W&lt;b)=1-\alpha\)</span></li><li>从中解出 <span class="math inline">\(\hat\theta_1(X_1,...,X_n),\hat\theta_2(X_1,...,X_n)\)</span> 得到置信区间</li></ol></div>
+<h4 id="单个正态总体的置信区间">单个正态总体的置信区间</h4>
+<h5 id="μ-的置信区间">μ 的置信区间</h5>
+<p><em><span class="math inline">\(\sigma^2\)</span> 已知</em>，利用 <span class="math inline">\(W=\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1)\)</span> 置信区间为：</p>
+<p><span class="math display">\[
+\left(\bar X-\frac{\sigma}{\sqrt n}z_{\alpha/2},\bar X+\frac{\sigma}{\sqrt n}z_{\alpha/2}\right)
+\]</span></p>
+<p><em><span class="math inline">\(\sigma^2\)</span> 未知</em>，利用 <span class="math inline">\(W=\frac{\bar X-\mu}{S/\sqrt n}\sim t(n-1)\)</span></p>
+<p><span class="math display">\[
+\left(\bar{X}-\frac{S}{\sqrt{n}}t_{\alpha/2} (n-1),\bar{X}+\frac{S}{\sqrt{n}}t_{\alpha/2} (n-1)\right)
+\]</span></p>
+<h5 id="σ2-的置信区间">σ2 的置信区间</h5>
+<p><em>μ未知</em>，利用 <span class="math inline">\(\frac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)\)</span>，置信区间为：</p>
+<p><span class="math display">\[
+\left(\frac{(n-1)S^2}{\chi^2_{\alpha/2}(n-1)},\frac{(n-1)S^2}{\chi^2_{1-\alpha/2}(n-1)}\right)
+\]</span></p>
+<p><em>μ已知</em>，在上式 <span class="math inline">\(S^2\)</span> 中用 <span class="math inline">\(\mu\)</span> 代替 <span class="math inline">\(\bar X\)</span></p>
+<p><span class="math display">\[
+\left(\frac{\sum (X_i-\mu)^2}{\chi^2_{\alpha/2}(n-1)},\frac{\sum (X_i-\mu)^2}{\chi^2_{1-\alpha/2}(n-1)}\right)
+\]</span></p>
+<h4 id="两个正态总体的均值差和方差比的置信区间">两个正态总体的均值差和方差比的置信区间</h4>
+<h5 id="μ1-μ2-的置信区间">μ1-μ2 的置信区间</h5>
+<p><em>σ1, σ2 已知</em>，利用：</p>
+<p><span class="math display">\[
+\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1^2}{m}+\frac{\sigma_2^2}{n}}}\sim N(0,1)
+\]</span></p>
+<p>则：</p>
+<p><span class="math display">\[
 \left(
     \bar X-\bar Y -u_{\alpha/2}\sqrt{\frac{\sigma_1^2}{m}+\frac{\sigma_2^2}{n}},\bar X-\bar Y + u_{\alpha/2}\sqrt{\frac{\sigma_1^2}{m}+\frac{\sigma_2^2}{n}}
-\right)</script><p><em>$\sigma_1^2=\sigma_2^2=\sigma^2$ 未知</em>，利用：</p>
-<script type="math/tex; mode=display">
-\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{S_w\sqrt{\frac{1}{m}+\frac{1}{n}}}\sim t(m+n-2)</script><p>因而，置信区间为：</p>
-<script type="math/tex; mode=display">
-\left(\bar X-\bar Y-t_{\frac{\alpha}{2}}(m+n-2)S_w\sqrt{\frac{1}{m}+\frac{1}{n}},\bar X-\bar Y+t_{\frac{\alpha}{2}}(m+n-2)S_w\sqrt{\frac{1}{m}+\frac{1}{n}}\right)</script><h5 id="两个正态总体方差比-σ12-σ22-的置信区间"><a href="#两个正态总体方差比-σ12-σ22-的置信区间" class="headerlink" title="两个正态总体方差比 σ12/σ22 的置信区间"></a>两个正态总体方差比 σ12/σ22 的置信区间</h5><p><em>μ1, μ2 未知</em>，利用：</p>
-<script type="math/tex; mode=display">
-\frac{S_{1m}^2}{S^2_{2n}}\frac{\sigma_2^2}{\sigma_1^2}\sim F(m-1,n-1)</script><p>置信区间为：</p>
-<script type="math/tex; mode=display">
-\left(\frac{1}{F_{\alpha/2}(m,n)}\frac{n}{m}\frac{\sum(X_i-\mu_1)^2}{\sum(Y_i-\mu_2)^2},\frac{1}{F_{1-\alpha/2}(m,n)}\frac{n}{m}\frac{\sum(X_i-\mu_1)^2}{\sum(Y_i-\mu_2)^2}\right)</script><p>同样的，用$S^2$ 代替其中的 $\sum (X_i-\mu_1)^2$：</p>
+\right)
+\]</span></p>
+<p><em><span class="math inline">\(\sigma_1^2=\sigma_2^2=\sigma^2\)</span> 未知</em>，利用：</p>
+<p><span class="math display">\[
+\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{S_w\sqrt{\frac{1}{m}+\frac{1}{n}}}\sim t(m+n-2)
+\]</span></p>
+<p>因而，置信区间为：</p>
+<p><span class="math display">\[
+\left(\bar X-\bar Y-t_{\frac{\alpha}{2}}(m+n-2)S_w\sqrt{\frac{1}{m}+\frac{1}{n}},\bar X-\bar Y+t_{\frac{\alpha}{2}}(m+n-2)S_w\sqrt{\frac{1}{m}+\frac{1}{n}}\right)
+\]</span></p>
+<h5 id="两个正态总体方差比-σ12σ22-的置信区间">两个正态总体方差比 σ12/σ22 的置信区间</h5>
+<p><em>μ1, μ2 未知</em>，利用：</p>
+<p><span class="math display">\[
+\frac{S_{1m}^2}{S^2_{2n}}\frac{\sigma_2^2}{\sigma_1^2}\sim F(m-1,n-1)
+\]</span></p>
+<p>置信区间为：</p>
+<p><span class="math display">\[
+\left(\frac{1}{F_{\alpha/2}(m,n)}\frac{n}{m}\frac{\sum(X_i-\mu_1)^2}{\sum(Y_i-\mu_2)^2},\frac{1}{F_{1-\alpha/2}(m,n)}\frac{n}{m}\frac{\sum(X_i-\mu_1)^2}{\sum(Y_i-\mu_2)^2}\right)
+\]</span></p>
+<p>同样的，用<span class="math inline">\(S^2\)</span> 代替其中的 <span class="math inline">\(\sum (X_i-\mu_1)^2\)</span>：</p>
 <p><em>μ1, μ2 已知</em>，利用：</p>
-<script type="math/tex; mode=display">
-\frac{S_{1m}^2}{S_{2n}^2}\frac{\sigma_2^2}{\sigma_1^2}\sim F(m-1,n-1)</script><p>有：</p>
-<script type="math/tex; mode=display">
-\left(\frac{1}{F_{\alpha/2}(m-1,n-1)}\frac{n}{m}\frac{S_{1m}^2}{S_{2n}^2},\frac{1}{F_{1-\alpha/2}(m-1,n-1)}\frac{n}{m}\frac{S_{1m}^2}{S_{2n}^2}\right)</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<p><span class="math display">\[
+\frac{S_{1m}^2}{S_{2n}^2}\frac{\sigma_2^2}{\sigma_1^2}\sim F(m-1,n-1)
+\]</span></p>
+<p>有：</p>
+<p><span class="math display">\[
+\left(\frac{1}{F_{\alpha/2}(m-1,n-1)}\frac{n}{m}\frac{S_{1m}^2}{S_{2n}^2},\frac{1}{F_{1-\alpha/2}(m-1,n-1)}\frac{n}{m}\frac{S_{1m}^2}{S_{2n}^2}\right)
+\]</span></p>
+
   
   
     
@@ -707,10 +750,13 @@ L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)</script><p><s
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「凸优化」 对偶</p>
           <p class='content'>凸优化-对偶
 
-对偶Lagrange 对偶问题Lagrange 函数考虑标准形式的优化问题，拉格朗日函数定义为：
-
+对偶
+Lagrange 对偶问题
+Lagrange 函数
+考虑标准形式的优化问题，拉格朗日函数定义为：
+\[
 \begin{aligned}
-&L:R^n\times R^m\times ...</p>
+&amp;L:R^n...</p>
         </a>
       
       
@@ -718,10 +764,13 @@ L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)</script><p><s
           <p class='title'>「随机数学与数理统计」8 - 假设检验<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>假设检验
 
-假设检验假设检验的基本概念假设检验的基本步骤：
+假设检验
+假设检验的基本概念
+假设检验的基本步骤：
 
 建立假设：
-在假设检验中，通常把一个被检验的假设称为原假设 $H_0$，将不应轻易加以否定的假设作为原假设。当 $H_0$ 被拒绝时...</p>
+
+在假设检验中，通常把一个被检验的假设称为原假设 \(H_0\)，将不应轻易加以否定的假设作为原假设...</p>
         </a>
       
     </div>
@@ -764,7 +813,7 @@ L(\theta_1,...,\theta_k)=\prod_{i=1}^nf(x_i;\theta_1,...,\theta_k)</script><p><s
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1"><span class="toc-text">参数估计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%E6%96%B9%E6%B3%95"><span class="toc-text">两种常用的参数估计方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E4%BC%B0%E8%AE%A1%E6%B3%95"><span class="toc-text">矩估计法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="toc-text">极大似然估计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E9%80%89%E4%BC%B0%E8%AE%A1%E9%87%8F%E7%9A%84%E6%A0%87%E5%87%86"><span class="toc-text">评选估计量的标准</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E5%81%8F%E6%80%A7"><span class="toc-text">无偏性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E6%95%88%E6%80%A7"><span class="toc-text">有效性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%90%88%E6%80%A7"><span class="toc-text">相合性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4%E4%BC%B0%E8%AE%A1"><span class="toc-text">区间估计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%B7%B2%E7%9F%A5-%CF%83%EF%BC%89-%E5%A6%82%E4%BD%95%E6%B1%82%E5%8F%82%E6%95%B0-theta-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%EF%BC%9F"><span class="toc-text">（已知 σ） 如何求参数 $\theta$ 的置信区间？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">单个正态总体的置信区间</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%CE%BC-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">μ 的置信区间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%CF%832-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">σ2 的置信区间</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E7%9A%84%E5%9D%87%E5%80%BC%E5%B7%AE%E5%92%8C%E6%96%B9%E5%B7%AE%E6%AF%94%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">两个正态总体的均值差和方差比的置信区间</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%CE%BC1-%CE%BC2-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">μ1-μ2 的置信区间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E6%96%B9%E5%B7%AE%E6%AF%94-%CF%8312-%CF%8322-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">两个正态总体方差比 σ12&#x2F;σ22 的置信区间</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1"><span class="toc-text">参数估计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%E6%96%B9%E6%B3%95"><span class="toc-text">两种常用的参数估计方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E4%BC%B0%E8%AE%A1%E6%B3%95"><span class="toc-text">矩估计法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="toc-text">极大似然估计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E9%80%89%E4%BC%B0%E8%AE%A1%E9%87%8F%E7%9A%84%E6%A0%87%E5%87%86"><span class="toc-text">评选估计量的标准</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E5%81%8F%E6%80%A7"><span class="toc-text">无偏性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E6%95%88%E6%80%A7"><span class="toc-text">有效性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%90%88%E6%80%A7"><span class="toc-text">相合性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4%E4%BC%B0%E8%AE%A1"><span class="toc-text">区间估计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5-%CF%83-%E5%A6%82%E4%BD%95%E6%B1%82%E5%8F%82%E6%95%B0-theta-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">（已知 σ） 如何求参数 \(\theta\) 的置信区间？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">单个正态总体的置信区间</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%CE%BC-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">μ 的置信区间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%CF%832-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">σ2 的置信区间</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E7%9A%84%E5%9D%87%E5%80%BC%E5%B7%AE%E5%92%8C%E6%96%B9%E5%B7%AE%E6%AF%94%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">两个正态总体的均值差和方差比的置信区间</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%CE%BC1-%CE%BC2-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">μ1-μ2 的置信区间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E6%96%B9%E5%B7%AE%E6%AF%94-%CF%8312%CF%8322-%E7%9A%84%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="toc-text">两个正态总体方差比 σ12&#x2F;σ22 的置信区间</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1411,14 +1460,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

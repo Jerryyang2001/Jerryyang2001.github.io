@@ -470,26 +470,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>:no_mouth:</p>
 <span id="more"></span>
-<h2 id="共形映射"><a href="#共形映射" class="headerlink" title="共形映射"></a>共形映射</h2><h3 id="共形映射的概念"><a href="#共形映射的概念" class="headerlink" title="共形映射的概念"></a>共形映射的概念</h3><h4 id="解析函数导数的几何意义"><a href="#解析函数导数的几何意义" class="headerlink" title="解析函数导数的几何意义"></a>解析函数导数的几何意义</h4><p>复平面上有向曲线的切向量：$z=z(t)$ 的切向量为 $z’(t)$</p>
-<p><strong>导数幅角的几何意义</strong>：表示曲线 $C$ 经过 $w=f(z)$ 后在 $z_0$ 的转动角，且大小和方向仅与 $z_0$ 有关，而与 $C$ 无关。</p>
+<h2 id="共形映射">共形映射</h2>
+<h3 id="共形映射的概念">共形映射的概念</h3>
+<h4 id="解析函数导数的几何意义">解析函数导数的几何意义</h4>
+<p>复平面上有向曲线的切向量：<span class="math inline">\(z=z(t)\)</span> 的切向量为 <span class="math inline">\(z&#39;(t)\)</span></p>
+<p><strong>导数幅角的几何意义</strong>：表示曲线 <span class="math inline">\(C\)</span> 经过 <span class="math inline">\(w=f(z)\)</span> 后在 <span class="math inline">\(z_0\)</span> 的转动角，且大小和方向仅与 <span class="math inline">\(z_0\)</span> 有关，而与 <span class="math inline">\(C\)</span> 无关。</p>
 <p><em>旋转角的不变性</em>：</p>
-<p>函数 $w=f(z)$ 在 D 内解析，且 $f’\ne0$ 则曲线 $L$ 的象曲线方程为：</p>
-<p>$\Gamma:w=f(z(t)),~t\in[\alpha,\beta]$，$\Gamma$ 在 $w=w(t_0)$ 的邻域内光滑，且：</p>
-<p>$w’(t_0)=f’(z)z’(t_0)\ne 0$ 则$\Gamma$ 在$w_0=f(z_0)$ 的切向量为 $w’(t_0)$</p>
-<p>则：$Arg~w’(t_0)=Arg~f’(z_0)+Arg~z’(t_0)$</p>
-<p><strong>导数模的几何意义</strong>：经过映射后 $z_0$ 的任何曲线在 $z_0$ 的<strong>伸缩率</strong>。$|f’(z_0)|=\lim_{z\rightarrow z_0} \left|\frac{w-w_0}{z-z_0}\right|$</p>
-<p><em>伸缩率不变性</em>：解析函数，伸缩率与曲线 $C$ 无关，具有伸缩率不变性。</p>
-<p><strong>Thm</strong>：设函数 $f$ 在 D 内解析，且 $z_0\in D,~f’(z_0)\ne 0$ 则该映射在该点处有保角性和伸缩率不变性</p>
-<h4 id="共形映射的概念和单叶解析函数的共形性"><a href="#共形映射的概念和单叶解析函数的共形性" class="headerlink" title="共形映射的概念和单叶解析函数的共形性"></a>共形映射的概念和单叶解析函数的共形性</h4><p><strong>Def</strong>（保角）</p>
+<p>函数 <span class="math inline">\(w=f(z)\)</span> 在 D 内解析，且 <span class="math inline">\(f&#39;\ne0\)</span> 则曲线 <span class="math inline">\(L\)</span> 的象曲线方程为：</p>
+<p><span class="math inline">\(\Gamma:w=f(z(t)),~t\in[\alpha,\beta]\)</span>，<span class="math inline">\(\Gamma\)</span> 在 <span class="math inline">\(w=w(t_0)\)</span> 的邻域内光滑，且：</p>
+<p><span class="math inline">\(w&#39;(t_0)=f&#39;(z)z&#39;(t_0)\ne 0\)</span> 则<span class="math inline">\(\Gamma\)</span> 在<span class="math inline">\(w_0=f(z_0)\)</span> 的切向量为 <span class="math inline">\(w&#39;(t_0)\)</span></p>
+<p>则：<span class="math inline">\(Arg~w&#39;(t_0)=Arg~f&#39;(z_0)+Arg~z&#39;(t_0)\)</span></p>
+<p><strong>导数模的几何意义</strong>：经过映射后 <span class="math inline">\(z_0\)</span> 的任何曲线在 <span class="math inline">\(z_0\)</span> 的<strong>伸缩率</strong>。<span class="math inline">\(|f&#39;(z_0)|=\lim_{z\rightarrow z_0} \left|\frac{w-w_0}{z-z_0}\right|\)</span></p>
+<p><em>伸缩率不变性</em>：解析函数，伸缩率与曲线 <span class="math inline">\(C\)</span> 无关，具有伸缩率不变性。</p>
+<p><strong>Thm</strong>：设函数 <span class="math inline">\(f\)</span> 在 D 内解析，且 <span class="math inline">\(z_0\in D,~f&#39;(z_0)\ne 0\)</span> 则该映射在该点处有保角性和伸缩率不变性</p>
+<h4 id="共形映射的概念和单叶解析函数的共形性">共形映射的概念和单叶解析函数的共形性</h4>
+<p><strong>Def</strong>（保角）</p>
 <ul>
-<li>函数在某一点处具有保角性和伸缩率不变性 $\implies$ <strong>保角的</strong></li>
-<li>函数在 $D$ 内每一点处都是<strong>保角的</strong> $\implies$ <strong>保角映射</strong></li>
-<li>$D$内的单叶、保角映射 $\implies$ 共形映射</li>
+<li>函数在某一点处具有保角性和伸缩率不变性 <span class="math inline">\(\implies\)</span> <strong>保角的</strong></li>
+<li>函数在 <span class="math inline">\(D\)</span> 内每一点处都是<strong>保角的</strong> <span class="math inline">\(\implies\)</span> <strong>保角映射</strong></li>
+<li><span class="math inline">\(D\)</span>内的单叶、保角映射 <span class="math inline">\(\implies\)</span> 共形映射</li>
 </ul>
-<p><strong>Thm</strong>：$f$ 为 $D$ 内的解析函数，$z_0\in D$ 若 $f’\ne 0$ 则在$z_0$是保角的。若对任何 $z\in D$ 都有 $f’\ne 0$ 则为保角映射</p>
-<p><strong>Thm</strong>：$w=f(z)$ 是 $D$ 内的单叶映射，则它将 $z$ 平面上的区域 $D$ 共形映射为 $w$ 平面上的区域 $G=f(D)$ 它的反函数 $z=f^{-1}(w)$ 在 $G$ 内单叶解析，且：$[f^{-1}(w)]’=\frac{1}{f’(z)}$</p>
-<div class="note quote"><h3 id="review"><a href="#review" class="headerlink" title="review"></a>review</h3><p>伸缩率：$|f’|$</p><p>旋转角：$Arg~f’$</p><p>解析 &amp; f‘≠ 0 =&gt; 保角性</p></div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<p><strong>Thm</strong>：<span class="math inline">\(f\)</span> 为 <span class="math inline">\(D\)</span> 内的解析函数，<span class="math inline">\(z_0\in D\)</span> 若 <span class="math inline">\(f&#39;\ne 0\)</span> 则在<span class="math inline">\(z_0\)</span>是保角的。若对任何 <span class="math inline">\(z\in D\)</span> 都有 <span class="math inline">\(f&#39;\ne 0\)</span> 则为保角映射</p>
+<p><strong>Thm</strong>：<span class="math inline">\(w=f(z)\)</span> 是 <span class="math inline">\(D\)</span> 内的单叶映射，则它将 <span class="math inline">\(z\)</span> 平面上的区域 <span class="math inline">\(D\)</span> 共形映射为 <span class="math inline">\(w\)</span> 平面上的区域 <span class="math inline">\(G=f(D)\)</span> 它的反函数 <span class="math inline">\(z=f^{-1}(w)\)</span> 在 <span class="math inline">\(G\)</span> 内单叶解析，且：<span class="math inline">\([f^{-1}(w)]&#39;=\frac{1}{f&#39;(z)}\)</span></p>
+<div class="note quote"><h3 id="review">review</h3><p>伸缩率：<span class="math inline">\(\|f&#39;\|\)</span></p><p>旋转角：<span class="math inline">\(Arg~f&#39;\)</span></p><p>解析 &amp; f‘≠ 0 =&gt; 保角性</p></div>
+
   
   
     
@@ -591,8 +595,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「复变函数」留数及其应用</p>
           <p class='content'>留数及其应用
 
-留数及其应用孤立奇点Def（孤立奇点）$f(z)$ 在 $z_0$ 不解析，在其某个去心邻域内解析，则称$z_0$为 $f(z)$ 的孤立奇点
-可去奇点：Laurent 级数不含...</p>
+留数及其应用
+孤立奇点
+Def（孤立奇点）\(f(z)\) 在 \(z_0\) 不解析，在其某个去心邻域内解析，则称\(z_0\)为 \(f(z)\) 的孤立奇点
+可去...</p>
         </a>
       
       
@@ -600,10 +606,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'>「凸优化」 对偶<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>凸优化-对偶
 
-对偶Lagrange 对偶问题Lagrange 函数考虑标准形式的优化问题，拉格朗日函数定义为：
-
+对偶
+Lagrange 对偶问题
+Lagrange 函数
+考虑标准形式的优化问题，拉格朗日函数定义为：
+\[
 \begin{aligned}
-&L:R^n\times R^m\times ...</p>
+&amp;L:R^n...</p>
         </a>
       
     </div>
@@ -1293,14 +1302,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

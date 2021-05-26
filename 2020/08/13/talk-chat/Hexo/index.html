@@ -470,28 +470,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>建站实录</p>
 <span id="more"></span>
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>需要准备的材料：</p>
-<ol>
-<li>vscode<ul>
+<h1 id="hexo">Hexo</h1>
+<h3 id="前言">前言</h3>
+<p>需要准备的材料：</p>
+<ol type="1">
+<li><p>vscode</p>
+<ul>
 <li>VSCode 的终端内，要换成<code>cmd.exe</code>，按下 <code>ctrl + ,</code> 进入设置，找到 <code>terminal.external.windowsExec</code>这个，修改为 <code>C:\Windows\System32\cmd.exe</code></li>
-</ul>
-</li>
+</ul></li>
 <li><p>Node.js</p>
 <blockquote>
 <p>安装完成后需要执行：<code>npm config set registry https://registry.npm.taobao.org</code>，来重新定向源。</p>
-</blockquote>
-</li>
-<li><p>Git客户端、以及一个配置好的 Github 账号</p>
-</li>
+</blockquote></li>
+<li><p>Git客户端、以及一个配置好的 Github 账号</p></li>
 </ol>
-<h3 id="站点建立"><a href="#站点建立" class="headerlink" title="站点建立"></a>站点建立</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://docs.github.com/en/github/working-with-github-pages">https://docs.github.com/en/github/working-with-github-pages</a></p>
+<h3 id="站点建立">站点建立</h3>
+<blockquote>
+<p>https://docs.github.com/en/github/working-with-github-pages</p>
 </blockquote>
 <ul>
-<li>安装Git<ul>
+<li>安装Git
+<ul>
 <li>Git 的配置</li>
-</ul>
-</li>
+</ul></li>
 <li>安装Node.js</li>
 <li>安装Hexo</li>
 <li>GitHub创建个人仓库</li>
@@ -505,13 +506,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>第二步，站点初始化</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site">Ref</a></p>
-<p>Note: It can take up to 20 minutes for changes to your site to publish after you push the changes to GitHub. If your don’t see your changes reflected in your browser after an hour, see “About Jekyll build errors for GitHub Pages sites.”</p>
+<p>Note: It can take up to 20 minutes for changes to your site to publish after you push the changes to GitHub. If your don't see your changes reflected in your browser after an hour, see "About Jekyll build errors for GitHub Pages sites."</p>
 <p>部署需要时间、每小时最多部署10次，站点大小最多1G（图片不能太多太大，搞大型个人相册就免了）</p>
 </blockquote>
 <p>第三步，找一个地方，专门存放你的这个站点，例如：<code>D:/repos/</code> 在这个文件夹中 clone 下你的这个仓库。并且在 VScode 中打开这个<strong>仓库</strong></p>
 <p>在这里，按照：</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs">Ref</a> 安装 Hexo。</p>
+</blockquote>
+<blockquote>
 <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/setup">Ref</a> 在本机上建立站点</p>
 </blockquote>
 <p>注意，因为直接在git下的目录中打开code，所以其中的folder就是 <code>.</code> （当前文件夹）不用执行cd切换工作文件夹，也就是（在VScode 终端中执行）：</p>
@@ -526,45 +529,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>deploy 配置</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:Jerryyang2001/Jerryyang2001.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 注意是 master 分支</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">Site</span> <span class="string">updated:&#123;&#123;</span> <span class="string">now(&#x27;YYYY-MM-DD</span> <span class="string">HH:mm:ss&#x27;)</span> <span class="string">&#125;&#125;)</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>站点配置</p>
+<li>站点配置
 <ul>
 <li><code>_config.yml</code></li>
 <li>实际上就按照 readme 走就行。</li>
-</ul>
-</li>
-<li><p>更换主题（以我现在用的 <code>Fluid</code> 为例）</p>
+</ul></li>
+<li>更换主题（以我现在用的 <code>Fluid</code> 为例）
 <ul>
 <li>注意看文档就行</li>
 <li>主题配置</li>
-</ul>
-</li>
-<li><p>发布文章</p>
+</ul></li>
+<li>发布文章
 <ul>
 <li>Hexo 工作流</li>
 <li><code>yaml</code></li>
 <li><code>&lt;!-- more --&gt;</code>用法</li>
-</ul>
-</li>
-<li><p>个性化设置</p>
+</ul></li>
+<li>个性化设置
 <ul>
 <li>搜索器</li>
 <li>Mathjax</li>
 <li>Valine</li>
 <li>思维导图</li>
-</ul>
-</li>
-<li><p>其他</p>
+</ul></li>
+<li>其他
 <ul>
 <li>code Snippet</li>
-</ul>
-</li>
-<li><p>附录</p>
-</li>
+</ul></li>
+<li>附录</li>
 </ul>
 <blockquote>
 <p>参考了部分：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">Ref</a></p>
 </blockquote>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -667,13 +664,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='content'>19-20-3复习
 
 考试时间
+
             数学分析
             
-爆炸【危】 08-17 09:00-11:30(星期一)
+爆炸【危】
+08-17 09:00-11:30(星期一)
 
-
-            近代史
-    ...</p>
+            近...</p>
         </a>
       
       
@@ -681,13 +678,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'>正则表达式文法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>正则表达式规则
 
-正则表达式描述模式
-
-
-
-
-
-
+正则表达式
+描述模式
 
 
 
@@ -696,12 +688,7 @@ AB &lt;=&gt; &#123;AB&#125;
 
 
 或操作
-`A
-B &lt;=&gt;{A,B}`
-
-
-闭包操作
-A*...</p>
+A|B &lt;=&gt;&#123;A,B&...</p>
         </a>
       
     </div>
@@ -1391,14 +1378,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

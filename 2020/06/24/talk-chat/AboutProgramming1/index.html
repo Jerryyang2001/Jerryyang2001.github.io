@@ -477,7 +477,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FOR I = 1 TO 50</span><br><span class="line">    FOR J = 1 TO 33</span><br><span class="line">        IF 2*I+3*J = 100 THEN</span><br><span class="line">            PRINT I</span><br><span class="line">            PRINT J</span><br><span class="line">        END IF</span><br><span class="line">    NEXT J</span><br><span class="line">NEXT I</span><br></pre></td></tr></table></figure>
 <p>Well，写的不好，但是至少我知道怎样去解决一些问题。要解这个方程实际上不需要这么麻烦。但是当时学到的确实是解决问题的方法：编一个程序、枚举各种情况、得到答案。</p>
 <p>当然，如果我们仔细看一看这一个程序，实则三种最基础的程序结构都有：</p>
-<ol>
+<ol type="1">
 <li>顺序：<code>PRINT I PRINT J</code></li>
 <li>分支：<code>IF ... THEN ... (ELSE ...) END IF</code></li>
 <li>循环：<code>FOR I = 1 TO 50 NEXT I</code></li>
@@ -499,7 +499,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>State Machine</li>
 <li>Differential Equations and Operations</li>
 <li>Circuit</li>
-<li>… …</li>
+<li>... ...</li>
 </ul>
 </blockquote>
 <p>在第一节课，教授指出了这门课的目的：形成思维方法，从以下几个方面去思考问题和知识。</p>
@@ -513,30 +513,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p><strong>Example (Circuit)</strong></p>
 <ul>
-<li>Primitives<ul>
-<li>Ohm’s Law</li>
+<li>Primitives
+<ul>
+<li>Ohm's Law</li>
 <li>Node</li>
-</ul>
-</li>
-<li>Combination<ul>
+</ul></li>
+<li>Combination
+<ul>
 <li>KVL KCL Equations</li>
 <li>Node method, Loop method</li>
-</ul>
-</li>
-<li>Abstractions<ul>
+</ul></li>
+<li>Abstractions
+<ul>
 <li>Parallel Combinations</li>
 <li>Series Combinations</li>
-</ul>
-</li>
-<li>Patterns<ul>
-<li>in Series Combinations: $I = V / (R_1 + R_2)$</li>
-<li>in Parallel Combinations: $V_1 = R_1 I,\dots$</li>
-</ul>
-</li>
+</ul></li>
+<li>Patterns
+<ul>
+<li>in Series Combinations: <span class="math inline">\(I = V / (R_1 + R_2)\)</span></li>
+<li>in Parallel Combinations: <span class="math inline">\(V_1 = R_1 I,\dots\)</span></li>
+</ul></li>
 </ul>
 </blockquote>
 <figure class="highlight lua"><figcaption><span>FunctionalProgramming.lua</span><a href="/code/RandomTalks/AboutProgramming1/FunctionalProgramming.lua">view raw</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">get_accumulator</span><span class="params">(start)</span></span></span><br><span class="line">    start = start <span class="keyword">or</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span></span></span><br><span class="line">        start = start + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> start</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> acc = get_accumulator()</span><br><span class="line"><span class="keyword">for</span> i = <span class="number">1</span>, <span class="number">10</span>, <span class="number">2</span> <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">print</span>(acc())</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -638,14 +638,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>欧拉图和哈密顿图</p>
           <p class='content'>
 
-欧拉图Def：
+欧拉图
+Def：
 
 （欧拉通路）经过图中所有边一次且仅一次的通路
 （欧拉回路）经过图中所有边一次且仅一次的回路
 （欧拉图）有欧拉回路
 （半欧拉图）有欧拉通路
 
-Thm：无向图 G 是欧拉图，当...</p>
+Thm：无...</p>
         </a>
       
       
@@ -653,7 +654,8 @@ Thm：无向图 G 是欧拉图，当...</p>
           <p class='title'>Lambda 演算简介（2）<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>Lambda 演算中的常见概念
 
-布尔、函数、列表等基本数据类型布尔值的表示与运算
+布尔、函数、列表等基本数据类型
+布尔值的表示与运算
 
 
 
@@ -665,7 +667,7 @@ Lambda 表达式
 
 
 f(x) = expr
-$\mathrm{\lambda x....</p>
+\(\...</p>
         </a>
       
     </div>
@@ -1341,14 +1343,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

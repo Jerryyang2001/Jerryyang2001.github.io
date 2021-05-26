@@ -470,60 +470,78 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>:no_mouth:</p>
 <span id="more"></span>
-<h2 id="随机过程"><a href="#随机过程" class="headerlink" title="随机过程"></a>随机过程</h2><h3 id="随机过程的基本概念"><a href="#随机过程的基本概念" class="headerlink" title="随机过程的基本概念"></a>随机过程的基本概念</h3><p><strong>Def</strong>（随机过程）设 $\Omega=\{\omega\}$ 是随机试验 $E$ 的样本空间，$T\subset (-\inf,+\inf)$ 如果对于一个固定的 $t\in T$，有定义在 $\Omega$ 上的随机变量，$X(\omega,t),\omega\in \Omega$ ,令 $t$ 在 $T$ 中变动，得到依赖于 $t$ 的一族随机变量 $\{X(\omega, t), t\in T\}$ 称为随机过程。</p>
-<h3 id="有限维的分布函数族"><a href="#有限维的分布函数族" class="headerlink" title="有限维的分布函数族"></a>有限维的分布函数族</h3><p><strong>Def</strong>（随机过程分布函数）$F(t; x)=P(X(t, w)\le x)$ 为 $X(t, w)$ 的分布函数。（一维）</p>
-<p><strong>Def</strong>（随机过程分布函数）$F(t _ 1,t _ 2…,t _ n; x _ 1, x _ 2,…,x _ n)=P(X(t_1, w)\le x _ 1,X(t _ 2, w)\le x _ 2,…)$ 为 $X(t, w)$ 的分布函数。</p>
-<h3 id="随机过程的数字特征"><a href="#随机过程的数字特征" class="headerlink" title="随机过程的数字特征"></a>随机过程的数字特征</h3><p>均值函数：</p>
-<script type="math/tex; mode=display">
-m_X(t)=EX(t)</script><p>均方值函数：</p>
-<script type="math/tex; mode=display">
-\varPsi^2(t)=EX^2(t)</script><p>方差函数：</p>
-<script type="math/tex; mode=display">
-D_X(t)=E(X(t)-m_X(t))^2</script><p>相关函数：</p>
-<script type="math/tex; mode=display">
-R_X(s,t)=EX(s)X(t)</script><p>协方差函数：</p>
-<script type="math/tex; mode=display">
+<h2 id="随机过程">随机过程</h2>
+<h3 id="随机过程的基本概念">随机过程的基本概念</h3>
+<p><strong>Def</strong>（随机过程）设 <span class="math inline">\(\Omega=\{\omega\}\)</span> 是随机试验 <span class="math inline">\(E\)</span> 的样本空间，<span class="math inline">\(T\subset (-\inf,+\inf)\)</span> 如果对于一个固定的 <span class="math inline">\(t\in T\)</span>，有定义在 <span class="math inline">\(\Omega\)</span> 上的随机变量，<span class="math inline">\(X(\omega,t),\omega\in \Omega\)</span> ,令 <span class="math inline">\(t\)</span> 在 <span class="math inline">\(T\)</span> 中变动，得到依赖于 <span class="math inline">\(t\)</span> 的一族随机变量 <span class="math inline">\(\{X(\omega, t), t\in T\}\)</span> 称为随机过程。</p>
+<h3 id="有限维的分布函数族">有限维的分布函数族</h3>
+<p><strong>Def</strong>（随机过程分布函数）<span class="math inline">\(F(t; x)=P(X(t, w)\le x)\)</span> 为 <span class="math inline">\(X(t, w)\)</span> 的分布函数。（一维）</p>
+<p><strong>Def</strong>（随机过程分布函数）<span class="math inline">\(F(t _ 1,t _ 2...,t _ n; x _ 1, x _ 2,...,x _ n)=P(X(t_1, w)\le x _ 1,X(t _ 2, w)\le x _ 2,...)\)</span> 为 <span class="math inline">\(X(t, w)\)</span> 的分布函数。</p>
+<h3 id="随机过程的数字特征">随机过程的数字特征</h3>
+<p>均值函数：</p>
+<p><span class="math display">\[
+m_X(t)=EX(t)
+\]</span></p>
+<p>均方值函数：</p>
+<p><span class="math display">\[
+\varPsi^2(t)=EX^2(t)
+\]</span></p>
+<p>方差函数：</p>
+<p><span class="math display">\[
+D_X(t)=E(X(t)-m_X(t))^2
+\]</span></p>
+<p>相关函数：</p>
+<p><span class="math display">\[
+R_X(s,t)=EX(s)X(t)
+\]</span></p>
+<p>协方差函数：</p>
+<p><span class="math display">\[
 \begin{aligned}
-C_X(s,t)&=Cov(X(s),X(t))\\
-&=R_X(s,t)-m_X(s)m_X(t)
-\end{aligned}</script><h3 id="泊松过程和维纳过程"><a href="#泊松过程和维纳过程" class="headerlink" title="泊松过程和维纳过程"></a>泊松过程和维纳过程</h3><h4 id="独立增量过程"><a href="#独立增量过程" class="headerlink" title="独立增量过程"></a>独立增量过程</h4><p><strong>Def</strong>（独立增量过程）设 $\{X(t) ,t\in T\}$ 是一个随机过程，对于任意的 $t_1,…,t_n$ 增量 $X(t_2)-X(t_1) …$ 是独立的，则称 $X(t)$ 是一个<strong>独立增量过程</strong>。</p>
-<p>增量 $X(t+h)-X(t)$ 的分布仅依赖于$h$ 而不依赖于 t，则称 $X(t)$ 是齐次的。</p>
+C_X(s,t)&amp;=Cov(X(s),X(t))\\
+&amp;=R_X(s,t)-m_X(s)m_X(t)
+\end{aligned}
+\]</span></p>
+<h3 id="泊松过程和维纳过程">泊松过程和维纳过程</h3>
+<h4 id="独立增量过程">独立增量过程</h4>
+<p><strong>Def</strong>（独立增量过程）设 <span class="math inline">\(\{X(t) ,t\in T\}\)</span> 是一个随机过程，对于任意的 <span class="math inline">\(t_1,...,t_n\)</span> 增量 <span class="math inline">\(X(t_2)-X(t_1) ...\)</span> 是独立的，则称 <span class="math inline">\(X(t)\)</span> 是一个<strong>独立增量过程</strong>。</p>
+<p>增量 <span class="math inline">\(X(t+h)-X(t)\)</span> 的分布仅依赖于<span class="math inline">\(h\)</span> 而不依赖于 t，则称 <span class="math inline">\(X(t)\)</span> 是齐次的。</p>
 <p>例如：</p>
-<p>$X_n$ 是独立同分布的随机变量序列，部分和序列 $S_n=\sum X_i$ 是齐次的独立增量过程。</p>
-<p><strong>Thm</strong>：独立增量过程在 $P(X(0)=0)=1$ 的条件下，$X(t)$的任意有限维分布函数族可以由增量 $X(t)-X(s)$ 的分布唯一确定。</p>
-<p><strong>Thm</strong>：独立增量过程 $\{X(t),t\in T\}$ 的均值函数 $m_X(t)$ 和方差函数 $X_X(t)$ 存在，在 $P(X(0)=0)=1$ 的条件下，其协方差函数：</p>
-<script type="math/tex; mode=display">
-C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" class="headerlink" title="泊松过程"></a>泊松过程</h4><p><strong>Def</strong>（泊松过程）设 $\{N(t), t\ge 0\}$ 表示 $[0, t]$ 内随机点发生的数目，$N(t)$ 有以下性质，则称其为一个强度为 $\lambda,\lambda\ge 0$ 的泊松过程：</p>
-<ol>
+<p><span class="math inline">\(X_n\)</span> 是独立同分布的随机变量序列，部分和序列 <span class="math inline">\(S_n=\sum X_i\)</span> 是齐次的独立增量过程。</p>
+<p><strong>Thm</strong>：独立增量过程在 <span class="math inline">\(P(X(0)=0)=1\)</span> 的条件下，<span class="math inline">\(X(t)\)</span>的任意有限维分布函数族可以由增量 <span class="math inline">\(X(t)-X(s)\)</span> 的分布唯一确定。</p>
+<p><strong>Thm</strong>：独立增量过程 <span class="math inline">\(\{X(t),t\in T\}\)</span> 的均值函数 <span class="math inline">\(m_X(t)\)</span> 和方差函数 <span class="math inline">\(X_X(t)\)</span> 存在，在 <span class="math inline">\(P(X(0)=0)=1\)</span> 的条件下，其协方差函数：</p>
+<p><span class="math display">\[
+C_X(s,t)=D_X(min\{s,t\}).
+\]</span></p>
+<h4 id="泊松过程">泊松过程</h4>
+<p><strong>Def</strong>（泊松过程）设 <span class="math inline">\(\{N(t), t\ge 0\}\)</span> 表示 <span class="math inline">\([0, t]\)</span> 内随机点发生的数目，<span class="math inline">\(N(t)\)</span> 有以下性质，则称其为一个强度为 <span class="math inline">\(\lambda,\lambda\ge 0\)</span> 的泊松过程：</p>
+<ol type="1">
 <li>齐次性（平稳性）</li>
 <li>独立增量性（无后效性）</li>
 <li>普通性</li>
-<li>$P(N(0)=0)=1$</li>
+<li><span class="math inline">\(P(N(0)=0)=1\)</span></li>
 </ol>
-<h5 id="泊松过程的有限维分布和数字特征"><a href="#泊松过程的有限维分布和数字特征" class="headerlink" title="泊松过程的有限维分布和数字特征"></a>泊松过程的有限维分布和数字特征</h5><ol>
-<li><p>有限维分布：$\{N(t) ,t\ge 0\}$ 是一个强度为 $\lambda$ 的泊松过程，则 $N(t)$ 的一维分布是参数为 $\lambda t$ 的泊松分布，即：$N(t)\sim P(\lambda t)$</p>
-</li>
+<h5 id="泊松过程的有限维分布和数字特征">泊松过程的有限维分布和数字特征</h5>
+<ol type="1">
+<li><p>有限维分布：<span class="math inline">\(\{N(t) ,t\ge 0\}\)</span> 是一个强度为 <span class="math inline">\(\lambda\)</span> 的泊松过程，则 <span class="math inline">\(N(t)\)</span> 的一维分布是参数为 <span class="math inline">\(\lambda t\)</span> 的泊松分布，即：<span class="math inline">\(N(t)\sim P(\lambda t)\)</span></p></li>
 <li><p>数字特征：</p>
 <ul>
-<li>$m_N(t)=\lambda t$</li>
-<li>$D_N(t)=\lambda t$</li>
-<li>$C_N(s,t)=\lambda \min \{s,t\}$</li>
-</ul>
-</li>
-<li><p>设 $\{N(t) ,t\ge 0\}$ 是一个强度为 $\lambda$ 的泊松分布，则 $N(s)-N(t)$ 是一个参数为 $\lambda(s-t)$ 的泊松分布</p>
-</li>
+<li><span class="math inline">\(m_N(t)=\lambda t\)</span></li>
+<li><span class="math inline">\(D_N(t)=\lambda t\)</span></li>
+<li><span class="math inline">\(C_N(s,t)=\lambda \min \{s,t\}\)</span></li>
+</ul></li>
+<li><p>设 <span class="math inline">\(\{N(t) ,t\ge 0\}\)</span> 是一个强度为 <span class="math inline">\(\lambda\)</span> 的泊松分布，则 <span class="math inline">\(N(s)-N(t)\)</span> 是一个参数为 <span class="math inline">\(\lambda(s-t)\)</span> 的泊松分布</p></li>
 </ol>
-<p>同时，我们把强度为 $\lambda$  的泊松过程 $\{N(t),t\ge 0\}$ 中机点出现的时刻 $W_1,…,W_n,…$ 为强度为 $\lambda$ 的泊松流。</p>
-<p>记 $T_i=W_i-W_{i-1}$ 其表示的第 $i-1$ 个随机点与第 $i$ 个随机点在时刻 $t_{i-1}$ 出现的间隔时间。则 $T\sim e(\lambda)$，反之：</p>
-<p><strong>Thm</strong>：如果任意相邻两个随机点出现的间隔时间相互独立同服从于参数为 $\lambda$ 的指数分布，则随机点流构成强度为 $\lambda$ 的泊松过程。</p>
-<h4 id="维纳过程"><a href="#维纳过程" class="headerlink" title="维纳过程"></a>维纳过程</h4><p><strong>Def</strong>（维纳过程 / 布朗运动）随机过程满足如下条件：</p>
-<ol>
-<li>$W(0)=0$</li>
-<li>$W(t)$ 是齐次增量过程</li>
-<li>$t&gt;s\ge0$ 时，$W(t)-W(s)=h(X_{[s/\delta]+1}+…+X_{[s/\delta]})$是独立同分布的随机变量。</li>
-<li>$EW(t)=0,t&gt;0$</li>
+<p>同时，我们把强度为 <span class="math inline">\(\lambda\)</span> 的泊松过程 <span class="math inline">\(\{N(t),t\ge 0\}\)</span> 中机点出现的时刻 <span class="math inline">\(W_1,...,W_n,...\)</span> 为强度为 <span class="math inline">\(\lambda\)</span> 的泊松流。</p>
+<p>记 <span class="math inline">\(T_i=W_i-W_{i-1}\)</span> 其表示的第 <span class="math inline">\(i-1\)</span> 个随机点与第 <span class="math inline">\(i\)</span> 个随机点在时刻 <span class="math inline">\(t_{i-1}\)</span> 出现的间隔时间。则 <span class="math inline">\(T\sim e(\lambda)\)</span>，反之：</p>
+<p><strong>Thm</strong>：如果任意相邻两个随机点出现的间隔时间相互独立同服从于参数为 <span class="math inline">\(\lambda\)</span> 的指数分布，则随机点流构成强度为 <span class="math inline">\(\lambda\)</span> 的泊松过程。</p>
+<h4 id="维纳过程">维纳过程</h4>
+<p><strong>Def</strong>（维纳过程 / 布朗运动）随机过程满足如下条件：</p>
+<ol type="1">
+<li><span class="math inline">\(W(0)=0\)</span></li>
+<li><span class="math inline">\(W(t)\)</span> 是齐次增量过程</li>
+<li><span class="math inline">\(t&gt;s\ge0\)</span> 时，<span class="math inline">\(W(t)-W(s)=h(X_{[s/\delta]+1}+...+X_{[s/\delta]})\)</span>是独立同分布的随机变量。</li>
+<li><span class="math inline">\(EW(t)=0,t&gt;0\)</span></li>
 </ol>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -625,7 +643,9 @@ C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" 
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「概率统计与随机过程」 5 - 极限定理</p>
           <p class='content'>极限定理
 
-极限定理大数定律Def（依概率收敛）设 $X_1, X_2, X_3, …$ 为一随机变量序列，若存在随机变量 X，使得对于任意整数 $\varepsilon &gt; 0$ 总有:...</p>
+极限定理
+大数定律
+Def（依概率收敛）设 \(X_1, X_2, X_3, ...\) 为一随机变量序列，若存在随机变量 X，使得对于任意整数 \(\varepsilon ...</p>
         </a>
       
       
@@ -633,7 +653,10 @@ C_X(s,t)=D_X(min\{s,t\}).</script><h4 id="泊松过程"><a href="#泊松过程" 
           <p class='title'>「概率统计与随机过程」 4 - 随机向量的数字特征<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>随机向量的数字特征
 
-随机向量的数字特征随机变量的数学期望数学期望的定义Def（离散型随机变量期望的定义）设离散随机变量的分布列为：$P(X=x_i)=p_i$ 若级数 $\sum x_ip_i...</p>
+随机向量的数字特征
+随机变量的数学期望
+数学期望的定义
+Def（离散型随机变量期望的定义）设离散随机变量的分布列为：\(P(X=x_i)=p_i\) 若级数 \(...</p>
         </a>
       
     </div>
@@ -1323,14 +1346,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

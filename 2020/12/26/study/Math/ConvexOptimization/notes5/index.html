@@ -470,151 +470,205 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>凸优化-对偶</p>
 <span id="more"></span>
-<h2 id="对偶"><a href="#对偶" class="headerlink" title="对偶"></a>对偶</h2><h3 id="Lagrange-对偶问题"><a href="#Lagrange-对偶问题" class="headerlink" title="Lagrange 对偶问题"></a>Lagrange 对偶问题</h3><h4 id="Lagrange-函数"><a href="#Lagrange-函数" class="headerlink" title="Lagrange 函数"></a>Lagrange 函数</h4><p>考虑标准形式的优化问题，拉格朗日函数定义为：</p>
-<script type="math/tex; mode=display">
+<h2 id="对偶">对偶</h2>
+<h3 id="lagrange-对偶问题">Lagrange 对偶问题</h3>
+<h4 id="lagrange-函数">Lagrange 函数</h4>
+<p>考虑标准形式的优化问题，拉格朗日函数定义为：</p>
+<p><span class="math display">\[
 \begin{aligned}
-&L:R^n\times R^m\times R^p\rightarrow R\\
-&L(x, \lambda, \nu)=f_0(x)+\sum_{i=1}^m \lambda_if_i(x)+\sum_{i=1}^p \nu_ih_i(x)\\
-\end{aligned}</script><ul>
-<li>定义域为：$D\times R^m\times R^p$</li>
+&amp;L:R^n\times R^m\times R^p\rightarrow R\\
+&amp;L(x, \lambda, \nu)=f_0(x)+\sum_{i=1}^m \lambda_if_i(x)+\sum_{i=1}^p \nu_ih_i(x)\\
+\end{aligned}
+\]</span></p>
+<ul>
+<li>定义域为：<span class="math inline">\(D\times R^m\times R^p\)</span></li>
 <li>目标函数和约束函数的加权和</li>
-<li>$\lambda_i$ 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
-<li>$\nu_i$ 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
+<li><span class="math inline">\(\lambda_i\)</span> 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
+<li><span class="math inline">\(\nu_i\)</span> 为第 i 个不等式约束的<em>拉格朗日乘子</em></li>
 </ul>
-<h4 id="Lagrange-对偶函数"><a href="#Lagrange-对偶函数" class="headerlink" title="Lagrange 对偶函数"></a>Lagrange 对偶函数</h4><script type="math/tex; mode=display">
+<h4 id="lagrange-对偶函数">Lagrange 对偶函数</h4>
+<p><span class="math display">\[
 \begin{aligned}
-    &g:R^m\times R^p\rightarrow R\\
-    &g=\inf_{x\in D} L(x,\lambda, \nu)
-\end{aligned}</script><ul>
-<li>函数 $g$ 为凹函数（任何优化问题的 Lagrange 对偶函数为凹函数）<ul>
-<li>$\sup L(x,\lambda, \nu)$ 为凸函数</li>
+    &amp;g:R^m\times R^p\rightarrow R\\
+    &amp;g=\inf_{x\in D} L(x,\lambda, \nu)
+\end{aligned}
+\]</span></p>
+<ul>
+<li>函数 <span class="math inline">\(g\)</span> 为凹函数（任何优化问题的 Lagrange 对偶函数为凹函数）
+<ul>
+<li><span class="math inline">\(\sup L(x,\lambda, \nu)\)</span> 为凸函数</li>
+</ul></li>
+<li>最优值下界：若 <span class="math inline">\(\lambda \ge 0\)</span>，则 <span class="math inline">\(g(\lambda, \nu)\le p^ *\)</span>（<span class="math inline">\(p^ *\)</span> 为原优化问题最优值）</li>
 </ul>
-</li>
-<li>最优值下界：若 $\lambda \ge 0$，则 $g(\lambda, \nu)\le p^ <em>$（$p^ </em>$ 为原优化问题最优值）</li>
-</ul>
-<p><strong>例：线性方程组的最小二乘解</strong></p>
-<script type="math/tex; mode=display">
+<p><strong>例：线性方程组的最小二乘解</strong> <span class="math display">\[
 \begin{aligned}
-\min~~&x^Tx\\
-s.t.~~&Ax=b
-\end{aligned}</script><p>下界性质：$p^*\ge -\frac 1 4 \nu^TAA^T\nu-b^T\nu,\quad \forall \nu$</p>
+\min~~&amp;x^Tx\\
+s.t.~~&amp;Ax=b
+\end{aligned}
+\]</span> 下界性质：<span class="math inline">\(p^*\ge -\frac 1 4 \nu^TAA^T\nu-b^T\nu,\quad \forall \nu\)</span></p>
 <p><strong>例：标准形式的线性规划</strong></p>
-<p>下界性质：$p^*\ge-b^T\nu,\quad if~A^T\nu +c\succeq 0$</p>
-<p><strong>例：双向划分问题</strong></p>
-<script type="math/tex; mode=display">
+<p>下界性质：<span class="math inline">\(p^*\ge-b^T\nu,\quad if~A^T\nu +c\succeq 0\)</span></p>
+<p><strong>例：双向划分问题</strong> <span class="math display">\[
 \begin{aligned}
-\min~~&x^TWx\\
-s.t.~~&x_i^2=1,\quad i = 1,...,n
-\end{aligned}</script><p>下界性质：$p^*\ge -\mathbf 1^T\nu, \quad if~W+\mathbf{diag}(\nu)\succeq 0$</p>
-<h4 id="Lagrange-对偶函数与共轭函数"><a href="#Lagrange-对偶函数与共轭函数" class="headerlink" title="Lagrange 对偶函数与共轭函数"></a>Lagrange 对偶函数与共轭函数</h4><p>共轭函数 $f^*=\sup_{x\in D}(y^Tx-f(x))$</p>
+\min~~&amp;x^TWx\\
+s.t.~~&amp;x_i^2=1,\quad i = 1,...,n
+\end{aligned}
+\]</span> 下界性质：<span class="math inline">\(p^*\ge -\mathbf 1^T\nu, \quad if~W+\mathbf{diag}(\nu)\succeq 0\)</span></p>
+<h4 id="lagrange-对偶函数与共轭函数">Lagrange 对偶函数与共轭函数</h4>
+<p>共轭函数 <span class="math inline">\(f^*=\sup_{x\in D}(y^Tx-f(x))\)</span></p>
 <p>而对偶函数满足：</p>
-<p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210112235145873.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210112235145873.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112235145873"></p>
+<figure>
+<img src="/.io//image-20210112235145873.png" class="lazyload" data-srcset="/.io//image-20210112235145873.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112235145873"><figcaption aria-hidden="true">image-20210112235145873</figcaption>
+</figure>
 <p>若已知共轭函数，可以简化对偶函数的表达</p>
 <p>例如：熵的最大化</p>
-<h3 id="对偶问题"><a href="#对偶问题" class="headerlink" title="对偶问题"></a>对偶问题</h3><script type="math/tex; mode=display">
+<h3 id="对偶问题">对偶问题</h3>
+<p><span class="math display">\[
 \begin{aligned}
-    \max~~&g(\lambda,\nu)\\
-    s.t.~~&\lambda\succeq 0
-\end{aligned}</script><ul>
-<li>凸优化问题的最优值表示为 $d^*$</li>
-<li>通过 Lagrange 对偶函数获取 $p^*$ 的最佳下界</li>
-<li>凸优化问题：$d^<em>\le p^</em>$</li>
+    \max~~&amp;g(\lambda,\nu)\\
+    s.t.~~&amp;\lambda\succeq 0
+\end{aligned}
+\]</span></p>
+<ul>
+<li>凸优化问题的最优值表示为 <span class="math inline">\(d^*\)</span></li>
+<li>通过 Lagrange 对偶函数获取 <span class="math inline">\(p^*\)</span> 的最佳下界</li>
+<li>凸优化问题：<span class="math inline">\(d^*\le p^*\)</span></li>
 </ul>
-<p><strong>例：线性规划</strong></p>
-<script type="math/tex; mode=display">
+<p><strong>例：线性规划</strong> <span class="math display">\[
 \begin{aligned}
-\min.&c^Tx\\
-s.t.&Ax=b\\&x\succeq 0
-\end{aligned}</script><p>对偶问题为：</p>
-<script type="math/tex; mode=display">
+\min.&amp;c^Tx\\
+s.t.&amp;Ax=b\\&amp;x\succeq 0
+\end{aligned}
+\]</span></p>
+<p>对偶问题为：</p>
+<p><span class="math display">\[
 \begin{aligned}
-  \max.&-b^Tv\\
-  s.t.&A^Tv+c\succeq0
-\end{aligned}</script><blockquote>
+  \max.&amp;-b^Tv\\
+  s.t.&amp;A^Tv+c\succeq0
+\end{aligned}
+\]</span></p>
+<blockquote>
 <p><em>对于一个线性规划问题，其对偶问题也是线性规划问题</em></p>
 </blockquote>
-<h3 id="弱对偶与强对偶"><a href="#弱对偶与强对偶" class="headerlink" title="弱对偶与强对偶"></a>弱对偶与强对偶</h3><p><strong>Thm</strong>（弱对偶）对于凸优化和非凸优化都有：$d^<em>\le p^</em>$</p>
+<h3 id="弱对偶与强对偶">弱对偶与强对偶</h3>
+<p><strong>Thm</strong>（弱对偶）对于凸优化和非凸优化都有：<span class="math inline">\(d^*\le p^*\)</span></p>
 <ul>
 <li>可以⽤来寻找困难问题的⾮平凡下界</li>
 </ul>
-<p><strong>Thm</strong>（强对偶）对偶间隙 $p^<em>-d^</em> =0$</p>
+<p><strong>Thm</strong>（强对偶）对偶间隙 <span class="math inline">\(p^*-d^* =0\)</span></p>
 <ul>
 <li>并非总是满足，但在凸优化问题中常常满足</li>
 </ul>
 <p>凸优化问题中保证强对偶的条件称为<strong>约束准则</strong>。</p>
-<h3 id="几何解释"><a href="#几何解释" class="headerlink" title="几何解释"></a>几何解释</h3><p>考虑只有一个约束 $f_1(0)\le 0$ 的问题</p>
-<p>定义集合：$G=\{(f_0(x),f_1(x)|x\in D\}$</p>
-<p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210112235935306.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210112235935306.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112235935306"></p>
+<h3 id="几何解释">几何解释</h3>
+<p>考虑只有一个约束 <span class="math inline">\(f_1(0)\le 0\)</span> 的问题</p>
+<p>定义集合：<span class="math inline">\(G=\{(f_0(x),f_1(x)|x\in D\}\)</span></p>
+<figure>
+<img src="/.io//image-20210112235935306.png" class="lazyload" data-srcset="/.io//image-20210112235935306.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210112235935306"><figcaption aria-hidden="true">image-20210112235935306</figcaption>
+</figure>
 <p>如果是凸的：</p>
-<p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113000037678.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113000037678.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113000037678"></p>
-<h3 id="最优性条件"><a href="#最优性条件" class="headerlink" title="最优性条件"></a>最优性条件</h3><p><strong>Def</strong>（相对内部）$\mathrm{Rel~int}~D=\{x\in D|B(x,r)\cap\mathrm{aff~}D\sub D,\exist r&gt;0\}$</p>
-<h4 id="Slater-约束准则"><a href="#Slater-约束准则" class="headerlink" title="Slater 约束准则"></a>Slater 约束准则</h4><p><strong>Thm</strong>：若某个凸优化问题中，存在一点 $x\in \mathrm{relint}~D=\{x\in D|B(x,r)\cap \mathrm{aff}D\subset D\}$ 使得该问题是<strong>严格可行</strong>的（$x\in relint~D,f_i(x)&lt;0,Ax=b$）则为强对偶问题。</p>
-<p>弱化后：若不等式约束时仿射的，只要可行域非空，则必有$d^<em>=p^</em>$</p>
-<h4 id="KKT-最优性条件"><a href="#KKT-最优性条件" class="headerlink" title="KKT 最优性条件"></a>KKT 最优性条件</h4><h5 id="KKT-条件"><a href="#KKT-条件" class="headerlink" title="KKT 条件"></a>KKT 条件</h5><p>一般可微优化问题，对偶间隙为 0 需要满足 KKT 条件，包含以下四个部分：</p>
-<ol>
-<li>（互补松弛性）$\lambda^<em>_if_i(x^</em>)=0$</li>
-<li>（原始可行性）$f_i(x)\le 0, h_i(x)=0$</li>
-<li>（对偶可行性）$\lambda_i\ge 0$</li>
-<li>（稳定性条件）$\displaystyle\frac{\partial}{\partial x}L(x,\lambda,\nu)=0$</li>
+<figure>
+<img src="/.io//image-20210113000037678.png" class="lazyload" data-srcset="/.io//image-20210113000037678.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113000037678"><figcaption aria-hidden="true">image-20210113000037678</figcaption>
+</figure>
+<h3 id="最优性条件">最优性条件</h3>
+<p><strong>Def</strong>（相对内部）<span class="math inline">\(\mathrm{Rel~int}~D=\{x\in D|B(x,r)\cap\mathrm{aff~}D\sub D,\exist r&gt;0\}\)</span></p>
+<h4 id="slater-约束准则">Slater 约束准则</h4>
+<p><strong>Thm</strong>：若某个凸优化问题中，存在一点 <span class="math inline">\(x\in \mathrm{relint}~D=\{x\in D|B(x,r)\cap \mathrm{aff}D\subset D\}\)</span> 使得该问题是<strong>严格可行</strong>的（<span class="math inline">\(x\in relint~D,f_i(x)&lt;0,Ax=b\)</span>）则为强对偶问题。</p>
+<p>弱化后：若不等式约束时仿射的，只要可行域非空，则必有<span class="math inline">\(d^*=p^*\)</span></p>
+<h4 id="kkt-最优性条件">KKT 最优性条件</h4>
+<h5 id="kkt-条件">KKT 条件</h5>
+<p>一般可微优化问题，对偶间隙为 0 需要满足 KKT 条件，包含以下四个部分：</p>
+<ol type="1">
+<li>（互补松弛性）<span class="math inline">\(\lambda^*_if_i(x^*)=0\)</span></li>
+<li>（原始可行性）<span class="math inline">\(f_i(x)\le 0, h_i(x)=0\)</span></li>
+<li>（对偶可行性）<span class="math inline">\(\lambda_i\ge 0\)</span></li>
+<li>（稳定性条件）<span class="math inline">\(\displaystyle\frac{\partial}{\partial x}L(x,\lambda,\nu)=0\)</span></li>
 </ol>
 <p><strong>例：注水</strong></p>
-<h5 id="互补松弛性"><a href="#互补松弛性" class="headerlink" title="互补松弛性"></a>互补松弛性</h5><p>若对偶问题满足 $p^<em>=d^</em>$ 且所有函数可微，则最优解满足：</p>
-<script type="math/tex; mode=display">
-\lambda_i^*f_i(x^*)=0</script><h5 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h5><script type="math/tex; mode=display">
-\inf L=L(x^*,\lambda^*,\nu^*)</script><p>则：</p>
-<script type="math/tex; mode=display">
-\frac{\partial L(x,\lambda^*,\nu^*)}{\partial x}|_{x=x^*}=0</script><h5 id="对偶、问题重形式化"><a href="#对偶、问题重形式化" class="headerlink" title="对偶、问题重形式化"></a>对偶、问题重形式化</h5><p>常用方法：</p>
-<ol>
+<h5 id="互补松弛性">互补松弛性</h5>
+<p>若对偶问题满足 <span class="math inline">\(p^*=d^*\)</span> 且所有函数可微，则最优解满足： <span class="math display">\[
+\lambda_i^*f_i(x^*)=0
+\]</span></p>
+<h5 id="稳定性">稳定性</h5>
+<p><span class="math display">\[
+\inf L=L(x^*,\lambda^*,\nu^*)
+\]</span></p>
+<p>则： <span class="math display">\[
+\frac{\partial L(x,\lambda^*,\nu^*)}{\partial x}|_{x=x^*}=0
+\]</span></p>
+<h5 id="对偶问题重形式化">对偶、问题重形式化</h5>
+<p>常用方法：</p>
+<ol type="1">
 <li>引入新的变量和对应的约束</li>
 <li>将显示约束转换为隐式表达（反之亦然）</li>
 <li>变换目标或约束函数变换</li>
 </ol>
-<h6 id="引入新的变量和对应的约束"><a href="#引入新的变量和对应的约束" class="headerlink" title="引入新的变量和对应的约束"></a>引入新的变量和对应的约束</h6><p>例如：$\min~~f_0(Ax+b)$</p>
-<p>对偶问题：$g=\inf_xf_0(Ax+b)=p^*$</p>
-<p>重形式化后：</p>
-<script type="math/tex; mode=display">
+<h6 id="引入新的变量和对应的约束">引入新的变量和对应的约束</h6>
+<p>例如：<span class="math inline">\(\min~~f_0(Ax+b)\)</span></p>
+<p>对偶问题：<span class="math inline">\(g=\inf_xf_0(Ax+b)=p^*\)</span></p>
+<p>重形式化后： <span class="math display">\[
 \begin{aligned}
-\min~~&f_0(y)&\\
-s.t.~~&Ax+b-y=0&\\
-\rightarrow~~ &g(\nu)=
+\min~~&amp;f_0(y)&amp;\\
+s.t.~~&amp;Ax+b-y=0&amp;\\
+\rightarrow~~ &amp;g(\nu)=
 \begin{cases}
--f_0^*(\nu)+b^T\nu &A^T\nu = 0\\
--\infty&otherwise
+-f_0^*(\nu)+b^T\nu &amp;A^T\nu = 0\\
+-\infty&amp;otherwise
 \end{cases}
-\end{aligned}</script><p>例：范数逼近问题</p>
-<script type="math/tex; mode=display">
+\end{aligned}
+\]</span> 例：范数逼近问题 <span class="math display">\[
 \begin{aligned}
-\min~~&\|Ax-b\|\\
-\rightarrow\min~~&\|y\|\\
-s.t.~~&y=Ax-b
-\end{aligned}</script><h6 id="隐式约束"><a href="#隐式约束" class="headerlink" title="隐式约束"></a>隐式约束</h6><p>例如：带框的线性规划</p>
-<p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113091100433.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113091100433.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113091100433"></p>
-<h3 id="扰动、灵敏度分析"><a href="#扰动、灵敏度分析" class="headerlink" title="扰动、灵敏度分析"></a>扰动、灵敏度分析</h3><p>优化问题及其对偶问题的形式为：</p>
-<p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113091241349.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113091241349.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113091241349"></p>
+\min~~&amp;\|Ax-b\|\\
+\rightarrow\min~~&amp;\|y\|\\
+s.t.~~&amp;y=Ax-b
+\end{aligned}
+\]</span></p>
+<h6 id="隐式约束">隐式约束</h6>
+<p>例如：带框的线性规划</p>
+<figure>
+<img src="/.io//image-20210113091100433.png" class="lazyload" data-srcset="/.io//image-20210113091100433.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113091100433"><figcaption aria-hidden="true">image-20210113091100433</figcaption>
+</figure>
+<h3 id="扰动灵敏度分析">扰动、灵敏度分析</h3>
+<p>优化问题及其对偶问题的形式为：</p>
+<figure>
+<img src="/.io//image-20210113091241349.png" class="lazyload" data-srcset="/.io//image-20210113091241349.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113091241349"><figcaption aria-hidden="true">image-20210113091241349</figcaption>
+</figure>
 <p>则其扰动问题及其对偶</p>
-<p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113091257572.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113091257572.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113091257572"></p>
-<p>其中，$x$ 为原问题的优化变量，$u,~v$ 为参数</p>
-<p>得到的 $p^*(u,v)$ 为最优值，是 $u$ 和 $v$ 的函数</p>
-<h4 id="扰动问题的性质"><a href="#扰动问题的性质" class="headerlink" title="扰动问题的性质"></a>扰动问题的性质</h4><p><strong>Thm</strong>：若原问题是凸的，则 $p^*(u,v)$ 是凸函数</p>
-<p><strong>Thm</strong>：若原问题为凸，且对偶间隙为 0，$\lambda^<em>,w^</em>$ 为原问题的最优解，则：$p^<em>(u,v)\ge p^</em>(0,0)-\lambda^{<em>T}u-w^{</em>T}v$</p>
-<h4 id="灵敏度分析"><a href="#灵敏度分析" class="headerlink" title="灵敏度分析"></a>灵敏度分析</h4><p>$p^<em>(u,v)\ge p^</em>(0,0)-\lambda^{<em>T}u-w^{</em>T}v$</p>
-<p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113091841863.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113091841863.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113091841863"></p>
-<h5 id="局部灵敏度分析"><a href="#局部灵敏度分析" class="headerlink" title="局部灵敏度分析"></a>局部灵敏度分析</h5><p><strong>Thm</strong>：若原问题是凸的，且强对偶性成立， $p^*(u,v)$ 在 $(0,0)$ 可微，则有</p>
-<script type="math/tex; mode=display">
-\lambda_i^*=-\frac{\partial p^*(0,0)}{\partial u_i},\quad \nu_i^*=-\frac{\partial p^*(0,0)}{\partial v_i}</script><p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113092052504.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113092052504.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113092052504"></p>
-<h3 id="广义不等式"><a href="#广义不等式" class="headerlink" title="广义不等式"></a>广义不等式</h3><blockquote>
-<p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113092110526.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113092110526.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113092110526"></p>
+<figure>
+<img src="/.io//image-20210113091257572.png" class="lazyload" data-srcset="/.io//image-20210113091257572.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113091257572"><figcaption aria-hidden="true">image-20210113091257572</figcaption>
+</figure>
+<p>其中，<span class="math inline">\(x\)</span> 为原问题的优化变量，<span class="math inline">\(u,~v\)</span> 为参数</p>
+<p>得到的 <span class="math inline">\(p^*(u,v)\)</span> 为最优值，是 <span class="math inline">\(u\)</span> 和 <span class="math inline">\(v\)</span> 的函数</p>
+<h4 id="扰动问题的性质">扰动问题的性质</h4>
+<p><strong>Thm</strong>：若原问题是凸的，则 <span class="math inline">\(p^*(u,v)\)</span> 是凸函数</p>
+<p><strong>Thm</strong>：若原问题为凸，且对偶间隙为 0，<span class="math inline">\(\lambda^*,w^*\)</span> 为原问题的最优解，则：<span class="math inline">\(p^*(u,v)\ge p^*(0,0)-\lambda^{*T}u-w^{*T}v\)</span></p>
+<h4 id="灵敏度分析">灵敏度分析</h4>
+<p><span class="math inline">\(p^*(u,v)\ge p^*(0,0)-\lambda^{*T}u-w^{*T}v\)</span></p>
+<figure>
+<img src="/.io//image-20210113091841863.png" class="lazyload" data-srcset="/.io//image-20210113091841863.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113091841863"><figcaption aria-hidden="true">image-20210113091841863</figcaption>
+</figure>
+<h5 id="局部灵敏度分析">局部灵敏度分析</h5>
+<p><strong>Thm</strong>：若原问题是凸的，且强对偶性成立， <span class="math inline">\(p^*(u,v)\)</span> 在 <span class="math inline">\((0,0)\)</span> 可微，则有 <span class="math display">\[
+\lambda_i^*=-\frac{\partial p^*(0,0)}{\partial u_i},\quad \nu_i^*=-\frac{\partial p^*(0,0)}{\partial v_i}
+\]</span> <img src="/.io//image-20210113092052504.png" class="lazyload" data-srcset="/.io//image-20210113092052504.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113092052504"></p>
+<h3 id="广义不等式">广义不等式</h3>
+<blockquote>
+<figure>
+<img src="/.io//image-20210113092110526.png" class="lazyload" data-srcset="/.io//image-20210113092110526.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113092110526"><figcaption aria-hidden="true">image-20210113092110526</figcaption>
+</figure>
 </blockquote>
 <ul>
-<li>不等式约束的 Lagrange 乘子为向量 $\lambda_i\in R^{k_i}$</li>
-<li>拉格朗日函数为：$L=f_0(x)+\sum_{i=1}^m\lambda_i^Tf_i(x)+\sum_{i=1}^p\nu_ih_i(x)$</li>
+<li>不等式约束的 Lagrange 乘子为向量 <span class="math inline">\(\lambda_i\in R^{k_i}\)</span></li>
+<li>拉格朗日函数为：<span class="math inline">\(L=f_0(x)+\sum_{i=1}^m\lambda_i^Tf_i(x)+\sum_{i=1}^p\nu_ih_i(x)\)</span></li>
 </ul>
-<p><strong>Thm</strong>（下界性质）若 $\lambda_i\succeq_{K_i^<em>}0$ 则 $g\le p^</em>$</p>
+<p><strong>Thm</strong>（下界性质）若 <span class="math inline">\(\lambda_i\succeq_{K_i^*}0\)</span> 则 <span class="math inline">\(g\le p^*\)</span></p>
 <p><strong>例：半定规划</strong></p>
 <blockquote>
-<p><img src="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113092457953.png" class="lazyload" data-srcset="/2020/12/26/study/Math/ConvexOptimization/notes5/image-20210113092457953.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113092457953"></p>
+<figure>
+<img src="/.io//image-20210113092457953.png" class="lazyload" data-srcset="/.io//image-20210113092457953.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210113092457953"><figcaption aria-hidden="true">image-20210113092457953</figcaption>
+</figure>
 </blockquote>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -716,8 +770,11 @@ s.t.~~&y=Ax-b
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「复变函数」共形映射</p>
           <p class='content'>:no_mouth:
 
-共形映射共形映射的概念解析函数导数的几何意义复平面上有向曲线的切向量：$z=z(t)$ 的切向量为 $z’(t)$
-导数幅角的几何意义：表示曲线 $C$ 经过 $w=f(...</p>
+共形映射
+共形映射的概念
+解析函数导数的几何意义
+复平面上有向曲线的切向量：\(z=z(t)\) 的切向量为 \(z&#39;(t)\)
+导数幅角的几何意义：...</p>
         </a>
       
       
@@ -729,9 +786,12 @@ s.t.~~&y=Ax-b
 评判估计量的方法
 
 
-参数估计两种常用的参数估计方法矩估计法
+参数估计
+两种常用的参数估计方法
+矩估计法
 
-辛钦大数定律：样本较大时，$A_r=\frac{1}{n}\sum_{i=1}^nX_i^r\righta...</p>
+
+辛钦大数定律：样本较大时，\(A_r=\frac{1}{n}\sum_{i=1...</p>
         </a>
       
     </div>
@@ -774,7 +834,7 @@ s.t.~~&y=Ax-b
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%81%B6"><span class="toc-text">对偶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lagrange-%E5%AF%B9%E5%81%B6%E9%97%AE%E9%A2%98"><span class="toc-text">Lagrange 对偶问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Lagrange-%E5%87%BD%E6%95%B0"><span class="toc-text">Lagrange 函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Lagrange-%E5%AF%B9%E5%81%B6%E5%87%BD%E6%95%B0"><span class="toc-text">Lagrange 对偶函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Lagrange-%E5%AF%B9%E5%81%B6%E5%87%BD%E6%95%B0%E4%B8%8E%E5%85%B1%E8%BD%AD%E5%87%BD%E6%95%B0"><span class="toc-text">Lagrange 对偶函数与共轭函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E5%81%B6%E9%97%AE%E9%A2%98"><span class="toc-text">对偶问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B1%E5%AF%B9%E5%81%B6%E4%B8%8E%E5%BC%BA%E5%AF%B9%E5%81%B6"><span class="toc-text">弱对偶与强对偶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E8%A7%A3%E9%87%8A"><span class="toc-text">几何解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E6%80%A7%E6%9D%A1%E4%BB%B6"><span class="toc-text">最优性条件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Slater-%E7%BA%A6%E6%9D%9F%E5%87%86%E5%88%99"><span class="toc-text">Slater 约束准则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#KKT-%E6%9C%80%E4%BC%98%E6%80%A7%E6%9D%A1%E4%BB%B6"><span class="toc-text">KKT 最优性条件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#KKT-%E6%9D%A1%E4%BB%B6"><span class="toc-text">KKT 条件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%92%E8%A1%A5%E6%9D%BE%E5%BC%9B%E6%80%A7"><span class="toc-text">互补松弛性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7"><span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E5%81%B6%E3%80%81%E9%97%AE%E9%A2%98%E9%87%8D%E5%BD%A2%E5%BC%8F%E5%8C%96"><span class="toc-text">对偶、问题重形式化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%B0%E5%8A%A8%E3%80%81%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-text">扰动、灵敏度分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%B0%E5%8A%A8%E9%97%AE%E9%A2%98%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-text">扰动问题的性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-text">灵敏度分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-text">局部灵敏度分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%BF%E4%B9%89%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="toc-text">广义不等式</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%81%B6"><span class="toc-text">对偶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lagrange-%E5%AF%B9%E5%81%B6%E9%97%AE%E9%A2%98"><span class="toc-text">Lagrange 对偶问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#lagrange-%E5%87%BD%E6%95%B0"><span class="toc-text">Lagrange 函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#lagrange-%E5%AF%B9%E5%81%B6%E5%87%BD%E6%95%B0"><span class="toc-text">Lagrange 对偶函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#lagrange-%E5%AF%B9%E5%81%B6%E5%87%BD%E6%95%B0%E4%B8%8E%E5%85%B1%E8%BD%AD%E5%87%BD%E6%95%B0"><span class="toc-text">Lagrange 对偶函数与共轭函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E5%81%B6%E9%97%AE%E9%A2%98"><span class="toc-text">对偶问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B1%E5%AF%B9%E5%81%B6%E4%B8%8E%E5%BC%BA%E5%AF%B9%E5%81%B6"><span class="toc-text">弱对偶与强对偶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E8%A7%A3%E9%87%8A"><span class="toc-text">几何解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E6%80%A7%E6%9D%A1%E4%BB%B6"><span class="toc-text">最优性条件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#slater-%E7%BA%A6%E6%9D%9F%E5%87%86%E5%88%99"><span class="toc-text">Slater 约束准则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kkt-%E6%9C%80%E4%BC%98%E6%80%A7%E6%9D%A1%E4%BB%B6"><span class="toc-text">KKT 最优性条件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#kkt-%E6%9D%A1%E4%BB%B6"><span class="toc-text">KKT 条件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%92%E8%A1%A5%E6%9D%BE%E5%BC%9B%E6%80%A7"><span class="toc-text">互补松弛性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7"><span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E5%81%B6%E9%97%AE%E9%A2%98%E9%87%8D%E5%BD%A2%E5%BC%8F%E5%8C%96"><span class="toc-text">对偶、问题重形式化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%B0%E5%8A%A8%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-text">扰动、灵敏度分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%B0%E5%8A%A8%E9%97%AE%E9%A2%98%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-text">扰动问题的性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-text">灵敏度分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-text">局部灵敏度分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%BF%E4%B9%89%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="toc-text">广义不等式</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1421,14 +1481,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

@@ -28,7 +28,7 @@
   
 
   
-    <meta name="description" content="多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习…">
+    <meta name="description" content="多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习...">
   
 
   <!-- feed -->
@@ -468,285 +468,263 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <p>多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习…</p>
+  <p>多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习...</p>
 <span id="more"></span>
-<h2 id="多元数量值函数积分的概念和性质"><a href="#多元数量值函数积分的概念和性质" class="headerlink" title="多元数量值函数积分的概念和性质"></a>多元数量值函数积分的概念和性质</h2><h3 id="质量的计算"><a href="#质量的计算" class="headerlink" title="质量的计算"></a>质量的计算</h3><h3 id="多元数量值函数积分的概念"><a href="#多元数量值函数积分的概念" class="headerlink" title="多元数量值函数积分的概念"></a>多元数量值函数积分的概念</h3><ul>
+<h2 id="多元数量值函数积分的概念和性质">多元数量值函数积分的概念和性质</h2>
+<h3 id="质量的计算">质量的计算</h3>
+<h3 id="多元数量值函数积分的概念">多元数量值函数积分的概念</h3>
+<ul>
 <li><strong>Def</strong>：多元数量值函数积分</li>
 </ul>
-<h3 id="积分存在的条件和性质"><a href="#积分存在的条件和性质" class="headerlink" title="积分存在的条件和性质"></a>积分存在的条件和性质</h3><ol>
+<h3 id="积分存在的条件和性质">积分存在的条件和性质</h3>
+<ol type="1">
 <li>线性性质</li>
 <li>对积分域的可加性</li>
 <li>积分不等式</li>
 <li>中值定理</li>
 </ol>
-<h2 id="二重积分的计算"><a href="#二重积分的计算" class="headerlink" title="二重积分的计算"></a>二重积分的计算</h2><ol>
+<h2 id="二重积分的计算">二重积分的计算</h2>
+<ol type="1">
 <li>二重积分的几何意义</li>
 <li>直角坐标系下二重积分的计算法</li>
 <li>极坐标系下二重积分的计算法</li>
 <li>曲线坐标下二重积分的计算法</li>
 </ol>
-<h2 id="三重积分的计算"><a href="#三重积分的计算" class="headerlink" title="三重积分的计算"></a>三重积分的计算</h2><ol>
+<h2 id="三重积分的计算">三重积分的计算</h2>
+<ol type="1">
 <li>化三重积分为单积分与二重积分的累次积分</li>
-<li>柱面、球面坐标下的三重积分计算法<ol>
+<li>柱面、球面坐标下的三重积分计算法
+<ol type="1">
 <li>曲线坐标下的三重积分</li>
 <li>柱面坐标及柱面坐标下的三重积分计算法</li>
 <li>球面坐标和球面坐标下的三重积分计算法</li>
+</ol></li>
 </ol>
-</li>
-</ol>
-<h2 id="含参变量的积分和反常重积分"><a href="#含参变量的积分和反常重积分" class="headerlink" title="含参变量的积分和反常重积分"></a>含参变量的积分和反常重积分</h2><h3 id="含参变量的积分"><a href="#含参变量的积分" class="headerlink" title="含参变量的积分"></a>含参变量的积分</h3><ul>
-<li><p><strong>Def</strong>：含参变量$y$的积分</p>
-</li>
-<li><p><strong>Thm</strong>：（连续性）$f\in C(D) \rightarrow F(y) = \int^b_af(x,y)\mathrm d x 在[c,d]上连续$</p>
-</li>
-<li><p><strong>Inf</strong>：（连续性的极限形式表达）$\displaystyle\lim \limits_{y\rightarrow y_0} \int_a^bf(x,y)\mathrm d x = \int_a^b f(x,y_0)\mathrm d x = \int_a^b[\lim\limits_{y\rightarrow y_0} f(x,y)]\mathrm dx$</p>
-</li>
-<li><p><strong>Thm</strong>：（可导性）$f,f_y\in C(C)$，则 $F(y) = \int f(x,y) \mathrm dx $有连续导数，且积分和求导运算可交换</p>
-</li>
-<li><p><strong>Thm</strong>：（积分顺序交换性）$f \in C, F(y) = \int f\mathrm dx ,G(x) = \int f\mathrm dy\rightarrow \int F(y) \mathrm d y = \int G(x) \mathrm dx$</p>
-</li>
-<li><p><strong>Thm</strong>：设 $f(x,y)\in C(D), x_i (y) \in C[c,d]$ 则，$F(y) = \int_{x_1(y)}^ {x_2(y)}f(x,y)\mathrm dx$ 在$[c,d]$上连续</p>
-</li>
-<li><p><strong>Thm</strong>：$F’(y) = \int _{x_1(y)}^ {x_2(y)}f_y(x,y)\mathrm dx+ f(x_2, y]x_2’ - f(x_1,y) x_1’$</p>
-</li>
+<h2 id="含参变量的积分和反常重积分">含参变量的积分和反常重积分</h2>
+<h3 id="含参变量的积分">含参变量的积分</h3>
+<ul>
+<li><p><strong>Def</strong>：含参变量<span class="math inline">\(y\)</span>的积分</p></li>
+<li><p><strong>Thm</strong>：（连续性）<span class="math inline">\(f\in C(D) \rightarrow F(y) = \int^b_af(x,y)\mathrm d x 在[c,d]上连续\)</span></p></li>
+<li><p><strong>Inf</strong>：（连续性的极限形式表达）<span class="math inline">\(\displaystyle\lim \limits_{y\rightarrow y_0} \int_a^bf(x,y)\mathrm d x = \int_a^b f(x,y_0)\mathrm d x = \int_a^b[\lim\limits_{y\rightarrow y_0} f(x,y)]\mathrm dx\)</span></p></li>
+<li><p><strong>Thm</strong>：（可导性）<span class="math inline">\(f,f_y\in C(C)\)</span>，则 $F(y) = f(x,y) dx $有连续导数，且积分和求导运算可交换</p></li>
+<li><p><strong>Thm</strong>：（积分顺序交换性）<span class="math inline">\(f \in C, F(y) = \int f\mathrm dx ,G(x) = \int f\mathrm dy\rightarrow \int F(y) \mathrm d y = \int G(x) \mathrm dx\)</span></p></li>
+<li><p><strong>Thm</strong>：设 <span class="math inline">\(f(x,y)\in C(D), x_i (y) \in C[c,d]\)</span> 则，<span class="math inline">\(F(y) = \int_{x_1(y)}^ {x_2(y)}f(x,y)\mathrm dx\)</span> 在<span class="math inline">\([c,d]\)</span>上连续</p></li>
+<li><p><strong>Thm</strong>：<span class="math inline">\(F&#39;(y) = \int _{x_1(y)}^ {x_2(y)}f_y(x,y)\mathrm dx+ f(x_2, y]x_2&#39; - f(x_1,y) x_1&#39;\)</span></p></li>
 </ul>
-<h3 id="反常重积分"><a href="#反常重积分" class="headerlink" title="反常重积分"></a>反常重积分</h3><ul>
-<li>无界区域的二重积分<ul>
-<li><strong>Thm</strong>：（收敛判别法）$f(x,y)$ 在无界区域上连续，若存在$\rho_0&gt;0$，使当$\rho \ge \rho_0$ 有$|f|\le \frac {M}{\rho^\alpha}$，且 $M,\alpha$为常数，则当$\alpha &gt;2$时反常二重积分$\int\int f \mathrm d \sigma$收敛</li>
+<h3 id="反常重积分">反常重积分</h3>
+<ul>
+<li>无界区域的二重积分
+<ul>
+<li><strong>Thm</strong>：（收敛判别法）<span class="math inline">\(f(x,y)\)</span> 在无界区域上连续，若存在<span class="math inline">\(\rho_0&gt;0\)</span>，使当<span class="math inline">\(\rho \ge \rho_0\)</span> 有<span class="math inline">\(|f|\le \frac {M}{\rho^\alpha}\)</span>，且 <span class="math inline">\(M,\alpha\)</span>为常数，则当<span class="math inline">\(\alpha &gt;2\)</span>时反常二重积分<span class="math inline">\(\int\int f \mathrm d \sigma\)</span>收敛</li>
+</ul></li>
+<li>无界函数的二重积分
+<ul>
+<li><strong>Def</strong>：无界函数的二重积分<span class="math inline">\(\lim\limits_{d\rightarrow 0} \int\int f\mathrm d \sigma\)</span></li>
+<li><strong>Thm</strong>：（收敛判别法）设 <span class="math inline">\(f(x,y)\)</span> 在有界区域上除了<span class="math inline">\(P_0\)</span>外处处连续，若 <span class="math inline">\(|f|\le \frac {M}{\rho ^\alpha}\)</span>在除 <span class="math inline">\(P_0\)</span> 外的区域上处处成立，则当 <span class="math inline">\(\alpha &lt;2\)</span>时，反常二重积分收敛</li>
+</ul></li>
 </ul>
-</li>
-<li>无界函数的二重积分<ul>
-<li><strong>Def</strong>：无界函数的二重积分$\lim\limits_{d\rightarrow 0} \int\int f\mathrm d \sigma$</li>
-<li><strong>Thm</strong>：（收敛判别法）设 $f(x,y)$ 在有界区域上除了$P_0$外处处连续，若 $|f|\le \frac {M}{\rho ^\alpha}$在除 $P_0$ 外的区域上处处成立，则当 $\alpha &lt;2$时，反常二重积分收敛</li>
+<h2 id="第一型线积分与面积分">第一型线积分与面积分</h2>
+<h3 id="第一型线积分">第一型线积分</h3>
+<ul>
+<li>第一型线积分的计算公式 <span class="math inline">\(r = r(t)\rightarrow \int_{(C)}f ds = \int_{(C)}f \sqrt{\dot x^2+\dot y^2+\dot z^2}\mathrm d t\)</span></li>
 </ul>
-</li>
-</ul>
-<h2 id="第一型线积分与面积分"><a href="#第一型线积分与面积分" class="headerlink" title="第一型线积分与面积分"></a>第一型线积分与面积分</h2><h3 id="第一型线积分"><a href="#第一型线积分" class="headerlink" title="第一型线积分"></a>第一型线积分</h3><ul>
-<li>第一型线积分的计算公式 $r = r(t)\rightarrow \int_{(C)}f ds = \int_{(C)}f \sqrt{\dot x^2+\dot y^2+\dot z^2}\mathrm d t$</li>
-</ul>
-<h3 id="第一型面积分"><a href="#第一型面积分" class="headerlink" title="第一型面积分"></a>第一型面积分</h3><ul>
+<h3 id="第一型面积分">第一型面积分</h3>
+<ul>
 <li><p>曲面的面积</p>
 <ul>
-<li><strong>Thm</strong>：（用 $u,v$ 变量表示曲面）$S = \int\int\limits_{(\sigma)}||\boldsymbol r_u \times \boldsymbol r_v|| \mathrm d u \mathrm d v$</li>
-<li><strong>Thm</strong>：（用 $z = f(x,y)$ 表示曲面）$S = \iint \limits_{(\sigma)} ||\boldsymbol r_x \times \boldsymbol r_y || \mathrm dx\mathrm dy = \iint\limits_{(S)} \sqrt{1+f_x^2+f_y^2}\mathrm dx \mathrm dy$</li>
-</ul>
-</li>
+<li><strong>Thm</strong>：（用 <span class="math inline">\(u,v\)</span> 变量表示曲面）<span class="math inline">\(S = \int\int\limits_{(\sigma)}||\boldsymbol r_u \times \boldsymbol r_v|| \mathrm d u \mathrm d v\)</span></li>
+<li><strong>Thm</strong>：（用 <span class="math inline">\(z = f(x,y)\)</span> 表示曲面）<span class="math inline">\(S = \iint \limits_{(\sigma)} ||\boldsymbol r_x \times \boldsymbol r_y || \mathrm dx\mathrm dy = \iint\limits_{(S)} \sqrt{1+f_x^2+f_y^2}\mathrm dx \mathrm dy\)</span></li>
+</ul></li>
 <li><p>第一型曲面积分的计算</p>
 <ul>
-<li><strong>Thm</strong>：（用 $u,v$ 变量表示曲面）$I = \iint\limits_{(S)} f(x,y,z)\mathrm dS = \iint\limits_{(\sigma)}f||\boldsymbol r_u \times \boldsymbol r_v|| \mathrm d u \mathrm d v$</li>
-<li><strong>Thm</strong>：（用 $z = f(x,y)$ 表示曲面）$I = \iint\limits_{(S)} f \sqrt{1+f_x^2+f_y^2}\mathrm dx \mathrm dy$</li>
+<li><strong>Thm</strong>：（用 <span class="math inline">\(u,v\)</span> 变量表示曲面）<span class="math inline">\(I = \iint\limits_{(S)} f(x,y,z)\mathrm dS = \iint\limits_{(\sigma)}f||\boldsymbol r_u \times \boldsymbol r_v|| \mathrm d u \mathrm d v\)</span></li>
+<li><strong>Thm</strong>：（用 <span class="math inline">\(z = f(x,y)\)</span> 表示曲面）<span class="math inline">\(I = \iint\limits_{(S)} f \sqrt{1+f_x^2+f_y^2}\mathrm dx \mathrm dy\)</span></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="第二型线积分和面积分"><a href="#第二型线积分和面积分" class="headerlink" title="第二型线积分和面积分"></a>第二型线积分和面积分</h2><h3 id="场的概念"><a href="#场的概念" class="headerlink" title="场的概念"></a>场的概念</h3><ul>
+<h2 id="第二型线积分和面积分">第二型线积分和面积分</h2>
+<h3 id="场的概念">场的概念</h3>
+<ul>
 <li><strong>Def</strong>：数量场、向量场、场函数</li>
 <li>场的几何描述</li>
 </ul>
-<h3 id="第二型线积分"><a href="#第二型线积分" class="headerlink" title="第二型线积分"></a>第二型线积分</h3><ul>
-<li><p><strong>Def</strong>：第二型线积分$\int_{(C)} \boldsymbol A(M)\cdot \boldsymbol{\mathrm d s} = \lim\limits_{d\rightarrow 0} \sum\limits_{k=1}^n \boldsymbol{A}(\overline {M_k})\cdot \overrightarrow{M_{k-1}M_k}$</p>
-</li>
+<h3 id="第二型线积分">第二型线积分</h3>
+<ul>
+<li><p><strong>Def</strong>：第二型线积分<span class="math inline">\(\int_{(C)} \boldsymbol A(M)\cdot \boldsymbol{\mathrm d s} = \lim\limits_{d\rightarrow 0} \sum\limits_{k=1}^n \boldsymbol{A}(\overline {M_k})\cdot \overrightarrow{M_{k-1}M_k}\)</span></p></li>
 <li><p>第二型线积分的性质</p>
 <ul>
 <li>积分结果与方向有关</li>
 <li>可加性</li>
+</ul></li>
+<li><p>第二型线积分的计算 <span class="math inline">\(\int_{(C)}\boldsymbol A(M)\cdot \boldsymbol{\mathrm ds} = \int_{(C)}P\mathrm dx +Q\mathrm dy +R\mathrm dz =\int P\dot x+Q\dot y+R\dot z \mathrm dt\)</span></p></li>
+<li><p>两类线积分的联系 <span class="math inline">\(\int_{(C)}\boldsymbol A(M) \cdot \boldsymbol{\mathrm ds} = \int \boldsymbol A(M)\cdot \boldsymbol e_r \mathrm ds\)</span></p></li>
 </ul>
-</li>
-<li><p>第二型线积分的计算 $\int_{(C)}\boldsymbol A(M)\cdot \boldsymbol{\mathrm ds} = \int_{(C)}P\mathrm dx +Q\mathrm dy +R\mathrm dz =\int P\dot x+Q\dot y+R\dot z \mathrm dt$</p>
-</li>
-<li><p>两类线积分的联系 $\int_{(C)}\boldsymbol A(M) \cdot \boldsymbol{\mathrm ds} = \int \boldsymbol A(M)\cdot \boldsymbol e_r \mathrm ds$</p>
-</li>
+<h3 id="第二型面积分">第二型面积分</h3>
+<ul>
+<li><p><strong>Def</strong>：第二型面积分 <span class="math inline">\(\iint\limits_{(S)} \boldsymbol A(M)\cdot \boldsymbol {\mathrm dS} = \lim\limits_{d\rightarrow 0}\sum\limits_{k=1}^n \boldsymbol A(M_k)\cdot \boldsymbol e_n(M_k) \Delta S_k\)</span></p></li>
+<li><p><strong>Thm</strong>：（用外微分形式表示）<span class="math inline">\(\iint A(M)\cdot \boldsymbol{\mathrm dS} = \iint\limits_{(S)}P\mathrm dy \wedge \mathrm dz +Q\mathrm dz \wedge dx + R\mathrm dx\wedge \mathrm dy\)</span></p></li>
+<li><p>两种面积分的联系 <span class="math inline">\(\iint_{(S)} \boldsymbol A(M)\cdot \mathrm d \boldsymbol S = \iint (P\cos\alpha + Q\cos\beta + R\cos\gamma)\mathrm dS\)</span></p></li>
+<li><p>第二型面积分的计算 <span class="math inline">\(\iint_{(S)} R(x,y,z) \mathrm dx\wedge \mathrm dy = \pm \iint\limits_{(\sigma_{xy})} R(x,y,z(x,y))\mathrm dx\mathrm dy\)</span> 其余式同理。其中当曲面法向量与 <span class="math inline">\(z+\)</span> 同向时取 <span class="math inline">\(+\)</span> 号，反之取 <span class="math inline">\(-\)</span> 号</p></li>
 </ul>
-<h3 id="第二型面积分"><a href="#第二型面积分" class="headerlink" title="第二型面积分"></a>第二型面积分</h3><ul>
-<li><p><strong>Def</strong>：第二型面积分 $\iint\limits_{(S)} \boldsymbol A(M)\cdot \boldsymbol {\mathrm dS} = \lim\limits_{d\rightarrow 0}\sum\limits_{k=1}^n \boldsymbol A(M_k)\cdot \boldsymbol e_n(M_k) \Delta S_k$</p>
-</li>
-<li><p><strong>Thm</strong>：（用外微分形式表示）$\iint A(M)\cdot \boldsymbol{\mathrm dS} = \iint\limits_{(S)}P\mathrm dy \wedge \mathrm dz +Q\mathrm dz \wedge dx + R\mathrm dx\wedge \mathrm dy$</p>
-</li>
-<li><p>两种面积分的联系 $\iint_{(S)} \boldsymbol A(M)\cdot \mathrm d \boldsymbol S = \iint (P\cos\alpha + Q\cos\beta + R\cos\gamma)\mathrm dS$</p>
-</li>
-<li><p>第二型面积分的计算 $\iint_{(S)} R(x,y,z) \mathrm dx\wedge \mathrm dy = \pm \iint\limits_{(\sigma_{xy})} R(x,y,z(x,y))\mathrm dx\mathrm dy$ 其余式同理。其中当曲面法向量与 $z+$ 同向时取 $+$ 号，反之取 $-$ 号</p>
-</li>
+<h2 id="各种积分的联系及其在场论中的应用">各种积分的联系及其在场论中的应用</h2>
+<h3 id="green-公式">Green 公式</h3>
+<ul>
+<li><p><strong>Def</strong>：单连通域，复连通域</p></li>
+<li><p><strong>Thm</strong>：Green 公式 <span class="math inline">\(\iint_{(\sigma)}(\frac{\delta Q}{\delta x} - \frac{\delta P}{\delta y} \mathrm d \sigma = \oint_{(\pm C)} P\mathrm dx + Q\mathrm dy\)</span></p></li>
+<li><p><strong>Inf</strong>：任何一条分段光滑的闭曲线所围成的平面区域的面积为 <span class="math inline">\(A = \frac 1 2 \oint_{(+C)} x\mathrm dy - y\mathrm dx= \oint_{(+C)} x\mathrm dy = -\oint_{(+C)} y\mathrm dx\)</span></p></li>
 </ul>
-<h2 id="各种积分的联系及其在场论中的应用"><a href="#各种积分的联系及其在场论中的应用" class="headerlink" title="各种积分的联系及其在场论中的应用"></a>各种积分的联系及其在场论中的应用</h2><h3 id="Green-公式"><a href="#Green-公式" class="headerlink" title="Green 公式"></a>Green 公式</h3><ul>
-<li><p><strong>Def</strong>：单连通域，复连通域</p>
-</li>
-<li><p><strong>Thm</strong>：Green 公式 $\iint_{(\sigma)}(\frac{\delta Q}{\delta x} - \frac{\delta P}{\delta y} \mathrm d \sigma = \oint_{(\pm C)} P\mathrm dx + Q\mathrm dy$</p>
-</li>
-<li><p><strong>Inf</strong>：任何一条分段光滑的闭曲线所围成的平面区域的面积为 $A = \frac 1 2 \oint_{(+C)} x\mathrm dy - y\mathrm dx= \oint_{(+C)} x\mathrm dy = -\oint_{(+C)} y\mathrm dx$</p>
-</li>
-</ul>
-<h3 id="平面线积分与路径无关的条件"><a href="#平面线积分与路径无关的条件" class="headerlink" title="平面线积分与路径无关的条件"></a>平面线积分与路径无关的条件</h3><ul>
+<h3 id="平面线积分与路径无关的条件">平面线积分与路径无关的条件</h3>
+<ul>
 <li><p><strong>Thm</strong>：TFAE</p>
-<ol>
-<li>沿区域内任何一条分段光滑的简单闭曲线的线积分 $\oint P\mathrm dx+Q\mathrm dy = 0$</li>
-<li>线积分 $\int P\mathrm dx +Q\mathrm dy$ 的值在区域内与积分路径无关</li>
-<li>被积表达式$P\mathrm dx +Q\mathrm dy$ 是某个二元函数的全微分</li>
-</ol>
-</li>
-<li><p><strong>Def</strong>：（环流量、环量）称眼闭曲线 $C$ 的第二型线积分为向量场 $A$ 沿闭曲线 $C$ 的环量。</p>
-</li>
-<li><p><strong>Def</strong>：（势函数、位函数、有势场）</p>
-</li>
-<li><p>该结论表明，对于一个连续向量场而言，无旋、保守、有势是等价的。</p>
-</li>
+<ol type="1">
+<li>沿区域内任何一条分段光滑的简单闭曲线的线积分 <span class="math inline">\(\oint P\mathrm dx+Q\mathrm dy = 0\)</span></li>
+<li>线积分 <span class="math inline">\(\int P\mathrm dx +Q\mathrm dy\)</span> 的值在区域内与积分路径无关</li>
+<li>被积表达式<span class="math inline">\(P\mathrm dx +Q\mathrm dy\)</span> 是某个二元函数的全微分</li>
+</ol></li>
+<li><p><strong>Def</strong>：（环流量、环量）称眼闭曲线 <span class="math inline">\(C\)</span> 的第二型线积分为向量场 <span class="math inline">\(A\)</span> 沿闭曲线 <span class="math inline">\(C\)</span> 的环量。</p></li>
+<li><p><strong>Def</strong>：（势函数、位函数、有势场）</p></li>
+<li><p>该结论表明，对于一个连续向量场而言，无旋、保守、有势是等价的。</p></li>
 <li><p>势函数的求法</p>
 <ul>
 <li>用线积分求解</li>
 <li>用偏积分求解</li>
 <li>用凑全微分法求解</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="Gauss-公式和散度"><a href="#Gauss-公式和散度" class="headerlink" title="Gauss 公式和散度"></a>Gauss 公式和散度</h3><ul>
+<h3 id="gauss-公式和散度">Gauss 公式和散度</h3>
+<ul>
 <li><p>Gauss 公式</p>
 <ul>
-<li><strong>Thm</strong>：（Gauss 公式）$\iiint_{(V)} (\frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R}{\partial z})\mathrm dV = \iint P \mathrm dy\wedge \mathrm dz +Q\mathrm dz\wedge \mathrm dx+R\mathrm dx\wedge \mathrm dy$</li>
-<li><strong>Thm</strong>：（Gauss 公式）$\iiint_{(V)}\nabla \cdot \boldsymbol A \mathrm dV = \iint_{(S)} \boldsymbol A\cdot \mathrm d \boldsymbol S$</li>
-</ul>
-</li>
+<li><strong>Thm</strong>：（Gauss 公式）<span class="math inline">\(\iiint_{(V)} (\frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R}{\partial z})\mathrm dV = \iint P \mathrm dy\wedge \mathrm dz +Q\mathrm dz\wedge \mathrm dx+R\mathrm dx\wedge \mathrm dy\)</span></li>
+<li><strong>Thm</strong>：（Gauss 公式）<span class="math inline">\(\iiint_{(V)}\nabla \cdot \boldsymbol A \mathrm dV = \iint_{(S)} \boldsymbol A\cdot \mathrm d \boldsymbol S\)</span></li>
+</ul></li>
 <li><p>通量和通量密度</p>
 <ul>
-<li><strong>Def</strong>：（通量）$\boldsymbol A(M)$ 对曲面 $(S)$ 的第二型面积分 $\iint\limits_{(S)} \boldsymbol A \cdot \mathrm d \boldsymbol S$</li>
-</ul>
-</li>
+<li><strong>Def</strong>：（通量）<span class="math inline">\(\boldsymbol A(M)\)</span> 对曲面 <span class="math inline">\((S)\)</span> 的第二型面积分 <span class="math inline">\(\iint\limits_{(S)} \boldsymbol A \cdot \mathrm d \boldsymbol S\)</span></li>
+</ul></li>
 <li><p>散度的定义及其计算</p>
 <ul>
-<li><strong>Def</strong>：（散度）$\mathrm{div} \boldsymbol A(M) = \lim\limits_{(\Delta V)\rightarrow M}\frac{1}{\Delta V} \iint \boldsymbol A(M)\cdot \mathrm d\boldsymbol S$</li>
-<li><strong>Thm</strong>：（散度的计算公式）$\mathrm{div} A = \nabla \cdot \boldsymbol A = \frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R} {\partial z}$</li>
-<li><strong>Inf</strong>：（用散度表示 Gauss 公式）$\iiint\limits_{(V)} \mathrm{div} \mathrm A \mathrm d V = \iint\boldsymbol A\cdot \mathrm d \boldsymbol S$</li>
-</ul>
-</li>
+<li><strong>Def</strong>：（散度）<span class="math inline">\(\mathrm{div} \boldsymbol A(M) = \lim\limits_{(\Delta V)\rightarrow M}\frac{1}{\Delta V} \iint \boldsymbol A(M)\cdot \mathrm d\boldsymbol S\)</span></li>
+<li><strong>Thm</strong>：（散度的计算公式）<span class="math inline">\(\mathrm{div} A = \nabla \cdot \boldsymbol A = \frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R} {\partial z}\)</span></li>
+<li><strong>Inf</strong>：（用散度表示 Gauss 公式）<span class="math inline">\(\iiint\limits_{(V)} \mathrm{div} \mathrm A \mathrm d V = \iint\boldsymbol A\cdot \mathrm d \boldsymbol S\)</span></li>
+</ul></li>
 <li><p>散度的运算法则和公式</p>
 <ul>
-<li>$\mathrm{div}(C\boldsymbol A) = C\mathrm{div} \boldsymbol A$</li>
-<li>$\mathrm{div}(\boldsymbol A\pm\boldsymbol B) = \mathrm{div}(\boldsymbol A) \pm \mathrm{div}(\boldsymbol B)$</li>
-<li>$\mathrm{div}(u\boldsymbol A) = u\mathrm{div} \boldsymbol A + \nabla u \cdot \boldsymbol A$</li>
+<li><span class="math inline">\(\mathrm{div}(C\boldsymbol A) = C\mathrm{div} \boldsymbol A\)</span></li>
+<li><span class="math inline">\(\mathrm{div}(\boldsymbol A\pm\boldsymbol B) = \mathrm{div}(\boldsymbol A) \pm \mathrm{div}(\boldsymbol B)\)</span></li>
+<li><span class="math inline">\(\mathrm{div}(u\boldsymbol A) = u\mathrm{div} \boldsymbol A + \nabla u \cdot \boldsymbol A\)</span></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="Stokes-公式和旋度"><a href="#Stokes-公式和旋度" class="headerlink" title="Stokes 公式和旋度"></a>Stokes 公式和旋度</h3><ul>
+<h3 id="stokes-公式和旋度">Stokes 公式和旋度</h3>
+<ul>
 <li><p>Stokes 公式</p>
 <ul>
-<li><strong>Thm</strong>：（Stokes 公式）$\oint_{(C)} P\mathrm dx + Q\mathrm dy +R\mathrm dz = \iint\limits_{(S)}(\frac{\partial R}{\partial y} -\frac{\partial Q}{\partial z})\mathrm dy\wedge \mathrm dz +(\frac{\partial p}{\partial z}-\frac{\partial R}{\partial x}) \mathrm dz\wedge \mathrm dx + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\mathrm dx\wedge \mathrm dy$</li>
-<li><strong>Inf</strong>：（利用 nabla 算子表示的 Stokes 公式）$\oint_{(C)} \boldsymbol A\cdot \mathrm d \boldsymbol s = \iint_{(S)} (\nabla \times  \boldsymbol A)\cdot \mathrm d \boldsymbol S = \iint_{(S)} (\nabla \times  \boldsymbol A)\cdot \boldsymbol e_n \mathrm dS$</li>
-</ul>
-</li>
+<li><strong>Thm</strong>：（Stokes 公式）<span class="math inline">\(\oint_{(C)} P\mathrm dx + Q\mathrm dy +R\mathrm dz = \iint\limits_{(S)}(\frac{\partial R}{\partial y} -\frac{\partial Q}{\partial z})\mathrm dy\wedge \mathrm dz +(\frac{\partial p}{\partial z}-\frac{\partial R}{\partial x}) \mathrm dz\wedge \mathrm dx + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\mathrm dx\wedge \mathrm dy\)</span></li>
+<li><strong>Inf</strong>：（利用 nabla 算子表示的 Stokes 公式）<span class="math inline">\(\oint_{(C)} \boldsymbol A\cdot \mathrm d \boldsymbol s = \iint_{(S)} (\nabla \times \boldsymbol A)\cdot \mathrm d \boldsymbol S = \iint_{(S)} (\nabla \times \boldsymbol A)\cdot \boldsymbol e_n \mathrm dS\)</span></li>
+</ul></li>
 <li><p>环量和环量密度</p>
 <ul>
-<li>环量密度 $\lim\limits_{(\Delta )\rightarrow M } \frac {1} {\Delta S}\oint_{(\Delta C)}\boldsymbol A\cdot \mathrm d \boldsymbol s$</li>
-</ul>
-</li>
+<li>环量密度 <span class="math inline">\(\lim\limits_{(\Delta )\rightarrow M } \frac {1} {\Delta S}\oint_{(\Delta C)}\boldsymbol A\cdot \mathrm d \boldsymbol s\)</span></li>
+</ul></li>
 <li><p>旋度的定义及其计算公式</p>
 <ul>
-<li><strong>Def</strong>：（旋度）$\mathrm{rot} \boldsymbol A$ 用行列式表示</li>
-<li><strong>Thm</strong>：（旋度的计算公式）$\oint_{(C)}\boldsymbol A\cdot \mathrm d \boldsymbol s=\iint\limits_{(S)} \mathrm{rot}\boldsymbol A \cdot \mathrm d \boldsymbol S$</li>
-</ul>
-</li>
+<li><strong>Def</strong>：（旋度）<span class="math inline">\(\mathrm{rot} \boldsymbol A\)</span> 用行列式表示</li>
+<li><strong>Thm</strong>：（旋度的计算公式）<span class="math inline">\(\oint_{(C)}\boldsymbol A\cdot \mathrm d \boldsymbol s=\iint\limits_{(S)} \mathrm{rot}\boldsymbol A \cdot \mathrm d \boldsymbol S\)</span></li>
+</ul></li>
 <li><p>旋度的运算法则</p>
 <ul>
-<li>$\mathrm{rot} (C\boldsymbol A) = C\mathrm{rot} \boldsymbol A$</li>
-<li>$\mathrm{rot} (\boldsymbol A\pm \boldsymbol B) =\mathrm{rot}\boldsymbol A\pm \mathrm{rot} \boldsymbol B $</li>
-<li>$\mathrm {rot}(u\boldsymbol A) = u\mathrm{rot} \boldsymbol A +(\nabla u)\times \boldsymbol A$</li>
+<li><span class="math inline">\(\mathrm{rot} (C\boldsymbol A) = C\mathrm{rot} \boldsymbol A\)</span></li>
+<li>$ (AB) =A B $</li>
+<li><span class="math inline">\(\mathrm {rot}(u\boldsymbol A) = u\mathrm{rot} \boldsymbol A +(\nabla u)\times \boldsymbol A\)</span></li>
+</ul></li>
 </ul>
-</li>
+<h3 id="场的其他计算公式">场的其他计算公式</h3>
+<ul>
+<li><p><span class="math inline">\(\mathrm{div}(\boldsymbol A\times \boldsymbol B) =\boldsymbol B\cdot \mathrm{rot}\boldsymbol A\)</span></p></li>
+<li><p><span class="math inline">\(\mathrm{div}(\mathrm{rot} \boldsymbol A) = 0\)</span></p></li>
+<li><p><span class="math inline">\(\mathrm{rot} (\nabla u) = 0\)</span></p></li>
+<li><p><span class="math inline">\(\mathrm{div}(\nabla u)=\Delta u\)</span> 其中 $= + + $</p></li>
+<li><p><span class="math inline">\(\mathrm{rot}(\mathrm{rot} \boldsymbol A) =\mathbf{grad}(\mathrm{div} A)-\Delta \boldsymbol A\)</span></p></li>
 </ul>
-<h3 id="场的其他计算公式"><a href="#场的其他计算公式" class="headerlink" title="场的其他计算公式"></a>场的其他计算公式</h3><ul>
-<li><p>$\mathrm{div}(\boldsymbol A\times \boldsymbol B) =\boldsymbol B\cdot \mathrm{rot}\boldsymbol A$</p>
-</li>
-<li><p>$\mathrm{div}(\mathrm{rot} \boldsymbol A) = 0$</p>
-</li>
-<li><p>$\mathrm{rot} (\nabla u) = 0$</p>
-</li>
-<li><p>$\mathrm{div}(\nabla u)=\Delta u$ 其中 $\Delta=\frac{\partial}{\partial x^2} +\frac{\partial}{\partial y^2} +\frac{\partial}{\partial z^2} $</p>
-</li>
-<li><p>$\mathrm{rot}(\mathrm{rot} \boldsymbol A) =\mathbf{grad}(\mathrm{div} A)-\Delta \boldsymbol A$</p>
-</li>
-</ul>
-<h3 id="几种重要的特殊向量场"><a href="#几种重要的特殊向量场" class="headerlink" title="几种重要的特殊向量场"></a>几种重要的特殊向量场</h3><ul>
-<li><p><strong>Def</strong>：一维单连域、二维单连域</p>
-</li>
+<h3 id="几种重要的特殊向量场">几种重要的特殊向量场</h3>
+<ul>
+<li><p><strong>Def</strong>：一维单连域、二维单连域</p></li>
 <li><p>无旋场</p>
 <ul>
 <li><strong>Def</strong>：（保守场）积分与路径无关</li>
-<li><strong>Def</strong>：（无旋场）$\nabla \times \boldsymbol A = \boldsymbol 0$</li>
-<li><strong>Def</strong>：（有势场，势函数）$\boldsymbol A = \nabla u$</li>
-<li><strong>Thm</strong>：在一维单连域上，$A = (P,Q,R) \in C^{(1)}$，TFAE<ul>
+<li><strong>Def</strong>：（无旋场）<span class="math inline">\(\nabla \times \boldsymbol A = \boldsymbol 0\)</span></li>
+<li><strong>Def</strong>：（有势场，势函数）<span class="math inline">\(\boldsymbol A = \nabla u\)</span></li>
+<li><strong>Thm</strong>：在一维单连域上，<span class="math inline">\(A = (P,Q,R) \in C^{(1)}\)</span>，TFAE
+<ul>
 <li>无旋场</li>
 <li>闭曲线上的环量恒为 0</li>
 <li>保守场</li>
 <li>有势场</li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 <li><p>无源场</p>
 <ul>
-<li><strong>Def</strong>：（无源场）$\nabla \cdot \boldsymbol A = 0$</li>
+<li><strong>Def</strong>：（无源场）<span class="math inline">\(\nabla \cdot \boldsymbol A = 0\)</span></li>
 <li><strong>Def</strong>：向量管</li>
-<li><strong>Thm</strong>：在二维单连域上，$A\in C^{(1)}$，TFAE<ul>
+<li><strong>Thm</strong>：在二维单连域上，<span class="math inline">\(A\in C^{(1)}\)</span>，TFAE
+<ul>
 <li>无源场</li>
-<li>$A$ 沿任何一个不子交的闭曲面的通量为零</li>
-<li>存在一个向量函数 $\boldsymbol B$ 使得 $\boldsymbol A = \nabla \times \boldsymbol B$</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><span class="math inline">\(A\)</span> 沿任何一个不子交的闭曲面的通量为零</li>
+<li>存在一个向量函数 <span class="math inline">\(\boldsymbol B\)</span> 使得 <span class="math inline">\(\boldsymbol A = \nabla \times \boldsymbol B\)</span></li>
+</ul></li>
+</ul></li>
 <li><p>调和场</p>
 <ul>
 <li><strong>Def</strong>：（调和场）既无源、也无旋的场</li>
 <li>满足 Laplace 方程</li>
 <li>满足 Posisson 方程</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <!--TODO: 添加外微分形式！！！ -->
-<h2 id="补录"><a href="#补录" class="headerlink" title="补录"></a>补录</h2><h3 id="重积分"><a href="#重积分" class="headerlink" title="重积分"></a>重积分</h3><ul>
-<li><p><strong>Def</strong>：（大和，小和）$M_i = \sup\limits_{x\in\Omega_i}\{f(\boldsymbol{x})\},\quad m_i =\inf\limits_{x\in\Omega_i }\{f(\boldsymbol{ x})\}$<br>$S^+= \sum M_iV_i,S^-=\sum m_iV_i$</p>
-</li>
+<h2 id="补录">补录</h2>
+<h3 id="重积分">重积分</h3>
+<ul>
+<li><p><strong>Def</strong>：（大和，小和）<span class="math inline">\(M_i = \sup\limits_{x\in\Omega_i}\{f(\boldsymbol{x})\},\quad m_i =\inf\limits_{x\in\Omega_i }\{f(\boldsymbol{ x})\}\)</span> <span class="math inline">\(S^+= \sum M_iV_i,S^-=\sum m_iV_i\)</span></p></li>
 <li><p><strong>Thm</strong>：TFAE</p>
 <ul>
 <li>可积</li>
-<li>大和与小和差的极限为 0 （ $||\Delta||\rightarrow 0$ ）</li>
+<li>大和与小和差的极限为 0 （ <span class="math inline">\(||\Delta||\rightarrow 0\)</span> ）</li>
 <li>振幅充分小</li>
 <li>（积分）大和 = （积分）小和</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="重积分变换"><a href="#重积分变换" class="headerlink" title="重积分变换"></a>重积分变换</h3><ul>
-<li><p><strong>Def</strong>：（正则变换）如果一个变换满足</p>
-<ol>
-<li>$T\in C^{(1)}(G)$</li>
-<li>单射</li>
-<li>$\det DT(\boldsymbol u)\neq 0$ 对任一 $\boldsymbol u$成立</li>
-</ol>
-</li>
-<li><p><strong>Def</strong>：（重积分的变换公式）若 $G,T$ 满足以下条件之一：</p>
-<ol>
-<li>$G$ 是 $R^m$ 中的开集，$T$ 是正则变换， $\Omega$ 是 $G$ 内的闭可测图形，$f\in C(T(\Omega))$</li>
-<li>$G$ 同上，$T\in C^1(G)$，$\Omega \in G$ 是闭可测区域，$T$ 是 $\Omega$ 上的正则变换，$f\in C(T(\Omega))$</li>
-</ol>
-<p>则：$\int_{T(\varOmega)}f\mathrm dV = \int_\varOmega f\circ T|\det DT|\mathrm dV$</p>
-</li>
-</ul>
-<h3 id="外微分形式"><a href="#外微分形式" class="headerlink" title="外微分形式"></a>外微分形式</h3><h3 id="场论总结"><a href="#场论总结" class="headerlink" title="场论总结"></a>场论总结</h3><ul>
-<li><p><strong>Def</strong>：（梯度） $\mathrm{grad} u = \nabla u$，其中 $\nabla$ 算子为 $(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z})$</p>
-</li>
-<li><p><strong>Def</strong>：向量线</p>
-</li>
-<li><p><strong>Def</strong>：（通量、散度）给定向量场 $F$ 和双侧曲面 $S$</p>
+<h3 id="重积分变换">重积分变换</h3>
 <ul>
-<li>通量：$\iint_S \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}$</li>
-<li>散度：$\mathrm{div} \boldsymbol{F} = \lim\limits_{S\rightarrow M}\frac{\iint_S \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}}{V} = \nabla \cdot \boldsymbol{F}$</li>
+<li><p><strong>Def</strong>：（正则变换）如果一个变换满足</p>
+<ol type="1">
+<li><span class="math inline">\(T\in C^{(1)}(G)\)</span></li>
+<li>单射</li>
+<li><span class="math inline">\(\det DT(\boldsymbol u)\neq 0\)</span> 对任一 <span class="math inline">\(\boldsymbol u\)</span>成立</li>
+</ol></li>
+<li><p><strong>Def</strong>：（重积分的变换公式）若 <span class="math inline">\(G,T\)</span> 满足以下条件之一：</p>
+<ol type="1">
+<li><span class="math inline">\(G\)</span> 是 <span class="math inline">\(R^m\)</span> 中的开集，<span class="math inline">\(T\)</span> 是正则变换， <span class="math inline">\(\Omega\)</span> 是 <span class="math inline">\(G\)</span> 内的闭可测图形，<span class="math inline">\(f\in C(T(\Omega))\)</span></li>
+<li><span class="math inline">\(G\)</span> 同上，<span class="math inline">\(T\in C^1(G)\)</span>，<span class="math inline">\(\Omega \in G\)</span> 是闭可测区域，<span class="math inline">\(T\)</span> 是 <span class="math inline">\(\Omega\)</span> 上的正则变换，<span class="math inline">\(f\in C(T(\Omega))\)</span></li>
+</ol>
+<p>则：<span class="math inline">\(\int_{T(\varOmega)}f\mathrm dV = \int_\varOmega f\circ T|\det DT|\mathrm dV\)</span></p></li>
 </ul>
-</li>
+<h3 id="外微分形式">外微分形式</h3>
+<h3 id="场论总结">场论总结</h3>
+<ul>
+<li><p><strong>Def</strong>：（梯度） <span class="math inline">\(\mathrm{grad} u = \nabla u\)</span>，其中 <span class="math inline">\(\nabla\)</span> 算子为 <span class="math inline">\((\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z})\)</span></p></li>
+<li><p><strong>Def</strong>：向量线</p></li>
+<li><p><strong>Def</strong>：（通量、散度）给定向量场 <span class="math inline">\(F\)</span> 和双侧曲面 <span class="math inline">\(S\)</span></p>
+<ul>
+<li>通量：<span class="math inline">\(\iint_S \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}\)</span></li>
+<li>散度：<span class="math inline">\(\mathrm{div} \boldsymbol{F} = \lim\limits_{S\rightarrow M}\frac{\iint_S \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}}{V} = \nabla \cdot \boldsymbol{F}\)</span></li>
+</ul></li>
 <li><p><strong>Def</strong>：（环量、旋度）给定向量场和定向曲线</p>
 <ul>
-<li>环量：$\oint \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}$</li>
-<li>方向旋量：$h_n = \mathrm{rot} \boldsymbol{F}\cdot \boldsymbol{n}$</li>
-<li>旋度：$(\frac{\partial R}{\partial y} -\frac{\partial Q}{\partial z})\boldsymbol{i} +(\frac{\partial p}{\partial z}-\frac{\partial R}{\partial x}) \boldsymbol{j} + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\boldsymbol k$</li>
+<li>环量：<span class="math inline">\(\oint \boldsymbol{F}\cdot \mathrm d \boldsymbol{s}\)</span></li>
+<li>方向旋量：<span class="math inline">\(h_n = \mathrm{rot} \boldsymbol{F}\cdot \boldsymbol{n}\)</span></li>
+<li>旋度：<span class="math inline">\((\frac{\partial R}{\partial y} -\frac{\partial Q}{\partial z})\boldsymbol{i} +(\frac{\partial p}{\partial z}-\frac{\partial R}{\partial x}) \boldsymbol{j} + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\boldsymbol k\)</span></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -790,7 +768,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://jerryyang2001.github.io/2020/05/23/study/Math/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/&title=多元函数积分学及其应用 - 些些同学的藏宝阁&summary=多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习…"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://jerryyang2001.github.io/2020/05/23/study/Math/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/&title=多元函数积分学及其应用 - 些些同学的藏宝阁&summary=多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习..."
           
           >
           
@@ -802,7 +780,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://jerryyang2001.github.io/2020/05/23/study/Math/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/&title=多元函数积分学及其应用 - 些些同学的藏宝阁&summary=多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习…"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://jerryyang2001.github.io/2020/05/23/study/Math/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/&title=多元函数积分学及其应用 - 些些同学的藏宝阁&summary=多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习..."
           
           >
           
@@ -814,7 +792,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://jerryyang2001.github.io/2020/05/23/study/Math/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/&title=多元函数积分学及其应用 - 些些同学的藏宝阁&summary=多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习…"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://jerryyang2001.github.io/2020/05/23/study/Math/Advanced-Mathematics/Vectors-and-Analytic-Geometry-Integration/&title=多元函数积分学及其应用 - 些些同学的藏宝阁&summary=多元函数积分学复习提纲。些些在 5.20 被强行塞了一大把狗粮之后，才知道下个星期就要考试，现在才开始预习..."
           
           >
           
@@ -851,7 +829,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 以下内容收集自 Wikipedia
 
-外微分形式定义一个 $k$ 阶的微...</p>
+外微分形式
+定义
+一...</p>
         </a>
       
       
@@ -859,11 +839,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'>向量空间与解析几何<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>临近期末，来一波概念回顾。
 
-向量及其运算向量的概念
-Def：（向量）一个既有大小又有方向的量
-Def：向量的模（或长度），范数 $|a|$，零向量 $\mathbf 0$，单位向量
+向量及其运算
+向量的概念
 
-向量的线...</p>
+Def：（向量）一个既有大小又有方向的量
+Def：向量的模（或长度），范数 \(|a|\)，零向量 \(\mathbf 0\...</p>
         </a>
       
     </div>
@@ -906,7 +886,7 @@ Def：向量的模（或长度），范数 $|a|$，零向量 $\mathbf 0$，单�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%85%83%E6%95%B0%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">多元数量值函数积分的概念和性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A8%E9%87%8F%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">质量的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%85%83%E6%95%B0%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">多元数量值函数积分的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E5%AD%98%E5%9C%A8%E7%9A%84%E6%9D%A1%E4%BB%B6%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">积分存在的条件和性质</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">二重积分的计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">三重积分的计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AB%E5%8F%82%E5%8F%98%E9%87%8F%E7%9A%84%E7%A7%AF%E5%88%86%E5%92%8C%E5%8F%8D%E5%B8%B8%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-text">含参变量的积分和反常重积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AB%E5%8F%82%E5%8F%98%E9%87%8F%E7%9A%84%E7%A7%AF%E5%88%86"><span class="toc-text">含参变量的积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%B8%B8%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-text">反常重积分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9E%8B%E7%BA%BF%E7%A7%AF%E5%88%86%E4%B8%8E%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-text">第一型线积分与面积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9E%8B%E7%BA%BF%E7%A7%AF%E5%88%86"><span class="toc-text">第一型线积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9E%8B%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-text">第一型面积分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9E%8B%E7%BA%BF%E7%A7%AF%E5%88%86%E5%92%8C%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-text">第二型线积分和面积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">场的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9E%8B%E7%BA%BF%E7%A7%AF%E5%88%86"><span class="toc-text">第二型线积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9E%8B%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-text">第二型面积分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E7%A7%AF%E5%88%86%E7%9A%84%E8%81%94%E7%B3%BB%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%9C%BA%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-text">各种积分的联系及其在场论中的应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Green-%E5%85%AC%E5%BC%8F"><span class="toc-text">Green 公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E9%9D%A2%E7%BA%BF%E7%A7%AF%E5%88%86%E4%B8%8E%E8%B7%AF%E5%BE%84%E6%97%A0%E5%85%B3%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="toc-text">平面线积分与路径无关的条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gauss-%E5%85%AC%E5%BC%8F%E5%92%8C%E6%95%A3%E5%BA%A6"><span class="toc-text">Gauss 公式和散度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stokes-%E5%85%AC%E5%BC%8F%E5%92%8C%E6%97%8B%E5%BA%A6"><span class="toc-text">Stokes 公式和旋度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E7%9A%84%E5%85%B6%E4%BB%96%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-text">场的其他计算公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E7%A7%8D%E9%87%8D%E8%A6%81%E7%9A%84%E7%89%B9%E6%AE%8A%E5%90%91%E9%87%8F%E5%9C%BA"><span class="toc-text">几种重要的特殊向量场</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%BD%95"><span class="toc-text">补录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-text">重积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2"><span class="toc-text">重积分变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="toc-text">外微分形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E8%AE%BA%E6%80%BB%E7%BB%93"><span class="toc-text">场论总结</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%85%83%E6%95%B0%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">多元数量值函数积分的概念和性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A8%E9%87%8F%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">质量的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%85%83%E6%95%B0%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">多元数量值函数积分的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E5%AD%98%E5%9C%A8%E7%9A%84%E6%9D%A1%E4%BB%B6%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">积分存在的条件和性质</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">二重积分的计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">三重积分的计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AB%E5%8F%82%E5%8F%98%E9%87%8F%E7%9A%84%E7%A7%AF%E5%88%86%E5%92%8C%E5%8F%8D%E5%B8%B8%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-text">含参变量的积分和反常重积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AB%E5%8F%82%E5%8F%98%E9%87%8F%E7%9A%84%E7%A7%AF%E5%88%86"><span class="toc-text">含参变量的积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%B8%B8%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-text">反常重积分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9E%8B%E7%BA%BF%E7%A7%AF%E5%88%86%E4%B8%8E%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-text">第一型线积分与面积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9E%8B%E7%BA%BF%E7%A7%AF%E5%88%86"><span class="toc-text">第一型线积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9E%8B%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-text">第一型面积分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9E%8B%E7%BA%BF%E7%A7%AF%E5%88%86%E5%92%8C%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-text">第二型线积分和面积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">场的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9E%8B%E7%BA%BF%E7%A7%AF%E5%88%86"><span class="toc-text">第二型线积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9E%8B%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-text">第二型面积分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E7%A7%AF%E5%88%86%E7%9A%84%E8%81%94%E7%B3%BB%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%9C%BA%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-text">各种积分的联系及其在场论中的应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#green-%E5%85%AC%E5%BC%8F"><span class="toc-text">Green 公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E9%9D%A2%E7%BA%BF%E7%A7%AF%E5%88%86%E4%B8%8E%E8%B7%AF%E5%BE%84%E6%97%A0%E5%85%B3%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="toc-text">平面线积分与路径无关的条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gauss-%E5%85%AC%E5%BC%8F%E5%92%8C%E6%95%A3%E5%BA%A6"><span class="toc-text">Gauss 公式和散度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stokes-%E5%85%AC%E5%BC%8F%E5%92%8C%E6%97%8B%E5%BA%A6"><span class="toc-text">Stokes 公式和旋度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E7%9A%84%E5%85%B6%E4%BB%96%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-text">场的其他计算公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E7%A7%8D%E9%87%8D%E8%A6%81%E7%9A%84%E7%89%B9%E6%AE%8A%E5%90%91%E9%87%8F%E5%9C%BA"><span class="toc-text">几种重要的特殊向量场</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%BD%95"><span class="toc-text">补录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-text">重积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2"><span class="toc-text">重积分变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="toc-text">外微分形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E8%AE%BA%E6%80%BB%E7%BB%93"><span class="toc-text">场论总结</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1553,14 +1533,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

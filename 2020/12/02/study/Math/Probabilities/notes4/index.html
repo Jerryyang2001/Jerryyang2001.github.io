@@ -470,110 +470,124 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>随机向量的数字特征</p>
 <span id="more"></span>
-<h2 id="随机向量的数字特征"><a href="#随机向量的数字特征" class="headerlink" title="随机向量的数字特征"></a>随机向量的数字特征</h2><h3 id="随机变量的数学期望"><a href="#随机变量的数学期望" class="headerlink" title="随机变量的数学期望"></a>随机变量的数学期望</h3><h4 id="数学期望的定义"><a href="#数学期望的定义" class="headerlink" title="数学期望的定义"></a>数学期望的定义</h4><p><strong>Def</strong>（离散型随机变量期望的定义）设离散随机变量的分布列为：$P(X=x_i)=p_i$ 若级数 $\sum x_ip_i$ <em>绝对收敛</em>，则称该级数为 $X$ 的数学期望，记为 $E(X)=\sum x_ip_i$</p>
+<h2 id="随机向量的数字特征">随机向量的数字特征</h2>
+<h3 id="随机变量的数学期望">随机变量的数学期望</h3>
+<h4 id="数学期望的定义">数学期望的定义</h4>
+<p><strong>Def</strong>（离散型随机变量期望的定义）设离散随机变量的分布列为：<span class="math inline">\(P(X=x_i)=p_i\)</span> 若级数 <span class="math inline">\(\sum x_ip_i\)</span> <em>绝对收敛</em>，则称该级数为 <span class="math inline">\(X\)</span> 的数学期望，记为 <span class="math inline">\(E(X)=\sum x_ip_i\)</span></p>
 <blockquote>
 <ul>
 <li>与项的排列顺序无关</li>
 <li>有限个值 → 必然存在</li>
 </ul>
 </blockquote>
-<h4 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h4><p><strong>Def</strong>（连续型随机变量期望的定义）设连续型随机变量，其密度函数为：$f(x)$ 若积分 $\int_{-\infty}^\infty xf(x)\mathrm dx$ <em>绝对收敛</em>，则称该积分为 $X$ 的数学期望，记为$E(X)=\int_{-\infty}^{+\infty}xf(x)\mathrm dx$</p>
+<h4 id="连续型随机变量">连续型随机变量</h4>
+<p><strong>Def</strong>（连续型随机变量期望的定义）设连续型随机变量，其密度函数为：<span class="math inline">\(f(x)\)</span> 若积分 <span class="math inline">\(\int_{-\infty}^\infty xf(x)\mathrm dx\)</span> <em>绝对收敛</em>，则称该积分为 <span class="math inline">\(X\)</span> 的数学期望，记为<span class="math inline">\(E(X)=\int_{-\infty}^{+\infty}xf(x)\mathrm dx\)</span></p>
 <ul>
-<li>例如柯西分布：$F(x)=\frac{1}{\pi}(\arctan x+\frac{\pi}{2})$ 不存在数学期望</li>
+<li>例如柯西分布：<span class="math inline">\(F(x)=\frac{1}{\pi}(\arctan x+\frac{\pi}{2})\)</span> 不存在数学期望</li>
 </ul>
-<h4 id="随机变量函数的数学期望"><a href="#随机变量函数的数学期望" class="headerlink" title="随机变量函数的数学期望"></a>随机变量函数的数学期望</h4><p><strong>Thm</strong>：若 $Y$ 是 $X$ 的函数 $Y=g(X)$，绝对收敛的情况下：</p>
-<ol>
-<li>$E(Y)=\sum g(x_i)P(X=x_i)$</li>
-<li>$E(Y)=\int g(x)f(x)\mathrm dx$</li>
+<h4 id="随机变量函数的数学期望">随机变量函数的数学期望</h4>
+<p><strong>Thm</strong>：若 <span class="math inline">\(Y\)</span> 是 <span class="math inline">\(X\)</span> 的函数 <span class="math inline">\(Y=g(X)\)</span>，绝对收敛的情况下：</p>
+<ol type="1">
+<li><span class="math inline">\(E(Y)=\sum g(x_i)P(X=x_i)\)</span></li>
+<li><span class="math inline">\(E(Y)=\int g(x)f(x)\mathrm dx\)</span></li>
 </ol>
-<p><strong>Thm</strong>：若 $Z=g(X,Y)$，则：</p>
-<ol>
-<li>$Eg(X,Y)=\sum\sum g(x _ i,y _ j)p_{ij}$</li>
-<li>$Eg(X,Y)=\iint g(x,y)f(x,y)\mathrm dx\mathrm dy$</li>
+<p><strong>Thm</strong>：若 <span class="math inline">\(Z=g(X,Y)\)</span>，则：</p>
+<ol type="1">
+<li><span class="math inline">\(Eg(X,Y)=\sum\sum g(x _ i,y _ j)p_{ij}\)</span></li>
+<li><span class="math inline">\(Eg(X,Y)=\iint g(x,y)f(x,y)\mathrm dx\mathrm dy\)</span></li>
 </ol>
 <p><em>期望的性质</em>：</p>
 <ul>
-<li>$E(·)$是线性的：$E(aX+bY+c)=aEX+bEY+c$</li>
-<li>$X,Y$ 独立 则：$E(XY) = E(X)E(Y)$</li>
+<li><span class="math inline">\(E(·)\)</span>是线性的：<span class="math inline">\(E(aX+bY+c)=aEX+bEY+c\)</span></li>
+<li><span class="math inline">\(X,Y\)</span> 独立 则：<span class="math inline">\(E(XY) = E(X)E(Y)\)</span></li>
 </ul>
-<h3 id="随机变量的方差"><a href="#随机变量的方差" class="headerlink" title="随机变量的方差"></a>随机变量的方差</h3><h4 id="方差的定义"><a href="#方差的定义" class="headerlink" title="方差的定义"></a>方差的定义</h4><p><strong>Def</strong>（方差）若随机变量 $X$ 的数学期望存在，则 $E(X-EX)^2$ 为 $X$ 的方差随机变量偏离中心的程度 $DX=Var(X)=E(X-EX)^2$</p>
-<ol>
-<li>标准差：$\sigma(X)$</li>
-<li>计算方法：$DX=EX^2-(EX)^2$</li>
+<h3 id="随机变量的方差">随机变量的方差</h3>
+<h4 id="方差的定义">方差的定义</h4>
+<p><strong>Def</strong>（方差）若随机变量 <span class="math inline">\(X\)</span> 的数学期望存在，则 <span class="math inline">\(E(X-EX)^2\)</span> 为 <span class="math inline">\(X\)</span> 的方差随机变量偏离中心的程度 <span class="math inline">\(DX=Var(X)=E(X-EX)^2\)</span></p>
+<ol type="1">
+<li>标准差：<span class="math inline">\(\sigma(X)\)</span></li>
+<li>计算方法：<span class="math inline">\(DX=EX^2-(EX)^2\)</span></li>
 </ol>
-<h5 id="方差的性质"><a href="#方差的性质" class="headerlink" title="方差的性质"></a>方差的性质</h5><ol>
-<li>对于常数 c $Dc=0$</li>
-<li>$D(aX+b)=a^2DX$</li>
-<li>$X,Y$ 独立，则 $D(X\pm Y)=DX+DY$<ul>
-<li>$D(\sum c_iX_i)=\sum c_i^2DX_i$</li>
-</ul>
-</li>
-<li>$DX=E(X^2)-(EX)^2$</li>
-<li>$DX=0\iff P(X=EX=c)=1$</li>
-<li>$X_i\sim N(\mu_i,\sigma_i^2)$ 则：$\sum c_iX_i\sim N(\sum c_iu_i, \sum c_i^2 \sigma_i^2)$</li>
-</ol>
-<p><strong>Thm</strong> 切比雪夫不等式：$\forall\varepsilon&gt;0, E(X)=\mu,DX=\sigma^2\Rightarrow P(|X-\mu|&gt;\varepsilon)\le \sigma^2/\varepsilon^2$</p>
-<h3 id="协方差与相关系数"><a href="#协方差与相关系数" class="headerlink" title="协方差与相关系数"></a>协方差与相关系数</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p><strong>Def</strong>（协方差）设 $X，Y$ 是两个随机变量，$E(X-EX)(Y-EY)$ 存在，则$\displaystyle Cov(x,y)=E(X-EX)(Y-EY)$<br><strong>Def</strong>（相关系数）$\displaystyle\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{DX}\sqrt{DY}}$</p>
-<p><strong>Thm</strong>：$D(X\pm Y)=DX+DY+2Cov(X,Y)$</p>
+<h5 id="方差的性质">方差的性质</h5>
+<ol type="1">
+<li>对于常数 c <span class="math inline">\(Dc=0\)</span></li>
+<li><span class="math inline">\(D(aX+b)=a^2DX\)</span></li>
+<li><span class="math inline">\(X,Y\)</span> 独立，则 <span class="math inline">\(D(X\pm Y)=DX+DY\)</span>
 <ul>
-<li>推广至 n 个：$D(\sum c_iX_i)=\sum c_i^2DX_i+2\sum c_ic_jCov(X_i,X_j)$</li>
-<li>常用计算公式：$Cov(X,Y)=EXY-EX\cdot EY$</li>
+<li><span class="math inline">\(D(\sum c_iX_i)=\sum c_i^2DX_i\)</span></li>
+</ul></li>
+<li><span class="math inline">\(DX=E(X^2)-(EX)^2\)</span></li>
+<li><span class="math inline">\(DX=0\iff P(X=EX=c)=1\)</span></li>
+<li><span class="math inline">\(X_i\sim N(\mu_i,\sigma_i^2)\)</span> 则：<span class="math inline">\(\sum c_iX_i\sim N(\sum c_iu_i, \sum c_i^2 \sigma_i^2)\)</span></li>
+</ol>
+<p><strong>Thm</strong> 切比雪夫不等式：<span class="math inline">\(\forall\varepsilon&gt;0, E(X)=\mu,DX=\sigma^2\Rightarrow P(|X-\mu|&gt;\varepsilon)\le \sigma^2/\varepsilon^2\)</span></p>
+<h3 id="协方差与相关系数">协方差与相关系数</h3>
+<h4 id="定义">定义</h4>
+<p><strong>Def</strong>（协方差）设 <span class="math inline">\(X，Y\)</span> 是两个随机变量，<span class="math inline">\(E(X-EX)(Y-EY)\)</span> 存在，则<span class="math inline">\(\displaystyle Cov(x,y)=E(X-EX)(Y-EY)\)</span> <strong>Def</strong>（相关系数）<span class="math inline">\(\displaystyle\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{DX}\sqrt{DY}}\)</span></p>
+<p><strong>Thm</strong>：<span class="math inline">\(D(X\pm Y)=DX+DY+2Cov(X,Y)\)</span></p>
+<ul>
+<li>推广至 n 个：<span class="math inline">\(D(\sum c_iX_i)=\sum c_i^2DX_i+2\sum c_ic_jCov(X_i,X_j)\)</span></li>
+<li>常用计算公式：<span class="math inline">\(Cov(X,Y)=EXY-EX\cdot EY\)</span></li>
 </ul>
-<h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><ul>
-<li>$Cov(X,Y)=Cov(Y,X)$</li>
-<li>$DX=Cov(X,X)$</li>
-<li>$Cov(X,const)=0$</li>
-<li>$Cov(X+Y,Z)=Cov(X,Z)+Cov(Y,Z)$<ul>
-<li>$Cov(\sum c_iX_i,Y)=\sum c_i Cov(X_i,Y)$</li>
+<h4 id="性质">性质</h4>
+<ul>
+<li><span class="math inline">\(Cov(X,Y)=Cov(Y,X)\)</span></li>
+<li><span class="math inline">\(DX=Cov(X,X)\)</span></li>
+<li><span class="math inline">\(Cov(X,const)=0\)</span></li>
+<li><span class="math inline">\(Cov(X+Y,Z)=Cov(X,Z)+Cov(Y,Z)\)</span>
+<ul>
+<li><span class="math inline">\(Cov(\sum c_iX_i,Y)=\sum c_i Cov(X_i,Y)\)</span></li>
+</ul></li>
+<li><span class="math inline">\(Y_i=a_iX+b_i\rightarrow \rho_{Y_1Y_2}=\frac{a_1a_2}{|a_1a_2|}\rho_{X_1X_2}\)</span></li>
+<li><span class="math inline">\(Y=aX+b\rightarrow \rho_{XY}=\pm1\)</span></li>
+<li><span class="math inline">\(|\rho_{XY}|=1\)</span> 的充要条件为 <span class="math inline">\(X\)</span> 与 <span class="math inline">\(Y\)</span> 以概率 <span class="math inline">\(1\)</span> 线性相关： 存在常数 <span class="math inline">\(a,b,a\ne0\)</span> 使得 <span class="math inline">\(P(Y=aX+b)=1\)</span></li>
 </ul>
-</li>
-<li>$Y_i=a_iX+b_i\rightarrow \rho_{Y_1Y_2}=\frac{a_1a_2}{|a_1a_2|}\rho_{X_1X_2}$ </li>
-<li>$Y=aX+b\rightarrow \rho_{XY}=\pm1$</li>
-<li>$|\rho_{XY}|=1$ 的充要条件为 $X$ 与 $Y$ 以概率 $1$ 线性相关：<br>存在常数 $a,b,a\ne0$ 使得 $P(Y=aX+b)=1$</li>
-</ul>
-<h4 id="独立与不相关的关系"><a href="#独立与不相关的关系" class="headerlink" title="独立与不相关的关系"></a>独立与不相关的关系</h4><ul>
-<li><strong>Def</strong>（不相关）：若$\rho_{XY}=0$ （$Cov(X,Y)=0$） 则称 $X,Y$ 不相关。</li>
+<h4 id="独立与不相关的关系">独立与不相关的关系</h4>
+<ul>
+<li><strong>Def</strong>（不相关）：若<span class="math inline">\(\rho_{XY}=0\)</span> （<span class="math inline">\(Cov(X,Y)=0\)</span>） 则称 <span class="math inline">\(X,Y\)</span> 不相关。</li>
 <li><strong>Thm</strong>：相互独立 则 不相关 （反之不一定成立）</li>
 </ul>
 <p><em>特殊的</em>：</p>
-<ol>
-<li>二维正态随机变量：相关$\iff$独立$\iff\rho=0$</li>
-<li>$(0-1)$ 分布：相关$\iff$独立$\iff\rho=0$</li>
+<ol type="1">
+<li>二维正态随机变量：相关<span class="math inline">\(\iff\)</span>独立<span class="math inline">\(\iff\rho=0\)</span></li>
+<li><span class="math inline">\((0-1)\)</span> 分布：相关<span class="math inline">\(\iff\)</span>独立<span class="math inline">\(\iff\rho=0\)</span></li>
 </ol>
-<h3 id="协方差矩阵"><a href="#协方差矩阵" class="headerlink" title="协方差矩阵"></a>协方差矩阵</h3><h4 id="矩"><a href="#矩" class="headerlink" title="矩"></a>矩</h4><p><strong>Def</strong>（矩）若 $X,Y$ 为随机变量</p>
-<ol>
-<li><p>$\alpha_k=EX^k$ 称为 $X$ 的 $k$ 阶原点矩</p>
-<p>$\alpha_1=EX$</p>
-</li>
-<li><p>$\beta_k=E(X-EX)^k$ 称为 $X$ 的 $k$ 阶中心矩</p>
-<p>$\beta_1=0,\quad\beta_2=DX$</p>
-</li>
-<li><p>$k,l\in N_+$ 则 $\gamma_{kl} = E(X-EX)^k(Y-EY)^l$ 称为 $X$ 与 $Y$ 的 $k+l$ 阶混合中心矩</p>
-<p>$\gamma_{11} = Cov(X,Y)$</p>
-</li>
+<h3 id="协方差矩阵">协方差矩阵</h3>
+<h4 id="矩">矩</h4>
+<p><strong>Def</strong>（矩）若 <span class="math inline">\(X,Y\)</span> 为随机变量 1. <span class="math inline">\(\alpha_k=EX^k\)</span> 称为 <span class="math inline">\(X\)</span> 的 <span class="math inline">\(k\)</span> 阶原点矩</p>
+<p><span class="math inline">\(\alpha_1=EX\)</span></p>
+<ol start="2" type="1">
+<li><p><span class="math inline">\(\beta_k=E(X-EX)^k\)</span> 称为 <span class="math inline">\(X\)</span> 的 <span class="math inline">\(k\)</span> 阶中心矩</p>
+<p><span class="math inline">\(\beta_1=0,\quad\beta_2=DX\)</span></p></li>
+<li><p><span class="math inline">\(k,l\in N_+\)</span> 则 <span class="math inline">\(\gamma_{kl} = E(X-EX)^k(Y-EY)^l\)</span> 称为 <span class="math inline">\(X\)</span> 与 <span class="math inline">\(Y\)</span> 的 <span class="math inline">\(k+l\)</span> 阶混合中心矩</p>
+<p><span class="math inline">\(\gamma_{11} = Cov(X,Y)\)</span></p></li>
 </ol>
-<h4 id="协方差矩阵-1"><a href="#协方差矩阵-1" class="headerlink" title="协方差矩阵"></a>协方差矩阵</h4><ul>
-<li><strong>Def</strong>（协方差矩阵）$\mathbf X=(X_1,X_2,\dots,X_n)^T$ 为 n 维随机向量<ol>
-<li>$\mu=(\mu_1,\mu_2,\dots)^T$ 为随机向量 $X$ 的数学期望</li>
-<li>$\sigma^2=(\sigma_1^2, \sigma_2^2,\dots)^T$为随机向量 $X$ 的方差</li>
+<h4 id="协方差矩阵-1">协方差矩阵</h4>
+<ul>
+<li><strong>Def</strong>（协方差矩阵）<span class="math inline">\(\mathbf X=(X_1,X_2,\dots,X_n)^T\)</span> 为 n 维随机向量
+<ol type="1">
+<li><span class="math inline">\(\mu=(\mu_1,\mu_2,\dots)^T\)</span> 为随机向量 <span class="math inline">\(X\)</span> 的数学期望</li>
+<li><span class="math inline">\(\sigma^2=(\sigma_1^2, \sigma_2^2,\dots)^T\)</span>为随机向量 <span class="math inline">\(X\)</span> 的方差</li>
 <li>协方差矩阵为：</li>
-</ol>
-</li>
+</ol></li>
 </ul>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \varSigma=\left(\begin{matrix}
-  \sigma_{11}& \sigma_{12}&\dots& \sigma_{1n}\\
-  \sigma_{21}& \sigma_{22}&\dots& \sigma_{2n}\\
-  \vdots&\vdots&\ddots&\vdots\\
-  \sigma_{n1}& \sigma_{n2}&\dots& \sigma_{nn}\\
-\end{matrix}\right)</script><h5 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h5><ul>
-<li>$\mathbf{diag}\varSigma=\sigma^2$</li>
-<li>半正定的对称阵，即$\varSigma\in S_+$</li>
-<li>$\sigma^2_{ij}\le \sigma_{ii}\sigma_{jj}$</li>
-<li>n 维正态分布：$f(\mathbb{x})=\frac{1}{(2\pi)^{n/2}|\sigma|^{1/2}}\exp\{-\frac{1}{2} (x-\mu)^T\Sigma^{-1}(x-\mu)\}$</li>
+  \sigma_{11}&amp; \sigma_{12}&amp;\dots&amp; \sigma_{1n}\\
+  \sigma_{21}&amp; \sigma_{22}&amp;\dots&amp; \sigma_{2n}\\
+  \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+  \sigma_{n1}&amp; \sigma_{n2}&amp;\dots&amp; \sigma_{nn}\\
+\end{matrix}\right)
+\]</span></p>
+<h5 id="性质-1">性质</h5>
+<ul>
+<li><span class="math inline">\(\mathbf{diag}\varSigma=\sigma^2\)</span></li>
+<li>半正定的对称阵，即<span class="math inline">\(\varSigma\in S_+\)</span></li>
+<li><span class="math inline">\(\sigma^2_{ij}\le \sigma_{ii}\sigma_{jj}\)</span></li>
+<li>n 维正态分布：<span class="math inline">\(f(\mathbb{x})=\frac{1}{(2\pi)^{n/2}|\sigma|^{1/2}}\exp\{-\frac{1}{2} (x-\mu)^T\Sigma^{-1}(x-\mu)\}\)</span></li>
 </ul>
-<div class="note quote"><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><h4 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="0 - 1 分布"></a>0 - 1 分布</h4><ol><li>形式：$P(X=0)=1-p, P(X=1)=p$</li><li>期望：$EX=p$</li><li>方差：$DX=p(1-p)$</li></ol><h4 id="二项分布-b-n-p"><a href="#二项分布-b-n-p" class="headerlink" title="二项分布 $b(n,p)$"></a>二项分布 $b(n,p)$</h4><ol><li>形式：$P(X=k) = C_n^kp^k(1-p)^k$</li><li>期望：$EX=np$</li><li>方差：$DX=np(1-p)$</li></ol><h4 id="泊松分布-P-lambda"><a href="#泊松分布-P-lambda" class="headerlink" title="泊松分布 $P(\lambda)$"></a>泊松分布 $P(\lambda)$</h4><ol><li>形式：$P(X=k)=\frac{\lambda^k e^{-\lambda}}{k!}$</li><li>期望：$EX=\lambda$</li><li>方差：$DX=\lambda$</li></ol><h4 id="超几何分布-H-N-M-n-not-important"><a href="#超几何分布-H-N-M-n-not-important" class="headerlink" title="超几何分布 $H(N,M,n)$ -- not important"></a>超几何分布 $H(N,M,n)$ <code>-- not important</code></h4><ol><li>形式：$P(X=k)=\frac{C_M^kC_{N-M}^{N-k}}{C_N^n}$</li><li>期望：$EX=nM/N$</li><li>方差：$DX=\frac{nM(N-n)(N-M)}{N^2(N-1)}$</li></ol><h4 id="均匀分布-U-a-b"><a href="#均匀分布-U-a-b" class="headerlink" title="均匀分布 $U(a,b)$"></a>均匀分布 $U(a,b)$</h4><ol><li>形式：$P(X=x) = 1/(b-a)\quad if ~  ~ x \in [a,b]$</li><li>期望：$EX=\frac{1}{2}(a+b)$</li><li>方差：$DX=\frac{(b-a)^2}{12}$</li></ol><h4 id="指数分布-e-lambda"><a href="#指数分布-e-lambda" class="headerlink" title="指数分布 $e(\lambda)$"></a>指数分布 $e(\lambda)$</h4><ol><li>形式：$P(X=x)=\lambda e^{-\lambda x}$</li><li>期望：$EX=1/\lambda$</li><li>方差：$DX=1/\lambda^2$</li></ol><h4 id="高斯分布（正态分布）-N-mu-sigma-2"><a href="#高斯分布（正态分布）-N-mu-sigma-2" class="headerlink" title="高斯分布（正态分布） $N(\mu,\sigma^2)$"></a>高斯分布（正态分布） $N(\mu,\sigma^2)$</h4><ol><li>形式：$P(X=x)=\frac{1}{\sqrt{2\pi}\sigma}\exp[-\frac{(x-\mu)^2}{2\sigma^2}]$</li><li>期望：$EX=\mu$</li><li>方差：$DX=\sigma^2$</li></ol><h4 id="卡方分布-chi-2-n"><a href="#卡方分布-chi-2-n" class="headerlink" title="卡方分布 $\chi^2(n)$"></a>卡方分布 $\chi^2(n)$</h4><ol><li>形式（自由度为 n）：$\chi^2=\sum_{i=1}^nX_i^2,~X_i\sim N(0,1)$</li><li>期望：$E\chi^2=n$</li><li>方差：$E\chi^2=2n$</li></ol><h4 id="t-分布"><a href="#t-分布" class="headerlink" title="t-分布"></a>t-分布</h4><ol><li>形式（自由度为 n）：$T=\frac{X}{\sqrt{Y/n}},~X\sim N(0,1),~Y\sim \chi^2(n)$</li></ol><h4 id="F-分布"><a href="#F-分布" class="headerlink" title="F-分布"></a>F-分布</h4><ol><li>形式（自由度为 m, n）：$F=\frac{X/m}{Y/n},~X\sim \chi^2(m),~Y\sim\chi^2(n)$</li></ol></div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<div class="note quote"><h3 id="summary">Summary</h3><h4 id="分布">0 - 1 分布</h4><ol type="1"><li>形式：<span class="math inline">\(P(X=0)=1-p, P(X=1)=p\)</span></li><li>期望：<span class="math inline">\(EX=p\)</span></li><li>方差：<span class="math inline">\(DX=p(1-p)\)</span></li></ol><h4 id="二项分布-bnp">二项分布 <span class="math inline">\(b(n,p)\)</span></h4><ol type="1"><li>形式：<span class="math inline">\(P(X=k) = C_n^kp^k(1-p)^k\)</span></li><li>期望：<span class="math inline">\(EX=np\)</span></li><li>方差：<span class="math inline">\(DX=np(1-p)\)</span></li></ol><h4 id="泊松分布-plambda">泊松分布 <span class="math inline">\(P(\lambda)\)</span></h4><ol type="1"><li>形式：<span class="math inline">\(P(X=k)=\frac{\lambda^k e^{-\lambda}}{k!}\)</span></li><li>期望：<span class="math inline">\(EX=\lambda\)</span></li><li>方差：<span class="math inline">\(DX=\lambda\)</span></li></ol><h4 id="超几何分布-hnmn----not-important">超几何分布 <span class="math inline">\(H(N,M,n)\)</span> <code>-- not important</code></h4><ol type="1"><li>形式：<span class="math inline">\(P(X=k)=\frac{C_M^kC_{N-M}^{N-k}}{C_N^n}\)</span></li><li>期望：<span class="math inline">\(EX=nM/N\)</span></li><li>方差：<span class="math inline">\(DX=\frac{nM(N-n)(N-M)}{N^2(N-1)}\)</span></li></ol><h4 id="均匀分布-uab">均匀分布 <span class="math inline">\(U(a,b)\)</span></h4><ol type="1"><li>形式：<span class="math inline">\(P(X=x) = 1/(b-a)\quad if ~ ~ x \in [a,b]\)</span></li><li>期望：<span class="math inline">\(EX=\frac{1}{2}(a+b)\)</span></li><li>方差：<span class="math inline">\(DX=\frac{(b-a)^2}{12}\)</span></li></ol><h4 id="指数分布-elambda">指数分布 <span class="math inline">\(e(\lambda)\)</span></h4><ol type="1"><li>形式：<span class="math inline">\(P(X=x)=\lambda e^{-\lambda x}\)</span></li><li>期望：<span class="math inline">\(EX=1/\lambda\)</span></li><li>方差：<span class="math inline">\(DX=1/\lambda^2\)</span></li></ol><h4 id="高斯分布正态分布-nmusigma2">高斯分布（正态分布） <span class="math inline">\(N(\mu,\sigma^2)\)</span></h4><ol type="1"><li>形式：<span class="math inline">\(P(X=x)=\frac{1}{\sqrt{2\pi}\sigma}\exp[-\frac{(x-\mu)^2}{2\sigma^2}]\)</span></li><li>期望：<span class="math inline">\(EX=\mu\)</span></li><li>方差：<span class="math inline">\(DX=\sigma^2\)</span></li></ol><h4 id="卡方分布-chi2n">卡方分布 <span class="math inline">\(\chi^2(n)\)</span></h4><ol type="1"><li>形式（自由度为 n）：<span class="math inline">\(\chi^2=\sum_{i=1}^nX_i^2,~X_i\sim N(0,1)\)</span></li><li>期望：<span class="math inline">\(E\chi^2=n\)</span></li><li>方差：<span class="math inline">\(E\chi^2=2n\)</span></li></ol><h4 id="t-分布">t-分布</h4><ol type="1"><li>形式（自由度为 n）：<span class="math inline">\(T=\frac{X}{\sqrt{Y/n}},~X\sim N(0,1),~Y\sim \chi^2(n)\)</span></li></ol><h4 id="f-分布">F-分布</h4><ol type="1"><li>形式（自由度为 m, n）：<span class="math inline">\(F=\frac{X/m}{Y/n},~X\sim \chi^2(m),~Y\sim\chi^2(n)\)</span></li></ol></div>
+
   
   
     
@@ -675,16 +689,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「概率统计与随机过程」 9 - 随机过程的基本概念</p>
           <p class='content'>:no_mouth:
 
-随机过程随机过程的基本概念Def（随机过程）设 $\Omega=\{\omega\}$ 是随机试验 $E$ 的样本空间，$T\subset (-\inf,+\inf)$ ...</p>
+随机过程
+随机过程的基本概念
+Def（随机过程）设 \(\Omega=\{\omega\}\) 是随机试验 \(E\) 的样本空间，\(T\subset (-\i...</p>
         </a>
       
       
-        <a class='next' href='/2020/11/20/study/Math/ComplexFunctions/ch2/'>
-          <p class='title'>「复变函数」复变函数的导数和解析函数<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>复变函数的导数和解析函数
-Ch2 复变函数的导数和解析函数解析函数的概念及其判定复变函数的导数、微分Def：复变函数的导数、可导、在 D 内可导
-求导公式：有理运算求导、反函数求导
-复变函数的可...</p>
+        <a class='next' href='/2020/11/20/study/Math/ComplexFunctions/ch1/'>
+          <p class='title'>「复变函数」<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>复数与复变函数
+
+Ch1 复数与复变函数
+复数的概念与运算
+复数的概念
+Def（复数）\((x,y)\) -&gt; \(z=x+iy,i^2=-1\)
+
+\(\mathrm{Re...</p>
         </a>
       
     </div>
@@ -727,7 +747,7 @@ Ch2 复变函数的导数和解析函数解析函数的概念及其判定复变�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%90%91%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81"><span class="toc-text">随机向量的数字特征</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B"><span class="toc-text">随机变量的数学期望</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">数学期望的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-text">连续型随机变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%87%BD%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B"><span class="toc-text">随机变量函数的数学期望</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%96%B9%E5%B7%AE"><span class="toc-text">随机变量的方差</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">方差的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-text">方差的性质</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE%E4%B8%8E%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="toc-text">协方差与相关系数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-text">性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8B%AC%E7%AB%8B%E4%B8%8E%E4%B8%8D%E7%9B%B8%E5%85%B3%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">独立与不相关的关系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5"><span class="toc-text">协方差矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9"><span class="toc-text">矩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5-1"><span class="toc-text">协方差矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8-1"><span class="toc-text">性质</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Summary"><span class="toc-text">Summary</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#0-1-%E5%88%86%E5%B8%83"><span class="toc-text">0 - 1 分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83-b-n-p"><span class="toc-text">二项分布 $b(n,p)$</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83-P-lambda"><span class="toc-text">泊松分布 $P(\lambda)$</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83-H-N-M-n-not-important"><span class="toc-text">超几何分布 $H(N,M,n)$ -- not important</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83-U-a-b"><span class="toc-text">均匀分布 $U(a,b)$</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83-e-lambda"><span class="toc-text">指数分布 $e(\lambda)$</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%E5%88%86%E5%B8%83%EF%BC%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%EF%BC%89-N-mu-sigma-2"><span class="toc-text">高斯分布（正态分布） $N(\mu,\sigma^2)$</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%A1%E6%96%B9%E5%88%86%E5%B8%83-chi-2-n"><span class="toc-text">卡方分布 $\chi^2(n)$</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#t-%E5%88%86%E5%B8%83"><span class="toc-text">t-分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#F-%E5%88%86%E5%B8%83"><span class="toc-text">F-分布</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%90%91%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81"><span class="toc-text">随机向量的数字特征</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B"><span class="toc-text">随机变量的数学期望</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">数学期望的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-text">连续型随机变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%87%BD%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B"><span class="toc-text">随机变量函数的数学期望</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%96%B9%E5%B7%AE"><span class="toc-text">随机变量的方差</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">方差的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E5%B7%AE%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-text">方差的性质</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE%E4%B8%8E%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="toc-text">协方差与相关系数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-text">性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8B%AC%E7%AB%8B%E4%B8%8E%E4%B8%8D%E7%9B%B8%E5%85%B3%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">独立与不相关的关系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5"><span class="toc-text">协方差矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9"><span class="toc-text">矩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5-1"><span class="toc-text">协方差矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8-1"><span class="toc-text">性质</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#summary"><span class="toc-text">Summary</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E5%B8%83"><span class="toc-text">0 - 1 分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83-bnp"><span class="toc-text">二项分布 \(b(n,p)\)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83-plambda"><span class="toc-text">泊松分布 \(P(\lambda)\)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83-hnmn----not-important"><span class="toc-text">超几何分布 \(H(N,M,n)\) -- not important</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83-uab"><span class="toc-text">均匀分布 \(U(a,b)\)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83-elambda"><span class="toc-text">指数分布 \(e(\lambda)\)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%E5%88%86%E5%B8%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83-nmusigma2"><span class="toc-text">高斯分布（正态分布） \(N(\mu,\sigma^2)\)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%A1%E6%96%B9%E5%88%86%E5%B8%83-chi2n"><span class="toc-text">卡方分布 \(\chi^2(n)\)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#t-%E5%88%86%E5%B8%83"><span class="toc-text">t-分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#f-%E5%88%86%E5%B8%83"><span class="toc-text">F-分布</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1374,14 +1394,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

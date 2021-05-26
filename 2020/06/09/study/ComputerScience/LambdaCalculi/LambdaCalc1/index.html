@@ -470,25 +470,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>摘自 Wikipedia，知乎等。</p>
 <span id="more"></span>
-<h2 id="何为-Lambda-演算"><a href="#何为-Lambda-演算" class="headerlink" title="何为 Lambda 演算"></a>何为 Lambda 演算</h2><p>Lambda 演算（Lambda Calculus）是一套从数理逻辑中发展，以变量绑定和替换的规则，来研究函数如何抽象化定义、函数如何被应用，以及以递归的形式定义、实现一个系统。它由数学家阿隆佐·邱奇在 20 世纪 30 年代首次发表。Lambda 演算作为一种广泛用途的计算模型，可以清晰地定义什么是一个可计算函数，而任何可计算函数都能以这种形式表达和求值，它能模拟单一磁带图灵机的计算过程；尽管如此，Lambda 演算强调的是变换规则的运用，而非实现它们的具体机器。</p>
+<h2 id="何为-lambda-演算">何为 Lambda 演算</h2>
+<p>Lambda 演算（Lambda Calculus）是一套从数理逻辑中发展，以变量绑定和替换的规则，来研究函数如何抽象化定义、函数如何被应用，以及以递归的形式定义、实现一个系统。它由数学家阿隆佐·邱奇在 20 世纪 30 年代首次发表。Lambda 演算作为一种广泛用途的计算模型，可以清晰地定义什么是一个可计算函数，而任何可计算函数都能以这种形式表达和求值，它能模拟单一磁带图灵机的计算过程；尽管如此，Lambda 演算强调的是变换规则的运用，而非实现它们的具体机器。</p>
 <p>Lambda 演算可比拟是最根本的编程语言，它包括了一条变换规则（变量替换）和一条将函数抽象化定义的方式。因此普遍公认是一种更接近软件而非硬件的方式。对函数式编程语言造成很大影响，比如<code>Lisp</code>、<code>ML</code>语言和<code>Haskell</code>语言。在 1936 年邱奇利用 Lambda 演算给出了对于判定性问题（Entscheidungs problem）的否定：关于两个 Lambda 表达式是否等价的命题，无法由一个“通用的算法”判断，这是不可判定性能够证明的头一个问题，甚至还在停机问题之先。</p>
-<div class="note quote"><h3 id="后文中使用的一些-Racket-语义"><a href="#后文中使用的一些-Racket-语义" class="headerlink" title="后文中使用的一些 Racket 语义"></a>后文中使用的一些 Racket 语义</h3><p>$\sum\limits_{i=0}^ni$：<code>(define (sumto n) (/ (* n (+ n 1)) 2))</code></p><p>求整数的位数：<code>(define (crunch n) (if (&lt; n 10) 1 (+ 1 (crunch (/ n 10)))))</code></p><p>断言：<code>posn?</code>，<code>number?</code>，<code>zero?</code>，<code>positive?</code>…</p><p>多分支判断：<code>cond</code>相当于 c 中的 <code>switch-case</code> 语句（等价 <code>(if p a1 a2)</code> 递归）</p><h4 id="复杂数据类型"><a href="#复杂数据类型" class="headerlink" title="复杂数据类型"></a>复杂数据类型</h4><p>复杂数据类型构成：<code>make-posn p q</code>，<code>posn?</code>，<code>posn-x</code>，<code>posn-y</code></p><p>元组化：<code>(define (bunchify n) (if (= n 1) 1 (make-posn n (bunchify (- n 1))))))</code></p><p>元组个数：<code>bunch-size</code></p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(define (bunch-size b)</span><br><span class="line">  (if (number? b)</span><br><span class="line">  1</span><br><span class="line">  (+ (bunch-size (posn-x b)) (bunch-size (posn-y b)))))</span><br></pre></td></tr></table></figure><p>从 <code>bunch</code> 中删除 <code>e</code>：<code>delete-es b e</code></p><h4 id="高级数据结构"><a href="#高级数据结构" class="headerlink" title="高级数据结构"></a>高级数据结构</h4><p>二元组：<code>cons</code> （<code>(define-struct cons (car cdr))</code>）</p><p>取第一个：<code>car</code></p><p>取第二个：<code>cdr</code></p><p>列表：<code>list</code></p></div>
-<h2 id="计算模型（Computation-Models）"><a href="#计算模型（Computation-Models）" class="headerlink" title="计算模型（Computation Models）"></a>计算模型（Computation Models）</h2><p>图灵机是一种<strong>抽象机器</strong>，它在无限长磁带上进行计算。如果一个问题可以用图灵机解决，我们说它是<strong>可计算的</strong>。否则，它是<strong>不可计算的</strong>。</p>
-<div class="note quote"><h3 id="停机问题"><a href="#停机问题" class="headerlink" title="停机问题"></a>停机问题</h3><p>不可计算的一个例子：<strong>停机问题</strong>。它询问是否存在一个程序，该程序接受一个程序作为输入，并决定它是否停止。现在思考这样的 Racket 函数：</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(define (doesnthalt x) (doesnthalt x))</span><br><span class="line"></span><br><span class="line">(define (foo x)</span><br><span class="line">  (if (halts? x) (doesnthalt 10) true))</span><br></pre></td></tr></table></figure><p>这里的 <code>doesnthalt</code> 函数形成无穷递归。</p><p>进而我们证明 <code>(foo foo)</code> 是不可确定的</p><blockquote><ol><li><p>如果 <code>(foo foo)</code> 停机，则 <code>foo</code> 停机，则<code>(foo foo) =&gt; (doesnthalt 10)</code></p><p><code>(foo foo)</code> 是不可计算的，形成矛盾。</p></li><li><p>如果 <code>(foo foo)</code> 不停机，则 <code>(foo foo) =&gt; true</code> ，<code>foo</code> 停机，形成矛盾。</p></li></ol><p>在两种情况下，都产生了矛盾，故停机问题是不可计算的。</p></blockquote></div>
-<h2 id="Lambda-演算语法"><a href="#Lambda-演算语法" class="headerlink" title="Lambda 演算语法"></a>Lambda 演算语法</h2><p>Lambda 演算包括了建构 Lambda 项，和对 Lambda 项运行归约的操作。Lambda 演算只有三类表达式：</p>
-<ol>
-<li>变量（Variable）：$\mathrm{x,y,a,b}$</li>
-<li>抽象（Abstraction）：$\mathrm{(\lambda x.~expression)}$ $\mathrm{expression}$ 是一个 Lambda 表达式</li>
-<li>应用（Application）：$\mathrm{(e_1,e_2)}$ 其中 $e_1,e_2$ 为 Lambda 表达式</li>
+<div class="note quote"><h3 id="后文中使用的一些-racket-语义">后文中使用的一些 Racket 语义</h3><p><span class="math inline">\(\sum\limits_{i=0}^ni\)</span>：<code>(define (sumto n) (/ (* n (+ n 1)) 2))</code></p><p>求整数的位数：<code>(define (crunch n) (if (&lt; n 10) 1 (+ 1 (crunch (/ n 10)))))</code></p><p>断言：<code>posn?</code>，<code>number?</code>，<code>zero?</code>，<code>positive?</code>...</p><p>多分支判断：<code>cond</code>相当于 c 中的 <code>switch-case</code> 语句（等价 <code>(if p a1 a2)</code> 递归）</p><h4 id="复杂数据类型">复杂数据类型</h4><p>复杂数据类型构成：<code>make-posn p q</code>，<code>posn?</code>，<code>posn-x</code>，<code>posn-y</code></p><p>元组化：<code>(define (bunchify n) (if (= n 1) 1 (make-posn n (bunchify (- n 1))))))</code></p><p>元组个数：<code>bunch-size</code></p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(define (bunch-size b)</span><br><span class="line">  (if (number? b)</span><br><span class="line">  1</span><br><span class="line">  (+ (bunch-size (posn-x b)) (bunch-size (posn-y b)))))</span><br></pre></td></tr></table></figure><p>从 <code>bunch</code> 中删除 <code>e</code>：<code>delete-es b e</code></p><h4 id="高级数据结构">高级数据结构</h4><p>二元组：<code>cons</code> （<code>(define-struct cons (car cdr))</code>）</p><p>取第一个：<code>car</code></p><p>取第二个：<code>cdr</code></p><p>列表：<code>list</code></p></div>
+<h2 id="计算模型computation-models">计算模型（Computation Models）</h2>
+<p>图灵机是一种<strong>抽象机器</strong>，它在无限长磁带上进行计算。如果一个问题可以用图灵机解决，我们说它是<strong>可计算的</strong>。否则，它是<strong>不可计算的</strong>。</p>
+<div class="note quote"><h3 id="停机问题">停机问题</h3><p>不可计算的一个例子：<strong>停机问题</strong>。它询问是否存在一个程序，该程序接受一个程序作为输入，并决定它是否停止。现在思考这样的 Racket 函数：</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(define (doesnthalt x) (doesnthalt x))</span><br><span class="line"></span><br><span class="line">(define (foo x)</span><br><span class="line">  (if (halts? x) (doesnthalt 10) true))</span><br></pre></td></tr></table></figure><p>这里的 <code>doesnthalt</code> 函数形成无穷递归。</p><p>进而我们证明 <code>(foo foo)</code> 是不可确定的</p><blockquote><ol type="1"><li><p>如果 <code>(foo foo)</code> 停机，则 <code>foo</code> 停机，则<code>(foo foo) =&gt; (doesnthalt 10)</code></p><p><code>(foo foo)</code> 是不可计算的，形成矛盾。</p></li><li><p>如果 <code>(foo foo)</code> 不停机，则 <code>(foo foo) =&gt; true</code> ，<code>foo</code> 停机，形成矛盾。</p></li></ol><p>在两种情况下，都产生了矛盾，故停机问题是不可计算的。</p></blockquote></div>
+<h2 id="lambda-演算语法">Lambda 演算语法</h2>
+<p>Lambda 演算包括了建构 Lambda 项，和对 Lambda 项运行归约的操作。Lambda 演算只有三类表达式：</p>
+<ol type="1">
+<li>变量（Variable）：<span class="math inline">\(\mathrm{x,y,a,b}\)</span></li>
+<li>抽象（Abstraction）：<span class="math inline">\(\mathrm{(\lambda x.~expression)}\)</span> <span class="math inline">\(\mathrm{expression}\)</span> 是一个 Lambda 表达式</li>
+<li>应用（Application）：<span class="math inline">\(\mathrm{(e_1,e_2)}\)</span> 其中 <span class="math inline">\(e_1,e_2\)</span> 为 Lambda 表达式</li>
 </ol>
-<div class="note quote"><h3 id="常用表示法"><a href="#常用表示法" class="headerlink" title="常用表示法"></a>常用表示法</h3><p>$\mathrm{(\lambda x . expression)}$：<code>(lambda x. expression)</code></p><p>$\mathrm{(\lambda x.plus~x~x)~y}$：<code>(lambda x. plus x x) y</code>（前缀表达式）</p><p>在后文中都使用这种记法，并且采用前缀表达式。下面介绍一些速记：</p><div class="table-container"><table><thead><tr><th>表达式</th><th>等价记法</th></tr></thead><tbody><tr><td><code>(lambda x. expression)</code></td><td><code>lambda x. expression</code></td></tr><tr><td><code>(e)</code></td><td><code>e</code></td></tr><tr><td><code>e1 e2 e3</code></td><td><code>(e1 e2) e3</code></td></tr><tr><td><code>lambda x.e1 e2</code></td><td><code>lambda x. (e1 e2)</code></td></tr></tbody></table></div><p>这里给出一些 Lambda 表达式的例子：</p><ol><li><code>x</code></li><li><code>x x</code></li><li><code>x y z</code></li><li><code>lambda x. x</code></li><li><code>lambda x. x x</code></li><li><code>lambda x.(lambda y. x)</code></li><li><code>(lambda x. x) (lambda y. y)</code></li></ol><h3 id="Lambda-演算技巧：柯里化"><a href="#Lambda-演算技巧：柯里化" class="headerlink" title="Lambda 演算技巧：柯里化"></a>Lambda 演算技巧：柯里化</h3><p>如果仔细看 Lambda 演算的定义，便会发现，Lambda 演算只接受一个参数，这似乎是一个极大的问题，因为我们连加法都无法合理的处理，因而我们将其使用柯里化。</p><p>柯里化（Currying）是把接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数，并且返回接受余下的参数且返回结果的新函数的技术。在直觉上，柯里化声称：</p><p><div class="note quote"><p>“如果你固定某些参数，你将得到接受余下参数的一个函数”</p></div></p><p>由这个理论，我们来构建一个加法运算：<code>lambda x.(lambda y. plus x y)</code></p><p>如果我们可以简化运算、并且提升可阅读性的话，我们也可以用前一种记法，即 <code>lambda x y. plus x y</code>。这就是柯里化的最简单使用方法，也就是说，一个复杂的多参数函数可以柯里化为一个函数。添加多个参数的函数并没有真正添加任何东西，只不过简化了语法，所以下面继续介绍的时候，在方便的时候用到多参数函数。</p></div>
-<h3 id="自由变量"><a href="#自由变量" class="headerlink" title="自由变量"></a>自由变量</h3><p>我们在此给出自由变量的严格定义：</p>
+<div class="note quote"><h3 id="常用表示法">常用表示法</h3><p><span class="math inline">\(\mathrm{(\lambda x . expression)}\)</span>：<code>(lambda x. expression)</code></p><p><span class="math inline">\(\mathrm{(\lambda x.plus~x~x)~y}\)</span>：<code>(lambda x. plus x x) y</code>（前缀表达式）</p><p>在后文中都使用这种记法，并且采用前缀表达式。下面介绍一些速记：</p><table><thead><tr class="header"><th>表达式</th><th>等价记法</th></tr></thead><tbody><tr class="odd"><td><code>(lambda x. expression)</code></td><td><code>lambda x. expression</code></td></tr><tr class="even"><td><code>(e)</code></td><td><code>e</code></td></tr><tr class="odd"><td><code>e1 e2 e3</code></td><td><code>(e1 e2) e3</code></td></tr><tr class="even"><td><code>lambda x.e1 e2</code></td><td><code>lambda x. (e1 e2)</code></td></tr></tbody></table><p>这里给出一些 Lambda 表达式的例子：</p><ol type="1"><li><code>x</code></li><li><code>x x</code></li><li><code>x y z</code></li><li><code>lambda x. x</code></li><li><code>lambda x. x x</code></li><li><code>lambda x.(lambda y. x)</code></li><li><code>(lambda x. x) (lambda y. y)</code></li></ol><h3 id="lambda-演算技巧柯里化">Lambda 演算技巧：柯里化</h3><p>如果仔细看 Lambda 演算的定义，便会发现，Lambda 演算只接受一个参数，这似乎是一个极大的问题，因为我们连加法都无法合理的处理，因而我们将其使用柯里化。</p><p>柯里化（Currying）是把接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数，并且返回接受余下的参数且返回结果的新函数的技术。在直觉上，柯里化声称：</p><div class="note quote"><p>“如果你固定某些参数，你将得到接受余下参数的一个函数”</p></div><p>由这个理论，我们来构建一个加法运算：<code>lambda x.(lambda y. plus x y)</code></p><p>如果我们可以简化运算、并且提升可阅读性的话，我们也可以用前一种记法，即 <code>lambda x y. plus x y</code>。这就是柯里化的最简单使用方法，也就是说，一个复杂的多参数函数可以柯里化为一个函数。添加多个参数的函数并没有真正添加任何东西，只不过简化了语法，所以下面继续介绍的时候，在方便的时候用到多参数函数。</p></div>
+<h3 id="自由变量">自由变量</h3>
+<p>我们在此给出自由变量的严格定义：</p>
 <blockquote>
-<p>用 $\mathrm{FV[exp]}$ 表示一个集合，表示在一个 Lambda 表达式 $\mathrm{exp}$ 中的所有自由变量：</p>
-<ol>
-<li>$\mathrm{exp}$ 是变量，则 $\mathrm{FV(exp) = \{exp\}}$</li>
-<li>$\mathrm{exp}$ 是应用 $\mathrm{(e1~e2)}$，则 $\mathrm{FV(exp) = FV[e1]\cup FV[e2]}$</li>
-<li>$\mathrm{exp}$ 是抽象 $\lambda \mathrm{x.~deri}$，则 $\mathrm{FV(exp) = FV(deri) \backslash \{x\}}$</li>
+<p>用 <span class="math inline">\(\mathrm{FV[exp]}\)</span> 表示一个集合，表示在一个 Lambda 表达式 <span class="math inline">\(\mathrm{exp}\)</span> 中的所有自由变量：</p>
+<ol type="1">
+<li><span class="math inline">\(\mathrm{exp}\)</span> 是变量，则 <span class="math inline">\(\mathrm{FV(exp) = \{exp\}}\)</span></li>
+<li><span class="math inline">\(\mathrm{exp}\)</span> 是应用 <span class="math inline">\(\mathrm{(e1~e2)}\)</span>，则 <span class="math inline">\(\mathrm{FV(exp) = FV[e1]\cup FV[e2]}\)</span></li>
+<li><span class="math inline">\(\mathrm{exp}\)</span> 是抽象 <span class="math inline">\(\lambda \mathrm{x.~deri}\)</span>，则 <span class="math inline">\(\mathrm{FV(exp) = FV(deri) \backslash \{x\}}\)</span></li>
 </ol>
 </blockquote>
 <p>例如：</p>
@@ -498,60 +502,75 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><code>lambda y . (lambda x . plus x y)</code>：在内层演算<code>lambda x . plus x y</code>中，<code>y</code>和<code>plus</code>是自由的，<code>x</code>不是自由的。在完整表达中，<code>x</code>和<code>y</code>不是自由的，<code>plus</code> 是自由的</li>
 </ul>
 <p>我们会经常使用<code>free(x)</code>来表示在表达式<code>x</code>中自由的标识符。</p>
-<h2 id="Lambda-演算中的代换法"><a href="#Lambda-演算中的代换法" class="headerlink" title="Lambda 演算中的代换法"></a>Lambda 演算中的代换法</h2><p>$\mathrm{e1[x\leftarrow e2]}$ 表示代换。代换可以不严谨地理解为：将 $\mathrm{e1}$ 中的所有出现的<strong>自由变量</strong> $\mathrm x$ 替换为 $\mathrm{e2}$。</p>
+<h2 id="lambda-演算中的代换法">Lambda 演算中的代换法</h2>
+<p><span class="math inline">\(\mathrm{e1[x\leftarrow e2]}\)</span> 表示代换。代换可以不严谨地理解为：将 <span class="math inline">\(\mathrm{e1}\)</span> 中的所有出现的<strong>自由变量</strong> <span class="math inline">\(\mathrm x\)</span> 替换为 <span class="math inline">\(\mathrm{e2}\)</span>。</p>
 <p>严格的定义如下：</p>
-<ol>
-<li>$\mathrm{x[x\leftarrow e]}\Longrightarrow\mathrm e$</li>
-<li>$\mathrm{(e1,e2)[x\leftarrow e3]}\Longrightarrow \mathrm{(e1[x\leftarrow e3],e2[x\leftarrow e3])}$</li>
-<li>$\mathrm{(\lambda x.e1)[x\leftarrow e2]}\Longrightarrow \mathrm{(\lambda x.e1)}$ （在其中，$\mathrm x$ 不是自由变量）</li>
-<li>$\mathrm{(\lambda y.e1)[x\leftarrow e2]}\Longrightarrow \mathrm{(\lambda y.e1[x\leftarrow e2])}$</li>
+<ol type="1">
+<li><span class="math inline">\(\mathrm{x[x\leftarrow e]}\Longrightarrow\mathrm e\)</span></li>
+<li><span class="math inline">\(\mathrm{(e1,e2)[x\leftarrow e3]}\Longrightarrow \mathrm{(e1[x\leftarrow e3],e2[x\leftarrow e3])}\)</span></li>
+<li><span class="math inline">\(\mathrm{(\lambda x.e1)[x\leftarrow e2]}\Longrightarrow \mathrm{(\lambda x.e1)}\)</span> （在其中，<span class="math inline">\(\mathrm x\)</span> 不是自由变量）</li>
+<li><span class="math inline">\(\mathrm{(\lambda y.e1)[x\leftarrow e2]}\Longrightarrow \mathrm{(\lambda y.e1[x\leftarrow e2])}\)</span></li>
 </ol>
-<h3 id="Lambda-演算原则"><a href="#Lambda-演算原则" class="headerlink" title="Lambda 演算原则"></a>Lambda 演算原则</h3><p>为了推广这个代换法，我们引入 $\alpha$-转化和 $\beta$-规约的概念：</p>
-<h4 id="alpha-转化"><a href="#alpha-转化" class="headerlink" title="alpha-转化"></a>alpha-转化</h4><p>如果两个 Lambda 表达式$(\mathrm{\lambda x.e1}),(\mathrm{\lambda y.e2})$满足$\mathrm y\not\in\mathrm{FV[e1]}$ 并且 $\mathrm{e2=e1[x\leftarrow y]}$ 则称这两个表达式是 $\alpha$-等价（$\alpha$-equivalent）的。用符号 $\mathop{\rightarrow}\limits^\alpha$ 表示这一转化。</p>
+<h3 id="lambda-演算原则">Lambda 演算原则</h3>
+<p>为了推广这个代换法，我们引入 <span class="math inline">\(\alpha\)</span>-转化和 <span class="math inline">\(\beta\)</span>-规约的概念：</p>
+<h4 id="alpha-转化">alpha-转化</h4>
+<p>如果两个 Lambda 表达式<span class="math inline">\((\mathrm{\lambda x.e1}),(\mathrm{\lambda y.e2})\)</span>满足<span class="math inline">\(\mathrm y\not\in\mathrm{FV[e1]}\)</span> 并且 <span class="math inline">\(\mathrm{e2=e1[x\leftarrow y]}\)</span> 则称这两个表达式是 <span class="math inline">\(\alpha\)</span>-等价（<span class="math inline">\(\alpha\)</span>-equivalent）的。用符号 <span class="math inline">\(\mathop{\rightarrow}\limits^\alpha\)</span> 表示这一转化。</p>
 <blockquote>
-<p>$\alpha$-转化翻译成 <strong>转化</strong> 一词，是因为其注重了其转化的语义。</p>
-<p>在英文中我们使用：_equivalent_ 表示该关系，实则描述的是一种等价关系。</p>
+<p><span class="math inline">\(\alpha\)</span>-转化翻译成 <strong>转化</strong> 一词，是因为其注重了其转化的语义。</p>
+<p>在英文中我们使用：<em>equivalent</em> 表示该关系，实则描述的是一种等价关系。</p>
 </blockquote>
-<h4 id="beta-规约"><a href="#beta-规约" class="headerlink" title="beta-规约"></a>beta-规约</h4><p>$\beta$-规约是一个操作：将$\mathrm{(\lambda x.e1)~e2}$，转化为 $\mathrm{e1[x\leftarrow e2]}$。用符号 $\mathop {\rightarrow}\limits^\beta$ 表示这一操作。</p>
+<h4 id="beta-规约">beta-规约</h4>
+<p><span class="math inline">\(\beta\)</span>-规约是一个操作：将<span class="math inline">\(\mathrm{(\lambda x.e1)~e2}\)</span>，转化为 <span class="math inline">\(\mathrm{e1[x\leftarrow e2]}\)</span>。用符号 <span class="math inline">\(\mathop {\rightarrow}\limits^\beta\)</span> 表示这一操作。</p>
 <blockquote>
-<p>规约来自：_reduction_ 一词，个人认为翻译为 <strong>约化</strong> 更为准确。</p>
+<p>规约来自：<em>reduction</em> 一词，个人认为翻译为 <strong>约化</strong> 更为准确。</p>
 </blockquote>
-<div class="note quote"><h4 id="alpha-转化和-beta-规约的实例"><a href="#alpha-转化和-beta-规约的实例" class="headerlink" title="alpha-转化和 beta-规约的实例"></a>alpha-转化和 beta-规约的实例</h4><script type="math/tex; mode=display">\begin{aligned}\mathrm{(\lambda x.a~x~b)~(\lambda y.y)}&\mathop {\rightarrow}\limits^\beta\mathrm{a~(\lambda y.y)~b}\\\mathrm{(\lambda x.a~x~b)~(\lambda y.x)}&\mathop {\rightarrow}\limits^\alpha\mathrm{(\lambda q.a~q~b)~(\lambda y.x)}\\&\mathop{\rightarrow}\limits^\beta \mathrm{a~(\lambda y.x)~b}\end{aligned}</script></div>
-<h4 id="约化"><a href="#约化" class="headerlink" title="约化"></a>约化</h4><p>若给出一个从 $\mathrm {e1}$ 到 $\mathrm{e2}$ 演算序列，且 $\mathrm e2$ 无法继续演算，则称 $\mathrm e1$ 约化为 $\mathrm{e2}$。</p>
-<p>如果一个表达式 $\mathrm e1$ 存在一个约化，则称其为<strong>可约化的</strong>（called redex）</p>
-<h3 id="开始我们的演算"><a href="#开始我们的演算" class="headerlink" title="开始我们的演算"></a>开始我们的演算</h3><p>以 $\mathrm{(\lambda x.a~x~b)~((\lambda y.y)~z)}$ 为例，下面给出两种可能的方案去约化 Lambda 表达式。</p>
-<p><strong>普通（惯常）顺序（Normal Order）</strong>：从最外层的可约化的式子开始，先化为$\mathrm{a~((\lambda y.y)~z)~b}$</p>
-<p><strong>应用（调用）顺序（Applicative Order）</strong>：也从最外层开始，但先化为 $\mathrm{(\lambda x.a~x~b)~z}$</p>
+<div class="note quote"><h4 id="alpha-转化和-beta-规约的实例">alpha-转化和 beta-规约的实例</h4><p><span class="math display">\[\begin{aligned}\mathrm{(\lambda x.a~x~b)~(\lambda y.y)}&amp;\mathop {\rightarrow}\limits^\beta\mathrm{a~(\lambda y.y)~b}\\\mathrm{(\lambda x.a~x~b)~(\lambda y.x)}&amp;\mathop {\rightarrow}\limits^\alpha\mathrm{(\lambda q.a~q~b)~(\lambda y.x)}\\&amp;\mathop{\rightarrow}\limits^\beta \mathrm{a~(\lambda y.x)~b}\end{aligned}\]</span></p></div>
+<h4 id="约化">约化</h4>
+<p>若给出一个从 <span class="math inline">\(\mathrm {e1}\)</span> 到 <span class="math inline">\(\mathrm{e2}\)</span> 演算序列，且 <span class="math inline">\(\mathrm e2\)</span> 无法继续演算，则称 <span class="math inline">\(\mathrm e1\)</span> 约化为 <span class="math inline">\(\mathrm{e2}\)</span>。</p>
+<p>如果一个表达式 <span class="math inline">\(\mathrm e1\)</span> 存在一个约化，则称其为<strong>可约化的</strong>（called redex）</p>
+<h3 id="开始我们的演算">开始我们的演算</h3>
+<p>以 <span class="math inline">\(\mathrm{(\lambda x.a~x~b)~((\lambda y.y)~z)}\)</span> 为例，下面给出两种可能的方案去约化 Lambda 表达式。</p>
+<p><strong>普通（惯常）顺序（Normal Order）</strong>：从最外层的可约化的式子开始，先化为<span class="math inline">\(\mathrm{a~((\lambda y.y)~z)~b}\)</span></p>
+<p><strong>应用（调用）顺序（Applicative Order）</strong>：也从最外层开始，但先化为 <span class="math inline">\(\mathrm{(\lambda x.a~x~b)~z}\)</span></p>
 <blockquote>
 <p>请读者指出这两种顺序的区别：（注：在 non-lazy 非惰性计算时使用的是第二种顺序）</p>
 </blockquote>
-<p>一个<strong>完全约化</strong>（fully-reduced）的 Lambda 表达式形式没有可约化的表达式。同时，若给出从 $\mathrm {e1}$ 到 $\mathrm{e2}$ 演算序列，则 $\mathrm e2$ 不可约化，且在该演算序列中的所有表达式都约化为 $\mathrm e2$（存在且唯一）。</p>
-<div class="note quote"><p><strong>一个无穷递归的例子</strong></p><p>$\mathrm{(\lambda x.x~x)~(\lambda x.x~x)}$</p><p>毫不夸张的说，这是世界上最小的无穷循环（递归）。</p><p>但是，思考这样的例子：</p><p>$\mathrm{(\lambda x.y)~((\lambda x.x~x)~(\lambda x.x~x))}$</p><p>对于普通顺序演算，结果为 $y$ ，对于应用顺序演算，结果则是无穷递归。</p><p>更一般的说，若一个 Lambda 表达式可以（可能）被约化为一个完全约化的表达式，则普通顺序<strong>一定</strong>能演算到该形式，但应用顺序可能无法导出答案。</p></div>
-<h2 id="惰性计算（Lazy-Evaluation）"><a href="#惰性计算（Lazy-Evaluation）" class="headerlink" title="惰性计算（Lazy-Evaluation）"></a>惰性计算（Lazy-Evaluation）</h2><p>惰性计算需要我们对可约化的表达式进行注释（annotate）。以下面一个表达式为例，我们对表达式进行约化：</p>
-<script type="math/tex; mode=display">
-\mathrm{(\lambda x.f~x~x)~((\lambda y.y)~z)}</script><p>使用<strong>普通顺序</strong>：</p>
-<script type="math/tex; mode=display">
+<p>一个<strong>完全约化</strong>（fully-reduced）的 Lambda 表达式形式没有可约化的表达式。同时，若给出从 <span class="math inline">\(\mathrm {e1}\)</span> 到 <span class="math inline">\(\mathrm{e2}\)</span> 演算序列，则 <span class="math inline">\(\mathrm e2\)</span> 不可约化，且在该演算序列中的所有表达式都约化为 <span class="math inline">\(\mathrm e2\)</span>（存在且唯一）。</p>
+<div class="note quote"><p><strong>一个无穷递归的例子</strong></p><p><span class="math inline">\(\mathrm{(\lambda x.x~x)~(\lambda x.x~x)}\)</span></p><p>毫不夸张的说，这是世界上最小的无穷循环（递归）。</p><p>但是，思考这样的例子：</p><p><span class="math inline">\(\mathrm{(\lambda x.y)~((\lambda x.x~x)~(\lambda x.x~x))}\)</span></p><p>对于普通顺序演算，结果为 <span class="math inline">\(y\)</span> ，对于应用顺序演算，结果则是无穷递归。</p><p>更一般的说，若一个 Lambda 表达式可以（可能）被约化为一个完全约化的表达式，则普通顺序<strong>一定</strong>能演算到该形式，但应用顺序可能无法导出答案。</p></div>
+<h2 id="惰性计算lazy-evaluation">惰性计算（Lazy-Evaluation）</h2>
+<p>惰性计算需要我们对可约化的表达式进行注释（annotate）。以下面一个表达式为例，我们对表达式进行约化：</p>
+<p><span class="math display">\[
+\mathrm{(\lambda x.f~x~x)~((\lambda y.y)~z)}
+\]</span></p>
+<p>使用<strong>普通顺序</strong>：</p>
+<p><span class="math display">\[
 \begin{aligned}
-&\mathrm{(\lambda x.f~x~x)~((\lambda y.y)~z)}\\
-\Rightarrow&\mathrm{f~((\lambda y.y)~z)~((\lambda y.y)~z)}\\
-\Rightarrow&\mathrm{f~z~((\lambda y.y)~z)}\\
-\Rightarrow&\mathrm{f~z~z}
-\end{aligned}</script><p><strong>普通顺序</strong>先对第一个抽象（abstraction）使用 $\beta$-规约</p>
+&amp;\mathrm{(\lambda x.f~x~x)~((\lambda y.y)~z)}\\
+\Rightarrow&amp;\mathrm{f~((\lambda y.y)~z)~((\lambda y.y)~z)}\\
+\Rightarrow&amp;\mathrm{f~z~((\lambda y.y)~z)}\\
+\Rightarrow&amp;\mathrm{f~z~z}
+\end{aligned}
+\]</span></p>
+<p><strong>普通顺序</strong>先对第一个抽象（abstraction）使用 <span class="math inline">\(\beta\)</span>-规约</p>
 <p>使用<strong>应用顺序</strong>：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-&\mathrm{(\lambda x.f~x~x)~((\lambda y.y)~z)}\\
-\Rightarrow&\mathrm{(\lambda x.f~x~x)~z}\\
-\Rightarrow&\mathrm{f~z~z}
-\end{aligned}</script><p><strong>应用顺序</strong>先对第二个抽象（abstraction）使用 $\beta$-规约</p>
+&amp;\mathrm{(\lambda x.f~x~x)~((\lambda y.y)~z)}\\
+\Rightarrow&amp;\mathrm{(\lambda x.f~x~x)~z}\\
+\Rightarrow&amp;\mathrm{f~z~z}
+\end{aligned}
+\]</span></p>
+<p><strong>应用顺序</strong>先对第二个抽象（abstraction）使用 <span class="math inline">\(\beta\)</span>-规约</p>
 <p>使用<strong>惰性计算</strong>：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-&\mathrm{(\lambda x.f~x~x)~((\lambda y.y)~z)}\\
-\Rightarrow&\mathrm{f~((\lambda y.y)~z)~((\lambda y.y)~z)}\\
-\Rightarrow&\mathrm{f~z~z}
-\end{aligned}</script><p>看似惰性计算很像普通顺序，但是，除了在后台运算时，所有等价的可约化表达式，在约化后会同时被替换。</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+&amp;\mathrm{(\lambda x.f~x~x)~((\lambda y.y)~z)}\\
+\Rightarrow&amp;\mathrm{f~((\lambda y.y)~z)~((\lambda y.y)~z)}\\
+\Rightarrow&amp;\mathrm{f~z~z}
+\end{aligned}
+\]</span></p>
+<p>看似惰性计算很像普通顺序，但是，除了在后台运算时，所有等价的可约化表达式，在约化后会同时被替换。</p>
+
   
   
     
@@ -653,7 +672,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>编程语言和 Lambda 演算叙旧</p>
           <p class='content'>摘自Wikipedia，知乎等。
 
-Lambda 演算历史在 20 世纪 60 年代中期的一系列论文中，Landin1阐述了关于编程语言的两个重要观察。首先，他认为所有编程语言都共享一套用于指定...</p>
+Lambda 演算历史
+在 20 世纪 60 年代中期的一系列论文中，Landin1阐述了关于编程语言的两个重要观察。首先，他认为所有编程语言都共享一套...</p>
         </a>
       
       
@@ -661,11 +681,15 @@ Lambda 演算历史在 20 世纪 60 年代中期的一系列论文中，Landin1�
           <p class='title'>物理学绪论<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>基础物理学 绪论
 
-什么是物理学习物理的目的矢量代数基本知识标量只有大小（正负均可）
-矢量大小方向（一定是正值）
-矢量的书写$\vec{A}$或$\pmb{A}$
-$A\vec{e_A}$
-矢量...</p>
+什么是物理
+学习物理的目的
+矢量代数基本知识
+标量
+只有大小（正负均可）
+矢量
+大小方向（一定是正值）
+矢量的书写
+\(\vec{A}\)或\(\pmb{...</p>
         </a>
       
     </div>
@@ -708,7 +732,7 @@ $A\vec{e_A}$
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA-Lambda-%E6%BC%94%E7%AE%97"><span class="toc-text">何为 Lambda 演算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E6%96%87%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9A%84%E4%B8%80%E4%BA%9B-Racket-%E8%AF%AD%E4%B9%89"><span class="toc-text">后文中使用的一些 Racket 语义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">复杂数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">高级数据结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B%EF%BC%88Computation-Models%EF%BC%89"><span class="toc-text">计算模型（Computation Models）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%9C%E6%9C%BA%E9%97%AE%E9%A2%98"><span class="toc-text">停机问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda-%E6%BC%94%E7%AE%97%E8%AF%AD%E6%B3%95"><span class="toc-text">Lambda 演算语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-text">常用表示法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lambda-%E6%BC%94%E7%AE%97%E6%8A%80%E5%B7%A7%EF%BC%9A%E6%9F%AF%E9%87%8C%E5%8C%96"><span class="toc-text">Lambda 演算技巧：柯里化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E5%8F%98%E9%87%8F"><span class="toc-text">自由变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda-%E6%BC%94%E7%AE%97%E4%B8%AD%E7%9A%84%E4%BB%A3%E6%8D%A2%E6%B3%95"><span class="toc-text">Lambda 演算中的代换法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lambda-%E6%BC%94%E7%AE%97%E5%8E%9F%E5%88%99"><span class="toc-text">Lambda 演算原则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#alpha-%E8%BD%AC%E5%8C%96"><span class="toc-text">alpha-转化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#beta-%E8%A7%84%E7%BA%A6"><span class="toc-text">beta-规约</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#alpha-%E8%BD%AC%E5%8C%96%E5%92%8C-beta-%E8%A7%84%E7%BA%A6%E7%9A%84%E5%AE%9E%E4%BE%8B"><span class="toc-text">alpha-转化和 beta-规约的实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%A6%E5%8C%96"><span class="toc-text">约化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E6%88%91%E4%BB%AC%E7%9A%84%E6%BC%94%E7%AE%97"><span class="toc-text">开始我们的演算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%B0%E6%80%A7%E8%AE%A1%E7%AE%97%EF%BC%88Lazy-Evaluation%EF%BC%89"><span class="toc-text">惰性计算（Lazy-Evaluation）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA-lambda-%E6%BC%94%E7%AE%97"><span class="toc-text">何为 Lambda 演算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E6%96%87%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9A%84%E4%B8%80%E4%BA%9B-racket-%E8%AF%AD%E4%B9%89"><span class="toc-text">后文中使用的一些 Racket 语义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">复杂数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">高级数据结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8Bcomputation-models"><span class="toc-text">计算模型（Computation Models）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%9C%E6%9C%BA%E9%97%AE%E9%A2%98"><span class="toc-text">停机问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lambda-%E6%BC%94%E7%AE%97%E8%AF%AD%E6%B3%95"><span class="toc-text">Lambda 演算语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-text">常用表示法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lambda-%E6%BC%94%E7%AE%97%E6%8A%80%E5%B7%A7%E6%9F%AF%E9%87%8C%E5%8C%96"><span class="toc-text">Lambda 演算技巧：柯里化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E5%8F%98%E9%87%8F"><span class="toc-text">自由变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lambda-%E6%BC%94%E7%AE%97%E4%B8%AD%E7%9A%84%E4%BB%A3%E6%8D%A2%E6%B3%95"><span class="toc-text">Lambda 演算中的代换法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lambda-%E6%BC%94%E7%AE%97%E5%8E%9F%E5%88%99"><span class="toc-text">Lambda 演算原则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#alpha-%E8%BD%AC%E5%8C%96"><span class="toc-text">alpha-转化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#beta-%E8%A7%84%E7%BA%A6"><span class="toc-text">beta-规约</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#alpha-%E8%BD%AC%E5%8C%96%E5%92%8C-beta-%E8%A7%84%E7%BA%A6%E7%9A%84%E5%AE%9E%E4%BE%8B"><span class="toc-text">alpha-转化和 beta-规约的实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%A6%E5%8C%96"><span class="toc-text">约化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E6%88%91%E4%BB%AC%E7%9A%84%E6%BC%94%E7%AE%97"><span class="toc-text">开始我们的演算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%B0%E6%80%A7%E8%AE%A1%E7%AE%97lazy-evaluation"><span class="toc-text">惰性计算（Lazy-Evaluation）</span></a></li></ol>
     </div>
   </section>
 
@@ -1355,14 +1379,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

@@ -468,54 +468,71 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <p>马尔科夫链<br><span id="more"></span></p>
-<h2 id="马尔科夫链"><a href="#马尔科夫链" class="headerlink" title="马尔科夫链"></a>马尔科夫链</h2><h3 id="马尔科夫链的基本概念"><a href="#马尔科夫链的基本概念" class="headerlink" title="马尔科夫链的基本概念"></a>马尔科夫链的基本概念</h3><p><strong>Def</strong>（马尔科夫链）随机过程 $\{X_n,n\ge 0\}$ 如果满足如下条件：</p>
-<ol>
-<li>状态空间 $I=\{x_0, x_1, …, x_n,…\}$ 为可数集</li>
-<li>对于一切 $n\ge 1$ 和所有的 $x$, $x_{i_0}, x_{i_1},…,x_{i_{n-1}}\in I$ 都有</li>
+  <p>马尔科夫链 <span id="more"></span></p>
+<h2 id="马尔科夫链">马尔科夫链</h2>
+<h3 id="马尔科夫链的基本概念">马尔科夫链的基本概念</h3>
+<p><strong>Def</strong>（马尔科夫链）随机过程 <span class="math inline">\(\{X_n,n\ge 0\}\)</span> 如果满足如下条件：</p>
+<ol type="1">
+<li>状态空间 <span class="math inline">\(I=\{x_0, x_1, ..., x_n,...\}\)</span> 为可数集</li>
+<li>对于一切 <span class="math inline">\(n\ge 1\)</span> 和所有的 <span class="math inline">\(x\)</span>, <span class="math inline">\(x_{i_0}, x_{i_1},...,x_{i_{n-1}}\in I\)</span> 都有</li>
 </ol>
-<script type="math/tex; mode=display">
-P(X_n=x|X_0=x_{i_0},X_1=X_{i_1},...,X_{n-1}=x_{i_{n-1}})=P(X_n=x|X_{n-1}=x_{n-1})</script><p>则称 $\{X_n,n\ge 0\}$ 是马尔科夫链。</p>
-<p><strong>Def</strong>（n 步转移概率）设 $\{X_n,n\ge 0\}$ 是一个马尔科夫链，称 $p_{ij}(m,m+n)=P(X_{m+n}=j|X_m=i)$ 为马氏链的 n 步转移概率（$\forall i,j\in I$）。</p>
-<p>由 $p_{ij}(m,m+n)$ 组成的矩阵 $P(m,m+n)=(p_{ij}(m,m+n))$ 称为 $\{X_n,n\ge 0\}$ 的 <strong>n 步转移概率矩阵</strong>。</p>
-<p><strong>Def</strong>（齐次的马尔科夫链）设 $\{X_n,n\ge 0\}$ 为一马尔科夫链，如果对所有的 $m\ge 0$，$n\ge 1, i,j\in I$ 有 $P(X_{m+n}=j|X_m=i)=P(X_n=j|X_0=i)$ 则称为齐次的马氏链。</p>
-<p>此时，一步转移概率矩阵记为 $P=P(1)=(p_{ij})$。</p>
-<p><strong>Thm</strong>：若对于一切的 $n$ 和 $i,j\in I$ 有：</p>
-<script type="math/tex; mode=display">
-P(X_{n+1}=j|X_n=i)=P(X_1=j|X_0=i)</script><p>则 $\{X_n,n\ge 0\}$ 是齐次的马氏链</p>
-<p><strong>Thm</strong>：齐次的马氏链的 $P(n)$ 有：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
+P(X_n=x|X_0=x_{i_0},X_1=X_{i_1},...,X_{n-1}=x_{i_{n-1}})=P(X_n=x|X_{n-1}=x_{n-1})
+\]</span></p>
+<p>则称 <span class="math inline">\(\{X_n,n\ge 0\}\)</span> 是马尔科夫链。</p>
+<p><strong>Def</strong>（n 步转移概率）设 <span class="math inline">\(\{X_n,n\ge 0\}\)</span> 是一个马尔科夫链，称 <span class="math inline">\(p_{ij}(m,m+n)=P(X_{m+n}=j|X_m=i)\)</span> 为马氏链的 n 步转移概率（<span class="math inline">\(\forall i,j\in I\)</span>）。</p>
+<p>由 <span class="math inline">\(p_{ij}(m,m+n)\)</span> 组成的矩阵 <span class="math inline">\(P(m,m+n)=(p_{ij}(m,m+n))\)</span> 称为 <span class="math inline">\(\{X_n,n\ge 0\}\)</span> 的 <strong>n 步转移概率矩阵</strong>。</p>
+<p><strong>Def</strong>（齐次的马尔科夫链）设 <span class="math inline">\(\{X_n,n\ge 0\}\)</span> 为一马尔科夫链，如果对所有的 <span class="math inline">\(m\ge 0\)</span>，<span class="math inline">\(n\ge 1, i,j\in I\)</span> 有 <span class="math inline">\(P(X_{m+n}=j|X_m=i)=P(X_n=j|X_0=i)\)</span> 则称为齐次的马氏链。</p>
+<p>此时，一步转移概率矩阵记为 <span class="math inline">\(P=P(1)=(p_{ij})\)</span>。</p>
+<p><strong>Thm</strong>：若对于一切的 <span class="math inline">\(n\)</span> 和 <span class="math inline">\(i,j\in I\)</span> 有：</p>
+<p><span class="math display">\[
+P(X_{n+1}=j|X_n=i)=P(X_1=j|X_0=i)
+\]</span></p>
+<p>则 <span class="math inline">\(\{X_n,n\ge 0\}\)</span> 是齐次的马氏链</p>
+<p><strong>Thm</strong>：齐次的马氏链的 <span class="math inline">\(P(n)\)</span> 有：</p>
+<p><span class="math display">\[
 \begin{cases}
     p_{ij}\ge 0,\\
     \sum p_{ij}=1
-\end{cases}</script><h3 id="齐次马尔科夫链的有限维分布"><a href="#齐次马尔科夫链的有限维分布" class="headerlink" title="齐次马尔科夫链的有限维分布"></a>齐次马尔科夫链的有限维分布</h3><p><strong>Def</strong>（分布律）设 $\{X_n,n\ge0\}$ 是一个齐次的马尔科夫链，状态空间为 $I=\{0,1,2,…\}$ 对于任意时刻 $n\ge 0$，称离散型随机变量的分布律为齐次马氏链的一维分布律，记为 $\mathbb p(n)=(p_0(n),….)$</p>
-<p>当 $n=0$ 时，称为初始分布律。</p>
-<p><strong>Thm</strong>：$p(n)=p(0)P(n)$，其中 $P(n)$ 为多步转移概率矩阵。</p>
-<h3 id="多步转移概率的确定"><a href="#多步转移概率的确定" class="headerlink" title="多步转移概率的确定"></a>多步转移概率的确定</h3><p><strong>Pre</strong>（条件的全概率公式）设随机事件 $A_1,…A_n,…$ 构成完备事件组：</p>
-<script type="math/tex; mode=display">
-\bigcup_{i=1}^\infty A_i=\Omega,A_iA_j=\varnothing</script><p>则：$P(B|C)=\sum_{i=1}^\infty P(A_i|C)P(B|A_iC)$</p>
-<p><strong>Thm</strong>：设 $\{X_n,n\ge 0\}$ 是齐次马尔科夫链，其状态空间为 $I=\{0,1,…\}$ n 步转移矩阵为 $P(n)$。则对于任意时刻 $m,n\ge 1$，有$P(m+n)=P(m)P(n)$（C-K 方程）</p>
-<p>根据 C-K 方程：$P(n)=P^n$</p>
-<h3 id="遍历性"><a href="#遍历性" class="headerlink" title="遍历性"></a>遍历性</h3><p><strong>Def</strong>（极限分布）设 $\{X_n,n\ge 0\}$ 是齐次马氏链，状态空间为 $I=\{0, 1,2,…\}$，对于所有的 $i,j$ 而言，n 步转移概率极限存在且与 $i$ 无关，</p>
-<script type="math/tex; mode=display">
+\end{cases}
+\]</span></p>
+<h3 id="齐次马尔科夫链的有限维分布">齐次马尔科夫链的有限维分布</h3>
+<p><strong>Def</strong>（分布律）设 <span class="math inline">\(\{X_n,n\ge0\}\)</span> 是一个齐次的马尔科夫链，状态空间为 <span class="math inline">\(I=\{0,1,2,...\}\)</span> 对于任意时刻 <span class="math inline">\(n\ge 0\)</span>，称离散型随机变量的分布律为齐次马氏链的一维分布律，记为 <span class="math inline">\(\mathbb p(n)=(p_0(n),....)\)</span></p>
+<p>当 <span class="math inline">\(n=0\)</span> 时，称为初始分布律。</p>
+<p><strong>Thm</strong>：<span class="math inline">\(p(n)=p(0)P(n)\)</span>，其中 <span class="math inline">\(P(n)\)</span> 为多步转移概率矩阵。</p>
+<h3 id="多步转移概率的确定">多步转移概率的确定</h3>
+<p><strong>Pre</strong>（条件的全概率公式）设随机事件 <span class="math inline">\(A_1,...A_n,...\)</span> 构成完备事件组：</p>
+<p><span class="math display">\[
+\bigcup_{i=1}^\infty A_i=\Omega,A_iA_j=\varnothing
+\]</span></p>
+<p>则：<span class="math inline">\(P(B|C)=\sum_{i=1}^\infty P(A_i|C)P(B|A_iC)\)</span></p>
+<p><strong>Thm</strong>：设 <span class="math inline">\(\{X_n,n\ge 0\}\)</span> 是齐次马尔科夫链，其状态空间为 <span class="math inline">\(I=\{0,1,...\}\)</span> n 步转移矩阵为 <span class="math inline">\(P(n)\)</span>。则对于任意时刻 <span class="math inline">\(m,n\ge 1\)</span>，有<span class="math inline">\(P(m+n)=P(m)P(n)\)</span>（C-K 方程）</p>
+<p>根据 C-K 方程：<span class="math inline">\(P(n)=P^n\)</span></p>
+<h3 id="遍历性">遍历性</h3>
+<p><strong>Def</strong>（极限分布）设 <span class="math inline">\(\{X_n,n\ge 0\}\)</span> 是齐次马氏链，状态空间为 <span class="math inline">\(I=\{0, 1,2,...\}\)</span>，对于所有的 <span class="math inline">\(i,j\)</span> 而言，n 步转移概率极限存在且与 <span class="math inline">\(i\)</span> 无关，</p>
+<p><span class="math display">\[
 P(n)=P^n\rightarrow^{n\rightarrow\infty}\left[
 \begin{matrix}
-    \pi_0&\pi_1&\cdots&\pi_j&\cdots\\
-    \pi_0&\pi_1&\cdots&\pi_j&\cdots\\
-    \vdots&\vdots&\ddots&\vdots\\
-    \pi_0&\pi_1&\cdots&\pi_j&\cdots\\
-    \vdots&\vdots&&\vdots
+    \pi_0&amp;\pi_1&amp;\cdots&amp;\pi_j&amp;\cdots\\
+    \pi_0&amp;\pi_1&amp;\cdots&amp;\pi_j&amp;\cdots\\
+    \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+    \pi_0&amp;\pi_1&amp;\cdots&amp;\pi_j&amp;\cdots\\
+    \vdots&amp;\vdots&amp;&amp;\vdots
 \end{matrix}
-\right]</script><p>则称此链具有遍历性。</p>
-<p>$P^n$ 求法：</p>
-<ol>
-<li>求出矩阵的特征值分解 $A=V\Lambda V^{-1}$</li>
-<li>求 $P^n$</li>
+\right]
+\]</span></p>
+<p>则称此链具有遍历性。</p>
+<p><span class="math inline">\(P^n\)</span> 求法：</p>
+<ol type="1">
+<li>求出矩阵的特征值分解 <span class="math inline">\(A=V\Lambda V^{-1}\)</span></li>
+<li>求 <span class="math inline">\(P^n\)</span></li>
 </ol>
-<p><strong>Thm</strong>：若 $\{X_n,n\ge 0\}$ 是齐次马氏链，一部转移概率为 $P$ 若存在 n 步转移概率矩阵 $P(n)$ 无零元，则此链具有遍历性，其极限分布 $\pi$ 是：</p>
-<script type="math/tex; mode=display">
-\pi P=\pi</script><p>满足归一性条件（$\mathbf 1^T\pi=1$）的唯一解。</p>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<p><strong>Thm</strong>：若 <span class="math inline">\(\{X_n,n\ge 0\}\)</span> 是齐次马氏链，一部转移概率为 <span class="math inline">\(P\)</span> 若存在 n 步转移概率矩阵 <span class="math inline">\(P(n)\)</span> 无零元，则此链具有遍历性，其极限分布 <span class="math inline">\(\pi\)</span> 是：</p>
+<p><span class="math display">\[
+\pi P=\pi
+\]</span></p>
+<p>满足归一性条件（<span class="math inline">\(\mathbf 1^T\pi=1\)</span>）的唯一解。</p>
+
   
   
     
@@ -617,12 +634,10 @@ P(n)=P^n\rightarrow^{n\rightarrow\infty}\left[
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「概率统计与随机过程」 6 - 抽样分布</p>
           <p class='content'>Chapter 6 抽样分布
 
-抽样分布基本概念
-总体：在一个统计问题中，研究对象的全体。（所研究对象的某个（某些）数量指标的全体，一个随机变量（多维随机变量）记为 $X$）
+抽样分布
+基本概念
 
-样本：
-
-分组样...</p>
+总体：在一个统计问题中，研究对象的全体。（所研究对象的某个（某些）数量指标的全体，一个随机变量（多维随机变量）记为 \(X\)）...</p>
         </a>
       
       
@@ -630,7 +645,9 @@ P(n)=P^n\rightarrow^{n\rightarrow\infty}\left[
           <p class='title'>「概率统计与随机过程」 5 - 极限定理<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>极限定理
 
-极限定理大数定律Def（依概率收敛）设 $X_1, X_2, X_3, …$ 为一随机变量序列，若存在随机变量 X，使得对于任意整数 $\varepsilon &gt; 0$ 总有:...</p>
+极限定理
+大数定律
+Def（依概率收敛）设 \(X_1, X_2, X_3, ...\) 为一随机变量序列，若存在随机变量 X，使得对于任意整数 \(\varepsilon ...</p>
         </a>
       
     </div>
@@ -1320,14 +1337,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

@@ -468,95 +468,113 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <p>复变函数的导数和解析函数<br><span id="more"></span></p>
-<h2 id="Ch2-复变函数的导数和解析函数"><a href="#Ch2-复变函数的导数和解析函数" class="headerlink" title="Ch2 复变函数的导数和解析函数"></a>Ch2 复变函数的导数和解析函数</h2><h3 id="解析函数的概念及其判定"><a href="#解析函数的概念及其判定" class="headerlink" title="解析函数的概念及其判定"></a>解析函数的概念及其判定</h3><h4 id="复变函数的导数、微分"><a href="#复变函数的导数、微分" class="headerlink" title="复变函数的导数、微分"></a>复变函数的导数、微分</h4><p><strong>Def</strong>：复变函数的导数、可导、在 D 内可导</p>
+  <p>复变函数的导数和解析函数 <span id="more"></span></p>
+<h2 id="ch2-复变函数的导数和解析函数">Ch2 复变函数的导数和解析函数</h2>
+<h3 id="解析函数的概念及其判定">解析函数的概念及其判定</h3>
+<h4 id="复变函数的导数微分">复变函数的导数、微分</h4>
+<p><strong>Def</strong>：复变函数的导数、可导、在 D 内可导</p>
 <p>求导公式：有理运算求导、反函数求导</p>
 <p><strong>复变函数的可微性</strong>：</p>
-<p><strong>Def</strong>（可微）$\mathrm dw=f’(z_0)\Delta z$</p>
-<p><strong>Thm</strong>：可微 $\iff$ 可导</p>
+<p><strong>Def</strong>（可微）<span class="math inline">\(\mathrm dw=f&#39;(z_0)\Delta z\)</span></p>
+<p><strong>Thm</strong>：可微 <span class="math inline">\(\iff\)</span> 可导</p>
 <p><strong>Thm</strong>（可导的必要条件）C-R 方程：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},
-\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x},</script><p><strong>Thm</strong>（可导的充要条件）</p>
-<ol>
-<li>$u,~v$ 在$(x,y)$可微</li>
-<li>$u,~v$ 在$(x,y)$满足 C-R 方程</li>
+\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x},
+\]</span></p>
+<p><strong>Thm</strong>（可导的充要条件）</p>
+<ol type="1">
+<li><span class="math inline">\(u,~v\)</span> 在<span class="math inline">\((x,y)\)</span>可微</li>
+<li><span class="math inline">\(u,~v\)</span> 在<span class="math inline">\((x,y)\)</span>满足 C-R 方程</li>
 </ol>
-<h4 id="解析函数"><a href="#解析函数" class="headerlink" title="解析函数"></a>解析函数</h4><p><strong>Def</strong>（解析、在区域D内解析）在 $z_0\in C$ 及其某个邻域内处处可导—&gt;解析</p>
-<p><strong>Thm</strong> 设函数 $f(z)=u(x,y)+iv(x,y)$ 定义在区域 D 内，若它的任意一点 $z\in D$ 可导，则必有</p>
-<ol>
-<li>$u,v$ 偏导数在 $(x,y)$ 出存在</li>
+<h4 id="解析函数">解析函数</h4>
+<p><strong>Def</strong>（解析、在区域D内解析）在 <span class="math inline">\(z_0\in C\)</span> 及其某个邻域内处处可导--&gt;解析</p>
+<p><strong>Thm</strong> 设函数 <span class="math inline">\(f(z)=u(x,y)+iv(x,y)\)</span> 定义在区域 D 内，若它的任意一点 <span class="math inline">\(z\in D\)</span> 可导，则必有</p>
+<ol type="1">
+<li><span class="math inline">\(u,v\)</span> 偏导数在 <span class="math inline">\((x,y)\)</span> 出存在</li>
 <li>满足 C-R 方程</li>
 </ol>
-<p><em>Inference</em>：在上述定理的条件下，$f(z)$ 在点 $z$ 处的导数为</p>
-<script type="math/tex; mode=display">
-f'(z)=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=
-\frac{1}{i}\frac{\partial u}{\partial y} + \frac{\partial v}{\partial y}</script><p><strong>Thm</strong>：在区域 D 内解析 $\iff$</p>
-<ol>
-<li>$u,~v$ 在 D 可微</li>
-<li>$u,~v$ 在 D 内任一点处满足 C-R 条件</li>
+<p><em>Inference</em>：在上述定理的条件下，<span class="math inline">\(f(z)\)</span> 在点 <span class="math inline">\(z\)</span> 处的导数为</p>
+<p><span class="math display">\[
+f&#39;(z)=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=
+\frac{1}{i}\frac{\partial u}{\partial y} + \frac{\partial v}{\partial y}
+\]</span></p>
+<p><strong>Thm</strong>：在区域 D 内解析 <span class="math inline">\(\iff\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(u,~v\)</span> 在 D 可微</li>
+<li><span class="math inline">\(u,~v\)</span> 在 D 内任一点处满足 C-R 条件</li>
 </ol>
-<h5 id="解析函数和调和函数"><a href="#解析函数和调和函数" class="headerlink" title="解析函数和调和函数"></a>解析函数和调和函数</h5><blockquote>
-<p>若二元实函数在D内由二阶连续偏导数，且满足Laplace方程$\displaystyle\frac{\partial^2\varphi}{\partial x^2}+\frac{\partial^2\varphi}{\partial y^2} = 0$，则称其为D内的调和函数。</p>
-</blockquote>
-<p><strong>Thm</strong>：$f$解析，则$u,~v$ 是 D 内的调和函数</p>
-<p><strong>Def</strong>（共轭调和函数）解析函数的虚部 $v$ 称为实部 $u$ 的共轭调和函数。</p>
+<h5 id="解析函数和调和函数">解析函数和调和函数</h5>
 <blockquote>
-<p>$f = v+iu$不一定解析。</p>
+<p>若二元实函数在D内由二阶连续偏导数，且满足Laplace方程<span class="math inline">\(\displaystyle\frac{\partial^2\varphi}{\partial x^2}+\frac{\partial^2\varphi}{\partial y^2} = 0\)</span>，则称其为D内的调和函数。</p>
 </blockquote>
-<h3 id="基本初等函数"><a href="#基本初等函数" class="headerlink" title="基本初等函数"></a>基本初等函数</h3><h4 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h4><p>$\displaystyle w = e^z = e^x(\cos y + i \sin y)$</p>
+<p><strong>Thm</strong>：<span class="math inline">\(f\)</span>解析，则<span class="math inline">\(u,~v\)</span> 是 D 内的调和函数</p>
+<p><strong>Def</strong>（共轭调和函数）解析函数的虚部 <span class="math inline">\(v\)</span> 称为实部 <span class="math inline">\(u\)</span> 的共轭调和函数。</p>
+<blockquote>
+<p><span class="math inline">\(f = v+iu\)</span>不一定解析。</p>
+</blockquote>
+<h3 id="基本初等函数">基本初等函数</h3>
+<h4 id="指数函数">指数函数</h4>
+<p><span class="math inline">\(\displaystyle w = e^z = e^x(\cos y + i \sin y)\)</span></p>
 <p><strong>性质</strong>：</p>
 <ul>
-<li>$|e^z| = e^x, Arg~e^z = y+2k\pi$</li>
-<li>加法定理：$e^{z_1}e^{z_2}=e^{z_1+z_2}$</li>
-<li>周期性：$e^{z+2k\pi i} = e^z$</li>
-<li>处处解析：$(e^z)’=e^z$</li>
+<li><span class="math inline">\(|e^z| = e^x, Arg~e^z = y+2k\pi\)</span></li>
+<li>加法定理：<span class="math inline">\(e^{z_1}e^{z_2}=e^{z_1+z_2}\)</span></li>
+<li>周期性：<span class="math inline">\(e^{z+2k\pi i} = e^z\)</span></li>
+<li>处处解析：<span class="math inline">\((e^z)&#39;=e^z\)</span></li>
 </ul>
-<div class="note quote"><ol><li>$y = 0\Rightarrow w = e^x$</li><li>$x = 0\Rightarrow w = e^{iy}=\cos y+i\sin y$</li></ol></div>
-<h4 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h4><p>$\displaystyle w=\mathrm{Ln} z = \ln |z| + i \mathrm{Arg}z =\ln |z| + i (\mathrm{arg}z + 2k\pi)$</p>
+<div class="note quote"><ol type="1"><li><span class="math inline">\(y = 0\Rightarrow w = e^x\)</span></li><li><span class="math inline">\(x = 0\Rightarrow w = e^{iy}=\cos y+i\sin y\)</span></li></ol></div>
+<h4 id="对数函数">对数函数</h4>
+<p><span class="math inline">\(\displaystyle w=\mathrm{Ln} z = \ln |z| + i \mathrm{Arg}z =\ln |z| + i (\mathrm{arg}z + 2k\pi)\)</span></p>
 <p><strong>性质</strong>：</p>
 <ul>
-<li>$\mathrm{Ln}z$ 为无穷多值函数</li>
-<li>$\mathrm{Ln}(-1) = (2k+1)\pi i$</li>
-<li>运算同 $\ln$</li>
+<li><span class="math inline">\(\mathrm{Ln}z\)</span> 为无穷多值函数</li>
+<li><span class="math inline">\(\mathrm{Ln}(-1) = (2k+1)\pi i\)</span></li>
+<li>运算同 <span class="math inline">\(\ln\)</span></li>
 <li>解析性：除<strong>原点</strong>和<strong>负实轴</strong>外的其他点处解析</li>
-<li>（对数函数）主值：$\ln z$</li>
+<li>（对数函数）主值：<span class="math inline">\(\ln z\)</span></li>
 </ul>
 <p><strong>连续（解析）分支</strong>：使得其成为连续（解析）函数。</p>
 <blockquote>
-<p>这里就是选取一个合适的 $k$</p>
+<p>这里就是选取一个合适的 <span class="math inline">\(k\)</span></p>
 </blockquote>
-<h4 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h4><p>$w = z^\alpha = e^{a\mathrm{Ln} z}$</p>
+<h4 id="幂函数">幂函数</h4>
+<p><span class="math inline">\(w = z^\alpha = e^{a\mathrm{Ln} z}\)</span></p>
 <ul>
-<li>可能是多值函数：考虑$\alpha$对于$\mathrm{Ln}z = \ln|z| +i(\arg~z+2k\pi)$ 中 $k$ 的影响<ul>
-<li>$\alpha$ 是整数：单值函数</li>
-<li>$\alpha = p/q$ 是有理数：取$k = 0,1,2,\dots,q-1$的$q$个值</li>
+<li>可能是多值函数：考虑<span class="math inline">\(\alpha\)</span>对于<span class="math inline">\(\mathrm{Ln}z = \ln|z| +i(\arg~z+2k\pi)\)</span> 中 <span class="math inline">\(k\)</span> 的影响
+<ul>
+<li><span class="math inline">\(\alpha\)</span> 是整数：单值函数</li>
+<li><span class="math inline">\(\alpha = p/q\)</span> 是有理数：取<span class="math inline">\(k = 0,1,2,\dots,q-1\)</span>的<span class="math inline">\(q\)</span>个值</li>
 <li>其他：无穷多个</li>
-<li>$\mathrm{Ln}z = \ln z$ 时，$z^\alpha = e^{\alpha \ln z}$ 称为（幂函数的）主值</li>
-</ul>
-</li>
+<li><span class="math inline">\(\mathrm{Ln}z = \ln z\)</span> 时，<span class="math inline">\(z^\alpha = e^{\alpha \ln z}\)</span> 称为（幂函数的）主值</li>
+</ul></li>
 <li>解析性：除<strong>原点</strong>和<strong>负实轴</strong>外的其他点处解析</li>
 </ul>
-<h4 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h4><p>$\sin z = \frac{e^{iz}-e^{iz}}{2i},\qquad\cos z = \frac{e^{iz}+e^{-iz}}{2}$</p>
+<h4 id="三角函数">三角函数</h4>
+<p><span class="math inline">\(\sin z = \frac{e^{iz}-e^{iz}}{2i},\qquad\cos z = \frac{e^{iz}+e^{-iz}}{2}\)</span></p>
 <ul>
-<li>以 $2\pi$ 为周期</li>
+<li>以 <span class="math inline">\(2\pi\)</span> 为周期</li>
 <li>三角恒等式成立</li>
 <li>在复平面上处处解析</li>
 <li>没有有界性</li>
-<li>复数的欧拉公式 $e^{iz} = \cos z + i\sin z$ 成立</li>
-<li>$\sin z$ 的零点为 $z= k\pi$ $\cos z$ 的零点为 $z = k\pi + \frac{\pi}{2}$</li>
+<li>复数的欧拉公式 <span class="math inline">\(e^{iz} = \cos z + i\sin z\)</span> 成立</li>
+<li><span class="math inline">\(\sin z\)</span> 的零点为 <span class="math inline">\(z= k\pi\)</span> <span class="math inline">\(\cos z\)</span> 的零点为 <span class="math inline">\(z = k\pi + \frac{\pi}{2}\)</span></li>
 </ul>
-<h4 id="双曲函数"><a href="#双曲函数" class="headerlink" title="双曲函数"></a>双曲函数</h4><p>$\sh z=\frac{e^z-e^{-z}}{2},\qquad\ch z=\frac{e^z+e^{-z}}{2}$</p>
+<h4 id="双曲函数">双曲函数</h4>
+<p><span class="math inline">\(\sh z=\frac{e^z-e^{-z}}{2},\qquad\ch z=\frac{e^z+e^{-z}}{2}\)</span></p>
 <ul>
 <li>周期性、奇偶性、解析性</li>
 </ul>
-<h4 id="反三角函数、反双曲函数"><a href="#反三角函数、反双曲函数" class="headerlink" title="反三角函数、反双曲函数"></a>反三角函数、反双曲函数</h4><script type="math/tex; mode=display">
+<h4 id="反三角函数反双曲函数">反三角函数、反双曲函数</h4>
+<p><span class="math display">\[
 \begin{cases}
 \mathrm{Arccos}~z =-i\mathrm{Ln}(z+\sqrt{z^2-1})\\
 \mathrm{Arcsin}~z =-i\mathrm{Ln}(iz+\sqrt{1-z^2})\\
 \mathrm{Arch}~z =\mathrm{Ln}(z+\sqrt{z^2+1})\\
 \mathrm{Arsh}~z =\mathrm{Ln}(z+\sqrt{z^2-1})\\
-\end{cases}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+\end{cases}
+\]</span></p>
+
   
   
     
@@ -654,22 +672,26 @@ f'(z)=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/12/02/study/Math/Probabilities/notes4/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「概率统计与随机过程」 4 - 随机向量的数字特征</p>
-          <p class='content'>随机向量的数字特征
+        <a class='prev' href='/2020/11/20/study/Math/ComplexFunctions/ch1/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「复变函数」</p>
+          <p class='content'>复数与复变函数
 
-随机向量的数字特征随机变量的数学期望数学期望的定义Def（离散型随机变量期望的定义）设离散随机变量的分布列为：$P(X=x_i)=p_i$ 若级数 $\sum x_ip_i...</p>
+Ch1 复数与复变函数
+复数的概念与运算
+复数的概念
+Def（复数）\((x,y)\) -&gt; \(z=x+iy,i^2=-1\)
+
+\(\mathrm{Re...</p>
         </a>
       
       
-        <a class='next' href='/2020/11/20/study/Math/ComplexFunctions/ch1/'>
-          <p class='title'>「复变函数」<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>复数与复变函数
+        <a class='next' href='/2020/11/20/study/Math/ComplexFunctions/ch3/'>
+          <p class='title'>「复变函数」复变函数积分<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>复变函数的积分
 
-Ch1 复数与复变函数复数的概念与运算复数的概念Def（复数）$(x,y)$ -&gt; $z=x+iy,i^2=-1$
-
-$\mathrm{Re}(z)$
-$\mathrm{...</p>
+复变函数的积分
+复变函数积分的概念及其计算
+Def（复变函数的积分）同实函数定义：分割求和 \(\displaystyle\int_C f(z)\mathrm dz =...</p>
         </a>
       
     </div>
@@ -712,7 +734,7 @@ $\mathrm{...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch2-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0%E5%92%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="toc-text">Ch2 复变函数的导数和解析函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E5%88%A4%E5%AE%9A"><span class="toc-text">解析函数的概念及其判定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0%E3%80%81%E5%BE%AE%E5%88%86"><span class="toc-text">复变函数的导数、微分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="toc-text">解析函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E5%92%8C%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-text">解析函数和调和函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0"><span class="toc-text">基本初等函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">指数函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">对数函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%82%E5%87%BD%E6%95%B0"><span class="toc-text">幂函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="toc-text">三角函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8C%E6%9B%B2%E5%87%BD%E6%95%B0"><span class="toc-text">双曲函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E3%80%81%E5%8F%8D%E5%8F%8C%E6%9B%B2%E5%87%BD%E6%95%B0"><span class="toc-text">反三角函数、反双曲函数</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ch2-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0%E5%92%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="toc-text">Ch2 复变函数的导数和解析函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E5%88%A4%E5%AE%9A"><span class="toc-text">解析函数的概念及其判定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0%E5%BE%AE%E5%88%86"><span class="toc-text">复变函数的导数、微分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="toc-text">解析函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E5%92%8C%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-text">解析函数和调和函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0"><span class="toc-text">基本初等函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">指数函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">对数函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%82%E5%87%BD%E6%95%B0"><span class="toc-text">幂函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="toc-text">三角函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8C%E6%9B%B2%E5%87%BD%E6%95%B0"><span class="toc-text">双曲函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%8F%8D%E5%8F%8C%E6%9B%B2%E5%87%BD%E6%95%B0"><span class="toc-text">反三角函数、反双曲函数</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1359,14 +1381,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

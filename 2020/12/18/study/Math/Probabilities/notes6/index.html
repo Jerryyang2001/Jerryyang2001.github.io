@@ -470,62 +470,65 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>Chapter 6 抽样分布</p>
 <span id="more"></span>
-<h2 id="抽样分布"><a href="#抽样分布" class="headerlink" title="抽样分布"></a>抽样分布</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ol>
-<li><p><strong>总体</strong>：在一个统计问题中，研究对象的全体。（所研究对象的某个（某些）数量指标的全体，一个随机变量（多维随机变量）记为 $X$）</p>
-</li>
+<h2 id="抽样分布">抽样分布</h2>
+<h3 id="基本概念">基本概念</h3>
+<ol type="1">
+<li><p><strong>总体</strong>：在一个统计问题中，研究对象的全体。（所研究对象的某个（某些）数量指标的全体，一个随机变量（多维随机变量）记为 <span class="math inline">\(X\)</span>）</p></li>
 <li><p><strong>样本</strong>：</p>
 <ul>
 <li>分组样本</li>
 <li>完全样本</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<p><strong>Def</strong>（简单随机样本）设总体 $X$ 的分布为 $F(X)$，$X_1, X_2,…,X_n$ 是是相互独立和总体同分布的随机变量，则称其为来自总体 X 容量为 n 的简单随机样本。</p>
+<p><strong>Def</strong>（简单随机样本）设总体 <span class="math inline">\(X\)</span> 的分布为 <span class="math inline">\(F(X)\)</span>，<span class="math inline">\(X_1, X_2,...,X_n\)</span> 是是相互独立和总体同分布的随机变量，则称其为来自总体 X 容量为 n 的简单随机样本。</p>
 <p><em>性质</em>：</p>
 <ul>
-<li>样本联合分布函数为 $F(x_1,\dots,x_n)=\prod F(x_i)$</li>
-<li>简单随机样本的联合分布律：$P(X_1=x^{(1)}, \dots, X_n=x^{(n)})=\prod P(X_i=x^{(i)})$</li>
+<li>样本联合分布函数为 <span class="math inline">\(F(x_1,\dots,x_n)=\prod F(x_i)\)</span></li>
+<li>简单随机样本的联合分布律：<span class="math inline">\(P(X_1=x^{(1)}, \dots, X_n=x^{(n)})=\prod P(X_i=x^{(i)})\)</span></li>
 </ul>
-<h4 id="统计量"><a href="#统计量" class="headerlink" title="统计量"></a>统计量</h4><p><strong>Def</strong>（统计量）设 $X_1, \dots, X_n$ 为取自总体的样本，若样本函数 $T=T(X_1, \dots, X_n)$ 不含有任何未知的参数。则称 $T$ 为统计量。统计量的分布称为抽样分布。</p>
+<h4 id="统计量">统计量</h4>
+<p><strong>Def</strong>（统计量）设 <span class="math inline">\(X_1, \dots, X_n\)</span> 为取自总体的样本，若样本函数 <span class="math inline">\(T=T(X_1, \dots, X_n)\)</span> 不含有任何未知的参数。则称 <span class="math inline">\(T\)</span> 为统计量。统计量的分布称为抽样分布。</p>
 <p><em>例如</em>：</p>
 <ul>
-<li><strong>Def</strong>（样本均值）$\bar X=\frac{1}{n}\sum_1^nX_i$ 为样本均值</li>
-<li><strong>Def</strong>（样本方差）$S_n^2=\frac{1}{n-1}\sum_{i=1}^n(X_i-\bar X)^2$ 为样本方差。$S=\sqrt{S_n^2}$ 为样本标准差</li>
-<li><strong>Def</strong>（偏差平方和）：$\sum(X_i-\bar X)^2=\sum X_i^2-\frac{1}{n}(\sum X_i)^2=\sum X_i^2-n\bar X^2$</li>
-<li><strong>Def</strong>（原点矩、中心矩）$A_k=\frac{1}{n}\sum X_i^k,~B_k=\frac{1}{n}\sum (X_i-\bar X)^k$</li>
+<li><strong>Def</strong>（样本均值）<span class="math inline">\(\bar X=\frac{1}{n}\sum_1^nX_i\)</span> 为样本均值</li>
+<li><strong>Def</strong>（样本方差）<span class="math inline">\(S_n^2=\frac{1}{n-1}\sum_{i=1}^n(X_i-\bar X)^2\)</span> 为样本方差。<span class="math inline">\(S=\sqrt{S_n^2}\)</span> 为样本标准差</li>
+<li><strong>Def</strong>（偏差平方和）：<span class="math inline">\(\sum(X_i-\bar X)^2=\sum X_i^2-\frac{1}{n}(\sum X_i)^2=\sum X_i^2-n\bar X^2\)</span></li>
+<li><strong>Def</strong>（原点矩、中心矩）<span class="math inline">\(A_k=\frac{1}{n}\sum X_i^k,~B_k=\frac{1}{n}\sum (X_i-\bar X)^k\)</span></li>
 </ul>
-<p><strong>Thm</strong>：对于总体 $X$，均值为 $\mu=EX$ 方差 $\sigma^2$ 都存在，$X_1,\dots,X_n$ 是来自总体容量为 $n$ 的简单随机样本。则</p>
-<ul>
-<li>$E\bar X=\mu$</li>
-<li>$D\bar X=\sigma^2/n$</li>
-<li>$ES_n^2=\sigma^2$</li>
-</ul>
-<h3 id="常用分布"><a href="#常用分布" class="headerlink" title="常用分布"></a>常用分布</h3><h4 id="卡方分布"><a href="#卡方分布" class="headerlink" title="卡方分布"></a>卡方分布</h4><p><strong>Def</strong>：设$X_1,\dots,X_n$ iid，$N(0,1)$ 的随机变量，则 $\chi^2=\sigma_{i=1}^nX_i^2$ 服从自由度为 $n$ 的 $\chi^2$-分布。</p>
-<p><strong>Thm</strong>：$\chi^2\sim \chi^2(n)$ 则：$f(x)=\frac{1}{2^{n/2}\Gamma(n/2)}e^{n/2-1}e^{-x/2},~x&gt;0$</p>
-<p><strong>Thm</strong>（可加性）若$X_1\sim \chi^2(n),~X_2\sim \chi^2(n)$ 且 $X_1,X_2$ 独立，则$X_1+X_2\sim\chi^2(m+n)$ </p>
-<p><strong>Thm</strong>（数字特征）若$X\sim \chi^2(m)$ 则：$EX=n,DX=2n$</p>
-<p><strong>Def</strong>（上侧 $\alpha$ 分位点）：$P(\chi^2\ge\chi^2_\alpha(n))=\alpha$ 则称 $\chi^2(n)$ 为自由度为 n 的 $\chi^2$-分布的上侧$\alpha$-分位点</p>
-<h4 id="t-分布"><a href="#t-分布" class="headerlink" title="t-分布"></a>t-分布</h4><p><strong>Def</strong>：$X$ 是标准正态分布，$Y$服从自由度为 $n$ 的 $\chi^2$ 分布且相互独立，称随机变量 $T=\frac{X}{\sqrt{Y/n}}$ 服从自由度为 $n$ 的 t-分布。</p>
+<p><strong>Thm</strong>：对于总体 <span class="math inline">\(X\)</span>，均值为 <span class="math inline">\(\mu=EX\)</span> 方差 <span class="math inline">\(\sigma^2\)</span> 都存在，<span class="math inline">\(X_1,\dots,X_n\)</span> 是来自总体容量为 <span class="math inline">\(n\)</span> 的简单随机样本。则 - <span class="math inline">\(E\bar X=\mu\)</span> - <span class="math inline">\(D\bar X=\sigma^2/n\)</span> - <span class="math inline">\(ES_n^2=\sigma^2\)</span></p>
+<h3 id="常用分布">常用分布</h3>
+<h4 id="卡方分布">卡方分布</h4>
+<p><strong>Def</strong>：设<span class="math inline">\(X_1,\dots,X_n\)</span> iid，<span class="math inline">\(N(0,1)\)</span> 的随机变量，则 <span class="math inline">\(\chi^2=\sigma_{i=1}^nX_i^2\)</span> 服从自由度为 <span class="math inline">\(n\)</span> 的 <span class="math inline">\(\chi^2\)</span>-分布。</p>
+<p><strong>Thm</strong>：<span class="math inline">\(\chi^2\sim \chi^2(n)\)</span> 则：<span class="math inline">\(f(x)=\frac{1}{2^{n/2}\Gamma(n/2)}e^{n/2-1}e^{-x/2},~x&gt;0\)</span></p>
+<p><strong>Thm</strong>（可加性）若<span class="math inline">\(X_1\sim \chi^2(n),~X_2\sim \chi^2(n)\)</span> 且 <span class="math inline">\(X_1,X_2\)</span> 独立，则<span class="math inline">\(X_1+X_2\sim\chi^2(m+n)\)</span></p>
+<p><strong>Thm</strong>（数字特征）若<span class="math inline">\(X\sim \chi^2(m)\)</span> 则：<span class="math inline">\(EX=n,DX=2n\)</span></p>
+<p><strong>Def</strong>（上侧 <span class="math inline">\(\alpha\)</span> 分位点）：<span class="math inline">\(P(\chi^2\ge\chi^2_\alpha(n))=\alpha\)</span> 则称 <span class="math inline">\(\chi^2(n)\)</span> 为自由度为 n 的 <span class="math inline">\(\chi^2\)</span>-分布的上侧<span class="math inline">\(\alpha\)</span>-分位点</p>
+<h4 id="t-分布">t-分布</h4>
+<p><strong>Def</strong>：<span class="math inline">\(X\)</span> 是标准正态分布，<span class="math inline">\(Y\)</span>服从自由度为 <span class="math inline">\(n\)</span> 的 <span class="math inline">\(\chi^2\)</span> 分布且相互独立，称随机变量 <span class="math inline">\(T=\frac{X}{\sqrt{Y/n}}\)</span> 服从自由度为 <span class="math inline">\(n\)</span> 的 t-分布。</p>
 <p><strong>Thm</strong>：概率密度为</p>
-<script type="math/tex; mode=display">
-f(t)=\frac{\Gamma(\frac{n+1}{2})}{\Gamma(\frac{n}{2})\sqrt{n\pi}}(1+\frac{t^2}{n})^{-\frac{n+1}{2}}</script><p><strong>Def</strong>（分位点）上侧$\alpha$-分位点</p>
-<h4 id="F-分布"><a href="#F-分布" class="headerlink" title="F-分布"></a>F-分布</h4><p>$X\sim \chi^2(m),~Y\sim\chi^2(n)$ idd. 称$F=\frac{X/m}{Y/n}$服从自由度为 F-分布</p>
-<p><strong>Thm</strong>：密度函数、分位点 $F_{1-\alpha}(m,n)=1/F_\alpha(n,m)$</p>
-<h3 id="正态总体中统计量的分布"><a href="#正态总体中统计量的分布" class="headerlink" title="正态总体中统计量的分布"></a>正态总体中统计量的分布</h3><p><strong>Thm</strong>（单个正态总体统计量的分布）：设$X$ 服从正态<br>分布 $N(\mu,\sigma^2),X_1,\dots,X_n$ 是来自总体 $X$ 容量为 $n$ 的简单随机样本：</p>
-<ol>
-<li>$\displaystyle U=\frac{\bar X-\mu}{\sigma/\sqrt{n}}\sim N(0,1)$</li>
-<li>$\displaystyle\bar X$ 与 $S^2$ 独立</li>
-<li>$\displaystyle W=\frac{(n-1)S^2}{\sigma^2}=\sum (\frac{X-\bar X}{\sigma})^2\sim \chi^2(n-1)$</li>
-<li>$\displaystyle T=\frac{\bar X-\mu}{S}\sqrt{n}\sim t(n-1)$</li>
+<p><span class="math display">\[
+f(t)=\frac{\Gamma(\frac{n+1}{2})}{\Gamma(\frac{n}{2})\sqrt{n\pi}}(1+\frac{t^2}{n})^{-\frac{n+1}{2}}
+\]</span></p>
+<p><strong>Def</strong>（分位点）上侧<span class="math inline">\(\alpha\)</span>-分位点</p>
+<h4 id="f-分布">F-分布</h4>
+<p><span class="math inline">\(X\sim \chi^2(m),~Y\sim\chi^2(n)\)</span> idd. 称<span class="math inline">\(F=\frac{X/m}{Y/n}\)</span>服从自由度为 F-分布</p>
+<p><strong>Thm</strong>：密度函数、分位点 <span class="math inline">\(F_{1-\alpha}(m,n)=1/F_\alpha(n,m)\)</span></p>
+<h3 id="正态总体中统计量的分布">正态总体中统计量的分布</h3>
+<p><strong>Thm</strong>（单个正态总体统计量的分布）：设<span class="math inline">\(X\)</span> 服从正态 分布 <span class="math inline">\(N(\mu,\sigma^2),X_1,\dots,X_n\)</span> 是来自总体 <span class="math inline">\(X\)</span> 容量为 <span class="math inline">\(n\)</span> 的简单随机样本：</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle U=\frac{\bar X-\mu}{\sigma/\sqrt{n}}\sim N(0,1)\)</span></li>
+<li><span class="math inline">\(\displaystyle\bar X\)</span> 与 <span class="math inline">\(S^2\)</span> 独立</li>
+<li><span class="math inline">\(\displaystyle W=\frac{(n-1)S^2}{\sigma^2}=\sum (\frac{X-\bar X}{\sigma})^2\sim \chi^2(n-1)\)</span></li>
+<li><span class="math inline">\(\displaystyle T=\frac{\bar X-\mu}{S}\sqrt{n}\sim t(n-1)\)</span></li>
 </ol>
 <p><strong>Thm</strong>（两个正态总体统计量的分布）：</p>
-<ol>
-<li>$\displaystyle\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{\sqrt{\sigma_1^2/m+\sigma_2^2/n}}\sim N(0,1)$</li>
-<li>$\displaystyle\frac{(m-1)S_{1m}^2}{\sigma^2_1}+\frac{(n-1)S_{2n}^2}{\sigma^2_2}\sim\chi^2(m+n-2)$</li>
-<li>$\displaystyle\sigma_1=\sigma_2=\sigma$ 则 $\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{S_\omega\sqrt{1/m+1/n}}\sim t(m+n-2)$ 其中 $S_\omega=\frac{(m-1)S_{1m}^2+(n-1)S_{2n}^2}{m+n-2}$</li>
-<li>$\displaystyle\frac{S_{1m}^2/\sigma_1^2}{S^2_{2n}/\sigma_2^2}\sim F(m-1,n-1)$</li>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{\sqrt{\sigma_1^2/m+\sigma_2^2/n}}\sim N(0,1)\)</span></li>
+<li><span class="math inline">\(\displaystyle\frac{(m-1)S_{1m}^2}{\sigma^2_1}+\frac{(n-1)S_{2n}^2}{\sigma^2_2}\sim\chi^2(m+n-2)\)</span></li>
+<li><span class="math inline">\(\displaystyle\sigma_1=\sigma_2=\sigma\)</span> 则 <span class="math inline">\(\frac{\bar X-\bar Y-(\mu_1-\mu_2)}{S_\omega\sqrt{1/m+1/n}}\sim t(m+n-2)\)</span> 其中 <span class="math inline">\(S_\omega=\frac{(m-1)S_{1m}^2+(n-1)S_{2n}^2}{m+n-2}\)</span></li>
+<li><span class="math inline">\(\displaystyle\frac{S_{1m}^2/\sigma_1^2}{S^2_{2n}/\sigma_2^2}\sim F(m-1,n-1)\)</span></li>
 </ol>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+
   
   
     
@@ -627,19 +630,24 @@ f(t)=\frac{\Gamma(\frac{n+1}{2})}{\Gamma(\frac{n}{2})\sqrt{n\pi}}(1+\frac{t^2}{n
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「随机数学与数理统计」8 - 假设检验</p>
           <p class='content'>假设检验
 
-假设检验假设检验的基本概念假设检验的基本步骤：
+假设检验
+假设检验的基本概念
+假设检验的基本步骤：
 
 建立假设：
-在假设检验中，通常把一个被检验的假设称为原假设 $H_0$，将不应轻易加以否定的假设作为原假设。当 $H_0$ 被拒绝时...</p>
+
+在假设检验中，通常把一个被检验的假设称为原假设 \(H_0\)，将不应轻易加以否定的假设作为原假设...</p>
         </a>
       
       
         <a class='next' href='/2020/12/11/study/Math/Probabilities/notes10/'>
           <p class='title'>「概率统计与随机过程」 10 - 马尔科夫链<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>马尔科夫链
-马尔科夫链马尔科夫链的基本概念Def（马尔科夫链）随机过程 $\{X_n,n\ge 0\}$ 如果满足如下条件：
+          <p class='content'>马尔科夫链 
+马尔科夫链
+马尔科夫链的基本概念
+Def（马尔科夫链）随机过程 \(\{X_n,n\ge 0\}\) 如果满足如下条件：
 
-状态空间 $I=\{x_0, x_1, …, x_n,…\}$ 为...</p>
+状态空间 \(I=\{x_0, x_1, .....</p>
         </a>
       
     </div>
@@ -682,7 +690,7 @@ f(t)=\frac{\Gamma(\frac{n+1}{2})}{\Gamma(\frac{n}{2})\sqrt{n\pi}}(1+\frac{t^2}{n
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E6%A0%B7%E5%88%86%E5%B8%83"><span class="toc-text">抽样分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E9%87%8F"><span class="toc-text">统计量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%88%86%E5%B8%83"><span class="toc-text">常用分布</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%A1%E6%96%B9%E5%88%86%E5%B8%83"><span class="toc-text">卡方分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#t-%E5%88%86%E5%B8%83"><span class="toc-text">t-分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#F-%E5%88%86%E5%B8%83"><span class="toc-text">F-分布</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E4%B8%AD%E7%BB%9F%E8%AE%A1%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">正态总体中统计量的分布</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E6%A0%B7%E5%88%86%E5%B8%83"><span class="toc-text">抽样分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E9%87%8F"><span class="toc-text">统计量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%88%86%E5%B8%83"><span class="toc-text">常用分布</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%A1%E6%96%B9%E5%88%86%E5%B8%83"><span class="toc-text">卡方分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#t-%E5%88%86%E5%B8%83"><span class="toc-text">t-分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#f-%E5%88%86%E5%B8%83"><span class="toc-text">F-分布</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E4%B8%AD%E7%BB%9F%E8%AE%A1%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">正态总体中统计量的分布</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1329,14 +1337,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

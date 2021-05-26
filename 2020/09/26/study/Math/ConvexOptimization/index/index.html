@@ -470,78 +470,89 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>2020-2021-1 最优化方法</p>
 <span id="more"></span>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="数学优化"><a href="#数学优化" class="headerlink" title="数学优化"></a>数学优化</h3><p>数学优化问题：（数学规划）</p>
-<div class="note quote"><p>从一个<strong>可行解集合</strong>中,<strong>寻找</strong>出<strong>最优</strong>元素。</p></div>
+<h2 id="引言">引言</h2>
+<h3 id="数学优化">数学优化</h3>
+<p>数学优化问题：（数学规划）</p>
+<div class="note quote"><p>从一个<strong>可行解集合</strong>中,<strong>寻找</strong>出<strong>最优</strong>元素。</p></div>
 <p>数学形式：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-    &\min . &f_0(x)\\
-    &~\mathrm{s.t.} & f_i(x) \leq b_i, i = 1,\dots,m
-\end{aligned}</script><p>其中：</p>
+    &amp;\min . &amp;f_0(x)\\
+    &amp;~\mathrm{s.t.} &amp; f_i(x) \leq b_i, i = 1,\dots,m
+\end{aligned}
+\]</span></p>
+<p>其中：</p>
 <ul>
-<li>优化变量：$x$</li>
-<li>目标函数：$f_0:\mathrm{R}^n\rightarrow\mathrm{R}$</li>
-<li>约束函数：$f_i:\mathrm{R}^n\rightarrow\mathrm{R}$</li>
-<li>最优解：在<strong>所有满足约束的向量</strong>中，向量 $x^<em>$ 对应的目标函数值<em>*最小</em></em></li>
+<li>优化变量：<span class="math inline">\(x\)</span></li>
+<li>目标函数：<span class="math inline">\(f_0:\mathrm{R}^n\rightarrow\mathrm{R}\)</span></li>
+<li>约束函数：<span class="math inline">\(f_i:\mathrm{R}^n\rightarrow\mathrm{R}\)</span></li>
+<li>最优解：在<strong>所有满足约束的向量</strong>中，向量 <span class="math inline">\(x^*\)</span> 对应的目标函数值<strong>最小</strong></li>
 </ul>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
-<li>投资组合优化<ul>
+<h3 id="应用">应用</h3>
+<ul>
+<li>投资组合优化
+<ul>
 <li>优化变量：各资产分配的资本数</li>
 <li>约束：总预算、每⼀份资产的资本范围、最⼩收益</li>
 <li>⽬标：总风险或回报</li>
-</ul>
-</li>
-<li>电⼦设计中的器件尺⼨<ul>
+</ul></li>
+<li>电⼦设计中的器件尺⼨
+<ul>
 <li>优化变量：器件的长和宽</li>
 <li>约束：⼯程约束、时间要求、最⼤⾯积</li>
 <li>⽬标：总功耗</li>
-</ul>
-</li>
-<li>数据拟合<ul>
+</ul></li>
+<li>数据拟合
+<ul>
 <li>优化变量：模型参数</li>
 <li>约束：先验信息、参数限制</li>
 <li>⽬标：预测误差</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="求解优化问题"><a href="#求解优化问题" class="headerlink" title="求解优化问题"></a>求解优化问题</h3><ul>
-<li>一般形式的优化问题<ul>
+<h3 id="求解优化问题">求解优化问题</h3>
+<ul>
+<li>一般形式的优化问题
+<ul>
 <li>难以求解</li>
 <li>折中：长时间的计算代价、找不到解</li>
-</ul>
-</li>
-<li>特定问题<ul>
+</ul></li>
+<li>特定问题
+<ul>
 <li>最小二乘</li>
 <li>线性规划</li>
 <li>凸优化问题</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="最小二乘"><a href="#最小二乘" class="headerlink" title="最小二乘"></a>最小二乘</h3><p>形式：$\displaystyle\min.||Ax-b||_2^2$</p>
+<h3 id="最小二乘">最小二乘</h3>
+<p>形式：<span class="math inline">\(\displaystyle\min.||Ax-b||_2^2\)</span></p>
 <ul>
-<li>有解析解 $x* = (A^TA)^{-1}A^Tb$</li>
+<li>有解析解 <span class="math inline">\(x* = (A^TA)^{-1}A^Tb\)</span></li>
 <li>有可靠的求解算法和软件 <!-- TODO --></li>
-<li>计算时间：正比于 $n^2k(A\in \mathrm{R}^{k\times n})$</li>
+<li>计算时间：正比于 <span class="math inline">\(n^2k(A\in \mathrm{R}^{k\times n})\)</span></li>
 <li>技术成熟</li>
-<li>最⼩⼆乘的使⽤<ul>
+<li>最⼩⼆乘的使⽤
+<ul>
 <li>判别⼗分简单</li>
 <li>使⽤标准⽅法增强灵活性（加权、正则化）</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="线性规划问题"><a href="#线性规划问题" class="headerlink" title="线性规划问题"></a>线性规划问题</h3><script type="math/tex; mode=display">
+<h3 id="线性规划问题">线性规划问题</h3>
+<p><span class="math display">\[
 \begin{aligned}
-    &\min. &c^Tx\\
-    &\mathrm{~s.t.} &a_i^Tx\le b_i
-\end{aligned}</script><ul>
+    &amp;\min. &amp;c^Tx\\
+    &amp;\mathrm{~s.t.} &amp;a_i^Tx\le b_i
+\end{aligned}
+\]</span></p>
+<ul>
 <li>没有解析解</li>
 <li>具有可靠且有效的求解算法和软件</li>
-<li>计算时间：正⽐于$n^2m~(if~m \ge n)$，若具有特殊结构，求解更快。</li>
+<li>计算时间：正⽐于<span class="math inline">\(n^2m~(if~m \ge n)\)</span>，若具有特殊结构，求解更快。</li>
 <li>成熟技术</li>
 <li>判别难于最⼩⼆乘</li>
 <li>⼀些标准的技巧可⽤于将某些问题转化为线性规划（分段线性⽅程、包含范数的问题）</li>
 </ul>
-<!-- TODO: ppt p48 --><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+<!-- TODO: ppt p48 -->
+
   
   
     
@@ -639,22 +650,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/11/01/KGCode/kginteraction/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>知识融合简述</p>
-          <p class='content'>知识融合方法概述
-
-知识融合问题分析知识图谱的异构从KG的构建看：
-
-早期知识工程的理想是构建一个统一的知识库
-人类知识体系复杂
-不同人对某些知识由主观看法
-知识会随时间自然演化
-同一领域由不同...</p>
-        </a>
-      
-      
-        <a class='next' href='/2020/09/26/study/Math/DiscreteMath/index/'>
-          <p class='title'>离散数学 [Overview]<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/2020/09/26/study/Math/DiscreteMath/index/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>离散数学 [Overview]</p>
           <p class='content'>2019 - 2020 - 3 离散数学目录
 
 
@@ -665,6 +662,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 图的基本概念
 欧拉图&amp;哈密顿图
 
+</p>
+        </a>
+      
+      
+        <a class='next' href='/2020/09/26/study/Math/LinearAlgebra&MatriceComputation/index/'>
+          <p class='title'>线性代数 [Review] 目录<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
 </p>
         </a>
       
@@ -1355,14 +1359,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,

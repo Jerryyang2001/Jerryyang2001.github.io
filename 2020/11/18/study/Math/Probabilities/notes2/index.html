@@ -470,126 +470,134 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <p>随机变量及其概率分布</p>
 <span id="more"></span>
-<h2 id="随机变量及其概率分布"><a href="#随机变量及其概率分布" class="headerlink" title="随机变量及其概率分布"></a>随机变量及其概率分布</h2><h3 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h3><p><strong>Def</strong>：设 $E$ 时一个随机试验，$\varOmega$ 是其样本空间，如果对于每一个试验的结果 $\omega\in \varOmega$，由唯一的实数$X(\omega)$与之对应，这个定义在试验样本空间上的实值函数$X(\omega)$称为$E$的随机变量。</p>
-<h3 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h3><p><strong>Def</strong>（随机变量的分布函数）设 $X(\omega)$是随机变量，称 $F(x) = P(X\le x),~-\infty&lt;x&lt;\infty$</p>
+<h2 id="随机变量及其概率分布">随机变量及其概率分布</h2>
+<h3 id="随机变量">随机变量</h3>
+<p><strong>Def</strong>：设 <span class="math inline">\(E\)</span> 时一个随机试验，<span class="math inline">\(\varOmega\)</span> 是其样本空间，如果对于每一个试验的结果 <span class="math inline">\(\omega\in \varOmega\)</span>，由唯一的实数<span class="math inline">\(X(\omega)\)</span>与之对应，这个定义在试验样本空间上的实值函数<span class="math inline">\(X(\omega)\)</span>称为<span class="math inline">\(E\)</span>的随机变量。</p>
+<h3 id="随机变量的分布函数">随机变量的分布函数</h3>
+<p><strong>Def</strong>（随机变量的分布函数）设 <span class="math inline">\(X(\omega)\)</span>是随机变量，称 <span class="math inline">\(F(x) = P(X\le x),~-\infty&lt;x&lt;\infty\)</span></p>
 <p><strong>Thm</strong>：一些定义</p>
 <ul>
-<li>$P(x_1 &lt; X\le x_2) = F(x_2) - F(x_1)$</li>
-<li>$P(x_1\le X&lt; x2) = F(x_2-0) - F(x_1-0)$</li>
-<li>$P(x_1 &lt; X&lt; x2) = F(x_2-0) - F(x_1)$</li>
-<li>$P(x_1\le X\le x2) = F(x_2) - F(x_1-0)$</li>
+<li><span class="math inline">\(P(x_1 &lt; X\le x_2) = F(x_2) - F(x_1)\)</span></li>
+<li><span class="math inline">\(P(x_1\le X&lt; x2) = F(x_2-0) - F(x_1-0)\)</span></li>
+<li><span class="math inline">\(P(x_1 &lt; X&lt; x2) = F(x_2-0) - F(x_1)\)</span></li>
+<li><span class="math inline">\(P(x_1\le X\le x2) = F(x_2) - F(x_1-0)\)</span></li>
 </ul>
 <p><strong>Thm</strong>：分布函数的性质</p>
-<ol>
-<li>$0\le F(x) \le 1$</li>
+<ol type="1">
+<li><span class="math inline">\(0\le F(x) \le 1\)</span></li>
 <li>单调不降</li>
-<li>右连续函数：$F(x+0)=F(x)$</li>
+<li>右连续函数：<span class="math inline">\(F(x+0)=F(x)\)</span></li>
 <li>有<em>可数</em>个间断点</li>
 </ol>
-<h3 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h3><h4 id="离散型随机变量的分布律"><a href="#离散型随机变量的分布律" class="headerlink" title="离散型随机变量的分布律"></a>离散型随机变量的分布律</h4><p><strong>Def</strong>（概率函数）设离散随机变量$X$可能取得一切之为 $x_1, x_2,\dots, x_n$ 称为 $X$ 分布律（列），也称为 $X$ 的概率函数。</p>
+<h3 id="离散型随机变量">离散型随机变量</h3>
+<h4 id="离散型随机变量的分布律">离散型随机变量的分布律</h4>
+<p><strong>Def</strong>（概率函数）设离散随机变量<span class="math inline">\(X\)</span>可能取得一切之为 <span class="math inline">\(x_1, x_2,\dots, x_n\)</span> 称为 <span class="math inline">\(X\)</span> 分布律（列），也称为 <span class="math inline">\(X\)</span> 的概率函数。</p>
 <blockquote>
-<p>分布律也可以用表格的形式表示：<br>|X|x1|x2|x3|…|<br>|—-|—-|—-|—-|—-|<br>|P|p1|p2|p3|…|</p>
+<p>分布律也可以用表格的形式表示： |X|x1|x2|x3|...| |---|---|---|---|---| |P|p1|p2|p3|...|</p>
 </blockquote>
-<p>$X$ 的分布函数 $F(x) = \sum\limits_{x_k\le x} p_k$</p>
-<h4 id="常见的离散分布"><a href="#常见的离散分布" class="headerlink" title="常见的离散分布"></a>常见的离散分布</h4><h5 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="0 - 1 分布"></a>0 - 1 分布</h5><p><strong>Def</strong>：$0 - 1$分布：$X$ 只取 $0$ 和 $1$ 两个值，且$P(X=1)=p,~P(X=0)=1-p$，则称 $X$ 服从 $(0-1)$ 分布。</p>
-<h5 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h5><p><strong>Def</strong>：n次独立试验概型</p>
+<p><span class="math inline">\(X\)</span> 的分布函数 <span class="math inline">\(F(x) = \sum\limits_{x_k\le x} p_k\)</span></p>
+<h4 id="常见的离散分布">常见的离散分布</h4>
+<h5 id="分布">0 - 1 分布</h5>
+<p><strong>Def</strong>：<span class="math inline">\(0 - 1\)</span>分布：<span class="math inline">\(X\)</span> 只取 <span class="math inline">\(0\)</span> 和 <span class="math inline">\(1\)</span> 两个值，且<span class="math inline">\(P(X=1)=p,~P(X=0)=1-p\)</span>，则称 <span class="math inline">\(X\)</span> 服从 <span class="math inline">\((0-1)\)</span> 分布。</p>
+<h5 id="二项分布">二项分布</h5>
+<p><strong>Def</strong>：n次独立试验概型</p>
 <blockquote>
-<p><strong>伯努利试验</strong>只有两个可能结果，$A,~\bar A$，且$P(A)=p$</p>
-<ul>
-<li>$n$ 重伯努利试验是指将试验独立重复 $n$ 次。</li>
-<li>$X$ 表示 $n$ 重伯努利试验中事件 $A$ 发生的次数</li>
-</ul>
-<p>称随机变量$X$服从参数为$n,~p$ 的二项分布，$X\sim B(n,p)$</p>
-<ul>
-<li>$P(X=k) = C_n^k p^k (1-p)^{n-k}$</li>
-</ul>
+<p><strong>伯努利试验</strong>只有两个可能结果，<span class="math inline">\(A,~\bar A\)</span>，且<span class="math inline">\(P(A)=p\)</span> - <span class="math inline">\(n\)</span> 重伯努利试验是指将试验独立重复 <span class="math inline">\(n\)</span> 次。 - <span class="math inline">\(X\)</span> 表示 <span class="math inline">\(n\)</span> 重伯努利试验中事件 <span class="math inline">\(A\)</span> 发生的次数</p>
+<p>称随机变量<span class="math inline">\(X\)</span>服从参数为<span class="math inline">\(n,~p\)</span> 的二项分布，<span class="math inline">\(X\sim B(n,p)\)</span> - <span class="math inline">\(P(X=k) = C_n^k p^k (1-p)^{n-k}\)</span></p>
 </blockquote>
-<p><strong>Thm</strong>：$X$是伯努利试验中$A$发生的次数，$p$是每次试验中 $A$ 发生的概率，则 $X\sim b(n,p)$</p>
-<p><strong>Def</strong>：最可能成功次数$k = \lfloor (n+1)p \rfloor~(n+1)p不是整数$</p>
-<h5 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h5><p><strong>Def</strong>（泊松分布）$\displaystyle P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!},~X\sim P(\lambda)$</p>
-<p><strong>Thm</strong>（泊松定理）设 $\lambda &gt;0$是一个常数，$n$ 是任意正整数，设$np_n=\lambda$。则对于任意固定的非负整数$k$有 $\displaystyle\lim_{n\rightarrow \infty}C_n^kp_n^k(1-p_n)^{n-k}=\frac{\lambda^ke^{-\lambda}}{k!}$</p>
-<h5 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h5><p>$\displaystyle P(X=k) = q^{k-1} p, k=1,2,\dots$</p>
-<h5 id="超几何分布"><a href="#超几何分布" class="headerlink" title="超几何分布"></a>超几何分布</h5><p>$\displaystyle P(X=k) = \frac{C_M^k\cdot C_{N-M}^{n-k}}{C_N^n}, k = 0, 1, 2, \dots, l=\min\{n,M\}$</p>
+<p><strong>Thm</strong>：<span class="math inline">\(X\)</span>是伯努利试验中<span class="math inline">\(A\)</span>发生的次数，<span class="math inline">\(p\)</span>是每次试验中 <span class="math inline">\(A\)</span> 发生的概率，则 <span class="math inline">\(X\sim b(n,p)\)</span></p>
+<p><strong>Def</strong>：最可能成功次数<span class="math inline">\(k = \lfloor (n+1)p \rfloor~(n+1)p不是整数\)</span></p>
+<h5 id="泊松分布">泊松分布</h5>
+<p><strong>Def</strong>（泊松分布）<span class="math inline">\(\displaystyle P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!},~X\sim P(\lambda)\)</span></p>
+<p><strong>Thm</strong>（泊松定理）设 <span class="math inline">\(\lambda &gt;0\)</span>是一个常数，<span class="math inline">\(n\)</span> 是任意正整数，设<span class="math inline">\(np_n=\lambda\)</span>。则对于任意固定的非负整数<span class="math inline">\(k\)</span>有 <span class="math inline">\(\displaystyle\lim_{n\rightarrow \infty}C_n^kp_n^k(1-p_n)^{n-k}=\frac{\lambda^ke^{-\lambda}}{k!}\)</span></p>
+<h5 id="几何分布">几何分布</h5>
+<p><span class="math inline">\(\displaystyle P(X=k) = q^{k-1} p, k=1,2,\dots\)</span></p>
+<h5 id="超几何分布">超几何分布</h5>
+<p><span class="math inline">\(\displaystyle P(X=k) = \frac{C_M^k\cdot C_{N-M}^{n-k}}{C_N^n}, k = 0, 1, 2, \dots, l=\min\{n,M\}\)</span></p>
 <ul>
-<li>$X\sim H(N,M,n)$</li>
+<li><span class="math inline">\(X\sim H(N,M,n)\)</span></li>
 </ul>
-<h5 id="负二项分布"><a href="#负二项分布" class="headerlink" title="负二项分布**"></a>负二项分布**</h5><p>$\displaystyle P(X=k) = C_{k-1}^{r-1}p^r(1-p)^{k-r}$</p>
-<ul>
-<li>$X\sim Nb(r,p)$</li>
-</ul>
-<h4 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h4><p><strong>Def</strong>（连续性随机变量）$F(x) = \int_{-\infty}^xf(x)\mathrm dx,-\infty &lt; x &lt; \infty$</p>
-<ul>
-<li>其中$f(x)$ 是非负可积函数，称为$X$的概率分布密度函数（概率密度函数<code>Probability Density Function</code>）</li>
-<li>规范性：$\displaystyle\int_R f(x) \mathrm dx =1$</li>
-<li>$P(x&lt; X \le x+\Delta x)\approx f(x)\Delta x$</li>
-<li>连续性，$F(-\infty) = 0$，$F(\infty)=1$</li>
-</ul>
-<p><strong>Def</strong>（累积分布函数）$\displaystyle P(a&lt;X\le b) = \int_a^bf(x)\mathrm dx$</p>
-<h5 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h5><script type="math/tex; mode=display">
+<h5 id="负二项分布">负二项分布**</h5>
+<p><span class="math inline">\(\displaystyle P(X=k) = C_{k-1}^{r-1}p^r(1-p)^{k-r}\)</span> - <span class="math inline">\(X\sim Nb(r,p)\)</span></p>
+<h4 id="连续型随机变量">连续型随机变量</h4>
+<p><strong>Def</strong>（连续性随机变量）<span class="math inline">\(F(x) = \int_{-\infty}^xf(x)\mathrm dx,-\infty &lt; x &lt; \infty\)</span> - 其中<span class="math inline">\(f(x)\)</span> 是非负可积函数，称为<span class="math inline">\(X\)</span>的概率分布密度函数（概率密度函数<code>Probability Density Function</code>） - 规范性：<span class="math inline">\(\displaystyle\int_R f(x) \mathrm dx =1\)</span> - <span class="math inline">\(P(x&lt; X \le x+\Delta x)\approx f(x)\Delta x\)</span> - 连续性，<span class="math inline">\(F(-\infty) = 0\)</span>，<span class="math inline">\(F(\infty)=1\)</span></p>
+<p><strong>Def</strong>（累积分布函数）<span class="math inline">\(\displaystyle P(a&lt;X\le b) = \int_a^bf(x)\mathrm dx\)</span></p>
+<h5 id="均匀分布">均匀分布</h5>
+<p><span class="math display">\[
 f(x)=\begin{cases}
-  \displaystyle\frac{1}{b-a},&a\le x\le b,\\
-  0,&otherwise
+  \displaystyle\frac{1}{b-a},&amp;a\le x\le b,\\
+  0,&amp;otherwise
 \end{cases}\\
 \\
 F(x) = P(X\le x) = \begin{cases}
-  0,&x < a\\
-  \displaystyle\frac{x-a}{b-a}, &a\le x \le b\\
-  1, &x>b
-\end{cases}</script><ul>
-<li>$X\sim U[a,b]$</li>
+  0,&amp;x &lt; a\\
+  \displaystyle\frac{x-a}{b-a}, &amp;a\le x \le b\\
+  1, &amp;x&gt;b
+\end{cases}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(X\sim U[a,b]\)</span></li>
 </ul>
-<h5 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h5><script type="math/tex; mode=display">
+<h5 id="指数分布">指数分布</h5>
+<p><span class="math display">\[
 f(x) = \begin{cases}
-  \lambda e^{-\lambda x}, &x>0\\
-  0, & x\le 0
+  \lambda e^{-\lambda x}, &amp;x&gt;0\\
+  0, &amp; x\le 0
 \end{cases}
 \\
 F(x) = \begin{cases}
-  1- e^{-\lambda x}, &x>0\\
-  0, &x\le 0
-\end{cases}</script><ul>
-<li>$X\sim e(\lambda)$</li>
-</ul>
-<h5 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h5><p><strong>Def</strong>：$\displaystyle f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</p>
+  1- e^{-\lambda x}, &amp;x&gt;0\\
+  0, &amp;x\le 0
+\end{cases}
+\]</span></p>
 <ul>
-<li>$X\sim N(\mu, \sigma^2)$</li>
-<li>$\mu$ 为位置参数，$\sigma$ 为尺度参数</li>
-<li>关于$\mu$对称，最大值</li>
-<li>$\sigma$固定，形状保持不变</li>
-<li>拐点为：$x=\mu\pm\sigma$</li>
-<li>$erf(x)=F(x)= \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\mathrm dx$</li>
-<li>$3\sigma,~6\sigma$理论</li>
+<li><span class="math inline">\(X\sim e(\lambda)\)</span></li>
 </ul>
-<p><strong>Def</strong>（标准正态分布）$N(0,1)$</p>
+<h5 id="正态分布">正态分布</h5>
+<p><strong>Def</strong>：<span class="math inline">\(\displaystyle f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\)</span> - <span class="math inline">\(X\sim N(\mu, \sigma^2)\)</span> - <span class="math inline">\(\mu\)</span> 为位置参数，<span class="math inline">\(\sigma\)</span> 为尺度参数 - 关于<span class="math inline">\(\mu\)</span>对称，最大值 - <span class="math inline">\(\sigma\)</span>固定，形状保持不变 - 拐点为：<span class="math inline">\(x=\mu\pm\sigma\)</span> - <span class="math inline">\(erf(x)=F(x)= \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\mathrm dx\)</span> - <span class="math inline">\(3\sigma,~6\sigma\)</span>理论</p>
+<p><strong>Def</strong>（标准正态分布）<span class="math inline">\(N(0,1)\)</span></p>
 <ul>
-<li>$\mu = 0, \sigma = 1$ 的正态分布称为标准正态分布</li>
-<li>密度函数和分布函数通常用 $\varphi(x),\Phi(x)$ 表示</li>
-<li>$\Phi(0)=0.5,~\Phi(-x) = 1-\Phi(x)$</li>
+<li><span class="math inline">\(\mu = 0, \sigma = 1\)</span> 的正态分布称为标准正态分布</li>
+<li>密度函数和分布函数通常用 <span class="math inline">\(\varphi(x),\Phi(x)\)</span> 表示</li>
+<li><span class="math inline">\(\Phi(0)=0.5,~\Phi(-x) = 1-\Phi(x)\)</span></li>
 </ul>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-  &\varphi(x) = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}\\
-  &\Phi(x) = \int_{-\infty}^x\varphi(x)\mathrm dx
-\end{aligned}</script><p><strong>Thm</strong>（一般正态分布的标准化）：若$X\sim N(\mu, \sigma^2)$，则$U=\frac{X-\mu}{\sigma}\sim N(0,1)$</p>
-<p><strong>Def</strong>：（$\alpha$分位点）$P(X&gt;\mu_\alpha) = \alpha,\quad0&lt;\alpha&lt;1$</p>
-<h3 id="随机变量函数的分布"><a href="#随机变量函数的分布" class="headerlink" title="随机变量函数的分布"></a>随机变量函数的分布</h3><h4 id="已知离散随机变量X的分布，求函数-Y-g-X-的分布"><a href="#已知离散随机变量X的分布，求函数-Y-g-X-的分布" class="headerlink" title="已知离散随机变量X的分布，求函数 Y = g(X) 的分布"></a>已知离散随机变量X的分布，求函数 Y = g(X) 的分布</h4><script type="math/tex; mode=display">
-P(Y=y_j) = P(g(X)=y_j) = \sum_{\{x_k|g(x_k) = y_j\}}P(X=x_k), j = 1, 2, \dots,</script><p>离散型均匀分布：</p>
-<script type="math/tex; mode=display">
-Y = [NX+1],\quad where~X\sim U(0, 1)</script><h4 id="一致连续型随机变量X的概率密度，求-g-X-的概率密度"><a href="#一致连续型随机变量X的概率密度，求-g-X-的概率密度" class="headerlink" title="一致连续型随机变量X的概率密度，求 g(X) 的概率密度"></a>一致连续型随机变量X的概率密度，求 g(X) 的概率密度</h4><ul>
+  &amp;\varphi(x) = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}\\
+  &amp;\Phi(x) = \int_{-\infty}^x\varphi(x)\mathrm dx
+\end{aligned}
+\]</span></p>
+<p><strong>Thm</strong>（一般正态分布的标准化）：若<span class="math inline">\(X\sim N(\mu, \sigma^2)\)</span>，则<span class="math inline">\(U=\frac{X-\mu}{\sigma}\sim N(0,1)\)</span></p>
+<p><strong>Def</strong>：（<span class="math inline">\(\alpha\)</span>分位点）<span class="math inline">\(P(X&gt;\mu_\alpha) = \alpha,\quad0&lt;\alpha&lt;1\)</span></p>
+<h3 id="随机变量函数的分布">随机变量函数的分布</h3>
+<h4 id="已知离散随机变量x的分布求函数-y-gx-的分布">已知离散随机变量X的分布，求函数 Y = g(X) 的分布</h4>
+<p><span class="math display">\[
+P(Y=y_j) = P(g(X)=y_j) = \sum_{\{x_k|g(x_k) = y_j\}}P(X=x_k), j = 1, 2, \dots,
+\]</span></p>
+<p>离散型均匀分布：</p>
+<p><span class="math display">\[
+Y = [NX+1],\quad where~X\sim U(0, 1)
+\]</span></p>
+<h4 id="一致连续型随机变量x的概率密度求-gx-的概率密度">一致连续型随机变量X的概率密度，求 g(X) 的概率密度</h4>
+<ul>
 <li><strong>分布函数法</strong></li>
-<li>Key Point：$F_Y(y)=P(Y\le y)=P(g(x)\le y)=\displaystyle\int_{\{x|g(x)&lt;y\}}f_X(x)\mathrm dx$</li>
+<li>Key Point：<span class="math inline">\(F_Y(y)=P(Y\le y)=P(g(x)\le y)=\displaystyle\int_{\{x|g(x)&lt;y\}}f_X(x)\mathrm dx\)</span></li>
 </ul>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 Y = aX+b\Rightarrow
 f_Y(y)=\frac{\mathrm d}{\mathrm dy}F_Y(y) =\begin{cases}
-  \frac 1 a f_X(\frac{y-b}{a}),&a>0\\
-  -\frac{1}{a} f_X(\frac{y-b}{a}),&a<0\\
-\end{cases}</script><p>「例」：$X\sim N(0,1),~Y=X^2$</p>
-<script type="math/tex; mode=display">
-f_Y(y) = F'_Y(y) =\begin{cases}
-  \frac{1}{\sqrt{2\pi y}}e^{-\frac{y}{2}},& y>0\\
-  0,&y\le 0
-\end{cases}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+  \frac 1 a f_X(\frac{y-b}{a}),&amp;a&gt;0\\
+  -\frac{1}{a} f_X(\frac{y-b}{a}),&amp;a&lt;0\\
+\end{cases}
+\]</span></p>
+<p>「例」：<span class="math inline">\(X\sim N(0,1),~Y=X^2\)</span></p>
+<p><span class="math display">\[
+f_Y(y) = F&#39;_Y(y) =\begin{cases}
+  \frac{1}{\sqrt{2\pi y}}e^{-\frac{y}{2}},&amp; y&gt;0\\
+  0,&amp;y\le 0
+\end{cases}
+\]</span></p>
+
   
   
     
@@ -691,13 +699,16 @@ f_Y(y) = F'_Y(y) =\begin{cases}
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>「概率统计与随机过程」 1 - 随机事件及其概率</p>
           <p class='content'>随机事件及其概率
 
-随机事件及其概率随机事件Def：样本空间
+随机事件及其概率
+随机事件
+Def：样本空间
 Def：随机事件
-随机事件的概率事件的概率Def：频率
+随机事件的概率
+事件的概率
+Def：频率
 Thm：频率满足
 
-$0\le f_n(A)\le 1$
-$f_n(\var...</p>
+\(0\le f_n(A)...</p>
         </a>
       
       
@@ -705,7 +716,9 @@ $f_n(\var...</p>
           <p class='title'>「概率统计与随机过程」 3 - 随机向量及其概率分布<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>随机向量及其概率分布
 
-随机向量及其概率分布二维随机向量的联合分布Def（二维随机向量）假设 $\Omega = \{\omega\}$ 是随机试验 E 的样本空间，$X(\omega),~Y(...</p>
+随机向量及其概率分布
+二维随机向量的联合分布
+Def（二维随机向量）假设 \(\Omega = \{\omega\}\) 是随机试验 E 的样本空间，\(X(\o...</p>
         </a>
       
     </div>
@@ -748,7 +761,7 @@ $f_n(\var...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="toc-text">随机变量及其概率分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-text">随机变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="toc-text">随机变量的分布函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-text">离散型随机变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83%E5%BE%8B"><span class="toc-text">离散型随机变量的分布律</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%A6%BB%E6%95%A3%E5%88%86%E5%B8%83"><span class="toc-text">常见的离散分布</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#0-1-%E5%88%86%E5%B8%83"><span class="toc-text">0 - 1 分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83"><span class="toc-text">二项分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83"><span class="toc-text">泊松分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83"><span class="toc-text">几何分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B6%85%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83"><span class="toc-text">超几何分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83"><span class="toc-text">负二项分布**</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-text">连续型随机变量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83"><span class="toc-text">均匀分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83"><span class="toc-text">指数分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="toc-text">正态分布</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">随机变量函数的分布</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8FX%E7%9A%84%E5%88%86%E5%B8%83%EF%BC%8C%E6%B1%82%E5%87%BD%E6%95%B0-Y-g-X-%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">已知离散随机变量X的分布，求函数 Y &#x3D; g(X) 的分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%87%B4%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8FX%E7%9A%84%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%EF%BC%8C%E6%B1%82-g-X-%E7%9A%84%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6"><span class="toc-text">一致连续型随机变量X的概率密度，求 g(X) 的概率密度</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="toc-text">随机变量及其概率分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-text">随机变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="toc-text">随机变量的分布函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-text">离散型随机变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83%E5%BE%8B"><span class="toc-text">离散型随机变量的分布律</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%A6%BB%E6%95%A3%E5%88%86%E5%B8%83"><span class="toc-text">常见的离散分布</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E5%B8%83"><span class="toc-text">0 - 1 分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83"><span class="toc-text">二项分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83"><span class="toc-text">泊松分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83"><span class="toc-text">几何分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B6%85%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83"><span class="toc-text">超几何分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83"><span class="toc-text">负二项分布**</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-text">连续型随机变量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83"><span class="toc-text">均匀分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83"><span class="toc-text">指数分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="toc-text">正态分布</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">随机变量函数的分布</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8Fx%E7%9A%84%E5%88%86%E5%B8%83%E6%B1%82%E5%87%BD%E6%95%B0-y-gx-%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">已知离散随机变量X的分布，求函数 Y &#x3D; g(X) 的分布</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%87%B4%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8Fx%E7%9A%84%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E6%B1%82-gx-%E7%9A%84%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6"><span class="toc-text">一致连续型随机变量X的概率密度，求 g(X) 的概率密度</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1395,14 +1408,14 @@ var loadCSS = function( href, before, media, attributes ){
   }
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "ヾﾉ≧∀≦)o 来呀~快活呀!";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"ヾﾉ≧∀≦)o 来呀~快活呀!","appId":"ezslGx5u7TEoWQoDFfofu8to-gzGzoHsz","appKey":"vhuFwrNX5X0JUsN8f4YXXLQq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
