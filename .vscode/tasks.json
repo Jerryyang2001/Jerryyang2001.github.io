@@ -4,14 +4,22 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Clean and Deploy",
+      "label": "Clean and Server",
       "type": "shell",
-      "command": ["hexo clean", "hexo d -g"]
+      "command": [
+        "hexo clean",
+        "hexo generate",
+        "hexo s"
+      ],
+      "problemMatcher": []
     },
     {
       "label": "Lua This File",
       "type": "shell",
-      "command": ["lua", "${file}"]
+      "command": [
+        "lua",
+        "${file}"
+      ]
     }
   ]
 }
