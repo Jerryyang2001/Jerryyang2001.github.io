@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：线性代数 - 些些同学的藏宝阁</title>
+  <title>非线性方程求解 - 些些同学的藏宝阁</title>
+  
+    <meta name="keywords" content="数值分析">
   
 
+  
+    <meta name="description" content="数值分析 ch 2 - 非线性方程求解">
   
 
   <!-- feed -->
@@ -325,7 +327,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: none;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://bing.ioliu.cn/v1/rand?w=1920&h=1200"></div>
           
@@ -395,80 +397,382 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+    
+
+
   
+  <div class="article-meta" id="top">
     
+    
+    
+      <h1 class="title">
+        非线性方程求解
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="/image/favicon.webp">
+    <p>些些同学</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年5月31日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-  <section class="post-list">
+      <div id="lc-pv" data-title="非线性方程求解" data-path="/2021/05/31/study/Math/NumericRecipies/Chapter%202%20%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E6%B1%82%E8%A7%A3/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
     
+  </div>
+
+
+        
+                
+                        <p>数值分析 ch 2 - 非线性方程求解</p>
+<span id="more"></span>
+<h1 id="chapter-2-非线性方程的求解">Chapter 2 非线性方程的求解</h1>
+<ol type="1">
+<li><p>一个自变量的非线性方程： <span class="math inline">\(f(x)=0,\quad x\in R&#39;\)</span></p></li>
+<li><p>[NO] 多个自变量的非线性方程组： <span class="math inline">\(\vec F (\vec x) =\vec 0,\quad \vec x\in R^n,\vec F(\vec x)\in R^m\)</span></p></li>
+</ol>
+<hr />
+<p>Content：</p>
+<ol type="1">
+<li><p>二分法</p></li>
+<li><p>简单迭代法</p></li>
+<li><p>Newton迭代法</p></li>
+</ol>
+<p>Idea：</p>
+<p><span class="math display">\[
+线性：f(x)=0\iff x=\varphi(x)\rightarrow x_{n+1}=\varphi(x_n)\\
+非线性：x=\psi (x)\Rightarrow x_{n+1}:=\psi(x_n),x_n\rightarrow x^*
+\]</span></p>
+<p>重数：<span class="math inline">\(f(x) = (x-x^*)^mg(x),g(x^*)\ne0\)</span> 则m称为重数</p>
+<p>一般分为如下2步：</p>
+<ol type="1">
+<li>搜索根，分析方程存在多少个实根，每个根存在的区间</li>
+</ol>
+<p>图解法、近似方程法、解析法、定步长搜索法</p>
+<ol start="2" type="1">
+<li>精确化：求满足给定精度的根的近似值</li>
+</ol>
+<p>从2项迭代导致的2阶方法。</p>
+<h2 id="二分法">二分法</h2>
+<h2 id="简单迭代法">简单迭代法</h2>
+<ol type="1">
+<li><p>局部收敛（<span class="math inline">\(x_0\)</span>与精确解靠近）</p></li>
+<li><p>全局收敛（<span class="math inline">\(x_0\)</span>未必与精确解靠近）</p></li>
+</ol>
+<h3 id="迭代格式的构造">迭代格式的构造</h3>
+<p>通过方程 <span class="math inline">\(f(x)=0\)</span> 得到的等价形式： <span class="math inline">\(x=\varphi(x)\)</span>，得到递推公式。</p>
+<p>若根据 <span class="math inline">\(x=\varphi(x)\)</span> 得到的序列收敛， <span class="math inline">\(\lim_{k\rightarrow\infty}x_k=x^*\)</span>。（当 <span class="math inline">\(x^*=\varphi(x^*)\)</span>时，称为不动点，上述方法称为不动点迭代法）</p>
+<p>序列是否收敛，由 <span class="math inline">\(\varphi\)</span>和 <span class="math inline">\(x_0\)</span>确定。</p>
+<h3 id="迭代的收敛性">迭代的收敛性</h3>
+<p><strong>Thm</strong>若 <span class="math inline">\(\varphi(x)\)</span>在 <span class="math inline">\((a,b)\)</span>内有一阶连续导数，且满足，</p>
+<ol type="1">
+<li><p><span class="math inline">\(x\in [a,b]\)</span>时， <span class="math inline">\(\varphi(x)\in [a,b]\)</span></p></li>
+<li><p>存在正常数 <span class="math inline">\(L&lt;1\)</span>使得当 <span class="math inline">\(x\in[a,b]\)</span>， <span class="math inline">\(|\varphi&#39;(x)|\le L &lt;1\)</span></p></li>
+</ol>
+<p>则：</p>
+<ol type="1">
+<li><p><span class="math inline">\(x=\varphi(x)\)</span>在 <span class="math inline">\([a,b]\)</span>上有实根 <span class="math inline">\(x^*\)</span></p></li>
+<li><p>对于任意初值 <span class="math inline">\(x_0\in [a,b]\)</span>，迭代收敛→<strong>全局收敛</strong></p></li>
+</ol>
+<p>同时满足：</p>
+<p><span class="math inline">\(|x^*-x_k|\le \frac {L^k}{1-L} |x_1-x_0|\)</span></p>
+<p><strong>Thm</strong> 方程在区间 <span class="math inline">\([a,b]\)</span>上有根，且当 <span class="math inline">\(x\in [a,b]\)</span>时， <span class="math inline">\(|\varphi&#39;(x)|\ge 1\)</span>则对于任意 <span class="math inline">\(x_0\)</span>迭代发散。</p>
+<p><strong>Def</strong>（<strong>局部收敛</strong>）方程 <span class="math inline">\(x=\varphi(x)\)</span>，若在 <span class="math inline">\(x^*\)</span> 的某个邻域内，对于任意初值 <span class="math inline">\(x_0\in S\)</span>，迭代都收敛，则称迭代法在 <span class="math inline">\(x^*\)</span>附近局部收敛。</p>
+<p><strong>Thm</strong>：若方程 <span class="math inline">\(x=\varphi(x)\)</span>有根 <span class="math inline">\(x^*\)</span>，在某个邻域内一阶连续可导：</p>
+<ol type="1">
+<li><p><span class="math inline">\(|\varphi&#39;(x^*)|&lt;1\)</span>→ 局部收敛</p></li>
+<li><p><span class="math inline">\(|\varphi&#39;(x)|&gt;1\)</span>→发散</p></li>
+</ol>
+<h2 id="newton-迭代法">Newton 迭代法</h2>
+<h3 id="迭代格式">迭代格式</h3>
+<blockquote>
+<p>基于 <span class="math inline">\(f(x)=0\)</span> 的近似形式</p>
+</blockquote>
+<p><span class="math display">\[
+x_{k+1}=x_k-\frac{f(x_k)}{f&#39;(x_k)}=\psi(x_k)
+\]</span></p>
+<p>如果需要计算二重根，Newton迭代法常常不能满足</p>
+<h3 id="newton-迭代法的收敛性">Newton 迭代法的收敛性</h3>
+<p><strong>Thm</strong> 设函数 <span class="math inline">\(f\)</span>在区间 <span class="math inline">\([a,b]\)</span>内二阶连续可导，且：</p>
+<ol type="1">
+<li><p><span class="math inline">\(f(a)f(b)&lt;0\)</span></p></li>
+<li><p>当<span class="math inline">\(x\in[a,b]\)</span>时， <span class="math inline">\(f&#39;(x)\ne0\)</span></p></li>
+<li><p>当<span class="math inline">\(x\in (a,b)\)</span>时， <span class="math inline">\(f&#39;&#39;(x)\)</span>保号</p></li>
+<li><p><span class="math inline">\(a-\frac{f(a)}{f&#39;(a)}\le b,b-\frac{f(b)}{f&#39;(b)}\ge a\)</span></p></li>
+</ol>
+<p>则其Newton迭代格式收敛到 <span class="math inline">\([a,b]\)</span>内的唯一实根。</p>
+<h3 id="重根的处理">重根的处理</h3>
+<p>若其是<span class="math inline">\(m\)</span>重根，则修正为：</p>
+<p><span class="math display">\[
+x_{k+1}=x_k-m\frac{f(x_k)}{f&#39;(x_k)}
+\]</span></p>
+<h3 id="newton迭代的变形">Newton迭代的变形</h3>
+<ol type="1">
+<li>Newton下山法：</li>
+</ol>
+<p><span class="math inline">\(x_{k+1}=x_k-\lambda\frac{f(x_k)}{f&#39;(x_k)}\)</span></p>
+<ol start="2" type="1">
+<li>割线法：</li>
+</ol>
+<p><span class="math inline">\(x_{k+1} = x_k-\frac{f(x_k)}{f(x_k)-f(x_{k-1})}(x_k-x_{k-1})\)</span></p>
+<p>......ch2: 5 6 11 12</p>
+
+                            
+                                    
+                                        
+                                            <div class='footer'>
+                                                
+                                                        
+                                                                    
+                                                                            
+                                            </div>
+                                            
+                                                
+                                                    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-31T16:14:42+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年5月31日</p>
+  </a>
+</div>
+
+        
       
         
           
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/09/26/study/Math/LinearAlgebra&MatriceComputation/index/">
-        线性代数 [Review] 目录
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数值分析</p></a></div>
 
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://jerryyang2001.github.io/2021/05/31/study/Math/NumericRecipies/Chapter%202%20%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E6%B1%82%E8%A7%A3/&title=非线性方程求解 - 些些同学的藏宝阁&summary=数值分析 ch 2 - 非线性方程求解"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://jerryyang2001.github.io/2021/05/31/study/Math/NumericRecipies/Chapter%202%20%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E6%B1%82%E8%A7%A3/&title=非线性方程求解 - 些些同学的藏宝阁&summary=数值分析 ch 2 - 非线性方程求解"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://jerryyang2001.github.io/2021/05/31/study/Math/NumericRecipies/Chapter%202%20%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E6%B1%82%E8%A7%A3/&title=非线性方程求解 - 些些同学的藏宝阁&summary=数值分析 ch 2 - 非线性方程求解"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='dotted'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='/image/favicon.webp'></a>
-        
-        <time>2020-09-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">程序设计</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/09/26/study/Math/LinearAlgebra&MatriceComputation/index/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
+
+
         
       
-    
-  </section>
-  
-    
-  
+    </div>
+  </div>
+
+
+                                                        
+                                                            
+
+                                                                                
+                                                                                    <div class="prev-next">
+                                                                                        
+                                                                                            <a class='prev' href='/2021/05/31/study/Math/NumericRecipies/Chapter%203%20%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E6%95%B0%E5%80%BC%E8%A7%A3/'>
+                                                                                                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                                                                                    线性方程组的数值解
+                                                                                                </p>
+                                                                                                <p class='content'>
+                                                                                                    数值分析 ch 3 - 线性方程组的数值解
+
+Chapter 3 线性方程组的数值解
+Content：
+
+Gauss 消去法，Gauss列主元消去法
+向量和矩阵的范数、方程组性态和误...
+                                                                                                </p>
+                                                                                            </a>
+                                                                                            
+                                                                                                
+                                                                                                    <a class='next' href='/2021/05/26/talk-chat/Google_C_programming_specification/'>
+                                                                                                        <p class='title'>
+                                                                                                            C++ 编程规范<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                                                                                                        <p class='content'>
+                                                                                                            Google C/C++ 规范文档。
+
+c++编程规范
+0. 扉页
+
+
+
+
+
+
+
+版本:
+4.45
+
+
+
+
+原作者:
+Benjy WeinbergerCrai...
+                                                                                                        </p>
+                                                                                                    </a>
+                                                                                                    
+                                                                                    </div>
+                                                                                    
+</article>
 
 
     
-  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+        
+
+            
+                <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+                    
 </div>
 <aside class='l_side'>
   
@@ -476,161 +780,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">些些同学的藏宝阁</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Deep-Learning/" href="/categories/Deep-Learning/"
-            id="categoriesDeep-Learning"
-            ><div class='name'>Deep Learning</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/KGCode/" href="/categories/KGCode/"
-            id="categoriesKGCode"
-            ><div class='name'>KGCode</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9F%BA%E7%A1%80%E7%89%A9%E7%90%86%E5%AD%A6/" href="/categories/%E5%9F%BA%E7%A1%80%E7%89%A9%E7%90%86%E5%AD%A6/"
-            id="categoriesE59FBAE7A180E789A9E79086E5ADA6"
-            ><div class='name'>基础物理学</div><div class='badge'>(9)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E5%AD%A6/" href="/categories/%E6%95%B0%E5%AD%A6/"
-            id="categoriesE695B0E5ADA6"
-            ><div class='name'>数学</div><div class='badge'>(39)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%97%A5%E7%A8%8B/" href="/categories/%E6%97%A5%E7%A8%8B/"
-            id="categoriesE697A5E7A88B"
-            ><div class='name'>日程</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9D%82%E8%B0%88/" href="/categories/%E6%9D%82%E8%B0%88/"
-            id="categoriesE69D82E8B088"
-            ><div class='name'>杂谈</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"
-            id="categoriesE7A88BE5BA8FE8AEBEE8AEA1"
-            ><div class='name'>程序设计</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B/" href="/categories/%E7%BC%96%E7%A8%8B/"
-            id="categoriesE7BC96E7A88B"
-            ><div class='name'>编程</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E6%B3%95"><span class="toc-text">二分法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E8%BF%AD%E4%BB%A3%E6%B3%95"><span class="toc-text">简单迭代法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9E%84%E9%80%A0"><span class="toc-text">迭代格式的构造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E7%9A%84%E6%94%B6%E6%95%9B%E6%80%A7"><span class="toc-text">迭代的收敛性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#newton-%E8%BF%AD%E4%BB%A3%E6%B3%95"><span class="toc-text">Newton 迭代法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E6%A0%BC%E5%BC%8F"><span class="toc-text">迭代格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#newton-%E8%BF%AD%E4%BB%A3%E6%B3%95%E7%9A%84%E6%94%B6%E6%95%9B%E6%80%A7"><span class="toc-text">Newton 迭代法的收敛性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%A0%B9%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-text">重根的处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#newton%E8%BF%AD%E4%BB%A3%E7%9A%84%E5%8F%98%E5%BD%A2"><span class="toc-text">Newton迭代的变形</span></a></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Deep-Learning/" style="font-size: 14px; color: #999">Deep Learning</a> <a href="/tags/GCN/" style="font-size: 14px; color: #999">GCN</a> <a href="/tags/KGCode/" style="font-size: 15.11px; color: #919191">KGCode</a> <a href="/tags/Lambda%E6%BC%94%E7%AE%97/" style="font-size: 17.33px; color: #828282">Lambda演算</a> <a href="/tags/Algebra-Structure/" style="font-size: 15.11px; color: #919191">代数结构</a> <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6/" style="font-size: 14px; color: #999">傅里叶</a> <a href="/tags/%E5%87%B8%E4%BC%98%E5%8C%96/" style="font-size: 18.44px; color: #7b7b7b">凸优化</a> <a href="/tags/Vector-Space/" style="font-size: 16.22px; color: #8a8a8a">向量空间</a> <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 15.11px; color: #919191">图论</a> <a href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/" style="font-size: 18.44px; color: #7b7b7b">复变函数</a> <a href="/tags/Wedge-Differential/" style="font-size: 14px; color: #999">外微分形式</a> <a href="/tags/Multi-Functions/" style="font-size: 15.11px; color: #919191">多元函数</a> <a href="/tags/%E5%BE%AE%E5%88%86/" style="font-size: 14px; color: #999">微分</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 15.11px; color: #919191">摘抄</a> <a href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/" style="font-size: 14px; color: #999">数值方法</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 14px; color: #999">数学</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/" style="font-size: 14px; color: #999">数理逻辑</a> <a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 14px; color: #999">杂记</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 14px; color: #999">杂谈</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 22.89px; color: #5d5d5d">概率论</a> <a href="/tags/%E6%B3%A2/" style="font-size: 15.11px; color: #919191">波</a> <a href="/tags/%E7%89%A9%E7%90%86/" style="font-size: 21.78px; color: #646464">物理</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" style="font-size: 19.56px; color: #737373">离散数学</a> <a href="/tags/Series/" style="font-size: 17.33px; color: #828282">级数</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" style="font-size: 14px; color: #999">线性代数</a> <a href="/tags/%E7%BB%9F%E8%AE%A1/" style="font-size: 22.89px; color: #5d5d5d">统计</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 20.67px; color: #6c6c6c">编程</a> <a href="/tags/Analytic-Geometry/" style="font-size: 14px; color: #999">解析几何</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" style="font-size: 14px; color: #999">计算机图形学</a> <a href="/tags/%E8%BF%90%E5%8A%A8%E5%AD%A6/" style="font-size: 14px; color: #999">运动学</a> <a href="/tags/Advanced-Mathematics/" style="font-size: 24px; color: #555">高等数学</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
+
 
 
 		  
@@ -639,8 +810,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="非线性方程求解";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要

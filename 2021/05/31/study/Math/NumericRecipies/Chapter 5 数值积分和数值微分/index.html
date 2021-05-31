@@ -22,13 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>「数值分析」 Chapter1 - 些些同学的藏宝阁</title>
+  <title>数值积分和数值微分 - 些些同学的藏宝阁</title>
   
-    <meta name="keywords" content="数值方法">
+    <meta name="keywords" content="数值分析">
   
 
   
-    <meta name="description" content="现代数值方法-01">
+    <meta name="description" content="数值分析 ch 5 - 数值积分和数值微分">
   
 
   <!-- feed -->
@@ -408,7 +408,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        「数值分析」 Chapter1
+        数值积分和数值微分
       </h1>
       <div class='new-meta-box'>
         
@@ -439,7 +439,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年3月1日</p>
+    <p>发布于：2021年5月31日</p>
   </a>
 </div>
 
@@ -450,7 +450,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="「数值分析」 Chapter1" data-path="/2021/03/01/study/Math/NumericRecipies/chapter1/">
+      <div id="lc-pv" data-title="数值积分和数值微分" data-path="/2021/05/31/study/Math/NumericRecipies/Chapter%205%20%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%E5%92%8C%E6%95%B0%E5%80%BC%E5%BE%AE%E5%88%86/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -468,87 +468,81 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
         
                 
-                        <p>现代数值方法-01</p>
+                        <p>数值分析 ch 5 - 数值积分和数值微分</p>
 <span id="more"></span>
-<p>TOC：</p>
+<h1 id="chapter-5-数值积分和数值微分">Chapter 5 数值积分和数值微分</h1>
 <ol type="1">
-<li>绪论</li>
-<li>非线性方程求根</li>
-<li>线性方程组的数值解</li>
-<li>插值和逼近</li>
-<li>数值积分和数值微分</li>
-<li>常微分方程的数值解</li>
-<li>偏微分方程的数值解</li>
+<li><p>插值型求积公式</p></li>
+<li><p>复化求积公式</p></li>
+<li><p>Romberg求积法</p></li>
+<li><p>Gauss求积公式</p></li>
+<li><p>数值微分</p></li>
 </ol>
-<h1 id="绪论">绪论</h1>
-<p>主要内容：</p>
+<hr />
+<h2 id="数值积分的基本概念">数值积分的基本概念</h2>
+<p><span class="math display">\[
+\int_{a}^bf(x) \mathrm dx\approx \sum_{k=0}^n A_k f(x_k
+\]</span></p>
+<p>其中：</p>
 <ol type="1">
-<li><strong>科学计算的内容</strong>：科学模拟的过程、一般策略</li>
-<li><strong>误差的概念</strong>：绝对误差、相对误差、向前/向后误差、有效数字及它们之间的关系</li>
-<li><strong>数据误差对函数值的影响</strong>：讨论函数的误差与自变量误差之间的关系</li>
-<li><strong>算法的数值稳定性</strong>：讨论初始数据的误差对计算结果的影响</li>
-<li><strong>实际计算中应该注意的问题</strong></li>
+<li><p><span class="math inline">\(x_k\)</span>称为插值节点</p></li>
+<li><p><span class="math inline">\(A_k\)</span>为求积系数</p></li>
 </ol>
-<h2 id="科学计算">科学计算</h2>
-<h3 id="计算模拟解决问题的过程">计算模拟解决问题的过程</h3>
+<h2 id="插值型求积公式">插值型求积公式</h2>
+<p>记 <span class="math inline">\(I(f) = \int_a^bf(x)\mathrm dx\)</span>，则<span class="math inline">\(f\)</span>的一个插值多项式为 <span class="math inline">\(L_n(x)\)</span>，其中 <span class="math inline">\(l_k(x)\)</span> 是插值基函数。则用 <span class="math inline">\(L_n(x)\)</span> 替代被积函数，一个求积公式为：</p>
+<p><span class="math display">\[
+I_n(f) = \sum_k A_kf(x_k)\\
+A_k = \int _a^b l_k(x)\mathrm dx 
+\]</span></p>
+<h3 id="插值型求积公式-1">插值型求积公式</h3>
+<p><strong>Def</strong>：（插值型求积公式）设有计算<span class="math inline">\(I(f)\)</span>的求积公式 <span class="math display">\[
+I _ n(f)=\sum _ {k=0}^nA _ k f(x _ k)
+\]</span> 若其求积系数<span class="math inline">\(A _ k=\int _ a ^ bl _ k (x)\mathrm dx\)</span>，则称该求积公式为插值型求积公式。</p>
+<p>截断误差为：</p>
+<p><span class="math display">\[
+R(f) = \int_a^b \frac{f^{(n+1)}(x_0)}{(n+1)!} \prod_k(x-x_k)\mathrm dx
+\]</span></p>
+<p><strong>Def</strong>：（Newton-Cotes公式）若求积节点是等间距的，即 <span class="math inline">\(x_k = a+kh\)</span>，则该插值型求积公式称为 Newton-Cotes 公式。</p>
+<p>记： <span class="math display">\[
+C_{n,k} = \frac{(-1)^{n-k} h}{k!(n-k)!} \int _ {0} ^ n\prod _ {j=0\\j\ne k}^n(t-j)\mathrm dt
+\]</span> N-C公式可转化为： <span class="math display">\[
+I _ n(f) = \sum _ {k=0} ^ n C _{n, k} f(x_k)
+\]</span> 常用的三种插值求积公式：</p>
 <ol type="1">
-<li>建立数学模型</li>
-<li>给出数值算法</li>
-<li>计算机软件实现算法</li>
-<li>运行、进行数值模拟</li>
-<li>表示计算结果</li>
-<li>解释计算结果</li>
+<li>梯形公式：<span class="math inline">\(T(f) = \frac{b-a} 2 [f(a) + f(b)]\)</span></li>
+<li>Simpson公式：<span class="math inline">\(S(f) = \frac{b-a}{6}[f(a)+4f(\frac{a+b} 2)] + f(b)]\)</span></li>
+<li>Cotes公式：<span class="math inline">\(C(f) = \frac{b-a}{90} [7f(a) +32f(\frac{3a+b} 4) + 12 f(\frac{a+b} 2) + 32f(\frac{a+3b}4)+7f(b)]\)</span></li>
 </ol>
-<h3 id="一般策略">一般策略</h3>
+<h3 id="代数精度">代数精度</h3>
+<p>当<span class="math inline">\(f(x)\)</span>为多项式时，考虑截断误差： <span class="math display">\[
+R(f) = \int _ a ^ b \frac{f^{(n+1)}(\xi)}{(n+1)!} \prod _ {k=0} ^ n (x-x _ k) \mathrm dx = 0
+\]</span> 则 <span class="math inline">\(I _ n(f) = I(f)\)</span>，求积公式是精确的</p>
+<p><strong>Def</strong>（代数精度）计算 <span class="math inline">\(I_n(f)\)</span> 的求积公式，若对于所有<span class="math inline">\(m\)</span>次多项式是精确的，但至少对一个<span class="math inline">\((m+1)\)</span>次数的多项式是不精确的，则称该求积公式具有<span class="math inline">\(m\)</span>次代数精度。</p>
+<p><strong>Thm</strong>：求积公式 <span class="math inline">\(I_n(f)\)</span> 至少有<span class="math inline">\(n\)</span>次代数精度的充分必要条件是该公式是插值型的。</p>
+<p><strong>Thm</strong>：求积公式 <span class="math inline">\(I_n(f)\)</span> 至少有<span class="math inline">\(m\)</span>次代数精度的充分必要条件是该公式对<span class="math inline">\(f(x)=x^i,~i=0, 1, ...,m\)</span>都精确成立，但对<span class="math inline">\(f(x)=x^{m+1}\)</span>不精确成立</p>
+<p>常用三种插值求积公式的代数精度：</p>
 <ol type="1">
-<li>有限维空间代替无限维空间</li>
-<li>用有限过程代替无限过程</li>
-<li>用线性方程代替微分方程</li>
-<li>用低阶方程组代替高阶方程组</li>
-<li>用简单函数代替复杂函数</li>
-<li>用简单结构矩阵代替一般矩阵</li>
+<li>梯形公式：截断误差为<span class="math inline">\(-\frac{(b-a)^3}{12} f&#39;&#39;(\eta)\)</span>，代数精度为 1</li>
+<li>Simpson公式：截断误差为<span class="math inline">\(-\frac{(b-a)^5}{2880}f^{(4)}(\eta)\)</span>，代数精度为3</li>
+<li>Cotes公式：代数精度为5</li>
 </ol>
-<h2 id="误差的基本概念">误差的基本概念</h2>
-<h3 id="误差的来源">误差的来源</h3>
-<ol type="1">
-<li>模型误差</li>
-<li>观测误差</li>
-<li>阶段误差</li>
-<li>舍入误差</li>
-</ol>
-<p>例1：</p>
-<ul>
-<li><span class="math inline">\(A=4\pi r^2\)</span> 中，包含了各种误差</li>
-</ul>
-<p>例2：</p>
-<ul>
-<li>Taylor 展开：<span class="math inline">\(e^{-x} = 1-x+\frac 1 2{x^2} -\frac{1}{6}x^3+E_r(x)\)</span></li>
-<li>略去 <span class="math inline">\(E_r\)</span> 项：产生截断误差</li>
-</ul>
-<h3 id="绝对误差">绝对误差</h3>
-<p><strong>Def</strong>（绝对误差） 设 <span class="math inline">\(x^*\)</span> 是准确值，<span class="math inline">\(x\)</span> 是近似值，则：</p>
-<p><span class="math display">\[
-e(x)=x^*-x
+<h2 id="复化求积公式">复化求积公式</h2>
+<h3 id="复化梯形求积公式">复化梯形求积公式</h3>
+<p>对每个小区间上的积分 <span class="math inline">\(\int _ {x _ k} ^{x _ {k+1} }f(x)\mathrm dx\)</span> 都应用梯形公式： <span class="math display">\[
+T _ n(f) = \sum _ {k=0}^{n-1} \frac h 2 [f(x _ k) + f(x _ { k + 1 })]
+\]</span> 截断误差为： <span class="math display">\[
+I(f) - T_n (f) = - \frac {h^3} {12} \sum _ {k = 0} ^{ n - 1} f&#39;&#39;(\eta _ k )
+\]</span> 其<strong>先验误差估计</strong>为： <span class="math display">\[
+I(f) - T _ n (f) = \frac{b - a} {12} h^ 2|f&#39;&#39;(\eta) | \le \frac{b - a} {12} M_2 h^2\le \varepsilon\\
+M_2=\max_{a\le x \le b} |f&#39;&#39;(x)||
+\]</span> 其<strong>后验误差估计</strong>为： <span class="math display">\[
+|I(f) - T _ {2n} (f) | \approx \frac 1 3 |T _ {2n} - T _ n (f)|&lt; \varepsilon
 \]</span></p>
-<p>为近似值 <span class="math inline">\(x\)</span> 的<strong>绝对误差</strong>，简称<strong>误差</strong>。在实际计算中，绝对误差无法求出，但只需要知道误差的一个范围，从而有<strong>绝对误差限</strong> <span class="math inline">\(\varepsilon\)</span>：</p>
-<p><span class="math display">\[
-|e(x)|\le \varepsilon
-\]</span></p>
-<h3 id="相对误差">相对误差</h3>
-<p><span class="math display">\[
-e_r(x)=\frac{x^*-x}{x^*}
-\]</span></p>
-<p>若 <span class="math inline">\(x^*\)</span> 无法确定，也用：</p>
-<p><span class="math display">\[
-e_r(x)=\frac{x^*-x}{x}
-\]</span></p>
-<p>相应的，有相对误差限：</p>
-<p><span class="math display">\[
-|e_r(x)|\le \varepsilon
-\]</span></p>
-<h3 id="有效数">有效数</h3>
-<p>若 <span class="math inline">\(x\)</span> 为 <span class="math inline">\(x^*\)</span> 的近似值，若 <span class="math inline">\(|e(x)|\)</span> 是其某个数位的半个单位，从左起第一个非零数到这一位有 n 位，则称 n 个数字为其有效数字。</p>
-<h3 id="数据误差和计算误差">数据误差和计算误差</h3>
+<h3 id="复化simpson公式">复化Simpson公式</h3>
+<p>对每个小区间上的积分 <span class="math inline">\(\int _ {x _ k} ^{x _ {k+1} }f(x)\mathrm dx\)</span> 都应用Simpson公式： <span class="math display">\[
+S _ n(f) = \sum _ {h=0} ^ { n - 1} \frac h 6 [f(x _ k) + 4 f(x _ {k + 1/2}) + f( x _ {k+1})]\\
+x _ {k + 1/ 2} = \frac 1 2(x_k + x _ { k + 1})
+\]</span> 其截断误差为：<span class="math inline">\(-\frac{b-a}{180}(\frac{h}2)^4\sum_{k = 0} ^ {n-1} f^{(4)}(\eta_k)\)</span></p>
 
                             
                                     
@@ -568,10 +562,10 @@ e_r(x)=\frac{x^*-x}{x}
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-02T13:22:39+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-31T18:10:06+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年3月2日</p>
+    <p>更新于：2021年5月31日</p>
   </a>
 </div>
 
@@ -580,7 +574,7 @@ e_r(x)=\frac{x^*-x}{x}
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数值方法</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数值分析</p></a></div>
 
 
         
@@ -593,7 +587,7 @@ e_r(x)=\frac{x^*-x}{x}
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://jerryyang2001.github.io/2021/03/01/study/Math/NumericRecipies/chapter1/&title=「数值分析」 Chapter1 - 些些同学的藏宝阁&summary=现代数值方法-01"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://jerryyang2001.github.io/2021/05/31/study/Math/NumericRecipies/Chapter%205%20%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%E5%92%8C%E6%95%B0%E5%80%BC%E5%BE%AE%E5%88%86/&title=数值积分和数值微分 - 些些同学的藏宝阁&summary=数值分析 ch 5 - 数值积分和数值微分"
           
           >
           
@@ -605,7 +599,7 @@ e_r(x)=\frac{x^*-x}{x}
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://jerryyang2001.github.io/2021/03/01/study/Math/NumericRecipies/chapter1/&title=「数值分析」 Chapter1 - 些些同学的藏宝阁&summary=现代数值方法-01"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://jerryyang2001.github.io/2021/05/31/study/Math/NumericRecipies/Chapter%205%20%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%E5%92%8C%E6%95%B0%E5%80%BC%E5%BE%AE%E5%88%86/&title=数值积分和数值微分 - 些些同学的藏宝阁&summary=数值分析 ch 5 - 数值积分和数值微分"
           
           >
           
@@ -617,7 +611,7 @@ e_r(x)=\frac{x^*-x}{x}
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://jerryyang2001.github.io/2021/03/01/study/Math/NumericRecipies/chapter1/&title=「数值分析」 Chapter1 - 些些同学的藏宝阁&summary=现代数值方法-01"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://jerryyang2001.github.io/2021/05/31/study/Math/NumericRecipies/Chapter%205%20%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%E5%92%8C%E6%95%B0%E5%80%BC%E5%BE%AE%E5%88%86/&title=数值积分和数值微分 - 些些同学的藏宝阁&summary=数值分析 ch 5 - 数值积分和数值微分"
           
           >
           
@@ -647,40 +641,37 @@ e_r(x)=\frac{x^*-x}{x}
                                                                                 
                                                                                     <div class="prev-next">
                                                                                         
-                                                                                            <a class='prev' href='/2021/05/26/talk-chat/Google_C_programming_specification/'>
+                                                                                            <a class='prev' href='/2021/05/31/study/Math/NumericRecipies/Chapter-1-Introduction/'>
                                                                                                 <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>
-                                                                                                    C++ 编程规范
+                                                                                                    数值分析-引言
                                                                                                 </p>
                                                                                                 <p class='content'>
-                                                                                                    Google C/C++ 规范文档。
+                                                                                                    数值分析 ch 1 - 引言
 
-c++编程规范
-0. 扉页
+Chapter-1-Introduction
 
-
-
-
-
-
-
-版本:
-4.45
-
-
-
-
-原作者:
-Benjy WeinbergerCrai...
+绪论
+非线性方程求根
+线性方程组的数值解
+插值和逼近
+数值积分和数值微分
+常微分方程的数值解
+...
                                                                                                 </p>
                                                                                             </a>
                                                                                             
                                                                                                 
-                                                                                                    <a class='next' href='/2021/02/18/study/Math/ComplexFunctions/index/'>
+                                                                                                    <a class='next' href='/2021/05/31/study/Math/NumericRecipies/Chapter%204%20%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%8F%92%E5%80%BC%E5%92%8C%E5%87%BD%E6%95%B0%E6%9C%80%E4%BD%B3%E9%80%BC%E8%BF%91/'>
                                                                                                         <p class='title'>
-                                                                                                            <i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                                                                                                            多项式插值和函数最佳逼近<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
                                                                                                         <p class='content'>
-                                                                                                            
+                                                                                                            数值分析 ch 4 多项式插值和函数最佳逼近
 
+Chapter 4 多项式插值和函数最佳逼近
+
+给定一个函数： \(f(x)\in[a,b]\)
+
+在离散点处的值，能否给出一个近似？...
                                                                                                         </p>
                                                                                                     </a>
                                                                                                     
@@ -776,7 +767,7 @@ Benjy WeinbergerCrai...
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97"><span class="toc-text">科学计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E6%8B%9F%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">计算模拟解决问题的过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E7%AD%96%E7%95%A5"><span class="toc-text">一般策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">误差的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="toc-text">误差的来源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E8%AF%AF%E5%B7%AE"><span class="toc-text">绝对误差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%AF%AF%E5%B7%AE"><span class="toc-text">相对误差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E6%95%88%E6%95%B0"><span class="toc-text">有效数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AF%AF%E5%B7%AE%E5%92%8C%E8%AE%A1%E7%AE%97%E8%AF%AF%E5%B7%AE"><span class="toc-text">数据误差和计算误差</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">数值积分的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%80%BC%E5%9E%8B%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="toc-text">插值型求积公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%80%BC%E5%9E%8B%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F-1"><span class="toc-text">插值型求积公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E6%95%B0%E7%B2%BE%E5%BA%A6"><span class="toc-text">代数精度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%8C%96%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="toc-text">复化求积公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8C%96%E6%A2%AF%E5%BD%A2%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="toc-text">复化梯形求积公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8C%96simpson%E5%85%AC%E5%BC%8F"><span class="toc-text">复化Simpson公式</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -795,7 +786,7 @@ Benjy WeinbergerCrai...
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="「数值分析」 Chapter1";
+  pdata.postTitle="数值积分和数值微分";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
