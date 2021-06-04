@@ -526,6 +526,12 @@ R(f) = \int _ a ^ b \frac{f^{(n+1)}(\xi)}{(n+1)!} \prod _ {k=0} ^ n (x-x _ k) \m
 <li>Simpson公式：截断误差为<span class="math inline">\(-\frac{(b-a)^5}{2880}f^{(4)}(\eta)\)</span>，代数精度为3</li>
 <li>Cotes公式：代数精度为5</li>
 </ol>
+<h3 id="梯形公式simpson公式和cotes公式的截断误差">梯形公式、Simpson公式和Cotes公式的截断误差</h3>
+<p><span class="math display">\[
+R_T(f) = -\frac{(b-a)^3}{12}f&#39;&#39;(\eta),\quad \eta\in (a,b)\\
+R_S(f) = -\frac{(b-a)^4}{2880}f^{(4)}(\eta),\quad\eta\in (a,b)\\
+R_C(f) = -\frac{2(b-a)}{945}(\frac{(b-a)}4)^6f^{(6)}(\eta),\quad\eta\in (a,b)
+\]</span></p>
 <h2 id="复化求积公式">复化求积公式</h2>
 <h3 id="复化梯形求积公式">复化梯形求积公式</h3>
 <p>对每个小区间上的积分 <span class="math inline">\(\int _ {x _ k} ^{x _ {k+1} }f(x)\mathrm dx\)</span> 都应用梯形公式： <span class="math display">\[
@@ -562,10 +568,10 @@ x _ {k + 1/ 2} = \frac 1 2(x_k + x _ { k + 1})
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-02T21:46:56+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-04T21:11:19+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年6月2日</p>
+    <p>更新于：2021年6月4日</p>
   </a>
 </div>
 
@@ -780,7 +786,7 @@ Chapter 4 多项式插值和函数最佳逼近
           >
           <div class='name'>
             
-            数值分析-目录
+            数值分析-总结
           </div>
           
         </a></li>
@@ -869,7 +875,7 @@ Chapter 4 多项式插值和函数最佳逼近
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">数值积分的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%80%BC%E5%9E%8B%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="toc-text">插值型求积公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%80%BC%E5%9E%8B%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F-1"><span class="toc-text">插值型求积公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E6%95%B0%E7%B2%BE%E5%BA%A6"><span class="toc-text">代数精度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%8C%96%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="toc-text">复化求积公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8C%96%E6%A2%AF%E5%BD%A2%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="toc-text">复化梯形求积公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8C%96simpson%E5%85%AC%E5%BC%8F"><span class="toc-text">复化Simpson公式</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">数值积分的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%80%BC%E5%9E%8B%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="toc-text">插值型求积公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%80%BC%E5%9E%8B%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F-1"><span class="toc-text">插值型求积公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E6%95%B0%E7%B2%BE%E5%BA%A6"><span class="toc-text">代数精度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%AF%E5%BD%A2%E5%85%AC%E5%BC%8Fsimpson%E5%85%AC%E5%BC%8F%E5%92%8Ccotes%E5%85%AC%E5%BC%8F%E7%9A%84%E6%88%AA%E6%96%AD%E8%AF%AF%E5%B7%AE"><span class="toc-text">梯形公式、Simpson公式和Cotes公式的截断误差</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%8C%96%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="toc-text">复化求积公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8C%96%E6%A2%AF%E5%BD%A2%E6%B1%82%E7%A7%AF%E5%85%AC%E5%BC%8F"><span class="toc-text">复化梯形求积公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%8C%96simpson%E5%85%AC%E5%BC%8F"><span class="toc-text">复化Simpson公式</span></a></li></ol></li></ol>
     </div>
   </section>
 
