@@ -378,6 +378,19 @@ td,
 th {
   padding: 0;
 }
+dt {
+  color: #2196f3;
+}
+dt:before {
+  content: "Definition 「";
+}
+dt:after {
+  content: "」";
+}
+p.p.blue {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
 #l_cover {
   min-height: 64px;
 }
